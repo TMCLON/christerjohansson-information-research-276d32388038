@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Information Research Feed</title>
+  <link>http://informationr.net/ir/contents.html</link>
+  <description>An RSS feed to keep up to date with Information Research</description>
+  <image>
+  <url>http://informationr.net/ir/mini_logo.gif</url>
+  <title>Information Research</title>
+  <link>http://informationr.net</link>
+</image>
+  <item>
+    <title>Editorial</title>
+    <link>http://informationr.net/ir/23-4/editor234.html</link>
+    <description>An introduction to the issue</description>
+  </item>
+ <br />
+    <item>
+    <title>Margaret S. Zimmerman - Information horizons mapping to assess the health literacy of refugee and immigrant women in the USA
+</title>
+    <link>http://informationr.net/ir/23-4/paper802.html</link>
+    <description>Refugees and immigrants are at a heightened risk of many negative health outcomes. Whilst strong health literacy ability may be a determinant of favourable health outcomes, assessing the health literacy of refugee and immigrant women is a challenge. Owing to typically lower literacy and English ability, one possible method to measure the health literacy of this population is to ask them to graphically represent their health-related information horizons. Seventy-four women were asked to take a survey and answer open-ended questions about their health information seeking behaviour and demographic information. They were then asked to create an information horizons map in the context of health information seeking.</description>
+  </item>
+
+
+      <br />
+    <item>
+    <title>Hanseul Stephanie Lee - A comparative study on the health information needs, seeking and source preferences among mothers of young healthy children: American mothers compared to recent immigrant Korean mothers</title>
+    <link>http://informationr.net/ir/23-4/paper803.html</link>
+    <description>This study examined health-related information needs, seeking, and source preferences between two distinct groups of mothers: U.S. mothers and immigrant Korean mothers in the U.S.A.  Using non-probability sampling, data were collected from five online communities through an online survey; 480 completed responses were used for analysis.</description>
+  </item>
+ <br />
+    <item>
+    <title>Sarah Bukhari, Suraya Hamid, Sri Devi Ravana  and Mohamad Taha Ijab - Modelling the information-seeking behaviour of international students in their use of social media in Malaysia</title>
+    <link>http://informationr.net/ir/23-4/paper804.html</link>
+    <description>The understanding of the information-seeking behaviour of international students using social media is limited. Therefore, the purpose of this research is to model the information-seeking behaviour of international students when they use social media to find information. A mixed method approach was employed to collect data from the literature. Semi-structured interviews were conducted with twenty international students of different demographic backgrounds and with eleven staff members who work with international students. Questionnaires were distributed to 205 international students from four universities in Malaysia. </description>
+  </item>
+<br />
+    <item>
+    <title>Rafael Almeida de Oliveira and Renata Maria Abrantes Baracho - The development of tourism indicators through the use of social media data: the case of Minas Gerais, Brazil</title>
+    <link>http://informationr.net/ir/23-4/paper805.html</link>
+    <description>This research aims to study the development of tourism indicators in the Minas Gerais state (Brazil) by using social media data.
+To this end, the authors used a scraper to collect data from TripAdvisor, searching for key information about Minas Gerais tourist attractions and turning them into a structured database. </description>
+  </item>
+
+      <br />
+
+    <item>
+    <title>Rimvydas Skyrius, Svetlana Nemitko and Gytis Talocka - The emerging role of business intelligence culture</title>
+    <link>http://informationr.net/ir/23-4/paper806.html</link>
+    <description>The mixed experience of business intelligence implementation is shifting the focus of researchers and practitioners from technology issues to human factors. The wide set of human factors influencing business intelligence adoption tends to define features of what may be called business intelligence culture, a concept covering human and managerial issues that emerge in business intelligence implementation. The goal of this paper is to point out the key features of business intelligence culture, and examine their relations to the perceived level of this culture. A test survey was performed in a group of actual users of business intelligence systems to define specific groups of human factors that may be considered the elements of business intelligence culture.</description>
+  </item>
+  
+
+      <item>
+  <title>Book reviews</title>
+  <link>http://informationr.net/ir/reviews/reviews.html</link>
+  <description>Several new books are reviewed in this issue</description>
+  </item>
+  </channel>
+ </rss>
+
+
+

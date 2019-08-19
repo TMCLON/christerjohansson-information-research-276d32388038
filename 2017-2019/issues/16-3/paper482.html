@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+    <meta name="dc.title" content="An examination of semantic relationships between professionally assigned metadata and user-generated tags for popular literature in complementary and alternative medicine">
+    <meta name="dc.creator" content=" Hemalata Iyer, Lucy Bungo">
+    <meta name="dc.subject" content=" This paper analyses user generated tags and professionally-assigned subject headings to explore the relationships between the tags and subject headings, as well as the meanings of each.">
+    <meta name="dc.description" content="This paper examines the semantic relationship between user tags and the assigned subject headings of popular literature in the domain of complementary and alternative medicine. Forty books were drawn from the LibraryThing database on the domain. These were qualitatively analysed for the semantic matches between user tags and subject headings. An adapted form of the Unified Medical Language System Current Relations in the Semantic Network served as a framework for analysis. User tags were compared with subject headings for terminological matches on a book by book basis. The tags were grouped into tag categories, and tag categories were mapped on to the subject headings. Those that were not related to the subject headings were analysed for patterns. Less than 1% of tags matched terminologically. Results indicated 46% semantic matches and 54% non-matches. Frequently occurring patterns among non-matches were Personal, Genre/Form, Location, Time Period and Belief Systems. Of the semantic matches, frequently occurring relationships were physical, functional, and conceptual relationships. The tag categories provide information beyond that of the subject headings; they describe, evaluate, and may assist readers in choosing materials. This study contributes towards an understanding of the dominant relationship types in this domain and this can feed into developing ontologies and knowledge structures.">
+    <meta name="dc.subject.keywords" content=" metadata, semantic relationships, health information, complementary medicine, alternative medicine, indexing, popular literature, subject headings, social tagging">
+    <meta name="robots" content="all">
+    <meta name="dc.publisher" content="Professor T.D. Wilson">
+    <meta name="dc.coverage.placename" content="global">
+    <meta name="dc.type" content="text">
+    <meta name="dc.identifier" scheme="ISSN" content="1368-1613">
+    <meta name="dc.identifier" scheme="URI" content="http://InformationR.net/ir/16-3/paper482.html">
+    <meta name="dc.relation.IsPartOf" content="http://InformationR.net/ir/16-3/infres163.html">
+    <meta name="dc.format" content="text/html">
+    <meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dc.date.available" content="2010-09-15">
+</head>
+<body>
+<h4 id="vol-16-no-3-september-2011">vol. 16 no. 3, September, 2011</h4>
+<h1 id="an-examination-of-semantic-relationships-between-professionally-assigned-metadata-and-user-generated-tags-for-popular-literature-in-complementary-and-alternative-medicine">An examination of semantic relationships between professionally assigned metadata and user-generated tags for popular literature in complementary and alternative medicine</h1>
+<h4 id="hemalata-iyer-and-lucy-bungo"><a href="#author">Hemalata Iyer</a> and <a href="#author">Lucy Bungo</a></h4>
+<p>University at Albany, State University of New York, Department of Information Studies, College of Computing and Information, 135 Western Avenue, Albany, NY, USA, 12222</p>
+<h4>Abstract</h4>
+<blockquote>
+<p><strong>Introduction.</strong> This paper examines the semantic relationship between user tags and the assigned subject headings of popular literature in the domain of complementary and alternative medicine.<br>
+<strong>Method.</strong> Forty books in the domain were drawn from the LibraryThing database. These were qualitatively analysed for the semantic matches between user tags and subject headings. An adapted form of the Unified Medical Language System, Current Relations in the Semantic Network served as a framework for analysis.<br>
+<strong>Analysis.</strong> User tags were compared with subject headings for terminological matches on a book by book basis. The tags were grouped into tag categories, and tag categories were mapped on to the subject headings. Those that were not related to the subject headings were analysed for patterns.<br>
+<strong>Results.</strong> Less than 1% of tags matched terminologically. Results indicated 46% semantic matches and 54% non-matches. Frequently occurring patterns among non-matches were <em>personal</em>, <em>genre or form</em>, <em>location</em>, <em>time period</em> and <em>belief systems</em>. Of the semantic matches, frequently occurring relationships were physical, functional, and conceptual relationships.<br>
+<strong>Conclusions.</strong> The tag categories provide information beyond that of the subject headings; they describe, evaluate, and may assist readers in choosing materials. This study contributes towards an understanding of the dominant relationship types in this domain and this can feed into developing ontologies and knowledge structures.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>Recently, the widespread use of digital information and communication technologies has generated an unprecedented amount of Web content through Weblogs, wikis and other social tools. The Web 2.0 technologies have enabled collaborative approaches to different endeavours, such as 'folksonomies' and social tagging. The last few years have seen the rise of these technologies and the research focusing on them.</p>
+<p>'Folksonomies' are a user-centred technique for knowledge organization. The term was originally coined by Thomas Van Der Wal; it is a portmanteau of the two words 'folks' and 'taxonomy' (<a href="#van07">Vander Wal 2007</a>). Several social bookmarking services are available on the Web to build these folksonomies. The more popular amongst these are <em><a href="http://www.delicious.com/">delicious.com</a></em>, in which users bookmark and tag Web pages; <a href="http://www.flickr.com/">Flickr</a>, where photographs and short videos can be uploaded and tagged by users; <a href="http://www.connotea.org/">Connotea</a> and <a href="http://www.citeulike.org/home">CiteULike</a> which are services for scholarly articles and Websites; and <a href="http://www.librarything.com/">LibraryThing</a>, where the users can catalogue and tag both personal book collections and those within a library. The users are categorizing their own and others' collections and building bottom-up classification systems. Today, users are organizing their own digital collections by adding metadata.</p>
+<p>Two approaches to organizing and providing access to resources and for building vocabulary tools are discussed in the literature: the bottom-up and the top-down approach. The top-down approach envisages first creating a structure and the control of the terminology. The traditional classification systems, such as Dewey Decimal and Library of Congress, thesauri and other controlled vocabulary tools adopt this approach. The bottom-up approach begins at the grassroots and the social tagging systems offer a platform for this collaborative effort. The advantage of this method is that it aggregates the opinions of many, and is more likely to provide users with what they want than a top-down method.</p>
+<p>While the information profession has long employed controlled vocabularies to provide access to information resources, user tagging and folksonomies are recent approaches. Contrary to a folksonomy, a controlled vocabulary is an established list of standardized terminology intended to be used in the indexing, organization and retrieval of information. The National Institute of Health defines controlled vocabulary as '<em>system of terms involving e.g. definitions, hierarchical structure, and cross-references that is used to index and retrieve a body of literature in bibliographic, factual, or other databases</em>' (<a href="#nat04">National Institutes of Health 2004</a>). A subject heading list is one kind of controlled vocabulary that is used; the <em>Library of Congress Subject Headings</em> and the <em>Medical Subject Headings</em> are examples of such lists. This contrasts with natural language terms where no restrictions are imposed. Social tagging allows users to employ natural language as metadata, and this freedom results in the use of multiple terms that represent the same concept in many different ways. While controlled vocabularies reduce the ambiguity inherent in natural languages, they are also not without problems. Using the same terminology throughout a database ensures consistency and precision and helps the user find relevant information. The disadvantage is the rigidity of the approach, which may not represent the multiple viewpoints of users.</p>
+<h2 id="literature-review">Literature Review</h2>
+<p>Both controlled vocabularies and folksonomies are tools that aid the user in search and retrieval, but the sources of vocabularies are very different. The pros and cons of controlled vocabularies and folksonomies are discussed extensively in the literature and only a brief summation is presented. Folksonomies are low-cost, inclusive and current. They are not restricted to binary relationships and also encourage users to interact more with the material. They help to build communities of users with common interests and goals (<a href="#mat04">Mathes 2004</a>; <a href="#kro05">Kroski 2005</a>). The users are motivated to contribute to the community; the knowledge bases constructed by the masses are the impetus for their contributions. However, not all users are aware of the social impact of their contributions; they tag items to meet their own needs and their contributions can actually undermine the constructed knowledge base as a whole (<a href="#mar06">Marlow <em>et al.</em> 2006</a>). In addition, folksonomies lack terminological precision. As such, searches often result in low precision and low recall. The lack of synonym control and the presence of meaningless terms also complicate the search and retrieval process. At the organizational level they are essentially flat, non-hierarchical structures, which can create semantic ambiguity and confusion (<a href="#mer04">Merholz 2004</a>; <a href="#shi05">Shirky 2005</a>). As a filtering or searching device these issues present difficulties for users.</p>
+<p>Heckner <em>et al.</em> tested the tag usage in <em>Connotea</em> using a category model for linguistic and functional aspects of tag usage as well as to determine the relationship between tags and the document text. One of the outcomes of the study indicated that 46% of the tags were not found in the document. '<em>This shows that users' tags considerably add to the lexical space of the tagged resource</em>' (<a href="#hec07">Heckner <em>et al.</em> 2007</a>). Their research indicated that in an academic resource there were more general tags and few non-content related tags when compared to Websites such as <em>Flickr</em> and <em>Delicious</em>.</p>
+<p>Controlled vocabularies, on the other hand, through the process of controlling synonyms and homonyms and embedding mandated terms in their semantic context (through the broader, narrower and related terms) create a navigable structure that can increase recall and precision when users perform searches. However, the controlled vocabularies use a formal, standardised form of natural language and it may be difficult for searchers to learn and use this terminology to their best advantage. Despite these differences, both controlled vocabularies and social tagging have much to offer to the study of information access.</p>
+<h3 id="relationship-between-folksonomies-and-controlled-vocabularies">Relationship between folksonomies and controlled vocabularies</h3>
+<p>Chan (<a href="#cha09">2009</a>) suggests that both subject indexing and social tagging are two different approaches for information storage and retrieval and recognizes the potential for social tags to enhance both the controlled vocabularies and subject access. This enrichment occurs because the social tags provide an understanding of user perspective and searching behaviour as well as provide a source for adding terms to controlled vocabularies. In addition, librarians have also used folksonomies in bibliographic instruction to teach users the benefits of controlled vocabularies and their structures (<a href="#mag09">Maggio et. al. 2009</a>). To leverage the benefits of each system, efforts are being made to explore methods of combining folksonomy tags with theories from knowledge organization systems.</p>
+<blockquote>
+<p>Much current research is focused on mechanisms by which tags can be improved and more useful formal semantics can be derived from simple community tagging systems - that is, how ontologies can be derived from folksonomies. The aim is to optimize the trade-off between the simplicity and freedom of community tagging and the benefits to search engines of hierarchical structured vocabularies' (<a href="#shi05">Shirky 2005</a>).</p>
+</blockquote>
+<p>In order to fully utilize both of the approaches, the user tags that are generated from these tagging systems need to be organized in some meaningful fashion.</p>
+<p>One approach to the establishment of meaningful structures is by examining the types of semantic relationships between concepts. Kipp (<a href="#kip06">2006</a>) suggests that the relationship among tags can be defined as associative relationships, but that these relationships among tags are '<em>valuable sources for more fine-grained semantic relations in both folksonomies and KOS</em>' [knowledge organization systems] (Peters and Waller .  Several studies have examined the typology of semantic relations that exist between concepts in specific domains, though not in the context of social tagging. Bean and Green (<a href="#bea01">2001</a>) present types of relationships in various thesauri, classification schemes and relationships among knowledge structures. Neelameghan (<a href="#nee01">2001</a>) identifies lateral relationships in multicultural and multilingual databases in the spiritual and religious domains. A larger and more comprehensive inventory of subject relationships is presented in the Appendix of the <em>Final report</em> of the Subcommittee on Subject Relationships/Reference Structures to the Subject Analysis Committee of the Association for Library Collections and Technical Services, Cataloging &amp; Classification Section (<a href="#mic96">Michel 1996</a>).</p>
+<p>An article by Peters and Weller (<a href="#pet08">2008</a>) gives an overview of different approaches to re-organizing and editing tags. '<em>Fertilizing folksonomies with existing KOS is a promising approach to enable semantic enrichment</em>' (<a href="#pet08">Peters and Weller 2008</a>). Angeletou <em>et al.</em> (<a href="#ang07">2007</a>) found that synonymy, broader, narrower and related term relationships existed amongst tags. It was also indicated that these relationship types can be used for further refining and expanding knowledge organization systems or ontologies. The aim of Veres's study was to uncover the structural properties of tag sets as they relate to Websites. The <a href="http://www.dmoz.org/"><em>Open Directory Project</em></a> and the <em><a href="http://dir.yahoo.com/">Yahoo Directory</a></em> were compared for the kinds of classification within the user tags. This has implications for the connection between folksonomy and ontology.</p>
+<p>There have been studies comparing the Library of Congress Subject Headings with the tags provided by users in various online tagging programmes and communities. Yi and Chan (<a href="#yi09">2009</a>) reviewed over 4,000 articles that had been tagged using the <em>Delicious</em> bookmarking system. The tags that had been assigned to these Websites were compared to the Library of Congress Subject Headings to examine the term to term matches between the words in the subject heading list and the tags. It was found that of those tags used twice or more, 61% matched the subject headings. An additional 10% were possible matches, such as the tag 'css' for the subject heading 'Cascading Style Sheet' (<a href="#yi09">Yi and Chan 2009</a>). In a later study, Yi examined the tags on a sample of the most popular books on <em>LibraryThing</em> and their relation to the assigned Library of Congress subject headings. Yi used the similarity measures to predict the correct subject headings from user-assigned tags. The most effective tags were the top five. This study demonstrated that the similarity measures can predict the correct subject headings.</p>
+<p>Heymann and Garcia-Molina (<a href="#hey09">2009</a>) conducted another study in which they also compared term to term matches and semantic matches between Library of Congress Subject Headings and tags assigned to books in <em>LibraryThing</em>. Similarly to the previously discussed studies, they also found that there was a high number of matches between the tags and the subject headings. However, they also found that the tags, while there were terminological matches, were often applied to various items that in actuality had little in common. This present study examines the tags and subject headings both at semantic and terminological levels, with the primary focus on the semantic level analysis.</p>
+<p>In this study, individual books form the base unit of analysis. Subject headings and tags of individual books were compared to one another on a book-by-book basis rather than comparing all subject heading in the sample with all tags in the sample aggregated. Examining the subject headings and tags assigned to a single book provides context to the analysis, rather than using an aggregation of tags and subject headings assigned to a large, diverse sample of items.</p>
+<h3 id="complementary-and-alternative-medicine">Complementary and alternative medicine</h3>
+<p>Complementary and alternative medicine was the field chosen for this examination, because of its increased importance, use and popularity among the public at large. The National Center for Complementary and Alternative Medicine (NCCAM) defines complementary medicine as '<em>a group of diverse medical and health care systems, practices and products that are not presently considered to be part of conventional medicine. Complementary medicine is used with conventional medicine and alternative medicine is used in place of conventional medicine</em>' (<a href="#nat10">NCCAM 2010</a>). Complementary and alternative medicine includes various therapies such as chiropractic, acupuncture and massage, as well as preventive and self-help measures such as nutrition and diet, herbal supplements, use of magnets and meditation. Some specific examples include:</p>
+<blockquote>
+<ul>
+<li>alternative whole medical systems (homeopathic and naturopathic, Chinese and Ayurvedic medicine)</li>
+<li>mind-body interventions (meditation, prayer, mental healing, art, music and dance therapy)</li>
+<li>biologically based therapies (herbs, foods, vitamins and other dietary supplements, including natural products such as shark cartilage)</li>
+<li>manipulative and body-based methods (chiropractic and osteopathic manipulation, massage)</li>
+<li>energy therapies (qi gong, Reiki, therapeutic touch and electromagnetic field exposure) (<a href="#nat10">NCCAM 2010</a>)</li>
+</ul>
+</blockquote>
+<p>There is an increasing use and awareness of these methods as shown by the 2007 National Health Interview Survey, which showed that roughly 38% of adult Americans use complementary and alternative therapies (<a href="#nat10">NCCAM 2010</a>). One of the most often used types is dietary supplements. In one study, it was found that natural products (non-vitamin, non-mineral supplements) were most commonly used for children and adults. Many therapies such as meditation, massage and yoga are also quite popular with the general public (<a href="#nah10">Nahin <em>et al.</em> 2010</a>). These popular treatments have brought attention to the field; conventional medicine is also slowly becoming aware of the increased use of complementary and alternative therapies. While the public waits for conventional medicine to fully integrate with these therapies in a comprehensive health care system, many are turning to popular literature on the subject (<a href="#ven10">Ventola 2010</a>). Therefore, librarians have a central role in providing access to this information and to the increasing scholarly literature in the field. '<em>A CAM librarian's role is unique; many specialize in specific areas of CAM and opportunities exist for librarians to partner with CAM groups. CAM information professionals' major roles involve information access and retrieval and education</em>' (<a href="#cru06">Crumley 2006: 81</a>).</p>
+<p>One form of access that librarians provide is subject access and, for book-type materials, they often use the Library of Congress Subject Headings. With Web 2.0, user tags have also become very popular. While there is prolific research output in the area of user tags and subject headings, there have been no studies that examine the tags and the headings for popular book type materials in complementary and alternative medicine. Research and discussion on this topic is significant because of the growing awareness and interest in this field and because there are increasing numbers of users looking for such information. It is important to have an understanding of how social tagging efforts and traditional subject access work together in this domain.</p>
+<h2 id="methods">Methods</h2>
+<p>The purpose of this study is to understand patterns in the user tags and examine how tags and tag categories relate to and supplement the subject headings assigned by information professionals to popular materials within complementary and alternative medicine. This study will provide some qualitative information of the issues and benefits of tags and subject headings, so that a large-scale research study of the semantic relationships between subject headings and social tags can be undertaken in the future.</p>
+<ul>
+<li>The research question addressed in this study is: What are the types of semantic-based matches that exist between professionally-assigned subject headings and user-assigned tags in popular materials on complementary and alternative medicine?</li>
+</ul>
+<p>Forty books on complementary and alternative medicine were analysed. Books were selected by searching the <em>LibraryThing</em> database. A search was made for the tag 'alternative medicine'. The top twenty books that listed this term most frequently as a tag were chosen for the study. The same was done for books using the term 'complementary medicine'. Again, the top twenty books were chosen. These books were of a popular, general nature and were intended for the public at large. To avoid repetition of books in the sample, a book that had been previously listed in the alternative medicine group was not repeated in the complementary medicine group. The sample included a wide variety of books on different treatments and different opinions of alternative medicine, as well as case studies. A limitation of this study is the sample size of only forty books, but as this research is intended to be an exploratory study, the sample was considered adequate. The data ere collected during January and February of 2010.</p>
+<p>The MARC records for these books were obtained from the OCLC Connexion database and the records were used to create a Microsoft Access database containing the user tags, subject headings and subject heading subdivisions. The database enabled the subject headings to be sorted by type of subdivisions ($x, y, z and v of MARC sub-field codes). This was done to help understand the type of subject headings and subdivisions assigned to these books. This database could also present the tags and the corresponding subject headings of individual books. The total number of tags in the sample of forty books was 2,074. Table 1 presents data on the mean number of subject headings and the mean number of tags.</p>
+<table width="70%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 1: Complementary and alternative medicine: average numbers of subject headings and tags**</caption>
+<tbody>
+<tr>
+<th valign="middle" width="25%"></th>
+<th valign="middle" width="25%">Alternative medicine</th>
+<th valign="middle" width="25%">Complementary medicine</th>
+<th valign="middle" width="25%">Combined</th>
+</tr>
+<tr>
+<td>Total number of subject headings</td>
+<td align="center">91</td>
+<td align="center">71</td>
+<td align="center">162</td>
+</tr>
+<tr>
+<td>Mean number of subject headings</td>
+<td align="center">4.3</td>
+<td align="center">3.6</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>Total number of tags</td>
+<td align="center">1558</td>
+<td align="center">516</td>
+<td align="center">2074</td>
+</tr>
+<tr>
+<td>Mean number of tags</td>
+<td align="center">74.2</td>
+<td align="center">25.8</td>
+<td align="center">50.6</td>
+</tr>
+</tbody>
+</table>
+<p>First, the individual tags were compared with the assigned subject headings to determine the types of matches. Some of the chosen types of matches (full, partial, none) were based on previous studies that examined keyword and title word matches with controlled vocabularies (<a href="#str09">Strader 2009</a>; <a href="#car89">Carlyle 1989</a>; <a href="#voo98">Voorbij 1998</a>). Table 2 defines the types of matches used.</p>
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 2: Types of matches**</caption>
+<tbody>
+<tr>
+<th valign="middle">Full</th>
+<td valign="middle">The tags matched exactly or all of the exact words were used. Example: Alternative medicine (SH) and 'alternative medicine' or 'medicine alternative'.</td>
+</tr>
+<tr>
+<th valign="middle">Partial</th>
+<td valign="middle">(a) One or more of the exact words within the subject heading were used. May or may not include additional words that are not part of the subject heading. Example: Holistic health (SH) and 'health', 'holistic', or 'holistic medicine'.  
+(b) The tag was covered by more than one subject heading. Example: 'complementary medicine' and Complementary therapies (SH) and Alternative medicine (SH).  
+(c) Language and spelling variations, such as the exact term in another language or a clear abbreviation of the exact terms. Example: Alternative medicine (SH) and 'alternativmedicin', 'medicin' or 'altmedicine'.</td>
+</tr>
+<tr>
+<th valign="middle">None</th>
+<td valign="middle">(a) Tags that included none of the words in the subject heading.  
+(b) Conceptual variations. These are related concepts that are two separate entities, but are closely related. Examples: Vegetarian (SH) and 'vegetarianism' as well as Herbs (SH) and 'herbal'. This was done because the true meanings of the tags and subject headings differ.</td>
+</tr>
+</tbody>
+</table>
+<p>Each subject heading was compared independently with the tags assigned to that book. If a book had three subject headings and thirty tags, then there was a total of ninety subject heading to tag comparisons. Thus, the total number for the complementary medicine counts is 2,963 and for alternative medicine 2,758. These totals were used for determining the percentages of the matches.</p>
+<p>The tags were then examined for conceptual meaning. To do this, tag categories were created. These categories were labelled and defined and the definitions applied to a group of tags that had a form of commonality. For example, the tags <em>bones</em>, <em>stomach</em> and <em>heart</em> were grouped into a tag category called <em>Body parts</em>, with the added statement that this group contained those tags that named specific areas or organs of the human body. This assisted the researchers in developing the tag categories consistently and ensured that the conceptual meaning was retained for comparison with subject headings.</p>
+<p>Tag categories were created because it is not effective to compare individual tags semantically with subject headings. Individual tags do not lend themselves to semantic analysis because they vary so widely, they do not have context when they stand alone and there are simply so many of them. When grouped by conceptual similarity, rather than alphabetically or by frequency as in tag clouds, the context becomes richer and more meaningful. Also, the tags were categorized for each book and this provided an implicit context by keeping all of the tags for each book separate from the tags of other books. This context and understanding of the tags and their meanings thus facilitated the comparison of the subject headings with the tags and allowed the determination, on a deeper level, of the types of semantic relationships represented.</p>
+<p>In the process of assigning the tags to the categories, they naturally resulted in mutually exclusive categories for the individual books. However, a tag that appeared for multiple books may have been assigned to different tag categories for different books as each book exhibited its own contextual themes.</p>
+<p>The process of sorting these tags into meaningful categories was done by two individuals, both with non-medical backgrounds. The individuals reflect the typical readership of these kinds of popular texts; medical practitioners are not generally the intended audience. The two individuals sorted the tags into categories, which were then compared. Where there were differences, these were discussed and a consensus reached. In cases where a consensus could not be reached and there were different points of view, an information professional was consulted and the three together reached a decision. This to some extent allowed for some degree of inter-reliability of any subjective decisions made by the individuals.</p>
+<p>This resulted in a total of 375 tag categories. The next step was to map the tag categories on to the subject headings for each book. The same two individuals mapped the tags and the results were reviewed by the information professional. To guide this process, the Current Relations in the Semantic Network of the Unified Medical Language System was used (<a href="#nat10.2">National Institutes of Health 2010</a>). <a href="#appa">Appendix A</a> shows the full list of these relationships. This provided a framework for identifying the types of relationships that existed between the subject headings and the tag categories and was selected because it is relevant to the biomedical field and is a higher level overview of possible relationships.</p>
+<h2 id="analysis-and-results">Analysis and results</h2>
+<p>The MARC records for the forty sample books were examined for their subject headings. These subject headings fell into the 6xx fields and most were drawn from the Library of Congress Subject Headings.</p>
+<p>The Library of Congress Subject Headings allows for personal names, topical headings, geographic headings, etc. In addition, to increase specificity, a subject heading can have subdivisions, such as topical ($x), geographic ($z), chronological ($y) and form ($v). The nature of the subject headings and subdivisions was examined to determine the nature of the subject headings and subdivisions used in this domain.</p>
+<p>In the total sample of books in complementary and alternative medicine, the subject headings primarily belonged to the MARC field 650, Topical Subject Headings. These headings covered a wide range of topics such as <em>Complementary therapies</em>, <em>Evidence-based medicine</em>, <em>Massage therapy</em>, <em>Self-help groups</em>, <em>Diet</em>, <em>Spiritual healing</em> and <em>Medicine, ayurvedic</em>. The headings did not contain any Corporate Name (MARC field 610) or Geographic Name headings (MARC field 611). Personal Name headings (MARC field 600) were included only twice.</p>
+<p>With regard to subdivisions, approximately one third of the headings had subdivisions. Fifty-five percent of the subdivisions were Form subdivisions ($v); 74% of the Form subdivisions used the term 'Popular works'. Other form subdivisions included 'Encyclopedia' and 'Handbooks, manuals, etc.', 'Biography' and 'Formulae, receipts and prescriptions'. The Topical subdivision ($x) also occurred quite frequently, 39% of the time. Within this subdivision, 'Prevention' and 'Prevention and control' were used often. The general subdivisions covered a wide range of topics and included terms such as 'Cancer', 'Diet therapy', 'Evaluation', 'Methods', and 'Therapeutic Use', etc. The Geographical subdivision ($z) occurred rarely and there was no occurrence of the Chronological subdivision ($y).</p>
+<p>The results of the individual tag and subject heading comparison are presented in Table 3.</p>
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 3: Breakdown of Matches**</caption>
+<tbody>
+<tr>
+<th valign="middle" width="25%"></th>
+<th valign="middle" width="25%">Complementary medicine</th>
+<th valign="middle" width="25%">Alternative medicine</th>
+<th valign="middle" width="25%">Combined</th>
+</tr>
+<tr>
+<td>Full</td>
+<td align="center">22 (0.74%)</td>
+<td align="center">47 (1.7%)</td>
+<td align="center">69 (1.21%)</td>
+</tr>
+<tr>
+<td>Partial</td>
+<td align="center">104 (3.51%)</td>
+<td align="center">212 (7.7%)</td>
+<td align="center">316 (5.52%)</td>
+</tr>
+<tr>
+<td>None</td>
+<td align="center">2837 (95.75%)</td>
+<td align="center">2499 (90.6%)</td>
+<td align="center">5336 (93.27%)</td>
+</tr>
+<tr>
+<td>Total</td>
+<td align="center">2963 (100%)</td>
+<td align="center">2758 (100%)</td>
+<td align="center">5721 (100%)</td>
+</tr>
+</tbody>
+</table>
+<p>The full matches were only 0.74% and 1.7% of the total number of matches, for complementary and alternative medicines respectively. The partial matches were 3.51% and 7.7% for complementary and alternative medicine respectively and the tags that did not match were 95.75% and 90.6%, also respectively. This showed that the conceptual analysis was needed; there were so few exact terminological matches and partial matches in this domain that further investigation was needed to determine, at the conceptual level, whether or not there were similarities between tags and the subject headings.</p>
+<p>The sorting of the tags into tag categories resulted in 375 categories, where the tags contained within each category were related in different ways. A statement describing the meaning of each category was developed and this aided the process of semantically mapping each tag category with the subject headings. Some examples include the tag categories <em>Total care</em> and <em>Item description</em>. The _Total care_category was described by the statement '<em>terms that address both mainstream and alternative medicine to treat the whole person, not just the illnesses</em>'. This tag category included the tags <em>holistic, holistic health, holistic medicine</em> and <em>wellbeing</em>. In the tag category <strong>Item Description</strong>, the statement 'descriptions of the physical item itself' was used and this tag category included the tags of <em>hardcover</em> and <em>paperback</em>. For Case 1 later in this section, the tag cloud for the item, along with the tag categories and their assigned tags, are presented in full. These tag categories were then mapped on to the subject headings through a set of semantic relationships assisted by the <em>Current Relations in the Semantic Network</em> chart. The <em>Current Relations</em> framework identifies several types of relationships and associations under the general rubric of 'associated _with'. Within this rubric, it lists the relationships <em>physically_related_to</em>, <em>functionally_related_to</em>, <em>spatially_related_to</em>, <em>temporally_related_to</em> and <em>conceptually_related_to</em>. Within each of these categories there are further breakdowns that can be viewed in <a href="#appa">Appendix A</a> and the exact descriptions of these relationships as adapted for this study are provided in <a href="#appb">Appendix B</a>.</p>
+<p>The conceptual comparison of the tag categories and subject headings revealed that almost half of the tag categories could be mapped, in terms of semantic meaning, to the subject headings. Slightly more than half of the tag categories could not be mapped to the assigned subject headings. Those that could be mapped are described as related and those that could not be mapped are described as unrelated. Table 4 presents the overall results of the semantic relationship analysis between the tag categories and the subject headings.</p>
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 4: Semantic Relationships between subject headings and tag categories**</caption>
+<tbody>
+<tr>
+<th valign="middle"></th>
+<th valign="middle">Alternative medicine tag categories</th>
+<th valign="middle">Complementary medicine tag categories</th>
+<th valign="middle">Combined CM and AM tag categories</th>
+</tr>
+<tr>
+<td>Related</td>
+<td align="center">110 (47.6%)</td>
+<td align="center">85 (43.8%)</td>
+<td align="center">195 (45.9%)</td>
+</tr>
+<tr>
+<td>Unrelated</td>
+<td align="center">121 (52.4%)</td>
+<td align="center">109 (56.2%)</td>
+<td align="center">230 (54.1%)</td>
+</tr>
+<tr>
+<td>Total</td>
+<td align="center">231*</td>
+<td align="center">194*</td>
+<td align="center">425*</td>
+</tr>
+<tr>
+<td colspan="4">* Note that some tag categories could relate to more than one subject heading. These totals include those repeated tag categories.</td>
+</tr>
+</tbody>
+</table>
+<p>The following sections examine and present the results of the related and unrelated subject headings and tag categories and provide case studies of the items analysed.</p>
+<h3 id="subject-headings-and-tag-categories-related">Subject headings and tag categories: related</h3>
+<p>The tag categories that could be mapped to the subject headings were 46 percent of the total mappings. Of this percent, Table 5 presents the distribution of these types of semantic relationships. <a href="#appa">Appendix A</a> lists the relationships and <a href="#appab">Appendix B</a> explains how the relationships were defined and applied to the tags and tag categories.</p>
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 5: Distribution of semantic relationships by type**</caption>
+<tbody>
+<tr>
+<th>Category type</th>
+<th>Complementary</th>
+<th>Alternative</th>
+<th>Combined</th>
+</tr>
+<tr>
+<td>Physically_related_to</td>
+<td align="center">20 (23.5%)</td>
+<td align="center">37 (33.6%)</td>
+<td align="center">57 (29.2%)</td>
+</tr>
+<tr>
+<td>Spatially_related_to</td>
+<td align="center">1 (1.2%)</td>
+<td align="center">2 (1.8%)</td>
+<td align="center">3 (1.55%)</td>
+</tr>
+<tr>
+<td>Functionally_related_to</td>
+<td align="center">37 (43.5%)</td>
+<td align="center">24 (21.8%)</td>
+<td align="center">61 (31.3%)</td>
+</tr>
+<tr>
+<td>Temporally_related_to</td>
+<td align="center">3 (3.5%)</td>
+<td align="center">0 (0%)</td>
+<td align="center">3 (1.55%)</td>
+</tr>
+<tr>
+<td>Conceptually_related_to</td>
+<td align="center">17 (20%)</td>
+<td align="center">30 (27.3%)</td>
+<td align="center">47 (24.1%)</td>
+</tr>
+<tr>
+<td>Isa (conceptually equivalent)</td>
+<td align="center">7 (8.3%)</td>
+<td align="center">17 (15.5%)</td>
+<td align="center">24 (12.3%)</td>
+</tr>
+<tr>
+<td>Total</td>
+<td align="center">85</td>
+<td align="center">110</td>
+<td align="center">195</td>
+</tr>
+</tbody>
+</table>
+<p>The most frequently occurring semantic relationship types were <em>functionally_related_to</em>, <em>physically_related_to</em> and <em>conceptually_related_to</em>.</p>
+<p>In both complementary medicine and alternative medicine 29.2% of tag categories fell into the <em>physically_related_to</em> relationship. Within this, the sub-relationships of (<em>part_of</em>), (<em>branch_of</em>) and (<em>ingredient_of</em>) occurred. (<em>Part_of</em>) occurred most often, both within this relationship type and in all the different relationship types as a whole.</p>
+<p>The <em>functionally_related_to</em> relationship in both complementary medicine and alternative medicine included the subsets (<em>treats</em>), (<em>interacts_with</em>), (<em>produces</em>), (<em>causes</em>), (<em>carries_out</em>), (<em>practices</em>), (<em>occurs_in</em> (<em>process_of</em>)) and (<em>users</em>). Much of the data was evenly distributed among these subsets. However, the subsets of (<em>result_of</em>) and (<em>manifestion_of</em>) had a much higher representation, which led to the idea that cause-effect connection strongly exists, as well as the expressions and examples of concepts.</p>
+<p><em>Conceptually_related_to</em> had many subsets and also had a high number of occurrences. It included the subsets (<em>evaluation_of</em>), (<em>analyses</em> (<em>assesses_effect_of</em>)), (<em>property_of</em>), (<em>method_of</em>), (<em>conceptual_part_of</em>) and (<em>issue_in</em>). The most frequent sub-relationships were (<em>property_of</em>) and (<em>issue_in</em>) and these appeared with high frequency in both. The (<em>conceptual_part_of</em>) also occurred frequently, but only in alternative medicine.</p>
+<p>The occurrence of (<em>spatially_related_to</em>) was very minimal and primarily occurred in the context of (<em>location_of</em>), which often referred to the country of origin or practice. (<em>Temporally_related_to</em>) was not present in alternative medicine and in complementary medicine it occurred only three times.</p>
+<h3 id="subject-headings-and-tag-categorizations-unrelated">Subject headings and tag categorizations: unrelated</h3>
+<p>There were 121 unrelated tag categories in alternative medicine and 109 in complementary medicine. 54.1% of all tag categories were unrelated to the subject headings. Further analysis of these unrelated tag categories was undertaken to identify patterns and to understand what value they could add. The following outlines the process of determining these patterns using an example. The unrelated tag categories were aggregated into one group and were examined for similarities between them. For instance, several books had tags that appeared to be call numbers or shelf labels. During the initial analysis, these tags were grouped into the tag categories of <em>place</em> or <em>item location</em>. It was determined that these tag categories had nothing to do with the subject headings assigned to the book. Secondary analysis of all of the unrelated tag categories as a whole yielded the identification that several books had tag categories such as <em>place</em> or <em>item location</em>; the phenomenon, labelled a pattern, was designated as the <em>location</em> pattern. Table 6 shows all of the patterns within the unrelated tag categories and gives a description of each pattern.</p>
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 6: Patterns within the unrelated tag categories**</caption>
+<tbody>
+<tr>
+<th valign="middle">Patterns</th>
+<th valign="middle">Descriptions</th>
+</tr>
+<tr>
+<td valign="middle">Belief systems</td>
+<td valign="middle">Personal viewpoints on politics, religion and culture that shape how people react. 'Cultural studies' and 'cultural criticisms' as well as 'spiritual' are examples of tags that were used.</td>
+</tr>
+<tr>
+<td valign="middle">Demographics and age</td>
+<td valign="middle">Describes the target audience, the subject, or characteristics such as age, ethnicity and sex.</td>
+</tr>
+<tr>
+<td valign="middle">Genre or form</td>
+<td valign="middle">Refers to the presentation style of the book's content, such as 'essays', 'memoirs', 'stories', etc. and also descriptions of the book such as 'hardcover'.</td>
+</tr>
+<tr>
+<td valign="middle">Time period</td>
+<td valign="middle">Indicates periods of time, such as when the book was read, stored, bought, etc. It may also refer to the year of publication.</td>
+</tr>
+<tr>
+<td valign="middle">Locations</td>
+<td valign="middle">Refers to the item's place within the library or within a personal collection. It can also refer to a country that does not have any association with the subject headings. Possibly country of publication or where the story is set.</td>
+</tr>
+<tr>
+<td valign="middle">Personal</td>
+<td valign="middle">These are tags that have meaning only to their creators. Some include status of the book (read/unread/read later etc.) Some also include personal names. Also includes the labels of _Tasks_: things that indicate what readers are doing or are planning on doing.</td>
+</tr>
+<tr>
+<td valign="middle">Content terms</td>
+<td valign="middle">Terms that are generally related to the domain, but do not relate directly to the subject headings. In this study, these terms relate to the field of complementary and in general, but do not relate to the subject headings assigned to their book.</td>
+</tr>
+<tr>
+<td valign="middle">Undecipherable</td>
+<td valign="middle">Individual tags that have no meaning to anyone but their creator. However, these differ from personal tags in the fact that personal tags are recognizable words and phrases.</td>
+</tr>
+<tr>
+<td valign="middle">Scientific method</td>
+<td valign="middle">Things that pertain to the scientific experimentation and the materials necessary to carry out scientific research.</td>
+</tr>
+<tr>
+<td valign="middle">Assessment</td>
+<td valign="middle">Evaluative terms that indicate the judgments passed on the content of the book. Some of these are also affective terms that pertain to the expression of emotions.</td>
+</tr>
+<tr>
+<td valign="middle">Authors</td>
+<td valign="middle">Names of the people who created the work.</td>
+</tr>
+</tbody>
+</table>
+<p>The most frequently occurring patterns were <em>personal</em>, <em>genre or form</em> and <em>location</em>. <em>Time period</em> and <em>belief systems</em> were also very high. The unrelated tag categories demonstrate the added value of using tags: they supplement the existing subject headings. For instance, the tag categories in the <em>assessment</em> pattern can assist readers in evaluating the relevance of an item to their purposes.</p>
+<p>Another example is <em>content terms</em>. One book, about aromatherapy and energy therapy, has only the subject heading '<em>Flowers</em>'. Medical tags and tag categories do not relate to this subject heading, but do provide additional information. These tags included '<em>energy therapy</em>' and '<em>spiritual healing</em>' and tag categories include '<em>complementary and alternative medicine</em>', '<em>mental health</em>' and '<em>medicine</em>'. They could have been used as subject headings to represent the book but were not, thus the tags fill the gap by providing additional information about the content of the book. This information is very valuable in assisting the user to find the information that they are seeking; had the user searched a traditional catalogue for '<em>energy therapy</em>' or '<em>complementary medicine</em>' the user would not have found this item, but if the user instead searched the tags for this item it would have been returned.</p>
+<p>The next section provides three detailed examples, drawn from specific books, of the subject heading and tag category connections.</p>
+<h4 id="case-1">Case 1</h4>
+<p>The book in question is actually a collection of stories from people suffering from critical illnesses and the author, a Crohn's disease sufferer. It can be found at <a href="http://www.librarything.com/work/42829">http://www.li rarything.com/work/42829</a>. This book concerns how these individuals dealt with spiritual and medical crises. The subject headings assigned to this book are 'Meditations' and 'Physicians/United States/Biography'. Additional name subject headings in the 600 field include 'Remen, Rachel Naomi' and 'Remen, Rachel Naomi - Philosophy'. The scope note for the heading 'Meditations' in the 32nd edition of the Subject Headings states: '<em>Here are entered collections of thoughts on spiritual truths for use in meditation. Works on mental prayer as a method of promoting the spiritual life are entered under Meditation</em>' (<a href="#lib32">Library of Congress 2010</a>).</p>
+<p>The subject headings, while they indicate the broad theme, do not indicate the specific concepts of the book. Tags in the category <strong>Uplifting</strong> get to a closer degree of describing what the book is about. The book is not a collection of prayers or meditations, but of personal experiences. While intended to help others facing difficulties, it is not intended to promote a spiritual life. It is meant to be uplifting and inspirational, but the subject headings 'Meditation' and 'Physicians?United States?Biography', although relevant, do not address all the details. The tags that are associated with this book do reflect this difference. The tags reflect peoples' reactions. The tag category <strong>Uplifting</strong> include tags that lift the spirit or mind to a level of happiness. The subject headings have tried to describe the book objectively, but the tags show how people feel about the book. The impact of the book is also important as is the subject of the book.</p>
+<p>Information about the genre helps readers know what to expect in terms of content style. Hence the tags biography, essays, memoir, non-fiction and self-help were sorted into the tag category <strong>Genre</strong>. The subject heading could include the genre of the book but it is often limited to one description. For this book the heading 'Biography' is included as a subheading of 'Physicians', while the users gave many descriptions: biography, essays, memoir, non-fiction and stories. This is also helpful when books cross multiple lines into different genres.</p>
+<p>The category of <strong>Demographics</strong> also helps readers to determine who and what the book is about, in a more specific way than the subject headings. Adult, Jewish and women were sorted into this category. Jewish was placed in this category and not the <strong>Religion</strong> category as this describes a person and is not referring to the religion. The tags describe the people who have contributed their stories to the work.</p>
+<p><strong>Communication</strong>, or tags that are concerned with how people pass on information, included both tags of a personal nature (read and unread) and the tags stories and storytelling. Tags of a personal nature help individual users but not the general public.</p>
+<p>The tag category <strong>Understanding</strong> alludes to personal understanding and people search and acquire it. Tags of meditation, philosophy and wisdom were sorted into this category.</p>
+<p>Judaism, religion, spirit, spiritual and spirituality were included in the <strong>Religion</strong> tag category, which was defined as the belief in a higher power or other methods of mental transcendence.</p>
+<p>The category <strong>Medicine</strong> included tags which had to do with the field of medicine and its effect, including complementary medicine, medical, medicine and psychology.</p>
+<p>Tags concerned with <strong>Disease</strong> and its eradication include cancer, health, life and healing. This sorting is the result of comprehensive discussion and consensus between the two researchers and the information professional.</p>
+<p>The tag cloud for this work is presented below:</p>
+<div align="center">![Figure 1: Tag cloud representing the book from Case 1](p482fig1.jpg)</div>
+<div align="center">  
+**Figure 1: Tag cloud representing the book from Case 1**</div>
+<h4 id="case-2">Case 2</h4>
+<p>This book is a critique of the self-help movement in America today. It can be found at <a href="http://www.librarything.com/work/560631">http://www.librarything.com/work/560631.</a> The subject headings are 'Self-help groups', 'Self-actualization (Psychology)', and 'Recovery movement'. These subject headings could go into more detail by adding the subheading 'Criticism' or 'Evaluation' to any of the main headings. However, the professional cataloguers did not choose to do so. The tags have an important place in showing the critical viewpoint of the author. This is crucial, because anyone researching the self-help movement for critical evaluation would not be able to assess this from the subject headings and anyone looking for methods of self-help to follow may not find this item useful when it is returned in a list of search results. This is a case where the evaluative aspects are covered by the tags in category <strong>Scepticism</strong> and not by the subject headings.</p>
+<p>Politics and culture are also reflected in the tags and these affect how a user may evaluate an item. These sorts of belief systems can influence how the information is perceived. This book has both supporters and detractors; some tags indicate the author's altruism and some indicate the opposite. The tags reflect these reactions and judgments in a way that objective subject headings do not express.</p>
+<p>Time period is also reflected. One of the aspects of physical books is that they often are less ephemeral than other information types such as Websites. In physical form, they are more permanent. For physical books, not everyone is going to read the book at the same time and the book is likely to trade hands. Some tags, despite their personal nature, indicate when the book was read, bought, sold, or stored and show that the book is still conveying its information to users. Even though these tags may not be useful for access purposes, they still in some way convey useful information. It shows that the book is still relevant and useful to many readers.</p>
+<h4 id="case-3">Case 3</h4>
+<p>This example can be located at <a href="http://www.librarything.com/work/30181">http://www.librarything.com/work/306181</a>. The author presents techniques for using one's <em>positive energy</em> to overcome fatigue. The subject headings are 'Energy medicine' and 'Mental healing'. The book offers different strategies to boost energy, improve relationships and combat the things that drain energy. Part of this is keeping fit and the book describes how to do it by oneself. This is change performed by the individual; working on all of the things in the <strong>Fitness</strong> tag category (such as <em>bodywork, strength,</em> and <em>fitness</em>) leads to the <em>achievement, courage, healing,</em> and <em>growth,</em> that are found in the <strong>Personal growth</strong> category.</p>
+<p>And since this is done on one's own, <em>self-development, self-help,</em> and <em>self-improvement</em> are also included. These tags, when taken together, provide a more detailed summary of what the book is about. It is a self-help book intended to help readers learn to deal with the stress and trials of everyday life through the application of positive thoughts and actions; 'Energy medicine' and 'Mental healing' are appropriate headings, but the unrelated tag categories provide a different level of specificity that readers can use for their own purposes.</p>
+<h2 id="discussion">Discussion</h2>
+<p>In particular, social tagging seems to be especially important in popular literature pertaining to complementary and alternative medicine, where it appears that a large portion of the readership comes from the general public, who are likely to be unfamiliar with the controlled vocabulary phrases and medical terminology. From the tag analysis, it is clear that there is a variety of ways that the public describes complementary and alternative medicine. It is also clear from the literature that many people are interested in and are actively pursuing information on the subject. In general, they are searching for information on these methods to treat medical issues and prevent other issues from arising. They also appear to be looking for pain management techniques and natural methods of medical treatment. As such, it is critical to develop improved access to popular materials in this area.</p>
+<p>Looking at the catalogue records, the access is provided mainly by topical subject headings (650 field of the MARC record). The subject headings tend to be very broad, general and repetitive across the collection. Examples include headings such as, 'Complementary therapies', 'Alternative medicine', and 'Mental healing'. Subject headings, although they provide appropriate access, may not serve the purpose of effectively organizing, filtering and retrieving books of such a nature. They may not adequately create distinct groups or discriminate between specific topics. They also lack subdivisions represented by genre and target audience, which can be represented by subject headings, but these subdivisions were rarely applied to any of the books in the sample.</p>
+<p>The overwhelming percentage of tags that did not match the subject headings shows that the tags contribute a plethora of unique terms for the user search and retrieval. This terminological analysis shows that tags enhance access to the material in ways that assigned subject headings may not. Tags complement and augment the subject headings in providing improved access to collections.</p>
+<p>Since the subject headings were very broad, the terminological matches between subject headings and tags were very minimal. Many of the tags that matched with the subject headings were general tags like 'alternative' or 'health'. Full matches were much rarer than partial matches, because a tag phrase including all of the words as the subject heading is much less likely than a partial match. Partial matches are much more likely to occur given that a term can be repeated and combined infinitely with any and all words in the vast and varied English vocabulary.</p>
+<p>Although the tag and subject heading terminological matches were minimal, it is clear that there were semantic similarities between tags and the subject headings and that these tags helped expand the central idea represented by the subject heading. For example, the tag <em>Herbs</em> matched the subject heading of 'Herbs - Therapeutic use' assigned to a particular book. While the subject heading was very broad, the tags represented multiple concepts and provided additional detail and more avenues for exploration than just this single heading. Tags that provided said detail and avenues were <em>economic botany and herbalism, herbal medicine, herbs, medicinal herbs,</em> and <em>medicinal plants</em>. Each of these is a similar concept representing a different aspect of <em>Herbs. Economic botany and herbalism</em> can refer to the farming and sale of herbs. <em>Herbal medicine</em> is using these herbs to treat medical problems. <em>Herbs</em> as a tag describes the physical material used and medicinal herbs is a subset. <em>Medicinal plants</em> relate to herbal medicine by treating medical issues, but may in fact not actually be classified as herbs. <em>Medicinal plants</em> and <em>herbs</em> can be seen as having a quasi-generic relationship, since some medicinal plants can be herbs (medicinal herbs) and some herbs can be medicinal plants. As regards the Library of Congress Subject Headings record for the subject heading 'Herbs?Therapeutic use' it contains only narrower terms (NT) and these are 'Herbal abortifacients' and 'Herbal contraceptives', and the used for (UF) terms include 'Herb remedies', Herbal medicine', and 'Medicinal herbs'. (Library of Congress 2010). Although the term Herbs appears in both the tags and the Subject Headings, the tags distinctly encompass a broader range of topics than solely the therapeutic use of herbs. Although the terminological matches were few, the tags provided a rich source of information. Creating tag categories and semantically matching them with the subject headings as previously detailed allowed for this information to be further explored.</p>
+<p>Forty-six percent of the subject headings semantically matched with tag categories. This is a high proportion of matches, which indicates that many of the concepts and meanings represented in the tags in some way matched the thematic content of the book. The subject headings focus on the main subject of the document, but tags provide a more detailed and deeper representation of the content. In addition, some of the unrelated tag categories (such as <strong>Content</strong> or <strong>Evaluative terms</strong>) also contain useful information that is not reflected in the subject headings. It appears to be a tendency for users of popular works in complementary and alternative medicine to contrast complementary and alternative medicine with mainstream medicine and view the two forms as opposites. As such, the users tag materials with terms that evaluate the content of the books in terms of positive and negative. <em>Scepticism</em> and <em>quackery</em> are two examples and often these terms result from contrasting the complementary and alternative medical material with that of mainstream conventional medicine.</p>
+<p>Other results of this study indicated that a few patterns that emerged out of the unrelated tag categories could be focused on because they bring added value to search and access. The most frequently used patterns were <em>Demographics and age</em>, <em>Genre or type</em> and <em>Location</em>. This could be because tags are often used as a method of recommending books to others; as a general rule, people who enjoy one kind of book may enjoy a book that belongs to the same demographic description or genre. For example, in the book used in the Case 1, the tags included terms such as <em>adult, Jewish,</em> and <em>women</em> and these tags alluded to the ethnic and religious background of the author. This type of unrelated pattern, called 'demographics and age', was found to add value by providing context information. This information may be meaningful to users who are searching for materials that pertain to their own demographics and backgrounds. The tags that describe these things may help readers be able to choose which books they will read next and the location tags, such as classification numbers, help them to find the book in order to read it. Also, subject headings are intended to be an objective assessment of the content of the book, while the user generated tags can be subjective and the opinions that they can offer may help guide other users in a different and necessary fashion.</p>
+<p>The pattern <em>Genre or form</em> is often used. For the book <em>Kitchen table wisdom</em> by Rachel Naomi Remen, the users provided a variety of tags that were different expressions of genre. The work was tagged as a <em>biography, a memoir, a story,</em> and as <em>essays</em>. Essentially, it could be all four in the minds of the readers. However, the assigned subject headings provided only one subdivision: '<em>Biography</em>'. This also indicates that users' tags contribute to a prolific number of newer and unique terms and concepts not represented in the assigned subject headings. While recognizing the importance for subject headings assigned by professionals as essential, it is important to also recognize the value of the rich set of terms contributed by the users and leverage these for better access to complementary and alternative medicine materials.</p>
+<p>The approach of examining the user tags and the subject headings through the set of semantic categories assisted by the Unified Medical Language System, Current Relations allowed the identification of semantic categories embedded in the user tags and not represented by the subject headings. This approach could be explored further, in examining and validating the semantic richness of the tags. Additionally, the results generated by such studies have some potential for use in the construction of ontologies, knowledge organization systems and query expansions.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>The emphasis of complementary and alternative medicine, being holistic in nature, seems to be on prevention and overall wellbeing. This is important for the health of the general public and gives them knowledge of the options they can explore. This focus and increasing awareness of personal health makes access to health literature important and better methods of access are crucial.</p>
+<p>In looking at the tag categories created from the user tags assigned to books, there are very few on specific diseases like cancer or of individual treatments. It covers categories that suggest spiritual or metaphysical aspects that are part of holistic health. The unrelated tags are not necessarily content terms but represent viewpoints and opinions and locations, genres and demographics etc, also abound. They provide information beyond what the assigned subject headings currently address. Thus, the tags contribute valuable additional information for the book type material in complementary and alternative medicine.</p>
+<p>The fact that 46% of tag categories are conceptually matched with the subject headings and 54% are non-matches indicates that both the subject headings assigned by professionals and the user generated tags are essential to provide effective access to the resources in complementary and alternative medicine. An organization of user tags is necessary for presenting the tags to the user for browsing, search and navigation. Many ways of organization, including that of facets, have been suggested in the literature (<a href="#ram10">Ram and Wei 2010</a>; <a href="#spi10">Spiteri 2010</a>). Presentation and organization in the user interface design are outside the scope of this study.</p>
+<p>The Unified Medical Language System, Current Relations in Semantic Network Schema was found very useful and appropriate as a framework for analysis and future use of such schemas for semantic relationships analysis is suggested. This study also contributes toward this methodology for analysing the semantic relationships in this domain.</p>
+<p>Social tags and assigned subject headings are complementary and both approaches are important to provide improved access to users. This study suggests that there are important types of semantic relationships that are relevant in the organization and retrieval of popular, general materials in the field of complementary and alternative medicine and also suggests the ways that they can add value to and complement the subject headings.</p>
+<p>Health information technicians, Web search engine professionals and health care professionals are some of the groups who could ultimately benefit from this type of analysis. Especially with the growing interest in complementary and alternative medicine, newer methods for improved access are valuable and needed. The knowledge gained from such studies can contribute towards an understanding of the relationship types that are important in developing ontologies and knowledge structures for Web-based applications.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>The authors wish to thank the anonymous reviewers for their useful comments and suggestions. They also thank Hsia-Ching Chang for her assistance with creating the database for this study.</p>
+<h2 id="about-the-authors">About the authors</h2>
+<p>Hemalata Iyer is an Associate Professor at the Department of Information Studies of the University at Albany, State University of New York. Her academic interests are knowledge organization and retrieval, visual resource management, access to CAM lnformation, variable media resources, vocabulary management, metadata and human information behaviour. She can be contacted at <a href="mailto:hi651@albany.edu">hi651[at]albany.edu</a></p>
+<p>Lucy Bungo has since graduated from the University at Albany with a Master's of Science in Information Studies. She is currently working as a Reference and User Services Librarian at Trocaire College in Buffalo, New York (USA) and also as a Reference Librarian for Niagara University in Niagara Falls, New York (USA). She can be contacted at <a href="mailto:bungo@trocaire.edu">bungol[at]trocaire.edu</a> or <a href="mailto:bungo@niagara.edu">lbungo[at]niagara.edu</a>.</p>
+<h4 id="references">References</h4>
+<ul>
+<li>Angeletou, S., Sabou, M., Specia, L. &amp;Motta, E. (2007). Bridging the gap between folksonomies and the semantic Web. An experience report. In Enrico Franconi, Michael Kifer, Wolfgang May (Eds.): The Semantic Web: Research and Applications, 4th European Semantic Web Conference, ESWC 2007, Innsbruck, Austria, June 3-7, 2007, Proceedings. (pp. 30-43). Berlin: Springer-Verlag. (Lecture Notes in Computer Science 4519)</li>
+<li>Bean, C.A. &amp;Green, R. (Eds.). (2001). <em>Relationships in the organization of knowledge.</em> Dordrecht, The Netherlands: Kluwer Academic Publishers.</li>
+<li>Carlyle, A. (1989). Matching LCSH and user vocabulary in the library catalog. <em>Cataloging &amp; Classification Quarterly</em> <strong>10</strong>(1/2), 37-63.</li>
+<li>Chan, L.M. (2009). <em><a href="http://www.webcitation.org/60msdmuFN">Social bookmarking and subject indexing.</a></em> Paper presented at the IFLA Satellite Pre-Conference of the Classification and Indexing Section, &quot;Looking at the Past and Preparing for the Future&quot;, 20-21 August 2009, Florence, Italy. Retrieved 8 August, 2011 from http://www.ifla2009satelliteflorence.it/meeting2/program/assets/Chan.pdf (Archived by WebCite<sup>®</sup> at http://www.webcitation.org/60msdmuFN)</li>
+<li>Crumley, E.T. (2006). Exploring the roles of librarians and health care professionals involved with complementary and alternative medicine. <em>Journal of the Medical Library Association</em> <strong>94</strong>(1), 81-89.</li>
+<li>Heckner, M., Muhlbacher, S. &amp;Wolff, C. (2007). <a href="http://www.Webcitation.org/5zXMItR2X">Tagging tagging: analysing user keywords in scientific bibliography management systems.</a> <em>Digital Library of Information Science Technology.</em> <strong>9</strong>(2). Unpaginated. Retrieved 28 March, 2011, from http://journals.tdl.org/jodi/article/download/246/208. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXMItR2X).</li>
+<li>Heymann, P. &amp; Garcia-Molina, H. (2009). <em><a href="%20http://www.webcitation.org/60mtpG65F">Contrasting controlled vocabulary and tagging: Do experts choose the right names to label the wrong things?</a></em> Paper presented at the Second ACM International Conference on Web Search and Data Mining (WSDM), Late Breaking Results Session, Barcelona, Spain, February 9-12, 2009. Retrieved 8 August, 2011 from http://wsdm2009.org/heymann_2009_tagging.pdf (Archived by WebCite<sup>®</sup>
+     at http://www.webcitation.org/60mtpG65F)</li>
+<li>Kipp, M. E. I. (2006). Complementary or discrete contexts in online indexing: A comparison of user, creator and intermediary keywords. <em>Canadian Journal of Information and Library Science,</em> <strong>30</strong>(3), 419-436.</li>
+<li>Kroski, E. (2005). <a href="http://www.Webcitation.org/5zXMzPC4l">The hive mind: folksonomies and user-based tagging.</a> Retrieved 28 March, 2011, from http://infotangle.blogsome com/2005/12/07/the-hive-mind-folksonomies-and-user-based-tagging/. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXMzPC4l).</li>
+<li>Library of Congress. (2010). <em>Library of Congress subject headings.</em> (32nd ed.). Washington, DC: Cataloging Distribution Service, Library of Congress.</li>
+<li>Maggio, L.A., Bresnahan, M., Flynn, D.B., Harzbecker, M., Ginn, D. (2009). A case study for using social tagging to engage students in learning Medical Subject Headings. <em>Journal of the Medical Library Association.</em> <strong>97</strong>(2), 77-83.</li>
+<li>Marlow, C., Naaman, M., Boyd, D., Davis, M. (2006). <a href="http://www.Webcitation.org/5zXNao8F2">HT06, tagging paper, taxonomy, Flickr, academic article, ToRead.</a>, In <em>Proceedings of the Seventeenth Conference on Hypertext and Hypermedia, Odense, Denmark, August 22-25, 2006</em> (pp. 31-40). New York, NY: ACM Press. Retrieved 16 March 2011, from http://cameronmarlow.com/media/marlow-2006-ht06.pdf. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXNao8F2).</li>
+<li>Mathes, A. (2004). <a href="http://www.Webcitation.org/5zXNlOuc8">Folksonomies?cooperative classification and communication through shared metadata.</a> Retrieved 29 March 2011, from http://www.adammathes.com/academic/computer-mediated-communication/fol sonomies.html. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXNlOuc8).</li>
+<li>Merholz, P. (2004). <a href="http://www.Webcitation.org/5zXNpvbQm">Metadata for the masses.</a> Retrieved 14 March 2011, from http://www.adaptivepath.com/ideas/essays/archives/000361.php. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXNpvbQm).</li>
+<li>Michel, D. (1996). <a href="http://www.Webcitation.org/5zXNvT7uc">Appendix B: Taxonomy of subject relationships</a> . In Subcommittee of Subject Relationships/Reference Structures. <em>Final Report to the Association for Library Collections and Technical Services (ALCTS) Cataloging and Classification Section (CCS) Subject Analysis Committee (SAC).</em> Chicago, IL: Association for Library Collections and Technical Services. Retrieved 27 March 2011, from http://www.ala.org/ala/mgrp /divs/alcts/mgrps/ccs/cmtes/sac/inact/subjrel/msrscu2.pdf. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXNvT7uc).</li>
+<li>Nahin, R.L, Dahlhamer, J.M. &amp; Stussman, B.J. (2010). Health need and the use of alternative medicine among adults who do not use conventional medicine. <em>BMC Health Services Research,</em> <strong>10</strong>, 220.</li>
+<li>National Center for Complementary and Alternative Medicine. (2010). <a href="http://www.Webcitation.org/5zXO3DpeR"><em>What is complementary and alternative medicine?</em></a> Bethesda, MD: National Center for Complementary and Alternative Medicine. Retrieved 16 March 2011, from http://nccam.nih.gov/health/whatiscam/. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXO3DpeR).</li>
+<li>National Institutes of Health. (2004). <a href="http://www.Webcitation.org/5zXOGkSP5"><em>National Information Center on Health Services Research and Health Care Technology: HTA Glossary.</em> Bethesda, MD: National Institutes of Health.</a> Retrieved 27 March 2011, from http://www.nlm.nih.gov/nichsr/hta101/ta101014.html. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXOGkSP5).</li>
+<li>National Institutes of Health. (2010). <a href="http://www.Webcitation.org/5zXOownXd"><em>Unified Medical Language System: Current Relations in the Semantic Network.</em></a> Bethesda, MD: National Institutes of Health. Retrieved 14 March 2011, from http://www.nlm.nih.gov/research/U/META3_current_relations.html. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXOownXd).</li>
+<li>Neelameghan, A. (2001). Lateral relationships in multicultural, multilingual databases in the spiritual and religious domains: The OM information service. In Bean, C.A. &amp;Green, R. (Eds.). <em>Relationships in the organization of knowledge (pp. 185-198).</em> Dordrecht, The Netherlands: Kluwer Academic Publishers.</li>
+<li>Peters, I. &amp; Weller, K. (2008). <a href="http://www.Webcitation.org/5zXOsKvXn">Tag gardening for folksonomy enrichment and maintenance.</a> <em>Webology,</em> <strong>5</strong>(3). Retrieved 18 March 2011, from http://Webology.ir/2008/v5n3/a58.html. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXOsKvXn).</li>
+<li>Ram, Sudha and Wei Wei. (2010). FASTS: Facets Structured Tag Space - A Novel Approach to Organize and Reuse Social Bookmarking Tags. In Aier, Stephan, Robert Winter and J. Zhao (Eds.), <em>Global Perspectives on Design Science Research</em> (pp. 426-438). Berlin and Heidelberg: Springer.</li>
+<li>Shirky, C. (2005). <a href="http://www.Webcitation.org/5zXOveSLJ">Ontology is overrated: categories, links and tags.</a> Retrieved 28 March 2011, from http://www.shirky.com/writings/ontology_overrated.html. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXOveSLJ).</li>
+<li>Spiteri, L.F. (2010). Incorporating facets into social tagging applications: an analysis of current trends. <em>Cataloging &amp; Classification Quarterly</em>, <strong>48</strong>(1), 94-109.</li>
+<li>Strader, C.R. (2009). Author-assigned keywords versus Library of Congress subject headings. <em>Library Resources &amp; Technical Services</em> <strong>53</strong>(4), 243-250.</li>
+<li>Whelan, J.S. &amp; Dvorkin, L. (2003). HolisticKids.org - evolution of information resources in pediatric complementary and alternative medicine projects: from monographs to Web learning. <em>Journal of the Medical Library Association</em> <strong>9</strong>(4), 411-7.</li>
+<li>Vander Wal, T. (2007). <a href="http://www.Webcitation.org/5zXOyZ9Dw"><em>Folksonomy</em>.</a> Retrieved 29 March, 2011, from http://vanderwal.net/folksonomy.html. (Archived by WebCite<sup>®</sup> at http://www.Webcitation.org/5zXOyZ9Dw).</li>
+<li>Ventola, C.L. (2010). Current issues regarding complementary and alternative medicine (CAM) in the United States, Part 1: the Widespread use of CAM and the need for better-informed health care professionals to provide patient counseling. <em>Pharmacy and Therapeutics,</em> <strong>35</strong>(8), 461-68.</li>
+<li>Veres, C. (2006). The language of folksonomies: what tags reveal about user classification export. In C. Kop, G. Fliedl, H.C. Mayr &amp; E. M?tais (Eds.), <em>Natural language processing and information systems</em> (pp. 58-69). Berlin: Springer. (Lecture Notes in Computer Science-3999)</li>
+<li>Voorbij, H.J. (1998). Title keywords and subject descriptors: a comparison of subject search entries of books in the humanities and social sciences. <em>Journal of Documentation</em> <strong>54</strong>(4), 466-476.</li>
+<li>Yi, K. (2010). A semantic similarity approach to predicting Library of Congress Subject Headings for social tags. <em>Journal of the American Society for Information Science and Technology,</em> <strong>61</strong>(8), 1658-1672.</li>
+<li>Yi, K. &amp; Chan, L.M. (2009). Linking folksonomy to Library of Congress subject headings: an exploratory study. <em>Journal of Documentation</em> <strong>65</strong>(6), 872-900.</li>
+</ul>
+<h2 id="appendices">Appendices</h2>
+<h3 id="appendix-a-current-relations-in-the-semantic-network-of-the-umls">Appendix A: Current Relations in the Semantic Network of the UMLS</h3>
+<ul>
+<li>isa</li>
+<li>is associated with
+<ul>
+<li>physically_related_to
+<ul>
+<li>part_of</li>
+<li>consists_of</li>
+<li>contains</li>
+<li>connected_to</li>
+<li>interconnects</li>
+<li>branch_of</li>
+<li>tributary_of</li>
+<li>ingredient_of</li>
+</ul>
+</li>
+<li>spatially_related_to
+<ul>
+<li>location_of</li>
+<li>adjacent_to</li>
+<li>surrounds</li>
+<li>traverses</li>
+</ul>
+</li>
+<li>functionally_related_to
+<ul>
+<li>affects
+<ul>
+<li>manages</li>
+<li>treats</li>
+<li>disrupts</li>
+<li>complicates</li>
+<li>interacts_with</li>
+<li>prevents</li>
+</ul>
+</li>
+<li>brings_about
+<ul>
+<li>produces</li>
+<li>causes</li>
+</ul>
+</li>
+<li>performs
+<ul>
+<li>carries_out</li>
+<li>exhibits</li>
+<li>practices</li>
+</ul>
+</li>
+<li>occurs_in
+<ul>
+<li>process_of</li>
+</ul>
+</li>
+<li>users</li>
+<li>indicates</li>
+<li>result_of</li>
+</ul>
+</li>
+<li>temporally_related_to
+<ul>
+<li>co-occurs_with</li>
+<li>precedes</li>
+</ul>
+</li>
+<li>conceptually_related_to
+<ul>
+<li>evaluation_of</li>
+<li>degree_of</li>
+<li>analyses
+<ul>
+<li>assesses_effect_of</li>
+</ul>
+</li>
+<li>measurement_of</li>
+<li>measures</li>
+<li>diagnoses</li>
+<li>property_of</li>
+<li>derivative_of</li>
+<li>method_of</li>
+<li>conceptual_part_of</li>
+<li>issue_in</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="appendix-b-descriptions-of-the-umls-current-relationships-as-adapted-for-the-study">Appendix B: Descriptions of the UMLS <em>Current Relationships</em> as adapted for the study</h3>
+<p><em>'sh' is the subject heading and 'tc' stands for tag category.</em></p>
+<p>Isa: conceptually equivalents. Ex. Health (sh) and general health (tc) and Medicine, Chinese traditional (sh) and Chinese medicine (tc).</p>
+<p>Physically_related_to (part_of): inherent part of a larger field. Ex. Alternative medicine (sh) and alternative therapies (tc) and Holistic Health (sh) and mind (tc) [the parts of the field are all related to one another as well.]</p>
+<p>Physically_related_to (branch_of): Discipline of knowledge and its subdisciplines. Ex. Science (sh) and medicine (tc) and Holistic Medicine (sh) and alternative medicine (tc) and Gynecology (sh) and medicine (tc)</p>
+<p>Physically_related_to (ingredient_of): the core entities that are required in order for the larger concept to exist. Ex. Energy medicine (sh) and energy (tc). Energy is required for energy medicine to work, as energy medicine involves the manipulation of energy.</p>
+<p>Spatially_related_to (location_of): Where an entity is or an action occurs. Ex. Medicine, Ayurvedic (sh) and Eastern (tc)</p>
+<p>Functionally_related_to (Affects_(manages): One that controls, organizes, or manages an entity or situation. Ex. Shamanism (sh) and shaman (tc)</p>
+<p>Functionally_related_to (Affects_(treats): something that fixes something else. Ex. Complementary Therapies (sh) and human body (tc)</p>
+<p>Functionally_related_to (Affects_(interacts_with): two things that work together and affect one another. Ex. Shamanism (sh) and spirit (tc) Shamans, practicing Shamanism, operate in the spirit realm and interact with spirits to solve problems in the human realm.</p>
+<p>Functionally_related_to (brings_about (produces): The process that produces or creates an entity. Ex. Science (sh) and truth (tc). Not part of this, but: The air conditioner produces cold air; this is an item that is created.</p>
+<p>Functionally_related_to (brings_about (causes): The causes that bring about a result. Ex. Stress, Psychological (sh) and antagonism (tc) the air conditioner is turned on, it causes the air to become colder. This is a cause.</p>
+<p>Functionally_related_to (performs (carries_out)): directions for action. Ex. Cookery (sh) and instructional (tc) and Vegetarian Cookery (sh) and instructional (tc)</p>
+<p>Functionally_related_to (practices): The person acting in their field of specialty/trade. Ex. Physicians (sh) medicine (tc)</p>
+<p>Functionally_related_to (occurs_in (process_of)): something that happens in the process of doing or creating something else. Ex. Mental Healing (sh) and introspection (tc)</p>
+<p>Functionally_related_to (users): those who actually use a thing. Ex. Gynecology (sh) and women (tc)</p>
+<p>Functionally_related_to (manifestation_of): An expression of an entity. Ex. Errors, Scientific (sh) and doubt (tc). Health behaviour (sh) and food (tc)</p>
+<p>Functionally_related_to (result_of): things that contribute to the end result. Ex. Mental healing (sh) and health (tc)</p>
+<p>Temporally_related_to (co_occurs_with): things that happen at the same time. Ex. Complementary Medicine (sh) and conventional medicine (tc)</p>
+<p>Temporally_related_to (precedes): one thing occurs before another; may be part of a sequence. Ex. Relaxation (sh) and comfort (tc)</p>
+<p>Conceptually_related_to(evaluation_of): one thing figures out or appraises another; also related to the process of evaluation. Ex. Physicians (sh) and disease (tc). Ex. Evidence-based Medicine (sh) and critical (tc)</p>
+<p>Conceptually_related_to(assesses_effect_of): the test or determinant of something else. Ex. Evidence-based medicine (sh) and the study of medicine (tc) and evidence-based medicine (sh) and experimentation (tc). This is the action and that assesses the entity.</p>
+<p>Conceptually_related_to (property_of): attributes of an entity or a process. Ex. Meditation (sh) and awareness (tc)</p>
+<p>Conceptually_related_to(method_of): related to a goal and the means of accomplishing that goal. The tool that is being used. Ex. Self-care, Health (sh) and herbs (tc)</p>
+<p>Conceptually_related_to(conceptual_part_of): two related concepts. Ex. Self-Actualization (Psychology) (sh) and scientific disciplines (tc). Ex. Herbal Medicine (sh) and natural medicine (tc)</p>
+<p>Conceptually_related_to( issue_in): A complication or a problem in another concept. Ex. Self-Help Groups (sh) and Scepticism (tc). Breast Neoplasms (sh) and health (tc)</p>
+
+</body>
+</html>

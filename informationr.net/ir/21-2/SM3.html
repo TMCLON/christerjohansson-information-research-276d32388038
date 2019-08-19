@@ -1,0 +1,754 @@
+
+<!doctype html>  
+ <html>  
+ <head>  
+ <title>Twitter conversation dynamics of political controversies: the case of Sweden's <em>December Agreement</em></title>
+<meta charset=utf-8 />
+ <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="Twitter conversation dynamics of political controversies: the case of Sweden's <em>December Agreement</em>" />  
+ <meta name="author" content="David Gunnarsson Lorentzen" />  
+ <meta name="dcterms.subject" content="This paper analyses Twitter conversations following a political event." />  
+ <meta name="description" content="Following the news of an extraordinary agreement between six political parties, intense discussions on Twitter took place, suitable for investigation of political controversies on the platform. The purpose is to analyse threaded conversations on Twitter in relation to this political event. By using the streaming API with a set of hashtags and the most active participants in the conversations, tweets related to the event and tweets belonging to the follow-on conversation were captured. From this set, the replies were used to build conversational threads. The dataset was analysed using both quantitative and qualitative methods. The overall lifecycle of the conversations was outlined using statistical methods. Ten conversational threads were studied using qualitative content analysis. Immediately after the agreement, activity was focused on information diffusion, but following this, discussions emerged. Politicians were frequently talked to but rarely replied to tweets directed to them. Citizens from the general public dominated the activity. Conversations do exist beyond the hashtag but few examples of democratic debate were found. Conversations are more likely to develop within tightly knit groups followership-wise. Echo chambers as well as discussions where non like-minded argued were identified. Consensus formation was not common.
+s" />  
+ <meta name="keywords" content="Twitter, conversations, politics, information behaviour, content analysis" />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+ <meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="Professor T.D. Wilson" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/21-2/SM3.html" />  
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/21-2/infres212.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2016-06-15" /> 
+  <meta name="geo.placename" content="global" />  
+
+ 
+ <script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+
+	</script> 
+
+</head> 
+  
+ <body> 
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 21  no. 2, June, 2015</span>
+<br /><br /> 
+<div class="button">
+ <ul> 
+ <li><a href="infres212.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../search.html">Search</a> |  </li> 
+ <li><a href="../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr />
+ </header>
+ <article>
+ <h1>Twitter conversation dynamics of political controversies: the case of Sweden's <em>December Agreement</em></h1>  <br />  
+ <h4 style="text-align:center;"><a href="SM3.html#author">David Gunnarsson Lorentzen</a></h4>  
+ <br /> 
+
+ <form>  <fieldset>  <legend>Abstract </legend>
+ <blockquote>
+ <strong>Introduction.</strong> Following the news of an extraordinary agreement between six political parties, intense discussions on Twitter took place, suitable for investigation of political controversies on the platform. The purpose is to analyse threaded conversations on Twitter in relation to this political event.<br />
+ <strong>Method.</strong> By using the streaming API with a set of hashtags and the most active participants in the conversations, tweets related to the event and tweets belonging to the follow-on conversation were captured. From this set, the replies were used to build conversational threads.<br />
+ <strong>Analysis.</strong> The dataset was analysed using both quantitative and qualitative methods. The overall lifecycle of the conversations was outlined using statistical methods. Ten conversational threads were studied using qualitative content analysis.<br />
+ <strong>Results.</strong> Immediately after the agreement, activity was focused on information diffusion, but following this, discussions emerged. Politicians were frequently talked to but rarely replied to tweets directed to them. Citizens from the general public dominated the activity.<br />
+ <strong>Conclusions.</strong> Conversations do exist beyond the hashtag but few examples of democratic debate were found. Conversations are more likely to develop within tightly knit groups followership-wise. Echo chambers as well as discussions where non like-minded argued were identified. Consensus formation was not common.
+ </blockquote>  </fieldset>  </form> 
+ 
+ <br />  <div style="text-align:center">  <input type="button" value="change font"
+ class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onClick="doChangeFont()"
+ /></div>  <br /> 
+
+ <section>
+ 
+ <h2>Introduction</h2> 
+ 
+ <p>The outcome of the Swedish parliamentary election in September 2014 created a political crisis. In December 2014 it was decided that a re-election would be held in March 2015 after no party or constellation of parties had won majority. For the first time in several decades a budget proposition failed to generate enough support in the Parliament. At the end of 2014 it was revealed that an agreement had been reached between six parties. This settlement, named the <em>December Agreement</em>, was created to make sure that a minority constellation could succeed with its budget propositions. The political crisis and the agreement sparked an intense debate on Twitter, thereby enabling an interesting material for investigating the development of political controversy. The <em>December Agreement</em> was an extraordinary event opening up for grassroot discussions on the character of deliberative democracy. It is, therefore, suitable for investigation of political controversies on Twitter. This would seem to be an ideal case in order to study how people with different ideological viewpoints interact on Twitter.</p>
+ 
+ <p>The methodological approach to controversies on Twitter in the current study builds on the assumption that what is important for understanding the conversation dynamics is not to what extent conversational tweets occur in a defined conversation, but rather the tweets that are conversational. The use of a hashtag makes it possible to assign one or more keywords to a tweet and, by doing so, adding the tweet to an ongoing conversation. The hashtag makes it easy for the researcher to follow what is posted on a given subject and also makes data collection from a research point of view trivial. But by utilising such an approach, the follow-on communication, comprised of tweets replying to hashtagged tweets without including the hashtag, is not captured (e.g., <a href="SM3.html#bru12">Bruns, 2012</a>). The follow-on communication has so far been largely overlooked in Twitter research (e.g., <a href="SM3.html#bru13b">Bruns and Moe, 2013</a>).</p>
+ 
+ <p>By utilising a dataset including follow-on communication around a set of hashtags, the focus of this paper is to analyse conversation threads in relation to the <em>December Agreement</em>. The inclusion of follow-on communication yields numerous opportunities for research, of which three are investigated in this paper. First, it makes it possible to analyse the different phases of threaded discussions. Secondly, as Twitter facilitates a mechanism for invoking politicians and other actors into a conversation by mentioning them (e.g., <a href="SM3.html#bru13a">Bruns and Highfield, 2013</a>), the potential reaction from the invoked user can be studied. Finally, the existence of echo chambers, i.e., groups of like-minded who mainly talk to each other (e.g., <a href="SM3.html#sun09">Sunstein, 2009</a>), can be fully studied. Apart from filling a gap in previous Twitter research, this study gives insights into the interchanges between different actors in political communication on the platform. An understanding of how Twitter is used is crucial for those who are interested in either using the platform for communication or analysing sentiments and opinions expressed.</p>
+ 
+ <p>The discussions on Twitter spurred by the <em>December Agreement</em> involved political controversies with several interesting traits. Among these we identify the dynamics of three political blocks, a strong focus on the migration issue and conflicts on whether it is reasonable to have the <em>December Agreement</em>. The purpose of this paper is to investigate the lifecycle of controversy conversations on Twitter in relationship to a political event, focusing on conversation dynamics, initiation, development and closure of conversations and participants and participation. Given Twitter's communication model where a reply from user A to user B appears in the timeline of user C if C follows both A and B (<a href="SM3.html#twi15">Twitter, 2015</a>) and a reply from A to B seems to appear in a search result if C follows either A or B, directly or transitively, I am interested in how threads that spark controversy develops. The overarching research question is <em>How do the controversy conversations evolve following the December Agreement</em>?</p>
+ 
+ <p>The debate covered in this study consists of Swedish political conversations and the controversial stage is this sudden event, the <em>December Agreement</em>. The study sheds some light on how threaded conversations evolve and what can be learned from them, as well as it provides an example of how to analyse threaded conversations on this platform.</p>
+
+ 
+ <h2>Background</h2>
+ 
+ <p>The analysis takes off from the two perspectives: controversy studies (e.g., <a href="SM3.html#maz87">Mazur, 1987</a>; <a href="SM3.html#mcm87">McMullin, 1987</a>; <a href="SM3.html#sis04">Sismondo, 2004</a>) and the political problem of polarisation through digital tools (<a href="SM3.html#sun09">Sunstein, 2009</a>). Controversy studies aims for an understanding of how debates are terminated (<a href="SM3.html#sis04">Sismondo, 2004</a>). During these debates, participants are trying to find and expose potential weaknesses in the arguments of the opponents (<a href="SM3.html#maz87">Mazur, 1987</a>; <a href="SM3.html#sis04">Sismondo, 2004</a>). Termination can be achieved in different ways: <em>resolution</em>, meaning that the controversy is solved through some kind of agreement, <em>closure</em>, which is the lack of agreement, and <em>abandonment</em>, where the participants eventually lose their interest (<a href="SM3.html#mcm87">McMullin, 1987</a>).</p>
+ 
+ <p>I borrow a model of controversy from Mazur (<a href="SM3.html#maz87">1987, p. 269</a>). This includes two sides of a controversy; the establishment and the challenger. In between are the mass media reporting events and influencing opinion. Seen in this way, struggles over opinion are skewed in regards to power. Challengers are pushing debates on controversial issues in order to gain more recognition and even out the asymmetrical power structure. Members of the establishment are, on their part, concerned with maintaining the <em>status quo</em>. In this case the establishment is comprised of the Red-Green coalition (the Social Democratic Party and the Green Party) and the Alliance (the Moderate Party, the Christian Democrats, the Liberal Party and the Centre Party). The main challenger is the far right nationalist party Sweden Democrats, a party that emphasises tougher immigration policies and consistently engages in debates over any related issue. The Sweden Democrats were not part of the <em>December Agreement</em>.</p>
+ 
+ <p>Related to this is the issue of polarisation and echo chambers that have been recognised as features of digitalised political communication. According to Sunstein (<a href="SM3.html#sun09">2009, p. 76</a>), society might be better off '<em>if greater communication choices produce greater extremism</em>' because '<em>when many different groups are deliberating with one another, society will hear a far wider range of views</em>'. From such a vantage point, it is interesting to investigate if polarisation might increase or decrease following interactions on Twitter.</p>
+ 
+ <p>Are controversies really manifested and played out on Twitter? This issue is linked to the question of whether or not Twitter usage is conversational. It has been argued that the message types mention and retweets are fundamentally conversational (e.g., <a href="SM3.html#bru13a">Bruns and Highfield, 2013</a>). To some extent, this can be measured as the mention, used to either direct a message to a specific user or notify or invite other users of and to a conversation, was found to be directed in 91% of all the instances in one study (<a href="SM3.html#hon09">Honeycutt and Herring, 2009</a>), while in another study it was mostly used to talk about people rather than to them (<a href="SM3.html#bru13a">Bruns and Highfield, 2013</a>). Similar conclusions were drawn by Mascaro and Goggins (<a href="SM3.html#mas15">2015</a>), identifying initiatives to conversation in every fourth analysed replying message. Previously, it has been shown that political tweets are largely of the one-way communication type (e.g., <a href="SM3.html#gru12">Grusell and Nord, 2012</a>; <a href="SM3.html#sma11">Small, 2011</a>; <a href="SM3.html#sab11">S&aelig;b&oslash;, 2011</a>), but also that politicians might benefit from Twitter usage (e.g., <a href="SM3.html#kru14">Kruikemeier, 2014</a>; <a href="SM3.html#lam13">LaMarre and Suzuki-Lambrecht, 2013</a>). The latter conclusion can be contrasted with Yardi and Boyd's statement '<em>Twitter is hardly a medium for deliberative democracy</em>' (<a href="SM3.html#yar10">2010, p. 317</a>), a sentiment echoed by other researchers (e.g., <a href="SM3.html#boz14">Bozdag, Gao, Houben and Warnier, 2014</a>; <a href="SM3.html#tri15">Trilling, 2015</a>). Overall, different conclusions have been made regarding to what extent political conversations are played out on the platform.</p>
+ 
+ <h2>Literature review</h2>
+ 
+ <p>This section is divided into two parts. As research on political Twitter usage is, seemingly, dominated by media and communication studies and political science, the first part is centred on informational aspects of online communication. The second part has its focus on, for this paper, relevant aspects of political Twitter usage and communication.</p>
+ 
+ <h3>Informational aspects of online communication</h3>
+ 
+ <p>Burnett (<a href="SM3.html#bur00">2000</a>) described a typology for analysing discussions in virtual environments, differing between non-interactive (e.g., lurking) and interactive behaviour at the broadest level. The interactive behaviour was further divided into hostile and collaborative behaviours. Testing this typology on two online communities, Burnett and Buerkle (<a href="SM3.html#bur04">2004</a>) focused on hostile interactive behaviours, collaborative non-informational interactive behaviours and collaborative informational interactive behaviours. It was suggested that the typology could be revised with considering category limits and ambiguities, the temporal dimension and definitional limits.</p>
+ 
+ <p>Savolainen (<a href="SM3.html#sav15">2015</a>) focused on emotion in information sharing by analysing conversation threads discussing immigration in an online discussion forum. Among the findings was the prevalence of neutral statements although disagreement was more common than agreement. Another discussion forum study of relevance was made by O'Connor and Rapchak (<a href="SM3.html#oco12">2012</a>), who analysed 226 threads in three forums discussing a health care reform. Use of sources was rare, quite often biased and citations were sometimes challenged by participants. The authors found that misattribution was common, for example opinions expressed in blog posts or in comments in relation to the content cited as formal information.</p>
+
+ <p>The conception of Twitter as a microblog indicates that there are aspects that can be transferred from blogging. In Savolainen's (<a href="SM3.html#sav11">2011</a>) study of interaction between bloggers and blog readers on the topic of weight loss, bloggers seemed to be more inclined to share information rather than seek information. Agreement was more common than disagreement among the comments on the blogpost, which could roughly be translated to replies to a tweet. Disagreement was more common in blogposts, but overall disagreement was not common. Giving information or opinion was far more common than requesting, and more common in blogposts than in comments. In the Twittersphere, similar usage of a hashtag was identified by Small (<a href="SM3.html#sma11">2011</a>). In her study, the hashtag was very much used for informing but also included opinion commentary in slightly more than 10% of the tweets analysed.</p>
+ 
+ <p>Mascaro and Goggins (<a href="SM3.html#mas15">2015</a>) studied Twitter usage in conjunction with a political televised debate. Spreading information through retweets was common, but while the participants did use the mention feature to participate in conversations, the level of engagement was found to be low. Similarly, in an election campaign study of political candidates' usage of the platform, Graham, Broersma, Hazelhoff and van't Haar (<a href="SM3.html#gra13">2013</a>) found that every fourth tweet sent by a candidate was interactive. Nonetheless, there were few examples of extended discussions. Attacking or debating with another user was the most common interaction type, followed by acknowledging a person or organisation.</p>
+ 
+ <p>Heverin and Zach (<a href="SM3.html#hev12">2012</a>) discovered a few sense-making themes in their study of Twitter communication in relation to three crises. The themes were information sharing, information negotiation (conflicting information posted and clarification needed), information seeking, talking cure, sharing individual actions, understanding the 'why', contemplating awareness outside the local setting, and questioning the outcomes of the crisis. Elsewhere, information sharing has been found to be dominated by online information, followed by retweets and news (<a href="SM3.html#sma11">Small, 2011</a>). Information diffusion on Twitter in the form of retweets has been identified in different contexts, for example in political linking behaviour (<a href="SM3.html#dya14">Dyagilev and Yom-Tov, 2014</a>), during disasters (<a href="SM3.html#sut14">Sutton <em>et al</em>., 2014</a>) and during protests (<a href="SM3.html#tin14">Tinati, Halford, Carr and Page, 2014</a>). To Boyd, Golder and Lotan (<a href="SM3.html#boy10">2010</a>) such information behaviour is a type of conversation. Contrary to this, the present study views the reply as conversational. With Burnett's (<a href="SM3.html#bur00">2000</a>) broadest categorisation of information behaviour in virtual communities in mind (non-interactive and interactive), the present study takes the view that tweets not directed to anyone in particular (i.e., singletons) could be intended for both informing and initiating conversations.</p>
+ 
+ <h3>Aspects of political Twitter usage and communication</h3>
+ 
+ <p>Although there has been a lack of studies devoted to political controversies on Twitter, there are many examples of studies of different political aspects on Twitter, such as political actors' usage (e.g., <a href="SM3.html#gru12">Grusell and Nord, 2012</a>; <a href="SM3.html#kru14">Kruikemeier, 2014</a>; <a href="SM3.html#lam13">LaMarre and Suzuki-Lambrecht, 2013</a>; <a href="SM3.html#larip">Larsson, in press</a>; <a href="SM3.html#lar15">Larsson and Ihlen, 2015</a>; <a href="SM3.html#sab11">S&aelig;b&oslash;, 2011</a>), usage pattern of a political hashtag (e.g., <a href="SM3.html#lar14">Larsson, 2014</a>; <a href="SM3.html#sma11">Small, 2011</a>), elections (e.g., <a href="SM3.html#bru13a">Bruns and Highfield, 2013</a>; <a href="SM3.html#lar12">Larsson and Moe, 2012</a>), polarisation (e.g., <a href="SM3.html#boz14">Bozdag <em>et al.</em>, 2014</a>; <a href="SM3.html#con11">Conover <em>et al.</em>, 2011</a>; <a href="SM3.html#lor14">Lorentzen, 2014</a>; <a href="SM3.html#yar10">Yardi and Boyd, 2010</a>) and Twitter conversations in conjunction with events such as TV debates and protests (e.g., <a href="SM3.html#jun14">Jungherr and J&uuml;rgens, 2014</a>; <a href="SM3.html#kal14">Kalsnes, Krumsvik and Storsul, 2014</a>; <a href="SM3.html#mas15">Mascaro and Goggins, 2015</a>; <a href="SM3.html#tri15">Trilling, 2015</a>). Typically, Twitter activity increases during political events (e.g., <a href="SM3.html#bru13a">Bruns and Highfield, 2013</a>; <a href="SM3.html#jun14">Jungherr and J&uuml;rgens, 2014</a>; <a href="SM3.html#lar12">Larsson and Moe, 2012</a>). Jungherr and J&uuml;rgens (<a href="SM3.html#jun14">2014</a>) also found that the distribution of type of tweets changed during the protests as the share of conversational tweets decreased. Mascaro and Goggins (<a href="SM3.html#mas15">2015</a>) made similar findings with an increasing conversation level before rather than during the debate.</p>
+ 
+ <p>Evidence of politicians benefitting from Twitter usage, specifically by engaging with other users on Twitter instead of merely informing, has been presented (<a href="SM3.html#kru14">Kruikemeier, 2014</a>; <a href="SM3.html#lam13">LaMarre and Suzuki-Lambrecht, 2013</a>). While interaction between politicians and citizens does not seem to be common according to the Twitter research so far, both Ausserhofer and Maireder (<a href="SM3.html#aus13">2013</a>) and Larsson and Ihlen (<a href="SM3.html#lar15">2015</a>) have discovered examples of such communication. However, in the latter case the interactions were characterised by echo chambers as few citizens interacted with more than one party leader. There have been some contrasting views on whether the conversations are dominated by elite users such as politicians and mass media actors. Lorentzen (<a href="SM3.html#lor14">2014</a>) explored political conversations that appeared to be dominated by citizens and similar findings were made by Small (<a href="SM3.html#sma11">2011</a>). Other studies have reported that activity is dominated by citizens but attention more often given to politicians, experts or media actors (e.g., <a href="SM3.html#dhe14">D'heer and Verdegem, 2014</a>; <a href="SM3.html#lar13">Larsson and Moe, 2013</a>). Larsson and Moe (<a href="SM3.html#lar12">2012</a>) and Ausserhofer and Maireder (<a href="SM3.html#aus13">2013</a>) both found a domination of elite users, however, in these two cases the focus was on a smaller number of users than in the studies of Small (<a href="SM3.html#sma11">2011</a>) and Lorentzen (<a href="SM3.html#lor14">2014</a>).</p>
+ 
+ <p>In the debate study by Trilling (<a href="SM3.html#tri15">2015</a>), Twitter users had the potential of affecting the topics of the debate but there was also a dominance of sarcasm and attempts at humour. There was also a tendency that the Twitter conversations were more likely to highlight negative aspects. Mascaro and Goggins (<a href="SM3.html#mas15">2015</a>) found interactions between the moderator of the debate and the Twitter users, which indicated that Twitter could function as a way to get involved in the debate. In another debate related study, Kalsnes, Krumsvik and Storsul (<a href="SM3.html#kal14">2014, p. 325</a>) concluded that '<em>Twitter users scrutinize the agenda set by mainstream media and the politicians, and the discussion about the debate is equally present as discussions about the political topics of the debate</em>'.</p>
+ 
+ <p>Polarisation on Twitter is visible in retweet networks (e.g., <a href="SM3.html#boz14">Bozdag <em>et al.</em>, 2014</a>; <a href="SM3.html#con11">Conover <em>et al.</em>, 2011</a>; <a href="SM3.html#dya14">Dyagilev and Yom-Tov, 2014</a>; <a href="SM3.html#lor14">Lorentzen, 2014</a>) but not in mention networks (e.g., <a href="SM3.html#con11">Conover <em>et al.</em>, 2011</a>; <a href="SM3.html#lor14">Lorentzen, 2014</a>). Lorentzen (<a href="SM3.html#lor14">2014</a>) also found evidence of polarisation in followership networks, but concluded that the lack of follow-on conversation, which is missing in all of these studies, might distort the mention network. Yardi and Boyd (<a href="SM3.html#yar10">2010</a>) focused on a content analysis of abortion issues and found that participants were exposed to different viewpoints but also that there was a lack of meaningful discussion.</p>
+
+ <p>As indicated above, most of the Twitter studies have used limited datasets, not including follow-on communication. The one example is provided by Zubiaga <em>et al.</em> (<a href="SM3.html#zub15">2015</a>) who proposed a method for collection of conversations around rumours. This was done by identifying the most retweeted tweets with a given hashtag or keyword, developing a schema for coding tweets in the conversations emanating from these tweets. The present study aims to bridge this gap in the literature by focusing on the conversation threads emanating from tweets including one of a set of hashtags related to a political event, and so avoiding the risk of analysing tweets outside their conversational context. A thread is defined as a chain or tree of tweets tied together by the reply metadata field (in_reply_to_status_id_str) which includes an identifier of the tweet a given tweet is replying to. A thread is then comprised by one singleton tweet and a set of replies to that tweet and to the replying tweets.</p>
+ 
+ <p>The study picks up on some suggestions for research. Specifically, it makes use of semantic analyses of mentions (<a href="SM3.html#bru13a">Bruns and Highfield, 2013</a>), combines quantitative and qualitative methods (<a href="SM3.html#lar14">Larsson, 2014</a>; <a href="SM3.html#lar13">Larsson and Moe, 2013</a>) and investigates if polarisation can be detected with the inclusion of follow-on communication (<a href="SM3.html#lor14">Lorentzen, 2014</a>). Even though polarisation might not be evident in a mention network, the participants may very well keep holding on to their viewpoints despite being exposed to different viewpoints. In this paper, I not only turn my attention to structures and patterns, but also analyse the individual threads.</p>
+
+ <h2>Method</h2>
+ 
+ <h3>Data set</h3>
+ 
+ <p>The data set consists of 177,847 tweets which were posted by 16,349 users. In short, data were collected by simultaneously collecting tweets matching a set of hashtags and following the activities around the 5,000 most active participants in the conversation, using the streaming API for both (see <a href="SM3.html#lorip">Lorentzen and Nolin, in press</a>). By doing this, follow-on communication related to the collected tweets was captured. With this data set, one limitation follows in that the data collection started a couple of hours after the press conference. Hence some relevant threads are missing.</p>
+ 
+ <p>All hashtags were related to the election, the <em>December Agreement</em> and general Swedish political conversations (Table 1). Tweets to the followed users were collected if they were replies to any tweet in the database or if they included any of the hashtags. Tracking the most active users in the dataset was a necessary methodological choice. It is possible that a reply to a tweet in the database is not collected if it is posted by someone outside the tracked group to someone else outside the tracked group. However, there are numerous examples of studies where up to a few thousand users are posting a large majority of the tweets and previous research has also shown that the least active users are also the least conversational (e.g., <a href="SM3.html#bru13a">Bruns and Highfield, 2013</a>; <a href="SM3.html#bru13c">Bruns and Stieglitz, 2013</a>; <a href="SM3.html#lor14">Lorentzen, 2014</a>).</p>
+ 
+ <table class="center">  
+ <caption><br />Table 1: Hashtags and descriptions.<br /></caption> 
+ <tbody>
+  <tr>
+   <th>Hashtag(s)</th><th>Description</th>
+  </tr>
+  <tr>
+   <td>#svpol</td><td>Swedish politics</td>
+  </tr>
+  <tr>   
+   <td>#dinr&ouml;st</td><td>Your vote</td>
+  </tr>
+  <tr>   
+   <td>#val15, #val2015</td><td>Election 2015</td>
+  </tr>
+  <tr>
+   <td>#extraval, #extraval15, #extraval2015</td><td>Extra election 2015</td>
+  </tr>
+  <tr>   
+   <td>#nyval, #nyval15, #nyval2015</td><td>Re-election 2015</td>
+  </tr>
+  <tr>   
+   <td>#d&ouml;, #dec&ouml;k, #december&ouml;verenskommelsen</td><td>The <em>December Agreement</em></td>
+  </tr>
+  </tbody>
+ </table>
+  
+ <h3>Sampling threads</h3>
+ 
+ <p>In total, 13,193 threads starting after the press conference with volumes between 2 and 476 (median: 3; mean: 6.173) tweets were captured. The number of participants ranged from 1 to 194 (median: 2; mean: 3.345). 337 threads included just one user, most of these chains of tweets that were part of a longer message. More than half of the threads, 7,304, met only minimal standards, including only the initial post and one comment. For identifying possibly information rich threads and still having the possibility of categorising all the participants, a simple criterion was used. Threads with an arbitrary minimum number of ten participants and a minimum volume of 20 tweets were kept for closer analysis. Due to the usage of more general hashtags, such as #svpol, threads discussing other topics than the <em>December Agreement</em> were captured. Table 2 shows the number of threads discussing the <em>December Agreement</em> versus all threads meeting the volume and participants criteria. Discussions of the value of the agreement dominated the threaded conversations during the first few days.</p>
+ 
+ <p>In the second phase of the sampling, threads not discussing the chosen topic were excluded, resulting in 61 threads involving 930 unique tweeting participants who posted a total of 3,472 tweets. In total, 1,018 users were involved in these threads, but as 7 of them were suspended or had their accounts closed before the analysis of profile data, the analysis includes 1,011 users. Of the 3,472 tweets, 442 included at least one of the tracked hashtags. The 61 threads are summarised in table 3 with the attributes <em>volume</em>, <em>number of participants</em> and <em>velocity</em> (number of tweets per hour). A final, stratified sample was made to cover a range of threads with different volume, number of participants and velocity. This sample of ten threads was selected for qualitative content analysis.</p>
+ 
+ <table class="center" style="width:50%;">  
+ <caption><br />Table 2: Threads discussing the <em>December Agreement</em> vs. all threads, day by day. Volume >= 20, number of participants >= 10.<br /></caption> 
+ <tbody>
+  <tr>
+   <th>Day</th><th>Topical</th><th>Total</th>
+  </tr>
+  <tr> 
+   <td style="text-align:center">1</td><td style="text-align:center">34</td><td style="text-align:center">39</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">2</td><td style="text-align:center">9</td><td style="text-align:center">18</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">3</td><td style="text-align:center">7</td><td style="text-align:center">25</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">4</td><td style="text-align:center">5</td><td style="text-align:center">15</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">5</td><td style="text-align:center">1</td><td style="text-align:center">6</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">6</td><td style="text-align:center">2</td><td style="text-align:center">23</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">7</td><td style="text-align:center">1</td><td style="text-align:center">32</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">8</td><td style="text-align:center">1</td><td style="text-align:center">34</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">9</td><td style="text-align:center">0</td><td style="text-align:center">11</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">10</td><td style="text-align:center">0</td><td style="text-align:center">12</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">11</td><td style="text-align:center">0</td><td style="text-align:center">13</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">12</td><td style="text-align:center">0</td><td style="text-align:center">30</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">13</td><td style="text-align:center">0</td><td style="text-align:center">17</td>
+  </tr>
+  <tr>   
+   <td style="text-align:center">14</td><td style="text-align:center">1</td><td style="text-align:center">11</td>
+  </tr>
+  </tbody>
+ </table> 
+<br />
+ <table class="center" style="width:60%;">  
+ <caption><br />Table 3: <em>December Agreement</em> thread summary.<br /></caption> 
+ <tbody>
+  <tr>
+   <th></th><th>Volume</th><th>Participants</th><th>Velocity</th>
+  </tr>
+  <tr>  
+   <td>Min</td><td style="text-align:center">20</td><td style="text-align:center">10</td><td style="text-align:center">0.11</td>
+  </tr>
+  <tr>   
+   <td>1st Q</td><td style="text-align:center">26</td><td style="text-align:center">12</td><td style="text-align:center">0.86</td>
+  </tr>
+  <tr>   
+   <td>Median</td><td style="text-align:center">35</td><td style="text-align:center">18</td><td style="text-align:center">1.52</td>
+  </tr>
+  <tr>   
+   <td>Mean</td><td style="text-align:center">56.92</td><td style="text-align:center">24.2</td><td style="text-align:center">3.54</td>
+  </tr>
+  <tr>   
+   <td>3rd Q</td><td style="text-align:center">70</td><td style="text-align:center">24</td><td style="text-align:center">4.08</td>
+  </tr>
+  <tr>   
+   <td>Max</td><td style="text-align:center">314</td><td style="text-align:center">194</td><td style="text-align:center">19.62</td>
+  </tr>
+  </tbody>
+ </table> 
+
+ <h3>Data analysis</h3>
+ 
+ <p>A combination of descriptive statistics and content analysis was used to study the threads. In the first step, the overall life cycle of the conversations and characteristics of the threads discussing the <em>December Agreement</em> were outlined. In the second step, ten threads were sampled for qualitative content analysis focusing on the identified phases <em>sparking of</em> conversation, <em>development and dynamics</em> of conversations, and <em>closure</em>. Qualitative content analysis is an inductive process which '<em>may yield testable hypotheses but that is not its immediate purpose</em>' (<a href="SM3.html#whi06">White and Marsh, 2006</a>, p. 34). The process consists of four steps: 1) define research question(s), 2) sample the units (threads) which enables complete and accurate answers to the questions and present the big picture, 3) identify significant concepts and patterns, and 4) analysis. Because there is a lack of thread analyses of Twitter conversations and hence a rationale for studying such conversations, the choice of using qualitative analysis is justified. The approach taken is exploratory, and question generating rather than theory generating. One might argue that rationales from online forum analyses could be used, but Twitter is fundamentally different in its way of displaying conversations. The default view of a user's timeline, or the timeline of a hashtag, hides the conversation from the user. This entails that for many participants, the only view of the ongoing conversation might be just the tweet replied to (depending on device used by the participant). Some users would want to expand the conversation (the <em>View more in conversation</em> option) and see it as a whole before replying, but the tree structure would still not be visible.</p>
+ 
+ <p>The content analysis was performed in order to map the thematic contents of the threads and thereafter analysing the conversation dynamics, i.e., how the participants interacted with each other utilising both argumentative and emotional texts. As a first step, the thematic content of all tweets was identified and coded according to the steps outlined above. In the second step, the types of tweets and responses were coded to analyse how the participants talked to each other. Drawing on Zubiaga <em>et al.</em> (<a href="SM3.html#zub15">2015</a>), three dimensions were used: type of message (e.g., assertion, question, opinion, facts), type of response in relation to replied-to tweet (e.g., answer, evasive answer, question, rhetorical question, requesting source, agreement, disagreement, topic change) and context (e.g., polarised branch, echo chamber branch). The approach was data driven rather than theory driven. Categories were added as they were discovered and each tweet was compared to previous categories (e.g., <a href="SM3.html#cor08">Corbin and Strauss, 2008</a>; <a href="SM3.html#gla67">Glaser and Strauss, 1967</a>). One code for each dimension was assigned to each categorised tweet. In the last step, in order to analyse the reaction to an invocation by a mention, all tweets including a mention of a previously not participating user in the thread were scrutinised. These were coded with the categories <em>talk-about</em> and <em>invitation</em>, accompanied by a note of whether the invocations were successful or not.</p>
+
+ <p>Larsson (<a href="SM3.html#lar14">2014</a>) categorised participants into the following groups: <em>Citizens</em>, <em>Media/PR</em>, <em>NGOs/Non-profits</em>, <em>Far left</em>, <em>Left</em>, <em>Right</em>, <em>Far Right</em> and <em>Pirate Party</em>. A similar categorisation is made here, but user type is separated from political position. The following user types were identified among the active and passive participants in the conversations: <em>Political actor</em> (87 participants), <em>Media/PR</em> (64), <em>Celebrity/Artist</em> (8), <em>Author</em> (10), <em>Citizen</em> (834) and <em>Others</em> (8), including <em>Member</em>, <em>Union</em> and <em>NGO/Non-profit</em>. Three main political positions were identified among the active participants: <em>Left</em> (51), <em>Right</em> (163) and <em>Far right</em> (100). <em>Citizen</em> and <em>Unknown</em> were the default categories and participants were categorised into a group if their profiles clearly stated they belonged to the group. This paper takes the same viewpoint as Wilkinson and Thelwall (<a href="SM3.html#wil11">2011</a>) in that public data can be collected without consent but anonymisation is necessary to ensure no potentially sensitive information is revealed. The categorisation was based on publicly available Twitter profile data. After the categorisation, all screen names (including mentions in tweets), names and user IDs were encrypted to make sure that all tweets were anonymised before the qualitative analysis. An update option was built into the tweet coding tool so that an uncategorised participant could be categorised into a political position, if the tweet content clearly stated this. Eight participants were categorised based on tweet content.</p>
+ 
+ <p>The analysis of the <em>sparking of conversations</em> focused on what type of user posted the initial tweet and the immediate reaction followed. The analysis of <em>development and dynamics</em> had its focus on the conversation patterns after the immediate reaction. In this phase I focused on the user types involved, the velocity of the conversation, the interaction among the participants and to what extent polarisation or echo chambers were visible. The analysis of the final phase <em>closure</em> focused on how the participants reached consensus, if they did, or otherwise how the threads ended. </p>
+ 
+ <p>Descriptive statistics over the activity is also provided. To see how different user groups behaved during the two weeks, the users were divided into three groups based on activity as by Bruns and Stieglitz (<a href="SM3.html#bru13c">2013</a>). Here, the most active 1% users form one group, the next 9% active form a second group, and the least active 90% form a third group. Activity is here defined as the number of tweets posted, regardless of tweet types.</p>
+ 
+ <h2>Analysis</h2>
+ 
+ <h3>Overall life cycle</h3>
+ 
+ <p>Over the course of the two weeks the attention of the participants shifted as a reaction to various events. The first few days were dominated by conversations about opinions of the agreement, and then the attention turned to migration politics and a couple of specific issues related to this topic. The new discussions that took place seem to be one kind of closure of previous discussions. Within controversy studies this kind of closure is dubbed 'abandonment' leading to a situation in which involved parties fail to reach some sort of agreement. Those interested in democracy discussions simply shifted to another topic. Activity was at its highest the first day after the press conference (Figure 1). Each series is represented by a dot for the actual count for a given day, a regression line and the area in which 95% of the observations are expected to be situated within. The level of engagement was symmetrical for the three groups; when overall activity was peaking, activity for all three groups was peaking as well. Looking at share of tweets posted for each day (Figure 2), the activity looks different with the most active group having the largest share of tweets when overall activity is low, most notably during day five. The least active 90% group were as most active during day one, accounting for 31% of all tweets, but after five days the group's share of tweets had decreased to 21%, and stabilising at 19% after ten days (Table 4). The share of mentions increased from day one with a dip between day eleven and twelve when Charlie Hebdo was attacked (Figure 3). The trends for singletons and retweets are similar; the shares of these increase and decrease simultaneously. Closer to an event, at least judging by the current case, activity appears more focused on informing and relaying information than posting tweets addressing other users. Similar findings have been made by Jungherr and J&uuml;rgens (<a href="SM3.html#jun14">2014</a>) and Mascaro and Goggins (<a href="SM3.html#mas15">2015</a>).</p>
+ 
+ <p>Figures 1-3 and Table 4 all show a clear pattern. The more distant the event was the more dominant was the top 1% active group and the larger was the share of conversational tweets. Closer to the event, the least active 90% group was at its most active. The middle group was different with a relative activity level staying pretty much the same throughout these two weeks.</p>
+ 
+ <figure class="centre">
+   <img src="SM3fig1.jpg" alt="Figure 1: Day-by-day activity by user percentile groups. Number of tweets posted." width="600" height="600" />
+   <figcaption>
+      Figure 1: Day-by-day activity by user percentile groups. Number of tweets posted.
+  </figcaption>
+ </figure>  
+
+ <figure class="centre">
+   <img src="SM3fig2.jpg" alt="Figure 2: Day-by-day activity by user percentile groups. Share of tweets posted." width="600" height="600" />
+   <figcaption>
+      Figure 2: Day-by-day activity by user percentile groups. Share of tweets posted.
+  </figcaption>
+ </figure>  
+ <br />
+ <table class="center">  
+ <caption><br />Table 4: Relative activity by user percentile groups after 1, 5, 10, and 14 days.<br /></caption> 
+ <tbody>
+  <tr>
+   <th></th><th colspan="2">Top 1%</th><th colspan="2">Highly active 9%</th><th colspan="2">Least active 90%</th><th></th>
+  </tr> 
+  <tr>
+   <th>Days</th><th>Accumulated tweets</th><th>Avg %</th><th>Accumulated tweets</th><th>Avg %</th><th>Accumulated tweets</th><th>Avg %</th><th>Total</th>
+  </tr>
+  <tr>
+   <td style="text-align:center">1</td><td style="text-align:center">7,207</td><td style="text-align:center">30</td><td style="text-align:center">9,413</td><td style="text-align:center">39</td><td style="text-align:center">7,334</td><td style="text-align:center">31</td><td style="text-align:center">23,954</td>
+  </tr>
+  <tr>
+   <td style="text-align:center">5</td><td style="text-align:center">26,026</td><td style="text-align:center">41</td><td style="text-align:center">26,228</td><td style="text-align:center">38</td><td style="text-align:center">15,490</td><td style="text-align:center">21</td><td style="text-align:center">67,744</td>
+  </tr>
+  <tr>  
+   <td style="text-align:center">10</td><td style="text-align:center">51,225</td><td style="text-align:center">42</td><td style="text-align:center">49,014</td><td style="text-align:center">39</td><td style="text-align:center">25,240</td><td style="text-align:center">19</td><td style="text-align:center">125,479</td>
+  </tr>
+  <tr>  
+   <td style="text-align:center">14</td><td style="text-align:center">72,568</td><td style="text-align:center">42</td><td style="text-align:center">70,069</td><td style="text-align:center">39</td><td style="text-align:center">35,210</td><td style="text-align:center">19</td><td style="text-align:center">177,847</td>
+  </tr>
+ </tbody>
+ </table> 
+ 
+ <figure class="centre">
+   <img src="SM3fig3.jpg" alt="Figure 3: The share of singletons, retweets and mentions per day." width="600" height="600" />
+   <figcaption>
+      Figure 3: The share of singletons, retweets and mentions per day.
+  </figcaption>
+ </figure>   
+
+ <h3>The <em>December Agreement</em> threads</h3>
+ 
+ <p>Given the analysis above we now turn our attention to the ten threads sampled for content analysis. Table 5 displays some relevant descriptive statistics. Naturally, the most common theme concerned the agreement and questioning the agreement was far more common than expressing support. A common opinion was that the agreement in itself or its construction was undemocratic, a sentiment expressed and discussed in eight of the threads. Political actors were discussed to a larger extent, mainly in a negative way. Opinions of politicians betraying their constituents were common. Some participants expressed disappointment in the lack of appropriate alternatives to vote for, or threatening to vote for another party or not vote at all. Another theme focused on politicians not listening to public opinion. There were also discussions on how to interpret statistics as well as questioning sources used in discussion. As in the study by O'Connor and Rapchak (<a href="SM3.html#oco12">2012</a>), the reliability of different sources were questioned, both those of alternative and mainstream sources. It was clear that participants chose what to believe in and what not to believe in.</p>
+ 
+ <p>A general theme was who might benefit from the agreement. The most often pronounced opinion was that the Sweden Democrats were the winners. The Sweden Democrats were discussed quite frequently in general; the most common theme here was whether the party could be seen as democratic. As Larsson (<a href="SM3.html#larip">in press</a>) found, there were several examples of its supporters questioning criticism towards the party. The presence of far right supporters is not surprising in this setting, having been found previously by both Larsson (<a href="SM3.html#lar14">2014</a>) and Lorentzen (<a href="SM3.html#lor14">2014</a>). In this special case it is even less surprising as the agreement did not include the Sweden Democrats.</p>
+ 
+ <table class="center">  
+ <caption><br />Table 5: Summary of the chosen threads.<br /></caption> 
+ <tbody>
+  <tr>
+   <th>Thread</th><th>Volume</th><th>Participants</th><th>Start</th><th>End</th><th>Length</th><th>Velocity</th>
+  </tr>
+  <tr>
+   <td>A</td><td style="text-align:center">277</td><td style="text-align:center">194</td><td>2014-12-27 12:37</td><td>2015-01-04 16:22</td><td>195.75 h</td><td style="text-align:center">1.42</td>
+  </tr>
+  <tr>
+   <td>B</td><td style="text-align:center">74</td><td style="text-align:center">53</td><td>2014-12-27 12:39</td><td>2014-12-30 22:09</td><td>81.5 h</td><td style="text-align:center">0.91</td>
+  </tr>
+  <tr>   
+   <td>C</td><td style="text-align:center">78</td><td style="text-align:center">54</td><td>2014-12-27 13:21</td><td>2014-12-29 11:31</td><td>46.17 h</td><td style="text-align:center">1.69</td>
+  </tr>
+  <tr>   
+   <td>D</td><td style="text-align:center">29</td><td style="text-align:center">19</td><td>2014-12-27 14:19</td><td>2014-12-27 18:53</td><td>4.57 h</td><td style="text-align:center">6.35</td>
+  </tr>
+  <tr>   
+   <td>E</td><td style="text-align:center">70</td><td style="text-align:center">20</td><td>2014-12-27 14:46</td><td>2014-12-27 22:23</td><td>7.62 h</td><td style="text-align:center">9.19</td>
+  </tr>
+  <tr>   
+   <td>F</td><td style="text-align:center">79</td><td style="text-align:center">29</td><td>2014-12-27 18:58</td><td>2015-01-01 23:09</td><td>124.19 h</td><td style="text-align:center">0.64</td>
+  </tr>
+  <tr>   
+   <td>G</td><td style="text-align:center">70</td><td style="text-align:center">52</td><td>2014-12-27 19:42</td><td>2014-12-31 02:05</td><td>78.38 h</td><td style="text-align:center">0.89</td>
+  </tr>
+  <tr>   
+   <td>H</td><td style="text-align:center">126</td><td style="text-align:center">18</td><td>2014-12-28 04:20</td><td>2014-12-29 19:32</td><td>39.2 h</td><td style="text-align:center">3.2</td>
+  </tr>
+  <tr>   
+   <td>I</td><td style="text-align:center">38</td><td style="text-align:center">37</td><td>2014-12-29 21:22</td><td>2015-01-04 22:10</td><td>144.8 h</td><td style="text-align:center">0.26</td>
+  </tr>
+  <tr>   
+   <td>J</td><td style="text-align:center">314</td><td style="text-align:center">19</td><td>2014-12-31 13:39</td><td>2015-01-01 16:51</td><td>27.21 h</td><td style="text-align:center">11.54</td>
+  </tr>
+ </tbody>
+ </table> 
+
+ <p>Next, attention is turned to conversation dynamics. The most frequent tweet types were assertions, questions, comments and declarations of opinions (Table 6). Common response types were statements, voicing disagreement, questions and voicing agreement (Table 7). Sarcasm or other attempts to be humoristic was not as present as in the study by Trilling (<a href="SM3.html#tri15">2015</a>), but there were a number of examples of negative comments regarding politicians and other participants.</p>
+ 
+ <p>Slightly more than half of the questions were answered, most often with an answer such as assertions, comments, explanations and clarifications, but also with counter questions and evasive answers. Comments were also replied to at a similar rate. These were most often met with counter comments or questions, disagreement and agreement. Assertions and opinions were less frequently replied to. When an assertion was replied to, it was so most commonly with a counter assertion, an opinion (most often disagreement) or a question. Opinions were met with other opinions, agreements and in some cases disagreements.</p>
+ 
+ <p>A large share of the coded tweets was posted during the first 24 hours. On the first day, opinions were most common (137 tweets), followed by assertions (135), questions (121) and comments (99). There was a slight shift from day 2 and onwards, as assertions were most common (158), followed by comments (126) and questions (114). Opinions were less frequent (66). Among the responses during the first day, disagreement and declarative statements were dominant (126 and 127), followed by questions and answers (88 and 76). After the first 24 hours, statements became more common than disagreements (150 and 127), with questions and answers the third and fourth most common response types at 83 and 77. Thus, there is an interesting dynamic in the material as information types shifted slightly from day 1 and onwards, with more focus on expressing opinions and disagreement with other participants during the first day, and fewer opinion-related tweets during the following 13 days. This can be compared with an opposite pattern in Heverin and Zach's study (<a href="SM3.html#hev12">2012</a>) in which information-related tweets dominated during the first few hours after an incident, while expressions of opinion became more prevalent over time.</p>
+ 
+ <table class="center">  
+ <caption><br />Table 6: Types of tweets.<br /></caption> 
+ <tbody>
+  <tr>
+   <th>Type</th><th>n</th><th>Description</th>
+  </tr>
+  <tr>  
+   <td>Assertion</td><td style="text-align:center">293</td><td></td>
+  </tr>
+  <tr>  
+   <td>Comment</td><td style="text-align:center">225</td><td>Including suggestions</td>
+  </tr>
+  <tr>
+   <td>Declaring opinion</td><td style="text-align:center">203</td><td></td>
+  </tr>
+  <tr>
+   <td>Explanation</td><td style="text-align:center">74</td><td>Including clarification, informing</td>
+  </tr>
+  <tr>
+   <td>Facts</td><td style="text-align:center">22</td><td>Including links to other source, quotes, potentially made up facts</td>
+  </tr>
+  <tr>  
+   <td>Humour</td><td style="text-align:center">19</td><td>Including sarcasm, irony</td>
+  </tr>
+  <tr>
+   <td>Insult</td><td style="text-align:center">29</td><td></td>
+  </tr>
+  <tr>
+   <td>Question</td><td style="text-align:center">235</td><td>Including counter question, rhetorical question</td>
+  </tr>
+  <tr>     
+   <td>Other</td><td style="text-align:center">21</td><td></td>	
+  </tr>
+ </tbody>
+ </table> 
+<br />
+ <table class="center">  
+ <caption><br />Table 7: Types of responses.<br /></caption> 
+ <tbody>
+  <tr>
+   <th>Response type</th><th>n</th><th>Description</th>
+  </tr>
+  <tr>  
+   <td>Agreement</td><td style="text-align:center">110</td><td>Including support, partial agreement</td>
+  </tr>
+  <tr>
+   <td>Answering question</td><td style="text-align:center">93</td><td>Including assertions, comments, clarifications and explanations</td>
+  </tr>
+  <tr> 
+   <td>Disagreement</td><td style="text-align:center">253</td><td>Including questioning, counter arguments</td>
+  </tr>
+  <tr> 
+   <td>Evasive answer of question</td><td style="text-align:center">33</td><td></td>
+  </tr>
+  <tr> 
+   <td>Expressing disappointment</td><td style="text-align:center">32</td><td></td>
+  </tr>
+  <tr> 
+   <td>Provocation</td><td style="text-align:center">10</td><td></td>
+  </tr>
+  <tr> 
+   <td>Question</td><td style="text-align:center">160</td><td>Including counter question, rhetorical question</td>
+  </tr>
+  <tr> 
+   <td>Requesting answer</td><td style="text-align:center">41</td><td>Including requesting clarification</td>
+  </tr>
+  <tr> 
+   <td>Requesting source</td><td style="text-align:center">10</td><td></td>
+  </tr>
+  <tr> 
+   <td>Statement</td><td style="text-align:center">314</td><td>Including comments, suggestions (not inviting further discussion)</td>
+  </tr>
+  <tr> 
+   <td>Topic change</td><td style="text-align:center">7</td><td></td>
+  </tr>
+  <tr>
+   <td>Other</td><td style="text-align:center">39</td><td></td>
+  </tr>
+ </tbody>
+ </table> 
+
+ <p>With the inclusion of 1,011 users it comes as no surprise that the vast majority were citizens. This group accounted for most of the tweets; 1,003 of the 1,155 tweets in the ten threads. Media/PR actors accounted for 54 tweets and authors for 35. With 87 political actors involved in the conversations, their total number of tweets at 40 might be disappointing from a citizen point of view, but perhaps not unexpected. The most common interaction was between citizens. Their interactions consisted mainly of assertions, comments, questions and opinions as tweet types and the response types statements, answers of questions, disagreement and agreement. Citizens sent 321 tweets to politicians. Most of these tweets were opinions, assertions and questions, but few of these were replied to. As responses to politicians' tweets, citizens expressed disagreement almost three times more often than agreement. They also expressed disappointment and responded to tweets with questions. Political actors on the other hand responded with only 35 tweets to citizens, including answers, questions, agreement, questioning and statements. It should be said though that not all of the tweets sent by the citizens appeared to be openings for conversation, rather communication took the form of venting disappointment, disagreement and posing rhetorical questions. Similar to the debate study by Mascaro and Goggins (<a href="SM3.html#mas15">2015</a>), far from all replies invited further conversation.</p>
+ 
+ <p>Other groups, including political actors, tweeted to politicians infrequently (32 tweets in total). Overall, political actors were given much attention. 31% of all tweets in these ten threads were sent to a political actor. This is in line with the findings of Larsson and Moe (<a href="SM3.html#lar13">2013</a>); elite users are given attention whilst activity is dominated by non-elite users. The interaction between citizens and politicians were largely one way.</p>
+ 
+ <p>Considering political positions, 312 tweets could be traced to the far-right camp, 123 to supporters or politicians of the Alliance parties and 109 to the left side supporters/politicians. Thus, the challengers to the establishment were represented by a fairly large and vocal group. There were few examples of cross-boundary agreement and support. Far right participants expressed agreement with right participants five times and twice with left participants. The most frequent exchanges were between far right and left. Far right participants were addressed 71 times by left participants with 89 tweets going the opposite way. The most common interaction between these two groups were expressing disagreement, asking questions and requesting answers.</p>
+ 
+ <p>Far right participants addressed right participants 50 times, including 13 instances of disagreement, with right participants addressing far right dittos only five times. Right participants talked mainly to each other. Curiously, most often they disagreed with their own regarding the agreement, and they expressed disappointment. However, there were also instances of agreement and support.</p>
+ 
+ <h4>Thread life cycle</h4>
+ 
+ <p>This section outlines the life cycles of the ten threads by looking at the start-tweets and the initial reactions to these, how the conversations evolved after this initial state and how they were closed. Threads A, G and I were started by politicians. As the start-tweet of A was posted first of these, it is not surprising that this tweet was the most replied to. 152 replies were posted in a short period of time. Ten of these were replied to, and one reply in particular was made by the thread starter following which the thread sparked again. The start-tweets in G and I gave 45 and 35 replies respectively, but discussions did not take off following this. In a couple of cases, threads were started by a mass media or public relations actor. Thread B included mostly replies to the start-tweet but with no discussion. In thread C, two replies to the start-tweet sparked reactions. Thread D started with a link to a statement, and the only reaction to this was replies pointing out an error in the statement. Finally, three threads were initiated by citizens. One branch emerged in thread E, in which the start-tweet was replied to 15 times. Both H and J started with few replies to the initial tweet, but then major branches grew. In J, one of these was split into sub-conversations.</p>
+ 
+ <p>All of the threads were developed and ended over a short time span, from a couple of hours to a few days. The two largest threads in terms of number of tweets, A and J, were very different in their development and participation. The first of these was not conversational in the sense that longer chains of replying tweets were created. Rather, it consisted mainly of criticism towards the agreement and the Moderate Party. Most striking were the expressions of disappointment and disagreeing with the thread starter, with a number of instances of threats to vote for other parties, but there were also examples of agreement and support. The thread was unique in this set in the way it was started by a politician and then reignited when the politician replied to a question. Most of the tweets were posted in a short time span making it difficult to take part in the discussions. Citizens brought their opinions and questions to the light, but most of these were unanswered. Those tweets defending the agreement were not replied to, but criticism was met with agreement of the criticism. Contrary to A, the second large thread (J) included longer chains of replies but mainly consisted of mudslinging. Both sides of the discussion attempted to show that the other side was wrong. One branch was divided into sub-conversations of which two were echo chambers where like-minded agreed with each other. Opponents were mentioned but only participated with a few tweets. Assertions, comments, questions and opinions were met with statements, counter questions, disagreement, counter arguments and agreements.</p>
+
+ <p>Most of the analysed threads were shallow with little conversation. Threads B, I and F were such threads, dominated by participants from one major camp who mainly agreed with each other. A branch in F comprised a polarised discussion about religion, showing that a conversation thread can evolve in different and separate directions. Threads D and E did not spark substantive discussions. In the first case, a need for clarifying was the most significant part of a thread. In the latter case a sub-conversation was triggered by a provocation towards the Sweden Democrats. Similarly, thread G did not take off, but the thread starter was questioned and then made a clarification of what the tweet was supposed to express. Another thread that did not evolve much after the start was thread C. The start tweet was questioned in part by most participants. Most tweets expressed that the people were dissatisfied whereas the start tweet was about the parties, something that was pointed out by a few participants.</p>
+ 
+ <p>As noted at the outset of this paper, debates can end by resolution (agreement), closure (lack of agreement) and abandonment. In the current study, the large number of statements, here representing a large number of tweets not inviting further discussion, indicated participants wanting to close the discussion rather than proceed with it. The most notable example is thread A, in which opinions were posted with few attempts to engage in conversations. Another example is H, which involved participants from the whole political spectrum and was dominated by a few participants. In this thread, it seemed as the participants were consciously talking past each other without having any interest in either understanding or convincing. The thread mainly consisted of comments, questions, pieces of facts, questioning and requesting answers.</p>
+ 
+ <p>As a consequence of this behaviour, consensus formation was rare in the studied threads, but it did happen in a small branch in thread B where two participants discussed. In C there was consensus about a political researcher being wrong when claiming that the Sweden Democrats was the only party being disappointed with the agreement. There was also consensus about the agreement being hard to understand, but in this thread there were also examples of consensus not being reached. In J there was a consensus about the <em>December Agreement</em> not being sustainable. Overall, the issue on which there was largest consensus was the agreement itself and the most pronounced sentiment was disappointment, which was not restricted to one political camp but all. Closure by abandonment was more common, happening in threads B, F, H and J. In thread F there was one instance of the thread starter blocking the opposing participant. Thread B was ended by the thread starter claiming the discussion was pointless, following several rounds of disagreeing with another participant.</p>
+ 
+ <h4>Participation by invitation</h4>
+ 
+ <p>Overall invitation statistics for the <em>December Agreement</em> threads are presented in tables 8 and 9. Politicians not previously participating in the thread were invited to 33 of the threads. The figures for the other major groups Media/PR and Citizens were 24 and 44 (Table 8). Many invitations were left unanswered, regardless of user category. Table 9 shows the number of successful invitations by user category counting only invitations to users not already participating.</p>
+ 
+ <table class="center">  
+ <caption><br />Table 8: Number of threads invited to, grouped by category. Only invitations to not previously participating users counted. &quot;Other&quot; comprises the categories author, celebrity/artist, NGO/non-profit, union.<br /></caption> 
+ <tbody>
+  <tr> 
+   <th>User type</th><th>Number of threads</th>
+  </tr>
+  <tr>
+   <td>Political</td><td style="text-align:center">33</td>
+  </tr>
+  <tr>
+   <td>Media/PR</td><td style="text-align:center">24</td>
+  </tr>
+  <tr>
+   <td>Citizen</td><td style="text-align:center">44</td>
+  </tr>
+  <tr>
+   <td>Other</td><td style="text-align:center">8</td>
+  </tr>
+ </tbody>
+ </table> 
+
+<br />
+ <table class="center">  
+ <caption><br />Table 9: Invitations by user category. Only invitations to not previously participating users counted. &quot;Other&quot; comprises the categories author, celebrity/artist, NGO/non-profit, union.<br /></caption> 
+ <tbody>
+  <tr>
+   <th>User type</th><th>Successful</th><th>Total</th><th>Rate</th>
+  </tr>
+  <tr>
+   <td>Political</td><td style="text-align:center">7</td><td style="text-align:center">72</td><td style="text-align:center">0.097</td>
+  </tr>
+  <tr>
+   <td>Media/PR</td><td style="text-align:center">3</td><td style="text-align:center">40</td><td style="text-align:center">0.075</td>
+  </tr>
+  <tr>
+   <td>Citizen</td><td style="text-align:center">15</td><td style="text-align:center">127</td><td style="text-align:center">0.118</td>
+  </tr>
+  <tr>
+   <td>Other</td><td style="text-align:center">1</td><td style="text-align:center">8</td><td style="text-align:center">0.125</td>
+  </tr>
+ </tbody>
+ </table>    
+
+ <p>In the ten sampled threads, invitations were sent 217 times to 50 different users previously not participating in the thread invited to (a few of these were invited to more than one thread). Four of these participated following the invitation, one of them a politician asking to be untagged. The other three were identified as citizens. None of the invitations could be seen as a direct question to the invited user. Most of them were rather notifications of the ongoing conversation, sent to citizens as well as politicians, journalists and celebrities. Talk-about mentions was less common with the corresponding figures being 18 and six (one was talked about in four threads), and none of them participating. All talk-about mentions but one were substitutes for names of politicians, parties or party constellations (one of these a parody account). The other was an author/journalist talked about in a negative way.</p>
+ 
+ <p>Few users respond to an invitation. It is expected that a user do not respond when being talked about, but in these threads such mentions were exceptions. In thread A, there were clear examples of invitations to politicians who did not answer the call. It seems as if participants to some extent were talking to someone not answering, and possibly not listening, and therefore the controversy did not develop. The arguments were brought forward as in an echo chamber but to an audience that is quite diverse.</p>
+ 
+ <h2>Conclusions</h2>
+ 
+ <p>The focus of this paper has been on tweets that can be considered as conversational through the reply function. Despite this material concerning a dramatic event involving core aspects of a well-functioning deliberative democracy, few examples of democratic debate were found. If such an event does not lead to democratic debates, will any at all be found on Twitter? Building on results of the present study, Twitter seems to be an arena where opinions are not changed. Seemingly, participants enter with an aim to act within an echo chamber and therefore there is really no intention of renegotiating political positions. This can be contrasted to Weinberger's (<a href="SM3.html#wei07">2007</a>) argument relating to Wikipedia entries, stating that the authors of the texts, striving for a neutral point of view in the end reach some kind of consensus. The results of the current study indicate that many participants opened up for discussions but all too often a substantial interaction failed to materialise. As there were examples of threads with many tweets and many participants, it can be said that Twitter indeed facilitates discussions. However, problems regarding the restricted character of the user interface exist, seemingly creating obstacles for engagement on controversial topics.</p>
+ 
+ <p>While public discussions take place on Twitter, due to the restrictions of the platform they are not visible to everyone. The disconnected user (followership-wise) is restricted to following hashtags. To be able to track threaded conversations, the user must follow the involved participants or at least two of them and then expand the conversation by clicking on a conversational tweet. Longer conversations can then be opened by clicking on <em>View more in conversation</em>. This means that conversations are more likely to evolve within seemingly walled gardens of echo chambers, i.e., tightly knit groups, followership-wise. But if Twitter altered its code so that the reader could see all these directed tweets by just following one of the users it would be difficult to keep track of conversations; the timeline would be flooded with tweets. And the conversations are, seemingly, already inclusive of participants who cannot agree due to their ideological positions. There are plenty of expressed emotions in these open discussions, and these often escalate and reinforce each other. One might suggest it would be better to retreat to echo chambers to be able to have reasonable conversations, but this would make it harder to be exposed to opposing opinions. However, such opinions can be brought into the discussion by linking to any resource.</p>
+ 
+ <p>If we contrast the findings with the categories focused on by Burnett and Buerkle (<a href="SM3.html#bur04">2004</a>), we can start off with discussing the concept of community. At the hashtag level, the community is likely to be loosely knit. When someone replies to a hashtag, an ad-hoc community is created. This community is by default including only the interacting participants and their joint followers, thus being a small, tight and dense community, but the community can be widened through the inclusion of a dot character in front of the @ (widening to all of the tweeter's followers) or including a hashtag (widening to all followers of the hashtag). However, only a small share of the conversational tweets included a hashtag. Looking at the category hostile interactive behaviour there were a few examples of threads or parts of threads where hostile language or behaviour is present. In some threads there was not even an attempt to understand or convince non-like-minded. Collaborative non-informational interactive behaviour in the form of small-talk exists within echo chambers. If we view collaborative informational behaviour as more substantive political talk then there are examples of this too, but arguably less than what would be expected in a traditional discussion forum. But there is no community-oriented approach to the conversations as the community is fluid.</p>
+ 
+ <p>The level of disagreement might be attributed to the controversy, as Savolainen's (<a href="SM3.html#sav15">2015</a>) study on an arguably controversial topic showed similar tendencies. However, some attribution must be given to the communication model as well. If conversations are more likely to grow in a tight followership network, then such a network must containe diverse opinions for disagreement to be this present. The only followership graph of the Swedish political Twittersphere has been given by Lorentzen (<a href="SM3.html#lor14">2014</a>), who included the most prominent users of the hashtag #svpol. While showing polarisation, it also included quite a few connections between the three main clusters. Lorentzen (<a href="SM3.html#lor14">2014</a>) also found that the most active Twitter users also were more conversational. With the present study having its focus on conversation, it is reasonable that a similar followership graph is underlying here. In a context where like-minded are followership-wise disconnected from non like-minded, participants are probably more likely to agree rather than disagree.</p>
+ 
+ <p>This case is indeed quite unique, but the presence of conversation beyond the hashtag opens up for future research. Are conversations like these common within other topics as well? Are conversations common outside of sudden events like the <em>December Agreement</em>? Another relevant issue that was not investigated here is if replies differ between different types of devices used by the authors of replies. In one type of device the whole conversation might be displayed for the user, while in another type of device only the tweet the user is replying to might be visible. This entails that one reply could be given in relation to the whole conversation, but another reply in relation to only one tweet. With the API giving information about what kind of device is used (the source metadata field), such an analysis is possible.</p>
+ 
+ <p>Information sharing and information diffusion, as seen in the articles cited above (<a href="SM3.html#dya14">Dyagilev and Yom-Tov, 2014</a>; <a href="SM3.html#hev12">Heverin and Zach, 2012</a>; <a href="SM3.html#sma11">Small, 2011</a>; <a href="SM3.html#sut14">Sutton <em>et al.</em>, 2014</a>; <a href="SM3.html#tin14">Tinati <em>et al.</em>, 2014</a>), are important aspects of Twitter usage, but they are only parts of the informational activities on the platform. With the data collection method used, conversations and discussions can be extracted. Information sharing is present in the conversations, but is not a dominant activity in the conversation threads. They are more about expressing opinions, asking questions, replying to questions, commenting, asserting and complaining. The analysis gives us insights into how Twitter conversations are initiated, evolve, and end, as well as how people interact. As opinion polls gives us indications of what people in general think about political issues as well as indications of trends, an analysis such as the one here gives us insights into the why.</p>
+ 
+ <p>Some valuable insights arrive with the present study. <em>First</em>, there are conversations beyond the hashtag, and many of the tweets in the follow-on conversation express opinions that might be valuable for politicians to be aware of. <em>Secondly</em>, many conversations are very rapid and difficult to participate in for those politicians that receive many tweets in a short time space, as seen in thread A. The data collection method used here shows that it is possible to collect conversation threads, and keeping track of when such a conversation flares up in real-time is also possible. Even though participating in the conversations might be difficult, being aware of the conversations is not. For political actors, Twitter might be another source to gain insights into what some of their voters want, and how they react to different decisions, or statements, rather than a forum for discussing with them. <em>Thirdly</em>, different opinions do meet in this medium but there are few signs of participants from different political camps being interested in arriving at consensus. There were a number of examples of participants trying to point out flaws in the opponent's arguments, but hardly any instances of attempts at convincing opponents to change their viewpoints.</p>
+ 
+  
+ <h2>Acknowledgements</h2> 
+ 
+ <p>The author wishes to thank the anonymous referees whose comments and suggestions have helped improving the quality of this article.</p> 
+ 
+ <h2 id="author">About the author</h2> 
+ 
+ <p><strong>David Gunnarsson Lorentzen</strong> is a PhD Student at the Swedish School of Library and Information Science, University of Bor&aring;s, SE-501 90 Bor&aring;s, Sweden. His main research interests concerns social media studies with a focus on method development. He received his Master's degree in Library and Information Science from University of Bor&aring;s. He can be contacted at: david.gunnarsson_lorentzen@hb.se.</p> 
+ 
+</section>
+<section class="refs">
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">References</legend>  
+ 
+ <ul class="refs"> 
+ 
+ <li id="aus13">Ausserhofer, J. &amp; Maireder, A. (2013). National politics on Twitter. <em>Information, Communication &amp; Society, 16</em>(3), 291-314.</li>
+ 
+  <li id="boy10">Boyd, D., Golder, S. &amp; Lotan, G. (2010). Tweet, tweet, retweet: conversational aspects of retweeting on Twitter.  In <em>Proceedings of the 43nd Hawaii International Conference on System Sciences (HICSS-43)</em>, (10 pages). New York, NY: IEEE.</li>
+  
+ <li id="boz14">Bozdag, E., Gao, Q., Houben, G.-J. &amp; Warnier, M. (2014). Does offline political segregation affect the filter bubble? An empirical analysis of information diversity for Dutch and Turkish Twitter users. <em>Computers in Human Behavior, 41</em>, 405-415.</li> 
+ 
+ <li id="bru12">Bruns, A. (2012). How long is a tweet? Mapping dynamic conversation networks on Twitter using Gawk and Gephi. <em>Information, Communication &amp; Society, 15</em>(9), 1323-1351.</li>
+ 
+ <li id="bru13a">Bruns, A. &amp; Highfield, T. (2013). Political networks on Twitter. <em>Information, Communication &amp; Society, 16</em>(5), 667-691.</li>
+ 
+ <li id="bru13b">Bruns, A. &amp; Moe, H. (2013). Structural layers of communication on Twitter. In K. Weller, A. Bruns, J. Burgess, M. Mahrt &amp; C. Puschmann (Eds.), <em>Twitter and Society</em>, (pp. 15-28). New York, NY: Peter Lang.</li>
+ 
+ <li id="bru13c">Bruns, A. &amp; Stieglitz, S. (2013). Towards more systematic Twitter analysis: metrics for tweeting activities. <em>International Journal of Social Research Methodology, 16</em>(2), 91-108.</li>
+ 
+ <li id="bur00">Burnett, G. (2000). <a href="http://www.webcitation.org/6h6Mu1aH6">Information exchange in virtual communities: a typology</a>. <em>Information Research, 5</em>(4), paper 82. Retrieved from http://informationr.net/ir/5-4/paper82.html. (Archived by WebCite&reg; at http://www.webcitation.org/6h6Mu1aH6).</li>
+ 
+ <li id="bur04">Burnett, G. &amp; Buerkle, H. (2004). Information exchange in virtual communities: a comparative study. <em>Journal of Computer-Mediated Communication, 9</em>(2). </li>
+ 
+ <li id="con11">Conover, M. D., Ratkiewicz, J., Francisco, M., Goncalves, B., Flammini, A. &amp; Menczer, F. (2011). <a href="https://www.aaai.org/ocs/index.php/ICWSM/ICWSM11/paper/viewFile/2847/3275">Political polarization on Twitter</a>. In <em>Proceedings of the Fifth International AAAI Conference on Weblogs and Social Media</em>, (pp. 89-96).  Palo Alto, CA: AAAI. Retrieved from https://www.aaai.org/ocs/index.php/ICWSM/ICWSM11/paper/viewFile/2847/3275 [Unable to archive]</li>
+ 
+ <li id="cor08">Corbin, J. M. &amp; Strauss, A. L. (2008). <em>Basics of qualitative research: techniques and procedures for developing grounded theory</em>. (3rd ed.). Thousand Oaks, CA: Sage Publications.</li>
+ 
+ <li id="dhe14">D'heer, E. &amp; Verdegem, P. (2014). Conversations about the elections on Twitter: towards a structural understanding of Twitter's relation with the political and the media field. <em>European Journal of Communication, 29</em>(6), 720-734.</li>
+ 
+ <li id="dya14">Dyagilev, K. &amp; Yom-Tov, E. (2014). Linguistic factors associated with propagation of political opinions in Twitter. <em>Social Science Computer Review, 32</em>(2), 195-204.</li>
+ 
+ <li id="gla67">Glaser, B. G. &amp; Strauss, A. L. (1967). <em>The discovery of grounded theory: strategies for qualitative research</em>. New Brunswick, N J: Aldine Transaction.</li>
+ 
+ <li id="gra13">Graham, T., Broersma, M., Hazelhoff, K. &amp; van't Haar, G. (2013). Between broadcasting political messages and interacting with voters. <em>Information, Communication &amp; Society, 16</em>(5), 692-716.</li>
+ 
+ <li id="gru12">Grusell, M. &amp; Nord, L. (2012). Three attitudes to 140 characters: the use and views of Twitter in political party communications in Sweden. <em>Public Communication Review, 2</em>(2), 48-61.</li>
+ 
+ <li id="hev12">Heverin, T. &amp; Zach, L. (2012). Use of microblogging for collective sense-making during violent crises: a study of three campus shootings. <em>Journal of the American Society for Information Science and Technology, 63</em>(1), 34-47.</li>
+ 
+ <li id="hon09">Honeycutt, C. &amp; Herring, S. C. (2009). <a href="http://www.webcitation.org/6h6MkG3yp">Beyond microblogging: conversation and collaboration via Twitter</a>. In <em>42nd Hawaii International Conference on System Sciences, 2009. HICSS '09.</em>. (10 pages). New York, NY: IEEE. Retrieved from http://ella.slis.indiana.edu/~herring/honeycutt.herring.2009.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6h6MkG3yp).</li>
+ 
+ <li id="jun14">Jungherr, A. &amp; J&uuml;rgens, P. (2014). Through a glass, darkly: tactical support and symbolic association in Twitter messages commenting on Stuttgart 21. <em>Social Science Computer Review, 32</em>(1), 74-89.</li>
+ 
+ <li id="kal14">Kalsnes, B., Krumsvik, A. H. &amp; Storsul, T. (2014). Social media as a political backchannel: Twitter use during televised election debates in Norway. <em>Aslib Journal of Information Management, 66</em>(3), 313-328.</li>
+ 
+ <li id="kru14">Kruikemeier, S. (2014). How political candidates use Twitter and the impact on votes. <em>Computers in Human Behavior, 34</em>, 131-139. </li>
+ 
+ <li id="lam13">LaMarre, H. L. &amp; Suzuki-Lambrecht, Y. (2013). Tweeting democracy? Examining Twitter as an online public relations strategy for congressional campaigns. <em>Public Relations Review, 39</em>(4), 360-368. </li>
+ 
+ <li id="larip">Larsson, A. O. (in press). Going viral? Comparing parties on social media during the 2014 Swedish election. <em>Convergence: The International Journal of Research into New Media Technologies</em>.</li>
+ 
+ <li id="lar14">Larsson, A. O. (2014). Everyday elites, citizens, or extremists? Assessing the use and users of non-election political hashtags. <em>Mediekultur, Journal of media and communication research, 30</em>(56), 61-78.</li>
+ 
+ <li id="lar15">Larsson, A. O., Ihlen &Oslash;. (2015). Birds of a feather flock together? Party leaders on Twitter during the 2013 Norwegian elections. <em>European Journal of Communication, 30</em>(6), 666-681.</li>
+ 
+ <li id="lar13">Larsson, A. O. &amp; Moe, H. (2013). Representation or participation? <em>Javnost - The Public: Journal of the European Institute for Communication and Culture, 20</em>(1), 71-88.</li>
+ 
+ <li id="lar12">Larsson, A. O. &amp; Moe, H. (2012). Studying political microblogging: Twitter users in the 2010 Swedish election campaign. <em>New Media &amp; Society, 14</em>(5), 729-747.</li>
+ 
+ <li id="lor14">Lorentzen, D. G. (2014). Polarisation in political Twitter conversations. <em>Aslib Journal of Information Management, 66</em>(3), 329-341.</li>
+ 
+ <li id="lorip">Lorentzen, D. G. &amp; Nolin, J. (in press). <a href="http://www.webcitation.org/6h6MeXKEh">Approaching completeness: capturing a hashtagged Twitter conversation and its follow-on conversation</a>. <em>Social Science Computer Review</em>. Retrieved from http://www.adm.hb.se/~dgu/papers/Approaching%20Completeness%20post-print.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6h6MeXKEh).</li>
+ 
+ <li id="mas15">Mascaro, C. M. &amp; Goggins, S. P. (2015). Technologically mediated political discourse during a nationally televised GOP primary debate. <em>Journal of Information Technology &amp; Politics, 12</em>(3), 252-269.</li>
+ 
+ <li id="maz87">Mazur, A. (1987). Scientific disputes over policy. In Caplan, A. L. &amp; Engelhardt, H. T. (Eds.), <em>Scientific controversies: case studies in the resolution and closure of disputes in science and technology</em>, (pp. 265-282). Cambridge: Cambridge Univ. Press.</li>
+ 
+ <li id="mcm87">McMullin, E. (1987). Scientific controversy and its termination. In Caplan, A. L. &amp; Engelhardt, H. T. (Eds.), <em>Scientific controversies: case studies in the resolution and closure of disputes in science and technology</em>, (pp. 49-91). Cambridge: Cambridge Univ. Press.</li>
+ 
+ <li id="oco12">O'Connor, L. G. &amp; Rapchak, M. (2012). Information use in online civic discourse: A study of health care reform debate. <em>Library Trends, 60</em>(3), 497-521.</li>
+ 
+ <li id="sav11">Savolainen, R. (2011). Asking and sharing information in the blogosphere: the case of slimming blogs. <em>Library &amp; Information Science Research, 33</em>(1), 73-79.</li>
+ 
+ <li id="sav15">Savolainen, R. (2015). <a href="http://www.webcitation.org/6h6MSQcQC">Expressing emotions in information sharing: a study of online discussion about immigration</a>. <em>Information Research, 20</em>(1), paper 662. Retrieved from http://InformationR.net/ir/20-1/paper662.html (Archived by WebCite&reg; at http://www.webcitation.org/6h6MSQcQC).</li>
+ 
+ <li id="sis04">Sismondo, S. (2004). <em>An introduction to science and technology studies</em>. Malden, MA: Blackwell.</li>
+ 
+ <li id="sma11">Small, T. A. (2011). What the hashtag? A content analysis of Canadian politics on Twitter. <em>Information, Communication &amp; Society, 14</em>(6), 872-895.</li>
+ 
+ <li id="sun09">Sunstein, C. R. (2009). <em>Republic.com 2.0</em>. Princeton University Press, Princeton, NJ.</li>
+ 
+ <li id="sut14">Sutton, J., Spiro, E. S., Johnson, B., Fitzhugh, S., Gibson, B. &amp; Butts, C. T. (2014). Warning tweets: serial transmission of messages during the warning phase of a disaster event. <em>Information, Communication &amp; Society, 17</em>(6), 765-787.</li> 
+ 
+ <li id="sab11">S&aelig;b&oslash;, &Oslash;. (2011). Understanding Twitter&trade; use among parliament representatives: a genre analysis. In E. Tambouris, A. Macintosh &amp; H. de Bruijn (Eds.), <em>Electronic Participation</em>, (pp. 1-12). Berlin, Heidelberg: Springer. (Lecture Notes in Computer Science, 6847).</li>
+ 
+ <li id="tin14">Tinati, R., Halford, S., Carr, L. &amp; Page, C. (2014). Big Data: methodological challenges and approaches for sociological analysis. <em>Sociology, 48</em>(4), 663-681.</li>
+ 
+ <li id="tri15">Trilling, D. (2015). Two different debates? Investigating the relationship between a political debate on TV and simultaneous comments on Twitter. <em>Social Science Computer Review, 33</em>(3), 259-276.</li>
+ 
+ <li id="twi15">Twitter. (2015). <em><a href="http://www.webcitation.org/6h6N2G5NE">What are replies and mentions?</a></em> Retrieved from https://support.twitter.com/articles/14023 (Archived by WebCite&reg; at http://www.webcitation.org/6h6N2G5NE).</li>
+ 
+ <li id="wei07">Weinberger, D. (2007). <em>Everything is miscellaneous: the power of the new digital disorder</em>. (1st ed.) New York, NY: Times Books.</li>
+ 
+ <li id="whi06">White, M. D. &amp; Marsh, E. E. (2006). Content analysis: a flexible methodology. <em>Library trends, 55</em>(1), 22-45.</li>
+ 
+ <li id="wil11">Wilkinson, D. &amp; Thelwall, M. (2011). Researching personal information on the public web: methods and ethics. <em>Social Science Computer Review, 29</em>(4), 387-401.</li>
+ 
+ <li id="yar10">Yardi, S. &amp; Boyd, D. (2010). Dynamic debates: an analysis of group polarization over time on Twitter. <em>Bulletin of Science, Technology &amp; Society, 30</em>(5), 316-327.</li>
+ 
+ <li id="zub15">Zubiaga, A., Liakata, M., Procter, R., Bontcheva, K. &amp; Tolmie, P. (2015). Crowdsourcing the annotation of rumourous conversations in social media. In <em>Proceedings of the 24th International Conference on World Wide Web</em>, (pp. 347-353). New York, NY: ACM. </li>
+ </ul>  
+ </fieldset>  
+ </form> 
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+ How to cite this paper
+ </legend>  
+ <div><br />  Lorentzen, D.G.  (2016). Twitter conversation dynamics of political controversies: the case of Sweden's <em>December Agreement</em>. <em>Information Research, 21</em>(2), paper SM3. Retrieved from  http://InformationR.net/ir/21-2/SM3.html  (Archived by WebCite&reg; at http://www.webcitation.org/6hn1VZ6PP)</div>  
+ </fieldset>  
+ </form> 
+</section>
+</article>
+<br />
+<section>
+ 
+ <table class="footer" style="border-spacing:10;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"><form method="get" action="http://scholar.google.com/scholar" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"> <input type="hidden" name="q" value="Twitter, conversations, politics, information behaviour, content analysis" /><br />  
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" /><input type="hidden" name="num" value="100" />  </td>  </tr></table></form></td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --><form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"><input type="hidden" name="q" value="Twitter, conversations, politics, information behaviour, content analysis" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" /><input type="hidden" name="client" value="pub-5081678983212084" /><input type="hidden" name="forid" value="1" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="hidden" name="oe" value="ISO-8859-1" /><input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" /><input type="hidden" name="hl" value="en" /></td></tr>  
+  </table></form></td>  
+ <td style="vertical-align:top; text-align:center;"><form method="get" action="http://www.bing.com" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"><input type="hidden" name="q" value="Twitter, conversations, politics, information behaviour, content analysis" /> <br /><input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" /> <input type="hidden" name="num" value="100" /></td></tr>  
+ </table></form></td></tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/21-2/SM3.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+ <br />
+ <div style="text-align:center;"> 
+     <!-- AddThis Button BEGIN -->
+<div style="text-align:center;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script>
+<!-- AddThis Button END -->  
+</div>
+<hr />
+ 
+ 
+<table class="footer" style="padding:10;"><tr><td style="text-align:center; vertical-align:top;">  
+<br />
+<div><a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={f58bdcf5-9fe4-b0f4-15a3-0aaa997a3329}&amp;template=simple" alt="Hit Counter by Digits" /></a>
+ </div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the author, 2016. <br />Last updated: 22 May, 2015 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+ </section>
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="infres212.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+ </body>  
+ </html> 
+

@@ -1,0 +1,1349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <html
+xmlns="http://www.w3.org/1999/xhtml">   <head>   <title>The effects of
+discipline on the application of learning object metadata in UK higher
+education: the case of the Jorum repository</title>   <meta
+http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />   <link
+href="http://www.informationr.net/ir/IRstyle2.css" rel="stylesheet" media="screen" title="serif" />  <link
+rel="alternate stylesheet" type="text/css" media="screen" title="sans"
+href="http://www.informationr.net/ir/IRstylesans.css" /> <link rev="made"
+href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+<meta name="dc.title"  content="The effects of discipline on the application of learning object  metadata in UK higher education: the case of the Jorum repository" />   
+<meta  name="dc.creator" content="Panos Balatsoukas, Ann O'Brien, Anne Morris" />
+ <meta name="dc.subject" content="Survey of metadata use in the Jorum learning objects repository" />   
+ <meta name="dc.description" content="This
+ paper reports on the findings of a study investigating the potential effects of
+ discipline (sciences and engineering versus humanities and social sciences) on
+ the application of the Istitute of Electrical and Electronic Engineers learning
+ object metadata elements for the description of learning objects in the Jorum
+ learning object repository.  A survey was conducted that examined a
+ stratified sample of 470 metadata records and surrogates used for the
+ description of learning objects in the Jorum repository.  A
+ quantitative data analysis was performed based on the sample. This included
+ descriptive statistics as well as a set of Chi squared tests for the
+ identification of differences in the application of learning object metadata
+ elements between disciplines.  The results of this study showed that
+ some metadata elements tended to be more frequently applied for the description
+ of learning objects in the humanities and social sciences than in sciences and
+ engineering. These were: interactivity type, difficulty, aggregation level,
+ coverage, structure and semantic density.  The findings of this
+ study could have implications for the design of metadata editors and annotation
+ tools, as well as the development of metadata training programmes. " />  <meta
+ name="dc.subject.keywords" content=" Provide keywords, using those in the
+ journal's list (http://informationr.net/ir/Index_terms.html) where possible " />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  <meta name="robots"
+ content="all" /> 
+
+ <meta name="dc.publisher" content="Professor T.D. Wilson" />  
+ <meta name="dc.coverage.placename" content="global" />  
+ <meta name="dc.type" content="text" />  
+ <meta name="dc.identifier" scheme="ISSN" content="1368-1613" />  
+ <meta name="dc.identifier" scheme="URI" content="http://InformationR.net/ir/16-3/paper481.html" />  
+ <meta name="dc.relation.IsPartOf" content="http://InformationR.net/ir/16-3/infres163.html" />  
+ <meta name="dc.format" content="text/html" />  
+ <meta name="dc.language" content="en" />  
+ <meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="dc.date.available" content="2010-09-15" /> 
+ 
+ <script language="javascript" type="text/javascript"> 
+ 
+ var flag; flag = true; function doChangeFont() { if (flag) { var htmlDoc =
+ document.getElementsByTagName('head').item(0); var css =
+ document.createElement('link'); css.setAttribute('rel', 'stylesheet');
+ css.setAttribute('type', 'text/css'); css.setAttribute('href', '../sans.css');
+ htmlDoc.appendChild(css); flag = false; }  else { var htmlDoc =
+ document.getElementsByTagName('head').item(0); var css =
+ document.createElement('link'); css.setAttribute('rel', 'stylesheet');
+ css.setAttribute('type', 'text/css'); css.setAttribute('href',
+ '../IRstyle2.css'); htmlDoc.appendChild(css); flag = true; }	 }
+		
+ </script> 
+	
+ <style type="text/css">  .button { width: 45em; padding: 0 0 0 0;
+	font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif; font-size:
+	small; font-weight: bold;   background-color: #ffffff; color: #000000; display:
+	inline; text-align: center; }
+		
+ 
+ .button ul { list-style: none; margin: 0; padding: 0; border: none; display:
+ inline; }
+		
+ .button li { margin: 0; font-family: Verdana, Lucida, Geneva, Helvetica,
+		Arial, sans-serif; font-size: small; font-weight: bold;   background-color:
+		#fff000<!-- #2175bc; -->  color: #000000; text-decoration: none; display:
+		inline; }
+ 
+ .button li a:hover { background-color: azure; color: #ff0000; width: auto; }
+		
+ fieldset { padding: .5em; background: white; border: 1px dotted #5E96FD;
+		margin-left: 15px; margin-right: 15px; margin-top: .5em; }
+ 
+ legend { color: white; background-color: #5E96FD; font-size: medium; padding:
+ .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy;
+ font-weight: bold; }
+ 
+ 
+ </style> 
+ 
+ </head>  <body bgcolor="#ffffff">  <table cellspacing="0" cellpadding="0"
+ align="center" border="0"> <tbody> <tr> <td align="center" colspan="5"
+ height="30"><img height="45" alt="header" src="http://www.informationr.net/ir/mini_logo2.gif"  width="336"
+ /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 16 no. 3, September, 2011</span><br /><br /> 
+ <div class="button">
+ <ul> <li><a href="http://www.informationr.net/ir/16-3/infres163.html">Contents</a> |  </li> <li><a
+ href="http://www.informationr.net/ir/iraindex.html">Author index</a> |  </li> <li><a
+ href="http://www.informationr.net/ir/irsindex.html">Subject index</a> |  </li> <li><a
+ href="http://www.informationr.net/ir/search.html">Search</a> |  </li> <li><a href="../index.html">Home</a>
+ </li> </ul></div></td></tr> <tr> <td>&nbsp;</td></tr></tbody></table>
+
+ <hr style="COLOR: #5E96FD" size="1" /> 
+ 
+
+ <h1>The effects of discipline on the application of learning object metadata
+in UK higher education: the case of the Jorum repository</h1>  <br />  <div
+style="margin-left: 10%; margin-right: 10%;">  <h4><a href="paper481#author">Panos
+Balatsoukas</a><br />  Department of Computer and Information Sciences,
+University of Strathclyde, 26 Richmond Street, G1 1XH, Glasgow, UK</h4>  <h4><a
+href="paper481#author">Ann O'Brien and Anne Morris</a><br />  Department of Information
+Science, Loughborough University, Leics, LE11 3TU, UK </h4>  </div>  <br /> 
+ 
+ <form action="paper481">  <fieldset> 
+
+ <legend>Abstract </legend> 
+ <blockquote>
+ <strong>Introduction.</strong> This paper reports on the findings of a study
+ investigating the potential effects of discipline (sciences and engineering
+ versus humanities and social sciences) on the application of the Istitute of
+ Electrical and Electronic Engineers learning object metadata elements for the
+ description of learning objects in the Jorum learning object repository.<br />
+ <strong>Method.</strong> A survey was conducted that examined a stratified
+ sample of 470 metadata records and surrogates used for the description of
+ learning objects in the Jorum repository.  <br /> <strong>Analysis.</strong> A
+ quantitative data analysis was performed based on the sample. This included
+ descriptive statistics as well as a set of Chi squared tests for the
+ identification of differences in the application of learning object metadata
+ elements between disciplines. <br /> <strong>Results.</strong> The results of
+ this study showed that some metadata elements tended to be more frequently
+ applied for the description of learning objects in the humanities and social
+ sciences than in sciences and engineering. These were: interactivity type,
+ difficulty, aggregation level, coverage, structure and semantic density.  <br />
+ <strong>Conclusions.</strong> The findings of this study could have implications
+ for the design of metadata editors and annotation tools, as well as the
+ development of metadata training programmes.  </blockquote>  </fieldset> </form>
+ 
+ 
+ <br />  <div align="center">  <input type="button" value="change font"
+ class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onclick="doChangeFont()"
+ /></div>  <br /> 
+ 
+ <h2>Introduction</h2> 
+
+ <p>Metadata can support multiple roles in the provision of e-learning,
+including the description, management, retrieval and re-usability of learning
+objects and learning designs, as well as the delivery of on-demand and
+personalised learning experiences to users. For this purpose, a variety of
+educational or learning object metadata standards and schemas have been
+developed, including the Dublin Core Education (DCEd) (<a href="paper481#Mas00">Mason
+and Sutton 2000</a>), the IEEE learning object metadata standard (<a
+href="paper481#Iee02">IEEE... 2002</a>) (hereafter, 'the IEEE standard'), and the
+ARIADNE metadata schema (<a href="paper481#Naj03">Najjar <em>et al.</em> 2003</a>).
+These standards and schemas cover many of the educational, technical and
+content-related characteristics of learning objects or learning content in
+general. Apart from an interest in standardisation and metadata schema
+development, researchers have also investigated the interoperability and
+technical issues associated with the implementation of learning object metadata
+in learning object repositories  and virtual learning environments (<a
+href="paper481#Sam02">Sampson <em>et al.</em> 2002</a>) as well as the user aspects that
+should underpin metadata presentation in the search result interface of these
+systems (<a href="paper481#Bal07">Balatsoukas <em>et al.</em> 2007</a>; <a
+href="paper481#Lid03">Liddy <em>et al.</em> 2003</a>).</p>
+
+ <p>In the United Kingdom, the use of learning object metadata, such as the
+IEEE's standard, is an important basis for the successful implementation of
+e-learning systems in higher and further education. For example, the  <a
+href="http://www.elearning.ac.uk/">e-learning programme</a> of the Joint
+Information Systems Committee has funded several UK projects on e-learning, some
+of which have investigated the creation and metadata annotation of learning
+objects in higher and further education, such as the <a
+href="http://www.reload.ac.uk/" target="_blank">RELOAD project</a>, the creation
+of auto-generated learning object metadata, such as the <a
+href="http://www.hull.ac.uk/esig/repomman/" target="_blank">RepoMMan
+project</a>, and the establishment of learning object metadata creation
+workflows, such as the <a href="http://www.jorum.ac.uk/" target="_blank">Jorum
+project</a>. Research, however, is still in progress on the development of a
+cross-institutional and UK-wide metadata standard based on the IEEE standard
+(for example, the UK learning object metadata core is under development by the
+<a href="http://zope.cetis.ac.uk/profiles/uklomcore/wip/"
+target="_blank">Special Interest Group on Metadata and Repositories</a> at the
+Centre for Educational Technology and Interoperability Standards. </p>
+
+ <p>Although the IEEE standard has been an important component of all these
+efforts, little is known about the level of its uptake and use in UK higher
+education. For example, there are no studies investigating the level of
+application of metadata elements of the standard for the description of learning
+objects in different disciplines. It is anticipated that the investigation of
+differences in the application of the standard could enhance our understanding
+about the use of this type of metadata and stimulate further research about the
+reasons for these differences. Therefore, the aim of this study was to examine
+the effects, if any, of discipline (sciences and engineering versus humanities
+and social sciences) on the application of the metadata elements for the
+description of learning objects in the UK's Jorum learning object repository.
+</p>
+
+ <p>The paper is structured as follows. In the next section, a literature
+review is presented that elaborates on a definition of the concept of learning
+object metadata, reviews the IEEE standard and focuses on previous studies that
+investigated the level of application and uptake of this standard at both a
+national and international level. The methods developed to address the aim of
+this study are then presented, followed by  the results of this study and the
+final two sections provide a discussion and some conclusions about the
+application of learning object metadata.</p>
+
+ <h2>Literature review</h2>
+
+ <h3>Defining learning object metadata</h3>
+
+ <p>There is no formal definition of learning object metadata or metadata for
+learning objects. Some authors, including Karampiperis and Sampson (<a
+href="paper481#Kar03">2003</a>), argue that metadata for learning objects should support
+the retrieval of learning objects '<em>in an educationally efficient and
+effective way</em>'. Based on Sicilia's (<a href="paper481#Sic05">2005</a>) concept of
+the dual role of metadata as referential and purposeful, it can be assumed that
+educational efficiency should guide the referential function of learning object
+metadata (for example, efficiency in terms of cost, time, human resources and
+technical infrastructure employed for the description (or referencing) of
+learning objects), while educational effectiveness should guide the purposeful
+and functional role of metadata (for example, for searching, evaluating,
+accessing, preserving and using learning objects). By associating this
+assumption with the general definition of metadata used by Greenberg (<a
+href="paper481#Gre05">2005</a>) as '<em>structured data about an object that supports
+functions associated with the designated object</em>', a new definition for
+learning object metadata can be declared as:</p>
+
+ <blockquote>Structured metadata used for the efficient description of learning
+objects and the effective support of educational functions related to the
+described learning objects.</blockquote>
+
+ <p>In the context of this paper the term <em>learning object</em> is used to
+denote an electronic resource created from smaller components (such as data and
+information objects) and supporting one or more learning objectives (<a
+href="paper481#Bal08">Balatsoukas <em>et al.</em> 2008</a>). A learning object can be
+re-used in multiple educational contexts as part of larger modules and courses
+(<a href="paper481#Wil00">Wiley 2000</a>; <a href="paper481#Pol03">Polsani 2003</a>).</p> 
+
+ <h3>The IEEE learning object metadata standard and application profiles</h3>
+
+ <h4>The learning object metadata standard</h4>
+
+ <p>The draft IEEE standard (IEEE 1484.12.1-2002) proposes the structure and
+semantics of metadata elements used for the description of learning objects. The
+IEEE Learning Technology Standards Committee has adopted a broad definition of
+the kind of learning objects that the LOM standard tends to describe, as:
+'<em>any entity, digital or non-digital, that may be used for learning education
+and training</em>' (<a href="paper481#Iee02">IEEE Learning Technology Standards
+Committee 2002: 6</a>). The standard describes various characteristics of a
+learning object by defining approximately eighty metadata elements, grouped
+under nine general categories. Table 1 presents a description of the nine
+categories. For example, the <em>General</em> metadata category includes
+component elements, such as <em>Identifier</em>, <em>Title</em>,
+<em>Language</em>, <em>Description</em>, <em>Keywords</em>, <em>Coverage</em>,
+<em>Structure</em> and <em>Aggregation Level</em> metadata. Some of these
+elements may also include further sub-component metadata elements. For example,
+the component element <em>Identifier</em> of the <em>General</em> metadata
+category, includes the <em>Catalog</em> and <em>Entry</em> sub-components. Data
+elements that include component data elements are named as aggregate data
+elements, while leaf data elements are named as simple data elements (<a
+href="paper481#Iee02">IEEE Learning Technology Standards Committee 2002: 7</a>). For
+some data elements vocabularies are defined by the standard, which are useful
+for assigning values to the metadata elements. All elements are optional, thus a
+basic core set of metadata elements is not specified. Furthermore, the standard
+does not provide any recommendations regarding the metadata creation process or
+the storage and retrieval of metadata within learning object repositories.</p>
+
+ <p>The syntax of metadata elements is based on the W3C XML Schema. Some of the
+benefits related to the use of this particular technology include: </p>
+
+ <ul> <li>interoperability and exchangeability of records across heterogeneous
+systems and platforms,</li>  <li>use of XML namespaces that support the
+extensibility of learning object metadata with new elements, and</li> <li>better
+representation and encoding of the hierarchical structure of elements.</li>
+</ul>
+
+ 
+ <table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+ style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+ smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+ normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+ background-color: #fdffdd">  <caption align="bottom"><br /><strong>Table 1: The
+ nine metadata categories</strong><br /></caption> 
+ 
+ <tr><th valign="middle">Metadata category</th><th colspan="1">Description of
+ contents</th></tr> 
+ 
+ <tr><td>1. General</td><td align="left">	Descriptive information of the
+ learning object as a whole, such as: identifier, title, language, description,
+ keyword, coverage, structure, aggregation level.</td></tr> 
+
+ <tr><td>2. Life-cycle</td><td align="left">Elements related to the creation or
+revision history of the learning object as well as information about those who
+have contributed to the development, creation, revision of the learning
+object.</td></tr> 
+ 
+ <tr><td>3. Meta-metadata</td><td align="left">Information regarding the
+ creation of the metadata record. </td></tr> 
+ 
+ <tr><td>4. Technical</td><td align="left">The category consists of elements
+ that describe the technical characteristics of the learning object such as the
+ format, size, location and technical requirements.</td>	</tr> 
+ 
+ <tr><td>5. Educational</td><td align="left">The educational category
+ aggregates elements regarding pedagogical and educational information about the
+ use of a learning object. Such elements include: Interactivity type, Learning
+ resource type, Interactivity level, Semantic density, Audience or Intended end
+ user role, Context, Typical age range, Difficulty, Typical learning time,
+ Description, Language. </td></tr> 
+ 
+
+ <tr><td>6. Rights</td><td align="left">The rights category includes
+information regarding the intellectual property rights and conditions of use of
+the learning object. </td>	</tr> 
+ 
+ <tr><td>7. Relation</td><td align="left">The relation category presents
+ information about the relationship of the described learning object with other
+ objects. </td>	</tr> 
+ 
+ <tr><td>8. Annotation</td><td align="left">The annotation category provides a
+ comment regarding the use of learning objects. </td></tr> 
+ <tr><td>9. Classification</td><td align="left">The classification category classifies the
+ content of the learning object based on an appropriate classification system.
+ </td></tr>  </table> 
+
+
+ <p>The learning object metadata standard formed the basis for the development
+of many nation-wide and project-specific application profiles. Factors that
+influenced the wide acceptance of this standard include: </p>
+
+ <ul> <li>its characterisation as an ISO standard in 2002;</li>  <li>its
+origins can be traced back to the development of significant European and
+international projects such as the ARIADNE project (<a
+href="http://www.ariadne-eu.org/"
+target="_blank">http://www.ariadne-eu.org/</a>) and the IMS project (<a
+href="http://www.imsglobal.org/"
+target="_blank">http://www.imsglobal.org/</a>);</li>   <li>its partial
+interoperability with Dublin Core;</li>   <li>its focus on learning objects;
+and</li>  <li>its ability to cover a wide range of metadata elements. </li>
+</ul>
+
+ <p>Some of the most prominent  application profiles include the CanCore
+project in Canada, the UK Learning Object Metadata Core in the UK and the SCORM
+application profile developed by the US Advanced Distributed Learning  project.
+These profiles adhere to the basic semantic structure of the original standard
+but contextualise its use by proposing a basic core set of mandatory elements,
+providing guidelines for using the metadata elements as well as presenting
+alternative vocabularies for populating metadata elements with values. </p>
+
+ <h4>The UK Learning Object Metadata Core</h4>
+
+ <p>The UK Learning Object Metadata Core (hereafter, the "UK Core") is based on
+a revision of the former UK Common Metadata Framework. The latest version of the
+Core is the draft version 0.2 (<a href="paper481#Cam04a">Campbell 2004a</a>), but work
+is  in progress for  version 0.3 (<a href="paper481#Cam04b">Campbell 2004b</a>). The UK
+Core is an application profile of the IEEE standard. It does not propose new
+elements but specifies a basic minimum set of mandatory elements and includes
+recommendations and guidelines about the use of these elements in UK higher and
+further education. In particular, Working draft 0.3 defines twenty-seven data
+elements as mandatory (<a href="paper481#Cam04b">Campbell 2004b</a>). The list of
+mandatory elements, however, should not be perceived as a definite or ultimate
+list of all elements that might be useful for storing, retrieving and evaluating
+learning resources and learning objects. </p>
+
+ <p>It is worth noting that although the purpose of the UK Core is to support
+the description of learning objects, elements related uniquely to the structure,
+granularity, pedagogical context and use of a learning object have not been
+defined as mandatory elements. The rationale behind this decision was that these
+elements and their associated vocabularies have not yet been widely implemented
+and their use is not well understood. The rest of the metadata elements have
+been defined as either Recommended or Optional. These are: all metadata elements
+from the <em>Education</em>, <em>Relation</em>, <em>Annotation</em> and
+<em>Classification</em> metadata categories as well as the <em>Coverage</em>,
+<em>Keyword</em>, <em>Structure</em> and <em>Aggregation level</em> metadata
+elements from the <em>General</em> metadata category (see Table 1). Finally, the
+UK Core application profile has been used as a template for the development of
+other UK-based metadata profiles, such as the Jorum profile.</p>
+
+ <h3>The application of learning object metadata</h3>
+
+ <p>Although metadata standardisation progresses and many communities develop
+their own metadata schemas and application profiles, the level of uptake of
+learning object metadata has not been widely investigated. One of the early
+surveys that examined the level of application of learning object metadata
+standards in UK higher education revealed that metadata implementation has been
+monopolised by two standards: the Dublin Core Metadata Elements Set and the IEEE
+standard (<a href="paper481#Cur05">Currier and Campbell 2005</a>). </p>
+
+ <p>At the individual metadata element level, a survey conducted by the Centre
+for Educational Technology and Interoperability Standards (CETIS) (<a
+href="paper481#Cet02">2002</a>) in the UK and an international survey by CanCore (the
+Canadian learning resource metadata initiative) (<a href="paper481#Fri03">Friesen and
+Nirhamo 2003</a>; <a href="paper481#Fri04">Friesen 2004</a>) revealed an
+under-utilisation of metadata elements applied for the description of the
+educational, technical, structural and aggregation level characteristics of
+learning objects. Both surveys were focused on the use of the IEEE standard. The
+survey by CETIS was informal and aimed at the identification of useful case
+studies for further investigation. Thus the survey did not provide a clear
+answer about the implementation of learning object metadata in the UK. The
+findings of the international survey by CanCore revealed a high level of use
+among the elements of the <em>General</em> and <em>Classification</em>
+categories, such as the <em>Title</em>, <em>Format</em>, <em>Language</em>,
+<em>Identifier</em>, <em>Keyword</em>, <em>Purpose</em> and <em>Taxon path</em>.
+Other widely implemented elements were: the <em>Role</em> and <em>Entity</em>
+elements of the <em>Contribute</em> aggregate metadata element of the <em>Life
+cycle</em> metadata category, the <em>Format</em> element from the
+<em>Technical</em> category and the <em>Learning resource type</em> element from
+the <em>Educational</em> category. These metadata elements occurred in more than
+50% of the metadata records under investigation. This survey, however, revealed
+an under-utilisation of metadata elements related to the educational context of
+a learning object (for example, <em>Typical age range</em>, <em>Context</em>,
+<em>Typical learning time</em>, <em>Difficulty</em> and <em>Semantic
+density</em>) as well as elements specifically used to describe the
+object-oriented or interactive nature of a learning object (such as
+<em>Aggregation level</em>, <em>Structure</em> and <em>Interactivity level</em>)
+(<a href="paper481#Fri04">Friesen 2004</a>).</p>
+
+ <p>The findings of other studies of the application of educational metadata
+conducted by Godby (<a href="paper481#God04">2004</a>), Qin and Godby (<a
+href="paper481#Qin03">2003</a>) and Sicilia <em>et al.</em> (<a href="paper481#Sic05">2005</a>)
+were similar. Godby (<a href="paper481#God04">2004</a>), who tried to update the
+findings of the CanCore survey, revealed that the majority of metadata elements
+in the <em>Educational</em>, <em>Technical</em> and <em>Relation</em> categories
+were among the least applied elements. Godby (<a href="paper481#God04">2004</a>)
+concluded that the focus of the description of learning objects was centred on
+the retrieval and discovery of metadata, ignoring the educational-learning scope
+of metadata standards such as the IEEE standard. Another study (<a
+href="paper481#Qin03">Qin and Godby 2003</a>), based on a comparison and synthetic
+analysis of four metadata schemas (the Ecological Metadata Language, the Gateway
+to Educational Materials metadata schema, IEEE Learning Object Metadata/IMS
+Learning Resource Metadata and the Training Exchange Definition metadata),
+concluded that educational metadata were underrepresented. Qin and Godby (<a
+href="paper481#Qin03">2003</a>) argued that there was a lack of metadata elements and
+vocabularies that expressed different models of learning as well as various
+types of learning objectives and learning contexts. For this purpose the authors
+proposed the creation of a learning object ontology with three main classes:
+learning-models, learning objectives and learning objects. Finally, the study
+conducted by Sicilia <em>et al.</em> (<a href="paper481#Sic05">2005</a>) provided the
+same conclusions regarding the use of educational metadata in two learning
+object repositories, the CAREO repository in Canada, and the MERLOT repository
+in United States. Sicilia <em>et al.</em> (<a href="paper481#Sic05">2005</a>) also
+highlighted the need for the provision of better quality and structured
+educational metadata. </p>
+
+ <p>Although these studies revealed an under-utilisation of
+<em>Educational</em>, <em>Technical</em> and <em>Aggregation Level</em> and
+<em>Structure</em> metadata of the IEEE standard, other researchers such as
+Najjar <em>et al.</em> (<a href="paper481#Naj03">2003</a>) provide  different
+conclusions in the case of the ARIADNE Knowledge Pool System. According to
+Najjar <em>et al.</em>, many educational elements were among the most frequently
+applied metadata elements in the ARIADNE Knowledge Pool System. These were: the
+<em>Granularity</em> element (91.9%), <em>Didactical context</em> (53.3%),
+<em>Interactivity level</em> (52.2%), <em>Semantic density</em> (52.4%) and
+<em>Difficulty level</em> (52.2%).</p>
+
+ <p>From these studies, only Sicilia <em>et al.</em> (<a
+href="paper481#Sic05">2005</a>) investigated the effects of discipline on the frequency
+of application of metadata elements. They compared the application of  metadata
+elements across learning objects from five disciplines within the CAREO learning
+objects repository. The disciplines included were computer science, education,
+sciences, accounting, medical science and mathematics. The results revealed that
+many metadata elements were distributed homogeneously across the disciplines.
+These were the title, description, keywords, the meta-metadata entity element
+and the keyword metadata element of the classification category. However,
+metadata elements relating to the author of the learning object (such as
+<em>Role</em>, <em>Entity</em> and <em>Date</em>) as well as most elements from
+the <em>Meta-metadata</em>, <em>Education</em> and <em>Rights</em> categories
+were more frequently used for the description of learning objects from computer
+science, mathematics and accounting. Metadata elements from the
+<em>Annotation</em> and <em>Technical</em> categories were more frequently used
+for the description of learning objects from sciences, medical science and
+education. </p>
+
+ <p>Although Sicilia <em>et al.</em> (<a href="paper481#Sic05">2005</a>) provided some
+useful insights concerning the application of certain  elements, their study is
+characterized by a focus on the Canadian educational sector (for example, the
+metadata records under examination were based on CanCore, the Canadian
+application profile of the IEEE standard), lack of statistical tests for the
+examination of differences in the application of metadata elements between
+disciplines, and absence of data about the application of elements between
+groups of disciplines (e.g., humanities and social science and sciences and
+engineering). The present paper addresses these gaps by focusing on a UK-based
+learning object repository and applying statistical tests for the identification
+of differences, if any, between groups of disciplines in the application of
+certain metadata elements. In addition, the division of disciplines into two
+interdisciplinary groups (humanities and social sciences versus sciences and
+engineering) serves the simple assumption that any differences in the
+application of learning object metadata elements could be made more clear in the
+case of groups of disciplines with a different epistemological base, rather than
+between individual disciplines that are similar in naorganizorganizorganizture.
+Furthermore, the identification of statistically significant differences at the
+group level could justify and provide an empirical basis for the initiation of
+comparative studies between disciplines at the individual- or micro-level.
+Finally, this study updates the one by Sicilia <em>et al.</em> (<a
+href="paper481#Sic05">2005</a>) and resets the discourse on the application of metadata
+elements with an emphasis on the UK higher education sector.</p>
+
+ <p>Other researchers such as Zhang and Jastram (<a href="paper481#Zha06">2006</a>)
+found differences in the application of metadata elements between professionals
+from different sectors, including librarians and information technology
+professionals, as well as between professionals from private and public
+organizations. In particular, they revealed statistically significant
+differences in the accuracy and level of application of the keyword and
+description metadata elements. Information technology professionals tended to
+apply more metadata elements than librarians. These studies, however, were
+focused on the metadata (or meta-tags) used in the header of html documents and
+not on the IEEE standard or any other type of structured learning object
+metadata schema. Also the researchers investigated differences between groups of
+professionals by sector rather than by discipline. </p>
+
+ <h2>Methods</h2>
+
+ <p>To address the aim of this study a survey was conducted that examined the
+metadata records and surrogates used for the description of learning objects in
+the Jorum repository. A stratified random sample of 470  records was selected.
+This sampling technique served the representation in the sample of metadata
+records of learning objects from all subjects (disciplines) covered by the Jorum
+repository and facilitated the random selection of cases within each stratum.
+</p>
+
+ <p>In the Jorum repository, learning objects are classified under nineteen
+subject headings for higher education. These subjects represent the
+classificatory structure of the Jorum repository. For the needs of this study
+the subjects were categorized into two interdisciplinary groups: 1. Sciences and
+engineering, and 2. Humanities and social sciences. The first group represented
+disciplines from natural sciences and engineering, such as physics and
+mathematical sciences, medicine, biology, engineering and technology. The second
+group included disciplines of humanistic studies as well as disciplines related
+to the study of society, social phenomena and relations, including economics and
+business administration. This categorization provides a realistic, flexible and
+intuitive way of grouping individual disciplines which follows the traditional
+categorization of academic departments in faculties. The two interdisciplinary
+categories were:  </p>
+
+ <p><b>A. Sciences and engineering</b></p>
+
+
+ <ol><li>Medicine and dentistry</li> <li>Subjects allied to medicine</li>
+<li>Biological sciences</li> <li>Veterinary sciences</li>  <li>Physical
+sciences</li> <li>Mathematical and computer sciences</li> 
+
+ <li>Engineering</li> <li>Technologies</li>  <li>Architecture</li> </ol>
+
+ <p><b>B. Humanities and social sciences</b></p>
+
+ <ol><li>Social sciences</li>  <li>Law</li> <li>Business and
+administration</li> 
+
+ <li>Mass communication and documentation</li>  <li>Linguistics</li>
+<li>European languages</li>  <li>Eastern, Asiatic, African and Australian
+languages and literatures</li> <li>Historical and philosophical studies</li>
+<li>Creative arts and design</li>  <li>Education</li></ol>
+
+
+
+ <p>Each of the nineteen subject headings represented a stratum (i.e. a subject
+area). Within each stratum a total number of thirty learning object metadata
+records were randomly selected for examination. It is worth mentioning, however,
+that a few subject headings included fewer than thirty learning objects. In
+these cases all metadata records in the stratum were selected for inclusion in
+the sample. In a typical Jorum learning object metadata record all elements are
+hierarchically listed following a parent-child relationship. Metadata elements
+are grouped in one or more categories of the IEEE standard (see Table 1). Some
+additional metadata categories, such as digital rights management, are also
+provided.</p>
+ 
+ <p>The metadata categories under investigation were: <em>General</em>,
+ <em>Life-cycle,</em> <em>Meta-metadata,</em> <em>Technical</em>,
+ <em>Educational</em>, <em>Rights</em>, <em>Relation</em>, <em>Annotation</em>
+ and <em>Classification</em>. In addition, the following Recommended and Optional
+ metadata elements of the IEEE standard were selected for further investigation:
+ </p>
+
+
+ <ol><li>Recommended: Interactivity type, Interactivity level, Learning
+resource type, Intended end user role, Context, Typical age range, Difficulty,
+Description (from the educational metadata category).</li> <li>Optional:
+Coverage, Structure, Aggregation level, Requirements, Semantic density, Typical
+learning time (from the General, Technical and Educational metadata categories
+respectively).</li></ol>
+
+ <p>The selection of the particular set of metadata elements was based on the
+results of previous surveys according to which these were among the least
+applied metadata elements (<a href="paper481#Fri04">Friesen 2004</a>; <a
+href="paper481#God04">Godby 2004</a>). Because of this it was decided to investigate
+further the impact of the two interdisciplinary categories on the application of
+these elements in the Jorum repository.</p>
+
+ <p>Data collected also included the frequency of application of each metadata
+category as well as the total number of times a specific element appeared in the
+sample of records. The data analysis involved the estimation of the frequencies
+as well as non parametric Chi-squared tests for statistical significance.
+Non-parametric tests were applied to investigate significant differences in the
+application of metadata categories and elements  between disciplines (sciences
+&amp; engineering versus humanities &amp; social sciences). </p>
+
+ <h3>The Jorum Repository</h3>
+
+
+ <p>The Jorum project (<a
+href="http://www.jorum.ac.uk/">http://www.jorum.ac.uk/</a>) funded by JISC under
+the X4L programme aimed to develop a national repository of learning objects for
+staff across the UK higher and further education. Users of the Jorum repository
+can either use or contribute learning objects and digital learning material. As
+part of this process, the Jorum team developed a learning object metadata
+creation workflow with three main roles. These include the Contributor, the
+Cataloguer and the Reviewer. The Contributor submits some additional learning
+object metadata after the upload of a learning object. Then the Cataloguer
+completes the learning object metadata record, and finally, the Reviewer's role
+is to revise or reject the metadata record. In addition to the human-generated
+metadata this workflow supports the creation of some automatically-generated
+metadata (<a href="paper481#Bai06">Baird 2006</a>). </p>
+
+ <p>For the standardisation of the metadata creation process the Jorum metadata
+application profile has been developed based on the UK Core version 0.3, which
+provides a basic minimum set of mandatory metadata elements as well as
+additional elements that are identified as Recommended or Optional. In addition,
+the application profile specifies some guidelines and recommendations for the
+application of these elements and their vocabularies. </p>
+
+ <p>It was anticipated that the selection of the sample of  metadata records
+from a nation-wide learning object repository such as Jorum would reflect the
+cataloguing behaviour of depositors from many UK universities and various
+disciplines. From a practical point of view, the selection of the particular
+repository limited the amount of time and resources needed for researchers to
+obtain a large sample of metadata records. </p>
+
+
+ <h2>Results</h2>
+
+ <p>Although the sample size of this survey consisted of 470 metadata records,
+59 records were excluded from the analysis. These records were incomplete and
+did not provide an accurate view of the application of certain metadata
+categories and elements in the Jorum repository. Thus, the results reported in
+this section derive from the analysis of 411 completed metadata records. </p>
+
+ <h3>The effects of discipline on the application of metadata categories</h3>
+
+ <p>Data analysis revealed consistent application of the mandatory  metadata
+categories across the examined  records. For example, the General, Life-cycle,
+Meta-metadata, Technical, Educational, Rights and Classification metadata
+categories were present in all  411 metadata. This is not the case, however, for
+the optional Relation and the recommended Annotation categories. In particular,
+the Relation metadata category was present in fifteen  records and the
+Annotation category in 124 records. </p>
+
+
+ <p>A set of Pearson's Chi-squared tests was applied in the case of the
+Relation and Annotation metadata categories to investigate  statistically
+significant differences between the two interdisciplinary categories (sciences
+and engineering versus humanities and social sciences) in the application of the
+Relation and Annotation metadata categories. The results revealed that the
+relation between the application of the Relation metadata category and the type
+of interdisciplinary category was significant:   Chi-squared (1, N= 411) =
+19.21, p = &lt;0.0005. In particular, the Relation metadata category was more
+frequently applied in the case of metadata records describing learning objects
+from a science or engineering discipline. The association, however, was of weak
+strength (Phi-value = 0.216) thus, the type of discipline for which the metadata
+record was created for accounted only for 4.7% of the variance in the frequency
+of use of the Relation metadata element. </p>
+
+ <p>Similarly, the relation between the application of the Annotation metadata
+category and the type of discipline was significant:   Chi-squared (1, N= 411) =
+35.36, p = &lt;0.0005. In this case, however, the Annotation metadata category
+tended to be more frequently applied in records that described learning objects
+from the humanities and social sciences. Again, the association was of weak
+strength (Phi-value = 0.293) and accounted for 8.6% of the variance in the
+frequency of use of the Annotation metadata category between the two
+interdisciplinary categories. </p>
+
+ <p>The contingency tables (Tables 2 and 3) present the weak but significant
+relation between the application of the Relation and Annotation metadata
+categories and the two interdisciplinary categories. The Relation metadata
+category was applied in fifteen records of the sciences and engineering group
+and never applied in humanities and social sciences. The Annotation metadata
+category was present in nintety-six  records from the humanities and social
+sciences group and in only twenty-eight records from the sciences and
+engineering group.</p>
+
+  <table width="60%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+background-color: #fdffdd">  <caption align="bottom"><br /><strong>Table 2: 2*2
+contingency table for the Relation metadata category</strong><br /></caption> 
+
+ <tr><th></th> <th>Applied</th><th>Not Applied</th><th>Row Total</th></tr>
+
+ <tr><td>Sciences and engineering</td><td align="center">15</td><td
+align="center">169</td><td align="center">184</td></tr>
+
+ <tr><td>Humanities and social sciences</td><td align="center">0</td><td
+align="center">227</td><td align="center">227</td></tr>
+
+ <tr><td>Total</td><td align="center">15</td><td align="center">396</td><td
+align="center">411 </td></tr> </table>
+
+<br />
+
+ <table width="60%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+background-color: #fdffdd">  <caption align="bottom"><br /><strong>Table 3: 2*2
+contingency table for the Annotation metadata category</strong><br /></caption>
+
+ <tr><th></th> <th>Applied</th><th>Not Applied</th><th>Row Total</th></tr>
+
+ <tr><td>Sciences and engineering</td><td align="center">28</td><td
+align="center">156</td><td align="center">184</td></tr>
+
+ <tr><td>Humanities and social sciences</td><td align="center">96</td><td
+align="center">131</td><td align="center">227</td></tr>
+
+ <tr><td>Total</td><td align="center">124</td><td align="center">287</td><td
+align="center">411</td></tr> </table>
+
+ <p></p>
+
+ <h3>Results of the application of metadata elements</h3>
+
+ <p>The results showed that almost all Recommended elements of the Jorum
+metadata application profile were frequently applied to the description of
+learning objects (<em>Interactivity type</em>, <em>Interactivity level</em>,
+<em>Learning resource type</em>, <em>Intended end user role</em>,
+<em>Context</em>, <em>Difficulty</em> and <em>Description</em>) (see Table 4).
+Most of these elements were present in more than 400 records. This result
+contradicts previous studies, which revealed an under-utilisation of the
+particular elements in the creation of learning object records (Friesen 2004).
+This observation, however, does not hold for the recommended <em>Typical age
+range</em> element which was present in fewer (361) records. </p>
+
+ <p>While all but one of the recommended elements were frequently applied
+across the sample records, this is not the case for the optional elements which
+were not frequently applied (see Table 4). In particular, the three elements of
+the General metadata category (<em>Coverage</em>, <em>Aggregation level</em> and
+<em>Structure</em>) and the two elements of the Education metadata category
+(<em>Semantic density</em> and <em>Typical learning time</em>) were applied in
+less than forty and sixty records respectively. Finally, the <em>Technical
+requirements</em> element of the Technical metadata category was present in
+fifty-eight records. </p>
+
+ <p></p>
+
+ <table width="60%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+normal; font-family: verdana, geneva, arial, helvetica,
+sans-serif;background-color: #fdffdd;">  <caption align="bottom"> <br
+/><strong>Table 4: Application of metadata elements</strong><br /></caption> 
+
+ <tr><th>Recommended elements</th> <th>Frequency</th><th>%</th></tr>
+<tr><td>Interactivity type</td><td align="center">403</td><td
+align="center">98.1</td></tr> <tr><td>Interactivity level</td><td
+align="center">408</td><td align="center">99.3</td></tr> <tr><td>Learning
+resource type</td><td align="center">408</td><td align="center">99.3</td></tr>
+<tr><td>Intended end user role</td><td align="center">408</td><td
+align="center">99.3</td></tr> <tr><td>Context</td><td align="center">410</td><td
+align="center">99.8</td></tr> <tr><td>Typical age range</td><td
+align="center">361</td><td align="center">87.8</td></tr>
+<tr><td>Difficulty</td><td align="center">397</td><td
+align="center">96.6</td></tr> <tr><td>Description</td><td
+align="center">405</td><td align="center">98.5</td></tr> <tr><th>Optional
+elements</th> <th>Frequency</th><th>%</th></tr> <tr><td>Coverage</td><td
+align="center">21</td><td align="center">5.1</td></tr> <tr><td>Aggregation
+level</td><td align="center">13</td><td align="center">3.2</td></tr>
+<tr><td>Structure</td><td align="center">36</td><td align="center">8.8</td></tr>
+<tr><td>Semantic density</td><td align="center">60</td><td
+align="center">14.6</td></tr> <tr><td>Typical learning time</td><td
+align="center">58</td><td align="center">14.1</td></tr> <tr><td>Technical
+requirements</td><td align="center">59</td><td align="center">14.4</td></tr>
+</table>
+
+
+ <h4>The effects of discipline on the application of metadata elements</h4>
+
+ <h5><em>The application of 'Recommended' elements across
+disciplines</em></h5>
+
+ <p>As shown in Table 5, all Recommended elements under investigation were more
+frequently applied for the description of learning objects from the humanities
+and social sciences. A set of Pearson's Chi-squared tests, however, were
+conducted to examine whether there was a significant impact of the
+interdisciplinary category  on the application of the elements under
+investigation. </p>
+
+
+ <table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+background-color: #fdffdd">  <caption align="bottom"><br /><strong>Table 5: The
+application of Recommended metadata elements between disciplines</strong><br
+/></caption> 
+ 
+ <tr><th rowspan="3" valign="middle">Type of element</th><th
+ colspan="4">Disciplines</th></tr>  <tr><th colspan="2">Humanities and social
+ sciences</th>	<th colspan="2">Sciences and engineering</th></tr> 
+ 
+
+ <tr><th>f</th>	<th>% within discipline</th>	<th>f</th>	<th>% within
+discipline</th></tr> 
+ 
+ <tr><td>Interactivity type</td><td align="center">	226</td><td
+ align="center">	99.6</td><td align="center">	177</td><td align="center">
+ 96.2</td></tr> 
+ 
+
+ <tr><td>Interactivity level</td><td align="center">	227</td><td
+align="center">	100</td><td align="center">	181</td><td align="center">
+98.4</td></tr> 
+ 
+ <tr><td>Learning resource type</td><td align="center">	227</td><td
+ align="center">	100</td><td align="center">	181</td><td align="center">
+ 98.4</td></tr> 
+ 
+
+ <tr><td>Intended end user role</td><td align="center">	226</td><td
+align="center">	99.1</td><td align="center">	182</td><td align="center">
+98.9</td></tr> 
+ 
+ <tr><td>Context</td><td align="center">	227</td><td align="center">
+ 100</td><td align="center">	183</td><td align="center">	99.5</td></tr> 
+ 
+
+ <tr><td>Typical age range</td><td align="center">	200</td><td
+align="center">	88.1</td><td align="center">	161</td><td align="center">
+87.7</td></tr> 
+ 
+ <tr><td>Difficulty</td><td align="center">	224</td><td align="center">
+ 98.7</td><td align="center">	173</td><td align="center">	94</td></tr> 
+ 
+
+ <tr><td>Description (Educational)</td><td align="center">223</td><td
+align="center">98.2</td><td align="center">182</td><td
+align="center">98.9</td></tr>  </table> 
+ 
+ <p>Table 6 presents the results of the Chi-squared tests performed in the
+ case of each Recommended element. The results revealed that there was a
+ relationship between the application of the <em>Interactivity type</em> and
+ <em>Difficulty</em> elements and interdisciplinary category. These elements
+ tended to be more frequently applied for the description of learning objects
+ from humanities and social sciences. It is worth mentioning, however, that the
+ associations observed were of weak strength (Phi-value &lt; 0.2). No significant
+ relationships were observed in the case of the remaining metadata elements.</p>
+
+  <table width="60%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+background-color: #fdffdd">  <caption align="bottom"><br /><strong>Table 6:
+Table of Chi Squared tests for 'Recommended' elements</strong><br /></caption> 
+
+
+ <tr><th>Metadata element by discipline type</th><th>No. of
+cases</th><th>Value</th><th>DF</th><th>p value</th></tr>
+
+ <tr><td>Interactivity type</td><td align="center">411</td><td
+align="center">N/A</td><td align="center">N/A</td><td
+align="center"><b>0.025*</b></td></tr>
+
+ <tr><td>Interactivity level</td><td align="center">411</td><td
+align="center">N/A</td><td align="center">N/A</td><td
+align="center">0.093**</td></tr>
+
+ <tr><td>Learning resource type</td><td align="center">411</td><td
+align="center">N/A</td><td align="center">N/A</td><td
+align="center">0.093**</td></tr>
+
+ <tr><td>Intended end user role</td><td align="center">411</td><td
+align="center">N/A</td><td align="center">N/A</td><td
+align="center">0.6**</td></tr>
+
+ <tr><td>Context</td><td align="center">411</td><td align="center">N/A</td><td
+align="center">N/A</td><td align="center">0.45**</td></tr>
+
+ <tr><td>Typical age range</td><td align="center">411</td><td
+align="center">0.35</td><td align="center">1</td><td
+align="center">0.85</td></tr>
+
+ <tr><td>Difficulty</td><td align="center">411</td><td
+align="center">6.7</td><td align="center">1</td><td
+align="center"><b>0.01**</b></td></tr>
+
+ <tr><td>Description</td><td align="center">411</td><td
+align="center">N/A</td><td align="center">N/A</td><td
+align="center">0.7*</td></tr>
+
+ <tr><td colspan="5">* These cases are significant at the 0.05 (5%) level
+according to the Pearson's chi-squared tests. <br />** Fisher's exact
+significance (2-sided) test was selected (in each of these cases two cells had
+and expected count of less than 5).</td></tr>
+
+ </table>
+
+ <h5>The application of 'Optional' elements across disciplines</h5>
+
+ <p>Similarly, the Pearson's Chi-squared tests performed in the case of the
+optional elements revealed significantly higher level of application of the
+<em>Coverage</em>, <em>Aggregation level</em>, <em>Structure</em> and
+<em>Semantic density</em> elements for the description of learning objects from
+the humanities and social sciences (see Table 7). The strength of these
+relationships, however, was weak (Phi-value &lt;0.2). No significant differences
+were observed in the case of the <em>Typical learning time</em> and
+<em>Technical requirements</em> elements. The level of application of these
+elements tended to be similar across the two subject categories. Finally, Figure
+1 provides a graphical representation of the level of application (percentage of
+application within each interdisciplinary category) of all optional elements of
+this study between humanities and social sciences and sciences and engineering
+categories. </p>
+
+ <table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+background-color: #fdffdd">  <caption align="bottom"><br /><strong>Table 7:
+Table of Chi-squared tests for Optional elements</strong><br /></caption> 
+
+ <tr><th>Metadata element by discipline type</th><th>No. of
+cases</th><th>Value</th><th>DF</th><th>p value</th></tr>
+
+ <tr><td>Aggregation level</td><td align="center">411</td><td
+align="center">7.5</td><td align="center">1</td><td
+align="center"><b>0.006*</b></td></tr>
+
+ <tr><td>Coverage</td><td align="center">411</td><td align="center">5.9</td><td
+align="center">1</td><td align="center"><b>0.015*</b></td></tr>
+
+ <tr><td>Semantic density</td><td align="center">411</td><td
+align="center">9.3</td><td align="center">1</td><td
+align="center"><b>0.002*</b></td></tr>
+
+ <tr><td>Structure</td><td align="center">411</td><td
+align="center">10.2</td><td align="center">1</td><td
+align="center"><b>0.001*</b></td></tr>
+
+ <tr><td>Technical requirements</td><td align="center">411</td><td
+align="center">2.35</td><td align="center">1</td><td
+align="center">0.13</td></tr>
+
+ <tr><td>Typical learning time</td><td align="center">411</td><td
+align="center">0.08</td><td align="center">1</td><td
+align="center">0.8</td></tr>
+
+ <tr><td colspan="5">* These cases are significant at the 0.05 (5%) level
+according to the Pearson's chi-squared tests.</td></tr> </table>
+
+<br /> <div align="center"><img src="http://www.informationr.net/ir/16-3/p481fig1.png" alt="Optional Elements"
+/></div> <div align="center"><br /><strong>Figure 1: The application of Optional
+elements between disciplines (% within disciplines)</strong><br /></div>
+
+
+ <h2>Discussion</h2>
+
+ <p>In general, the results of this study seem to suggest that the level of
+obligation (Recommended or Optional) is more a critical factor in the frequency
+of use of learning object metadata than the disciplinary category to which the
+metadata elements are assigned. However, in both cases (level of obligation and
+interdisciplinary category) some exceptions were observed. For example, in the
+case of the level of obligation, the recommended <em>Typical age range</em>
+element was not consistently applied for the description of learning objects in
+both disciplinary categories. This can be justified by the fact that this
+element is characterised by the inconsistent application of vocabulary values.
+For example, according to the Jorum metadata application profile, the
+<em>Typical age range</em> refers to the chronological age of a user group (<a
+href="paper481#Ste05">Stevenson 2005</a>). In practice, however, the assignment of
+values for the particular element range from chronological values, such as
+<em>16+</em>, to values associated to the educational level of the intended
+end-user group, such as <em>teacher</em> and <em>undergraduate students</em>.
+</p>
+
+ <p>In the case of the effects of disciplinary category on the use of learning
+object metadata elements, the results showed a consistent use of most
+Recommended and Optional metadata elements in the disciplines . These include:
+the <em>General</em>, <em>Life-cycle</em>, <em>Meta-metadata</em>,
+<em>Technical</em>, <em>Education</em>, <em>Rights</em> and
+<em>Classification</em> categories, and the <em>Technical requirements</em>,
+<em>Interactivity level</em>, <em>Typical learning time</em>, <em>Intended end
+user role</em>, <em>Learning resource type</em>, <em>Context</em>, <em>Typical
+age range</em> and <em>Description</em> elements. This finding supports the
+results of a previous study by Sicilia <em>et al.</em> (<a
+href="paper481#Sic05">2005</a>) who found no statistically significant differences in
+the application of metadata elements across disciplines and also that there is a
+general subset of metadata elements that is commonly used for the description of
+learning objects. However, the data analysis was conducted at the level of
+individual scientific disciplines (<a href="paper481#Sic05">Sicilia <em>et al.</em>
+2005</a>) and not at the dichotomous and compound level of sciences and
+engineering versus humanities and social sciences (as in the present
+study).</p>
+
+ <p>Differences in the use of some metadata between the two interdisciplinary
+categories were observed in the following cases:</p>
+
+ <ol> <li>Metadata that tended to be more frequently used for the description
+of learning objects from the humanities and social sciences were the
+<em>Annotation</em> category, and the <em>Interactivity type</em>,
+<em>Difficulty</em>, <em>Aggregation level</em>, <em>Coverage</em>,
+<em>Structure</em> and <em>Semantic density</em>  elements.</li> <li>Metadata
+that tended to be more frequently used for the description of learning objects
+from the sciences and engineering disciplines was the <em>Relation</em> metadata
+category. </li>  </ol>
+
+ <p>These differences represent weak, but statistically significant,
+associations between specific metadata elements or categories of metadata
+elements and interdisciplinary groups. Although there is no evidence in the
+literature about why this phenomenon occurs, the following assumptions can be
+made: </p>
+
+ <ul> <li>Different characteristics of learning objects from sciences and
+engineering and from humanities and social sciences. For example, differences in
+the frequency of use of the <em>Relation</em> category could be attributed to
+the fact that lecturers from a sciences and engineering background tend to
+associate their learning objects with other external resources more frequently
+than those from humanities and social sciences. </li>
+
+<li>Differences in the cataloguing practices between teachers or contributors of
+learning objects from sciences and engineering and from humanities and social
+sciences. These differences may be related to the importance they attach to
+certain learning object metadata for the description of learning objects. For
+example, contributors of learning objects from humanities and social sciences
+may perceive the use of the <em>Annotation</em> category for the description of
+learning objects to be more important than contributors from sciences and
+engineering. </li>
+
+ <li>Differences in cataloguing training between contributors of learning
+objects from sciences and engineering and from humanities and social sciences.
+The difference in the use of metadata elements between the two disciplinary
+categories could be attributed to the amount and quality of training received by
+the contributors of learning objects in the Jorum repository. For example, this
+could be the case for the <em>Semantic density</em>, <em>Aggregation level</em>
+and <em>Interactivity type</em> elements which have been widely criticised in
+the past for semantic ambiguity and problems in their application without
+training.</li>  </ul>
+
+ <p>The future investigation of these assumptions could provide in-depth
+knowledge about the way learning object metadata elements are applied for the
+description of learning objects from different disciplines. However, another
+question arising from this discussion is whether the application (or lack of
+application) of certain learning object metadata elements can have an impact on
+the use of learning object repositories by teachers and students from different
+disciplines. This question is related to the concept of metadata completeness
+that is defined as '<em>the extent to which the metadata record of the learning
+object provides the necessary metadata to properly support a given process or
+activity</em>' (Sicilia <em>et al.</em> 2005). Users can interact with learning
+object repositories at different levels, each level representing a different
+process or activity. These can include:</p>
+
+ <ol>  <li>The search for learning objects using learning object metadata
+fields.</li>  <li>The selection of learning objects (relevance judgment based on
+the retrieved learning object metadata surrogates). </li> </ol>
+
+ <p>These processes or activities can facilitate several educational
+objectives, such as the re-use of learning objects by teachers or the
+facilitation of learning for students. For example, teachers can select learning
+objects for inclusion in lessons or whole courses based on <em>Interactivity
+type</em> or <em>Typical age range</em>. Similarly, students can select learning
+objects according to their <em>Intended end user role</em> or the <em>Learning
+resource type</em>. Therefore, it can be assumed that the lack of complete
+learning object metadata records can impede the efficiency and effectiveness of
+the learning experience (<a href="paper481#Mor07">Morris <em>et al.</em> 2007</a>). For
+example, Balatsoukas <em>et al.</em> (<a href="paper481#Bal07">2007</a>) found that
+students with a science background (information and computer sciences) were
+interested in metadata elements about the audience (<em>Intended end user
+role</em>) and <em>Interactivity</em> when judging the relevance of learning
+objects. The absence of these metadata elements could frustrate learners and
+increase their cognitive load. </p>
+
+<p>In the case of the Jorum repository this problem could be more evident for
+learning objects from sciences and engineering, where metadata elements such as
+<em>Interactivity type</em>, <em>Annotation</em>, <em>Intended end user
+role</em> or <em>Learning resource type</em> were applied less frequently and
+inconsistently when compared to learning objects from humanities and social
+sciences. The reasons for the low application of these metadata elements can be
+attributed to their semantic ambiguity and the lack of appropriate and
+user-centred vocabularies (<a href="paper481#Cam04b">Campbell 2004b</a>; <a
+href="paper481#God04">Godby 2004</a>). </p>
+
+<p>For example, participants in the UK <a
+href="http://searchlt.engineering.ac.uk/" target="_blank">SearchLT project</a>
+faced problems when using specific metadata elements (from an application
+profile) for the creation of metadata records for learning objects in
+engineering (<a href="paper481#Bar03">Barker and Barker 2003</a>). These included the
+<em>Technical requirements</em> element (it was difficult for cataloguers to
+describe the technical requirements), the <em>Educational</em> elements (which
+requires specialist knowledge on pedagogy), and the <em>Interactivity type</em>
+element (which was found confusing). Many of these elements were applied less
+frequently for the description of learning objects from a science or engineering
+discipline in the case of the Jorum repository (see Table 5). There is no strong
+empirical evidence, however, that differences between disciplines (such as
+diverse teaching and learning traditions, the nature and interactivity of
+learning objects, and the level of familiarisation and training with learning
+objects and learning object metadata) account for any inconsistencies in the
+application of certain learning object metadata elements. Researchers suggest
+the need for more research in this area (<a href="paper481#Kay04">Kay and Lum
+2004</a>).</p>
+
+ <h2>Conclusions</h2>
+
+ <p>The results of this study showed that an effect of disciplinary category
+(sciences and engineering and humanities and social sciences) was evident in the
+frequency of use of only a few metadata elements and categories of metadata
+elements. The <em>Annotation</em> category tended to be used more frequently for
+the description of learning objects from humanities and social sciences while
+the <em>Relation</em>  category was more often used in the case of disciplines
+from sciences and engineering . At the metadata element level, the
+<em>Interactivity type</em>, <em>Difficulty</em>, <em>Aggregation level</em>,
+<em>Coverage</em>, <em>Structure</em> and <em>Semantic density</em> elements
+occurred more frequently in records describing learning objects from the
+humanities and social sciences. However, the results showed that the majority of
+metadata elements and categories of metadata under investigation were applied
+consistently across the two disciplinary groups. </p>
+
+ <p>Although the results followed the execution of a sound methodological
+design, which involved random representation of metadata records from all
+disciplines included in the Jorum repository as well as objective data
+collection and analysis though the use of statistical tests, they should be
+interpreted with caution. For example, the categorization of disciplines as
+humanities and social sciences and sciences and engineering could have obscured
+the unique characteristics of individual disciplines. That is, differences in
+the application of metadata elements could have been observed between
+disciplines that occurred within the same disciplinary category. Furthermore,
+this research limited its focus only to certain learning object metadata
+elements, i.e., most of the elements of the <em>Educational</em> category and a
+selection of elements which, according to previous international studies, are
+less frequently used for the description of learning objects.   </p>
+
+ <p>Setting aside these limitations, the present research (the first of its
+kind in the UK) provides new knowledge about the level of application and uptake
+of certain learning object metadata elements in the UK higher education. In
+addition, the findings reported in this paper can be used as a basis for further
+investigation. For instance, future research should examine the reasons why
+specific metadata elements tend to be used more frequently for the description
+of learning objects in the respective discpline groups. Furthermore, follow-up
+studies could strengthen the generalisability of the findings reported in this
+paper by examining the frequency of use of metadata elements across individual
+disciplines and larger samples of metadata records as well as across other
+learning object repositories in the UK. </p>
+
+
+
+ <h2>About the authors</h2>
+ 
+ <p>Panos Balatsoukas is a Research Fellow in the Department of Computer and
+ Information Sciences, University of Strathclyde, Glasgow. His research interests
+ include information retrieval, user-centered design of information systems and
+ relevance judgment on the web. He can be contacted at: <a
+ href="mailto:panos@cis.strath.ac.uk">panos@cis.strath.ac.uk</a></p>
+
+ <p>Ann O'Brien is a Lecturer in the Department of Information Science,
+Loughborough University, UK. Her research interests include information
+organization and retrieval, metadata and taxonomies. She can be contacted at: <a
+href="http://www.informationr.net/ir/16-3/A.O-brien@lboro.ac.uk">A.O-brien@lboro.ac.uk</a></p>
+
+ <p>Anne Morris is a Professor of Information Science in the Department of
+Information Science, Loughborough University, UK. Her research interests include
+e-learning, e-metrics and economic valuation of information services, electronic
+books, the evaluation of information services, the impact of information
+technology on end-users, electronic document delivery, library ergonomics
+including health and safety issues and the strategic management of academic
+libraries. She can be contacted at: <a
+href="mailto:A.Morris@lboro.ac.uk">A.Morris@lboro.ac.uk</a></p>
+
+ <br />
+ <form action="paper481">  <fieldset>  <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend> 
+
+<ul> 
+ <li id="Bai06">Baird, K. (2006). <a href="http://www.webcitation.org/60jKdg958"><em>Automated metadata: A review of existing and potential metadata automation within Jorum and an overview of other automation systems.</em></a> Retrieved 8 August, 2011 from  http://www.jorum.ac.uk/squeezy/site/docs/pdf/automated_metadata_report.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/60jKdg958)</li>
+
+ <li id="Bal07">Balatsoukas, P., Morris, A. &amp; O'Brien, A. (2007).<a href="http://www.webcitation.org/60jMNC21K">Designing metadata surrogates for search result interfaces of learning object repositories: linear versus clustered metadata design.</a> In Leslie Chan and Bob Martens (Eds.), <em>Openness in digital publishing: awareness, discovery and access - Proceedings of the 11th International Conference on Electronic Publishing</em>, ELPUB 2007, Vienna, Austria, June 3rd to 15th, 2007 (pp. 415-424). Vienna: Technical University of Vienna. Retrieved 8 August, 2011 from http://www.iadis.net/dl/final_uploads/200811L002.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/60jMNC21K)</li>
+
+ <li id="Bal08">Balatsoukas, P., Morris, A. &amp; O'Brien, A. (2008). <a href="http://www.webcitation.org/60jMJYySn">Learning objects update: review and critical approach to content aggregation.</a> <em>Journal of Educational technology and society</em>, <strong>11</strong>(2), 119-130. Retrieved 8 August, 2011 from http://www.ifets.info/journals/11_2/11.pdf
+(Archived by WebCite&reg; at http://www.webcitation.org/60jMJYySn)</li>
+
+ <li id="Bar03">Barker, E. &amp; Barker, P. (2003). <a href="http://www.webcitation.org/60jKpmj6n"><em>Case studies
+in implementing educational metadata standards: SearchLT: an online catalogue of engineering learning resources for UK HE</em></a>. Bolton, UK: JISC Cetis. Retrieved 8 August, 2011 from http://metadata.cetis.ac.uk/usage_survey/cs_searchlt.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/60jKpmj6n)</li>
+
+ <li id="Cam04a">Campbell, L.M. (2004a). <a href="http://www.webcitation.org/60jL1noYA"><em>UK learning object metadata core: draft 0.2</em></a>. Bolton, UK: JISC Cetis. Retrieved 8 August, 2011 from http://metadata.cetis.ac.uk/profiles/uklomcore/uklomcore_v0p2_may04.doc (Archived by WebCite&reg; at http://www.webcitation.org/60jL1noYA)</li>
+
+ <li id="Cam04b">Campbell, L. M. (2004b). <a href="http://www.webcitation.org/60jL7qNCZ"><em>UK Learning object metadata core:
+working draft, version 0.3_12042</em></a>. Bolton, UK: JISC Cetis. Retrieved 8 August, 2011 from http://metadata.cetis.ac.uk/profiles/uklomcore/wip/uklomcore_v0p3_1204.doc (Archived by WebCite&reg; at http://www.webcitation.org/60jL7qNCZ)</li>
+
+ <li id="Cet02">CETIS (2002). <a href="http://www.webcitation.org/60jLC7UQ0"><em>Survey of educational metadata use</em></a>.
+Bolton, UK: JISC Cetis. Retrieved 8 August, 2011 from http://metadata.cetis.ac.uk/usage_survey/ed_md_survey_2002-07-29.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/60jLC7UQ0)</li>
+
+ <li id="Cur05">Currier, S., &amp; Campbell, L.M. (2005). Evaluating 5/99 content for reusability as learning objects. <em>VINE: The journal of information and knowledge management systems</em>, <strong>35</strong>(1/2), 85-96. </li>
+
+ <li id="Fri04">Friesen, N. (2004). <a href="http://www.webcitation.org/60jLH9VLY"><em>International learning object metadata survey</em></a>. <em>International Review of Research in Open and Distance Learning</em>, <strong>5</strong>(3). Retrieved 8 August, 2011 from http://www.irrodl.org/index.php/irrodl/article/view/195/277 (Archived by WebCite&reg; at http://www.webcitation.org/60jLH9VLY) </li>
+
+ <li id="Fri03">Friesen, N. &amp; Nirhamo, L. (2003). <a href="http://www.webcitation.org/60jLKnfnJ"><em>Survey of learning object metdata implementation: preliminary report</em></a>. Retrieved 8 August, 2011 from http://www.estandard.no/docs/Survey_of_LOM_Implementations_Lassi.doc (Archived by WebCite&reg; at http://www.webcitation.org/60jLKnfnJ)</li>
+
+ <li id="God04">Godby, C. J. (2004). <a href="http://www.webcitation.org/60jLOq4CK">What do application profiles reveal about the learning object metadata standard?</a> <em>Ariadne</em>, <strong>41</strong>. Retrieved 8 August, 2011 from http://www.ariadne.ac.uk/issue41/godby/ (Archived by WebCite&reg; at http://www.webcitation.org/60jLOq4CK)</li>
+ 
+ <li id="Gre05">Greenberg, J. (2005). Metadata and the World Wide Web. In <em>Encyclopedia of library and information science</em> (pp. 1876-1888). New York, NY: Marcel Dekker.</li>
+
+ <li id="Kar03">Karampiperis, P. &amp; Sampson, D. (2003). Enhancing educational metadata management systems to support interoperable learning object repositories. In <em>Proceedings of the 3rd IEEE International Conference on Advanced Learning Technologies, 9-11 July, 2003, Athens, Greece.</em> (pp. 214-218). Los Alamitos, CA: IEEE. </li>
+
+ <li id="Kay04">Kay, J. &amp; Lum, A. (2004). Building user models from observations of users accessing multimedia learning objects. In A. Nuernberger and N. Detyniecki (Eds.), <em>Adaptive multimedia retrieval</em> (pp. 36-57). Berlin: Springer.</li>
+
+ <li id="Lid03">Liddy, E.D., Allen, E.E., Finneran, C.M., Gay, G., Hembrooke, H. &amp; Granka, L.A. (2003). MetaTest: evaluation of metadata from generation to use. In <em>Proceedings 2003 Joint Conference on Digital Libraries</em> (p. 398). New York, NY: IEEE Press. </li>
+
+ <li id="Iee02">IEEE Learning Technology Standards Committee. (2002). <a href="http://www.webcitation.org/60jLU7DwS"><em>Draft
+standard for learning object metadata</em></a>. New York, NY: IEEE.  (IEEE 1484.12.1-2002). Retrieved 8 August, 2011 from http://ltsc.ieee.org/wg12/files/LOM_1484_12_1_v1_Final_Draft.pdf (Archived by WebCite&reg; at http://www.webcitation.org/60jLU7DwS)</li>
+
+ <li id="Mas00">Mason, J. &amp; Sutton, S. (2000). <a href="http://www.webcitation.org/60jLXlZpY"><em>Education Working Group: draft proposal</em></a>. Singapore: Dublin Core Metadata Initiative Ltd. Retrieved 8 August, 2011 from http://dublincore.org/documents/education-namespace/ (Archived by WebCite&reg; at http://www.webcitation.org/60jLXlZpY)</li>
+        
+ <li id="Mor07">Morris, A., O'Brien, A. &amp; Balatsoukas, P. (2007). User-centred learning object metadata for effective and efficient e-learning environments. <em>ERCIM News</em>, No. 71, 21-22. </li>
+
+ <li id="Naj03">Najjar, J., Duval, E., Ternier, S. &amp; Neven, F. (2003). <a href="http://www.webcitation.org/60jLcLTXU">Towards interoperable learning object repositories: the ARIADNE experience</a>. In Pedro Isaias and Nitya Karmahav (Eds.), <em>Proceedings of the IADIS International Conference WWW/Internet, Algarve, Portugal, 5-8 November 2003</em>, (pp. 219-226). Lisbon: IADIS. Retrieved 8 August, 2011 from http://www.iadis.net/dl/final_uploads/200302L028.pdf (Archived by WebCite&reg; at http://www.webcitation.org/60jLcLTXU)</li>
+
+ <li>Najjar, J., Ternier, S. &amp; Duval, E. (2003). <a href="http://www.webcitation.org/60n73oQSk">The actual use of metadata in ARIADNE: an empirical analysis</a>. In <em>Proceedings of ARIADNE 3rd International Conference</em>. Retrieved 8 August, 2011 from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.3666&amp;rep=rep1&amp;type=pdf (Archived by WebCite&reg; at http://www.webcitation.org/60n73oQSk) </li>
+
+ <li id="Pol03">Polsani, P. R. (2003). <a href="http://www.webcitation.org/60jLj4Hov">Use and abuse of reusable learning objects</a>. <em>Journal of digital information</em>, <strong>3</strong>(4). Retrieved 8 August, 2011 from http://journals.tdl.org/jodi/article/viewArticle/89/88 (Archived by WebCite&reg; at http://www.webcitation.org/60jLj4Hov) </li>
+
+ <li id="Qin03">Qin, J. &amp; Godby, C. J. (2003). Incorporating educational vocabulary in learning object metadata schema. In T. Koch and I.T. Solvberg (Eds.), <em>Proceedings of the 7th European Conference on Digital libraries</em> (pp. 52-57). Berlin: Springer. </li>
+
+ <li id="Sam02">Sampson, D., Karagiannidis, C., Schenone, A. &amp; Cardinali, F. (2002).  Knowledge-on-Demand in e-Learning and e-Working settings. <em>Educational Technology &amp; Society</em>, <strong>5</strong>(2), 107-112.</li>
+
+ <li id="Sic05">Sicilia, M.A., Garcia, E., Pages, C., Martinez, J.J. &amp; Guttierez, J.M. (2005). Complete metadata records in learning object repositories: some evidence and requirements. <em>International Journal of Learning Technology</em>, <strong>1</strong>(4), 411-424. </li>
+
+ <li id="Ste05">Stevenson, A. (2005). <a href="http://www.webcitation.org/60jMC11sy"><em>JORUM application profile</em></a>. Retrieved 8 August, 2011 from http://www.scribd.com/doc/209179/Jorum-Application-Profile-draft-version-10 (Archived by WebCite&reg at http://www.webcitation.org/60jMC11sy)</li>
+
+ <li id="Wil00">Wiley, D.A (2000). <a href="http://www.webcitation.org/60jLztXRS">Connecting learning objects to instructional design theory: a definition, a metaphor, and a taxonomy</a>. In D.A. Wiley (Ed.), <em>The instructional use of learning objects (online version)</em>. Retrieved 8 August, 2011 from http://reusability.org/read/chapters/wiley.doc (Archived by WebCite&reg; at http://www.webcitation.org/60jLztXRS) </li>
+
+ <li id="Zha06">Zhang, J. &amp; Jastram, I. (2006). A study of the metadata creation behavior of different user groups on the internet. <em>Information Processing and Management</em>, <strong>42</strong>, 1099-1122. </li> </ul>
+</fieldset>  </form> 
+ 
+ 
+ <form action="paper481">  <fieldset>  <legend style="color: white; background-color:
+ #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">How to cite this
+ paper</legend> 
+
+ <div><br />  Balatsoukas, P., O'Brien, A. &amp; Morris, A. (2010). &quot;The
+effects of discipline on the application of learning object metadata in UK
+higher education: the case of the Jorum repository&quot; <em>Information
+Research</em>, <strong>16</strong>(3) paper 481. [Available at
+http://InformationR.net/ir/16-3/paper481.html]</div>   </fieldset>  </form> 
+ 
+<table cellspacing="10" align="center">  <tr>  <td colspan="3" align="center"
+ style="background-color: #5E96FD; color: white; font-family: verdana; font-size:
+ small; font-weight: bold;">Find other papers on this subject</td></tr>  <tr> <td
+ align="center" valign="top"> 
+ 
+
+ <form method="get" action="http://scholar.google.com/scholar" target="_blank">
+<table bgcolor="#ffffff">  <tr>  <td nowrap="nowrap" valign="top" align="center"
+height="32"><input type="hidden" name="q" size="31" maxlength="255"
+value="&quot;learning object metadata&quot; Jorum"></input> <br />  <input
+type="submit" name="sa" value="Scholar Search"  style="font-size: small;
+font-family: Verdana; font-weight: bold;"></input>  <input type="hidden"
+name="num" value="100"></input>  </td>  </tr>  </table> 
+ 
+ </form>  </td>  <td align="center" valign="top">  <!-- Search Google --> 
+ 
+ <form method="get" action="http://www.google.com/custom" target="_blank">
+ <table bgcolor="#ffffff">  <tr>  <td nowrap="nowrap" valign="top" align="center" height="32">
+<input type="hidden" name="q" size="31" maxlength="255" value="&quot;learning object metadata&quot; Jorum"></input><br /> 
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"></input>  
+<input type="hidden" name="client" value="pub-5081678983212084"></input>  
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="ie" value="ISO-8859-1"></input>  
+<input type="hidden" name="oe" value="ISO-8859-1"></input>  
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900; LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"></input>  
+<input type="hidden" name="hl" value="en"></input>  
+</td>  </tr>  </table>  
+</form>
+ </td>  <td align="center" valign="top">  <form method="get"
+ action="http://www.bing.com" target="_blank">  <table bgcolor="#ffffff">  <tr> 
+ 
+ <td nowrap="nowrap" valign="top" align="center" height="32"><input
+ type="hidden" name="q" size="31" maxlength="255" value="&quot;learning object
+ metadata&quot; Jorum"></input> <br /> 
+
+ <input type="submit" name="sa" value="Bing"  style="font-size: small;
+font-family: Verdana; font-weight: bold;"></input>  <input type="hidden"
+name="num" value="100"></input>  </td>  </tr>  </table>  </form> 
+ 
+ </td>  </tr>  </table> 
+ 
+<div align="center">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/ 6-3/paper481.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div> <br />  
+
+ 
+		<div align="center"> 
+
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> <a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a> 
+
+</div> 
+
+  <hr size="1" style="color: #5E96FD;" /> 
+ 
+  <table align="center" cellpadding="10">  <tr><td align="center"
+ valign="top"><div>  <a href="http://www.digits.net" target="_blank">
+    <img src="http://counter.digits.net/?counter={15eb448e-a488-ba74-7112-cbdef6bc0659}&amp;template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a> </div></td>  
+ 
+ <td align="center" valign="top"><div>  &copy; the authors, 2011. <br />Last
+ updated: 14 July, 2011 </div></td> 
+ 
+ <td align="center" valign="middle"><img src="http://www.informationr.net/ir/valid-xhtml10.gif" alt="Valid
+ XHTML 1.0!" height="16" width="44" /><!--ONESTAT SCRIPTCODE START-->  <!-- //
+ Modification of this code is not allowed and will permanently disable your
+ account! // Account ID : 281971 // Website URL: http://InformationR.net/ir/ //
+ Copyright (C) 2002-2006 OneStat.com All Rights Reserved -->  <div
+ id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td
+ align='center'>  <script type="text/javascript">  <!-- function
+ OneStat_Pageview() { var d=document; var sid="281971"; var CONTENTSECTION="";
+ var osp_URL=d.URL; var osp_Title=d.title; var t=new Date(); var
+ p="http"+(d.URL.i
+ dexOf('https:')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagve
+ =2&amp;sid="+sid; p+="&amp;url="+escape(osp_URL);
+ p+="&amp;ti="+escape(osp_Title); p+="&amp;section="+escape(CONTENTSECTION);
+ p+="&amp;rf="+escape(parent==self?document.referrer:top.document.referrer);
+ p+="&amp;tz="+escape(t.getTimezoneOffset()); p+="&amp;ch="+escape(t.getHours());
+ p+="&amp;js=1";
+ p+="&amp;ul="+escape(navigator.appName=="Netscape"?navigator.lang
+ age:navigator.userLanguage); if(typeof(screen)=="object"){
+ p+="&amp;sr="+screen.width+"x"+screen.height;p+="&amp;cd="+screen.colorDepth;
+ p+="&amp;jo="+(navigator.javaEnabled()?"Yes":"No"); } d.write('<a
+ href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img
+ id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by
+ OneStatFree.com. Get your own free site tracker."></'+'a>'); }
+ 
+ OneStat_Pageview(); //-->  </script> 
+
+ <noscript>  <a href="http://www.onestatfree.com"><img border="0"
+src="http://st
+t.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;"
+alt="online web site analytics" /></a>  </noscript>  </td></tr><tr><td
+align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a
+href="http://www.onestat.com" style="text-decoration:none;">online web site
+analytics</a><br /></div></td></tr></table></div>  <!--ONESTAT SCRIPTCODE END-->
+</td></tr>  </table>  <hr size="3" style="color: #5E96FD;" /> 
+ 
+ <table align="center"><tr><td><div class="button"> 
+ 
+<ul> <li><a href="http://www.informationr.net/ir/16-3/infres163.html">Contents</a> | </li> <li><a
+href="http://www.informationr.net/ir/iraindex.html">Author index</a> | </li> <li><a
+href="http://www.informationr.net/ir/irsindex.html">Subject index</a> | </li> <li><a
+href="http://www.informationr.net/ir/search.html">Search</a> | </li> <li><a
+href="../index.html">Home</a></li> </ul> 
+
+ </div></td></tr></table> 
+ 
+ <hr size="3" style="color: #5E96FD;" />  <script
+ src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+ </script>  <script type="text/javascript">  _uacct = "UA-672528-1";
+ urchinTracker(); </script>  </body>  </html> 
+
+

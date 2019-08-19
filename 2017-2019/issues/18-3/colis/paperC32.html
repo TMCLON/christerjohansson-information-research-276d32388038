@@ -1,0 +1,720 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title>
+      The conceptual landscape of iSchools: examining current research interests of faculty members
+    </title>
+    <meta charset="utf-8">
+    <link href="../../IRstyle3.css" rel="stylesheet" media="screen" title="serif">
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../../IRstylesans.css"><!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="The conceptual landscape of iSchools: Examining current research interests of faculty members">
+    <meta name="author" content="Holmberg, Kim (1); Tsou, Andrew (2); Sugimoto, Cassidy R. (2)">
+    <meta name="dcterms.subject" content="Give a brief description of your paper">
+    <meta name="description" content="This study describes the intellectual landscape of iSchools and examines how the various iSchools map onto these research areas. The primary focus of the data collection process was on faculty members’ current research interests as described by the individuals themselves. A co-word analysis of all iSchool faculty members’ research interests was used as a research method. The relations between the current research profiles of the iSchools were compared by calculating the cosine similarity between co-word profiles and visualized in network graphs. The results show that the iSchools still contain many dominant themes from library and information science, but have an expanded conceptual landscape with the introduction of new iSchools.">
+    <meta name="keywords" content="Bibliometrics or Scientometrics, iSchools, co-word analysis, research landscape"><!--leave the following to be completed by the Editor-->
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/18-3/colis/paperC32.html">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/18-3/infres183.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2013-09-15">
+    <meta name="geo.placename" content="global">
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 18 no. 3, September, 2013
+      </h4>
+    </header>
+    <article>
+      <h2 style="text-align:center; margin-left:10%; margin-right:10%;">
+        Proceedings of the Eighth International Conference on Conceptions of Library and Information Science, Copenhagen, Denmark, 19-22 August, 2013
+      </h2><br>
+      <h1>
+        The conceptual landscape of iSchools: examining current research interests of faculty members
+      </h1><br>
+      <div style="margin-left: 20%; margin-right: 10%;">
+        <h4>
+          <a href="mailto:kim.holmberg@abo.fi">Kim Holmberg</a><br>
+          University of Wolverhampton, School of Technology, Wulfruna Street, Wolverhampton, WV1 1LY, United Kingdom<br>
+          Andrew Tsou and Cassidy R. Sugimoto<br>
+          School of Information and Library Science, Indiana University Bloomington, 1320 E. 10th St., LI 011 Bloomington, IN 47405-3907, USA
+        </h4>
+      </div><br>
+      <form>
+        <fieldset>
+          <legend>Abstract</legend>
+          <blockquote>
+            <strong>Introduction</strong>. This study describes the intellectual landscape of iSchools and examines how the various iSchools map on to these research areas.<br>
+            <strong>Method</strong>. The primary focus of the data collection process was on faculty members’ current research interests as described by the individuals themselves. A co-word analysis of all iSchool faculty members’ research interests was used as a research method. The relations between the current research profiles of the iSchools were compared by calculating the cosine similarity between co-word profiles and visualized in network graphs.<br>
+            <strong>Results</strong>. The results show that the iSchools still contain many dominant themes from library and information science, but have an expanded conceptual landscape with the introduction of new iSchools. The methods used for data collection guaranteed the most current data available (in contrast to using publications) and the methods used for analyses gave multiple perspectives to the research landscape of the iSchools.<br>
+            <strong>Conclusions</strong>. The results of the present study showed how the current research landscape of the iSchools and the shared research interests were built by many topics that still reflect dominant information science topics (e.g., bibliometrics, information retrieval, and information seeking behaviour), but that there are also growing areas that reflect the iSchools’ interdisciplinary composition, thus answering the research questions.
+          </blockquote>
+        </fieldset>
+      </form><br>
+      <br>
+      <section>
+        <h2>
+          Introduction and background
+        </h2>
+        <p>
+          The first bona fide 'iSchools' appeared in 2005, following a meeting two years earlier during which '<em>the deans of seven leading … information and library science schools converged on the University of North Carolina (Chapel Hill) to discuss the so-called ‘Information Schools Movement</em>’' (<a href="#Cronin05">Cronin, 2005: 364</a>). This conversation regarding the identity and mission of library and information science programmes was not a new one. As early as 1931, '<em>expressions of concerns were raised that the shift toward a scientific approach to the education of librarians was an effective abandonment of the spirit, principles, and philosophies essential to librarianship</em>' (<a href="#Wallace09">Wallace, 2009: 405</a>). The mission of library schools began to expand in the 1960s, focusing less on librarianship and concentrating more on information science. An alteration in the lexicon associated with library science education followed these transitions; as early as 1974, Syracuse University renamed its School of Library Science to be the School of Information Studies, operating under the rationale that the new moniker would, in the words of the dean, '<em>fold the library science programme’s vision of enabling people to find and use information into an ever-broadening set of academic disciplines</em>' (<a href="#Olson09">Olson and Grudin, 2009: 15</a>). Many other schools across the globe followed suit: for example, China’s first library school transformed to a 'School of Information Management' in 2001 (<a href="#Chen11">Chen <em>et al.</em> 2011</a>). Tellingly, by 2002 only one school featuring an ALA-accredited master’s programme did not include the word 'information' in its name (<a href="#Wallace09">Wallace, 2009</a>). In contrast, by 2009, 15 of the 57 programmes did not contain the word 'library' in their official name (<a href="#Wallace09">Wallace, 2009</a>).
+        </p>
+        <p>
+          The gradual process by which the term 'librarianship' is being replaced by 'information' is evidence of '<em>the conceptual broadening of the field</em>' (<a href="#Chen11">Chen <em>et al.</em> 2011: 595</a>). It is also part of a larger debate over the intersection between 'librarianship' and 'information science': many have suggested '<em>the progressive decoupling of librarianship programmes from information science programmes leading</em>' (<a href="#Cronin95">Cronin, 1995: 902</a>) would be to the benefit of both fields. Some proponents of a traditional 'library science' education (e.g., <a href="#Cherry11">Cherry, Duff, Singh, and Freund, 2011</a>; <a href="#Gorman04">Gorman, 2004</a>) believe that current library and information science programmes fail to adequately address the core components of library science education, due in large part to the growing focus on 'information.' By contrast, others have suggested that contemporary technologies have necessitated a reevaluation of the library and information science curricula, even if this is at the expense of ideas traditionally considered to be fundamental aspects of library and information science education (<a href="#Cronin02">Cronin, 2002</a>; <a href="#Dillon05">Dillon and Norris, 2005</a>). Cronin, in an article originally published in 1983, claimed that '<em>at a time of rapid change it is important that professional groups are at least willing to consider the implications of change</em>' (p. 51), an observation that has remained relevant throughout the ensuing decades (as evidenced by the paper’s republication in 2007). On a semantic level, the growing preference for the term 'iSchool' (as opposed to the more traditional 'library and information science') is symptomatic of the field’s evolution and adaptation to contemporary concerns.
+        </p>
+        <p>
+          One key aspect of the original iSchool movement was a marketing strategy concerned <em>'with branding, with providing a new identity that place[d] members in an improved position to explain their missions to university administrators and other constituents, to attract students, and to garner fiscal support</em>' (<a href="#Wallace09">Wallace, 2009: 406</a>). Initial identity was largely formed by the original disciplinary members (i.e., library and information science faculty), even though "<em>the disciplinary origins of the iSchools [also] include computer science, business and management</em>' (<a href="#Wu11">Wu, He, Jiang, Dong, and Vo, 2011: 16</a>). In 2011, 74% of the then-existing 31 iSchools were either historically or contemporaneously considered to be an library and information science programme (<a href="#Sugimoto11">Sugimoto, Ni, Russell, and Bychowski, 2011</a>). However, as the number of iSchools continues to grow (there are now 39 iSchools), there is a lessening emphasis on library and information science. The faculty members at iSchools come from numerous disciplinary backgrounds and bring a variety of ideas and skills to information science education (<a href="#Wiggins11">Wiggins and Sawyer, 2011</a>). Indeed, Wiggins and Sawyer (<a href="#Wiggins11">2011</a>) suggested that iSchools consciously make '<em>hiring decisions that represent a dynamic combination of organizational history, current identity, and future ambitions,</em>' and that '<em>the form and shape of an iSchool has more to do with responding to the institutional local environment than it has to do with any defining characteristic or shared intellectual identity across iSchools</em>' (p. 19). Although all iSchools share the characteristic of interdisciplinarity, the specific composition varies significantly across programmes, thus weakening claims of a shared identity.
+        </p>
+        <p>
+          Ever since the first iConference (the converging of administrators, faculty, and students of iSchools), the notion of forging an identity for the iSchool paradigm has been subject to debate and analysis. While the first iConference primarily featured an open dialogue regarding what, precisely, the iSchool community is (e.g., various articles in <a href="#Harmon06">Harmon, 2006</a>), more recent conferences have featured exploratory publications that offer empirical results describing the community based on, among other methods of study, bibliometrics and social network analysis (e.g., <a href="#Bar-Ilan10">Bar-Ilan, 2010</a>; <a href="#Fonseca10">Fonseca, <em>et al.</em> 2010</a>; <a href="#Karunakaran09">Karunakaran, <em>et al.</em> 2009</a>). The notion of interdisciplinarity within the iSchool community is crucial to this discussion; as Wu <em>et al.</em> (<a href="#Wu11">2011</a>) noted, the 'i' in 'iSchool' can be interpreted to mean either 'information' or 'interdisciplinary.' Indeed, faculty members at iSchools tend to publish across a variety of journal subject categories, with the most prominent being '<em>information science &amp; library science, science, engineering, computer science (theory and methods) and computer science (software engineering)</em>' (<a href="#Wu11">Wu <em>et al.</em> 2011: 34</a>). Naturally, the results of these studies and the incorporation of new schools into the iSchool caucus have led to debates and ongoing dialogues between faculty members regarding the mission and vision of iSchools, and what it means to be a part of an iSchool (e.g., <a href="#Wobbrock09">Wobbrock, <em>et al.</em> 2009</a>, and a response article by <a href="#Pollack10">Pollack, 2010</a>).
+        </p>
+        <p>
+          Two parts of this identity have been emphasized: curricular and research. Seadle and Greifeneder (<a href="#Seadle07">2007</a>) suggested that human-computer interaction is a key component of a successful iSchool curriculum, as are an anthropological approach and an understanding of linguistic issues. Lyons (<a href="#Lyons10">2010</a>) suggested that service science be integrated, and Heckman and Snyder (<a href="#Heckman08">2008: 1</a>) lobbied for an arts-based pedagogy. Chen <em>et al.</em> (<a href="#Chen11">2011</a>) observed that '<em>course offerings at iSchools vary widely in accordance with the variety of degree programme offerings</em>' (p. 595). Bates (<a href="#Bates10">2010</a>) argued that the field of 'information' is sufficiently broad to permit a variety of iSchool offerings, all of which have a legitimate claim to offering an information science education despite their compositional differences. The iSchool website suggests that the key components of an iSchool are '<em>understanding of the uses and users of information, the nature of information itself, [and] information technologies and their applications</em>' (The Purpose of the iSchools | iSchools). Despite (or perhaps because of) these broad claims, students have expressed concern that the curricula of iSchools do not reflect the realities of their professional career trajectories (<a href="#Cherry11">Cherry <em>et al.</em> 2011</a>). One response to this has been that iSchools '<em>are not preparing students for today's libraries but for leadership positions in tomorrow's information infrastructure, which they fully intend to help create. Their mission is transformative. iSchools are training innovators, perhaps even revolutionaries. To train these students, a unique iSchool curriculum is logical</em>' (<a href="#Seadle07">Seadle and Greifeneder, 2007</a>).
+        </p>
+        <p>
+          The potential disconnect between theory and practice has also been of concern in terms of research. The iSchool website suggests that iSchools '<em>are expected to have substantial sponsored research activity, engagement in the training of future researchers…and a commitment to progress in the information field</em>' (<a href="#iSchoolsa">iSchools Application | iSchools</a>). Specifically, research on the topics of dissertations from library and information science doctoral students and those serving on doctoral committees (<a href="#Finlay12">Finlay, Sugimoto, Li, and Russell, 2012</a>; <a href="#Sugimoto11">Sugimoto, Li, Russell, Finlay, and Ding, 2011</a>; <a href="#Sugimoto11">Sugimoto, Ni, Russell, and Bychowski, 2011</a>) has shown a decreasing emphasis on professional issues.
+        </p>
+        <h2>
+          Research questions
+        </h2>
+        <p>
+          This study attempts to address some of the ongoing issues in the iSchool movement; namely, to describe the intellectual landscape of iSchools and examine how the various iSchools map onto these research areas. We propose a co-word analysis using the self-described research interests of all faculty members in iSchools. The field of library and information science is no stranger to co-word analyses; previous studies have applied this method to various aspects of library and information science faculty members’ work, including their doctoral dissertations and the journal categories in which they most frequently publish (e.g., <a href="#Janssens06">Janssens, <em>et al.</em> 2006</a>; <a href="#Milojevic11">Milojevic, <em>et al.</em> 2011</a>; <a href="#Uzun02">Uzun, 2002</a>; <a href="#Zong12">Zong <em>et al.</em> 2012</a>). In addition, previous studies on iSchools, distinct from library and information science programmes, have focused on areas such as syllabi analysis (<a href="#Detlefsen12">Detlefsen, 2012</a>), doctoral backgrounds of faculty members (<a href="#Wiggins11">Wiggins and Sawyer, 2011</a>), and publication data (<a href="#Chen08">Chen, 2008</a>). One of the most comprehensive studies to date was done by Wu, <em>et al.</em> (<a href="#Wu11">2011</a>), who examined doctoral student profiles, student trajectories, curricula, and the research projects, publications, and funding of faculty members at twenty-seven iSchool. They concluded that '<em>the relationships between information, technology and users have been established as the core research focuses of iSchools</em>' (p. 31).'
+        </p>
+        <p>
+          Despite this previous research, the self-described research interests of iSchool faculty members have not yet been used to describe the intellectual landscape and relationship among iSchools. Specifically, this project seeks to answer two research questions:
+        </p>
+        <ol>
+          <li>What is the current research landscape of the iSchools?
+          </li>
+          <li>What types of shared research interests are there amongst the iSchools?
+          </li>
+        </ol>
+        <p>
+          Analysis of faculty members' current research interests is not limited to a single genre of analysis that may disadvantage those scholars who do not communicate in that field, an advantage not found in other methods. In addition, by studying the faculty members’ current research interests as described by the scholars themselves, we are able to elucidate a landscape that is at once contemporary and highly granular.
+        </p>
+        <h2>
+          Methods
+        </h2>
+        <p>
+          The <a href="http://iSchools.org/directory/">online list of iSchools</a> was used in February 2013. A list of faculty members conducting research for each department was then compiled from the links provided on the aforementioned website. The sizes of the iSchools varied greatly; while Georgia Tech contained ninety-five qualifying faculty members, the University of Glasgow employed five. The primary focus of the data collection process was on faculty members’ current research interests as described by the individuals themselves. Some faculty members’ official websites provided a list of relevant keywords, and these were collected whenever possible. If such a list was lacking, the faculty member’s biography (as found on the university’s page or, in some cases, on the researcher’s personal Website) was examined for information pertaining to research interests. In general, the percentage of faculty members for whom keywords could be located was very high. Keywords were available for more than 90% of the faculty at 30 iSchools, and 13 schools had a 100% keyword location rate. The lowest percentage was at the University of Kentucky, where only 67% of faculty had self-described research interests lists or statements. One should also note that the keywords from Wuhan University (which had the second lowest percentage) had to be translated with Google Translate, as there were no faculty Webpages in English.
+        </p>
+        <p>
+          A total of 6,760 keywords were collected from 1,168 researchers’ online profiles. The collected keywords were first cleaned; that is, similar keywords and concepts were combined, terms were reduced to singular forms, and words were changed to reflect British spelling whenever appropriate. For instance, 'behavior' was changed to 'behaviour,' and 'exploratory information behaviour' was reduced to 'information behaviour'. A co-word analysis was then conducted on the keywords. Co-word analysis is a content analysis technique that takes into account the frequencies with which the keywords have been mentioned, both separately and in conjunction with other keywords (<a href="#Courtial94">Courtial, 1994</a>; <a href="#He99">He, 1999</a>). In other words, keywords that are frequently mentioned together will have a strong connection. The bibliometric software BibExcel (<a href="#Persson09">Persson <em>et al.</em> 2009</a>) was used to create data matrices from the keywords, after which Gephi (<a href="#Bastian09">Bastian <em>et al.</em> 2009</a>) was used for data visualization and analysis. Nodes represent keywords in the visualized co-word graphs, and edges between the nodes represent how frequently keywords have been mentioned together. The size of the nodes indicates how often the keywords have been mentioned, and the thickness of the edges indicates how often the keywords have been mentioned together. The position of the nodes and the distances between the nodes were computed with Gephi’s built-in algorithm Force Atlas.
+        </p>
+        <p>
+          The relations between the iSchools’ current research profiles were also compared by calculating the cosine similarity between them (<a href="#Leydesdorff05">Leydesdorff, 2005</a>). It should be noted that many of the keywords were only used by some iSchools, and accordingly, the data contained some zeros; therefore, it was decided not to use the Pearson correlation coefficient, which is sensitive to the number of zeros. Only those research interests that were shared by at least two researchers from the same iSchool were included in the calculation of the cosine similarities. Two iSchools, University of Amsterdam and University of Glasgow, did not meet this criterion, and hence they were not included in the cosine similarity calculation.
+        </p>
+        <h2>
+          Results and discussion
+        </h2>
+        <p>
+          Table 1 below contains a list of the top 20 keywords, representing the current research interests among the researchers: Human-computer interaction was mentioned most frequently (85 researchers), followed by information retrieval (72) and digital libraries (71). The most frequently used keywords demonstrate that the current research at the iSchools is a mixture of traditional areas of library and information science research and new phenomena and technologies (such as social media). The distribution of the keywords is clearly skewed, with few keywords mentioned very frequently and many keywords being only mentioned once.
+        </p>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table 1: The twenty most frequently mentioned research interests
+          </caption>
+          <tr>
+            <th>
+              No. of researchers
+            </th>
+            <th>
+              Research interest
+            </th>
+            <th>
+              No. of researchers
+            </th>
+            <th>
+              Research interest
+            </th>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              85
+            </td>
+            <td>
+              human-computer interaction
+            </td>
+            <td style="text-align:center;">
+              35
+            </td>
+            <td>
+              software engineering
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              72
+            </td>
+            <td>
+              information retrieval
+            </td>
+            <td style="text-align:center;">
+              35
+            </td>
+            <td>
+              information management
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              71
+            </td>
+            <td>
+              digital libraries
+            </td>
+            <td style="text-align:center;">
+              32
+            </td>
+            <td>
+              information behaviour
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              54
+            </td>
+            <td>
+              information technology
+            </td>
+            <td style="text-align:center;">
+              30
+            </td>
+            <td>
+              privacy
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              52
+            </td>
+            <td>
+              information systems
+            </td>
+            <td style="text-align:center;">
+              29
+            </td>
+            <td>
+              technology
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              52
+            </td>
+            <td>
+              data mining
+            </td>
+            <td style="text-align:center;">
+              28
+            </td>
+            <td>
+              information policy
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              49
+            </td>
+            <td>
+              social media
+            </td>
+            <td style="text-align:center;">
+              28
+            </td>
+            <td>
+              learning
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              48
+            </td>
+            <td>
+              knowledge management
+            </td>
+            <td style="text-align:center;">
+              28
+            </td>
+            <td>
+              evaluation
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              42
+            </td>
+            <td>
+              information seeking
+            </td>
+            <td style="text-align:center;">
+              27
+            </td>
+            <td>
+              machine learning
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              36
+            </td>
+            <td>
+              education
+            </td>
+            <td style="text-align:center;">
+              25
+            </td>
+            <td>
+              artificial intelligence
+            </td>
+          </tr>
+        </table>
+        <p>
+          Figure 1 below shows the co-word map based on the keywords; the figure displays the connections between the keywords (based on the researchers with whom they are associated). The centre of the graph is occupied by the most frequently used keywords, while the least frequently used keywords and the keywords with the least number of connections to other keywords are situated on the edges of the graph. Accordingly, the centre of the graph reflects core research interests.
+        </p>
+        <figure class="centre">
+          <img src="pC32fig1.png" alt="Co-word map of the research interests at iSchools" width="697" height="670">
+          <figcaption>
+            Figure 1: Co-word map of the research interests at iSchools
+          </figcaption>
+        </figure>
+        <p>
+          In order to gain a better understanding of the co-word map communities, more tightly connected keywords were identified using Gephi’s network partition detection method and then visualized (<a href="#Blondel08">Blondel <em>et al.</em> 2008</a>; <a href="#Lambiotte09">Lambiotte <em>et al.</em> 2009</a>). The method identified seven communities (or partitions) around some key research areas (figures 2-8). These communities represent the very core of the current research interests at the iSchools, thus addressing this study’s first research question.
+        </p>
+        <p>
+          The first community (Figure2) includes research about human-computer interaction and computing information (e.g. informatics, algorithms, and security of information and networks). The research in this community is strongly connected to computing information of different types and to the connection between humans, computers and computing. The second graph (Figure3) combines the research areas of information retrieval, data mining, and bibliometrics. The strongest connections within the community are between information retrieval (IR) and natural language processing, IR and bibliometrics, and data mining and machine learning. There is also a strong triad between IR, information organization, and information access. These, and other connections within the communities, give a more detailed view about the research interests, as well as some insight into the context of these subareas.
+        </p>
+        <p>
+          at perhaps would not be intuitively connected to each other. One of these areas includes social media and social networks, and the second concerns issues in information systems and information and knowledge management. The results suggest that the two areas are growing closer to each other, possibly because both areas involve research about organizations, management, and, in some cases, innovation. The community in Figure5 includes research interests surrounding education and the use of information technology in education. Figure 6 includes research about information seeking and information behaviour, while Figure7 includes research that is perhaps most often connected with traditional research within library and information science (e.g. public libraries, literature, and information services). Figure 7 shows evidence of a strong triad including literature, young adults, and children, reflecting the historical dominance of library science programmes. The last community (Figure8) is also the smallest community and the one with the most similarities; the research areas in this community revolve around information computing (see also Figure2). It is possible that these two communities would have merged together had a more inclusive level of community detection been used. However, this also demonstrates how the communities are clearly not isolated islands, with overlapping and connections between the different communities being in evidence. For instance, the information systems node in Figure4 is strongly connected with the community around information retrieval (Figure3), and the community around social media and information systems in Figure4 is almost completely surrounded by the community of computing information in Figure2.
+        </p>
+        <table class="center" style="border-collapse:collapse;">
+          <tr>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig2.png" alt="Computer information" width="255">
+                <figcaption>
+                  Figure 2: Computer information
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig3.png" alt="Information retrieval and data mining" width="255">
+                <figcaption>
+                  Figure 3: Information retrieval and data mining
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig4.png" alt="Social media and information systems" width="255">
+                <figcaption>
+                  Figure 4: Social media and information systems
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig5.png" alt="Education and information technology" width="255">
+                <figcaption>
+                  Figure 5: Education and information technology
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig6.png" alt="Information seeking and digital libraries" width="255">
+                <figcaption>
+                  Figure 6: Information seeking and digital libraries
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig7.png" alt="Libraries and library services" width="255">
+                <figcaption>
+                  Figure 7: Libraries and library services
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig8.png" alt="Data analytics and computing" width="255">
+                <figcaption>
+                  Figure 8: Data analytics and computing
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+        <p>
+          To answer the second research question, a cosine similarity (Leydesdorff, 2005) was calculated based on the shared research interests among the iSchools. Table 2 below lists those pairs of iSchools that had a cosine similarity higher than 0.4. The iSchools that had least similarities with other iSchools were University College Dublin (average cosine similarity of 0.060 to all other iSchools and no similarities with 29 iSchools), Carnegie Mellon University (0.068, no similarities with 21 iSchools), University College London (0.080, no similarities with 14 iSchools), and Tsukuba University (0.097, no similarities with 18 iSchools). Size does not completely explain the lack of shared interests for these iSchools, as the number of faculty members in these four iSchools ranged from 68 (Tsukuba University) to 6 (University College Dublin). The results show that there are strong similarities between the research interests of some iSchools, but also that the iSchools are not a homogeneous group with shared research interests.
+        </p>
+        <table class="simple">
+          <caption>
+            <br>
+            Table 2: The strongest cosine similarities between the iSchools<br>
+          </caption>
+          <tr>
+            <th>
+              University A
+            </th>
+            <th>
+              University B
+            </th>
+            <th>
+              Cosine similarity
+            </th>
+          </tr>
+          <tr>
+            <td>
+              University of California, Irvine
+            </td>
+            <td>
+              Georgia Tech
+            </td>
+            <td style="text-align:center;">
+              0.617
+            </td>
+          </tr>
+          <tr>
+            <td>
+              University of North Texas
+            </td>
+            <td>
+              University of North Carolina
+            </td>
+            <td style="text-align:center;"></td>
+          </tr>
+          <tr>
+            <td>
+              Wuhan University
+            </td>
+            <td>
+              Nanjing University
+            </td>
+            <td style="text-align:center;">
+              0.578
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Florida State University
+            </td>
+            <td>
+              Rutgers
+            </td>
+            <td style="text-align:center;">
+              0.489
+            </td>
+          </tr>
+          <tr>
+            <td>
+              University of California, LA
+            </td>
+            <td>
+              University of Kentucky
+            </td>
+            <td style="text-align:center;">
+              0.471
+            </td>
+          </tr>
+          <tr>
+            <td>
+              University of California, Berkeley
+            </td>
+            <td>
+              Pennsylvania State University
+            </td>
+            <td style="text-align:center;">
+              0.469
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Rutgers
+            </td>
+            <td>
+              University of North Texas
+            </td>
+            <td style="text-align:center;">
+              0.458
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Rutgers
+            </td>
+            <td>
+              Drexel University
+            </td>
+            <td style="text-align:center;">
+              0.453
+            </td>
+          </tr>
+        </table>
+        <p>
+          All the cosine similarities were used to graph the connection in Figure9 below, with the number of shared research interests between the iSchools indicated by the node sizes and the cosine similarity between them indicated by the thickness of the edges. Figure9 also shows the communities among the iSchools based on their shared interests. The communities were detected using the network partition method in Gephi (<a href="#Blondel08">Blondel, <em>et al.</em> 2008</a>; <a href="#Lambiotte09">Lambiotte, <em>et al.</em> 2009</a>).
+        </p>
+        <figure class="centre">
+          <img src="pC32fig9.png" alt="Cosine similarities between the iSchools" width="495">
+          <figcaption>
+            Figure 9: Cosine similarities between the iSchools
+          </figcaption>
+        </figure>
+        <p>
+          Table 3 below lists the detected communities. It is notable that the clusters here differ from those found in Wu <em>et al.</em> (<a href="#Wu11">2011</a>) and Chen <em>et al.</em> (<a href="#Chen11">2011</a>), suggesting that clustering of iSchools by research descriptions, publications, and collaborations reveal different connections between the schools. However, this could also be a result of the large degree of flux in the composition of the iSchools witnessed over the past five years.
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 3. The communities detected based on cosine similarities<br>
+          </caption>
+          <tr>
+            <th>
+              Community
+            </th>
+            <th>
+              Members
+            </th>
+          </tr>
+          <tr>
+            <td>
+              1 - blue
+            </td>
+            <td>
+              Berlin, Chapel Hill, Dublin, Illinois, Indiana SLIS, Maryland, North Texas, Pittsburgh, Texas Austin, Tsukuba, Wisconsin
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2 - green
+            </td>
+            <td>
+              Berkeley, California Irvine, Carnegie Mellon, Georgia Tech, Indiana SOIC, Penn State, South Australia, Tampere, UMBC, Washington
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3 - red
+            </td>
+            <td>
+              Copenhagen, Florida State, Kentucky, Rutgers, UBC, UCLA
+            </td>
+          </tr>
+          <tr>
+            <td>
+              4 - purple
+            </td>
+            <td>
+              Nanjing, Sheffield, Singapore, Toronto, Wuhan
+            </td>
+          </tr>
+          <tr>
+            <td>
+              5 - yellow
+            </td>
+            <td>
+              Drexel, London, Melbourne, Michigan, Syracuse
+            </td>
+          </tr>
+        </table>
+        <p>
+          The cosine similarities and the community detection above showed that there are many shared research interests between the iSchools, and some of the shared research interests were shared between several iSchools. The six most frequently shared research interests, along with the iSchools from which at least two researchers had mentioned the respective research interest, have been visualized in Figures 10 through 15 below.
+        </p>
+        <table class="center">
+          <tr>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig10.png" alt="Human-computer interaction" width="255" align="left">
+                <figcaption>
+                  Figure 10: Human-computer interaction
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig11.png" alt="Information retrieval" width="255" align="right">
+                <figcaption>
+                  Figure 11: Information retrieval
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig12.png" alt="Digital libraries" width="255">
+                <figcaption>
+                  Figure 12: Digital libraries
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig13.png" alt="Information technology" width="255">
+                <figcaption>
+                  Figure 13: Information technology
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig14.png" alt="Information systems" width="255">
+                <figcaption>
+                  Figure 14: Information systems
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure class="centre">
+                <img src="pC32fig15.png" alt="Data mining" width="255">
+                <figcaption>
+                  Figure 15: Data mining
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+        <p>
+          For instance, Figure10 shows which iSchools have shared interests in regard to human-computer interaction, as well as how strong these shared interests are (based on the number of researchers). In Figure10, University of California, Irvine, Georgia Institute of Technology, and University of Washington have the strongest interests in human-computer interaction, but the interest is shared by many other iSchools. The graphs in Figures 10 through 15 also reveal how the very core research interests of the iSchools are shared by different sets of iSchools. Interest towards human-computer interaction combines iSchools from all over the graph, while interest towards digital libraries is only shared by iSchools at the top of the graph, and interest towards data mining is shared by iSchools at the bottom of the map.
+        </p>
+        <h2>
+          Conclusions and future directions
+        </h2>
+        <p>
+          The goal of the present research was to map the current research landscape of iSchools and to investigate the shared interests amongst the iSchools. Self-described research interests were analysed using co-word analysis and the research landscape, with the shared interests, was visualized in network maps. The results show that the iSchools are a diverse group of organizations with some similarities and shared interests but also with some unique focus areas not shared amongst many iSchools. While this may not be the most surprising result, the methods used for data collection guaranteed the most current data available (in contrast to using publications) and the methods used for analyses gave multiple perspectives to the research landscape of the iSchools. The results also show some differences to the results from earlier research (e.g. <a href="#Wu11">Wu <em>et al.</em> 2011</a>; <a href="#Chen11">Chen <em>et al.</em>, 2011</a>), possibly due to the use of more current data in the present study or as a result of the changes in the composition of the iSchools over the past five years. Additionally, the results reinforce Chen’s notion of the 'conceptual broadening of the field' (<a href="#Chen11">Chen <em>et al.</em> 2011:</a> 595). The results of the present study showed how the current research landscape of the iSchools and the shared research interests were built by many topics that still reflect dominant library and information science topics (e.g., bibliometrics, information retrieval, and information seeking behaviour), but that there are also growing areas that reflect the iSchools’ interdisciplinary composition, thus answering the research questions.
+        </p>
+        <p>
+          A possible future research direction could be to investigate whether the core research interests are built by the first iSchools and with the newcomers occupying the less shared research interests. This could provide some new knowledge about how the iSchools organization has developed and possibly how it might develop in the future. Another possible direction would be to investigate whether the discovered shared research interests have manifested in collaboration in the form of co-authored research articles or are the iSchools in that sense isolated islands.
+        </p>
+      </section>
+      <section class="refs">
+        <form>
+          <fieldset>
+            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+            <ul class="refs">
+              <li id="Bar-Ilan10">Bar-Ilan, J. (2010). Measuring research impact: a first approximation of the achievements of the iSchools in ISI’s information and library science category. An exploratory study. In: <em>Proceedings of iConference 2010</em>, 3–6 February, Illinois, USA. Illinois: University of Illinois at Urbana Champaign, 2010, pp. 2–6
+              </li>
+              <li id="Bastian09">Bastian, M., Heymann, S. &amp; Jacomy, M. (2009). Gephi: An open source software for exploring and manipulating networks. Paper presented at <em>The International AAAI Conference on Weblogs and Social Media</em>. Retrieved on 28 February 2013 from https://gephi.org/publications/gephi-bastian-feb09.pdf
+              </li>
+              <li id="Bates10">Bates, M.J. (2010). An operational definition of the information disciplines. Retrieved March 1, 2013, from http://gseis.ucla.edu/faculty/bates/articles/pdf/Contribution512-1.pdf
+              </li>
+              <li id="Blondel08">Blondel, V.D., Guillaume, J.-L., Lambiotte, R. &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <em>Journal of Statistical Mechanics: Theory and Experiment</em>, <strong>10</strong>, 1-12
+              </li>
+              <li id="Chen08">Chen, C. (2008). Thematic maps of 19 iSchools. In: <em>Proceedings of the American Society for Information Science and Technology Conference</em>, 2008, 24–29 October, Ohio, USA. New York: ASIS&amp;T, 2008, pp. 1–12
+              </li>
+              <li id="Chen11">Chen, C., Wang, P., Wu, D., Liu, Y., Wu, G. &amp; Ma, H. (2011). The attitudes of LIS chairs toward the iSchools movement in China. <em>Aslib Proceedings: New Information Perspectives</em>, <strong>64</strong>(6), 591-514
+              </li>
+              <li id="Cherry11">Cherry, J.M., Duff, W.M., Singh, N. &amp; Freund, L. (2011). Student perceptions of the information professions and their master’s program in information studies. <em>Library and Information Science Research</em>, <strong>33</strong>, 120-131
+              </li>
+              <li id="Courtial94">Courtial, J.P. (1994). A coword analysis of scientometrics. <em>Scientometrics</em>, <strong>31</strong>(3), 251-260
+              </li>
+              <li id="Cronin95">Cronin, B. (1995). Cutting the Gordian knot. <em>Information Processing and Managemen</em>t, <strong>31</strong>(6), 897–902
+              </li>
+              <li id="Cronin02">Cronin, B. (2002). Holding the center while prospecting at the periphery. Domain identity and coherence in North American information studies education. <em>Education for Information</em>, <strong>20</strong>(1), 3-10
+              </li>
+              <li id="Cronin05">Cronin, B. (2005). An i-dentity crisis? The information schools movement. <em>International Journal of Information Management</em>, <strong>25</strong>, 363-365
+              </li>
+              <li id="Cronin07">Cronin, B. (2007). Educational pluralism for a diversifying profession. <em>Education for Information</em>, <strong>25</strong>, 51-56
+              </li>
+              <li id="Detlefsen12">Detlefsen, E.G. (2012). Teaching about teaching and instruction on instruction: A challenge for health sciences library education. <em>Journal of the Medical Library Association</em>, <strong>100</strong>(4), 244-250
+              </li>
+              <li id="Dillon05">Dillon, A. &amp; Norris, A. (2005). Crying wolf: An examination and reconsideration of the perception of crisis in LIS education. <em>Journal of Education for Library and Information Science</em>, <strong>46</strong>(4), 280-298
+              </li>
+              <li id="Finlay12">Finlay, S.C., Sugimoto, C.R., Li, D. &amp; Russell, T.G. (2012). LIS dissertation titles and abstracts (1930-2009): Where have all the librar* gone? <em>The Library Quarterly</em>, <strong>82</strong>(1), 29-46
+              </li>
+              <li id="Fonseca10">Fonseca, F., Martin, J., Davis, C. &amp; Camara, G. (2010). Making an IMPACT on the environment: Sustainability science and the iSchool movement. In: <em>Proceedings of iConference 2010</em>, 3–6 February, Illinois, USA. Illinois: University of Illinois at Urbana Champaign, 2010, pp. 60–63
+              </li>
+              <li id="Gorman04">Gorman, M. (2004). Whither library education? <em>New Library World</em>, <strong>105</strong>(9/10), 376-380
+              </li>
+              <li id="Harmon06">Harmon, G. (Ed.). (2006). Proceedings of the First I-Conference of the I-School Communities
+              </li>
+              <li id="He99">He, Q. (1999). Knowledge discovery through co-word analysis. Library Trends, <strong>48</strong>(1), 133-159
+              </li>
+              <li id="Heckman08">Heckman, R. &amp; Snyder, J. (2008). The role of the arts in an iSchool education. In: <em>Proceedings from iConference 2008</em>
+              </li>
+              <li id="iSchoolsa">iSchools application | iSchools. (n.d.). iSchools. Retrieved February 27, 2013, from http://iSchools.org/about/apply-to-join/iSchools-application/
+              </li>
+              <li id="iSchoolsd">iSchools directory | iSchools. (n.d.). iSchools. Retrieved February 27, 2013, from http://iSchools.org/directory/
+              </li>
+              <li id="Janssens06">Janssens, F., Leta, J., Glänzel, W. &amp; De Moor, B. (2006). Towards mapping library and information science. <em>Information Processing and Management</em>, <strong>42</strong>, 1614-1642
+              </li>
+              <li id="Karunakaran09">Karunakaran, A., Kim, H.W. &amp; Khabsa, M. (2009). iSchools and social identity – A social network analysis. In: Proceedings of iConference 2009, 8–11 February, North Carolina, USA. Retrieved February 27, 2013, from http://www.personal.psu.edu/mxk479/papers/iconference09.pdf
+              </li>
+              <li id="Lambiotte09">Lambiotte, R., Delvenne, J.-C. &amp; Barahona, M. (2009). Laplacian dynamics and multiscale modular structure in networks. <em>arXiv preprint</em>. Advance online publication. Retrieved February 27, 2013, from http://arxiv.org/abs/0812.1770
+              </li>
+              <li id="Larsen07">Larsen, R.L. (2007). Libraries need iSchool. <em>Library Journal</em>, p. 11
+              </li>
+              <li id="Leydesdorff05">Leydesdorff, L. (2005). Similarity measures, author cocitation analysis, and information theory. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>56</strong>(7), 769-772
+              </li>
+              <li id="Lyons10">Lyons, K. (2010). Service science in i-Schools. In: <em>Proceedings of iConference 2010</em>, 3–6 February, Illinois, USA. Illinois: University of Illinois at Urbana Champaign, 2010, pp. 138–142
+              </li>
+              <li id="Milojevic11">Milojevic, S., Sugimoto, C.R., Yan, E. &amp; Ding, Y. (2011). The cognitive structure of library and information science: Analysis of article title words. <em>Journal of the American Society for Information Science and Technology</em>, <strong>62</strong>(10), 1933-1953
+              </li>
+              <li id="Olson09">Olson, G.M. &amp; Grudin, J. (2009). The information school phenomenon. <em>Interactions</em>, <strong>16</strong>(2), 15-19
+              </li>
+              <li id="Persson09">Persson, O.D., Danell, R. &amp; Wiborg Schneider, J. (2009). How to use Bibexcel for various types of bibliometric analysis. In R. Åström, B. Larsen &amp; J. Schneider (Eds.), Celebrating scholarly communication studies: A Festschrift for Olle Persson at his 60th Birthday (9–24). Leuven, Belgium: International Society for Scientometrics and Informetrics
+              </li>
+              <li id="Pollack10">Pollack, M.E. (2010). Reflections on the future of iSchools from a dean inspired by some junior faculty. <em>interactions</em>, <strong>17</strong>(1), 66-68
+              </li>
+              <li id="Seadle07">Seadle, M. &amp; Greifeneder, E. (2007). Envisioning an iSchool curriculum. <em>Information Research</em>, <strong>12</strong>(4)
+              </li>
+              <li id="Sugimoto11">Sugimoto, C.R., Li, D., Russell, T.G., Finlay, C. &amp; Ding, Y. (2011). The shifting sands of disciplinary development: analyzing North American Library and Information Science (LIS) dissertations using Latent Dirichlet Allocation (LDA). <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>62</strong>(1), 185-204
+              </li>
+              <li>Sugimoto, C.R., Ni, C., Russell, T. &amp; Bychowski, B. (2011). Academic genealogy as an indicator of interdisciplinarity: An examination of dissertation networks in library and information science. <em>Journal of the American Society for Information Science and Technology</em>, <strong>62</strong>(9), 1808-1828
+              </li>
+              <li id="iSchoolsp">The purpose of the iSchools | iSchools. (n.d.). iSchools. Retrieved February 27, 2013, from http://iSchools.org/about/charter/the-purpose-of-the-iSchools/
+              </li>
+              <li id="Uzun02">Uzun, A. (2002). Library and information science research in developing countries and eastern European countries: A brief bibliometric perspective. <em>International Information and Library Review</em>, <strong>34</strong>, 21-33
+              </li>
+              <li id="Wallace09">Wallace, D. (2009). The iSchools, education for librarianship, and the voice of doom and gloom. <em>The Journal of Academic Librarianship</em>, <strong>35</strong>(5), 405-409
+              </li>
+              <li id="Wiggins11">Wiggins, A. &amp; Sawyer, S. (2011). Intellectual diversity and the faculty composition of iSchools. Journal of the American Society for Information Science, <strong>63</strong>(1), 8-21
+              </li>
+              <li id="Wobbrock09">Wobbrock, J.O., Ko, A.J. &amp; Kientz, J.A. (2009). Reflections on the future of iSchools from inspired junior faculty. <em>interactions</em>, <strong>16</strong>(5), 69-71
+              </li>
+              <li id="Wu11">Wu, D., He, D., Jiang, J., Dong, W. &amp; Vo, K.T. (2011). The state of iSchools: An analysis of academic research and graduate education. <em>Journal of Information Scienc</em>e, <strong>38</strong>(1), 15-36
+              </li>
+              <li id="Zong12">Zong, Q-J., Shen, H-Z., Yuan, Q-J., Hu, X-W., Jou, Z-P. &amp; Deng, S-G. (2012). Doctoral dissertations of Library and Information Science in China: A co-word analysis. <em>Scientometrics</em>, <strong>94</strong>, 781-799.
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+    </article><br>
+    <section>
+      
+      <br>
+      <div style="text-align:center;">
+        
+        
+      </div>
+      <hr>
+      
+    </section>
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer>
+  </body>
+</html>

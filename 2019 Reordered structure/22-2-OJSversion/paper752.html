@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+ <title>Document level assessment of document retrieval systems in a pairwise system evaluation</title>
+<meta charset="utf-8">
+ <link href="../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
+
+
+ <!--Enter appropriate data in the content fields-->
+ <meta name="dcterms.title" content="Document level assessment of document retrieval systems in a pairwise system evaluation">
+ 
+ <meta name="author" />
+	<meta name="firstname" content="Prabha" />
+    <meta name="lastname" content="Rajagopal" />
+<meta name="author" />
+	<meta name="firstname" content="Sri Devi" />
+    <meta name="lastname" content="Ravana" />
+ <meta name="author" />
+	<meta name="firstname" content="Harshit" />
+    <meta name="lastname" content="Srivastava" />
+ <meta name="author" />
+	<meta name="firstname" content="Masumeh Sadat " />
+    <meta name="lastname" content="Taheri" />
+
+ <meta name="dcterms.subject" content="The paper studies the usage of document-level scores instead of topic-level scores in assessing the performance of information retrieval systems in a pairwise evaluation.">
+ <meta name="description" content="The use of averaged topic-level scores can result in the loss of valuable data and can cause misinterpretation of the effectiveness of system performance. This study aims to use the scores of each document to evaluate document retrieval systems in a pairwise system evaluation.
+The chosen evaluation metrics are document-level precision scores against topic-level average precision (AP) scores, and document-level rank-biased precision (RBP) scores against topic-level RBP at cut-off k (k=100) scores.
+An analysis of the results of paired significance tests with the use of document-level and topic-level scores are compared to determine the agreement in the obtained numbers of statistically significant information retrieval system pairs.
+The experiment results at document-level are an effective evaluation unit in the pairwise evaluation of information retrieval systems, with higher numbers of statistically significant (p=0.01) system pairs, compared with the topic-level results and a high percentage of statistically significant agreement with topic-level.
+This study presents an original viewpoint on measuring the effectiveness of document retrieval systems through pairwise evaluation by using document-level scores as a unit of evaluation in the significance testing instead of the traditional topic-level scores (which involve averaging document scores).
+">
+ <meta name="keywords" content="information retrieval, significance testing, information retrieval evaluation">
+
+
+ <!--leave the following to be completed by the Editor-->
+ <meta name="robots" content="all">
+ <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+ <meta name="dcterms.type" content="text">
+ <meta name="dcterms.identifier" content="ISSN-1368-1613">
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/22-2/paper752.html">
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/22-2/infres222.html">
+ <meta name="dcterms.format" content="text/html">  <meta name="dc.language" content="en">
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+ <meta name="dcterms.issued" content="2017-06-15">
+  <meta name="geo.placename" content="global">
+
+</head>
+
+ <body>
+<header>
+ <img height="45" alt="header" src="../mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 22  no. 2, June, 2017</span>
+<br /><br />
+
+<div class="button">
+ <ul>
+ <li><a href="infres222.html">Contents</a> |  </li>
+ <li><a href="../iraindex.html">Author index</a> |  </li>
+ <li><a href="../irsindex.html">Subject index</a> |  </li>
+ <li><a href="../search.html">Search</a> |  </li>
+ <li><a href="../index.html">Home</a> </li>
+ </ul>
+ </div>
+ <hr />
+ </header>
+ <article>
+ <h1> Document level assessment of document retrieval systems in a pairwise system evaluation</h1>
+ <br />
+ <h2 style="text-align:center;"><a href="#author">Prabha Rajagopal. Sri Devi Ravana, Harshit Srivastava</a> and <a href="#author">	Masumeh Sadat Taheri</a></h2>
+
+ <br />
+
+ <blockquote>
+ <strong>Introduction.</strong> The use of averaged topic-level scores can result in the loss of valuable data and can cause misinterpretation of the effectiveness of system performance. This study aims to use the scores of each document to evaluate document retrieval systems in a pairwise system evaluation.<br>
+<strong>Method.</strong> The chosen evaluation metrics are document-level precision scores against topic-level average precision (AP) scores, and document-level rank-biased precision scores against topic-level rank-biased precision at cut-off k (k=100) scores.<br>
+<strong>Analysis.</strong> An analysis of the results of paired significance tests with the use of document-level and topic-level scores are compared to determine the agreement in the obtained numbers of statistically significant information retrieval system pairs. <br>
+<strong>Results.</strong> The experiment results at document-level are an effective evaluation unit in the pairwise evaluation of information retrieval systems, with higher numbers of statistically significant (p=0.01) system pairs, compared with the topic-level results and a high percentage of statistically significant agreement with topic-level.<br>
+<strong>Conclusion.</strong> This study presents an original viewpoint on measuring the effectiveness of document retrieval systems through pairwise evaluation by using document-level scores as a unit of evaluation in the significance testing instead of the traditional topic-level scores (which involve averaging document scores).</blockquote>
+
+  <br>
+
+ <section>
+ <h2>Introduction</h2>
+ <p>Information retrieval indicates the retrieval of unstructured records consisting mainly of free-form natural language text (<a href="#gre01">Greengrass, 2001</a>). Unstructured records are documents without specific format for the information being presented. Information on the Web grows continuously making it impossible to access the information without the help of search engines (<a href="#tsy12">Tsytsarau and Palpanas, 2012</a>) or retrieval systems. When information is aggregated from multiple sources such as in virtual documents (<a href="#wat99">Watters, 1999</a>), retrieval becomes complicated, and solutions such as sentiment analysis and opinion mining are incorporated in traditional retrieval systems (<a href="#tsy12">Tsytsarau and Palpanas, 2012</a>). Ideally, the main target of the retrieval system is to provide information that is as accurate as possible and relevant to the user, based on the user’s query.</p>
+
+ <p>System-based evaluation is one of the main categories of information retrieval evaluation and has been widely used. It focuses on measuring system effectiveness in a non-interactive laboratory environment (<a href="#rav10">Ravana and Moffat, 2010</a>), which involves a shorter experimentation time and is more cost-effective compared with other information retrieval evaluation techniques.</p>
+
+ <p>The effectiveness of information retrieval systems is measured by using relevant documents obtained by a retrieval system to meet users’ queries. The relevancy of the retrieved ranked documents is unknown until assessed or judged by experts or crowd-sourced judges. However, the retrieval system itself needs to be evaluated to determine its performance. System effectiveness can be assessed by using evaluation measures, including, but not limited to, the following: <em>precision at cut-off k</em>, (<em>P@k</em>) (<a href="#joa05">Joachims, Granka, Pan, Hembrooke, and Gay, 2005</a>), <em>average precision</em> (<em>AP</em>) (<a href="#buc00">Buckley and Voorhees, 2000</a>), <em>normalised discounted cumulative gain</em> (<em>NDCG</em>) (<a href="#jar02">Järvelin and Kekäläinen, 2002</a>) and <em>rank-biased precision</em> (<em>RBP</em>) (<a href="#mof08">Moffat and Zobel, 2008</a>).</p>
+
+ <p> Ranking the systems based on their effectiveness scores allow us to determine the superiority of the performance of one system over those of other information retrieval systems. An alternative way to determine the performance of a system is to do pairwise system comparisons. In a pairwise system comparison, a system is compared with two or more other systems. All comparisons use standard test collections, topic sets and relevance judgments. Generally, average topic scores using mean average precision (MAP) from fifty topics are used to quantify the overall system effectiveness in Text REtrieval Conference (TREC) (<a href="#smu07">Smucker, Allan and Carterette, 2007</a>, <a href="#smu09">2009</a>; <a href="#urb13">Urbano, Marrero and Martín, 2013</a>). System evaluation is then done by using paired significance tests to determine the number of system pairs that are statistically significant.</p>
+
+ <p>Significance tests investigate whether the observed differences between pairs of systems are likely to be intrinsic or by chance. It is common to use the results for individual topics as the indivisible unit of measurement in statistical testing (<a href="#jay15">Jayasinghe, Webber, Sanderson, Dharmasena and Culpepper, 2015</a>; <a href="#rob12">Robertson and Kanoulas, 2012</a>). The current method of using topic scores results in loss of document scores when score averaging or cut-offs are performed. In this research, we propose the use of document-level precision and rank-biased precision scores of top <em>k</em> documents per topic between system pairs, instead of topic-level scores, to determine statistical significance.</p>
+
+ <p>An example of using document-level scores and topic-level scores is shown in Table 1 below. Let’s assume column A and B are the retrieved documents’ relevancy from same topic from two different systems, Sys1 and Sys2. The columns adjacent to columns A and B are the respective precision scores, also means document-level scores. The <em>p</em>-value resulting from a paired significant test between document-level scores (from rank 1 to 5) is 0.1. Similarly, assuming column C and D are another set of same topic from systems, Sys1 and Sys2. The <em>p</em>-value is 0.09. From these significant tests output, both the systems can be concluded as significantly different (assuming <em>p</em>-value &lt;= 0.1). The usual method of using topic-level scores in paired significant test using the average precision scores (between scores 0.2, 0.04 and 0.4,0.1) of both the systems result in <em>p</em>-value of 0.3. This indicates the two systems are not significantly different (assuming <em>p</em>-value &lt;=0.1).</p>
+
+ <table class="center">
+ <caption><br /><strong>Table 1: Example precision and average precision scores for different topics and systems (NR = not relevant, R = relevant)</strong></caption>
+ <tbody>
+  <tr><th rowspan="2">Rank</th><th colspan="2">Sys1</th><th colspan="2">Sys2</th><th colspan="2">Sys1</th><th colspan="2">Sys2</th></tr>
+  <tr><th>ColumnA</th><th>precision</th><th>ColumnB</th><th>precision</th><th>ColumnC</th><th>precision</th><th>ColumnD</th><th>precision</th></tr>
+  <tr>
+ <td>1</td>
+ <td style="text-align:center">NR</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">R</td>
+ <td style="text-align:center">1</td>
+ <td style="text-align:center">NR</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">NR</td>
+ <td style="text-align:center">0</td>
+ </tr>
+  <tr>
+  <td>2</td>
+  <td style="text-align:center">R</td>
+  <td style="text-align:center">0.5</td>
+  <td style="text-align:center">R</td>
+  <td style="text-align:center">1</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">R</td>
+  <td style="text-align:center">0.5</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.3</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.7</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.3</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td style="text-align:center">R</td>
+  <td style="text-align:center">0.5</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.5</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.25</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.4</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.4</td>
+  <td style="text-align:center">R</td>
+  <td style="text-align:center">0.2</td>
+  <td style="text-align:center">NR</td>
+  <td style="text-align:center">0.2</td>
+  </tr>
+  <tr>
+  <td>AP</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center">0.2</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center">0.4</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center">0.04</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center">0.1</td>
+  </tr>
+ </tbody>
+ </table>
+
+<p>By measuring the effectiveness of systems at the document-level, valuable document scores are used as a measure of effectiveness in the pairwise system evaluation.</p>
+
+<p>In this paper, the following conjectures are addressed:</p>
+<ol>
+<li>Individual document-level scores, instead of topic-level scores, can be used as a pairwise system evaluation unit for information retrieval systems.</li>
+<li>Compared with significance tests using topic-level scores, system evaluations produce higher numbers of statistically significant system pairs when document-level scores are used.</li>
+</ol>
+
+<p>Through experimentation, the aims of this study were met, as shown by the results of the significance tests. This paper is organized as follows. First, it provides details about related metrics, followed by significance testing, aggregating <em>p</em>-values and previous related studies. Next, the methodology and experimentation are discussed in detail. Finally, the results, discussions and conclusions are drawn.</p>
+</section>
+
+<section>
+<h2>Information retrieval evaluation tool and metrics</h2>
+<p>The following subsections describe the details of suitable metrics to evaluate the effectiveness of systems, significance testing to determine the true difference between the paired systems, and the aggregation of multiple <em>p</em>-values from multiple topics to produce a single <em>p</em>-value for comparison with the topic-level significant test.</p>
+</section>
+
+<section>
+<h3>Metrics</h3>
+<p>Precision and recall are the two basic information retrieval metrics. Precision measures the fraction of documents that are relevant to the query among all the returned documents, whereas recall is defined as the ratio of relevant items retrieved to all relevant items in the file. Due to a large number of documents, pooling (i.e., top 100 documents from selected system runs will be judged by experts) is incorporated before generating relevance judgments in TREC. A system that returns relevant documents earlier in the retrieval process will have a better performance compared with a system that retrieves relevant documents later or at lower rankings. The effectiveness of a system could also be measured by using precision at cut-off <em>k</em>, in which the total number of relevant documents is not required. However, among the commonly used evaluation measures, this is the least stable (<a href="#man09">Manning and Raghavan, 2009</a>; <a href="#web10">Webber, Moffat and Zobel, 2010</a>) and does not average very well across topics. Precision at cut-off <em>k</em> is regarded as an unstable measure because small changes in the ranking can cause big influence in the score, while large changes in the ranking can cause no change in the score. Another reason for regarding precision at cut-off <em>k</em> as unstable is because a constant cut-off represents widely varying user experiences, depending on the number of relevant documents for the query.</p>
+
+<p>Average precision (<em>AP</em>) is computed by averaging the precision scores of each document per topic. Average precision is top-weighted because a relevant document in position 1 contributes more to the effectiveness score than one at position 2 and so on down the ranking. The top-weightiness is considered an advantage of average precision (<a href="#sak08">Sakai and Kando, 2008</a>). In addition, stability and discriminative power of average precision are considered as one of the best after normalized discounted cumulative gain (<a href="#shi13">Shi, Tan, Zhu and Wu, 2013</a>). In our experiment, the use of average precision as a baseline comparison at the topic-level is deemed suitable compared to precision at cut-off <em>k</em> due to the lack of stability and averaging ability of the latter. Average precision is also widely accepted in TREC (<a href="#web10">Webber, Moffat and Zobel, 2010</a>) and is a commonly used metric for system effectiveness (<a href="#rob10">Robertson, Kanoulas and Yilmaz, 2010</a>). The irrelevant documents contribute to lower the precision scores at the ranks of the relevant documents in the average precision model. The irrelevant document contributes a score of 0 due to its irrelevancy, instigating to lower the effectiveness score. For example, a topic has the following ranked documents’ relevancy, {R R R NR NR}. Up to rank 3, the average precision is 1. At rank 5, the two non-relevant documents contribute to lower the average precision to 0.6.</p>
+
+<p>On the other hand, rank-biased precision (<em>RBP</em>) is a rank-sensitive metric that uses parameter <em>p</em> as a measure of user persistence, that is, the probability that a user, having reached any given point in the ranked document list returned by the system, will proceed to the next rank (<a href="#mof08">Moffat and Zobel, 2008</a>). When <em>p</em> = 0.0, it is assumed that the user is either satisfied or dissatisfied with the top-ranked document and would not look further down the list of retrieved documents. It is assumed that the user would look through many documents before ending the search task as <em>p</em> approaches 1.0.</p>
+</section>
+
+<section>
+<h3>Significance testing</h3>
+<p>A significance test is a statistical method based on experimentation data that is aimed at testing a hypothesis (<a href="#kul14">Kulinskaya, Morgenthaler and Staudte, 2014</a>). It is used to show whether the comparative outcome attained between a pair of systems could have arisen by chance rather than intrinsically. The statistical test also shows confidence in the results obtained (<a href="#bac12">Baccini, Déjean, Lafage and Mothe, 2012</a>). The three commonly used statistical significance tests are paired Student’s <em>t</em>-test, Wilcoxon signed-rank test, and sign test. However, a previous study suggested that the use of the latter two for measuring the significance between system means should be discontinued due to their inadequate ability to detect significance and a tendency to steer toward false detection of significance (<a href="#smu07">Smucker, Allan and Carterette, 2007</a>).</p>
+
+<p>The most widespread method of determining significance difference is through the <em>p</em>-value, by which a specific null hypothesis can be rejected. The <em>p</em>-value is the probability of obtaining almost equivalent or more evidence against the null hypothesis with the assumption that the null hypothesis is true (<a href="#fis95">Fisher, 1995</a>). A <em>p</em>-value larger than 0.1 is not small enough to be significant, a <em>p</em>-value as small as 0.05 can seldom be disregarded, and a <em>p</em>-value less than 0.01 indicates it is highly unlikely to occur by chance (<a href="#fis95">Fisher, 1995</a>). When more data are used in significance testing, the possibilities of obtaining a significant result are higher.</p>
+
+<p>Test collections from TREC have the same topics and document corpus for each participant. The retrieval systems are assumed to have an approximately normal distribution, suggesting that parametric Student’s <em>t</em>-test is suitable for testing the significance of paired systems in this study. Meanwhile, the use of either parametric or nonparametric statistical tests has little impact because both evaluations result in the same conclusions (<a href="#she11">Sheskin, 2011</a>).</p>
+
+<p>In these hypothesis tests, the relationship between two systems’ effectiveness is measured. The effectiveness of a pair of systems  is thought to be equal, where the null hypothesis is defined as H<sub>0</sub>: A=B. Two-sided <em>p</em>-values do not provide directions of deviations from H<sub>0</sub> but a one-sided <em>p</em>-value is directional. Under the null hypothesis, the density of a <em>p</em>-value from a continuously distributed test statistic is uniform on the interval, 0 to 1.</p>
+
+<p>A dependent t-test or paired t-test compares the means between two related samples on the same continuous, dependent variable (<a href="#dep15">“Dependent T-Test using SPSS,” 2015</a>). These assumptions are associated with dependent or paired t-test and were satisfied before conducting the experimentation:</p>
+<ol>
+<li>Dependent variable should be measured on a continuous scale such as interval or ratio.</li>
+<li>Independent variable should consist of related groups or matched pairs. Related groups indicate the same subjects are present in both groups.</li>
+<li>The distribution of the differences in the dependent variable between the two related groups should be approximately normally distributed.</li>
+</ol>
+
+<p>When using dependent or paired t-test, independence of observations is not applicable, in contrast to the independent t-test.</p>
+</section>
+
+<section>
+<h3>Method for aggregating <em>p</em>-values</h3>
+<p>Combined significance has been described as providing an overall level of significance for a series of tests (<a href="#coo93">Cooper, 1993</a>). Combined significance is needed in this study to aggregate the multiple <em>p</em>-values from each of the fifty topics per system pair. There are many methods for summarizing significance level or <em>p</em>-values. The summarizing methods assume <em>p</em>-value as a continuous variable whereby the <em>p</em>-value is from a continuous test statistic. Continuous <em>p</em>-values summaries can be divided into those based on uniform distribution and those based on the statistical theories of other random variables such as transformed uniform variables. A uniform distribution has a constant probability for each variable, where summarizing <em>p</em>-values from multiple independent topics per system pair has equal probability. Uniform summaries include counting methods and a linear combination of <em>p</em>-values.</p>
+
+<p>Sometimes, <em>p</em>-value summaries may test a common statistical null hypothesis but this does not have to be true in all tests. The null hypothesis for a test of combined significance is that the phenomena of interest are not present in any of the populations. In other words, all of the null hypothesis from the combined <em>p</em>-values must be true. The alternative hypothesis, however, is more complex and could imply different possible patterns of population parameters such that at least one of the population parameter provides evidence to reject the null hypothesis (<a href="#coo93">Cooper, 1993</a>). Such alternative hypothesis complements Fisher’s claims.</p>
+
+<p>Fisher (<a href="#fis69">1969</a>) claimed that sometimes only a few or no individual probabilities are significant, but that their combined probabilities can be lower than would have been obtained by chance. He also mentioned that occasionally it is necessary to take into account only the individual probabilities, instead of the data from which the individual probabilities were derived, to obtain the aggregated probability. Although Fisher’s method has been commonly used in summarizing significance, rejecting null hypothesis due to a single combined <em>p</em>-value does not seem suitable for our study. It is not sufficient to have only one topic in a system pair to be statistically different, to suggest that the system pair is statistically significant.</p>
+
+<p>Alternately, another summarizing method <em>meanp</em> which is a linear combination that suits our study. <em>Meanp</em> is defined as</p>
+<figure class="centre">
+   <img src="p752Equation1.png" alt="Equation1" width="200" height="100">
+</figure>
+<p>where <em>k</em> is total numbers of <em>p</em>-values and <em>p<sub>i</sub></em> are the individual <em>p</em>-values that need to be combined or summarized (<a href="#coo93">Cooper, 1993</a>) and is a standard normal. If the defined <em>meanp</em> has a <em>z</em> value of more than <em>z(α)</em>, the null hypothesis is rejected. The <em>z(α)</em> for 99% confidence is 2.58.</p>
+
+<p>In combining <em>p</em>-values, selecting a suitable <em>p</em>-value summarizing method is important to reject the null hypothesis only if most topics between the system pairs were significantly different. A system’s effectiveness is usually determined by the effectiveness of all topics through mean average precision. Similarly, a combined <em>p</em>-value should take into consideration effectiveness of all topics per system pair. A preliminary analysis between Fisher’s and <em>meanp</em> method was done to determine the percentage of significantly different <em>p</em>-values from the fifty topics that would be needed to reject the combined null hypothesis. Figure 1 and Figure 2 show the percentage of statistically significant <em>p</em>-values from fifty topics that rejects the null hypothesis for Fisher’s method and <em>meanp</em> method respectively. Lower than 10% of the total combined <em>p</em>-values from fifty topics provide evidence to reject the null hypothesis using Fisher’s method, in accordance with Fisher’s claim. However, meanp requires almost 40% of the combined <em>p</em>-values from fifty topics to be significantly different before providing evidence to reject the null hypothesis. Based on this analysis and suitability with our study, <em>meanp</em> is our choice for aggregating the <em>p</em>-values.</p>
+
+<figure class="centre">
+   <img src="p752fig1.png" alt="Figure1: Percentage of statistically significant p-values against combined p-value using Fisher’s method" width="716" height="259">
+   <figcaption><strong>Figure 1: Percentage of statistically significant p-values against combined p-value using Fisher’s method</strong></figcaption>
+</figure>
+
+<figure class="centre">
+   <img src="p752fig2.png" alt="Figure2: Percentage of statistically significant p-values against combined p-value using meanp method" width="687" height="251">
+   <figcaption><strong>Figure 2: Percentage of statistically significant p-values against combined p-value using meanp method</strong></figcaption>
+</figure>
+</section>
+
+<section>
+<h2>Previous related studies</h2>
+<p>Previous studies have used the mean average precision to determine the statistical difference between system pairs (<a href="#smu07">Smucker, Allan and Carterette, 2007</a>). Five different tests of statistical difference were done using fifty topics: Student’s <em>t</em>-test, Wilcoxon signed-rank test, sign test, bootstrapping and Fisher’s randomization (permutation). Smucker <em>et al</em>. (<a href="#smu07">2007</a>) attempted to find agreement among these tests with the use of p-values. They concluded that there was little practical difference between Student’s <em>t</em>-test, bootstrapping and randomization, while the use of Wilcoxon and sign tests for measuring significant differences between means should be discontinued. In their 2009 study, only ten topics were used for statistical tests of randomization, paired Student’s <em>t</em>-test and bootstrapping (<a href="#smu09">Smucker, Allan and Carterette, 2009</a>). Disagreement among these tests was found to increase with ten topics, but the recommendation to use randomization and <em>t</em>-tests remained.</p>
+
+<p>In another study, significance tests were done with the metrics precision at cut-off 10 (<em>P@10</em>) and mean average precision (<a href="#san05">Sanderson and Zobel, 2005</a>), and an expansion of Voorhees and Buckley’s experiment was done. Previously, Voorhees and Buckley (<a href="#voo02">2002</a>) examined the significance by measuring the absolute difference in mean average precision between pairs of systems. The fifty topics were split into two disjoint sets of twenty-five topics each to determine whether the system ordering in the second set was similar to that in the first set based on mean average precision differences or error rates. Instead, Sanderson and Zobel (<a href="#san05">2005</a>) extended the research to determine the impact of significance tests on error rates. They concluded that significance increased the reliability of retrieval effectiveness measures.</p>
+
+<p>Dinçer, Macdonald and Ounis (<a href="#din14">2014</a>) aimed to establish a theory of statistical hypothesis testing for risk-sensitive evaluations with the use of a new risk measure known as T<sub>risk</sub>. This testing was done to shift from a descriptive analysis to an inferential analysis of risk-sensitive evaluation. TREC 2012 Web track was used in two-sided statistical testing that applied topic scores, expected reciprocal rank at cut-off 20 (<em>ERR@20</em>). Given an information retrieval system, a baseline system and a set of topics <em>c</em>, the significance of the calculated average trade-off score between risk and reward, U<sub>risk</sub>, over the set of <em>c</em> topics can be obtained. The corresponding <em>t</em>-score, T<sub>risk</sub>, is then compared against the selected level of significance (<a href="#din14">Dinçer <em>et al</em>., 2014</a>).</p>
+
+<p>Five different real-life information retrieval systems, namely, Google, Yahoo, MSN, Ask.com and Seekport, were evaluated by Lewandowski (<a href="#lew08">2008</a>) to determine their effectiveness based on the list of results and the results description. The significant difference between these systems was also obtained by using chi-square test. System performance was determined with the use of precision at a cut-off of twenty for the top twenty retrieved results, and forty queries were analysed. The results showed that Google and Yahoo had the best performance of the five systems, although the performances were not significantly different (<em>p</em> &lt; 0.01) based on the list of results. However, the precision at cut-off <em>k</em> based on the results description showed that the differences among all five systems were highly significant (<a href="#lew08">Lewandowski, 2008</a>).</p>
+
+<p>Statistical significance has been measured for system runs using various metrics to examine their ability in differentiating between the systems (<a href="#mof12">Moffat, Scholer and Thomas, 2012</a>). The results have been measured in terms of confidence indicators from a test for statistical significance. The authors stated that if the agreement of statistical significance between one metric and another metric is, for example 81%, using other metrics to determine statistically significant system pairs, one could have rejected the results as being not significant 19% of the time (<a href="#mof12">Moffat, <em>et al</em>., 2012</a>).</p>
+
+<p>The above-mentioned studies, in addition to many others not cited here, used average and cut-off scores in significance testing for various information retrieval system evaluations.</p>
+</section>
+
+<section>
+<h2>Experiment</h2>
+<p>The experiments were laboratory-based and used test collections from TREC, including the data set from TREC-8 ad hoc track and TREC-9 Web track. The document corpus consists of 100GB of Web-crawled documents (<a href="#haw99">Hawking, Craswell and Thistlewaite, 1999</a>). The two test collections have different set of topics available for the retrieval systems but use the same document corpus. The difference between the systems lies in the usage of specific fields from a topic in retrieving the relevant documents. Some systems use the topic’s title-only field while others are combined with the descriptions field. A total of 129 system runs were submitted as part of TREC-8, and 105 system runs as part of TREC-9. One system from TREC-9 was no longer accessible on the TREC Website, leaving only 104 system runs. From these submitted runs, 25% of the least effective runs were removed. The least effective system runs were determined from their mean average precision scores using the traditional TREC method.</p>
+
+<p>Each test collection consisted of fifty topics, with up to 1000 documents per topic in the submitted runs. All topics were considered in the experimentation regardless of the difficulty level or the number of known relevant documents (based on the relevance judgment) for each topic. The relevance judgments were constructed from a pooling depth of 100 based on the contributing systems for each test collection. Although the relevance judgment from TREC-9 used ternary relevancy, here it was interpreted as binary relevance for standardization between both test collections.</p>
+
+<p>Before the experimentation, standardization of document rankings was done, in which all documents were arranged in descending order based on their similarity scores. Two or more documents with the same similarity scores were ordered alphabetically by document identifier. The standardization was done because some submitted system runs had rankings that did not match the similarity scores, whereas others had the same similarity scores for many documents.</p>
+
+<p>Evaluating at topic-level, each system consisted of exactly the same topics per test collection, measuring the distribution of relevant documents amongst non-relevant documents. Similarly, effectiveness at document-level measures the distribution of relevant documents within the top <em>k</em> documents per query. This is regardless of which document is retrieved but based on document’s relevancy. Before evaluating at document-level, the assumptions (as stated in Significance testing section) of a paired or dependent t-test needs to be met.</p>
+
+<p>In this experimentation, document scores are the dependent variable measured on a continuous scale while the independent variable is the documents’ ranks. Independent variable requires both samples to have matched pair. In this experiment, the matched pair is the documents’ ranks. Each topic from a system run can have up to 1000 documents retrieved and ranked but the sample consists of 30, 50, 100 or 150 documents. The assumption that distribution of differences in the dependent variable between the two samples should be approximately normally distributed can be met as the metrics precision and rank-biased precision can only have values within [0,1].  The independent variable, document rank, allows the dependent test to measure the mean difference between the distributions of relevant documents from top <em>k</em> documents.</p>
+
+<p>Paired Student’s <em>t</em>-test (one-sided, both ways), was done by using the document-level scores per topic from each pair of systems. The one-sided significance test was chosen to determine if one system was better than the other. The null hypothesis states that the two systems do not differ, whereas the alternative hypothesis suggests that system A is better than system B or vice versa (one-sided, both ways). One-sided significance tests have been performed both ways because there is a possibility for either system from the system pair to be better than the other.</p>
+
+<p>Significance testing at document-level results in fifty <em>p</em>-values for each system pair, which was contributed by fifty topics. A single <em>p</em>-value is needed to represent the system pair comprehensively for evaluation. Therefore, <em>meanp</em> method of combining <em>p</em>-values is used to aggregate the fifty <em>p</em>-values. The single <em>p</em>-value obtained could then be compared against the <em>p</em>-value from paired <em>t</em>-test using topic-level scores from the same pair of systems. The results would be evaluated based on the number of system pairs that are statistically significant (<em>p</em>=0.01). A total of 9,312 system pairs for TREC-8 and 6,006 for TREC-9 could be evaluated in each test collection. The following formula, <em>total system pairs = total systems<sup>2</sup> – total systems</em> computes total numbers of system pairs for each test collection.</p>
+</section>
+
+<section>
+<h2>Methods </h2>
+<p>The following two subsections describe the various topic- and document-level experimentation and the steps involved to determine the significant difference between the systems.</p>
+</section>
+
+<section>
+<h3>Average precision versus precision</h3>
+<p>Traditional system evaluation by using topic-level average precision scores was done as a basis for comparison with the proposed document-level evaluation method. An evaluation depth of 1,000 documents, similar to the standard evaluation depth in TREC (<a href="#web10">Webber, Moffat and Zobel, 2010</a>), was used in computing the average precision scores for each topic. These average precision scores were then used in the paired Student’s t-test (one-sided, both ways) between pairs of systems. In our first proposed method for document-level evaluation, the precision of each document per topic per system was computed. The precision score at each rank per topic from the pair of systems was used in Student’s paired t-test (one-sided, both ways). Sample size of 30, 50, 100, or 150 ranked documents per topic from system A (the basis for comparison with another system) was used for significance testing against system B. In cases in which some system pairs have insufficient ranked documents that are lower than the selected sample size, those topics per system pair were eliminated from the paired t-test. This ensures that the test statistics generate from equal numbers of observations for all pairs of systems.</p>
+</section>
+
+<section>
+<h3>Rank-biased precision at <em>k</em> versus Rank-biased precision</h3>
+<p>Another document-level metric considered in this study is the rank-biased precision. The rank-biased precision is computed for all documents (up to 1000) per topic per system. Persistence values of <em>p</em> = 0.8 and <em>p</em> = 0.95 are used to compute the rank-biased precision scores of each document, given that larger values of p are known to lead to deeper evaluation (<a href="#web10">Webber, Moffat and Zobel, 2010</a>). The documents per topic were then matched between pairs of systems according to their document ranks, after which sample size selection of 30, 50, 100, or 150 ranked documents was used. In cases in which systems have ranked documents per topic that are less than the selected sample size, those topics per system pair were eliminated from the paired t-test. The rank-biased precision scores of documents between system pairs were used in paired t-test (one-sided, both ways) to determine if the system pairs were equally effective. The number of significant pairs obtained from our proposed method would be compared with those from topic-level rank-biased precision at an evaluation depth of 100 since rank-biased precision is not dependent on the evaluation depth.</p>
+</section>
+
+<section>
+<h2>Results and discussion</h2>
+<p>Aggregated <em>p</em>-values using <em>meanp</em> method from one-sided significance tests (both ways) at document-level using precision and rank-biased precision scores are compared with topic-level average precision and rank-biased precision at cut-off <em>k</em> (<em>RBP@k</em>), respectively. Throughout this study, the statistical significance level is 1%. Table 1 shows the number of statistically significant (<em>p = 0.01</em>) system pairs using average precision at cut-off 1000 (<em>AP@1000</em>) scores at topic-level and precision scores at document-level. The table shows the number of system pairs that suggest system A is better than system B, its reverse, where system B is better than system A and their conflicting claims whereby both one-sided significant tests claim system A is better than system B and vice versa.</p>
+
+<p>Experiments were conducted with various sample sizes per topic based on the top <em>k</em> ranked documents for each pair of systems. A maximum of fifty <em>p</em>-values (from fifty topics) per system pair are aggregated to a single <em>p</em>-value to determine the number of significantly different system pairs. Some system pairs had either insufficient ranked documents per topic or the data were generally constant, making it infeasible for paired t-test. Approximately, 9312 system pairs for TREC-8 and 6006 system pairs for TREC-9 were evaluated.</p>
+
+<p>As shown in Table 2, all selected sample sizes of the proposed method at document-level using precision scores yield better results in identifying significantly different (<em>p=0.01</em>) system pairs compared to topic-level average precision at cut-off 1000 (<em>AP@1000</em>) scores.</p>
+
+<table class="center">
+ <caption><br><strong>Table 2: Pairs of unique systems that are significantly different (p = 0.01) based on topic-level average precision at cut-off 1000 (AP@1000) and precision (document-level) scores</strong></caption>
+ <tbody>
+  <tr><th rowspan="2">Sample size</th><th colspan="4">TREC-8</th><th colspan="4">TREC-9</th></tr>
+  <tr><th>A&gt;B &amp; B&gt;A</th><th>A&gt;B</th><th>B&gt;A</th><th>Total (%)</th><th>A&gt;B &amp; B&gt;A</th><th>A&gt;B</th><th>B&gt;A</th><th>Total (%)</th></tr>
+  <tr>
+ <td>AP@1000</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">1507</td>
+ <td style="text-align:center">659</td>
+ <td style="text-align:center">2166(23%)</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">591</td>
+ <td style="text-align:center">705</td>
+ <td style="text-align:center">1296(22%)</td>
+ </tr>
+  <tr>
+  <td>30</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1797</td>
+  <td style="text-align:center">934</td>
+  <td style="text-align:center">2731(29%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">941</td>
+  <td style="text-align:center">938</td>
+  <td style="text-align:center">1879(31%)</td>
+  </tr>
+  <tr>
+  <td>50</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1816</td>
+  <td style="text-align:center">938</td>
+  <td style="text-align:center">2754(30%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">985</td>
+  <td style="text-align:center">990</td>
+  <td style="text-align:center">1975(33%)</td>
+  </tr>
+  <tr>
+  <td>100</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1830</td>
+  <td style="text-align:center">918</td>
+  <td style="text-align:center">2748(30%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1004</td>
+  <td style="text-align:center">1012</td>
+  <td style="text-align:center">2016(34%)</td>
+  </tr>
+  <tr>
+  <td>150</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1844</td>
+  <td style="text-align:center">928</td>
+  <td style="text-align:center"><b>2772(30%)</b></td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1016</td>
+  <td style="text-align:center">1005</td>
+  <td style="text-align:center"><b>2021(34%)</b></td>
+  </tr>
+  <tr><td colspan="9"><em>Note: The p-values in the document-level method were aggregated by meanp method. The percentage of significantly different unique system pairs based on sample size is shown. The total number of unique system pairs varies due to the elimination of system pairs with insufficient ranked documents or essentially constant data.</em></td>
+
+  </tr>
+ </tbody>
+ </table>
+
+ <p>There were no conflicting claims for any of the selected sample sizes, including that of topic-level average precision at cut-off 1000 (<em>AP@1000</em>). Conflicting claims here refers to results from one-sided paired t-test, both ways, that suggest system A is better than system B and also that system B is better than system A. Both test collections show that tests with higher numbers of documents per topic (sample size) are better able to identify more statistically significant system pairs. A sample size of 150 in paired t-tests identifies highest numbers of statistically significant system pairs which could result from the larger sample size. Larger sample sizes may produce smaller <em>p</em>-values (<a href="#coo93">Cooper, 1993</a>), resulting in the usage of 150 sample size identifying more statistically significant system pairs. However, the proposed document-level method using precision scores is better than topic-level in recognizing statistically significant system pairs for all sample sizes used in significance testing. This could have resulted from using precise document scores in significance testing as opposed to using averaged topic scores. However, we continue to determine how many of the statistically significant system pairs identified by the proposed method were in agreement or disagreement to those originally identified by the topic-level.</p>
+
+ <p>A comparison was performed between the traditional topic-level and proposed document-level methods’ agreement or disagreement in terms of accepting or rejecting the null hypothesis (<em>p=0.01</em>). The classification of such agreement and disagreement was adopted from Moffat, Scholer and Thomas (<a href="#mof12">2012</a>) and modified to suit the comparison between two methods. The categorizations based on statistical significance are presented below, where M1 refers to topic-level and M2 refers to document-level method:</p>
+ <ol>
+ <li>Active agreements: where method M1 and M2 both provide evidence that system A is significantly better than system B, or vice versa on systems. </li>
+ <li>Active disagreements: where method M1 says that system A is significantly better than system B, but method M2 says that system B is significantly better than system A, or vice versa on systems. </li>
+ <li>Passive disagreements M1: where method M1 provides evidence that system A is significantly better than system B (or vice versa on systems), but method M2 does not provide evidence in support of the same claim. </li>
+<li>Passive disagreements M2: where method M2 provides evidence that system A is significantly better than system B (or vice versa on systems), but method M1 does not provide evidence in support of the same claim. </li>
+<li>Passive agreements: where method M1 fails to provide sufficient evidence that system A is significantly better than system B and so does method M2.</li>
+</ol>
+
+<p>Table 3 shows the number of system pairs in agreement or disagreement between average precision at cut-off 1000 (<em>AP@1000</em>) and proposed method using precision scores, where the <em>p</em>-values are aggregated using the <em>meanp</em> summarizing method.</p>
+
+<p>Active agreement  between the traditional (topic-level) and the proposed method increases with the increase in sample sizes included in paired t-test. Active disagreement between the traditional and the proposed method remains low, at less than 1% of the total number of system pairs evaluated using different sample sizes. The number of system pairs claimed to be significantly different in the traditional method but not similarly claimed by the proposed method decreases as sample size increases. It is a good indication that passive disagreements M1 remain low and the proposed method is better able to match active agreements with increased sample sizes. Passive disagreements M2 results show that the number of significantly different system pairs decreases for TREC-8 when the traditional method did not provide evidence for rejecting null hypothesis while the proposed method provides sufficient evidence to reject the null hypothesis. Meanwhile, TREC-9  passive disagreements M2 fluctuates slightly across the various sample sizes.</p>
+
+<p>The increase in the active agreement between the methods indicates that larger sample sizes are better able to match the numbers of statistically significant system pairs identified by the traditional method. More than 90% of the statistically significant system pairs from traditional method have been identified by the proposed method when using 150 sample sizes. Similar results in both test collections show that the proposed method is reliable to reproduce identification of statistically and non-statistically significant system pairs. The proposed method could provide sufficient evidence to reject the null hypothesis with the increase in sample size. The reduction in passive disagreements shows that when a larger sample size is used, the proposed method is able to match well the traditional method with regard to active agreements and passive agreements.</p>
+
+<table class="center">
+ <caption><br>Table 3: Number of system pairs’ agreements or disagreements between AP@1000 and proposed method using document level precision scores.</caption>
+ <tbody>
+  <tr><th></th><th>Categorization</th><th>AP-30</th><th>AP-50</th><th>AP-100</th><th>AP-150</th></tr>
+  <tr><th rowspan = "7">TREC-8</th>
+  <tr>
+ <td>Active agreements</td>
+ <td style="text-align:center">1821</td>
+ <td style="text-align:center">1878</td>
+ <td style="text-align:center">1933</td>
+ <td style="text-align:center"><b>1976</b></td>
+ </tr>
+  <tr>
+  <td>Active disagreements</td>
+  <td style="text-align:center">2</td>
+  <td style="text-align:center">1</td>
+  <td style="text-align:center">1</td>
+  <td style="text-align:center">1</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M1</td>
+  <td style="text-align:center">344</td>
+  <td style="text-align:center">288</td>
+  <td style="text-align:center">233</td>
+  <td style="text-align:center">190</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M2</td>
+  <td style="text-align:center">910</td>
+  <td style="text-align:center">876</td>
+  <td style="text-align:center">815</td>
+  <td style="text-align:center">796</td>
+  </tr>
+  <tr>
+  <td>Passive agreements</td>
+  <td style="text-align:center">6233</td>
+  <td style="text-align:center">6268</td>
+  <td style="text-align:center">6329</td>
+  <td style="text-align:center">6348</td>
+  </tr>
+  <tr>
+  <td>Total</td>
+  <td style="text-align:center">9310</td>
+  <td style="text-align:center">9311</td>
+  <td style="text-align:center">9311</td>
+  <td style="text-align:center">9311</td>
+  </tr>
+  </tr>
+  <tr><th rowspan = "7">TREC-9</th>
+  <tr>
+ <td>Active agreements</td>
+ <td style="text-align:center">1152</td>
+ <td style="text-align:center">1192</td>
+ <td style="text-align:center">1226</td>
+ <td style="text-align:center"><b>1239</b></td>
+ </tr>
+  <tr>
+  <td>Active disagreements</td>
+  <td style="text-align:center">1</td>
+  <td style="text-align:center">5</td>
+  <td style="text-align:center">5</td>
+  <td style="text-align:center">4</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M1</td>
+  <td style="text-align:center">145</td>
+  <td style="text-align:center">105</td>
+  <td style="text-align:center">71</td>
+  <td style="text-align:center">58</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M2</td>
+  <td style="text-align:center">732</td>
+  <td style="text-align:center">789</td>
+  <td style="text-align:center">793</td>
+  <td style="text-align:center">789</td>
+  </tr>
+  <tr>
+  <td>Passive agreements</td>
+  <td style="text-align:center">3975</td>
+  <td style="text-align:center">3918</td>
+  <td style="text-align:center">3914</td>
+  <td style="text-align:center">3918</td>
+  </tr>
+  <tr>
+  <td>Total</td>
+  <td style="text-align:center">6005</td>
+  <td style="text-align:center">6009</td>
+  <td style="text-align:center">6009</td>
+  <td style="text-align:center">6008</td>
+  </tr>
+  </tr>
+  <tr><td colspan = "8"><em>Note: The aggregated p-values uses meanp method. The table shows the comparison for various sample sizes experimented.</em></td>
+  </tr>
+ </tbody>
+ </table>
+
+ <p>Table 4 shows the number of statistically significant (<em>p=0.01</em>) system pairs using rank-biased precision metrics with persistence of 0.95. The total numbers are taken from both ways one-sided paired t-test. The table shows results that claim system A is better than system B, system B is better than system A, and conflicting claims between both the one-sided paired t-test.</p>
+
+ <p>The proposed method at document-level using rank-biased precision scores yield better results in identifying significantly different (<em>p=0.01</em>) system pairs compared to topic-level rank-biased precision at cut-off 100 (<em>RBP@100</em>) scores. Better evaluation is expected for persistence 0.95 compared to persistence 0.8 due to the nature of rank-biased precision, in which a larger value of persistence leads to a deeper evaluation (<a href="#web10">Webber, Moffat and Zobel, 2010</a>). There were no conflicting claims for any of the proposed method’s sample sizes and topic-level rank-biased precision at cut-off 100 (<em>RBP@100</em>), similar to average precision at cut-off 1000 (<em>AP@1000</em>) and precision document-level method.</p>
+
+<p>TREC-8 test collection shows fifty documents per topic (sample size) are needed to identify most statistically significant system pairs, whereas TREC-9 shows 150 documents per topic are needed for identification of most statistically significant pairs. The number of statistically significant system pairs identified are generally close across the various sample sizes. The differences in percentage are not more than 5% among all the sample sizes. When compared with the results from the document-level method using precision score, rank-biased precision does not give a consistent indication of best sample size across both test collections. The proposed method using rank-biased precision document-level scores have identified approximately 8% to 18% more statistically significant system pairs compared to the traditional method. However, it is questionable whether the proposed method was able to successfully identify all of those statistically significant system pairs from the traditional method since the number of statistically significant pairs from the proposed method is higher compared to the traditional method. Agreement and disagreement comparison between topic-level rank-biased precision at cut-off 100 (<em>RBP@100</em>) and document-level rank-biased precision method was analysed similarly to that done for topic-level average precision and document-level precision.</p>
+
+<table class="center">
+ <caption><br><strong>Table 4: Number of statistically significant system pairs using document level RBP(p=0.95) for the various sample size summarization of p-values method.</strong></caption>
+ <tbody>
+  <tr><th rowspan="2">Sample size</th><th colspan="4">TREC-8</th><th colspan="4">TREC-9</th></tr>
+  <tr><th>A&gt;B &amp; B&gt;A</th><th>A&gt;B</th><th>B&gt;A</th><th>Total (%)</th><th>A&gt;B &amp; B&gt;A</th><th>A&gt;B</th><th>B&gt;A</th><th>Total (%)</th></tr>
+  <tr>
+ <td>RBP@100(p=0.95)</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">1361</td>
+ <td style="text-align:center">618</td>
+ <td style="text-align:center">1979(21%)</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">690</td>
+ <td style="text-align:center">778</td>
+ <td style="text-align:center">1468(24%)</td>
+ </tr>
+  <tr>
+  <td>30</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1478</td>
+  <td style="text-align:center">666</td>
+  <td style="text-align:center">2144(23%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">799</td>
+  <td style="text-align:center">878</td>
+  <td style="text-align:center">1677(28%)</td>
+  </tr>
+  <tr>
+  <td>50</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1539</td>
+  <td style="text-align:center">702</td>
+  <td style="text-align:center"><b>2241(24%)</b></td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">830</td>
+  <td style="text-align:center">904</td>
+  <td style="text-align:center">1734(29%)</td>
+  </tr>
+  <tr>
+  <td>100</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1523</td>
+  <td style="text-align:center">699</td>
+  <td style="text-align:center">2222(24%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">840</td>
+  <td style="text-align:center">901</td>
+  <td style="text-align:center">1741(29%)</td>
+  </tr>
+  <tr>
+  <td>150</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1506</td>
+  <td style="text-align:center">689</td>
+  <td style="text-align:center">2195(24%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">840</td>
+  <td style="text-align:center">901</td>
+  <td style="text-align:center"><b>1749(29%)</b></td>
+  </tr>
+  <tr></tr>
+  <tr>
+ <td>RBP@100(p=0.8)</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">1168</td>
+ <td style="text-align:center">532</td>
+ <td style="text-align:center">1700(18%)</td>
+ <td style="text-align:center">0</td>
+ <td style="text-align:center">617</td>
+ <td style="text-align:center">609</td>
+ <td style="text-align:center">1226(20%)</td>
+ </tr>
+  <tr>
+  <td>30</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1441</td>
+  <td style="text-align:center">684</td>
+  <td style="text-align:center">2125(23%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">755</td>
+  <td style="text-align:center">746</td>
+  <td style="text-align:center">1501(25%)</td>
+  </tr>
+  <tr>
+  <td>50</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1450</td>
+  <td style="text-align:center">679</td>
+  <td style="text-align:center"><b>2129(23%)</b></td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">761</td>
+  <td style="text-align:center">760</td>
+  <td style="text-align:center">1521(25%)</td>
+  </tr>
+  <tr>
+  <td>100</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1391</td>
+  <td style="text-align:center">650</td>
+  <td style="text-align:center">2041(22%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">774</td>
+  <td style="text-align:center">752</td>
+  <td style="text-align:center">1526(25%)</td>
+  </tr>
+  <tr>
+  <td>150</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">1365</td>
+  <td style="text-align:center">637</td>
+  <td style="text-align:center">2002(21%)</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">774</td>
+  <td style="text-align:center">752</td>
+  <td style="text-align:center"><b>1539(26%)</b></td>
+  </tr>
+ </tbody>
+ </table>
+
+<p>Table 5 shows the number of system pairs’ agreements or disagreements between traditional rank-biased precision at cut-off 100 (<em>RBP@100</em>, p=0.95) and proposed method using rank-biased precision (<em>RBP</em>, p=0.95) scores whereby the <em>p</em>-values are aggregated using <em>meanp</em> summarizing method. Table 6 shows the number of system pairs’ agreements or disagreements between traditional rank-biased precision at cut-off 100 (<em>RBP@100</em>, p=0.8) and proposed method using rank-biased precision (<em>RBP</em>, p=0.8) scores whereby the <em>p</em>-values are aggregated using <em>meanp</em> summarizing method.</p>
+
+<table class="center">
+ <caption><br><strong>Table 5: Number of system pairs agreements and disagreements between RBP@100(p=0.95) and proposed method p-values aggregated using meanp method</strong></caption>
+ <tbody>
+  <tr><th></th><th>Categorization</th><th>RBP-30</th><th>RBP-50</th><th>RBP-100</th><th>RBP-150</th></tr>
+  <tr><th rowspan = "7">TREC-8</th>
+  <tr>
+ <td>Active agreements</td>
+ <td style="text-align:center">1868</td>
+ <td style="text-align:center"><b>1907</b></td>
+ <td style="text-align:center">1880</td>
+ <td style="text-align:center">1849</td>
+ </tr>
+  <tr>
+  <td>Active disagreements</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M1</td>
+  <td style="text-align:center">111</td>
+  <td style="text-align:center">72</td>
+  <td style="text-align:center">99</td>
+  <td style="text-align:center">130</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M2</td>
+  <td style="text-align:center">276</td>
+  <td style="text-align:center">334</td>
+  <td style="text-align:center">342</td>
+  <td style="text-align:center">346</td>
+  </tr>
+  <tr>
+  <td>Passive agreements</td>
+  <td style="text-align:center">7053</td>
+  <td style="text-align:center">6997</td>
+  <td style="text-align:center">6989</td>
+  <td style="text-align:center">6985</td>
+  </tr>
+  <tr>
+  <td>Total</td>
+  <td style="text-align:center">9308</td>
+  <td style="text-align:center">9310</td>
+  <td style="text-align:center">9310</td>
+  <td style="text-align:center">9310</td>
+  </tr>
+  </tr>
+  <tr><th rowspan = "7">TREC-9</th>
+  <tr>
+ <td>Active agreements</td>
+ <td style="text-align:center">1411</td>
+ <td style="text-align:center">1417</td>
+ <td style="text-align:center"><b>1419</b></td>
+ <td style="text-align:center">1413</td>
+ </tr>
+  <tr>
+  <td>Active disagreements</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M1</td>
+  <td style="text-align:center">57</td>
+  <td style="text-align:center">51</td>
+  <td style="text-align:center">49</td>
+  <td style="text-align:center">55</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M2</td>
+  <td style="text-align:center">266</td>
+  <td style="text-align:center">317</td>
+  <td style="text-align:center">322</td>
+  <td style="text-align:center">336</td>
+  </tr>
+  <tr>
+  <td>Passive agreements</td>
+  <td style="text-align:center">4270</td>
+  <td style="text-align:center">4219</td>
+  <td style="text-align:center">4214</td>
+  <td style="text-align:center">4200</td>
+  </tr>
+  <tr>
+  <td>Total</td>
+  <td style="text-align:center">6004</td>
+  <td style="text-align:center">6004</td>
+  <td style="text-align:center">6004</td>
+  <td style="text-align:center">6004</td>
+  </tr>
+  </tr>
+ </tbody>
+ </table>
+<br>
+ <table class="center">
+ <caption><br><strong>Table 6: Number of syst</strong>em pairs agreements and disagreements between RBP@100 (p=0.8) and proposed method p-values aggregated using meanp method</caption>
+ <tbody>
+  <tr><th></th><th>Categorization</th><th>RBP-30</th><th>RBP-50</th><th>RBP-100</th><th>RBP-150</th></tr>
+  <tr><th rowspan = "7">TREC-8</th>
+  <tr>
+ <td>Active agreements</td>
+ <td style="text-align:center"><b>1651</b></td>
+ <td style="text-align:center">1647</td>
+ <td style="text-align:center">1638</td>
+ <td style="text-align:center">1600</td>
+ </tr>
+  <tr>
+  <td>Active disagreements</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M1</td>
+  <td style="text-align:center">49</td>
+  <td style="text-align:center">53</td>
+  <td style="text-align:center">62</td>
+  <td style="text-align:center">100</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M2</td>
+  <td style="text-align:center">474</td>
+  <td style="text-align:center">482</td>
+  <td style="text-align:center">403</td>
+  <td style="text-align:center">402</td>
+  </tr>
+  <tr>
+  <td>Passive agreements</td>
+  <td style="text-align:center">7134</td>
+  <td style="text-align:center">7128</td>
+  <td style="text-align:center">7207</td>
+  <td style="text-align:center">7208</td>
+  </tr>
+  <tr>
+  <td>Total</td>
+  <td style="text-align:center">9308</td>
+  <td style="text-align:center">9310</td>
+  <td style="text-align:center">9310</td>
+  <td style="text-align:center">9310</td>
+  </tr>
+  </tr>
+  <tr><th rowspan = "7">TREC-9</th>
+  <tr>
+ <td>Active agreements</td>
+ <td style="text-align:center"><b>1184</b></td>
+ <td style="text-align:center">1180</td>
+ <td style="text-align:center">1181</td>
+ <td style="text-align:center">1179</td>
+ </tr>
+  <tr>
+  <td>Active disagreements</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">0</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M1</td>
+  <td style="text-align:center">42</td>
+  <td style="text-align:center">46</td>
+  <td style="text-align:center">45</td>
+  <td style="text-align:center">47</td>
+  </tr>
+  <tr>
+  <td>Passive disagreements M2</td>
+  <td style="text-align:center">317</td>
+  <td style="text-align:center">341</td>
+  <td style="text-align:center">345</td>
+  <td style="text-align:center">360</td>
+  </tr>
+  <tr>
+  <td>Passive agreements</td>
+  <td style="text-align:center">4461</td>
+  <td style="text-align:center">4437</td>
+  <td style="text-align:center">4433</td>
+  <td style="text-align:center">4418</td>
+  </tr>
+  <tr>
+  <td>Total</td>
+  <td style="text-align:center">6004</td>
+  <td style="text-align:center">6004</td>
+  <td style="text-align:center">6004</td>
+  <td style="text-align:center">6004</td>
+  </tr>
+  </tr>
+ </tbody>
+ </table>
+
+ <p>As mentioned earlier, larger persistence values produce deeper evaluation (<a href="#web10">Webber, Moffat and Zobel, 2010</a>). In accordance to that, the persistence value of 0.95 has higher numbers of statistically significant system pairs identified for both traditional and proposed method compared to numbers from persistence of 0.8. The number of system pairs for the active agreements category is also higher for deeper evaluation using persistence 0.95 compared to 0.8. The percentage of active agreements for both persistence values experimented are equally good. The document-level method using rank-biased precision is able to identify approximately 96% of the statistically significant system pairs identified by topic-level. This is true for both test collections. Therefore, the proposed method is reliable for the identification of statistically significant (<em>p=0.01</em>) system pairs.</p>
+
+<p>On another note, increasing sample size, decreases identification of significantly different system pairs for the rank-biased precision metric. This proves that increasing sample size does not necessarily give better results. In addition, with the decline in active agreements between topic-level and document-level, it is unlikely that further increase in sample size would be better able to identify statistically significant system pairs. Hence, it can be stated that current finding using the proposed method is at its best when using rank-biased precision metric. However, similar claims cannot be made for the document-level method using precision scores because the number of active agreements between topic-level average precision at cut-off 1000 (<em>AP@1000</em>) and document-level precision scores continue to increase with sample size. It is possible that increasing the sample size to more than 150 could also increase the percentage of active agreements for the document-level method using precision scores.</p>
+
+<p>In the information retrieval field, higher numbers of statistically significant system pairs could indicate that the proposed method using document scores is better able to distinguish statistical difference compared to averaged topic scores. In a previous study, the ability of a metric to differentiate between the systems that are statistically significant was used to determine the effectiveness of the metric (<a href="#mof12">Moffat, Scholer and Thomas, 2012</a>). Similarly, in our study, the ability of a method to differentiate between the systems that are statistically significant determines the effectiveness of the method used. Type I error indicates 1% of the statistically significant system pairs could have wrongly rejected the null hypothesis. In other words, 10 in 1000 system pairs could be wrongly rejecting the null hypothesis.</p>
+
+<p>Tabular data provide accurate numbers of system pairs which are significantly or nonsignificantly different while graphical illustration shows the distribution of <em>p</em>-values between the topic-level and document-level. The graphical illustrations for both document-level methods and their sample sizes appear to have a similar pattern, hence, only one graph is provided in this paper. Figure 3 is a scatter plot graph comparing the <em>p</em>-values of system pairs between the topic-level rank-biased precision at cut-off 100 (<em>RBP@100</em>) and the document-level rank-biased precision (<em>RBP</em>, p=0.95) for TREC-9 with sample size 100. The x-axis represents the topic-level <em>p</em>-values, whereas the y-axis denotes the document-level aggregated <em>p</em>-values using <em>meanp</em>. The vertical and horizontal lines mark the axes with a <em>p</em>-value of 0.01 based on the significance testing.</p>
+
+ <figure class="centre">
+   <img src="p752fig3.png" alt="Figure 3: System pair p-values of RBP@100 (p=0.95) and RBP (p=0.95) for TREC-9 with sample size 100 " width="731" height="359">
+   <figcaption><br>
+      <strong>Figure 3: System pair p-values of RBP@100 (p=0.95) and RBP (p=0.95) for TREC-9 with sample size 100</strong>
+	  <pre>A) System pair p-values that were significantly different at document-level but not at topic-level; <br>B) system pair p-values that were significantly different at both topic- and document-level; <br>C) system pair p-values that were significantly different at topic-level but not at document-level; <br>D) system pair p-values that were not significantly different at both topic- and document-level.</pre>
+  </figcaption>
+</figure>
+
+<p>Regions A and C are of most interest to us because they include the system pairs with passive disagreements. Region A covers many system pair plots with <em>p</em>-values of 0.01 and below based on the document-level method. These were previously identified as nonsignificantly different in the topic-level method. In contrast, region C has fewer system pairs than region A. We can see that the difference in the distribution of <em>p</em>-values between region C and A shows that the document-level method is effective in identifying statistically significant system pairs compared to the topic-level method.</p>
+</section>
+
+<section>
+<h2>Conclusion</h2>
+<p>Based on the results of our study, it can be concluded that the document-level method is effective in identifying significantly different (<em>p=0.01</em>) system pairs. The document-level scores used in significance testing identify higher numbers of statistically significant system pairs compared to the topic-level method. In addition, statistically significant system pairs’ agreement percentage is high which also indicates the effectiveness of the proposed method. The use of document-level scores per system pair is reliable in statistically significant identification because active agreement remains consistent between test collections and between both metrics used in the experiment.</p>
+
+<p>When comparing the two document-level methods applied in statistical significance testing, it can be seen that the use of rank-biased precision document scores is better able to identify significantly different system pairs compared to using precision scores. However, both document-level methods are equally good. It can be concluded that individual document-level scores can be used as a pairwise system evaluation unit for information retrieval systems, instead of topic-level scores.</p>
+
+<p>Future research could analyse the relation of pairwise system evaluation using document-level scores with the difficulties of topics and how it affects the identification of statistically significant pairs.</p>
+</section>
+
+<section>
+ <h2>Acknowledgements</h2>
+
+ <p>We acknowledge the UMRG Programme - AET (Innovative Technology) (ITRC) (RP028E-14AET) from University of Malaya, Malaysia.</p>
+ </section>
+
+<section>
+ <h2 id="author">About the authors</h2>
+  <p> <strong>Prabha Rajagopal</strong>
+ is currently associated with the Faculty of Computer Science and Information Technology, University of Malaya, Malaysia. She received her Bachelor’s degree in Electronics Engineering from Multimedia University, Malaysia and Master’s degree in Computer Science from University of Malaya, Malaysia. She can be contacted at <a href="mailto:prabz13@yahoo.com">prabz13@yahoo.com</a><br><strong>Sri Devi Ravana</strong>  received her Master of Software Engineering from University of Malaya, Malaysia in 2001, and PhD from the Department of Computer Science and Software Engineering, The University of Melbourne, Australia, in 2012. Her research interests include information retrieval heuristics, data analytics and the Internet of things. She is currently a Senior Lecturer at the Department of Information Systems, University of Malaya, Malaysia. She can be contacted at <a href="mailto:sdevi@um.edu.my">sdevi@um.edu.my</a>
+ <strong>Harshit Srivastava</strong> received his Bachelor of Technology in Information Technology from Maharaja Agrasen Institute of Technology in New Delhi, India. His main research interest is in the field of Information Systems particularly in information retrieval, lcoud computing and the Internet of things. He can be contacted at <a href="mailto:harshit.ndl@gmail.com">harshit.ndl@gmail.com</a><br>
+<strong>Masumeh Sadat Taheri</strong> received her Master of Computer Science with the specialisation in Multimedia from University of Malaya, Malaysia in 2013. She worked as a research assistant in the information system department, Faculty of Computer Science and Information Technology at University of Malaya, Malaysia. Her current research interests include information retrieval evaluation, significance testing, scientometrics and game-based learning techniques. She can be contacted at <a href="mailto:Masumeh.Taheri@gmail.com">Masumeh.Taheri@gmail.com</a></p>
+ </section>
+
+ <section class="refs">
+<h2>References</h2>
+
+ <ul class="refs">
+
+ <li id="bac12">Baccini, A., Déjean, S., Lafage, L., &amp; Mothe, J. (2012). How many performance measures to evaluate information retrieval systems?  <em>Knowledge and Information Systems, 30</em>(3), 693–713.</li>
+ <li id="buc00">Buckley, C. and Voorhees, E. M. (2000).  Evaluating evaluation measure  stability. In <em>Proceedings of the 23rd annual international ACM SIGIR conference on Research and development in information retrieval SIGIR '00</em> (pp. 33–40). Athens, Greece: ACM.</li>
+ <li id="coo93">Cooper, H. (1993). <em>A handbook of research synthesis.</em>  New York, NY: Russell Sage Foundation.</li>
+ <li id="dep15"><a href="http://www.webcitation.org/6qIoBZXdN">Dependent t-test using SPSS</a>. (2015). Retrieved January 3, 2016, from https://statistics.laerd.com/spss-tutorials/dependent-t-test-using-spss-statistics.php (Archived by WebCite&reg; at http://www.webcitation.org/6qIoBZXdN).</li>
+ <li id="din14">Dinçer, B. T., Macdonald, C., &amp; Ounis, I. (2014). Hypothesis testing for the risk-sensitive evaluation of retrieval systems. In <em>Proceedings of the 37th international ACM SIGIR conference on Research &amp; development in information retrieval - SIGIR ’14 </em> (pp. 23–32). Gold Coast, Queensland: ACM. </li>
+ <li id="fis69">Fisher, R. A. (1969). <em>Statistical methods for research workers</em> (Fourteenth ed.). Edinburgh: Oliver and Boyd. </li>
+ <li id="fis95">Fisher, R. A. (1995). <em>Statistical methods, experimental design, and scientific inference</em>. New York, NY: Oxford University Press.</li>
+ <li id="gre01">Greengrass, E. (2001). <em>Information retrieval: a survey.</em>. OD Technical Report TR-R52-008-001. </li>
+ <li id="haw99">Hawking, D., Craswell, N., &amp; Thistlewaite, P. (1999). Overview of TREC-7 Very Large Collection Track. In <em>NIST Special Publication 500-242: the Seventh Text REtrieval Conference (TREC 7)</em> (pp. 1–13). Gaithersburg, MD: National Institute of Standards and Technology. </li>
+<li id="jar02">Järvelin, K., &amp; Kekäläinen, J. (2002). Cumulated gain-based evaluation of IR techniques. <em>ACM Transactions on Information Systems, 20</em>(4), 422–446. </li>
+<li id="jay15">Jayasinghe, G. K., Webber, W., Sanderson, M., Dharmasena, L. S., &amp; Culpepper, J. S. (2015). Statistical comparisons of non-deterministic IR systems using two dimensional variance. <em>Information Processing &amp; Management, 51</em>(5), 677–694. </li>
+<li id="joa05">Joachims, T., Granka, L., Pan, B., Hembrooke, H., &amp; Gay, G. (2005). Accurately interpreting clickthrough data as implicit feedback. In <em>Proceedings of the 28th annual international ACM SIGIR conference on Research and Development in Information Retrieval: SIGIR'05 </em> (pp. 154–161). Salvador, Brazil: ACM.</li>
+<li id="kul14">Kulinskaya, E., Morgenthaler, S., &amp; Staudte, R. (2014). Significance testing: an overview. In M. Lovric, (Ed.), <em>International encyclopedia of statistical science </em>(pp. 1318–1321). Berlin, Germany: Springer.</li>
+<li id="lew08">Lewandowski, D. (2008). The retrieval effectiveness of Web search engines: considering results descriptions. <em>Journal of Documentation, 64</em>(6), 915–937. </li>
+<li id="man09">Manning, C. D., Raghavan, P., &amp; Schütze, H. (2009). <em>An introduction to information retrieval</em>. Cambridge: Cambridge University Press. </li>
+<li id="mof12">Moffat, A., Scholer, F., &amp; Thomas, P. (2012). Models and metrics:IR evaluation as a user process. In <em>Proceedings of the Seventeenth Australasian Document Computing Symposium: ADCS ’12 </em> (pp. 47–54). Dunedin, New Zealand: ACM.</li>
+<li id="mof08">Moffat, A., &amp; Zobel, J. (2008). Rank-biased precision for measurement of retrieval effectiveness. <em>ACM Transactions on Information Systems, 27</em>(1), 1–27. </li>
+<li id="rav10">Ravana S.D., &amp; Moffat A. (2010). Score estimation, incomplete judgments, and significance testing in IR evaluation. In P. J. Cheng, M. Y. Kan, W. Lam, and P. Nakov, (Eds.), <em>Information Retrieval Technology: AIRS 2010</em> (Lecture Notes in Computer Science, 6458). Berlin, Germany: Springer.</li>
+<li id="rob12">Robertson, S. E., &amp; Kanoulas, E. (2012). On per-topic variance in IR evaluation. In <em>Proceedings of the 35th annual international ACM SIGIR conference on Research and Development in Information Retrieval: SIGIR ’12</em> (pp. 891–900). Portland, Oregon: ACM. </li>
+<li id="rob10">Robertson, S., Kanoulas, E., &amp; Yilmaz, E. (2010). Extending average precision to graded relevance judgments. In <em>Proceedings of the 33rd annual international ACM SIGIR conference on Research and Development in Information Retrieval: SIGIR’10 </em> (pp. 603–610). Geneva, Switzerland: ACM.  </li>
+<li id="sak08">Sakai, T., &amp; Kando, N. (2008). On information retrieval metrics designed for evaluation with incomplete relevance assessments. <em>Information Retrieval, 11</em>(5), 447–470. </li>
+<li id="san05">Sanderson, M., &amp; Zobel, J. (2005). Information retrieval system evaluation: effort, sensitivity, and reliability. In <em>Proceedings of the 28th annual international ACM SIGIR conference on Research and Development in Information Retrieval: SIGIR’05 </em> (pp. 162–169).  Salvador, Brazil: ACM. </li>
+<li id="she11">Sheskin, D. J. (2011). Parametric versus nonparametric tests. In M. Lovric, (Ed.),  <em>International encyclopedia of statistical science </em> (pp. 1051–1052). Berlin, Germany: Springer.</li>
+<li id="shi13">Shi, H., Tan, Y., Zhu, X., &amp; Wu, S. (2013). Measuring stability and discrimination power of metrics in information retrieval evaluation.  <em>Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 8206</em>, 8–15. Berlin, Germany: Springer-Verlag. </li>
+<li id="smu07">Smucker, M. D., Allan, J., &amp; Carterette, B. (2007). A comparison of statistical significance tests for information retrieval evaluation. In <em>Proceedings of the sixteenth ACM conference on information and knowledge management </em> (pp. 623–632). Lisbon, Portugal: ACM.</li>
+<li id="smu09">Smucker, M. D., Allan, J., &amp; Carterette, B. (2009). Agreement among statistical significance yests for information retrieval evaluation at varying sample sizes. In <em>Proceedings of the 32nd international ACM SIGIR conference on Research and Development in Information Retrieval: SIGIR ’09</em> (2, pp. 630–631). Boston, MA: ACM.</li>
+<li id="tsy12">Tsytsarau, M., &amp; Palpanas, T. (2012). Survey on mining subjective data on the web. <em>Data Mining and Knowledge Discovery, 24</em>(3), 478–514. </li>
+<li id="urb13">Urbano, J., Marrero, M., &amp; Martín, D. (2013). A comparison of the optimality of statistical significance tests for information retrieval evaluation. In <em>Proceedings of the 36th international ACM SIGIR conference on Research and Development in Information Retrieval</em> (pp. 925–928). Dublin, Ireland: ACM. </li>
+<li id="voo02">Voorhees, E. M., &amp; Buckley, C. (2002). The effect of topic set size on retrieval experiment error. In <em>Proceedings of the 25th annual international ACM SIGIR conference on Research and Development in Information Retrieval: SIGIR’02</em> (pp. 316–323). Tampere, FL: ACM. </li>
+<li id="wat99">Watters, C. (1999). Information retrieval and the virtual document. <em>Journal of the American Society for Information Science, 50</em>(11), 1028–1029. </li>
+<li id="web10">Webber, W., Moffat, A., &amp; Zobel, J. (2010). <a href="http://www.webcitation.org/6qIoSA86A">The effect of pooling and evaluation depth on metric stability.</a> In <em>The 3rd International Workshop on Evaluating Information Access (EVIA 2010)</em> (pp. 7–15). Retrieved from http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings8/EVIA/03-EVIA2010-WebberW_slides.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6qIoSA86A).</li>
+</ul>
+
+</section>
+</article>
+</body>  
+ </html> 
+
+

@@ -1,0 +1,1085 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title>
+      Reinforcement learning in information searching
+    </title>
+    <meta charset="utf-8">
+    <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif">
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css"><!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="Reinforcement learning in information searching">
+    <meta name="author" content="Yonghua Cen, Liren Gan, Chen Bai">
+    <meta name="dcterms.subject" content="This study is designed to investigate how university students learn to use the search functions provided by scholarly database systems and adjust their searching strategies without instructions. The focus of this research is on 'learning of information searching skills in practice'. Mathematical reinforcement learning models are brought in to fit the data from user experiments. By model fitting and analysis, this study aims to discover the characteristics of users’ searching behaviour, and the learning mechanisms controlling users’ adjustments of search strategies.">
+    <meta name="description" content="The study seeks to answer two questions: (1) How do university students learn to use correct strategies to conduct scholarly information searches without instructions? (2) What are the differences in learning mechanisms between users at different cognitive levels? Two groups of users, thirteen first year undergraduate students (freshmen) and thirty-four final year undergraduate students (seniors), were recruited into our experimental study and executed ten different search tasks independently. Five reinforcement learning models were introduced to quantitatively simulate the micro process of users’ self-regulated learning of search expertise by trial and error. The experimental data were divided into two parts. The first 70% of the data were used to estimate the parameters of each model. The remaining 30% were fitted by the estimated models. The model best fitting the data of users in each group was used to explain their learning behaviour. Most undergraduates tended to repeat the strategies that brought success in their earlier experiences. Freshmen’s learning behaviour manifested remarkable Markov properties. Their strategy selection was always made according to the feedback obtained in the last search activity. Seniors’ strategy adjustment depended on the accumulated effect of past strategy adoptions. They displayed strong characteristics of rational thinking. In the process of learning searching expertise, users demonstrate reinforcement characteristics. Moreover, users at different cognitive levels exhibit different reinforcement patterns. Theoretical and practical implications were proposed from the perspectives of training programme design, adaptive information retrieval system design and information behaviour model development.">
+    <meta name="keywords" content="information searching, reinforcement learning, learning, information behaviour"><!--leave the following to be completed by the Editor-->
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/18-1/paper569.html">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/18-1/infres181.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2013-03-15">
+    <meta name="geo.placename" content="global">
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 18 no. 1, March, 2013
+      </h4>
+    </header>
+    <article>
+      <h1>
+        <strong>Reinforcement learning in information searching</strong>
+      </h1><br>
+      <div style="margin-left: 20%; margin-right: 10%;">
+        <h4>
+          <a href="#authors">Yonghua Cen</a><br>
+          Department of Information Management, School of Economics and Management, Nanjing University of Science and Technology, Jiangsu, 210094, China <em>and</em> Advanced Analytics Institute, University of Technology Sydney, PO Box 123, Broadway, NSW, 2007, Australia<br>
+          <a href="#authors">Liren Gan</a> and <a href="#authors">Chen Bai</a><br>
+          Department of Information Management, School of Economics and Management, Nanjing University of Science and Technology, Jiangsu, 210094, China
+        </h4>
+      </div><br>
+      <form>
+        <fieldset>
+          <legend>Abstract</legend>
+          <blockquote>
+            <strong>Introduction.</strong> The study seeks to answer two questions: How do university students learn to use correct strategies to conduct scholarly information searches without instructions? and, What are the differences in learning mechanisms between users at different cognitive levels?<br>
+            <strong>Method.</strong> Two groups of users, thirteen first year undergraduate students (freshmen) and thirty-four final year undergraduate students (seniors), were recruited into our experimental study and executed ten different search tasks independently. Five reinforcement learning models were introduced to quantitatively simulate the micro process of users' self-regulated learning of search expertise by trial and error.<br>
+            <strong>Analysis.</strong> The experimental data were divided into two parts. The first 70% of the data was used to estimate the parameters of each model. The remaining 30% was fitted by the estimated models. The model best fitting the data of users in each group was used to explain their learning behaviour.<br>
+            <strong>Results.</strong> Most undergraduates tended to repeat the strategies that brought success in their earlier experiences. Freshmen's learning behaviour manifested remarkable Markov properties. Their strategy selection was always made according to the feedback obtained in the last search activity. Seniors' strategy adjustment depended on the accumulated effect of past strategy adoptions. They displayed strong characteristics of rational thinking.<br>
+            <strong>Conclusions.</strong> In the process of learning searching expertise, users demonstrate reinforcement characteristics. Moreover, users at different cognitive levels exhibit different reinforcement patterns. Theoretical and practical implications were proposed from the perspectives of training programme design, adaptive information retrieval system design and information behaviour model development.
+          </blockquote>
+        </fieldset>
+      </form><br>
+      <br>
+      <section>
+        <h2>
+          Introduction
+        </h2>
+        <p>
+          The present study is designed to investigate how university students learn to use the search functions provided by scholarly databases and adjust their searching strategies without instructions. The focus of this research is on learning of information searching skills in practice. Here information searching means '<em>a potential sub-stage in the information-seeking process</em>' (<a href="#Wilson1999">Wilson 1999</a>: 258) and '<em>the micro-level of behaviour employed by the searcher in interacting with information systems</em>' (<a href="#Wilson2000">Wilson 2000</a>: 49).
+        </p>
+        <p>
+          Since Belkin in the <a href="#Belkin1980">1980s</a>, information science has attempted to bring its information seeking perspective into information search (e.g., <a href="#Bates2002">Bates 2002</a>; <a href="#Belkin1996">Belkin <em>et al</em>. 1996</a>; <a href="#Ingwersen1996">Ingwersen 1996</a>; <a href="#Saracevic1996">Saracevic 1996</a>; <a href="#Sutcliffe2000">Sutcliffe <em>et al</em>. 2000</a>; <a href="#Spink1997">Spink 1997</a>; <a href="#Spink2002a">Spink <em>et al</em>. 2002a</a>; <a href="#Spink2002b">Spink <em>et al</em>. 2002b</a>; <a href="#Wilson1999">Wilson 1999</a>, <a href="#Wilson2000">Wilson 2000</a>; <a href="#Wilson2002">Wilson <em>et al</em>. 2002</a>). However, pertinent literature bridging learning and information searching sheds more lights on <em>learning of knowledge by searching</em> (<a href="#Colvin2004">Colvin and Keene 2004</a>; <a href="#Ford2003">Ford <em>et al</em>. 2003</a>; <a href="#Laxman2010">Laxman 2010</a>; <a href="#Marchionini2006">Marchionini 2006</a>; <a href="#Puustinen2009">Puustinen and Rouet 2009</a>; <a href="#Zhu2011">Zhu <em>et al</em>. 2011</a>), rather than <em>learning of searching by practice</em>. By <em>learning of knowledge by searching</em>, we mean that users acquire knowledge for sense-making or problem-solving purposes through information searching, while <em>learning of searching by practice</em> refers to that users improve the level of search skills through practising searches. Several longitudinal studies (<a href="#Chu2007">Chu and Law 2007</a>; <a href="#Vakkari2001">Vakkari 2001</a>; <a href="#Warwick2009">Warwick <em>et al</em>. 2009</a>) examined users' experiences of academic information seeking and the development of their search expertise. However, few attempts have been made to disclose the behavioural evolution and cognitive dynamics during users' self-regulated learning of search skills by trial and error.
+        </p>
+        <p>
+          In this study, it is assumed that there is an autonomous reinforcement learning process during academic users' information searching and that different users demonstrate different reinforcement patterns of learning. Specifically, mathematical reinforcement learning models are brought in to fit the data from user experiments. By model fitting and analysis, this study aims to discover the characteristics of users' searching behaviour, and the learning mechanisms controlling users' adjustments of search strategies.
+        </p>
+        <p>
+          The rest of the paper proceeds as follows: related research is reviewed; then the research questions and assumptions are proposed, followed by the description of the quasi-experiment approach employed in this study, and the process of model estimation and validation; the results and discussion are presented and concluded afterwards; finally, implications and further research are discussed.
+        </p>
+        <h2>
+          Literature review
+        </h2>
+        <h3>
+          Learning in information searching
+        </h3>
+        <h4>
+          Learning of searching by practice versus learning of knowledge by searching
+        </h4>
+        <p>
+          As commented by Jansen <em>et al</em>. (<a href="#Jansen2009">2009</a>), in many studies concerning information seeking behaviour, the learning aspect is assimilated into other frameworks, such as sense-making and problem-solving (<a href="#BrandGruwel2009">Brand-Gruwel <em>et al</em>. 2009</a>; <a href="#Eisenberg1990">Eisenberg and Berkowitz 1990</a>; <a href="#Kuhlthau1993">Kuhlthau 1993</a>; <a href="#Savolainen1993">Savolainen 1993</a>). Most of the research linking information seeking or searching with learning emphasizes <em>learning of knowledge by searching</em> (<a href="#Colvin2004">Colvin and Keene 2004</a>; <a href="#Ford2003">Ford <em>et al</em>. 2003</a>; <a href="#Laxman2010">Laxman 2010</a>; <a href="#Marchionini2006">Marchionini 2006</a>; <a href="#Puustinen2009">Puustinen and Rouet 2009</a>; <a href="#Zhu2011">Zhu <em>et al</em>. 2011</a>), rather than <em>learning of searching by practice</em>, although there are commonalities between these two kinds of learning process. Nevertheless, from previous studies, learning as a means to develop searching skills can still be found. For example, some studies underline users' learning and understanding of search tasks, information needs (<a href="#Cole2007">Cole <em>et al</em>. 2007</a>; <a href="#Kelly2007">Kelly and Fu 2007</a>), and search strategies (<a href="#Halttunen2003">Halttunen 2003</a>; <a href="#He2008">He <em>et al</em>. 2008</a>; <a href="#Saito2007">Saito and Miwa 2007</a>). Cole <em>et al</em>. (<a href="#Cole2007">2007</a>) conducted a field study to examine how domain novices learned to represent the topic spaces of the search tasks. Kelly and Fu (<a href="#Kelly2007">2007</a>) employed online elicitation forms to collect users' descriptions of the search topics. The forms were distributed to users in later experiments, and significantly helped them formulate better queries. Saito and Miwa (<a href="#Saito2007">2007</a>) carried out controlled experiments to evaluate the educational potentials of a deliberately constructed search-process feedback system in facilitating reflective activities for online searching. Their findings confirm that the performance of the participants supported by the feedback system improved substantially. He <em>et al</em>. (<a href="#He2008">2008</a>) examined the effects of two different training approaches, referred to as conceptual description and search practice, on users' learning and understanding of using a case-based reasoning retrieval system. Halttunen (<a href="#Halttunen2003">2003</a>) investigated students' interpretations of information retrieval know-how and summarized the principles of designing constructive learning environments for information retrieval.
+        </p>
+        <h4>
+          Learning process
+        </h4>
+        <p>
+          Studies regarding the process of users' learning of searching expertise can be classified into two categories: self-regulated learning (<a href="#Jansen2009">Jansen <em>et al</em>. 2009</a>; <a href="#Kuhlthau1993">Kuhlthau 1993</a>; <a href="#Xie2000">Xie 2000</a>; <a href="#Xie2007">Xie 2007</a>) and instruction-assisted learning (<a href="#Cole2007">Cole <em>et al</em>. 2007</a>; <a href="#Gerjets2008">Gerjets and Hellenthal-Schorr 2008</a>; <a href="#Halttunen2003">Halttunen 2003</a>; <a href="#Kelly2007">Kelly and Fu 2007</a>; <a href="#Kuhlthau2007">Kuhlthau <em>et al</em>. 2007</a>; <a href="#Saito2007">Saito and Miwa 2007</a>). Besides, in the view that learning of searching expertise is a dynamic process, researchers (<a href="#Chu2007">Chu and Law 2007</a>; <a href="#Vakkari2001">Vakkari 2001</a>; <a href="#Warwick2009">Warwick <em>et al</em>. 2009</a>) conducted longitudinal investigations to track the change of users' searching expertise over time.
+        </p>
+        <p>
+          By self-regulated learning, we mean that users finish searching all by themselves, without guides from others or systems. Grounded in the constructivist view of learning, Kuhlthau (<a href="#Kuhlthau1993">1993</a>) presented a six-stage model of information search process: initiation, selection, exploration, formulation, collection and presentation. The whole process involves 'the total person incorporating thinking, feeling and acting in the dynamic process of learning' (<a href="#Kuhlthau1993">Kuhlthau 1993</a>: 348) , in which users move from uncertainty to understanding. Xie (<a href="#Xie2000">2000</a>; <a href="#Xie2007">2007</a>) investigated how the interplay between plans and situations lead to users' shifts of strategies and interactive intentions within an information seeking session. The twofold shifts in Xie's study are essentially the results of users' self-assisted reflective learning. However, in existing research, the learning process in information seeking is aimed at problem solving, rather than search skill acquiring. In response to this, Jansen <em>et al</em>. (<a href="#Jansen2009">2009</a>: 643) called for a learning theory, which 'may better describe the information searching process than more commonly used paradigms of decision making or problem solving'. Their research indicates that different learning levels relate to particular searching characteristics. The results partially support that searching episodes are learning events.
+        </p>
+        <p>
+          In recent years, instruction-assisted learning including social learning and training-based learning has been much stressed and the influences of external intervention on users' learning extensively analysed. Kuhlthau <em>et al</em>. (<a href="#Kuhlthau2007">2007</a>) elaborated guided inquiry as 'a dynamic, innovative way of developing information literacy'. Cole <em>et al</em>. (<a href="#Cole2007">2007</a>) claimed that instructive intervention helps novices bridge the gap between their mental models and the thesaurus's hierarchical syndetic representation of the search topic. According to studies of Kelly and Fu (<a href="#Kelly2007">2007</a>) and Saito and Miwa (<a href="#Saito2007">2007</a>), when provided with analogous information, such as keyword description of similar search topics and information about other participants' search process, participants greatly improve their search effectiveness. Halttunen (<a href="#Halttunen2003">2003</a>) maintained that information retrieval instruction should be integrated with constructive learning. Attempting to design constructive learning environments, Halttunen summarized five different aspects of participants' interpretations of information retrieval, and examined their relationship with learning styles and academic backgrounds. Gerjets and Hellenthal-Schorr (<a href="#Gerjets2008">2008</a>) proposed a user-oriented Web training based on a conceptual decomposition of the sub-competencies of media literacy and the sub-processes of information retrieval, and a task analysis of information problems. Their study shows this training approach is more beneficial to develop high school students' declarative knowledge of the Web and facilitate their searching, than conventional technique-oriented trainings.
+        </p>
+        <p>
+          Taking a long-term view, Chu and Law (<a href="#Chu2007">2007</a>) investigated twelve postgraduate students' growing understanding of searching skills over a one-year period. They collected data from surveys, interviews, students' search statements and think-aloud protocols. Their findings reveal that, in the beginning, students conducted more questionable subject searches, with little attention paid to keyword searching; later, as they learn more about the capabilities of keyword searching, they prefer keyword searching to subject searching, and at the same time they proceed from simple keyword searches to more complex keyword searches. Vakkari (<a href="#Vakkari2001">2001</a>) observed eleven master's students' information searching processes during a period of four months when they were preparing their research proposals. The research corroborates that students' exhibited searching characteristics (including information needs, search tactics, term choices, relevance evaluation and use of obtained information) which correlate highly to their problem-solving stage and their mental model. Based on a two-year investigation of the growth of information seeking skills in a group of undergraduate students, Warwick <em>et al</em>. (<a href="#Warwick2009">2009</a>) found that the demands of students' undertakings act as the major factor leading to the progress of their information seeking; students follow the law of minimum effort to retain established information-seeking strategies or seek new methods. Whereas studies by Chu and Law (<a href="#Chu2007">2007</a>) and Vakkari (<a href="#Vakkari2001">2001</a>) provide little evidence on how users acquire the knowledge, research done by Warwick <em>et al</em>. (<a href="#Warwick2009">2009</a>) draws a more detailed picture of users' development of searching expertise.
+        </p>
+        <h4>
+          Influencing factors
+        </h4>
+        <p>
+          Besides measuring the impacts of external instructions, the majority of previous work concerning learning behaviour in information searching highlights the influences on users' learning process of users' personalities (including individual experience, knowledge, cognitive style, learning style, and so on) (<a href="#Bilal2002">Bilal and Kirby 2002</a>; <a href="#Jansen2009">Jansen <em>et al</em>. 2009</a>; <a href="#Tabatabai2005">Tabatabai and Shore 2005</a>; <a href="#Tenopir2008">Tenopir <em>et al</em>. 2008</a>; <a href="#Thatcher2008">Thatcher 2008</a>; <a href="#Wildemuth2004">Wildemuth 2004</a>; <a href="#Zhang2008">Zhang 2008</a>), task complexity (which is associated with users' familiarity with the search task) (<a href="#Jansen2009">Jansen <em>et al</em>. 2009</a>; <a href="#Kim2002">Kim 2002</a>; <a href="#Zhang2008">Zhang 2008</a>) or system characteristics (<a href="#Wilson2009">Wilson <em>et al</em>. 2009</a>).
+        </p>
+        <p>
+          For instance, using comparative studies, Bilal and Kirby (<a href="#Bilal2002">2002</a>), Tabatabai and Shore (<a href="#Tabatabai2005">2005</a>) and Thatcher (<a href="#Thatcher2008">2008</a>) reported that users with different knowledge backgrounds or cognitive capacity (such as novices and experts, children and adults) exhibit different behavioural characteristics in information searching. Wildemuth (<a href="#Wildemuth2004">2004</a>) conjectured that domain knowledge affects the adjustments of search tactics: insufficient domain knowledge is accompanied with awkward concept representations and erroneous reformulations of search patterns. Zhang (<a href="#Zhang2008">2008</a>) explored the effects of mental models on undergraduate students' online searching. The researcher concluded from experimental studies that students' familiarity with the task significantly influences their ways to initiate interaction, query constructions, and search tactics. Recently, Jansen <em>et al</em>. (<a href="#Jansen2009">2009</a>) examined the learning characteristics of users with different cognitive levels in completing search tasks of different complexities. Their study substantiates the differences in exhibited searching characteristics among users of different learning styles. Tenopir <em>et al</em>. (<a href="#Tenopir2008">2008</a>) examined the affective and cognitive dimensions of searching behaviour and included learning styles as an influencing factor. They administered 41 participants into experiments and used audio/video devices to capture and record their interactions with <a href="http://www.sciencedirect.com/">ScienceDirect</a>. The researchers reported the associations between engineering graduate students' learning styles (converging vs. assimilating) and the characteristics of their search sessions. Kim (<a href="#Kim2002">2002</a>) confirmed that cognitive style (field dependence vs. field independence), search experience (novice vs. experienced searchers), and task type (known-item vs. subject search tasks) are variables impacting users' search performance and navigational style on the Web. Wilson <em>et al</em>. (<a href="#Wilson2009">2009</a>) quantified the strengths and weaknesses of three advanced search interfaces in scaffolding user-system interactions by integrating existing research models of users, needs, and behaviour.
+        </p>
+        <p>
+          In summary, prior research has attempted to connect information searching with learning; however, limited efforts have been made to model the underlying process of users' learning in information searching. This is preliminarily examined in our work.
+        </p>
+        <h3>
+          Reinforcement learning models
+        </h3>
+        <p>
+          Humans share with other animals a simple way of learning, which is usually called reinforcement learning. This reinforcement learning seems to be biologically inherent. If an action leads to a disadvantageous outcome (also refers to a negative <em>payoff</em> or punishment), this action will be avoided in the future; otherwise, if an action leads to a favourable outcome (a positive <em>payoff</em> or reward), it will reoccur (<a href="#Brenner2006">Brenner 2006</a>; <a href="#Sutton1998">Sutton and Barto 1998</a>). Here, the word <em>action</em> can also be understood as <em>strategy</em>.
+        </p>
+        <p>
+          In the spirit of reinforcement learning, a variety of reinforcement learning models have been established in psychology, economics and computer science to quantitatively analyse different learning behaviour in different contexts (<a href="#Borgers2000">Börgers and Sarin 2000</a>; <a href="#Bush1953">Bush and Mosteller 1953</a>; <a href="#Cross1973">Cross 1973</a>; <a href="#Erev1996">Erev and Roth 1996</a>; <a href="#Fu2006">Fu and Anderson 2006</a>; <a href="#Izquierdo2007">Izquierdo <em>et al</em>. 2007</a>; <a href="#Roth1995">Roth and Erev 1995</a>; <a href="#Shimokawa2009">Shimokawa <em>et al</em>. 2009</a>). Among them, Bush and Mosteller's model (<a href="#Bush1953">Bush and Mosteller 1953</a>), Cross's model (<a href="#Cross1973">Cross 1973</a>), Börgers and Sarin's model (<a href="#Borgers2000">Börgers and Sarin 2000</a>) and Roth and Erev's two models (<a href="#Roth1995">Roth and Erev 1995</a>; <a href="#Erev1996">Erev and Roth 1996</a>) can be regarded as the five most typical ones, and are employed to fit the experimental data in our study. These models are briefly compared in Table 1. More detailed mathematical descriptions regarding these models can be found in the <a href="#Appendix">Appendix</a>.
+        </p>
+        <table class="center" style="width:100%;" id="Table_1">
+          <caption>
+            <br>
+            Table 1: Comparison of the five typical reinforcement learning models<br>
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Model
+              </th>
+              <th>
+                Mechanism by which payoffs affect strategy adjustments
+              </th>
+              <th>
+                Measure of the extent to which payoffs affect strategy adjustments
+              </th>
+              <th style="width;50%;">
+                Basic ideas
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Bush and Mosteller's model
+              </td>
+              <td rowspan="3">
+                Payoff of the last strategy adoption
+              </td>
+              <td>
+                A fixed constant
+              </td>
+              <td>
+                When a certain strategy leads to a positive payoff, the probability of this strategy being chosen again increases and the probability of it being avoided decreases. Otherwise, the probability of the strategy being further adopted decreases and the probability of it being avoided increases.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Börgers and Sarin's model
+              </td>
+              <td>
+                Difference between the actual payoff and the expected one
+              </td>
+              <td>
+                If the actual payoff of a strategy exceeds the expectation, the probability of this strategy being further selected increases; if the payoff is smaller than the expectation, the probability of the strategy being further adopted decreases.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cross's model
+              </td>
+              <td>
+                A monotonic function of the payoff
+              </td>
+              <td>
+                The attraction of a strategy is defined as a linear function of the payoff, by configuring the reinforcement strength as a variable correlated to the payoff.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Roth and Erev's model
+              </td>
+              <td rowspan="2">
+                Accumulated effects of all the previous strategy adoptions
+              </td>
+              <td>
+                Accumulated payoff from adopting a strategy
+              </td>
+              <td>
+                Decision makers choose a strategy based on their experiential expectations for all strategies. These expectations result from the accumulated effect of their past strategy adoptions, not only the last one.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Roth and Erev's modified model
+              </td>
+              <td>
+                Accumulated payoff from adopting a strategy (taking forgetting, subjective cognition and neighbour strategies into account)
+              </td>
+              <td>
+                A forgetting parameter is incorporated into the basic model of Roth and Erev to measure the attenuation degree of users' experiences influencing their strategy selections. A transferring parameter is added to determine the extent of the reinforcement strength being transferred to the unemployed strategies. At the same time, different individuals make different subjective evaluations to a strategy even when the payoffs from applying the strategy are equal.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The process of information searching is also a process of decision-making or action-taking (<a href="#Du2011b">Du and Spink 2011</a>; <a href="#Kuhlthau1993">Kuhlthau 1993</a>; <a href="#Savolainen1993">Savolainen 1993</a>). Users exhibit similar reinforcement learning characteristics in this process. Reinforcement learning models can be adopted or revised to disclose the mechanisms dominating users' learning of searching knowledge. This is further studied in our research.
+        </p>
+        <h2>
+          Research questions and assumptions
+        </h2>
+        <h3>
+          Research questions
+        </h3>
+        <p>
+          The focus of this study is on <em>learning of searching by practice</em>, instead of <em>learning of knowledge by searching</em>. It also concerns the effects of personal traits (e.g., information seeking experience and academic backgrounds) on users' learning of search strategies in information searching. However, it is not to provide evidence for or against these effects by qualitative or quantitative analysis of data gathered from experiments, questionnaires, interviews or observations. Rather, this study brings in several reinforcement learning models to examine the micro process of users' self-regulated learning of search expertise by trial and error. It aims at mining the mechanisms underlying users' behaviour adjustments and discovering their learning characteristics and cognitive dynamics during information searching.
+        </p>
+        <p>
+          The specific research questions are as follows:
+        </p>
+        <ol type="1">
+          <li>How do university students learn to use correct strategies to conduct scholarly information searches without instructions? In other words, are there learning rules controlling their strategy adjustments during searching? If so what are the rules?
+          </li>
+          <li>What are the differences in learning mechanisms between users at different cognitive levels?
+          </li>
+        </ol>
+        <h3>
+          Assumptions
+        </h3>
+        <p>
+          The research question design, experiment design, model application and explanation in this study are founded on the following assumptions:
+        </p>
+        <p>
+          <b><i>(1) In the process of self-regulated learning of searching expertise, users demonstrate reinforcement characteristics.</i></b>
+        </p>
+        <p>
+          When a user completes a search task by a certain strategy, the user may evaluate this process in terms of time cost, quantity of relevant results, and so on. Depending on this evaluation, the user will form a tendency to retain this strategy or reject it by switching to other strategies for next tasks. In other words, users adjust their behaviour by referring to their experience in database using and based on their knowledge about the available strategies. This process of dynamic alignment tallies with the core conception of reinforcement learning (<a href="#Sutton1998">Sutton and Barto 1998</a>). Figure 1 describes this process of strategy reformulation.
+        </p>
+        <figure class="centre">
+          <img src="p569Fig1.jpg" id="Figure_1" alt="Reinforcement learning mechanism in search strategy formulation">
+          <figcaption>
+            Figure 1: Reinforcement learning mechanism in search strategy formulation
+          </figcaption>
+        </figure>
+        <p>
+          The above process of reinforcement learning and search strategy adjustments is also consistent with the information search process proposed by Ellis (<a href="#Ellis1989">1989</a>) and Wilson (<a href="#Wilson1997">1997</a>), in which a user first defines information needs, and then formulates or selects a search strategy, performs searching or browsing, obtains and evaluates the search results.
+        </p>
+        <p>
+          <b><i>(2) Users at different cognitive levels demonstrate different reinforcement patterns.</i></b>
+        </p>
+        <p>
+          It is assumed that users' personal traits have impacts on their information behaviour, and there are differences in the reinforcement characteristics between different users during their learning of searching expertise. This assumption is justified in the present study by introducing different reinforcement learning models to fit the experimental data collected from different user groups, and evaluating the applicability of the models to the data.
+        </p>
+        <h2>
+          Research design
+        </h2>
+        <h3>
+          Overview
+        </h3>
+        <p>
+          A quasi-experiment approach was designed according to the requirements of data analysis and model inference and fitting. Two groups of undergraduates at different cognitive levels participated in the experiments in January 2009. They were asked to execute set search tasks in a specified academic database system independently. The process of their strategy adjustments by trial and error was observed and recorded by questionnaires and a screen-tracking software. The gathered experimental data were quantitatively fitted by different reinforcement learning models. The fitness of the models to the data was checked and the best model to explain the learning behaviour of users in each group was chosen. By doing this, the dynamic learning mechanisms behind users' explicit strategy formulations were analysed and the differences in learning characteristics between different user groups were examined.
+        </p>
+        <h3>
+          Participants
+        </h3>
+        <p>
+          In the first experiment, thirteen first-year undergraduate students (freshmen) who had little knowledge of academic information searching were organised into our laboratory, while in the second experiment, thirty-four fourth-year undergraduate students (seniors) who did have experience of academic information seeking were administered together. All students had experience of using <a href="http://www.google.com">Google</a> or <a href="http://www.baidu.com">Baidu</a> (a well-known local search engine in China).
+        </p>
+        <p>
+          It is supposed that there are discrepancies in the level of cognitive processing between freshmen and senior students, considering the differences in their information seeking experience, knowledge and capability of comprehension, application, analysis, synthesis and evaluation (<a href="#Bloom1956">Bloom <em>et al</em>. 1956</a>). The cognitive level of participants is the independent variable in this study. It is assumed to affect the dependent variable, i.e., users' reinforcement learning behaviour.
+        </p>
+        <h3>
+          Experiment settings
+        </h3>
+        <p>
+          All participants were required to log in the search page of <a href="http://www.cnki.net">CNKI</a>, a well-known scholarly database system in China, and perform ten different search tasks without extra instructions.
+        </p>
+        <p>
+          The same search tasks were assigned to all participants. These tasks were designed before the experiments by the researchers. The tasks relate to different subjects. A task form giving descriptions for each task was handed out to participants before they started the tasks. The descriptions include the task title and several keywords associated with the task topic, which removed the chance participants would misunderstand the task.
+        </p>
+        <p>
+          For each task, the researchers had done a test search in the database system beforehand, and labelled all the relevant search results. These results served as standard ones. Once participants finished a task, the standard results were presented to them to check the correctness of their search performances.
+        </p>
+        <p>
+          A questionnaire was devised to solicit the perceptions of a participant with regard to the formulated search strategy for each task. The perceptions include:
+        </p>
+        <ol type="1">
+          <li>The description of the search strategy, including the search function, the keywords, the way the keywords were input, and additional details;
+          </li>
+          <li>The participant's expectation of the strategy bringing desired results;
+          </li>
+          <li>The satisfaction of the participant with the strategy after applying it and comparing the results with the standard ones.
+          </li>
+        </ol>
+        <p>
+          An incentive mechanism was designed to avoid the possible insufficiency of users' motivation to complete the tasks: those who got better search results would be rewarded with delicate and attractive presents.
+        </p>
+        <p>
+          Besides, participants were told by the researchers that for each task:
+        </p>
+        <ol type="1">
+          <li>All keywords that represent the task topic must occur in each title of the search results. To this end, participants must learn to use multiple search boxes and logical AND connector, so that they could input each keyword in each box and formulate a correct query to fulfil the task.
+          </li>
+          <li>Search results totally consistent with the standard results would be considered satisfactory, and presents would be awarded to those who reached the satisfactory results.
+          </li>
+        </ol>
+        <p>
+          The participants' interactions with the database system were recorded by a screen-tracking software to provide extra information for data analysis.
+        </p>
+        <p>
+          The above experimental design provides a quasi-experiment approach. The variables such as experimental environments, search tasks, information need understanding, and external stimulations were controlled to be consistent between each participant. As for information need understanding, it was not necessary for participants to figure out what keywords should be used for each task, since standard keywords were offered in the task form. With respect to external stimulations, there was no instruction supplied to participants, and the same incentive mechanism was applied to each of them.
+        </p>
+        <p>
+          By controlling the above interventions, the effects of factors other than participants' cognitive levels were excluded from the experiments to the maximum extent practicable, and therefore the process of participants' strategy adjustments in performing the search tasks could be more accurately observed.
+        </p>
+        <h3>
+          Search strategies
+        </h3>
+        <p>
+          In relation to search strategies, Bates (<a href="#Bates1979">1979</a>) defined twenty-nine tactics in four categories: monitoring, file structure, search formulation and term. In Bates's model, search formulation tactics are the moves that searchers make to design or redesign search formulation, while term tactics are the actions searchers take in selecting and revising terms within the search formulation. Likewise, Belkin <em>et al</em>. (<a href="#Belkin1996">1996</a>) proposed a classification scheme of search strategies. In Belkin's taxonomy, strategies encompass term strategies, database strategies, interaction strategies, and search strategies. Search strategies or tactics in these studies are conceptualised to describe the possible actions a user can take from initiating a search task to concluding it.
+        </p>
+        <p>
+          In the present research, a search strategy refers to the action that a participant takes to carry out a search task, by selecting one of the search functions offered by the search system and formulating a search query. The optional search functions include the basic search, the advanced search and the expert search. To facilitate model inference and fitting, the search strategies that a participant could apply to construct a query were categorised into three types:
+        </p>
+        <ol type="1">
+          <li>The first type, the <em>simple-search strategy</em>, refers to when a participant inputs all the keywords in a single textbox either in the basic search page or the advanced page. Since in the experiment system, those input keywords without any Boolean operator are processed according to default 'OR' logic, this strategy may incur much irrelevant feedback. In other words, the search results may be of high recall but of low accuracy.
+          </li>
+          <li>The second type, the <em>unsuccessful multiple-textbox strategy</em>, refers to when a participant selects the advanced search, inputs keywords in multiple textboxes as per one word in one box, but does not specify any Boolean operator to logically connect the keywords. In the same way to the simple-search strategy, the system processes the keywords under 'OR' logic, and the user may not get the exact feedback up to the standard results. However, from the perspective of learning, when participants apply this strategy, they somewhat get the conception of the advanced search, which is supposed more effective than the simple search.
+          </li>
+          <li>The third type, the <em>logic-AND-search strategy</em>, is the target strategy for the experiments in our study. When applying this strategy, a participant selects the advanced search, inputs keywords in multiple textboxes with one word in one box, and uses 'AND' operators to organise the keywords into a meaningful query. If all the required keywords associated with a search task are input, this strategy is expected to lead to correct search results.
+          </li>
+        </ol>
+        <p>
+          From the collected experimental data, it was found that no student ever made attempts at the expert search.
+        </p>
+        <h3>
+          Procedure
+        </h3>
+        <p>
+          Given a search task, a participant was asked to carry out the following process:
+        </p>
+        <ol type="1">
+          <li>Understand the task by examining the required keywords listed in the task form;
+          </li>
+          <li>Figure out a strategy, including the search function and the keyword inputting scheme;
+          </li>
+          <li>Depict the search strategy on the questionnaire;
+          </li>
+          <li>Write down an expectation score (i.e., the participant's confidence of the strategy bringing desired results) on the questionnaire;
+          </li>
+          <li>Execute the search (namely apply the formulated strategy);
+          </li>
+          <li>Evaluate the search results by comparing them with the standard results presented by the organisers;
+          </li>
+          <li>Write down a satisfaction score on the questionnaire;
+          </li>
+          <li>Continue the next search task until all tasks are completed.
+          </li>
+        </ol>
+        <p>
+          Each participant's learning process was observed by tracking their strategy adjustments in executing all the search tasks in sequence.
+        </p>
+        <h2>
+          Data analysis
+        </h2>
+        <p>
+          For each of the two student groups, the collected experimental data were divided into two parts: (1) The first 70% of the data (associated with the first seven search tasks) were used to infer the parameters of each model; (2) The remaining 30% (regarding the last three tasks) were fitted by the estimated models. The model best fitting the data was used to explain the learning behaviour of the users in the corresponding group.
+        </p>
+        <h3>
+          Estimation of model parameters
+        </h3>
+        <p>
+          The maximum likelihood method was used to estimate the parameters of each model with regard to the experiment data of each group. The likelihood function for the <em>g</em>-th group and <em>k</em>-th model is defined as:
+        </p><img id="Equat_1" alt="equation" src="p569Equat1.jpg">
+        <p>
+          where T denotes the parameters, <em>T</em>=7 is the number of training tasks, and <em>N<sub>g</sub></em> is the number of participants in group <em>g</em>. <img src="p569Equat1_1.jpg" alt="equation" width="45" height="25"> stands for the attraction of strategy <em>j</em> adopted by user <em>i</em> for task <em>t</em>, and is computed under the updating rules of model <em>k</em>.
+        </p>
+        <p>
+          Table 2 details the parameter estimates.
+        </p>
+        <table id="Table_2" class="center">
+          <caption>
+            <br>
+            Table 2: Parameters estimates<br>
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Student Group
+              </th>
+              <th>
+                Bush and Mosteller's model
+              </th>
+              <th>
+                Börgers and Sarin's model
+              </th>
+              <th>
+                Cross's model
+              </th>
+              <th>
+                Roth and Erev's modified model
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <strong>Freshmen</strong>
+              </td>
+              <td style="text-align:center">
+                <em>a<sup>BM</sup></em>=0.2; <em>ß<sup>BM</sup></em>=0.1
+              </td>
+              <td style="text-align:center">
+                <em>ß<sup>BS</sup></em>=0.100
+              </td>
+              <td style="text-align:center">
+                <em>a<sup>CR</sup></em>=0.1; <em>ß<sup>CR</sup></em>=0.1
+              </td>
+              <td style="text-align:center">
+                <em>f</em>=0; <em>e</em>=0.3428
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Seniors</strong>
+              </td>
+              <td style="text-align:center">
+                <em>a<sup>BM</sup></em>=0.1; <em>ß<sup>BM</sup></em>=0.1
+              </td>
+              <td style="text-align:center">
+                <em>ß<sup>BS</sup></em>=0.258
+              </td>
+              <td style="text-align:center">
+                <em>a<sup>CR</sup></em>=0.1; <em>ß<sup>CR</sup></em>=0.4
+              </td>
+              <td style="text-align:center">
+                <em>f</em>=0.4; <em>e</em>=0.2407
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Note there is no parameter in Roth and Erev's basic model. The parameter <em>X<sub>min</sub></em> in Roth and Erev's modified model can be directly derived from questionnaire data. It is the minimum expectation per participant for all strategies.
+        </p>
+        <h3>
+          Model fitting and verification
+        </h3>
+        <p>
+          The final models were obtained by replacing the parameters with the estimates. The models were then applied to the experimental data associated with the last three search tasks: given a participant and a task, the probabilities of the participant choosing different search strategies were computed, and the strategy with the maximum probability was ticked as the predicted strategy. This process is referred to as model fitting, or in this study, strategy simulation.
+        </p>
+        <p>
+          The effectiveness of model fitting was evaluated by measuring the difference between the simulated strategies derived from each model and the actual strategies that participants took. This difference was gauged by the mean squared distance in the present study. The mean squared distance for the <em>i</em>-th participant and the <em>k</em>-th model is computed as follows:
+        </p><img id="Equat_2" alt="equation" src="p569Equat2.jpg">
+        <p>
+          where <em>T</em>=10 is the total number of search tasks, <em>m</em> denotes the size of strategy set, <img src="p569Equat1_1.jpg" alt="equation" width="45" height="25"> is the probability of participant <em>i</em> taking strategy <em>j</em> to fulfil task <em>t</em> predicted by model <em>k</em>, <em>d<sub>i</sub></em>(<em>t</em>) denotes the actual strategy chosen by participant <em>i</em> in period <em>t</em>, and <em>I</em>(<em>j</em>,<em>d<sub>i</sub></em>(<em>t</em>)) is a contingent decision function whose value is 0 when <em>j</em>?<em>d<sub>i</sub></em>(<em>t</em>) or 1 when <em>j</em>=<em>d<sub>i</sub></em>(<em>t</em>).
+        </p>
+        <p>
+          Table 3 reports the mean and standard deviation of the mean squared distances with regard to each student group and each model.
+        </p>
+        <table id="Table_3" class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table 3: Results of model verification<br>
+          </caption>
+          <tbody>
+            <tr>
+              <th colspan="2">
+                Mean and standard deviation of the mean squared distances per student group per model
+              </th>
+              <th>
+                Bush and Mosteller's model
+              </th>
+              <th>
+                Cross's model
+              </th>
+              <th>
+                Börgers and Sarin's model
+              </th>
+              <th>
+                Roth and Erev's model
+              </th>
+              <th>
+                Roth and Erev's modified model
+              </th>
+            </tr>
+            <tr>
+              <td rowspan="2">
+                <strong>Freshmen students</strong>
+              </td>
+              <td>
+                Mean
+              </td>
+              <td style="text-align:center">
+                0.05278
+              </td>
+              <td style="text-align:center">
+                0.004631
+              </td>
+              <td style="text-align:center">
+                0.022475
+              </td>
+              <td style="text-align:center">
+                0.024239
+              </td>
+              <td style="text-align:center">
+                0.016259
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Standard deviation
+              </td>
+              <td style="text-align:center">
+                0.013887
+              </td>
+              <td style="text-align:center">
+                0.001122
+              </td>
+              <td style="text-align:center">
+                0.010654
+              </td>
+              <td style="text-align:center">
+                0.006058
+              </td>
+              <td style="text-align:center">
+                0.002018
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">
+                <strong>Senior students</strong>
+              </td>
+              <td>
+                Mean
+              </td>
+              <td style="text-align:center">
+                0.017591
+              </td>
+              <td style="text-align:center">
+                0.009455
+              </td>
+              <td style="text-align:center">
+                0.034181
+              </td>
+              <td style="text-align:center">
+                0.006506
+              </td>
+              <td style="text-align:center">
+                0.006587
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Standard deviation
+              </td>
+              <td style="text-align:center">
+                0.006063
+              </td>
+              <td style="text-align:center">
+                0.019643
+              </td>
+              <td style="text-align:center">
+                0.150697
+              </td>
+              <td style="text-align:center">
+                0.002358
+              </td>
+              <td style="text-align:center">
+                0.001466
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          For each group of students, the model with the smallest mean and standard deviation was chosen as the optimal model to fit their behaviour data. Consequently, based on data in Table 3, for freshmen, Cross's model fits best, while for seniors, Roth and Erev's modified model is the best.
+        </p>
+        <h2>
+          Results
+        </h2>
+        <h3>
+          Freshmen's learning: Cross's model
+        </h3>
+        <p>
+          From the data in <a href="#Table_3">Table 3</a>, it can be inferred that freshmen's search strategy adjustments comply more with Cross's model.
+        </p>
+        <p>
+          <i><b>(1) Freshmen showed insistence and inertia towards earlier strategy preferences.</b></i>
+        </p>
+        <p>
+          According to the updating rules of strategy attraction in Cross's model (Equations <a href="#Equat_8">8</a> and <a href="#Equat_9">9</a>, see <a href="#Appendix">Appendix</a>), freshmen (first year students) are more inclined to continue the search strategies employed in their last task.
+        </p>
+        <p>
+          Table 4 presents the statistics of users' behaviour obtained from the experiment data. It can be seen that freshmen were more likely to choose the simple search as the initial strategy and input keywords in a single search box. They did so based on their former experience of general search engine using.
+        </p>
+        <table id="Table_4" class="center">
+          <caption>
+            <br>
+            Table 4: Statistics of users' learning behaviour in information searching<br>
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Indicators
+              </th>
+              <th>
+                Freshmen Students
+              </th>
+              <th>
+                Senior Students
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Percentage of users with the initial strategy being the simple search
+              </td>
+              <td style="text-align:center">
+                92.31
+              </td>
+              <td style="text-align:center">
+                82.35
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Average tasks after which users switched to the advanced search page
+              </td>
+              <td style="text-align:center">
+                5.62
+              </td>
+              <td style="text-align:center">
+                4.44
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Average tasks after which users started to use the logic-AND-search strategy
+              </td>
+              <td style="text-align:center">
+                7.61
+              </td>
+              <td style="text-align:center">
+                5.74
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The average tasks after which users first switched to the advanced search page and the average tasks after which users started the logic-AND-search are also reported in Table 4. The results tell that freshmen took more time to leave the simple search, learn to use new search functions and take new strategies. Their behaviour followed a Markov process, and they were somewhat insistent to their earlier strategy preferences.
+        </p>
+        <p>
+          <i><b>(2) Freshmen could finally give up experiential preferences and comprehend new strategies by learning.</b></i>
+        </p>
+        <p>
+          The parameter estimates of Cross's model for freshmen are: <em>a<sup>CR</sup></em>=0.1; <em>ß<sup>CR</sup></em>=0.1 (see <a href="#Table_2">Table 2</a>). It implies that freshmen held insistence and inertia to the established strategies, but the extent was not so remarkable. As shown in <a href="#Table_4">Table 4</a>, averagely after 6 to 8 tasks, freshmen gave up their preference of the simple search. They learned to use the advanced search and took the logic-AND-search strategy through trial and error. Most freshmen finally found out and used the logic-AND-search strategy, which was more possible to bring search results consistent with the standard ones.
+        </p>
+        <h3>
+          Seniors' learning: Roth and Erev's modified model
+        </h3>
+        <p>
+          The data in <a href="#Table_3">Table 3</a> indicate that for seniors (final year students), Roth and Erev's modified model is more ideal to fit their learning behaviour. They depended on their past experiences to align search strategies. At the same time, they developed strategies through rational thinking.
+        </p>
+        <p>
+          <i><b>(1) Seniors were ready to make comprehensive decisions based on recent experiences.</b></i>
+        </p>
+        <p>
+          The estimate of the forgetting parameter <em>f</em> in Roth and Erev's modified model for seniors is 0.4 (see <a href="#Table_2">Table 2</a>). According to <a href="#Equat_12">Equation 12-15</a>, this means, to a non-negligible extent, seniors would like to make comprehensive decisions based on their recent experiences. Basically, the more recently a search experience happens, the greater impact it has on the current decision making.
+        </p>
+        <p>
+          <i><b>(2) Seniors showed strong subjectivity when evaluating the feedback from adopting a certain strategy.</b></i>
+        </p>
+        <p>
+          According to <a href="#Equat_14">Equation 14</a> (see <a href="#Appendix">Appendix</a>), <em>R</em>(<em>p</em>(<em>t</em>))=<em>p</em>(<em>t</em>)-<em>X<sub>min</sub></em> , when making decisions, seniors demonstrated strong cognitive subjectivity. Different seniors might make different evaluations towards equal strategy payoffs.
+        </p>
+        <p>
+          Figures 2 and 3 depict the perceptions of the students who adopted the logic-AND-search strategy. Figure 2 portrays the average expectation per task of the freshmen and the seniors. Figure 3 illustrates the changes of their satisfactions. It can be inferred that, the freshmen held high expectations before applying the logic-AND-search strategy, and consistently scored high satisfactions with the feedback. In contrast, the seniors' expectations and satisfactions in different tasks were quite unsteady, and were almost lower than those of the freshmen.
+        </p>
+        <figure class="centre">
+          <img src="p569Fig2.jpg" alt="Average expectation per task of those students who adopted the logic-AND-search strategy" id="Figure_2">
+          <figcaption>
+            <br>
+            Figure 2: Average expectation per task of those students who adopted the logic-AND-search strategy
+          </figcaption>
+        </figure>
+        <figure class="centre">
+          <img src="p569Fig3.jpg" alt="Average satisfaction per task of those students who adopted the logic-AND-search strategy" id="Figure_3">
+          <figcaption>
+            <br>
+            Figure 3: Average satisfaction per task of those students who adopted the logic-AND-search strategy
+          </figcaption>
+        </figure>
+        <p>
+          <i><b>(3) Seniors paid attention to neighbour strategies.</b></i>
+        </p>
+        <p>
+          The estimate of the transferring parameter <em>e</em> in Roth and Erev's modified model for seniors is 0.2407 (see <a href="#Table_2">Table 2</a>). According to <a href="#Equat_12">Equation 12-13</a>, this means when adjusting their strategy, seniors were not completely affected by the information of the strategy adopted in the last search, but also concerned about the unemployed strategies. The strength of the unemployed strategies influencing their current strategy selection is 24.07%. In other words, seniors paid attention to neighbouring strategies.
+        </p>
+        <p>
+          Figure 4 describes the percentages of students who adopted the unsuccessful multiple-textbox strategy in each task. Figure 5 presents the percentages of students who correctly tried the logic-AND-search in each task. Interestingly, more seniors used logic-AND-search in the fourth task than in the fifth task. Correspondingly, fewer seniors took the unsuccessful multiple-textbox strategy in the fourth task than in the fifth task. That means some of the seniors who chose the correct strategy in one task returned to incorrect strategies in later tasks. This kind of phenomenon occurs several times (see Figures 4 and 5). After tracing back to the screen videos, the researchers found that a few seniors who had successfully employed the logic-AND-search started to explore other search options such as document type, year range, and so on. These options probably confused them and made them fail to use logic AND operators in subsequent tasks. Undoubtedly, those seniors displayed strong characteristics of rational thinking. This point is exactly what Roth and Erev's models try to reveal.
+        </p>
+        <figure>
+          <img src="p569Fig4.jpg" alt="Percentages of students who followed the unsuccessful multiple textbox strategy" id="Figure_4">
+          <figcaption>
+            <br>
+            Figure 4: Percentages of students who followed the unsuccessful multiple textbox strategy
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="p569Fig5.jpg" alt="Percentages of students who adopted the logic-AND-search strategy" id="Figure_5">
+          <figcaption>
+            <br>
+            Figure 5: Percentages of students who adopted the logic-AND-search strategy
+          </figcaption>
+        </figure>
+        <h3>
+          Summary
+        </h3>
+        <p>
+          The above findings give substantial answers to the research questions, and confirm the theoretical assumptions.
+        </p>
+        <ul>
+          <li>
+            <i>Question</i>: How do users learn to use correct strategies to conduct scholarly information searches without instructions? In other words, are there learning rules controlling their strategy adjustments? If so what are the rules?
+            <p>
+              <i>Answer</i>: In a scheme of things, users demonstrated reinforcement learning characteristics. The strategies that brought success in their earlier experiences would be repeated with a higher probability. Through learning by trial and error, both freshmen and seniors could finally comprehend new search strategies. Answer to this question justifies the first assumption of this study.
+            </p>
+          </li>
+          <li>
+            <i>Question</i>: What are the differences in learning mechanisms between users at different cognitive levels?
+            <p>
+              <i>Answer</i>: Users at different cognitive levels demonstrated different reinforcement patterns. The learning behaviour of freshmen showed remarkable Markov properties. Their strategy selection was determined by the feedback obtained in the last search activity. Cross's model better explains their learning mechanisms. For seniors, their strategy selection depended on the accumulated effect of past strategy adoptions. They displayed strong characteristics of rational thinking. Roth and Erev's modified model better describes their learning behaviour. Answer to this question substantiates the second research assumption.
+            </p>
+          </li>
+        </ul>
+        <h2>
+          Discussion
+        </h2>
+        <h3>
+          Characteristics of reinforcement learning
+        </h3>
+        <p>
+          It was found that most undergraduates preferred to repeat the strategies that bring success in their earlier experiences. This is highly consistent with the findings of Warwick <em>et al</em>. (<a href="#Warwick2009">2009</a>: 2402) that undergraduate students
+        </p>
+        <blockquote>
+          <p>
+            <em>used their growing expertise to justify a conservative information strategy, retaining established strategies as far as possible and completing tasks with minimum information-seeking effort</em>.
+          </p>
+        </blockquote>
+        <p>
+          Specifically, according to this study, in the first task, 85% of undergraduates (92.3% of freshmen and 82.4% of seniors, See <a href="#Table_4">Table 4</a>) chose the simple search as the initial strategy. It was supposed that the studied students were influenced by their former experience of general search engine using (<a href="#Du2011a">Du and Evans 2011</a>; <a href="#Fast2004">Fast and Campbell 2004</a>; <a href="#George2006">George <em>et al</em>. 2006</a>; <a href="#Haglund2008">Haglund and Olsson 2008</a>; <a href="#Malliari2011">Malliari <em>et al</em>. 2011</a>).
+        </p>
+        <p>
+          There were differences in the reinforcement learning process between freshmen and seniors, as previously claimed. Freshmen can be considered to be novices with little perception of scholarly information seeking, while seniors are users with more expertise. From this point of view, the differences in the reinforcement learning patterns between freshmen and seniors can be expanded by findings of Warwick <em>et al</em>. (<a href="#Warwick2009">2009</a>: 2413), as follows:
+        </p>
+        <blockquote>
+          <p>
+            <em>Reflection on the learning theories of Kolb (1984) ... learners will often resist acquiring new skills because rejecting existing skill causes negative emotions (e.g., confusion, anger, upset). Existing skill is guarded zealously and adapted repeatedly until it finally fails ... Expert searchers therefore are not only differentiated by their existing skills but also potentially by their attitude to acquiring new ones</em>.
+          </p>
+        </blockquote>
+        <p>
+          Warwick <em>et al</em>. grounded the above point by referring to Kolb's (<a href="#Kolb1984">1984</a>) learning theories, which are congruous with the assumptions of this study.
+        </p>
+        <h3>
+          Effectiveness of reinforcement learning
+        </h3>
+        <p>
+          Consider the average number of tasks it took participants to change from the simple search to the advanced search and start the logic-AND-search (See <a href="#Table_4">Table 4</a>). It can be concluded that the learning effectiveness of academic users through self-regulated trial and error was not so satisfying. Especially, freshmen spent more time to learn the correct search strategy; the average tasks it took them to use the logic-AND-search were 7.61 out of 10. This highlights the necessity of external instructions to improve the effectiveness of user's learning of information seeking, especially for novices. Although this declaration should be further justified, the researchers are still positive with it by referring to other studies (<a href="#Colvin2004">Colvin and Keene 2004</a>; <a href="#Halttunen2005">Halttunen and Jarvelin 2005</a>; <a href="#Ren2000">Ren 2000</a>).
+        </p>
+        <p>
+          Besides, seniors learned the correct search strategy more quickly than freshmen, as described in <a href="#Table_4">Table 4</a>. This is in agreement with the studies of Chen (<a href="#Chen2009">2009</a>), Eshet-Alkalai and Chajut (<a href="#EshetAlkalai2009">2009</a>), Hsieh-Yee (<a href="#HsiehYee1993">1993</a>), Korobili <em>et al</em>. (<a href="#Korobili2011">2011</a>), and Thatcher (<a href="#Thatcher2008">2008</a>). Specifically, this study to some extent confirmed the findings of the recent work done by Korobili <em>et al</em>. (<a href="#Korobili2011">2011</a>), that there are statistical significant relationships between users' experience in databases or e-journals and the variables: <em>more than one keyword</em>, <em>Boolean operators</em> as search techniques, <em>change strategy</em>, <em>different keywords</em> as techniques to modify the initial strategy, and so on.
+        </p>
+        <h2>
+          Conclusions and implications
+        </h2>
+        <p>
+          The study observed the strategy adjustments of thirteen first-year undergraduates and thirty-four fourth-year undergraduates in carrying out ten search tasks in a specified database system independently. It was assumed that there are discrepancies in the level of cognitive processing between the two groups of users. The impacts of cognitive levels on learning of searching skills were examined by excluding the effects of other factors through quasi-experimental settings. When executing a search task, a user was asked to write down: (1) the description of the formulated search strategy; (2) the expectation of the strategy bringing desired results; and (3) the satisfaction with the strategy. The dynamics of search strategies, expectations and satisfactions of each user across different tasks were simulated through five reinforcement learning models. These dynamics were supposed to be the outcomes of participants' learning and reflection.
+        </p>
+        <p>
+          It is found that undergraduates prefer to retain established strategies. It takes them a long time to change from the simple search to the advanced search and learn to use the most effective strategy. Generally, in the process of searching expertise learning, users demonstrate reinforcement characteristics. If a search strategy leads to satisfactory results, this strategy will be more likely to be repeated with high expectation later; if a strategy leads to unsatisfactory results, it will be more likely to be avoided afterwards. Specifically, users at different cognitive levels demonstrate different reinforcement patterns. Freshmen's strategy selection is always made according to the feedback obtained in the last search activity, whereas seniors rely on their search experiences and rational thinking to make comprehensive decisions.
+        </p>
+        <p>
+          Through observing and quantitatively simulating the micro process of academic users' learning of searching expertise, the current research enhances our understanding of users' experience of scholarly information seeking. Besides, based on the research outcomes and discussion, implications can be proposed from the perspectives of training programme design, adaptive information retrieval system design and theoretical development.
+        </p>
+        <p>
+          As formerly discussed, learning through self-regulated trials is not the most effective and economic way for academic users to develop searching expertise. Extra instructions are needed to improve their learning performance. Instructions can be imparted through training curriculums offered by librarians, as well as online learning or help features incorporated into information retrieval systems. Rather than just a 'list of skills' of information literacy (<a href="#Maybee2006">Maybee 2006</a>), the instructions should be tailored to the learning patterns of different users. This deserves further investigation by librarians.
+        </p>
+        <p>
+          By monitoring users' searching behaviour and identifying users' learning characteristics, information retrieval systems can offer personalised supports to suit the users and their search tasks, and assist them to complete the tasks, as suggested by Li and Belkin (<a href="#Li2008">2008</a>), Stelmaszewska <em>et al</em>. (<a href="#Stelmaszewska2005">2005</a>) and Xie and Cool (<a href="#Xie2009">2009</a>), and technically practiced by de la Chica <em>et al</em>. (<a href="#Chica2008">2008</a>), Frias-Martinez <em>et al</em>. (<a href="#FriasMartinez2007">2007</a>; <a href="#FriasMartinez2008">2008</a>), Hurst <em>et al</em>. (<a href="#Hurst2007">2007</a>), Jansen (<a href="#Jansen2005">2005</a>), Stelmaszewska <em>et al</em>. (<a href="#Stelmaszewska2005">2005</a>) and Tsuji and Yamamoto (<a href="#Tsuji2001">2001</a>). This kind of adaptive feature is expected to facilitate users' learning of searching expertise and improve the effectiveness of their interactions with the search systems. The present research provides understanding of observational variables (e.g., initial search strategy, strategy adjustments, behavioural pathway, combination of Boolean operators, and so on) for automatically identifying users' learning characteristics in the development of such adaptive systems.
+        </p>
+        <p>
+          Due to the small sample size, the findings reported in this paper are considered to be exploratory and preliminary. Further efforts can be dedicated to develop a comprehensive quantitative research framework. This research framework synthesises learning theories and information-searching paradigms, as partly described by <a href="#Figure_1">Figure 1</a>. It is expected to '<em>better describe the information searching process than more commonly used paradigms of decision making or problem solving</em>' (<a href="#Jansen2009">Jansen <em>et al</em>. 2009</a>: 643). According to Kuhlthau (<a href="#Kuhlthau1993">1993</a>: 342), the whole information search process '<em>incorporates three realms of human experience: the affective (feelings), the cognitive (thoughts) and the physical (actions)</em>'. The complexities of affective, cognitive and physical interactions within this process require deliberate design of learning parameters and reinforcement adjustment functions. Besides, the effects of contextual elements including instructional variables (e.g., search tips, anchored helps, graphic or video demos, result faceting, clustering or visualisation, and so forth) on the performance of users' learning and information searching should be included to establish a more meaningful learning model.
+        </p>
+        <h2>
+          Acknowledgements
+        </h2>
+        <p>
+          This research was supported by the National Natural Science Foundation of China under contract No. 70773054, No. 71001052 and No.71003049. The authors wish to give special thanks to Prof. T.D. Wilson, Prof. A. Smith, Dr. J.T. Du and all the anonymous reviewers, for their kind suggestions and comments for improving this particular research.
+        </p>
+        <h2 id="authors">
+          About the authors
+        </h2>
+        <p>
+          <strong>Yonghua Cen</strong> is an Associate Professor in the Department of Information Management, School of Economics and Management, at Nanjing University of Science and Technology in China. He is also a researcher in Advanced Analytics Institute at University of Technology Sydney in Australia. His current scientific interests are in the fields of behaviour informatics, dynamic social network analysis and scientometrics. He can be contacted at: <a href="mailto:justin.cen@gmail.com">justin.cen@gmail.com</a>.<br>
+          <strong>Liren Gan</strong>, is a Professor in the Department of Information Management, School of Economics and Management, at Nanjing University of Science and Technology. She is a PhD supervisor. Her principal research interests concern analysis of user cognition, mental models and behaviour in online environments. She can be contacted at: <a href="mailto:gan5707@vip.sina.com">gan5707@vip.sina.com</a>.<br>
+          <strong>Chen Bai</strong>, is a PhD student under the supervision of Professor Gan. Her research topics cover digital library and user analysis. She can be contacted at: <a href="mailto:flyluo77@sina.com">flyluo77@sina.com</a>.
+        </p>
+      </section>
+      <section class="refs">
+        <form>
+          <fieldset>
+            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+            <ul class="refs">
+              <li id="Bates1979">Bates, M.J. (1979). Information search tactics. <em>Journal of the American Society for Information Science</em>, <strong>30</strong>(4), 205-214.
+              </li>
+              <li id="Bates2002">Bates, M.J. (2002). Toward an integrated model of information seeking and searching. <em>The New Review of Information Behaviour Research</em>, <strong>3</strong>, 1-15.
+              </li>
+              <li id="Belkin1980">Belkin, N.J. (1980). Anomalous states of knowledge as a basis for information retrieval. <em>Canadian Journal of Information Science</em>, <strong>5</strong>(2), 133-143.
+              </li>
+              <li id="Belkin1996">Belkin, N.J., Cool, C., Koennman, J., Ng, K.B. &amp; Park, S. (1996). <a href="http://www.webcitation.org/6EwtGjxT6">Using relevance feedback and ranking in interactive searching.</a> <em>Proceedings of the Fourth Text Retrieval Conference (TREC-4)</em>. (pp. 181-209). Gaithersburg, MD: National Institute of Standards and Technology. Retrieved 7 March, 2013 from http://comminfo.rutgers.edu/~belkin/articles/trec4_paper.pdf (Archived by WebCite® at http://www.webcitation.org/6EwtGjxT6)
+              </li>
+              <li id="Bilal2002">Bilal, D., Kirby, J. (2002). Differences and similarities in information seeking: children and adults as Web users. <em>Information Processing &amp; Management</em>, <strong>38</strong>(5), 649-670.
+              </li>
+              <li id="Bloom1956">Bloom, B.S., Englehard, E., Furst, W. &amp; Krathwohl, D.R. (1956). <em>Taxonomy of educational objectives: the classification of educational goals</em>. New York, NY: McKay.
+              </li>
+              <li id="Borgers2000">Börgers, T. &amp; Sarin, R. (2000). Naive reinforcement learning with endogenous aspirations. <em>International Economic Review</em>, <strong>41</strong>(4), 921-950.
+              </li>
+              <li id="BrandGruwel2009">Brand-Gruwel, S., Wopereis, I. &amp; Walraven, A. (2009). A descriptive model of information problem solving while using internet. <em>Computers &amp; Education</em>, <strong>53</strong>(4), 1207-1217.
+              </li>
+              <li id="Brenner2006">Brenner, T. (2006). Agent learning representation: advice in modelling economic learning. In L. Tesfatsion &amp; K.L. Judd (Eds.), <em>Handbook of computational economics</em> Volume 2. (pp. 895-947). Elsevier.
+              </li>
+              <li id="Bush1953">Bush, R.R. &amp; Mosteller, F. (1953). A stochastic model with applications to learning. <em>The Annals of Mathematical Statistics</em>, <strong>24</strong>(4), 559-585.
+              </li>
+              <li id="Chen2009">Chen, H.L. (2009). An analysis of undergraduate students' search behaviors in an information literacy class. <em>Journal of Web Librarianship</em>, <strong>3</strong>(4), 333-347.
+              </li>
+              <li id="Chu2007">Chu, S.K., &amp; Law, N. (2007). Development of information search expertise: postgraduates' knowledge of searching skills. <em>portal: Libraries &amp; the Academy</em>, <strong>7</strong>(3), 295-316.
+              </li>
+              <li id="Cole2007">Cole, C., Lin, Y. &amp; Leide, J. (2007). A classification of mental models of undergraduates seeking information for a course essay in history and psychology: preliminary investigations into aligning their mental models with online thesauri. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>58</strong>(13), 2092-2104.
+              </li>
+              <li id="Colvin2004">Colvin, J. &amp; Keene, J. (2004). <a href="http://www.webcitation.org/6CiDyWv6S">Supporting undergraduate learning through the collaborative promotion of e-journals by library and academic departments</a>. <em>Information Research</em>, <strong>9</strong>(2), paper 173 Retrieved 7 March, 2013 from http://InformationR.net/ir/9-2/paper173.html (Archived by WebCite® at http://www.webcitation.org/6CiDyWv6S)
+              </li>
+              <li id="Cross1973">Cross, J.G.A. (1973). Stochastic learning model of economic behavior. <em>Quarterly Journal of Economics</em>, <strong>87</strong>, 239-266.
+              </li>
+              <li id="Chica2008">de la Chica, S., Ahmad, F., Sumner, T., Martin, J.H. &amp; Butcher, K. (2008). Computational foundations for personalizing instruction with digital libraries. <em>International Journal of Digital Libraries</em>, <strong>9</strong>, 3-18.
+              </li>
+              <li id="Du2011a">Du, J.T. &amp; Evans, N. (2011). Academic users' information searching on research topics: characteristics of research tasks and search strategies. <em>The Journal of Academic Librarianship</em>, <strong>37</strong>(4), 299-306.
+              </li>
+              <li id="Du2011b">Du, J.T. &amp; Spink, A. (2011). Towards a Web search model: integrating multitasking, cognitive coordination and cognitive shifts. <em>Journal of the American Society for Information Science and Technology</em>, <strong>62</strong>(8), 1446–1472.
+              </li>
+              <li id="Eisenberg1990">Eisenberg, M.B. &amp; Berkowitz, R.E. (1990). <em>Information problem-solving: the Big Six skills approach to library and information skills instruction</em>. Norwood, NJ: Ablex.
+              </li>
+              <li id="Ellis1989">Ellis, D. (1989). A behavioural approach to information retrieval system design. <em>Journal of Documentation</em>, <strong>45</strong>, 171-212.
+              </li>
+              <li id="Erev1996">Erev, I. &amp; Roth, A.E. (1996). On the need for low rationality, cognitive game theory: reinforcement learning in experimental games with unique, mixed strategy equilibria. Pittsburgh, PA: University of Pittsburgh. [Mimeographed manuscript.]
+              </li>
+              <li id="EshetAlkalai2009">Eshet-Alkalai, Y. &amp; Chajut, E. (2009). Changes over time in digital literacy. <em>CyberPsychology &amp; Behavior</em>, <strong>12</strong>(6), 713-715.
+              </li>
+              <li id="Fast2004">Fast, K.V., &amp; Campbell, D.G. (2004). 'I still like Google': university student perceptions of searching OPACs and the Web. <em>Proceedings of the American Society for Information Science &amp; Technology</em>, <strong>41</strong>(1), 138-146.
+              </li>
+              <li id="Ford2002">Ford, N., Wilson, T.D., Foster, A., Ellis, D. &amp; Spink, A. (2002). Information seeking and mediated searching. Part 4, Cognitive styles in information seeking. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>53</strong>(9), 728-735.
+              </li>
+              <li id="Ford2003">Ford, N., Miller, D. &amp; Moss, N. (2003). Web search strategies and approaches to studying. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>54</strong>(6), 473-489.
+              </li>
+              <li id="FriasMartinez2007">Frias-Martinez, E., Chen, S.Y. &amp; Liu, X. (2007). Automatic cognitive style identification of digital library users for personalization. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>58</strong>(2), 237-251.
+              </li>
+              <li id="FriasMartinez2008">Frias-Martinez, E., Chen, S.Y. &amp; Liu, X. (2008). Investigation of behavior and perception of digital library users: a cognitive style perspective. <em>International Journal of Information Management</em>, <strong>28</strong>(5), 355-365.
+              </li>
+              <li id="Fu2006">Fu, W.T. &amp; Anderson, J.R. (2006). From recurrent choice to skill learning: a reinforcement-learning model. <em>Experimental Psychology: General</em>, <strong>135</strong>(2), 184-206.
+              </li>
+              <li id="George2006">George, C., Bright, A., Hurlbert, T., Linke, E.C., St. Clair, G. &amp; Stein, J. (2006). <a href="http://www.webcitation.org/6CiESmEj2">Scholarly use of information: graduate students' information seeking behaviour</a>. <em>Information Research</em>, <strong>11</strong>(4), paper 272 Retrieved 7 March, 2013 from http://InformationR.net/ir/11-4/paper272.html (Archived by WebCite® at http://www.webcitation.org/6CiESmEj2)
+              </li>
+              <li id="Gerjets2008">Gerjets, P. &amp; Hellenthal-Schorr, T. (2008). Competent information search in the World Wide Web: development and evaluation of a web training for pupils. <em>Computers in Human Behavior</em>, <strong>24</strong>(3), 693-715.
+              </li>
+              <li id="Haglund2008">Haglund, L. &amp; Olsson, P. (2008). The impact on university libraries of changes in information behavior among academic researchers: a multiple case study. <em>The Journal of Academic Librarianship</em>, <strong>34</strong>(1), 52-59.
+              </li>
+              <li id="Halttunen2003">Halttunen, K. (2003). Students' conceptions of information retrieval: implications for the design of learning environments. <em>Library &amp; Information Science Research</em>, <strong>25</strong>(3), 307-332.
+              </li>
+              <li id="Halttunen2005">Halttunen, K. &amp; Järvelin, K. (2005). Assessing learning outcomes in two information retrieval learning environments. <em>Information Processing &amp; Management</em>, <strong>41</strong>(4), 949-972.
+              </li>
+              <li id="He2008">He, W., Erdelez, S., Wang, F. &amp; Shyu, C. (2008). The effects of conceptual description and search practice on users' mental models and information seeking in a case-based reasoning retrieval system. <em>Information Processing &amp; Management</em>, <strong>44</strong> (1), 294-309.
+              </li>
+              <li id="HsiehYee1993">Hsieh-Yee, I. (1993). Effects of search experience and subject knowledge on the search tactics of novice and experienced searchers. <em>Journal of the American Society for Information Science</em>, <strong>44</strong>(3), 161-174.
+              </li>
+              <li id="Hurst2007">Hurst, A., Hudson, S.E. &amp; Mankoff, J. (2007). Dynamic detection of novice vs. skilled use without a task model. In <em>CHI'07: Proceedings of the SIGCHI Conference on</em> <em>Human Factors in Computing Systems, April 28-May 3, 2007</em> (pp. 271-280). New York, NY: ACM Press.
+              </li>
+              <li id="Ingwersen1996">Ingwersen, P. (1996). Cognitive perspectives of information retrieval interaction: elements of a cognitive IR theory. <em>Journal of Documentation</em>, <strong>52</strong>(1), 3-50.
+              </li>
+              <li id="Izquierdo2007">Izquierdo, L.R., Izquierdo, S.S., Gotts, N.M. &amp; Polhill, J.G. (2007). Transient and asymptotic dynamics of reinforcement learning in games. <em>Games and Economic Behavior</em>, <strong>61</strong>(2), 259-276.
+              </li>
+              <li id="Jansen2005">Jansen, B.J. (2005). <a href="http://www.webcitation.org/6EwrdV8SZ">Seeking and implementing automated assistance during the search process.</a> <em>Information Processing &amp; Management</em>, <strong>41</strong>(4), 909-928. Retrieved 7 March, 2013 from http://www.interruptions.net/literature/Jansen-InformProcessManag05.pdf (Archived by WebCite® at http://www.webcitation.org/6EwrdV8SZ)
+              </li>
+              <li id="Jansen2009">Jansen, B.J., Booth, D. &amp; Smith, B. (2009). Using the taxonomy of cognitive learning to model online searching. <em>Information Processing &amp; Management</em>, <strong>45</strong>(6), 643-663.
+              </li>
+              <li id="Kelly2007">Kelly, D. &amp; Fu, X. (2007). Eliciting better information need descriptions from users of information search systems. <em>Information Processing &amp; Management</em>, <strong>43</strong>(1), 30-46.
+              </li>
+              <li id="Kim2002">Kim, K. (2002). Information-seeking on the Web: effects of user and task variables. <em>Library &amp; Information Science Research</em>, <strong>23</strong>(3), 233-255.
+              </li>
+              <li id="Kolb1984">Kolb, D.A. (1984). <em>Experiential learning experience as the source of learning and development</em>. Englewood Cliffs, NJ: Prentice-Hall.
+              </li>
+              <li id="Korobili2011">Korobili, S., Malliari, A. &amp; Zapounidou, S. (2011). Factors that influence information-seeking behavior: the case of Greek graduate students. <em>The Journal of Academic Librarianship</em>, <strong>37</strong>(2), 155-165.
+              </li>
+              <li id="Kuhlthau1993">Kuhlthau, C.C. (1993). A principle of uncertainty for information seeking. <em>Journal of Documentation</em>, <strong>49</strong>(4), 339-355.
+              </li>
+              <li id="Kuhlthau2007">Kuhlthau, C.C., Caspari A.K. &amp; Maniotes, L.K. (2007). <em>Guided inquiry: learning in the 21st century</em>. Westport, CT: Libraries Unlimited.
+              </li>
+              <li id="Laxman2010">Laxman, K. (2010). A conceptual framework mapping the application of information search strategies to well and ill-structured problem solving. <em>Computers &amp; Education</em>, <strong>55</strong>, 513-526.
+              </li>
+              <li id="Li2008">Li, Y. &amp; Belkin, N.J. (2008). A faceted approach to conceptualizing tasks in information seeking. <em>Information Processing &amp; Management</em>, <strong>44</strong>(6), 1822-1837.
+              </li>
+              <li id="Marchionini2006">Marchionini, G. (2006). Exploratory search: from finding to understanding. <em>Communication of the ACM</em>, <strong>49</strong>(4), 41-47.
+              </li>
+              <li id="Malliari2011">Malliari, A., Korobili, S. &amp; Zapounidou, S. (2011). Exploring the information seeking behavior of Greek graduate students: a case study set in the University of Macedonia. <em>The International Information &amp; Library Review</em>, <strong>43</strong>(2), 79-91.
+              </li>
+              <li id="Maybee2006">Maybee, C. (2006). Undergraduate perceptions of information use: the basis for creating user-centered student information literacy instruction. <em>The Journal of Academic Librarianship</em>, <strong>32</strong>(1), 79-85.
+              </li>
+              <li id="Puustinen2009">Puustinen, M. &amp; Rouet, J.F. (2009). Learning with new technologies: help seeking and information searching revisited. <em>Computers &amp; Education</em>, <strong>53</strong>, 1014-1019.
+              </li>
+              <li id="Ren2000">Ren, W. (2000). Library instruction and college student self-efficacy in electronic information searching. <em>The Journal of Academic Librarianship</em>, <strong>26</strong>(5), 323-328.
+              </li>
+              <li id="Roth1995">Roth, A.E. &amp; Erev, I. (1995). Learning in extensive form games: experimental data and simple dynamic models in the intermediate term. <em>Games and Economic Behavior</em>, <strong>8</strong>(1), 164-212.
+              </li>
+              <li id="Saito2007">Saito, H. &amp; Miwa, K. (2007). Construction of a learning environment supporting learners' reflection: a case of information seeking on the Web. <em>Computers &amp; Education</em>, <strong>49</strong>(2), 214-229.
+              </li>
+              <li id="Saracevic1996">Saracevic, T. (1996). Modeling interaction in information retrieval (IR): a review and proposal. <em>Proceedings of the ASIS Annual Meeting</em>, <strong>33</strong>, 3-9
+              </li>
+              <li id="Savolainen1993">Savolainen, R. (1993). The sense-making theory: reviewing the interests of a user-centred approach to information seeking and use. <em>Information Processing &amp; Management</em>, <strong>29</strong>(1), 13-28.
+              </li>
+              <li id="Shimokawa2009">Shimokawa, T., Suzuki, K., Misawa, T. &amp; Okano, Y. (2009). Predicting investment behaviour: an augmented reinforcement learning model. <em>Neurocomputing</em>, <strong>72</strong> (16-18), 3447-3461.
+              </li>
+              <li id="Spink1997">Spink, A. (1997). Study of interactive feedback during mediated information retrieval. <em>Journal of the American Society for Information Science</em>, <strong>48</strong>(5): 382-394.
+              </li>
+              <li id="Spink2002a">Spink, A., Wilson, T.D., Ford, N., Foster, A. &amp; Ellis, D. (2002a). Information seeking and mediated searching. Part 1, Theoretical framework and research design. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>53</strong>(9), 695-703.
+              </li>
+              <li id="Spink2002b">Spink, A., Wilson, T.D., Ford, N., Foster, A. &amp; Ellis, D. (2002b). Information seeking and mediated searching. Part 3, Successive searching. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>53</strong>(9), 716-727.
+              </li>
+              <li id="Stelmaszewska2005">Stelmaszewska, H., Blandford, A. &amp; Buchanan, G. (2005). Designing to change users' information seeking behaviour: a case study. In S.Y. Chen &amp; G.D. Margoulas (Eds.), <em>Adaptable and adaptive hypermedia systems</em> (pp. 1-18). Hershey, PA: Idea Group.
+              </li>
+              <li id="Sutcliffe2000">Sutcliffe, A., Ennis, M., &amp; Watkinson, S.J. (2000). Empirical studies of end-user information searching. <em>Journal of the American Society for Information Science</em>, <strong>51</strong>, 1211–1231.
+              </li>
+              <li id="Sutton1998">Sutton, R.S. &amp; Barto, A.G. (1998). <em>Reinforcement learning: an introduction</em>. Cambridge, MA: MIT Press.
+              </li>
+              <li id="Tabatabai2005">Tabatabai, D. &amp; Shore, B.M. (2005). How experts and novices search the Web<em>. Library &amp; Information Science Research</em>, <strong>27</strong>(2), 222-248.
+              </li>
+              <li id="Tenopir2008">Tenopir, C., Wang, P. &amp; Zhang, Y. (2008). Academic users' interactions with ScienceDirect in search tasks: affective and cognitive behaviours. <em>Information Processing &amp; Management</em>, <strong>44</strong>(1), 105-121.
+              </li>
+              <li id="Thatcher2008">Thatcher, A. (2008). Web search strategies: the influence of Web experience and task type. <em>Information Processing &amp; Management</em>, <strong>44</strong>(3), 1308-1329.
+              </li>
+              <li id="Tsuji2001">Tsuji, S. &amp; Yamamoto, Y. (2001). A framework to provide integrated online documentation. In: <em>Proceedings of the 19th Annual International Conference on Computer Documentation (SIGDOC'01), October 21-24, Santa Fe, New Mexico, USA</em>, (pp. 185-192). New York, NY: ACM Press.
+              </li>
+              <li id="Vakkari2001">Vakkari, P. (2001). A theory of the task-based information retrieval process: a summary and generalisation of a longitudinal study. <em>Journal of Documentation</em>, <strong>57</strong>(1), 44-60.
+              </li>
+              <li id="Warwick2009">Warwick, C., Rimmer, J., Blandford, A., Gow, J. &amp; Buchanan, G. (2009). Cognitive economy and satisficing in information seeking: a longitudinal study of undergraduate information behavior. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>60</strong>(12), 2402-2415.
+              </li>
+              <li id="Wildemuth2004">Wildemuth, B.M. (2004). The effects of domain knowledge on search tactic formulation. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>55</strong>(3), 246-258.
+              </li>
+              <li id="Wilson2009">Wilson, M.L., Schraefel, M.C. &amp; White, R.W. (2009). Evaluating advanced search interfaces using established information-seeking models. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>60</strong>(7), 1407-1422.
+              </li>
+              <li id="Wilson1997">Wilson, T.D. (1997). Information behaviour: an interdisciplinary perspective. <em>Information Processing &amp; Management</em>, <strong>33</strong>(4), 551-572.
+              </li>
+              <li id="Wilson1999">Wilson, T.D. (1999). <a href="http://www.webcitation.org/6EwqakJoK">Models in information behaviour research</a>. <em>Journal of Documentation</em>, <strong>55</strong>(3) 249-270. Retrieved 7 March, 2013 from http://informationr.net/tdw/publ/papers/1999JDoc.html (Archived by WebCite® at http://www.webcitation.org/6EwqakJoK)
+              </li>
+              <li id="Wilson2000">Wilson, T.D. (2000). <a href="http://www.webcitation.org/6EwqTIg0B">Human information behavior</a>. <em>Informing Science</em>, <strong>3</strong>(2), 49-55. Retrieved 7 March, 2013 from http://www.inform.nu/Articles/Vol3/v3n2p49-56.pdf (Archived by WebCite® at http://www.webcitation.org/6EwqTIg0B)
+              </li>
+              <li id="Wilson2002">Wilson, T.D., Ford, N., Ellis, D., Foster, A.E. &amp; Spink, A. (2002). Information seeking and mediated searching. Part 2, Uncertainty and its correlates. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>53</strong>(9), 704-715.
+              </li>
+              <li id="Xie2000">Xie, H. (2000). Shifts of interactive intentions and information-seeking strategies in interactive information retrieval. <em>Journal of the American Society for Information Science</em>, <strong>51</strong>(9), 841-857.
+              </li>
+              <li id="Xie2007">Xie, H. (2007). <a href="http://www.webcitation.org/6CiEeOu3a">Shifts in information-seeking strategies in information retrieval in the digital age: planned-situational model</a>. <em>Information Research</em>, <strong>12</strong>(4), paper colis22. Retrieved 7 March, 2013 from http://InformationR.net/ir/12-4/colis/colis22.html (Archived by WebCite® at http://www.webcitation.org/6CiEeOu3a)
+              </li>
+              <li id="Xie2009">Xie, I. &amp; Cool, C. (2009). Understanding help seeking within the context of searching digital libraries. <em>Journal of the American Society for Information Science &amp; Technology</em>, <strong>60</strong>(3), 477-494.
+              </li>
+              <li id="Zhang2008">Zhang, Y. (2008). The influence of mental models on undergraduate students' searching behavior on the Web. <em>Information Processing &amp; Management</em>, <strong>44</strong>(3), 1330-1345.
+              </li>
+              <li id="Zhu2011">Zhu, Y., Chen, L., Chen, H. &amp; Chern, C. (2011). How does Internet information seeking help academic performance? The moderating and mediating roles of academic self-efficacy. <em>Computers &amp; Education</em>, <strong>57</strong>, 2476-2484.
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+    </article><br>
+    <section>
+      
+      <br>
+      
+      
+      <hr>
+      <h2 id="Appendix">
+        Appendix: Reinforcement learning models
+      </h2>
+      <p>
+        The basic ideas of the models listed in <a href="#Table_1">Table 1</a> are further explained as follows:
+      </p>
+      <h3>
+        (1) Bush and Mosteller's model
+      </h3>
+      <p>
+        In Bush and Mosteller's model (<a href="#Bush1953">Bush and Mosteller 1953</a>), a probability variable <em>P</em>(<em>i</em>) is used to define the attraction of a strategy to a certain user (denoted as <em>u</em>). Let <em>d</em>(<em>t</em>) denote the strategy which is chosen by user <em>u</em> in period <em>t</em>, and <em>p</em>(<em>t</em>) stand for the reward or punishment fed back to the user in period <em>t</em>. A nonnegative <em>p</em>(<em>t</em>) means the user gets a reward, otherwise a punishment. Suppose in period <em>t</em>, user <em>u</em> chooses the <em>j</em>-th strategy from the strategy set, i.e. <em>j</em>=<em>d</em>(<em>t</em>). Then for <em>u</em>, the attraction of strategy <em>j</em> is updated under the following rules:
+      </p><img id="Equation 3" alt="equation" src="p569Equat3.jpg">
+      <p>
+        For each strategy <em>k</em> other than <em>j</em> (namely those unemployed strategies), the attraction value is updated according to the following rules:
+      </p><img id="Equation 4" alt="equation" src="p569Equat4.jpg">
+      <p>
+        In the above adjusting rules, <em>a<sup>BM</sup></em> and <em>ß<sup>BM</sup></em> are two parameters to be estimated. <em>a<sup>BM</sup></em>?[0,1] is the weight factor assigned to a nonnegative payoff, while <em>ß<sup>BM</sup></em>?[0,1] the weight factor to a negative payoff. A smaller <em>a<sup>BM</sup></em> means that a nonnegative payoff plays a slighter part in the strategy selection, while a smaller <em>ß<sup>BM</sup></em> means that a negative payoff plays a minor role in the strategy selection.
+      </p>
+      <p>
+        More intuitively, the learning rules that Bush and Mosteller's model describes can be interpreted as: when a certain strategy leads to a positive payoff, the probability of this strategy being chosen again increases and the probability of it being avoided decreases; otherwise, the probability of the strategy being further adopted decreases and the probability of it being rejected increases.
+      </p>
+      <h3>
+        (2) Börgers and Sarin's model
+      </h3>
+      <p>
+        Compared to Bush and Mosteller's model, Börgers and Sarin's model (<a href="#Borgers2000">Börgers and Sarin 2000</a>) details the information for evaluating the payoff of a strategy adoption. It assumes that the evaluation of a strategy does not directly rely on the absolute value of the actual payoff, but on the difference between the actual payoff and the expected one. Let <em>A</em>(t)?[0,1] denote the payoff expectation of a user before employing a strategy in period <em>t</em> and <em>A</em>(1) be the initial expectation for the user before decision-making.
+      </p>
+      <p>
+        If <em>p</em>(<em>t</em>)=<em>A</em>(<em>t</em>), the attraction value of each strategy after period <em>t</em> is updated by:
+      </p><img id="Equation 5" alt="equation" src="p569Equat5.jpg">
+      <p>
+        Otherwise, the attraction values are updated as follows:
+      </p><img id="Equation 6" alt="equation" src="p569Equat6.jpg">
+      <p>
+        The payoff expectation is updated as follows:
+      </p><img id="Equation 7" alt="equation" src="p569Equat7.jpg">
+      <p>
+        The parameter <em>a<sup>BS</sup></em> is regarded as the reinforcement strength, whose value is the absolute difference between the actual payoff and the expected one, i.e., <em>a<sup>BS</sup></em>=|<em>p</em>(<em>t</em>)-<em>A</em>(<em>t</em>)|. The parameter <em>ß<sup>BS</sup></em> is set fixed, which stands for the adjustment speed of payoff expectation. The bigger <em>ß<sup>BS</sup></em> is, the more greatly the current payoff influences the further strategy selection.
+      </p>
+      <p>
+        Similarly, Börgers and Sarin's model can be summarised as: if the actual payoff exceeds the expectation of an individual after a strategy is settled, then the probability of this strategy being further selected increases. On the contrary, if the actual payoff is smaller than the expectation, the probability of the strategy being adopted in future decreases. The expected payoff changes dynamically according to the actual payoff of the previous strategy adoption.
+      </p>
+      <h3>
+        (3) Cross's model
+      </h3>
+      <p>
+        As a modification to Bush and Mosteller's model, Cross's model (<a href="#Cross1973">Cross 1973</a>) is one of the most acknowledged reinforcement learning models.
+      </p>
+      <p>
+        Let <em>R</em>(<em>p</em>(<em>t</em>)) be the reinforcement strength, which is a monotonic function of the payoff <em>p</em>(<em>t</em>). The attraction value of each strategy after period t is updated by:
+      </p><img id="Equation 8" alt="equation" src="p569Equat8.jpg">
+      <p>
+        <img id="Equation 9" alt="equation" src="p569Equat9.jpg">
+      </p>
+      <p>
+        In the above rules,<em>a<sup>CR</sup></em>?[0,1] and <em>ß<sup>CR</sup></em>?[0,1] are two parameters that control the updating mechanism of the attraction of each strategy.
+      </p>
+      <p>
+        In Cross's model, the attraction of a strategy is defined as a linear function of the payoff by configuring the reinforcement strength as a variable correlated to the payoff, whereas in Bush and Mosteller's model, the reinforcement strength factors, <em>a<sup>BM</sup></em> and <em>ß<sup>BM</sup></em>, are fixed and independent to payoffs.
+      </p>
+      <h3>
+        (4) Roth and Erev's model
+      </h3>
+      <p>
+        Both Cross's model and Börgers and Sarin's model are essentially modifications of Bush and Mosteller's model. All these models place emphasis on the Markov characteristics of players' strategy selection. In other words, when making a decision, an individual prefers to choose a strategy in terms of the payoff gained from the last strategy adoption. In contrast, Roth and Erev's models (<a href="#Roth1995">Roth and Erev 1995</a>) underline users' prior experience. That is to say, decision makers select a strategy based on their experiential expectations for all strategies. These expectations result from the accumulated effect of their past strategy adoptions, not only the last one.
+      </p>
+      <p>
+        In Roth and Erev's model, the attraction value of each strategy after period <em>t</em> is updated under the following linear rules:
+      </p><img id="Equation 10" alt="equation" src="p569Equat10.jpg">
+      <p>
+        <img id="Equation 11" alt="equation" src="p569Equat11.jpg">
+      </p>
+      <p>
+        Here, <em>A<sub>k</sub></em>(<em>t</em>) is the accumulated payoff from adopting the <em>k</em>-th strategy before and in period <em>t</em>.
+      </p>
+      <h3>
+        (5) Roth and Erev's modified model
+      </h3>
+      <p>
+        In Roth and Erev's modified model (<a href="#Erev1996">Erev and Roth 1996</a>), the attraction values of the strategies after period <em>t</em> are updated:
+      </p><img id="Equation 12" alt="equation" src="p569Equat12.jpg">
+      <p>
+        <img id="Equation 13" alt="equation" src="p569Equat13.jpg">
+      </p>
+      <p>
+        <img id="Equation 14" alt="equation" src="p569Equat14.jpg">
+      </p>
+      <p>
+        <img id="Equation 15" alt="equation" src="p569Equat15.jpg">
+      </p>
+      <p>
+        where <em>f</em> is a forgetting parameter measuring the attenuation degree of users' experiences influencing their strategy selection, and <em>X<sub>min</sub></em> is the minimum expectation of a user for all the strategies. Through <em>f</em> and <em>X<sub>min</sub></em>, different users may make different subjective evaluations to a strategy even when the payoffs from applying the strategy are equal. <em>E<sub>j</sub></em>(<em>k</em>,<em>R</em>(<em>p</em>(<em>t</em>))) is a function controlling how the payoff <em>p</em>(<em>t</em>) from implementing strategy <em>j</em> updates the reinforcement strength <em>A<sub>k</sub></em>(<em>t</em>+1), and <em>e</em> is a transferring parameter that determines the extent of the reinforcement strength transferring to the unemployed strategies.
+      </p>
+      <hr>
+      
+    </section>
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer>
+  </body>
+</html>

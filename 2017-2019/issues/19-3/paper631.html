@@ -1,0 +1,842 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title>
+      Making sense of document collections with map-based visualisations: the role of interaction with representations
+    </title>
+    <meta charset="utf-8">
+    <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif">
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css"><!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="Making sense of document collections with map-based visualisations: the role of interaction with representationsr">
+    <meta name="author" content="Give author(s) name(s) - separate by commas">
+    <meta name="dcterms.subject" content="Give a brief description of your paper">
+    <meta name="description" content="Copy your abstract here - remove the structured headings">
+    <meta name="keywords" content="Provide keywords, using those in the journal's list (http://informationr.net/ir/Index_terms.html) where possible"><!--leave the following to be completed by the Editor-->
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/19-3/paper631.html">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/19-3/infres193.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2014-09-15">
+    <meta name="geo.placename" content="global">
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 19 no. 3, September, 2014
+      </h4>
+    </header>
+    <article>
+      <h1>
+        Making sense of document collections with map-based visualisations: the role of interaction with representations
+      </h1><br>
+      <div style="margin-left: 5%; margin-right:10%;">
+        <h4>
+          <a href="#author">Olha Buchel</a> and <a href="#author">Kamran Sedig</a><br>
+          Faculty of Information and Media Studies, University of Western Ontario, London, Ontario, Canada N6A 5B7
+        </h4>
+      </div><br>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Abstract</legend>
+            <blockquote>
+              <strong>Introduction</strong>. This paper examines the role of individual and combined human-information interactions in sense-making activities involving document collections that are linked to map-based visualisations. In this paper it is assumed that sense-making in map-based visualisations of documents involves developing a cognitive map of interrelated semantic, geographic, social, and personal working spaces, their structure and relationships. Understanding these is facilitated not only by perception of their structure and relationships, but also by the user's continuous interaction with them.<br>
+              <strong>Elaboration</strong>. The paper presents, defines, and examines concepts dealing with the design of interaction for map-based visualisations using an example prototype system, VICOLEX (VIsual COLlection EXplorer). Our examination of interactions is analytical and supported by empirical evidence.<br>
+              <strong>Results</strong>. The main contribution of this paper is an analytical demonstration of the role that a set of interactions can play in supporting users' understanding of spaces and their formation of cognitive maps when working with map-based visualisations. Viewed in isolation, any given interaction may seem insignificant, yet when analysed and combined together, they can reduce the overall efforts of users and significantly facilitate sense-making activities.<br>
+              <strong>Significance</strong>. The ideas presented in this paper are useful for understanding and making sense of document collections and the design of tools and interfaces that help users explore any kind of structured information with geospatial properties.
+            </blockquote>
+          </fieldset>
+        </form><br>
+        <br>
+        <h2>
+          Introduction
+        </h2>
+        <p>
+          Map-based visualisations provide a new form of interface to geodigital libraries. These map-based visual interfaces display geospatial locations referenced in document collections on digital maps and facilitate user engagement with the underlying information. Currently, most such interfaces provide mainly two forms of interactions for accessing the underlying information: searching and browsing (<a href="#hil06">Hill, 2006</a>; <a href="#liu13">Liu, Gao, Lin, Guo and Li, 2013</a>; <a href="#clo11">Clough, Tang, Hall and Warner, 2011</a>). This paper aims to highlight the need for the inclusion of more interaction forms in order to better support the sense-making activities of end users. Sense-making may be thought of as the '<em>motivated, continuous effort to understand connections [among information items] in order to anticipate their trajectories and act effectively‘</em> (<a href="#kle06">Klein, Moon and Hoffman, 2006</a>, p. 71), as for example, among people, places or events. This paper asserts that searching and browsing interactions cannot effectively support the sense-making activities of end users. Inevitably, sense-making involves a broad set of smaller tasks and subtasks. For example, when we move to a new neighbourhood, we try to make sense of its streets, quality of schools, stores and so on. This paper concentrates on sense-making in geodigital libraries; that is, collection understanding or making sense of a collection of documents. Understanding a georeferenced collection involves two main activities: a) learning about the structure of semantic, geographic, social, personal working spaces, and interrelationships among them; and b) developing a cognitive map.
+        </p>
+        <p>
+          Generally speaking, a space may be conceptualised as a network of objects, their properties and their relationships mirroring the structure that is being represented from the real world (<a href="#dod01">Dodge and Kitchin, 2001</a>). There are different types of spaces. A semantic space is related to a collection's structure, properties of its documents and their changes or transitions. If the semantic space is overlaid onto a geographic space, the real-world concepts of distance, direction, magnitude and so on take on semantic associations (<a href="#dee90">Deerwester, Dumais, Landauer, Furnas and Harshman, 1990</a>). While semantic and geographic spaces gain new characteristics from merging with each other, they also preserve their own structures and properties. Buchel and Sedig (<a href="#bucsed11">2011</a>) have described the structure of semantic and geographic spaces related to document collections in great detail. Besides semantic and geographic spaces, today's document collections can also be considered as social spaces, where users can contribute to and interact with information and with each other (<a href="#spi10">Spiteri, Tarulli and Graybeal, 2010</a>). Social spaces are constructed by a community of users, where they can learn about activities of other users involving collections (e.g., what other users visited, what they used, what they annotated, and so on). Finally, there are personal working places where users creatively appropriate aspects of an information space, organize it, adjust it to their needs, and add their own understanding (<a href="#har96">Harrison and Dourish, 1996</a>; <a href="#shi99">Shipman, Marshall and LeMere, 1999</a>).
+        </p>
+        <p>
+          Understanding visual information in space is facilitated by seeing as well as continuous interaction with information content and structure. Interaction plays an important role in sense-making activities involving space. It allows users to restructure and modify a space's content according to their perceptual and cognitive needs. For example, interaction with the semantic space may help users understand transitional processes in properties of collections. Interaction with the geographic space may support understanding of differences among various types of locations and their associations with collections. Interaction is also important when documents or collections of interest are retrieved, because users need to organize the retrieved information. Organizing tasks are inherently spatial, involving placing objects somewhere (<a href="#kir95">Kirsh, 1995</a>) and defining the geography of working spaces (<a href="#shi99">Shipman, <em>et al.</em>, 1999</a>)—where geography here refers to spatial arrangements of objects conveying some meaning. In such arrangements, closer items can indicate urgency, and new items on top of a pile of documents can indicate recency, as documents in piles are usually ordered chronologically (<a href="#kir01">Kirsh, 2001</a>). Such spatial cues help users overcome the inherent inexpressiveness of space that prompts them to perform the next steps in tasks and activities.
+        </p>
+        <p>
+          Interaction also helps users form cognitive maps of an information space (<a href="#kit00">Kitchin and Freundschuh, 2000</a>; <a href="#sed05">Sedig, Rowhani and Liang, 2005</a>; <a href="#gol10">Gollidge, 2010</a>). In terms of their structure, cognitive maps include several main structural components: landmarks, paths, districts, nodes, edges (<a href="#lyn60">Lynch, 1960</a>) and <em>skeletons</em> (<a href="#kui03">Kuipers, Tecuci and Stankiewicz, 2003</a>). They play a major part in framing a person's knowledge of the space and help people make navigation decisions (<a href="#loo07">Look and Shrobe, 2007</a>). However, regardless of the seemingly rigid organization of cognitive maps, they are characterised by various distortions and deformations (<a href="#tve81">Tversky, 1981</a>). For example, people make mistakes in remembering actual distances, alignments and directions in space. For this reason, it is desirable that map-based visualisations scaffold users' formation of cognitive maps by allowing them to create their own representations and modify their existing representations.
+        </p>
+        <p>
+          The purpose of this paper is twofold: to examine the role of interaction in enhancing understanding of various spaces associated with collections; and to design interactions that support the formation of users' cognitive maps. Our examination of interaction is in the context of the human-computer interaction community's conceptualisation of sense-making. It is important to note that sense-making in human-computer interaction is distinct from sense-making in library and information science (<a href="#der92">Dervin, 1992</a>) and organizational theory (<a href="#wei95">Weick, 1995</a>), the latter two being outside the scope of this paper. We will present and define a number of concepts dealing with the design of interaction for map-based visualisations using an example prototype system, VICOLEX (VIsual COLlection EXplorer). VICOLEX is a prototype visualisation that we have designed and implemented to help users make sense of a collection of records from the Library of Congress catalogue. We use VICOLEX as a testbed to analytically study the role of interaction while drawing on empirical evidence found in the literature. We omit discussion of searching and browsing by space, time, and topics/subjects as these topics have been extensively covered in previous research (see for example, <a href="#hil06">Hill, 2006</a>; <a href="#peq02">Pequet and Kraak, 2002</a>; <a href="#eds01">Edsall, 2001</a>; <a href="#zer06">Zerneke, Buckland and Carl, 2006</a>; <a href="#li08">Li and Kraak, 2008</a>).
+        </p>
+        <p>
+          The remainder of the paper is divided into five parts. In the next section, we review literature about current approaches to facilitating collection understanding and how visualisations can be improved. The subsequent section describes the prototype collection that we have used, while seeking principles for how collection understanding can be facilitated. We then turn our attention to an analysis of VICOLEX and its features, focusing on interactions and their role in making sense of collections and locations. Then, we briefly present how interactions can be combined to perform higher-level activities with VICOLEX. Finally, in the last section, we provide a summary of this research, briefly discuss its applications and outline some future lines of research.
+        </p>
+        <h2>
+          Literature review
+        </h2>
+        <h3>
+          Existing approaches
+        </h3>
+        <p>
+          Librarians, information visualisation and geovisualisation researchers have developed two major approaches to facilitate collection understanding: collection-level metadata and visualisation. The first approach represents collections at the aggregate level and provides context for the documents (<a href="#zav10">Zavalina, 2010</a>), in particular, summary of subjects, objects, geographic coverage, temporal coverage and provenance of collections. The second approach uses visualisations that provide collection overviews, examples of which include hierarchies, trees, paradigms, faceted classifications (<a href="#kwa99">Kwasnik, 1999</a>), concept maps (<a href="#she03">Shen, Richardson and Fox, 2003</a>), spatialisations (e.g., graphs) (<a href="#bor10">Börner, 2010</a>; <a href="#fab01">Fabrikant and Buttenfield, 2001</a>), and collages (<a href="#cun08">Cunningham and Bennett, 2008</a>; <a href="#bai04">Bainbridge, Cunningham and Downie, 2004</a>).
+        </p>
+        <p>
+          The first approach has two major shortcomings. First, it is in the form of text, which does not provide good support for the perception of the collection structure (Buchel and Sedig, 2011). Second, it is non-interactive. Metadata representations cannot be grouped, merged, decomposed, or transformed in any other way, and once a collection is catalogued, it is treated as a monolith that is not to be subject to any changes. Additionally, static metadata representations do not allow users to gain awareness of transitional processes in spaces. Perceiving transitional processes is critical since collections constantly change due to the addition and deletion of documents to and from them (<a href="#cur05">Currall, Moss and Stuart, 2005</a>). Transitional processes are caused by acquiring, weeding out and borrowing. Some of these transitional processes are temporary (borrowing), others are permanent (acquiring and weeding out). As a result of transitions, some collections grow, some shrink and some remain unchanged. Transitional processes have a direct effect on properties of collections. All additions to or subtractions from collections and sub-collections are reflected in their properties. Transitional processes are not always easy to understand without interactions (<a href="#sed05">Sedig, 2005</a>). In other words, without interactions, transitional processes often remain hidden (<a href="#dod01">Dodge and Kitchin, 2001</a>).
+        </p>
+        <p>
+          There is substantial evidence for the existence of transitional processes in ontological properties of collections (<a href="#heu59">Heumann and Bernays, 1959</a>; <a href="#kir12">Kirchik, Gingras and Larivière, 2012</a>; <a href="#tay00">Taylor, 2000</a>; see also, the <a href="http://www.webcitation.org/6Rag7pOvC">Library of Congress classification</a>). These include evolution of book sizes during different times, changes and shifts in languages of communication in collections (e.g., German to English as the principal language for chemistry publications), transitions in subjects especially those that occurred due to mutations of word meanings, substantial changes in controlled vocabularies (e.g., while older controlled vocabularies of genres in library catalogues were limited to encyclopaedias, biographies, histories, and a few other genres, recently they have expanded to include recently emerged ones such as aerial photographs, French dictionaries, conversation and phrase books, and science fiction).
+        </p>
+        <p>
+          As in the first approach, the second approach also has its own shortcomings. Map-based visualisations often lack task-relevant interactive possibilities (i.e., small actions and their subsequent reactions), such as filtering, selecting, gathering and others. To support understanding of collections (i.e., their sub-collections, properties, and relationships), users benefit from acting upon visualisations in a variety of ways, such as being able to select a portion of a map, group all documents linked to the map, discard all unwanted documents, and represent the remaining documents with other visualisation techniques (e.g., a <a href="http://en.wikipedia.org/wiki/Self-organizing_map" target="_blank">Kohonen map</a>, or a pie chart). Existing visualisation approaches also focus mainly on the representation (i.e., visualisation) of a document's (semantic) space, without any support for social and working spaces or support for the formation of cognitive maps.
+        </p>
+        <p>
+          Richer interactions can be found in the so-called space-time-topic-centered visualisations, which help users understand transitions associated with space, time and topics in collections. An example of this type of visualisation is the <a href="http://www.apps.geovista.psu.edu/hgj/" target="_blank">Health GeoJunction</a> Web portal, which has a digital map synchronised with a <a href="http://en.wikipedia.org/wiki/Tag_cloud" target="_blank">tag cloud</a> and a timeline. All individual views of this interface (the map, the tag cloud, and the timeline) are generated from the entire collection of documents and are, therefore, semantically equivalent. The merit of this type of interface is that it shows interrelationships among three ontological properties of documents: geographic space, time and topics (<a href="#and07">Andrienko and Andrienko, 2007</a>), and a change in any of these properties is reflected in the other properties. Using this type of visualisation, however, renders it difficult to say how a collection about one location differs from those about another. Furthermore, these visualisations do not accommodate social and working spaces. Users frequently need help to understand the interface, locate the main widgets, interact with the interface, and interpret and evaluate the resulting actions (<a href="#and07">Andrienko and Andrienko, 2007</a>).
+        </p>
+        <h3>
+          Solution
+        </h3>
+        <p>
+          To improve upon existing map-based visualisations, we conceptualise collection understanding as a sense-making activity, a theory developed within the human-computer interaction community. Sense-making activities take place in ill-structured, open-ended situations, such as exploring family genealogy, tracing the history of remote places and gathering information about locations of interest. These activities involve users establishing goals, discovering an information space's structure and texture (e.g., vocabulary), figuring out appropriate questions and determining how relevant answers might be organized (<a href="#rus93">Russel, Stefik, Pirolli and Card, 1993</a>). The outcome of sense-making activities depends on how well users perform these tasks. Given that collection understanding involves the above tasks; that is, discovering a collection's structure, asking questions about the elements in the collection, organizing and structuring retrieved information, and resolving potentially-conflicting pieces of information across many documents—it can be conceptualised as a sense-making activity.
+        </p>
+        <p>
+          In sense-making activities, attention is primarily paid to information objects and interactions with these objects. In computer-based settings, these would translate to representations and interactions with these representations. Users generally rely on external representations (such as graphs, tables, diagrams, maps and other graphical representations) to organize information (Russel <em>et al.</em>, 1993). External representations help users conceptualise a problem and form internal representations, make sense of a situation, formulate actions, and understand the structure of the collection and information spaces (<a href="#buc11">Buchel, 2011</a>; <a href="#bucsed11">Buchel and Sedig, 2011</a>). Furthermore, representations provide constraints for users, dictate which operations should be performed next (<a href="#fur08">Furnas, 2008</a>), and facilitate planning and reasoning about alternative courses of action (<a href="#pir05">Pirolli and Card, 2005</a>). Examples of interactions with these representations include filtering, navigating, annotating and selecting. These are low-level actions that users perform on external representations followed by the response that they get (<a href="#sed13">Sedig and Parsons, 2013</a>). Interactions are particularly important for understanding complex, dense information spaces and their representations. For example, when working with complex map-based visualisations of library collections, people often want to rearrange or reformulate semantic and geographic spaces, gather documents and place them into piles or files, use various office supplies to keep related documents together, prepare documents for work, or synthesise topics. Interactions allow users to perform these physical-like actions in order to adjust representations and spaces so that they suit their epistemic needs. Interaction allows different properties, elements, relations, and layers of information to be made explicit and available on demand. Actions have potential benefits for cognition: they help users externalise thought, reduce cognitive load, simplify perception and mental computation (<a href="#kir94">Kirsh and Maglio, 1994</a>; <a href="#kir96">Kirsh, 1996</a>), gather rich sensory information from the environment (<a href="#kle06">Klemmer, Hartmann and Takayama, 2006</a>), and bring out otherwise unavailable perceptual information (<a href="#kir98">Kirlik 1998</a>). Empirical research suggests that interactions affect the quality and speed of sense-making in visualisation-based interfaces: systems with richer interactive possibilities support sense-making processes positively, while systems that lack interactions can have negative effects and slow down sense-making processes (<a href="#wri06">Wright, Schroh, Proulx, Skaburskis and Cort, 2006</a>; <a href="#rus08">Russel, Jeffries and Irani, 2008</a>; <a href="#lia10">Liang and Sedig, 2010</a>). For example, Liang and Sedig (<a href="#lia10">2010</a>) conducted a study in which a group of subjects had to make sense of and reason about three-dimensional visualisations. They used two versions of a visualisation tool, one with limited interaction and the other with multiple interactions. Subjects who used the tool with multiple interactions performed significantly better in their sense-making activity.
+        </p>
+        <p>
+          Although the beneficial role of interaction in sense-making is well-recognised, guidance for design of interaction is scarce. In the context of physical environments, Kirsh (<a href="#kir09">2009</a>) draws a distinction between two types of interaction with external representations during sense-making. The first type concerns usage of representations, such as rearranging or reformulating the representations, while the second type concerns preparation of representations for later usage, such as gathering documents and placing them into files, using various office supplies to keep related documents together, and outlining or synthesising topics in documents for presentation. While many interactions and tasks such as these exist (e.g., <a href="#rot12">Roth, 2012</a>; <a href="#glu96">Gluck, 1996</a>; <a href="#cra02">Crampton, 2002</a>), in general they are scattered across the literature, and comprehensive overviews of all possible interactions are rare.
+        </p>
+        <p>
+          Recently, Sedig and Parsons (<a href="#sed13">2013</a>) have developed an interaction design framework, EDIFICE (Epistemology and Design of human-InFormation Interaction in complex Cognitive activitiEs). Among other things, this framework characterises an extensive set of action patterns, which can be systematically incorporated into visualisation tools to assist users with performing cognitive activities. It is noteworthy that since an interaction is comprised of two components, action and reaction, when talking from the perspective of the user, the term action is sufficient to refer to an interaction. As such, these two terms are sometimes used interchangeably. A list of these actions is presented in Table 1. EDIFICE divides actions into two main categories: unipolar and bipolar. The unipolar actions are performed in one direction and do not have natural opposite actions, where a reversal of action can be performed to undo action. Bipolar actions, on the other hand, have two opposite actions, which can reverse each other. Table 1 lists EDIFICE's actions and provides a brief characterisation of each action. In this table, VR signified visual representation.
+        </p>
+        <table class="center" style="width:90%">
+          <caption>
+            <br>
+            Table 1: List of action patterns.
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                &nbsp;
+              </th>
+              <th>
+                Actions
+              </th>
+              <th>
+                Characterisation
+              </th>
+            </tr>
+            <tr>
+              <td rowspan="14" style="text-align:center;">
+                <strong>Unipolar<br>
+                actions</strong>
+              </td>
+              <td>
+                Annotating
+              </td>
+              <td>
+                augment visual representations with personal meta-information and coding schemes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Arranging
+              </td>
+              <td>
+                change order of visual representations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Assigning
+              </td>
+              <td>
+                bind property to visual representations (e.g., feature, meaning, function, value, or behaviour)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cloning
+              </td>
+              <td>
+                create multiple identical copies of visual representations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Comparing
+              </td>
+              <td>
+                determine degree of similarity or difference between visual representations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Drilling
+              </td>
+              <td>
+                bring out, make available and display interior, deep information in visual representations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Filtering
+              </td>
+              <td>
+                show and/or hide a subset of visual representations' elements according to certain criteria
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Measuring
+              </td>
+              <td>
+                quantify properties of visual representations (e.g., area, length, mass, temperature and speed)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Navigating
+              </td>
+              <td>
+                move on, through, and/or around visual representations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Scoping
+              </td>
+              <td>
+                dynamically work forwards and backwards to view compositional development and growth of visual representations, either temporally or spatially
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Searching
+              </td>
+              <td>
+                seek out the existence of or locate position of specific entities, relationships, or structures in visual representations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Selecting
+              </td>
+              <td>
+                focus on or choose visual representations, either as an individual or as a group
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Transforming
+              </td>
+              <td>
+                change the geometric form of visual representations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Translating
+              </td>
+              <td>
+                convert visual representations into alternative informationally- or conceptually-equivalent forms that require different degrees and kinds of cognitive processing
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="8" style="text-align:center;">
+                <strong>Bi-polar<br>
+                actions</strong>
+              </td>
+              <td>
+                Accelerating/decelerating
+              </td>
+              <td>
+                increase speed of movement of constituent components of visual representations, or oppositely, decrease their speed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Animating/freezing
+              </td>
+              <td>
+                generate movement in constituent components of visual representations, or oppositely, stop their motion
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Collapsing/expanding
+              </td>
+              <td>
+                fold in or compact visual representations, or oppositely, fold them out or make them diffuse
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Composing/decomposing
+              </td>
+              <td>
+                bind visual representations together and create a singular entity, or oppositely, break whole entities up into separate, constituent components
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Gathering/discarding
+              </td>
+              <td>
+                gather visual representations into a collection, or oppositely, throw them away completely
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Inserting/removing
+              </td>
+              <td>
+                interject new information into visual representations, or oppositely, get rid of their unwanted or unnecessary portions
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Linking/unlinking
+              </td>
+              <td>
+                establish a relationship or association between visual representations, or oppositely, dissociate them and disconnect their relationships
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Storing/retrieving
+              </td>
+              <td>
+                put visual representations aside for later use, or oppositely, bring stored visual representations back into usage
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Notably, EDIFICE omits zooming, panning, and scrolling, the three staple interaction techniques for digital maps typically referred to in the literature. The reason for this is that the EDIFICE framework makes a distinction between interactions as techniques and as more abstract patterns. Interaction patterns are conceptual, pattern-based characterisations of how users act upon visual representations to facilitate cognitive activities. Interaction techniques, on the other hand, are characterised at a lower level of abstraction and are often technology-dependent implementations of an interaction pattern. For example, zooming is a technique derived from the translating pattern if it involves changing a representation from one form to another (i.e., semantic zooming), from the drilling pattern if it involves extracting and encoding new information, and from the transforming pattern if it involves geometric enlargement. We chose a framework that focuses on action patterns rather than techniques mainly for two reasons: 1) the number of interaction techniques is already overwhelmingly large and thus it is very difficult to know what to incorporate in a visualisation interface; and 2) researchers and designers do not employ a coherent language when characterising interactions, hence making it very difficult to know how to implement such characterisations. For this reason, the catalogue of interaction presented in EDIFICE provides us with a more robust vocabulary for understanding each interaction and its utility in the cognitive activity of collection understanding.
+        </p>
+        <p>
+          Based on the above discussion, to facilitate collection understanding, our solution involves the enhancement of map-based visualisations with various representations of spaces and interactions. Representations can help users conceptualise a problem, understand the structure of the spaces, provide guidance in navigation, planning and reasoning, while interactions can expedite sense-making and help users adjust visualisations to their epistemic needs. The next section discusses how the interactions in EDIFICE have been implemented in a map-based visualisation prototype, VICOLEX, to facilitate the understanding of a particular collection.
+        </p>
+        <h2>
+          Method
+        </h2>
+        <h3>
+          VICOLEX
+        </h3>
+        <p>
+          VICOLEX (VIsual document COLlection EXplorer), a prototype interface, is an interactive map-based visualisation for supporting the understanding of document collections with geospatial references. VICOLEX is built using Google Maps API Version 2.0, PHP5, Ajax, <a href="http://www.fusioncharts.com/" target="_blank">Fusion Charts</a>, <a href="http://gmaps-utility-library-dev.googlecode.com/svn/trunk/geometrycontrols/" target="_blank">Geometry Controls</a> and <a href="http://gmaps-utility-library.googlecode.com/svn/trunk/dragzoom/1.1/docs/examples.html" target="_blank">DragZoomControl</a>. The ideas and principles outlined in this paper could be implemented using any other geographic information system; however, we chose Google Maps API Version 2.0 because this API already supports a host of interaction techniques and has an extensive function library, which can be used to design different interactions.
+        </p>
+        <p>
+          The rest of this section is as follows. First, we provide a description and analysis of the prototype document collection that is used by VICOLEX. Next, we discuss how we use EDIFICE as the foundation for the systematic design of interaction for VICOLEX so as to facilitate collection understanding. Afterwards, we analyse the different interactions in VICOLEX and discuss their utilities.
+        </p>
+        <h2>
+          Description and analysis of VICOLEX's document collection
+        </h2>
+        <p>
+          Our prototype collection is comprised of 349 surrogate MARC records about the local history and description of Ukraine from the Library of Congress Catalog (described in detail in <a href="#bucsed11">Buchel and Sedig, 2011</a>). The collection's records belong to DK508 class in the <a href="http://www.webcitation.org/6Rag7pOvC">Library of Congress Catalog</a>. From each record we have selected only the key ontological properties; that is, physical descriptions (illustrations, maps, height of the book, number of pages in the book, year of publication, place of publication), languages, types of publication (serial or monograph), bibliographic notes, subjects, titles, call numbers and acquisition numbers. Locations found in the Library of Congress Catalog were enhanced with gazetteer descriptions which include footprint information (latitude and longitude), names (main and variant), and population size. The purpose of these descriptions is twofold. First, they are required for mapping placenames on Google Maps. Second, they are intended to enhance understanding of georeferenced locations in the collection (e.g., having population size allows us to filter out collections by small, large and medium-sized locations). Although the collection seems simple to visualise, prior to visualising it, we analysed its structure, transitional processes, and other latent properties and relationships. We present some of this analysis next.
+        </p>
+        <h3>
+          Structure
+        </h3>
+        <p>
+          The selected collection belongs to schedule DK508, which is a lower class in schedule D (History) and is comprised of smaller sub-collections, each of which is about a specific geographic location in Ukraine. It is characterised by thematic cohesiveness and similarities in bibliographic descriptions. In addition, its documents are imbued with illustrative matters (e.g., illustrations, maps, portraits) that share among them such things as travel guides, encyclopaedias and tour guides. They hardly have any temporal properties and serve one group of users: genealogy and history researchers. The collection has 32 sub-collections, each about a geographical location in Ukraine (e.g., Kiev, Lviv, Kharkiv, Odessa, and other cities and towns). Some of these are large (containing 100 or more records) and some are small (one to three records). Sub-collections inherit many properties of the collection and are closely interrelated and interdependent.
+        </p>
+        <h3>
+          Transitional processes
+        </h3>
+        <p>
+          The selected collection, similar to other library collections, can be subject to numerous multidirectional transitional processes and changes which are difficult to discover in library catalogues or maps that only show locations of collections. However, analyses and studies of other collections provide evidence that transitional processes can be traced in ontological properties of collections (e.g., changes in subjects, languages and document sizes).
+        </p>
+        <h2>
+          Implemented interactions in VICOLEX
+        </h2>
+        <p>
+          VICOLEX implements several of the interactions identified in EDIFICE, specifically navigating, filtering, selecting, annotating, drilling, arranging, and gathering. In this section we discuss how these interactions can be integrated into a map-based visualisation, examine their role in supporting understanding of various spaces and scaffolding the formation of cognitive maps. Although the analysis here focuses on how the implemented interactions enhance and support understanding of the selected prototype collection, the way VICOLEX utilises interactions for enhancing sense-making can be useful for many other collections from other subject domains as well as other geographic information spaces.
+        </p>
+        <h3>
+          Navigating
+        </h3>
+        <p>
+          Navigating involves moving on, over, or through a representation, with the destination seldom pre-determined. It rarely modifies the representation itself and is useful for structural exploration and understanding of spaces. The purpose of navigating is generally twofold: a) to enable users to learn how to get from point A to point B; and b) to support the formation of cognitive maps (<a href="#sed05">Sedig, Rowhani and Liang, 2005</a>). As people navigate a space, they assimilate information into their own cognitive maps, which extends processing beyond walking through space to interpreting meaning and drawing important cues about implicit spatial positions and semantics (<a href="#dil00">Dillon, 2000</a>). VICOLEX supports formation of cognitive maps by making various spaces of the selected collection salient. For example, it highlights places that users visit the most as heat spots (shown as red circles in Figure 1). These heat spots are generated by continuous automatic annotation updates of log data of what has been visited and how often.
+        </p>
+        <p>
+          Figure 2 shows two implementations of navigating that are linked: semantic space on the map and on the sidebar. On the sidebar, collections are ordered alphabetically so as to make navigation between placenames easier for users who do not know the location of placenames on the map. This order plays the role of routes in navigation; they show proximity of collections on a bookshelf. On the maps, collections have spatial locations which facilitate understanding of geographic relationships and distances. Despite virtues of both sidebar and map representations, it is not always easy to see their connection. To make this relation apparent, VICOLEX combines navigating and drilling: as users click on an item in the sidebar panel, it changes the color of its related marker on the map and opens an information window. Alternatively, clicking on the marker highlights the related entry in the side panel. By walking from one item to another, users can see the proximity of collections on the bookshelf, and at the same time they can observe the proximity of locations and distances between locations on the map. Alphabetical order supplements navigation on maps with a linear order, which maps lack. The linear order helps users navigate from one marker to the next one.
+        </p>
+        <table class="center" style="border:none;">
+          <tbody>
+            <tr>
+              <td style="border:none;">
+                <a href="p631fig1.png" class="popup2">
+                <figure class="centre">
+                  <img src="p631fig1.png" alt="Figure 1: Heat spots" width="240" height="180">
+                  <figcaption>
+                    Figure 1: Heat spots. Red markers on this map represent locations of collections and their size. Red-coloured circles around some locations show collections visited by users. [<em>Click to display large version</em>]
+                  </figcaption>
+                </figure></a>
+              </td>
+              <td style="border:none;">
+                <a href="p631fig2.png" class="popup2">
+                <figure class="centre">
+                  <img src="p631fig2.png" alt="Figure 2: How navigation in the sidebar is linked to navigation on the map in VICOLEX." width="240" height="138">
+                  <figcaption>
+                    Figure 2: How navigation in the sidebar is linked to navigation on the map in VICOLEX. [<em>Click to display large version</em>]
+                  </figcaption>
+                </figure></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>
+          Drilling
+        </h3>
+        <p>
+          Exploration of geographic locations in VICOLEX is further enhanced by drilling. Drilling refers to acting upon a representation in order to bring out, make available and display its interior information. It is a mechanism for extracting hidden and perceptually-inaccessible information. While on many digital maps drilling of geographic locations is commonly done by automatic speed-dependent zooming (<a href="#har05">Harrower and Sheesley, 2005</a>), VICOLEX augments automatic zooming with the discrete zooming/drilling technique that can be found inside each marker. The purpose of this technique is to eliminate excessive drilling that comes with automatic zooming in Google Maps. There is evidence that excessive drilling can cause frustration, reduce satisfaction and affect task performance (<a href="#use01">User Interface Engineering, 2001</a>). Discrete zooming allows users to rapidly leave the viewing area and enter the target scale with the best representation of the location. This allows users to make discrete jumps to their target representations (<a href="#jog95">Jog and Shneiderman, 1995</a>). Discrete zooming-in allows users to make rapid adjustments to the scale without the need to move through all the map layers and without losing track of the target location. Discrete zooming-out allows users to go immediately back to their initial map layer.
+        </p>
+        <p>
+          Overall, the combination of navigating and drilling in VICOLEX supports the acquisition of three types of knowledge: (1) landmark knowledge about geographic locations, collections, and social cues; (2) route knowledge about collections and geographic locations; and (3) survey knowledge about semantic, geographic and social spaces. As such, the externalised cues about various spaces are intended to support the development and formation of the users' internal cognitive maps of geographic locations, collections, relationships and orderings among them. This provides a context to support the navigation processes of browsing, modeling, and interpreting locations, collections and social cues (<a href="#spe99">Spence, 1999</a>; <a href="#lia09">Liang and Sedig, 2009</a>).
+        </p>
+        <h3>
+          Linking
+        </h3>
+        <p>
+          Despite being useful for forming cognitive maps of geographic spaces, navigating and drilling alone fail to support sense-making at a deeper level. Exploration of the structure of collections in VICOLEX is facilitated by linking. Linking refers to acting upon two or more representations to establish a relationship between them. Linking complements navigating; this is because navigating involves steering across links. People think and learn through associations. Linking allows for the formation of associations and therefore helps users gain a deeper understanding of the relationships in information. It is sometimes assumed that explicit links between documents is beneficial. However, this is not always the case, as long unstructured lists of links can cause cognitive overload and disorientation (<a href="#dal00">Dalal, Quible and Wyatt, 2000</a>). To reduce the number of visited nodes and users' learning time, one of the techniques that some researchers (e.g., <a href="#yes07">Yesilada, Bechhofer and Horan, 2007</a>) recommend is the use of link embellishments (e.g., descriptions, thumbnails, summaries, toolboxes or linkboxes). VICOLEX uses embellished links to documents by providing additional graphical representations of ontological properties of collections (e.g., document sizes, languages, years of publication, subjects and places of publication), see Figure 3. The advantage of this is that it reveals layers of hidden information about contexts of collections and geographic locations. This approach can aid users' orientation within and understanding of the collection structure, as well as reduce the time required to learn about documents in the collection. These additional representations can steer users' sense-making activities by suggesting what new questions, properties and relationships to explore.
+        </p><a href="p631fig3.png" class="popup2">
+        <figure>
+          <img src="p631fig3.png" alt="Figure 3: An example of linking in VICOLEX." width="220" height="150">
+          <figcaption style="text-align:left;">
+            Figure 3: An example of linking in VICOLEX.<br>
+            [<em>Click for large version</em>]
+          </figcaption>
+        </figure></a>
+        <h3>
+          Filtering
+        </h3>
+        <p>
+          VICOLEX uses filtering to enhance collection understanding. Filtering refers to acting upon a digital map or its constituent representations to show and/or hide a subset of their items according to certain criteria. Figure 4 shows VICOLEX's map enhanced with the filter-based legend. These filters consist of property selectors and range selectors. The property selectors allow users to query the ontological properties of collections. These consist of five groups of checkboxes, one for each group of properties—that is, genres/formats, most frequently used subjects, physical properties (i.e., illustrations, maps and other artifacts), languages, and types of geographic locations. The two range selectors enable users to specify the ranges of time related to acquisition and publication. Users can specify a range of values by setting a lower and upper limit or a specific value by setting both ends to the same value. The property and time selectors are linked to the map and the sidebar panel, where collections and documents that satisfy the current query are displayed (see Figure 4). These filters allow for narrowing of attention to relevant information so that users can study selected documents to understand them better (<a href="#shn08">Shneiderman, 2008</a>). They also allow users to reduce the amount of visual clutter on the map, to have control over what objects they want to view, and to adjust the degree of detail and abstraction of documents. Inhibition of irrelevant information is critical for improving memory of relevant information and hence sense-making (<a href="#cow06">Cowan and Morey, 2006</a>). Clutter reduction enables users to focus on distribution, density and spatio-temporal patterns of information. This in turn minimises mistakes in property-oriented visual tasks (<a href="#luc94">Luck and Hillyard, 1994</a>). Filtering in VICOLEX, similar to filtering in some other visualisation tools (e.g., <a href="#dos04">dos Santos, 2004</a>), reduces the complexity of high-dimensional data, gives users flexibility in selecting properties, and generally tends to be more effective because it generates a number of simple, easy-to-understand displays, each focused clearly on a particular aspect of the underlying information. For example, by setting the language to Russian (as shown in Figure 4) users can observe the distribution and numbers of Russian language books in this collection.
+        </p><a href="p631fig4.png" class="popup3">
+        <figure>
+          <img src="p631fig4.png" alt="Figure 4: An example of filtering by Russian language in VICOLEX" width="200" height="150">
+          <figcaption style="text-align:left;">
+            Figure 4: An example of filtering by<br>
+            Russian language in VICOLEX<br>
+            [<em>Click for large version</em>]
+          </figcaption>
+        </figure></a>
+        <p>
+          In addition to supporting understanding of collection properties on the map, filtering in VICOLEX also affects the representations of ontological properties of individual collections linked to markers. Because of this, these representations become flexible and prunable, and hence more suitable to sense-making. An example of filtering representations of ontological properties is shown in Table 2. Column A includes representations of properties of the entire Lviv collection, and Column B represents properties of the subset of this collection which contains only items about Description and Travel and items with maps. Initially, the collection consists of 78 items. After filtering, the sub-collection has 23 items. Comparison of the two columns reveals that representations in column B are more legible, less dense and easier to understand. Such filtering allows completing of tasks not at the level of objects but properties. It also allows combining and excluding properties that are too difficult to understand.
+        </p><a href="table2.png" class="popup3">
+        <figure>
+          <img src="table2.png" width="250" height="175">
+          <figcaption style="text-align:left;">
+            Table 2: Filtering representations of<br>
+            ontological properties in VICOLEX.<br>
+            <em>[Click for large version]</em>
+          </figcaption>
+        </figure></a>
+        <h3>
+          Arranging
+        </h3>
+        <p>
+          Another interaction used in VICOLEX to enhance collection understanding is arranging. Arranging refers to acting upon two or more representations to change their order and position. This interaction involves moving representations. In the case of VICOLEX, arranging helps with making comparisons. Generally speaking, comparisons play an important role in visual reasoning tasks (Buchel and Sedig, 2011). In sense-making, users often engage in complicated comparisons involving more than one representation. VICOLEX supports such comparisons by arranging properties of collections side-by-side in a table, where representations of properties can be compared in adjacent rows. Such side-by-side comparisons are easier to accomplish than memory-based comparisons because users can concurrently view the same aspects of different objects. Juxtaposing views facilitates visual verification between ontological properties of collections that are hidden from view (<a href="#sah99">Sahasrabudhe, West, Machiraju and Janus, 1999</a>). Juxtaposed views impose smaller demand on visual memory and simplify perception and internal computation by eliminating the need for mental alignment (<a href="#kas08">Kastens, Liben and Agrawal, 2008</a>). Such views can bring out correlations or disparities and leverage perceptual capabilities to improve understanding of relations among views (<a href="#bal00">Baldonado, Woodruff and Kuchinsky, 2000</a>).
+        </p>
+        <h3>
+          Annotating
+        </h3>
+        <p>
+          So far, we have not accounted for how users adapt spaces and turn them into places in which they prepare collections for understanding; in other words, we have not discussed place-appropriating interactions. The ability to turn a space into a place is essential in sense-making and understanding. Annotating allows for this. According to Sedig and Parsons (<a href="#sed13">2013</a>), annotating allows users to add personalised information to a map-based visualisation and create user metadata. Annotations help people create knowledge about locations by adding emotions, cultural information, blog entries, links, tags and so on (<a href="#bar09">Barricelli, Iacob and Zhu, 2009</a>; <a href="#sim10">Simon, Sadilek, Korb, Baldauf and Haslhofer, 2010</a>; <a href="#kru07">Krumm, 2007</a>; <a href="#gaz08">Gazan, 2008</a>). VICOLEX implements several annotation techniques: automated, structured and free-text. Automated annotation is used to support users' movement around the spaces and to enable them to retrace their paths if necessary. For this, VICOLEX marks users' footprints in the information space by changing the colour of visited markers. VICOLEX tightly couples visited markers on the map to placenames in the sidebar by automatically annotating the latter (see Figure 5 showing green markers on the map and green highlights in the sidebar). This technique records user actions in two representations simultaneously. Figure 5 also shows grey and gold markers and highlights, where grey signifies that a marker has been deleted, and gold means that markers have been flagged as special. These annotations are intended to function as place markers, triggers, or cues to support remembering and interpretations (<a href="#mar97">Marshall, 1997</a>; <a href="#kir01">Kirsh, 2001</a>). Annotative triggers or cues can guide attention: they designate triggers to ignore or to revisit in the future. Changing the colour of markers is an example of structured annotating. Structured annotating constrains what markers can be created, where they can be placed, or both. By constraining how annotations are created, disruption of the overarching activity is minimised. At the same time, the resulting annotations consistently provide users with semantic and mnemonic information about relevant, irrelevant and visited collections. VICOLEX also supports free-text annotations. Such annotations are becoming increasingly popular in maps (<a href="#bra09">Branavan, Chen, Eisenstein and Barzilay, 2009</a>). They have no fixed vocabulary, and no specific structure. Free-text annotations generate user-generated, semi-structured metadata, capturing user judgements, observations, opinions, problems and solutions.
+        </p><a href="p631fig5.png" class="popup2">
+        <figure>
+          <img src="p631fig5.png" alt="Figure 5: Annotating in VICOLEX" width="225" height="146">
+          <figcaption style="text-align:left;">
+            Figure 5: Annotating in VICOLEX.<br>
+            <em>[Click to display large version]</em>
+          </figcaption>
+        </figure></a>
+        <p>
+          The annotations in Figure 5 are to be interpreted as follows: green markers and highlights in the sidebar mean that collections have been visited; gold markers and highlights mean that collections have been marked as special; grey markers and highlights with crossed-out text mean that collections have been marked as irrelevant (discarded or suppressed).
+        </p>
+        <p>
+          Automated, structured, and free-text annotations in VICOLEX allow users to construct new places suitable for the activity at hand; that is, although users are unable to create their own representations from scratch, they can modify the existing map by augmenting it. This allows cognitive offloading of the load associated with keeping track of previous actions by externalising them (<a href="#mar98">Marshall, 1998</a>). With annotations, users have indices to understand what is important in the document, collection, or location, resulting in enhanced interpretation and understanding of collections (<a href="#sri00">Srihari and Zhang, 2000</a>).
+        </p>
+        <h3>
+          Selecting
+        </h3>
+        <p>
+          Another appropriating interaction is selecting. Selecting refers to acting upon representations to focus on or choose them, either individually or as a group. When applied to a set of representations, selecting can group and cluster them together. Currently the predominant selecting technique on map-based visualisations is selection by clicking on a marker. Other techniques such as free-form selections (e.g., Lasso), bounding boxes, disjoint selection regions, circles of inclusion/exclusion, and multi-selections are not frequently present in visualisations (e.g., <a href="#hin06">Hinckley, Guimbretiere, Agrawala, Apitz and Chen, 2006</a>). Allowing users to select a group graphically obviates the need to formulate a query in order to combine spatially distributed objects. This is especially important for geographic locations, which are difficult to describe with words. Moreover, a group selection mechanism can streamline other interactions by removing the necessity to explicitly group and ungroup objects, potentially improving the cognitive and physical workflow of such interactions (<a href="#hin06">Hinckley, <em>et al.</em>, 2006</a>). Some empirical studies also show that when users are provided with the capability for more flexible selection techniques (e.g., Lasso selection), they prefer them to click selections (<a href="#rei05">Reilly, Welsman-Dinelle, Bate and Inkpen, 2005</a>).
+        </p>
+        <p>
+          To select groups of collections from areas of interest, VICOLEX uses a bounding box technique, traditionally used in map libraries for searching and first envisioned by Pruett (<a href="#pru86">1986</a>). In VICOLEX, the bounding box is used for selection of collections, whether in their entirety or filtered, that are already represented on the map (see Figure 6). Elements that are filtered out, and hence invisible, cannot be selected with a bounding box, allowing users to define collections in their own way: collections and sub-collections can be combined and need not be fixed. Furthermore, once collections are selected, they can be acted upon with other interactions. For example, selected collections can be represented in a table while their properties are grouped together and shown on graphs and charts similar to the ones that are linked to markers (i.e., scatter plots, pie-charts, Kohonen maps, and so on). This feature is particularly useful when users need to mentally manipulate a group of elements as one entity (<a href="#sed06">Sedig and Sumner, 2006</a>). Groupings can be useful for answering the following questions: a) Is there a difference in languages in collections about small locations versus large locations? b) Is there a difference in subjects in collections about West and East? The bounding box technique is not the only technique that can be used to specify selections on maps. Google Maps Geometry Controls allow drawing various regular or irregular polygons which help with more precise selections.
+        </p><a href="p631fig6.png" class="popup3">
+        <figure>
+          <img src="p631fig6.png" alt="Figure 6: Bounding Box selection in VICOLEX" width="240" height="150">
+          <figcaption style="text-align:left;">
+            Figure 6: Bounding Box selection in VICOLEX<br>
+            <em>[Click to display large version]</em>
+          </figcaption>
+        </figure></a>
+        <h3>
+          Gathering
+        </h3>
+        <p>
+          Gathering on-line materials is one of the central tasks of users (<a href="#shi99">Shipman, <em>et al.</em>, 1999</a>). Gathering refers to acting upon representations to place them into a container. On the one hand, gathering involves selecting and processing the collections or documents, while on the other, it can be viewed as an intermediate step that helps users organize their activity. As an organizing activity, gathering is associated with locating, retrieving, and integrating information from large numbers of distributed and heterogeneous documents (<a href="#kno95">Knoblock, 1995</a>). Integration in the context of collection understanding involves creating representational structures from collections. While integrating information, users rely on unstructured notes about identified evidence, important queries, and key questions that need to be addressed, as well as alterations of existing representations by adding new elements and relationships (<a href="#got06">Gotz, Zhou and Wen, 2006</a>).
+        </p>
+        <p>
+          Gathering is inherently spatial, implying a working space (or place) where users can place documents to conjoin, negate, disjoin, or specify relationships among them. When users modify their strategies or the structure of their spaces, they maximise their rate of gaining valuable information (<a href="#pir05">Pirolli and Card, 2005</a>). VICOLEX utilises geographic space as a place for gathering information. Although the shape of the geographic space is not necessarily similar to the geography of the working space, there are many techniques that allow overcoming the idiosyncrasies of geographic and working spaces. Figure 7, for example, shows how all markers in the working space in VICOLEX are divided into three large episodes enclosed in polygons of different colours and similar collections are connected by lines. Furthermore, by annotating users can assign meaning to each of these episodes, and by linking similar collections by lines, they can assign meaning to relationships, where width and colour can encode types of relationships.
+        </p>
+        <p>
+          Although overlaying working space on the geographic space is common, as can be seen, for example, in the Toucan Navigator application (<a href="#sch05">Schafer,Ganoe, Xiao, Coch and Carroll, 2005</a>). The novelty of VICOLEX's approach is in merging geographic space with semantic, social and working spaces. This approach has many advantages. It preserves collections (geographic locations and relationships among them as they exist in library catalogues) while allowing users to add their own interpretations by annotating markers and episodes. It also helps users in exploring physical properties of episodes; for example, VICOLEX can calculate the size of the geographic area enclosed in an episode, or when users specify similarity relationships between collections, it can inform them of geographic distances between locations and their directions. Knowing distances helps users get a better sense of the geographic space.
+        </p>
+        <figure class="centre">
+          <img src="p631fig7.png" alt="Figure 7: Example of gathering" width="495" height="222">
+          <figcaption>
+            Figure 7: Example of gathering.
+          </figcaption>
+        </figure>
+        <h2>
+          Combining interactions to understand collections
+        </h2>
+        <p>
+          Interactions in VICOLEX allowed us to make several interesting observations about the selected collection—specifically, the goal was to identify transitions, trends, and patterns related to the collection and locations that it represents. This section describes the procedures and outcomes of this task.
+        </p>
+        <p>
+          We started with exploratory browsing of sub-collections on the map, investigating collection properties and drilling into the larger scale map layers. The goal of this exploration was to make observations, notice trends and patterns, and to generate hypotheses. Linking and navigating interactions in the exploratory task revealed relationships between the trends and patterns in the collection, and political and economic events in Ukraine. For example, many locations have spikes in publishing after 1991, which are explained by the collapse of the Soviet Union and the switch to the market economy in Ukraine. Other linked representations allowed the generating of hypotheses about transitions in languages, subjects, and places of publication.
+        </p>
+        <p>
+          With regard to understanding locations, we noticed many Ukrainian cities, like others in Europe, are located on rivers or small streams. This observation was not apparent from the main map representation because, due to scale constraints, it shows only the Dnieper, the largest river in Ukraine. The relationships between rivers and locations became more apparent with a drilling interaction, which allowed us to reach the larger-scale Google Maps layers. To remember which locations were close to rivers, we used structured annotation, the map of which is shown in Figure 8. Locations with rivers were marked with gold balloons, and those without were shown in green, while one location is in grey. The location in grey is Lviv, which required a special colour because Google Maps shows that rivers in Lviv end before the suburbs. Because of the strange appearance, and upon investigation, we discovered that Lviv is built on two rivers which are hidden underground. This serendipitous discovery, which was not prominent in the visualisation before interacting with it, is an illustration of how drilling and annotating can enhance understanding of locations, and foster further exploration and investigation. In the future, the large-scale layers in VICOLEX, which are hidden beneath the main map, may be enhanced with social media layers such as Wikipedia articles, YouTube videos, and Panoramio images.
+        </p><a href="p631fig8.png" class="popup4">
+        <figure>
+          <img src="p631fig8b.png" alt="Figure 8: Exploring locations" width="150" height="96">
+          <figcaption style="text-align:left;">
+            Figure 8: Exploring locations.<br>
+            [<em>Click for large version</em>]
+          </figcaption>
+        </figure></a>
+        <p>
+          We also experimented with filtering the collection by individual and combined properties. Combined filtering was used to investigate temporal aspects of other ontological properties (genres, subjects, physical attributes, languages and population sizes of locations). More specifically, we looked at shape, quantitative and qualitative transitions in each of the above properties during the periods between 1917-1990 and 1991-2007, with 1991 being the landmark year when Ukraine became independent. In addition, using selecting and linking, the transitions were investigated both in individual locations and major socio-economic regions of Ukraine (East, West and Crimea). The outcomes of filtering can be classified with regard to quantitative transitions, shape transformations and geographic distribution changes. With regard to quantitative transitions, we found that the majority of the entire collection was published after 1991 (109 books were published in the period between 1917 and 1990; and 225 books were published after 1991). This is evident from the two map representations filtered by their years of publication: before 1990 and after 1991 (Figure 9). The comparison of the representations in Figure 9 reveals that there are more markers in Figure 9b than in Figure 9a, and the numbers of documents linked to the large cities are much higher in Figure 9b than in Figure 9a. Another quantitative transition was about books containing maps. In particular, the investigator found that only seven out of fifty-seven map-containing books were published before 1991 (Figures 10a and 10b). Moreover, this quantitative transition is coupled with the transformation of the geographic distribution of these books. While the seven books with maps published during the Soviet-era Ukraine were only about large cities (Lviv, Kyyiv and Odessa), the remaining fifty books published after 1991 were about both large and small locations.
+        </p><a href="p631fig9ab.png" class="popup5">
+        <table>
+          <tr>
+            <td>
+              <figure>
+                <img src="p631fig9a.png" alt="Figure 9a: Pre-Soviet era collections" width="195" height="150">
+                <figcaption style="text-align:left;">
+                  Figure 9a: Pre-Soviet era collections
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img src="p631fig9b.png" alt="Figure 9b: Post-Soviet era collections" width="210" height="156">
+                <figcaption style="text-align:left;">
+                  Figure 9b: Post-Soviet era collections
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table></a><br>
+        <a href="p631fig10ab.jpg" class="popup5">
+        <table>
+          <tr>
+            <td>
+              <figure>
+                <img src="p631fig10a.png" alt="Figure 10a: Distribution of books with maps before 1990" width="210" height="150">
+                <figcaption style="text-align:left;">
+                  Figure 10a: Distribution of books<br>
+                  with maps before 1990
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img src="p631fig10b.png" alt="Figure 10b: Distribution of books with maps after 1991" width="210" height="150">
+                <figcaption style="text-align:left;">
+                  Figure 10b: Distribution of books<br>
+                  with maps after 1991
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table></a>
+        <p>
+          Quantitative transformations were also found in languages. Filtering by time and language revealed that books in Polish about Ukraine were almost non-existent before 1981, while Polish publications after 1981 increased significantly, especially about Lviv (forty items). This can probably be explained by the fact that Lviv was part of Poland until 1939.
+        </p>
+        <p>
+          With regard to shape transformations, an interesting observation was made about a difference in book formats after the collection was filtered by location population sizes and re-represented on a scatter plot by means of the selecting interaction. The resulting representations are demonstrated in Figure 11, where a scatter plot shows book sizes in the sub-collections about locations with population sizes less than 200,000 (a), and in the sub-collections about locations with population sizes greater than 200,000 (b). These two figures suggest a positive correlation between book sizes and location sizes, possibly because documents about smaller locations are expected to have fewer pages and be smaller in height than those about larger locations.
+        </p><a href="p631fig11ab.png" class="popup6">
+        <table>
+          <tr>
+            <td>
+              <figure>
+                <img src="p631fig11a.png" alt="Figure 11a: Book sizes in the sub-collections about locations with population less than 200,000" width="210" height="150">
+                <figcaption style="text-align:left;">
+                  Figure 11a: Book sizes in the sub-collections<br>
+                  about locations with population<br>
+                  less than 200,000
+                </figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img src="p631fig11b.png" alt="Figure 11b: Book sizes in the sub-collections about locations with population larger than 200,000" width="210" height="150">
+                <figcaption style="text-align:left;">
+                  Figure 11b: Book sizes in the sub-collections<br>
+                  about locations with population<br>
+                  larger than 200,000
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table></a>
+        <p>
+          While geographic distributions can be observed in conjunction with quantitative changes, they can also be observed in isolation. For example, we observed that, with a few exceptions, Russian-language books seem to be distributed more in the ethnically Russian territory than in the ethnically Ukrainian territory (see Figure 12, where ethnically Russian territory is highlighted). To validate this hypothesis, we used the GeometryControls to draw a layer on top of the map visualising library collections. This allowed for the better observation of the spatiality of Russian collections with regard to the Russian-speaking regions in Ukraine. Although three locations lie outside the boundary of the Russian speaking regions, only one (Kiev) can also be considered a part of Russian-speaking community. In general, the layer helped with the process of generalisation about the distribution of Russian collections.
+        </p><a href="p631fig12.png" class="popup2">
+        <table>
+          <tr>
+            <td>
+              <figure>
+                <img src="p631fig12.png" alt="Figure 12: Exploring locations" width="240" height="180">
+                <figcaption style="text-align:left;">
+                  Figure 12: Distribution of books in Russian.<br>
+                  The ethnically-Russian area is highlighted in red.
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table></a>
+        <p>
+          This section has briefly outlined how interactions and representations in VICOLEX facilitated collection understanding through making observations about the trends, patterns and transitions in the prototype collection and their locations. These observations demonstrate that interactions can enhance understanding of collections, their properties, their distributions and locations. Furthermore, besides the reported observations, the interactive and representational features of VICOLEX can allow other users to observe other trends and facts that will help them generate new hypotheses and generalisations about not only the prototype collection but others that can be uploaded into it. In this respect, VICOLEX's support for sense-making is open-ended.
+        </p>
+        <h2>
+          Conclusions and future work
+        </h2>
+        <p>
+          This paper has analytically demonstrated how interactions can enhance understanding of collections and facilitate the formation of cognitive maps. At first glance, any one of the interactions in isolation may seem insignificant, yet, when analysed and combined together, they can greatly reduce the overall efforts of users and expedite the time necessary for completion of sense-making activities. While multi-scale maps like Google Maps can help users gain deeper understanding of landforms, landscapes, areas, distances and navigational routes in locations, added interactions such as annotating, selecting and gathering help them capture their observations, generalise them and make sense of them. Interactions facilitate these activities incrementally, one interaction at a time. Although with regard to VICOLEX we have yet to verify our argument empirically, based on evidence from other research (see, for example, <a href="#tud03">Tudoreanu, 2003</a>) and the current exploration, it seems plausible that augmenting map-based visualisations with interactions can translate into improved user-support in their sense-making activities.
+        </p>
+        <p>
+          Using VICOLEX, we have explained that navigating and drilling interactions can facilitate exploration of spaces; linking, filtering and arranging interactions can facilitate understanding of collections, their properties and transitional properties; and annotating, selecting and gathering interactions can help users appropriate spaces and adapt them to their own activities. Future work in this area can determine how to implement, for enhanced sense-making activities in map-based visualisations, the interactions of the EDIFICE framework (<a href="#sed13">Sedig and Parsons, 2013</a>) not dealt with in this paper.
+        </p>
+        <p>
+          In particular, VICOLEX does not currently provide adequate support for dealing with the multiple dynamically generated representations that display multidirectional transitional processes. The difficulty of dealing with continuously changing information is that users need to identify and relate both spatially and temporally separated components of a map-based visualisation (Lowe, 2008). Moreover, in VICOLEX users have to relate spatio-temporal components to hidden layers linked to markers on the map. This presents the risk of excessive perceptual and cognitive demands made by the dynamic information that users need to process. Non-stable, transient information may impose a higher cognitive load on the users (<a href="#heg04">Hegarty, 2004</a>). In addition, spatially-distributed representations may impede comparisons and other reasoning activities. Rensink, O'Regan and Clark, (<a href="#res97">1997</a>) demonstrated that observers have great difficulty noticing even large changes between two representations when intermediary images are shown between scenes. Determining how to provide support for making sense of multidirectional transitional processes in map-based visualisations is another line of future investigation and research.
+        </p>
+        <p>
+          <strong>Significance</strong>. The ideas in this paper are significant, not only for understanding and making sense of document collections, but also for the design of tools and interfaces that help people explore any kind of structured information with geospatial properties. For example, aggregating medical records by regions and using interactive map-based visualisations can help public health managers to explore the health data. It helps with the making sense of people's habits, demographics, and spread of diseases—hence, assisting with the development of public health policy and strategies. This research can potentially be applied to visualisation tools and information interfaces that are intended to support activities such as making sense of health records, making decisions involving real estate listings, and exploring natural and social phenomena (e.g., electoral votes, spread of diseases, and social networks).
+        </p>
+        <h2>
+          Acknowledgements
+        </h2>
+        <h2 id="author">
+          About the authors
+        </h2>
+        <p>
+          <strong>Olha Buchel</strong> has a PhD in Library and Information Science from Western University. She specializes in visual analytics, sensemaking, information visualization, and organization of georeferenced collections. In the past she has worked as a Research Associate at the Alexandria Digital Library, the first geodigital library in the world. Currently she is employed at <a href="http://www.countingopinions.com/">Counting Opinions, Inc.</a> as a Data Analyst where she visualizes statistical datasets. She also teaches a Geospatial Data course at the Faculty of Information and Media Studies at Western University and various workshops at Library Juice Academy.<br>
+          <strong>Kamran Sedig</strong>, Ph.D. is an Associate Professor with a joint position in Library and Information Science and Computer Science at Western University. He has been doing research in the area of human-centered interactive computing since 1993. His research and publications span a range of topics such as data and information visualization, visual analytics, human-information interaction design, information interface design, medical and health informatics, design of serious and mind games, and cognitive and learning technologies. Currently, his research team are working on health informatics tools, data analytics techniques, visual analytics, knowledge translation and mobilization, and development of frameworks for the design of the structure and interactivity of video games that promote reflective thinking.
+        </p>
+      </section>
+      <section class="refs">
+        <form>
+          <fieldset>
+            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+            <ul class="refs">
+              <li id="and07">Andrienko, G. &amp; Andrienko, N. (2007). Coordinated multiple views: a critical view. In <em>Proceedings of the Fifth International Conference on Coordinated and Multiple Views in Exploratory Visualization, 2007. CMV '07</em>, (pp. 72-74). Washington, DC: IEEE Computer Society.
+              </li>
+              <li id="bai04">Bainbridge, D., Cunningham, S. J. &amp; Downie, J. S. (2004). <a href="http://www.webcitation.org/6MwM32SPA">Visual collaging of music in a digital library</a>. In <em>Proceedings of the Fifth International Conference on Music Information Retrieval. ISMIR 2004: October 10-14, 2004. Barcelona, Spain: Universitat Pompeu Fabra</em>. Retrieved from http://hdl.handle.net/10289/43. (Archived by WebCite® at http://www.webcitation.org/6MwM32SPA)
+              </li>
+              <li id="bal00">Baldonado, M. Q., Woodruff, A. &amp; Kuchinsky, A. (2000). Guidelines for using multiple views in information visualization. In <em>Proceedings of the Working Conference on Advanced Visual Interfaces</em>, (pp. 110-119). New York, NY: ACM Press.
+              </li>
+              <li id="bar09">Barricelli, B. R., Iacob, C. &amp; Zhu, L. (2009). <em>Map-based Wikis as contextual and cultural mediators.</em> Paper presented at the Community Practices and Locative Media workshop at Mobile HCI09. Bonn, 15-18 September 2009. Retrieved from http://www.uni-siegen.de/locatingmedia/workshops/mobilehci/barricelli_map-based_wikis_as_contextual_and_cultural_mediators.pdf. (Archived by WebCite® at http://www.webcitation.org/6RHhot6io)
+              </li>
+              <li id="bor10">Börner, K. (2010). <em>Atlas of science: visualizing what we know</em>. Cambridge, MA: MIT Press.
+              </li>
+              <li id="bra09">Branavan, S., Chen, H., Eisenstein, J. &amp; Barzilay, R. (2009). Learning document-level semantic properties from free-text annotations. <em>Artificial Intelligence Research, 34</em>(1), 569-603.
+              </li>
+              <li id="buc11">Buchel, O. (2011). Designing map-based visualizations for collection understanding. In <em>Proceedings of the 11th annual international ACM/IEEE joint conference on digital libraries</em>, (pp. 429-430). New York, NY: ACM Press
+              </li>
+              <li id="bucsed11">Buchel, O. &amp; Sedig, K. (2011). Extending map-based visualizations to support visual tasks. The role of ontological properties. <em>Knowledge Organization, 38</em>(3), 204-229.
+              </li>
+              <li id="clo11">Clough, P., Tang, J., Hall, M. M. &amp; Warner, A. (2011). Linking archival data to location: a case study at the UK National Archives. <em>Aslib Proceedings, 63</em>(2/3), 127-147.
+              </li>
+              <li id="cow06">Cowan, N. &amp; Morey, C. C. (2006). Visual working memory depends on attentional filtering. <em>Trends in Cognitive Science, 10</em>(4),139-141.
+              </li>
+              <li id="cra02">Crampton, J. W. (2002). Interactivity types in geographic visualization. <em>Cartography and Geographic Information Science, 29</em>(2), 85-98.
+              </li>
+              <li id="cun08">Cunningham, S. &amp; Bennett, E. (2008). Understanding collection understanding with collage. In George Buchanan, Masood Masoodian and Sally Jo Cunningham, (Eds.). <em>Proceedings of the 11th International Conference on Asian Digital Libraries, ICADL 2008, Bali, Indonesia, December 2-5, 2008</em>, (pp. 367-370). (Lecture Notes in Computer Science, 5362).
+              </li>
+              <li id="cur05">Currall, J., Moss, M. &amp; Stuart, S. (2005). What is a collection? <em>Archivaria</em>, No. 58, 131-146.
+              </li>
+              <li id="dal00">Dalal, N., Quible, Z. &amp; Wyatt, K. (2000). Cognitive design of home pages: an experimental study of comprehension on the World Wide Web. <em>Information Processing and Management, 36</em>(4), 607–621.
+              </li>
+              <li id="dee90">Deerwester, S., Dumais, S. T., Landauer, T. K., Furnas, G. W. &amp; Harshman, R. A. (1990). Indexing by latent semantic analysis. <em>Journal of the American Society for Information Science , 46</em>(1), 391-407.
+              </li>
+              <li id="der92">Dervin, B. (1992). From the mind's eye of the user: the sense-making qualitative-quantitative methodology. In J. Glazier &amp; R. Powell (Eds.), <em>Qualitative Research in Information Management,</em> (pp. 61-84). Englewood, CO: Libraries Unlimited.
+              </li>
+              <li id="dil00">Dillon, A. (2000). Spatial-semantics: how users derive shape from information space. <em>Journal of the American Society for Information Science, 51</em>(6), 521–528.
+              </li>
+              <li id="dod01">Dodge, M. &amp; Kitchin, R. (2001). <em>Mapping cyberspace</em>. New York, NY: Routledge.
+              </li>
+              <li id="dos04">dos Santos, S. R. (2004). <em>A framework for the visualization of multidimensional and multivariate data.</em> Unpublished doctoral thesis, University of Leeds, Leeds, UK.
+              </li>
+              <li id="eds01">Edsall, R. M. (2001). <em>Interacting with space and time: desigining dynamic geovisualization environments</em>. Unpublished doctoral thesis, Pennsylvania State University, CUniversity Park, Pennsylvania, USA.
+              </li>
+              <li id="fab01">Fabrikant, S. &amp; Buttenfield, B. (2001). Formalizing semantic spaces for information access. <em>Annals of the Association of American Geographers, 91</em>(2), 263-280.
+              </li>
+              <li id="fur08">Furnas, G. (2008). <a href="http://www.webcitation.org/6MwXWBTih"><em>Representational change in sense-making</em></a>. Position Paper for Workshop on sense-making, CHI 2008. Retrieved from http://sites.google.com/site/dmrussell2/Furnas-sense-making-final.pdf. (Archived by WebCite® at http://www.webcitation.org/6MwXWBTih)
+              </li>
+              <li id="gaz08">Gazan, R. (2008). <a href="http://www.webcitation.org/6MwYFC6kb">Social annotations in digital library collections</a>. <em>D-Lib Magazine, 14</em>(11/12). Retrieved from http://www.dlib.org/dlib/november08/gazan/11gazan.html. (Archived by WebCite® at http://www.webcitation.org/6MwYFC6kb)
+              </li>
+              <li id="glu96">Gluck, M. (1996). Geospatial information needs of the general public: text, maps, and users' tasks. In L. C. Smith &amp; M. Gluck (Eds.), <em>Geographic information systems and libraries: patrons, maps, and spatial information</em>, (pp. 151-172). Champaign, IL: Graduate School of Library and Information Science, University of Illinois at Urbana-Champaign.
+              </li>
+              <li id="gol10">Gollidge, R. (2010). Cognitive maps. In I. B. Weiner &amp; W. E. Craighead, (Eds.) <em>The Corsini encyclopedia of psychology</em>. Hoboken, NJ: John Wiley and Sons, Inc.
+              </li>
+              <li id="got06">Gotz, D., Zhou, M. &amp; Wen, Z. (2006). <a href="http://www.webcitation.org/6RItoHks2">A study of information gathering and result processing in intelligence analysis</a>. IUI 2006 Workshop on Intelligent User Interfaces for Intelligence. Retrieved from http://gotz.web.unc.edu/files/2013/10/gotz_iui4ia_2006.pdf. (Archived by WebCite® at http://www.webcitation.org/6RItoHks2)
+              </li>
+              <li id="har96">Harrison, S. &amp; Dourish, P. (1996). Re-place-ing space: the roles of place and space in collaborative systems. In <em>Proceedings of the 1996 ACM conference on Computer Supported Cooperative Work</em>, (pp. 67-76). New York, NY: ACM Press.
+              </li>
+              <li id="har05">Harrower, M. &amp; Sheesley, B. (2005). Designing better map interfaces: a framework for panning and zooming. <em>Transactions in GIS, 9</em>(2), 77–89.
+              </li>
+              <li id="heg04">Hegarty, M. (2004). Dynamic visualizations and learning: Getting to the difficult questions. <em>Learning and Instruction, 14</em>(3), 343-351.
+              </li>
+              <li id="heu59">Heumann, K. F. &amp; Bernays, P. (1959). Fifty foreign languages at Chemical Abstracts. <em>Journal of Chemical Education, 36</em>(4), 478–482.
+              </li>
+              <li id="hil06">Hill, L. (2006). <em>Georeferencing: the geographic associations of information</em>. Cambridge, MA: MIT Press.
+              </li>
+              <li id="hin06">Hinckley, K., Guimbretiere, F., Agrawala, M., Apitz, G. &amp; Chen, N. (2006). Phrasing techniques for multi-stroke selection gestures. In <em>Proceedings of Graphics Interface 2006</em>, (pp. 147-154). Toronto, ON: Canadian Information Processing Society.
+              </li>
+              <li id="jog95">Jog, N. &amp; Shneiderman, B. (1995). Starfield information visualization with interactive smooth zooming. In <em>Proceedings of the third IFIP WG2.6 working conference on Visual database systems 3 (VDB-3),</em> (pp. 3-14). London: Chapman &amp; Hall.
+              </li>
+              <li id="kas08">Kastens, K. A., Liben, L. S. &amp; Agrawal, S. (2008). Epistemic actions in science education. In <em>Proceedings of the International Conference on Spatial Cognition VI: Learning, Reasoning, and Talking about Space</em>, (pp. 202 - 215). Berlin: Springer-Verlag.
+              </li>
+              <li id="kir12">Kirchik, O., Gingras, Y. &amp; Larivière, V. (2012). Changes in publication languages and citation practices and their effect on the scientific impact of Russian science (1993-2010). <em>Journal of the American Society for Information Science and Technology, 63</em>(7), 1411-1419.
+              </li>
+              <li id="kir98">Kirlik, A. (1998). The ecological expert: acting to create information to guide action. In <em>Procedings of the Fourth Annual Symposium on Human Interaction with Complex Systems 1998,</em> (pp. 15-27). New York, NY: IEEE.
+              </li>
+              <li id="kir09">Kirsh, D. (2009). Interaction, external representations and sense making. In <em>Proceedings of the 31st Annual Conference of the Cognitive Science Society</em>, (pp. 1103-1108). Austin, TX: Cognitive Science Society.
+              </li>
+              <li id="kir01">Kirsh, D. (2001). The context of work. <em>Human computer Interaction, 16</em>(2-4), 305-322.
+              </li>
+              <li id="kir95">Kirsh, D. (1995). The intelligent use of space. <em>Artificial Intelligence, 73</em>(1-2), 31-68.
+              </li>
+              <li id="kir96">Kirsh, D. (1996). Adapting the environment instead of oneself. <em>Adaptive Behavior, 4</em>(3-4), 415 -452.
+              </li>
+              <li id="kir94">Kirsch, D. &amp; Maglio, P. (1994). On distinguishing epistemic from pragmatic action. <em>Cognitive Science, 18</em>(4), 513-549.
+              </li>
+              <li id="kit00">Kitchin, R. &amp; Freundschuh, S. (Eds.). (2000). <em>Cognitive mapping: past, present and future.</em> London: Routledge.
+              </li>
+              <li id="kle06">Klein, G., Moon, B. &amp; Hoffman, R. (2006). Making sense of sense-making 1: alternative perspectives. <em>Intelligent Systems, 2</em>1(4), 71.
+              </li>
+              <li id="klem06">Klemmer, S., Hartmann, B. &amp; Takayama, L. (2006). How bodies matter: five themes for interaction design. In <em>Proceedings of the 6th conference on Designing Interactive systems</em>, (pp. 140-149). New York, NY: ACM Press.
+              </li>
+              <li id="kno95">Knoblock, C. A. (1995). Planning executing sensing and replanning for information gathering. In <em>Proceedings of the 14th international joint conference on Artificial Intelligence</em>, v.2, (pp. 1686-1693). San Francisco, CA: Morgan Kaufmann.
+              </li>
+              <li id="kru07">Krumm, J. (2007). <em>Exploiting users' map annotations</em>. Position Paper for Workshop on Volunteered Geographic Information. Retrieved from http://ncgia.ucsb.edu/projects/vgi/docs/position/Krumm_paper.pdf. (Archived by WebCite® at http://www.webcitation.org/6MwMS6q0f)
+              </li>
+              <li id="kui03">Kuipers, B., Tecuci, D. G. &amp; Stankiewicz, B. J. (2003). The skeleton in the cognitive map: a computational and empirical exploration. <em>Environment &amp; Behavior, 35</em>(1), 81-106.
+              </li>
+              <li id="kwa99">Kwasnik, B. (1999). The role of classification in knowledge representation and discovery. <em>Library Trends, 4</em>8(1), 22-47.
+              </li>
+              <li id="li08">Li, X. &amp; Kraak, M. (2008). The time wave: a new method to visually explore geo-data in time space. <em>Cartographic Journal , 45</em>(3), 193-200.
+              </li>
+              <li id="lia09">Liang, H. &amp; Sedig, K. (2009). Characterizing navigation in interactive learning environments. <em>Journal of Interactive Learning Environments, 17</em>(1), 53-75.
+              </li>
+              <li id="lia10">Liang, H. &amp; Sedig, K. (2010). Role of interaction in enhancing the epistemic utility of 3D mathematical visualizations. <em>International Journal of Computers for Mathematical Learning, 15</em>(3), 191-224.
+              </li>
+              <li id="lib07">Library of Congress. <em>Cataloging Policy and Support Office</em>. (2007).
+              </li>
+              <li id="liu13">Liu, L., Gao, Y., Lin, X., Guo, X. &amp; Li, H. (2013). A framework and implementation for qualitative geographic information retrieval. In <em>(GEOINFORMATICS), 2013 21st International Conference on Geoinformatics</em>, (pp. 1-4). New York, NY: IEEE.
+              </li>
+              <li id="loo07">Look, G. &amp; Shrobe, H. E. (2007). Towards intelligent mapping applications: a study of elements found in cognitive maps. In <em>IUI '07 Proceedings of the 12th international conference on Intelligent user interfaces, Honolulu, Hawaii, USA</em>, (pp. 309-312). New York, NY: ACM Press.
+              </li>
+              <li id="low08">Lowe, R. (2008). Learning from animation: where to look, when to look. In J.-F. Rouet, R. Lowe, &amp; W. Schnotz (Eds.), <em>Learning with animation: research implications for design</em>, (pp. 1-14). Berlin: Springer-Verlag.
+              </li>
+              <li id="luc94">Luck, S. J. &amp; Hillyard, S. A. (1994). Spatial filtering during visual search: evidence from human electrophysiology. <em>Journal of Experimental Psychology, 20</em>(5), 1000-1014.
+              </li>
+              <li id="lyn60">Lynch, K. (1960). <em>The image of the city</em>. Cambridge, MA: MIT Press.
+              </li>
+              <li id="mar97">Marshall, C. (1997). Annotation: from paper books to the digital library. In <em>Proceedings of the Second ACM International Conference on Digital Libraries (DL '97)</em>, (pp. 131-140). New York, NY: ACM Press.
+              </li>
+              <li id="mar98">Marshall, C. (1998). Making metadata: a study of metadata creation for a mixed physical-digital collection. In I. Witten, R. Akscyn, I. Frank &amp; M. Shipman (Eds.), <em>Proceedings of the Third ACM Conference on Digital Libraries (DL ‘98)</em>, (pp. 162–171). New York, NY: ACM Press.
+              </li>
+              <li id="peq02">Pequet, D. J. (2002). <em>Representations of space and time</em>. New York, NY: The Guildford Press.
+              </li>
+              <li id="pir05">Pirolli, P. &amp; Card, S. (2005). <em>The sense-making process and leverage points for analyst technology as identified through cognitive task analysis.</em> Paper presented at the International Conference of Intelligence Analysis, 3-5 May, 2005, McLean, VA, USA
+              </li>
+              <li id="pru86">Pruett, N. J. (1986). State of the art of geoscience libraries and information services. In E. P. Shelley (Ed.), <em>Proceedings of the Third International Conference on Geoscience Information, Adelaide, South Australia, June 1-6, 1986</em>, (pp. 15-30). Adelaide, SA: Australian Mineral Foundation.
+              </li>
+              <li id="rei05">Reilly, D., Welsman-Dinelle, M., Bate, C. &amp; Inkpen, K. (2005). Just point and click? Using handhelds to interact with paper maps. In <em>Proceedings of Mobile HCI ‘05</em>. (pp. 239-242). New York, NY: ACM Press.
+              </li>
+              <li id="res97">Rensink, R., O'Regan, J. &amp; Clark, J. (1997). To see or not to see: the need for attention to perceive changes in scenes. <em>Psychological Science, 8</em>(5), 368-373.
+              </li>
+              <li id="rot12">Roth, R.E. (2012). Cartographic interaction primitives: framework and synthesis. <em>Cartographic Journal, 49</em>(4), 376-395.
+              </li>
+              <li id="rus08">Russel, D., Jeffries, R. &amp; Irani, L. (2008). sense-making for the rest of us. <em>Paper presented at the CHI workshop on sense-making, Florence, Italy</em>.
+              </li>
+              <li id="rus93">Russel, D., Stefik, M., Pirolli, P. &amp; Card, S. (1993). The cost structure of sense-making. In <em>Proceedings of ACM Conference on Human Factors in Computing Systems</em>, (pp. 269-276). New York, NY: ACM Press.
+              </li>
+              <li id="sah99">Sahasrabudhe, N., West, J., Machiraju, R. &amp; Janus, M. (1999). Structured spatial domain image and data comparison metrics. In <em>Proceedings 10th IEEE Visualization '99</em>, (pp. 97-104). New York, NY: IEEE.
+              </li>
+              <li id="sch05">Schafer, W. A., Ganoe, C. H., Xiao, L., Coch, G., &amp; Carroll, J. M. (2005). Designing the next generation of distributed, geocollaborative tools. <em>Cartography and Geographic Information Science, 32</em>(2), 81-100.
+              </li>
+              <li id="sed09">Sedig, K. (2009). Interactive mathematical visualizations: frameworks, tools, and studies. In E. Zudilova-Seinstra, T. Adriaansen, &amp; R. Liere, (Eds.), <em>Trends in interactive visualisation: a state-of-the-art survey</em>, (pp. 112-132). London: Springer-Verlag.
+              </li>
+              <li id="sed13">Sedig, K. &amp; Parsons, P. (2013). Interaction design for complex cognitive activities with visual representations: a pattern-based approach. <em>AIS Transactions on Human-Computer Interaction, 5</em>(2), 84-133.
+              </li>
+              <li id="sed05">Sedig, K., Rowhani, S. &amp; Liang, H. (2005). Designing interfaces that support formation of cognitive maps of transitional processes: an empirical study. <em>Interacting with Computers, 17</em>(4), 419-452.
+              </li>
+              <li id="sed06">Sedig, K. &amp; Sumner, M. (2006). Characterizing interaction with visual mathematical representations. <em>International Journal of Computers for Mathematical Learning, 11</em>(1), 1-55.
+              </li>
+              <li id="she03">Shen, R., Richardson, R. &amp; Fox, E. A. (2003). <a href="http://www.webcitation.org/6MwX29OQX">Concept maps as visual interfaces to digital libraries: summarization, collaboration, and automatic generation.</a> Information Visualization Interfaces for Retrieval and Analysis. Retrieved from http://vw.indiana.edu/ivira03/shen-et-al.pdf. (Archived by Web Cite® at http://www.webcitation.org/6MwX29OQX)
+              </li>
+              <li id="shi99">Shipman, F. M., Marshall, C. C. &amp; LeMere, M. (1999). Beyond location: hypertext workspaces and non-linear views. In <em>HYPERTEXT ‘99 Proceedings of the Tenth ACM Conference on Hypertext and Hypermedia: Returning to our Diverse Roots</em>. (pp. 121-130). New York, NY: ACM Press.
+              </li>
+              <li id="shn08">Shneiderman, B. (2008). Extreme visualization: squeezing a billion records into a million pixels. In <em>Proceedings of the 2008 ACM SIGMOD International Conference on Management of Data</em>, (pp. 3-12). New York, NY: ACM Press.
+              </li>
+              <li id="sim10">Simon, R., Sadilek, C., Korb, J., Baldauf, M. &amp; Haslhofer, B. (2010). <em><a href="http://www.webcitation.org/6MwWgKUgl">Tag clouds and old maps: annotations as linked spatiotemporal data in the cultural heritage domain</a></em>. Paper presented at the Workshop On Linked Spatiotemporal Data 2010. Retrieved from http://ceur-ws.org/Vol-691/paper2.pdf. (Archived by WebCite® at http://www.webcitation.org/6MwWgKUgl)
+              </li>
+              <li id="spe99">Spence, R. (1999). A framework for navigation. <em>International Journal of Human-Computer Studies , 55</em>(5), 919-945.
+              </li>
+              <li id="spi10">Spiteri, L., Tarulli, L. &amp; Graybeal, A. (2010). The public library catalogue as a social space. Transaction log analysis of user interaction with social discovery systems. <em>Proceedings of the 73 ASIS&amp;T Annual Meeting, 47</em>(1), 1-2.
+              </li>
+              <li id="sri00">Srihari, R. &amp; Zhang, Z. (2000). Show &amp; tell: a semi-automated image annotation system. <em>Multimedia IEEE , 7</em>(3), 61-71.
+              </li>
+              <li id="tay00">Taylor, A. (2000). <em>Wynar's introduction to cataloging and classification</em>. (9th ed.). Englewood, CO: Libraries Unlimited.
+              </li>
+              <li id="tud03">Tudoreanu, M. E. (2003). Designing effective program visualization tools for reducing user's cognitive effort. In <em>Proceedings of the 2003 ACM Symposium on Software Visualization,</em> (pp. 105-114). New York, NY: ACM Press.
+              </li>
+              <li id="tve81">Tversky, B. (1981). Distortions in memory for maps. <em>Cognitive Psychology, 13</em>(3), 407-433.
+              </li>
+              <li id="use01">User Interface Engineering. (2001). <a href="http://www.webcitation.org/6MwOU6iBG"><em>Are the product lists on your site losing sales?</em></a> North Andover, MA: User Interface Engineering. Retrieved from http://www.uie.com/publications/whitepapers/PogoSticking.pdf. (Archived by WebCite® at http://www.webcitation.org/6MwOU6iBG)
+              </li>
+              <li id="wei95">Weick, K. (1995). <em>Sensemaking in organizations</em>. Thousand Oaks, CA: Sage Publications.
+              </li>
+              <li id="wri06">Wright, W., Schroh, D., Proulx, P., Skaburskis, A. &amp; Cort, B. (2006). The sandbox for analysis – concepts and methods. In <em>CHI 2006: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em>, (pp. 801-810). New York, NY: ACM Press.
+              </li>
+              <li id="yes07">Yesilada, Y., Bechhofer, S. &amp; Horan, B. (2007). <em>COHSE: dynamic linking of web resources.</em> Mountain View, CA: Sun Microsystems, Inc.
+              </li>
+              <li id="zav10">Zavalina, O. (2010). <em><a href="http://www.webcitation.org/6MwNe1TrU">Collection-level subject access in aggregations of digital collections: metadata application and use.</a></em> Unpublished doctoral dissertation, Graduate School of Library and Information Science, University of Illinois at Urbana-Champaign, Illinois, USA. Retrieved from http://www.ideals.illinois.edu/handle/2142/16620. (Archived by WebCite® at http://www.webcitation.org/6MwNe1TrU)
+              </li>
+              <li id="zer06">Zerneke, J. L., Buckland, M. K. &amp; Carl, K. (2006). Temporally dynamic maps: the electronic cultural atlas initiative experience. <em>Human IT, 8</em>(3), 83-94.
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+    </article><br>
+    <section>
+      
+      <br>
+      <div style="text-align:center;">
+        
+        
+      </div>
+      <hr>
+      
+    </section>
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer>
+  </body>
+</html>

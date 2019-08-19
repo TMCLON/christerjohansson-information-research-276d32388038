@@ -1,0 +1,662 @@
+<!doctype html>  
+ <html lang="en">  
+ <head> 
+ <meta charset=utf-8 /> 
+ <title>Library and information science according to the citing pattern of students: a bibliometric study</title>  
+
+<link href="../../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="Library and information science according to the citing pattern of students: a bibliometric study" />  
+ <meta name="author" content="Pär Sundling" />  
+ <meta name="dcterms.subject" content="Many bibliometric studies of library and information science has been performed over the years, almost without exception based on research papers from Web of Science. The purpose of this paper is, using bibliometric techniques, to conceptualize library and information science according to the information use of students, instead of the information use of researchers." />  
+ <meta name="description" content="Many bibliometric studies of library and information science has been performed over the years, almost without exception based on research papers from Web of Science. The purpose of this paper is, using bibliometric techniques, to conceptualize library and information science according to the information use of students, instead of the information use of researchers. A citation index was constructed, containing reference data from 210 master theses, allowing for in-depth bibliometric analysis. Various basic bibliometric indicators were calculated in Excel and SPSS, while bibliographic coupling and cluster analysis was applied using R. The price index for the total population of documents indicates that library and information science should be considered a soft science. On the whole the result of the bibliographic coupling, revealing 32 clusters of which a large majority contained practice-focused theses using different qualitative methods as the main mode of research technique, supports this.  Using master theses as a data source to conceptualize library and information science bibliometrically, produces significantly different results then when traditional data sources is used. Earlier bibliometric studies have tended to downplay the amount of practice-oriented research, and thus also to underestimate the impact of researchers involved with such questions." />   
+ <meta name="keywords" content="information use, scientometrics, students, citation studies," />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+<meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="University of Borås" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/22-1/colis/colis1622.html" />  
+ <meta name="dcterms.relation" content="http://InformationR.net/ir/22-1/infres221.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2017-03-15" /> 
+  <meta name="geo.placename" content="global" />
+
+	
+</head> 
+   <body> 
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">published quarterly by the university of bor&aring;s, sweden<br /><br />vol. 22  no. 1, March, 2017</span>
+<br /><br /> 
+<div class="button">
+ <ul> 
+ <li><a href="colis2016.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../../search.html">Search</a> |  </li> 
+ <li><a href="../../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr />
+ <h2 style="text-align:center;">Proceedings of the Ninth International Conference on Conceptions of Library and Information Science, Uppsala, Sweden, June 27-29, 2016</h2>
+ </header>
+ 
+ <article>
+<h1>Library and information science according to the citing pattern of students: a bibliometric study</h1>
+
+<h2 class="author"><a href="colis1622.html#author">Pär Sundling</a></h2>  
+ <br />
+ <blockquote>
+<strong>Introduction.</strong> Many bibliometric studies of library and information science has been performed over the years, almost without exception based on research papers from Web of Science. The purpose of this paper is, using bibliometric techniques, to conceptualize library and information science according to the information use of students, instead of the information use of researchers.
+<br /><strong>Method.</strong> A citation index was constructed, containing reference data from 210 master theses, allowing for in-depth bibliometric analysis.
+<br /><strong>Analysis.</strong> Various basic bibliometric indicators were calculated in Excel and SPSS, while bibliographic coupling and cluster analysis was applied using R.
+<br /><strong>Results.</strong> The price index for the total population of documents indicates that library and information science should be considered a soft science. On the whole the result of the bibliographic coupling, revealing 32 clusters of which a large majority contained practice-focused theses using different qualitative methods as the main mode of research technique, supports this.
+<br /><strong>Conclusions.</strong> Using master theses as a data source to conceptualize library and information science bibliometrically, produces significantly different results then when traditional data sources is used. Earlier bibliometric studies have tended to downplay the amount of practice-oriented research, and thus also to underestimate the impact of researchers involved with such questions.
+</blockquote> 
+<br />
+
+ <section>
+ 
+ <h2>Introduction</h2> 
+ 
+ <p>This paper uses bibliometric techniques to conceptualize library and information science according to the information use of students, instead of the information use of researchers. It does so by using an institutional repository of master theses as the main data source, an approach that is quite uncommon in bibliometrics.</p> 
+ 
+ <p>There are several good reasons for taking such an alternative approach. The first one is that drawing from alternative data sources to investigate library and information science help to even out an unbalanced account of the field. Many bibliometric studies of library and information science has been performed over the years, almost without exceptions based on research papers from Web of Science (see for example Persson (<a href="colis1622.html#per94">1994</a>), White and McCain (<a href="colis1622.html#whi98">1998</a>), Åström (<a href="colis1622.html#ast06">2006</a>), and Lariviére et al (<a href="colis1622.html#lar12">2012</a>)). The findings of these have influenced how the field is conceived in terms of major areas of specialization, influential thinkers, and so on. By relying exclusively on one kind of data source there is a risk of underestimating the impact of research not well represented in it. Moed (<a href="colis1622.html#moe05">2005</a>) points to the social sciences and especially the humanities (two areas often associated with library and information science) as areas that are only moderately covered by Web of Science, indicating that rankings and mappings produced from such data will miss important components. Chang and Huang (<a href="colis1622.html#cha12">2012</a>) describes library and information science as a multifaceted and interdisciplinary field, mixing both qualitative and quantitative methods and closely connected to general sciences, computer science, business/management, education, and sociology. Åström (<a href="colis1622.html#ast06">2006, p. 59</a>), using the concept of fragmented adhocracy, describes it as a ‘<i>field with high levels of task uncertainty and low mutual dependence, where research is weakly coordinated, providing plenty of opportunities for pursuing personal research agendas</i>’; and furthermore lacking in standardization both in standards for evaluating research and in the communication system. It is unlikely that all aspects of such a diverse and fragmented field can be captured by studying only the research papers indexed in Web of Science or Scopus. Thus, using student master theses as data source in a bibliometric analysis might illuminate components of the field that previously might have gone unnoticed. </p>
+ 
+ <p>A second reason is to shift the bibliometric perspective from investigating library and information science as a field of research to also investigate it as a field of education. Bibliometrics and scientometrics has had a long tradition of centring their analysis on the world of researchers, by drawing on data harvested from citation indexes. Often the inclusion of publications in such indexes is based on notions of impact or importance for the scientific community. Therefore, analyses based on data from such indexes can only map fields of research. As noted by Åström (<a href="colis1622.html#ast06">2006, p. 60</a>) the research performed in library and information science is not only directed toward other researchers, but the field is also directly impacted by professional practice; for example, ‘<i>by contributions to the research literature, by being an important audience group and by providing research funds</i>’. Several scholars (<a href="colis1622.html#ast06">Åström, 2006</a>; <a href="colis1622.html#boo03">Booth, 2003</a>; <a href="colis1622.html#sch08">Schlögl and Stock, 2008</a>) also point to the role played in producing literature used in the education of librarians or information specialists, as well as literature providing a sound theoretical underpinning for practices and services. This kind of practice or education-oriented research can only be analysed bibliometrically by using alternative data such as student master theses (or similar), and what such an analysis give is a bibliometric perspective of library and information science as a field of education. An analysis of such data would therefore uncover research and researchers important for the professional activities and education of librarians. </p>
+ 
+ <p>Numerous studies exist that, for different purposes, analyse bibliographies produced by students (<a href="colis1622.html#dav02">Davis, 2002</a>, <a href="colis1622.html#dav03">2003</a>; <a href="colis1622.html#dav01">Davis and Cohen, 2001</a>; <a href="colis1622.html#hur07">Hurst and Leonard, 2007</a>; <a href="colis1622.html#jar01">Jarneving, 2001</a>; <a href="colis1622.html#kus03">Kushkowski et al., 2003</a>; <a href="colis1622.html#pil07">Pilerot, 2007</a>; <a href="colis1622.html#raf13">Rafferty, 2013</a>). However, only a small subset of these analyse master theses from library and information science (<a href="colis1622.html#ise04">Iseborn and Swartz, 2004</a>; <a href="colis1622.html#ohl04">Ohlsson, 2004</a>; <a href="colis1622.html#opp01">Oppenheim and Smith, 2001</a>; <a href="colis1622.html#wal13">Waldh, 2013</a>), and no study has yet to been published that utilize more advanced techniques such as bibliographic coupling to the end of conceptualizing the field as a field of education. Thus, this paper fills a clear gap in the literature.</p>
+ 
+ <p>The first part of this paper constitutes an investigation into the information use of Swedish master students in library and information science. This is studied by classifying and analysing the documents referenced to in the master theses. The second part of this paper focus on exploring the different specializations of Swedish library and information science as represented by the master theses themselves. This is done by automatically grouping theses of similar focus by applying: (1) bibliographic coupling as a measure of similarity between them; (2) cluster analysis for assigning group membership; (3) classifying the clusters by combining manual inspection with the use of Term Frequency–Inverse Document Frequency of theses keywords.</p>
+ 
+ <h2>Data Collection</h2>
+ 
+ <p>By (A) extracting, (B) standardizing and (C) classifying reference data from 210 master theses (published in 2008 and 2009 at The Swedish School of Library and Information Science, University of Borås) harvested from the Borås Academic Digital Archive repository a citation index was constructed that would meet the criteria of an in-depth bibliometric analysis (a complete list of the theses included in the data set is given in Appendix A).</p>
+ 
+ <h2>Method</h2>
+ 
+ <h3>Basic bibliometric indicators</h3>
+ 
+ <p>Using Excel and SPSS, the core authors (i.e. the most cited authors) and the core documents (i.e. the most cited documents) was calculated along with basic bibliometric indicators such as the Price Index. According to Haustein (<a href="colis1622.html#hau12">2012, p. 35</a>) analysing the cited sources in such ways ‘<i>can shed light on the degree of the diversity regarding the […] knowledge base</i>’ of a field or journal.</p>
+ 
+ <p>The Price index, introduced by Derek de Solla Price (<a href="colis1622.html#pri70">1970</a>) as a way to quantify the hardness or softness of a subject area, is defined as the share of references not older than five years. It measures the currentness of the literature used by the students in the master theses.</p>
+ 
+ <h3>Bibliographic coupling</h3>
+ 
+ <p>Bibliographic coupling, first introduced in Kessler (<a href="colis1622.html#kes61">1961</a>), occur when a single item or several items of reference is shared by two papers. Taking the data set for this study as an example, two theses sharing five references have five units of coupling between them, which equals one link of a coupling strength of 5. Bibliographically coupled publications are thought to have a cognitive resemblance with each other, something that has been empirically confirmed in several studies (<a href="colis1622.html#jar06">Jarneving, 2006</a>; <a href="colis1622.html#kes63">Kessler, 1963</a>; <a href="colis1622.html#vla84">Vladutz and Cook, 1984</a>; <a href="colis1622.html#wei74">Weinberg, 1974</a>). In the first stage of bibliographic coupling the co-occurrences of the theses reference lists is used to calculate the units of coupling between each pair of theses. In the second stage, following the arguments of Sen and Gan (<a href="colis1622.html#sen83">1983</a>), Glänzel and Czerwon (<a href="colis1622.html#gla95">1995</a>), and Jarneving (<a href="colis1622.html#jar07a">2007a</a>), concerning the importance for normalizing for the length of reference lists, the Normalized Coupling Strength (NCS) is calculated for each theses pair. It is defined as:</p>
+ 
+ <figure class="centre">
+<img src="colis1622equation1.png" alt="equation1" width="136" height="44" />
+</figure>
+ 
+ <p>where r<sub>jk</sub> is the units of coupling between document j and document k, and n<sub>j</sub> and n<sub>k</sub> is the number of references in the reference lists of document j and document k. NCS<sub>j,k</sub> is the normalized coupling strength between document j and document k and is a value on an interval between 0 and 1, where the maximum value of 1 is given in the rare case of two document pairs having identical reference lists. </p>
+ 
+ <p>The third stage of bibliographic coupling involved setting a threshold level for the coupling strength and normalized coupling strength to filter away noise in the data (i.e. theses without strong ties or ties without enough strength), and keep only those theses that have stronger ties for the cluster analysis. In order to set this threshold, the impact of different levels of coupling strength on the composition of the data were evaluated, as advised in Jarneving (<a href="colis1622.html#jar06">2006</a>). This is seen in table 1 below.</p>
+ 
+ <table class="center">
+    <caption><br /><strong> Table 1: Impact of coupling strength</strong> </caption>
+	<tbody>
+    <tr><th>Coupling strength </th> <th>Average NCS</th> <th>Number of links</th> <th>Number of theses</th> <th>Total units of coupling</th></tr>
+	<tr><td style="text-align:center;">1+</td> <td style="text-align:center;">0,03732416</td> <td style="text-align:center;">6856</td> <td style="text-align:center;">210</td> <td style="text-align:center;">10074</td></tr>
+	<tr><td style="text-align:center;">2+</td> <td style="text-align:center;">0,06464586</td> <td style="text-align:center;">2033</td> <td style="text-align:center;">202</td> <td style="text-align:center;">5251</td></tr>
+	<tr><td style="text-align:center;">3+</td> <td style="text-align:center;">0,09457256</td> <td style="text-align:center;">664</td> <td style="text-align:center;">181</td> <td style="text-align:center;">2513</td></tr>
+	<tr><td style="text-align:center;">4+</td> <td style="text-align:center;">0,1242836</td> <td style="text-align:center;">259</td> <td style="text-align:center;">133</td> <td style="text-align:center;">1298</td></tr>
+	</tbody>
+ </table>
+ 
+ <p>For example, we see that for a Coupling strength of 3+ (this means only counting thesis pairs having at least 3 units of coupling between them) there are 664 links (thesis pairs) of this strength, these links have an Average normalized coupling strength of 0,09457256, involve 181 theses and are made up of a total of 2513 units of coupling. A coupling strength of 3 seem to be the optimal choice as it does not filter out too many of the original 210 theses, while the links of this Coupling strength have a significantly higher Average normalized coupling strength than those of the starting level. </p>
+ 
+ <p>The quite severe threshold settings of the Normalized coupling strength suggested by some researchers (see Sen and Gan (<a href="colis1622.html#sen83">1983</a>) or Glänzel and Czerwon (<a href="colis1622.html#gla96">1996</a>)) are, according to Jarneving (<a href="colis1622.html#jar07b">2007b</a>) not suitable for all kind of data. For such a broad and diverse field as library and information is, the values presented in the table above is to be expected. In fact, they are quite similar to those presented by Colliander (<a href="colis1622.html#col07">2007</a>). The threshold was set at a coupling strength of 3 with a normalized coupling strength of 0,06, and applied on the thesis level, removing only the theses that did not have at least one link meeting the threshold settings.</p>
+
+ <h3>Cluster analysis</h3>
+ 
+ <p>In the cluster analysis the clustering techniques of Average Linkage, recommended by Colliander (<a href="colis1622.html#col07">2007</a>), and Ward Linkage, recommended by Janssens, Glänzel, and Moor (<a href="colis1622.html#jan08">2008</a>), were evaluated as candidates for the partitioning of the theses into clusters representing different subjects. These two were applied separately using the normalized coupling strengths derived from the bibliographic coupling as input values. As suggested by previous research (<a href="colis1622.html#eve01">Everitt, Landau, and Leese, 2001</a>; <a href="colis1622.html#jan08">Janssens et al., 2008</a>) the use of mean Silhouette values, interpreted as ‘<i>a measurement of the overall quality of a clustering solution with a specific number of clusters</i>’ (<a href="colis1622.html#jan08">Janssens et al., 2008, p. 610</a>), guided the choice of clustering technique and the number of clusters. This is illustrated in figure 1 below were the mean Silhouette values (going from -1 to +1, higher is better) is calculated for each cluster solution, starting from 2 clusters and increasing, for both Average linkage and Ward linkage.</p>
+
+ <figure class="centre">
+<img src="colis1622fig1.png" alt="Figure1: Thesis level – Comparison of Average linkage and Ward linkage" width="578" height="546" /><figcaption><br /><strong>Figure 1: Thesis level – Comparison of Average linkage and Ward linkage</strong></figcaption>
+</figure>
+
+ <p>Balancing the principle of not fragmenting the theses into too many clusters, against the wish for a high mean Silhouette value the Average linkage technique along with a cut-off value producing 38 separate clusters was chosen for the final partitioning. In the graph above we see that when the number of clusters goes up over this value the gains in mean Silhouette value are quite small for eventually to stagnate around 45. Of the 38 clusters produced, 6 were singleton clusters, and thus were removed from further analysis.</p>
+ 
+ <h3>Classifying clusters</h3>
+ 
+ <p>The keywords of the theses in each clusters were first measured according to a technique called Term Frequency–Inverse Document Frequency (TF-IDF). This technique quantifies ‘<i>the extent of usefulness of terms in characterizing the document [in this study, cluster] in which they appear</i>’ (<a href="colis1622.html#aki03">Akiko, 2003, p. 48</a>). It is defined, in Colliander (<a href="colis1622.html#col07">2007, p. 28</a>) as:</p>
+
+ <figure class="centre">
+<img src="colis1622equation2.png" alt="equation2" width="270" height="41" />
+</figure>
+
+ <p>where freq(i, j) is the frequency of keyword j in cluster i and n(i) is the number of keywords in cluster i. N is the number of clusters and n<sub>c</sub>(j) is the number of clusters where keyword j can be found. After applying the algorithm for each keyword in each cluster, the results were ranked from highest to lowest within each cluster. This provided some explanation about the subject focus of each cluster and, together with manual inspection of the theses abstracts, it was possible to classify all 32 of them. As a final step the clusters showing high subject similarity were grouped into overarching themes. All in all, 11 overarching themes were identified, although 5 clusters could not be assigned to a theme.</p>
+
+ <h2>Results</h2>
+ 
+ <h3>Library and information science according to the literature cited in master theses</h3>
+ 
+ <p>The Price index for the complete data set (leaving out references of the type Web resource and other because of uncertainties in publication date) is 34%. Figure 2 illustrates the 8867 references found in the 210 theses, as divided according to the different source types.</p>
+ 
+  <figure class="centre">
+<img src="colis1622fig2.png" alt="Figure2: References divided by type" width="626" height="541" />
+   <figcaption><br /><strong>Figure 2: References divided by type</strong>
+  </figcaption>
+</figure>
+
+ <p>As illustrated above there are basically six types of references that together forms the scientific basis for the master theses: books; Web resources; journal papers; anthology chapters, other student theses; and newspaper articles. They are called the core types, and those receiving 10% of the references will be explored further in this section. </p>
+ 
+ <p>Just by looking at the percentages in the chart above it is evident that books are an important source of information for students of library and information science; over a third of the references goes to books and it is by far the largest of the core types. As a matter of fact, books gather more references than Web resources, journal papers and anthology chapters (the second, third, and fourth largest of the six core types) combined. In figure 3 it is illustrated how the core types of references are distributed over the theses.</p>
+ 
+ <figure class="centre">
+ <img src="colis1622fig3.png" alt="Figure3: Distribution of core types of references per thesis" width="626" height="561" />
+   <figcaption><br /><strong>Figure 3: Distribution of core types of references per thesis</strong>
+  </figcaption>
+</figure>
+ 
+ <p>The distribution of core types per thesis confirms the supremacy of the book – both the mean and the median is significantly larger than for other core types. The boxes in the boxplot contain the middle half of the data set (called the interquartile range) for each reference type, and give an indication of the citing pattern of a typical master student in library and information science. Reading this plot, we see that half of the master theses cite between 11 and 20 books, 2 and 9 Web resources, 1 and 6 journal papers, 1 and 5 anthology chapters, 1 and 4 student theses, and 0 and 3 newspaper articles. It should be noted, though, that some theses deviate quite a lot from the typical information usage specified within the boxes. These deviations are marked by small circles (outliers) or stars (extreme outliers), and they are especially prominent in the core types Web resources and newspaper articles (although they are visible for all core types). The core authors, defined as the authors that are cited by the most number of theses, are ranked in table 2 below.</p>
+ 
+ <table class="center">
+    <caption><br /> <strong>Table 2: Core authors</strong> </caption>
+	<tbody>
+ <tr><th>Rank</th> <th>Core authors</th> <th>Citations</th> <th>Share of citations to books</th> <th>Cited by n theses</th></tr>
+ <tr><td>1</td> <td>Boréus, Kristina</td> <td style="text-align:center;">65</td> <td style="text-align:center;">92.31%</td> <td style="text-align:center;">62</td></tr>
+ <tr><td>2</td> <td>Bryman, Alan </td> <td style="text-align:center;">65</td> <td style="text-align:center;">100.00%</td> <td style="text-align:center;">62</td></tr>
+ <tr><td>3</td> <td>Bergström, Göran</td> <td style="text-align:center;">64</td> <td style="text-align:center;">92.19%</td> <td style="text-align:center;">62</td></tr>
+ <tr><td>4</td> <td>Trost, Jan </td> <td style="text-align:center;">55</td> <td style="text-align:center;">100.00%</td> <td style="text-align:center;">52</td></tr>
+ <tr><td>5</td> <td>Kvale, Steinar </td> <td style="text-align:center;">45</td> <td style="text-align:center;">100.00%</td> <td style="text-align:center;">45</td></tr>
+ <tr><td>6</td> <td>Hansson, Joacim </td> <td style="text-align:center;">58</td> <td style="text-align:center;">72.41%</td> <td style="text-align:center;">43</td></tr>
+ <tr><td>7</td> <td>Repstad, Pål </td> <td style="text-align:center;">43</td> <td style="text-align:center;">100.00%</td> <td style="text-align:center;">43</td></tr>
+ <tr><td>8</td> <td>Widerberg, Karin </td> <td style="text-align:center;">42</td> <td style="text-align:center;">100.00%</td> <td style="text-align:center;">42</td></tr>
+ <tr><td>9</td> <td>Skot-Hansen, Dorte </td> <td style="text-align:center;">48</td> <td style="text-align:center;">41.67%</td> <td style="text-align:center;">31</td></tr>
+ <tr><td>10</td> <td>Höglund, Lars </td> <td style="text-align:center;">31</td> <td style="text-align:center;">29.03%</td> <td style="text-align:center;">31</td></tr>
+ <tr><td>11</td> <td>Limberg, Louise </td> <td style="text-align:center;">67</td> <td style="text-align:center;">86.57%</td> <td style="text-align:center;">28</td></tr>
+ <tr><td>12</td> <td>Svedjedal, Johan </td> <td style="text-align:center;">35</td> <td style="text-align:center;">40.00%</td> <td style="text-align:center;">25</td></tr>
+ <tr><td>13</td> <td>Torstensson, Magnus </td> <td style="text-align:center;">33</td> <td style="text-align:center;">54.55%</td> <td style="text-align:center;">24</td></tr>
+ <tr><td>14</td> <td>Philips, Louise </td> <td style="text-align:center;">24</td> <td style="text-align:center;">100.00%</td> <td style="text-align:center;">23</td></tr>
+ <tr><td>15</td> <td>Winther Jørgensen, Marianne</td> <td style="text-align:center;">24</td> <td style="text-align:center;">100.00%</td> <td style="text-align:center;">23</td></tr>
+	</tbody>
+ </table>
+ 
+ <p>About two thirds of the list is populated with individuals who have written, together or alone, course books on various qualitative methods used in the social sciences. Boréus, Bryman, Bergström, Trost, Kvale, Repstad, Widerberg, Philips and Winther Jørgensen all belong to this group, and for each of them the share of citations going to such books are very high (the lowest value being 92,19%). The influence of these authors is also measured by the fact that 82% of the master theses make references to at least one document written by one of them. </p>
+ 
+ <p>The list of core authors is mainly made up of authors from Sweden or the Nordic countries; only one, Bryman, reside outside these countries. Less than a third of the core authors can be considered dealing with questions specific for library and information science (Hansson, Skot-Hansen, Höglund, Limberg). </p>
+ 
+ <p>Books is, as previously stated, the dominant reference type, as a total of 3424 citations are distributed among 2172 edited anthologies and authored monographs. Some books are however used more than others, which is shown by the skewed distribution of those citations. By dividing each book into one of four groups, depending on how many citations it accrued, this is visualized in Figure 4 below.  </p>
+ 
+  <figure class="centre">
+ <img src="colis1622fig4.png" alt="Figure4: Distribution of citations to 4 groups of books" width="588" height="452" />
+   <figcaption><br /><strong>Figure 4: Distribution of citations to four groups of books</strong>
+  </figcaption>
+</figure>
+
+ <p>Most books, 81,63% to be specific, cited by the master theses are only cited the one time, and together they constitute group 4. These books, together with the books in group 3, receive about 80% of the total citations and concern a wide number of subjects. By studying a random sample containing 10% of the books in these two groups it can be concluded that a little more than two thirds of the titles are part of the academic literature, either as works of original research or as overviews of research produced for educational purposes. The remaining third of the books are published outside of an academic setting and consist of, in the following order: various works of nonfiction (ca. 16%); specific guides and handbooks written by practicing librarians or published by associations such as American Library Association (ca. 8%); and works of fiction (ca. 7%). Group 2, made up of the small portion of books that are cited between 4 and 10 times, is mostly made up of books concerning (in descending order) various qualitative methods, perspectives on various types of libraries, knowledge organization, information seeking, sociology of culture, and cultural policy. A few books related to information retrieval, bibliometrics, information, and information systems were also found in this group. We find the 24 highest cited books, sharing 14,16% of the citations between them, in group 1. Of these core books over half are course books on qualitative methods used in the social sciences, and only a smaller portion are books concerning library and information science; most of them relating to libraries and identity, information literacy, and interactions between information seeking and learning.</p>
+ 
+ <p>Web resources is the second largest reference type, and a total of 1463 references go to a wide variety of webpages. It is hard to see any pattern in this category, but if one aggregates citations to websites it is possible make some observations (a list of the ten websites referenced by most number of theses is shown in Appendix B).</p>
+ 
+ <p>Most of the sites belong to rather big organizations devoted to questions regarding libraries, culture, and education. There should be no surprise to see the website of the University of Borås in the top, as it is widely regarded as the top place for education and research in the field of library and information science in Sweden. It is, of course, also the university where the master theses were written, which is important to keep in mind when interpreting the results. Noticeable in the list is also the dominance of Swedish websites.</p>
+ 
+ <p>Journal papers is the third largest reference type. A total of 982 citations are distributed among 852 papers published in various journals. 779 of these documents are cited one time, and only twenty receive more than two citations. Compared to the core books the core papers are much more related to library and information science; in fact, for nearly all of them, the connection is very clear. Many of these papers focus on concepts, models, theories and (qualitative) methods important for the field, or introduces more general methods within a library and information science context. There are also a few studies focusing on cultural policy, public libraries and Web based user-education. It is worth noting that about a fifth of the master theses completely lacks references to papers published in journals.</p>
+ 
+ <p>About 70% of the citations go to papers published in journals that are classified as focusing on Library and information science. The rest of the citations are spread to journals from a variety of subject areas, the three most common being pedagogy and education, media and communication and literary science.</p>
+ 
+ <p>To find the core journals a Bradford analysis (see Bradford (<a href="colis1622.html#bra34">1934</a>) and Diodato (<a href="colis1622.html#dio94">1994, pp. 16–17</a>)) was undertaken: first, the journals were ranked, in descending order, according to the number of published papers referenced by the master theses; and, second, divided into 3 journal zones each containing an approximately equal share of papers. The number of journals in the 3 zones has the proportion 14:57:240 which is roughly equal to Bradford’s law of 1:n:n^2 with a Bradford multiplier, n, of 4. This is visualized in figure 5, with the addition of a bar indicating the number of citations to journal papers in the zone.</p>
+ 
+   <figure class="centre">
+<img src="colis1622fig5.png" alt="Figure5: Bradford zones with number of citations" width="626" height="541" />
+   <figcaption><br /><strong>Figure 5: Bradford zones with number of citations</strong>
+  </figcaption>
+</figure>
+
+ <p>Basically the core journals are those journals that publish the largest number of papers referenced by the master theses. They are found in zone 1 and, reading from the chart, represent 4,50% of the total number of journals, together containing 32,28% of the cited papers and receiving 34,73% of the citations. A ranked list of the core journals is provided in table 3.</p>
+ 
+  <table class="center">
+    <caption><br /> Table 3: Core journals </caption>
+	<tbody>
+	<tr><th>Rank</th> <th>Journal name</th> <th>Citations</th> <th>Cited papers</th></tr>
+	<tr><td>1</td> <td>Journal of Documentation</td> <td>56</td> <td>34</td></tr>
+	<tr><td>2</td> <td>Journal of the American Society for Information Science and Technology</td> <td>44</td> <td>33</td></tr>
+	<tr><td>3</td> <td>Svensk Biblioteksforskning</td> <td>31</td> <td>24</td></tr>
+	<tr><td>4</td> <td>Library Quarterly</td> <td>33</td> <td>23</td></tr>
+	<tr><td>5</td> <td>Information Processing & Management</td> <td>24</td> <td>21</td></tr>
+	<tr><td>6</td> <td>Library Trends</td> <td>22</td> <td>20</td></tr>
+	<tr><td>7</td> <td>Library Journal</td> <td>21</td> <td>19</td></tr>
+	<tr><td>8</td> <td>Journal of Academic Librarianship</td> <td>19</td> <td>18</td></tr>
+	<tr><td>9</td> <td>The Reference Librarian</td> <td>17</td> <td>17</td></tr>
+	<tr><td>10</td> <td>Scandinavian Public Library Quarterly</td> <td>17</td> <td>14</td></tr>
+	<tr><td>11</td> <td>International Journal of Cultural Policy</td> <td>16</td> <td>14</td></tr>
+	<tr><td>12</td> <td>Information Research</td> <td>15</td> <td>14</td></tr>
+	<tr><td>13</td> <td>Journal of Information Science</td> <td>14</td> <td>13</td></tr>
+	<tr><td>14</td> <td>College & Research Libraries</td> <td>12</td> <td>11</td></tr>
+	</tbody>
+ </table>
+ 
+ <p>With exception to perhaps International Journal of Cultural Policy, all core journals are clearly focused on library and information science. A large majority of the core journals are indexed in Web of Science and are there also categorised as part of the field. </p>
+ 
+ <p>Even if most journals referenced are academic journals, this is not always true. For example, in the list above, Library journal and Scandinavian public library quarterly lack peer-review and are more to be considered trade publications than scholarly journals. Nevertheless, their place on the core list indicate that they are important publications for some of the master students.</p>
+ 
+ <h3>Library and information science as represented by clustered master theses</h3>
+ <p>The tables in this section reports the result of the bibliographic coupling and cluster analysis. The column listing the highest ranked keyword is left blank if no high ranking keyword was found. Table 4 below contain all clusters that could be assigned to overarching themes.</p>
+ 
+  <table class="center">
+    <caption><br /><strong> Table 4: Description of overarching themes and clusters</strong> </caption>
+	<tbody>
+ <tr><th colspan="2">Name of theme and cluster id</th> <th>Highest ranked keywords in cluster (TFIDF-weighted)</th> <th>Theses in cluster</th></tr>
+ <tr><td rowspan="3">1.	Sociology of literature and Literary science</td> <td>1</td> <td>Sociology_of_Literature, Culture, Literary_criticism, Cultural_policy, Discourse, Equality</td> <td>12</td></tr>
+ <tr><td>2</td> <td>Idea_analysis, Åsa_Linderborg, Working_class_literature, Social_Class, Lena_Andersson</td> <td>5</td></tr>
+ <tr><td>3</td> <td>Sociology_of_Literature</td> <td>2</td></tr>
+ <tr><td rowspan="2">2. Gender and equality</td> <td>4</td> <td>Reading_habits, Gender</td> <td>6</td></tr>
+ <tr><td>5</td> <td>Boys, Gender, Fiction</td> <td>7</td></tr>
+ <tr><td rowspan="3">3.	Knowledge organization</td> <td>6</td> <td>Subject_heading, Indexing, Cataloguing</td> <td>5</td></tr>
+ <tr><td>7</td> <td></td> <td>2</td></tr>
+ <tr><td>8</td> <td>Classification_system, Sab, Classification</td> <td>2</td></tr>
+ <tr><td rowspan="2">4.	User education, Information literacy and information seeking </td> <td>9</td> <td>Information_need, Information_seeking_behavior, Information, Information_behavior, Information_seeking, Communication</td> <td>7</td></tr>
+ <tr><td>10</td> <td>Information_literacy, Information_seeking, Phenomenography, University_library, User_education, Information_use</td> <td>20</td></tr>
+ <tr><td rowspan="2">5.	School libraries</td> <td>11</td> <td>School_library, School_librarian, Steering_documents, Organization</td> <td>9</td></tr>
+ <tr><td>12</td> <td>Library_collection, Collection_development policy, School_library, </td> <td>3</td></tr>
+ <tr><td rowspan="2">6.	The library from a historical and cultural policy perspective</td> <td>13</td> <td>Library_history, City_library, Abf-library, Agent, Municipalization</td> <td>7</td></tr>
+ <tr><td>14</td> <td>Cultural_policy, Democracy, Branch_library, Municipality, Public_library</td> <td>17</td></tr>
+ <tr><td rowspan="4">7.	New media: policy, copyright and effect on libraries and users</td> <td>15</td> <td></td> <td>2</td></tr>
+ <tr><td>16</td> <td></td> <td>2</td></tr>
+ <tr><td>17</td> <td>Video_game, Selection</td> <td>4</td></tr>
+ <tr><td>18</td> <td>Blogs, Web_2.0</td> <td>3</td></tr>
+ <tr><td rowspan="2">8.	Children’s libraries and cultural diversity</td> <td>19</td> <td>Immigrants, Multiculturalism, Cultural_diversity, Integration, Children’s_library</td> <td>9</td></tr>
+ <tr><td>20</td> <td>Library_environment, Children’s_library</td> <td>3</td></tr>
+ <tr><td rowspan="2">9.	Role and identity: Libraries, librarians and library and information science</td> <td>21</td> <td>Discourse_analysis, Pictures, Librarian, Text_analysis, Public_Library</td> <td>12</td></tr>
+ <tr><td>22</td> <td>Master_theses</td> <td>2</td></tr>
+ <tr><td rowspan="3">10. Scientific communication, digitalization and open access</td> <td>23</td> <td>Digitalization, Cultural_heritage, National_library_of_Sweden, Preservation</td> <td>4</td></tr>
+ <tr><td>24</td> <td>Bibliometrics, Citation_analysis, Scientific_communication </td> <td>3</td></tr>
+ <tr><td>25</td> <td>Open_Access, Scientific_communication </td> <td>2</td></tr>
+ <tr><td rowspan="2">11. Reading literacy and reading promotion </td> <td>26</td> <td>Reading_circle, Reading_experience </td> <td>2</td></tr>
+ <tr><td>27</td> <td>Literacy, Reading_Culture</td> <td>2</td></tr>
+ </tbody>
+ </table>
+ 
+<p>Five clusters could not be assigned to an overarching theme. One of them has no common focus while the other deal with Mediating literature and Quality Development, Libraries and patrons with disability, Information retrieval, and Information management. The 32 clusters are to a large majority dominated by library or practice-focused theses that use different qualitative methods, such as interviews, focus groups, discourse analysis and ideology analysis, as the main mode of research technique. There are some exceptions to this though: in cluster 30 and 24 the methods used are quantitative and the focus is information scientific and not connected to libraries; and in theme 1 the methods are qualitative but the focus is on literature rather than libraries. There are also several theses in the largest cluster, cluster 10, that focus on information seeking and information behaviour without making much reference to specific library services.</p>
+ 
+<h2>Discussion and conclusions</h2>
+
+<p>In summary Swedish library and information science, conceived as a field of education, have the following characteristics:</p>
+<ul>
+<li>Core types: books are the most frequently cited sources of information, followed by internet resources, journal papers, anthology chapters, student theses, and newspaper articles.</li>
+<li>Core authors: the authors cited by the most number of theses are Nordic scholars who have written course books concerning qualitative methods. Only a third of the core authors specialize in library and information science. </li>
+<li>Core books: the most highly cited books focus mainly on qualitative methods, and only a few of them have a specific library and information science perspective.</li>
+<li>Core Web resources: the Web resources cited by the most number of theses are Swedish websites devoted to libraries, culture and education.</li>
+<li>Core journal papers: the most highly cited papers focus on concepts, models, theories or (qualitative) methods in library and information science.</li>
+<li>Core journals: an overwhelming majority of the journals that publish the largest number of papers referenced by the master theses focus on library and information science. </li>
+<li>The research process behind a majority of the master theses, as indicated by the data, involve taking theory and method from books outside of the subject and combining this with journal papers from within the subject.</li>
+<li>The master theses themselves are mostly concerned with library or practice-related questions and the prevailing research methods are qualitative.</li>
+</ul>
+
+ <p>The frequency of Nordic researchers in the above core types can most likely be attributed to the data set only including Swedish master theses. Compared to a professional researcher, a student’s perception of the core literature is probably more connected to the geographic placement of the educational institution where s/he attend. Thus, care should be taken when generalizing the findings beyond the context of Swedish library and information science.</p>
+ 
+ <p>Is library and information science to be considered a soft science or hard science? It has been suggested (see for example Meadows (<a href="colis1622.html#mea98">1998</a>) and Price (<a href="colis1622.html#pri70">1970</a>)) that the ‘harder’ the science, the greater the share of references going to journal papers. That more than a third of the references goes to books, while only a tenth goes to papers in scientific journals, is a clear indication that the citing pattern of master students in the field has more in common with that found in the humanities than those found in the natural sciences. The Price index for the data set shows that only 34% of the references goes to literature not older than 5 years. This can be compared with a study by Price (<a href="colis1622.html#pri70">1970</a>) where classical hard sciences such as physics and biochemistry received a Price index of between 60 and 70%, while the social sciences received an index between 40 and 50%, and the humanities a low 10%. According to the types of literature cited, and the low Price index, Library and information science as represented by master theses most definitely should be considered a soft science. This is also supported by how introductory textbooks (e.g., Chowdhury (<a href="colis1622.html#cho08">2008</a>) and Rubin (<a href="colis1622.html#rub10">2010</a>)) present the discipline (although with some reservations), as well as by the result of the bibliographic coupling. Although library and information science involves some quantitative elements that resemble hard science, like the clusters of Information Retrieval and Bibliometrics, the large majority of theses was clustered into groups where methods like discourse analysis, phenomenology, ideology analysis and policy analysis was the main mode of research technique. </p>
+ 
+ <p>When comparing the themes of the clusters produced by bibliographic coupling with the results of previous research we see both differences and similarities. Of the themes reported in table 4 many can be easily placed within the framework of the ten curricular themes reported by Kajberg and Lørring (<a href="colis1622.html#kaj05">2005</a>). The exceptions are theme 1, 2 and 5 which are hard to place anywhere in the framework. There exists a considerable overlap in the themes of the clusters produced by bibliographic coupling and the findings of Ohlsson (<a href="colis1622.html#ohl04">2004</a>). However, Ohlsson (<a href="colis1622.html#ohl04">2004</a>) reports twice as many theses dealing with knowledge organization (theme 3) indicating that students interest in this area has declined over the years. Also, gender and equality (theme 2) along with new media (theme 7) seem to be newly found interests of the students as they do not figure at all in the results of Ohlsson (<a href="colis1622.html#ohl04">2004</a>).  </p>
+ 
+ <p>According to Larivière <i>et al</i>. (<a href="colis1622.html#lar12">2012, p. 999</a>) previous bibliometric studies, using data from Web of Science, has grouped library and information science into different subfields: library science, information science, and scientometrics. Often the importance of the last two are emphasized, while the last one is thought of as on the decline. Using master theses as a data source to conceptualize library and information science bibliometrically, produces significantly different results. Only a fraction of the theses can be categorized as scientometrics, a somewhat larger share is information science, and the lion share is library science. In comparisons with the clusters of theses produced it is obvious that earlier bibliometric studies have tended to downplay the importance of library and practice-oriented research.</p>
+ 
+ 
+ <h2 id="author">About the author</h2>
+ 
+ <p><strong>Pär Sundling</strong> is a doctoral student at the sociological institution at Umeå University, Sweden. He received his Bachelor's degree in library and information science and his Master's degree in library and information science from Umeå University, Sweden. His research focus on the contributions of authors and the valuation of authorship. He can be reached at <a href="mailto:par.sundling@umu.se">par.sundling@umu.se</a> </p> 
+ 
+</section>
+
+
+<section class="refs">
+  
+<h2>References</h2>
+  
+ <ul class="refs"> 
+ <li id="aki03"> Akiko, A. (2003). An information-theoretic perspective of tf–idf measures. <em>Information Processing &amp; Management, 39</em>(1), 45–65.  </li>
+ <li id="ast06"> Åström, F. (2006). <em><a href="http://www.webcitation.org/6l7GUOhAe" target=_blank>The social and intellectual development of library and information science.</a></em> (Unpublished doctoral dissertation, Umeå University, Umeå, Sweden.) Retrieved from http://www.diva-portal.org/smash/get/diva2:145144/FULLTEXT01 (Archived by WebCite® at http://www.webcitation.org/6l7GUOhAe) </li>
+ <li id="boo03"> Booth, A. (2003). Bridging the research-practice gap? The role of evidence based librarianship. <em>New Review of Information and Library Research, 9</em>(1), 3–23.  </li>
+ <li id="bra34"> Bradford, S. C. (1934). Sources of information on specific subjects. <em>Engineering, 26</em>, 85–86. </li>
+ <li id="cha12"> Chang, Y.-W. &amp; Huang, M.-H. (2012). A study of the evolution of interdisciplinarity in library and information science: Using three bibliometric methods. <em>Journal of the American Society for Information Science and Technology, 63</em>(1), 22–33.  </li>
+ <li id="cho08"> Chowdhury, G. G. (2008). <em>Librarianship: an introduction.</em> London: Facet. </li>
+ <li id="col07"> Colliander, C. (2007).  <a href="http://www.webcitation.org/6l7H13GnZ" target=_blank>Utvärdering av klusteranalytiska metoder i kombination med bibliografisk koppling: en bibliometrisk kartläggning av aktuella forskningsteman inom informationsvetenskap.</a> (Unpublished Master's thesis, University of Borås, Borås, Sweden) Retrieved from http://bada.hb.se/bitstream/2320/2425/1/07-103.pdf (Archived by WebCite® athttp://www.webcitation.org/6l7H13GnZ)  </li>
+ <li id="dav03"> Davis, P. M. (2003). Effect of the Web on undergraduate citation behavior: guiding student scholarship in a networked age. <em>portal: Libraries and the Academy, 3</em>(1), 41–51. </li> 
+ <li id="dav02"> Davis, P. M. (2002). <a href="http://www.webcitation.org/6l7JGD4FS" target=_blank>The effect of the Web on undergraduate citation behavior: a 2000 update.</a> <em>College &amp; Research Libraries, 63</em>(1), 53 –60. Retrieved from http://crl.acrl.org/content/63/1/53.full.pdf (Archived by WebCite® at http://www.webcitation.org/6l7JGD4FS)  </li>
+ <li id="dav01"> Davis, P. M. &amp; Cohen, S. A. (2001). The effect of the Web on undergraduate citation behavior 1996-1999. <em>Journal of the American Society for Information Science and Technology, 52</em>(4), 309–314.  </li>
+ <li id="dio94"> Diodato, V. P. (1994). <em>Dictionary of bibliometrics.</em> New York: Haworth Press. </li>
+ <li id="eve01"> Everitt, B., Landau, S. &amp; Leese, M. (2001). <em>Cluster analysis.</em> London: Arnold. </li>
+ <li id="gla96"> Glänzel, W. &amp; Czerwon, H. (1996). A new methodological approach to bibliographic coupling and its application to the national, regional and institutional level. <em>Scientometrics, 37</em>(2), 195–221. </li>
+ <li id="gla95"> Glänzel, W. &amp; Czerwon, H.-J. (1995). A new methodological approach to bibliographic coupling and its application to research-front and other core documents. In <em>Proceedings of the fifth biennial international conference of the International Society for Scientometrics and Infometrics</em> (pp. 167–176). Medford N.J.: Learned Information. </li>
+ <li id="hau12"> Haustein, S. (2012). <em>Multidimensional journal evaluation: analyzing scientific periodicals beyond the impact factor.</em> Walter de Gruyter. </li>
+ <li id="hur07"> Hurst, S. &amp; Leonard, J. (2007). <a href="http://www.webcitation.org/6l7JsKZhb" target=_blank>Garbage in, garbage out: the effect of library instruction on the quality of students’ term papers</a>. <em>E-JASL: The Electronic Journal of Academic and Special Librarianship, 8</em>(1). Retrieved from http://southernlibrarianship.icaap.org/content/v08n01/hurst_s01.htm (Archived by WebCite® at http://www.webcitation.org/6l7JsKZhb) </li>
+ <li id="ise04"> Iseborn, J. &amp; Swartz, S. (2004). <a href="http://www.webcitation.org/6l7HguC1c" target=_blank>Studenters användning av akademiska tidskrifter: en källanalys av B&amp;I-studenters magisteruppsatser 1999-2001.</a>(Unpublished Master's thesis, University of Borås, Borås, Sweden) Retrieved from http://bada.hb.se/bitstream/2320/1087/1/04-52.pdf (Archived by WebCite® at http://www.webcitation.org/6l7HguC1c) </li>
+ <li id="jan08"> Janssens, F., Glänzel, W. &amp; Moor, B. (2008). A hybrid mapping of information science. <em>Scientometrics, 75</em>(3), 607–631. </li>
+ <li id="jar01"> Jarneving, B. (2001). <em>Val och anpassning av bibliometriska metoder för utveckling av tidskriftsbestånd: en rapport finansierad av Högskolan i Borås och NORDINFO</em>. Helsingfors: NORDINFO. </li>
+ <li id="jar06"> Jarneving, B. (2006). The combined application of bibliographic coupling and the complete link cluster method in bibliometric science mapping. Borås, Sweden: Valfrid (Gothenburg university, Ph.D. dissertation)  </li>
+ <li id="jar07a"> Jarneving, B. (2007a). Bibliographic coupling and its application to research-front and other core documents. <em>Journal of Informetrics, 1</em>(4), 287–307.  </li>
+ <li id="jar07b"> Jarneving, B. (2007b). Complete graphs and bibliographic coupling: A test of the applicability of bibliographic coupling for the identification of cognitive cores on the field level. <em>Journal of Informetrics, 1</em>(4), 338–356.  </li>
+ <li id="kaj05"> Kajberg, L. &amp; Lørring, L. (2005). <em>European curriculum reflections on library and information science education.</em> Copenhagen: Royal School of Library and Information Science. </li>
+ <li id="kes61"> Kessler, M. M. (1961). <em>An experimental study of bibliographic coupling between technical papers.</em> Massachusetts Institute for Technology, Lincoln Laboratory. </li>
+ <li id="kes63"> Kessler, M. M. (1963). Bibliographic coupling between scientific papers. <em>American Documentation, 14</em>(1), 10–25. </li>
+ <li id="kus03"> Kushkowski, J. D., Wiese, W. H. &amp; Parsons, K. A. (2003). Master’s and doctoral thesis citations: analysis and trends of a longitudinal study. <em>portal: Libraries and the Academy, 3</em>(3), 459–479. </li>
+ <li id="lar12"> Larivière, V., Sugimoto, C. R. &amp; Cronin, B. (2012). A bibliometric chronicling of library and information science’s first hundred years. <em>Journal of the American Society for Information Science and Technology, 63</em>(5), 997–1016.  </li>
+ <li id="mea98"> Meadows, A. J. (1998). <em>Communicating research</em>. San Diego, CA: Academic Press. </li>
+ <li id="moe05"> Moed, H. F. (2005). <em>Citation analysis in research evaluation</em>. Dordrecht, The Netherlands: Springer. </li>
+ <li id="ohl04"> Ohlsson, E. (2004). <em>Studenters val av referenser: en bibliometrisk studie av uppsatser i Biblioteks- och informationsvetenskap.</em> (Unpublished Master's thesis, University of Umeå, Umeå, Sweden) </li>
+ <li id="opp01"> Oppenheim, C. &amp; Smith, R. (2001). Student citation practices in an information science department. <em>Education for Information, 19</em>(4), 299–323. </li>
+ <li id="per94"> Persson, O. (1994). The intellectual base and research fronts of JASIS 1986-1990. <em>Journal of the American Society for Information Science, 45</em>(1), 31–38.  </li>
+ <li id="pil07"> Pilerot, O. (2007). <em><a href="http://www.webcitation.org/6l7IW5DoN" target=_blank>Skriva och referera: en studie av designingenjörsstudenters och sjuksköterskestudenters informationsanvändning i samband med uppsatsskrivande.</a></em> (Unpublished Master's thesis, University of Borås, Borås, Sweden) Retrieved from http://bada.hb.se/bitstream/2320/2134/1/07-31.pdf (Archived by WebCite® at http://www.webcitation.org/6l7IW5DoN) </li>
+ <li id="pri70"> Price, D. (1970). Citation measures of hard science, soft science, technology, and nonscience. In Carnot E. Nelson, Donald K. Pollock (Eds.), <em>Communication Among Scientists and Engineers</em>. Lexington, MA: Lexington Bbooks, 1970.  </li>
+ <li id="raf13"> Rafferty, R. S. (2013). <a href="http://www.webcitation.org/6l7KNMTbK" target=_blank>The impact of library instruction: do first-year medical students use library resources specifically highlighted during instructional sessions?</a> <em>Journal of the Medical Library Association, 101</em>(3), 213–217. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3738082/pdf/mlab-101-03-213.pdf (Archived by WebCite® at http://www.webcitation.org/6l7KNMTbK) </li>
+ <li id="rub10"> Rubin, R. (2010). <em>Foundations of library and information science</em>. (3rd. ed.). New York: Neal-Schuman Publishers. </li>
+ <li id="sch08"> Schlögl, C. &amp; Stock, W. G. (2008). Practitioners and academics as authors and readers: the case of LIS journals. <em>Journal of Documentation, 64</em>(5), 643–666.  </li>
+ <li id="sen83"> Sen, S. K. &amp; Gan, S. K. (1983). <a href="http://www.webcitation.org/6l7KecUVr" target=_blank>A mathematical extension of the idea of bibliographic coupling and its applications.</a> <em>Annals of Library Science and Documentation, 30</em>(2), 78–82. Retrieved from http://nopr.niscair.res.in/handle/123456789/28008 (Archived by WebCite® at http://www.webcitation.org/6l7KecUVr) </li>
+ <li id="vla84"> Vladutz, G. &amp; Cook, J. (1984). Bibliographic coupling and subject relatedness. In Barbara Flood, Joanne Witiak &amp; Thomas H. Hogan (Eds.), <em>Challenges to an information society. Proceedings of the 47th ASIS annual meeting</em> (pp. 204–207). White Plains, N.Y.: Knowledge Industry Publications. </li>
+ <li id="wal13"> Waldh, A.-M. (2013). <em><a href="http://www.webcitation.org/6l7H8T7Kv" target=_blank>Genusvetenskapens utveckling inom B&amp;I: en bibliometrisk studie av studentuppsatser med genusperspektiv.</a></em> (Unpublished Master's thesis, University of Borås, Borås, Sweden) Retrieved from http://www.diva-portal.se/smash/get/diva2:660137/FULLTEXT01.pdf (Archived by WebCite® at http://www.webcitation.org/6l7H8T7Kv) </li>
+ <li id="wei74"> Weinberg, B. H. (1974). Bibliographic coupling: a review. <em>Information Storage and Retrieval, 10</em>(5-6), 189–196.  </li>
+ <li id="whi98"> White, H. D. &amp; McCain, K. W. (1998). Visualizing a discipline: an author co-citation analysis of information science, 1972-1995. <em>Journal of the American Society for Information Science, 49</em>(4), 327–355.  </li>
+</ul>
+
+ <h4 style="text-align:center;">How to cite this paper</h4>
+<div>
+   <div class="citing">Sundling, P.  (2017). Library and information science according to the citing pattern of students: a bibliometric study. <em>Information Research, 22</em>(1),  CoLIS paper 1622. Retrieved from  http://InformationR.net/ir/22-1/colis/colis1622.html (Archived by WebCite® at http://www.webcitation.org/6oTQ6SrnX)</div>  </div>
+
+</section>
+</article>
+<br />
+<section>
+
+ <table class="footer" style="border-spacing:10px;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #7986B7; color: white; font-family: verdana, sans-serif; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"><form method="get" action="http://scholar.google.com/scholar" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"> <input type="hidden" name="q" value="information use, scientometrics, students, citation studies," /><br />  
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana, sans-serif; font-weight: bold;" /><input type="hidden" name="num" value="100" />  </td>  </tr></table></form></td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --><form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="information use, scientometrics, students, citation studies," /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana, sans-serif; font-weight: bold; font-size: small;" /><input type="hidden" name="client" value="pub-5081678983212084" /><input type="hidden" name="forid" value="1" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="hidden" name="oe" value="ISO-8859-1" /><input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" /><input type="hidden" name="hl" value="en" /></td></tr>  
+  </table></form></td>  
+ <td style="vertical-align:top; text-align:center;"><form method="get" action="http://www.bing.com" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="information use, scientometrics, students, citation studies," /> <br /><input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana, sans-serif; font-weight: bold;" /> <input type="hidden" name="num" value="100" /></td></tr>  
+ </table></form></td></tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/22-1/colis/colis1622.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+ <br />
+ <div class="addthis_inline_share_toolbox" style="margin-left:10%;"></div>
+<hr />
+</section>
+<section>
+<h2>Appendices</h2> 
+<h3 id="appA">Appendix A</h3>
+  <table class="center">
+    <caption><br /> Table A: Complete list of master theses included in the data set</caption>
+	<tbody>
+<tr><th>Title of master thesis</th></tr>
+<tr><td>’Svenska språket, värderingar och sociala koder’? En innehållslig idé- och argumentationsanalys av kanondebatten 2006</td></tr>
+<tr><td>A Postcolonial Study of Three Public Libraries in Mali</td></tr>
+<tr><td>Aktörer och strukturer: en studie av Karlstads stadsbiblioteks framväxt</td></tr>
+<tr><td>Alla vägar leder till fantasy: en studie av hur fantasyläsande BHS-studenter går tillväga för att få tag på skönlitteratur</td></tr>
+<tr><td>Antaganden om läsning: En analys av utvalda lektörsomdömen om barn- och ungdomslitteratur under perioden 1986-2006</td></tr>
+<tr><td>Antropologi eller estetik? En studie av definitionen och användningen av begreppet mångkultur i svenska dagstidningar under Mångkulturåret 2006</td></tr>
+<tr><td>Användare på bild</td></tr>
+<tr><td>Användaren och den elektroniska referenstjänsten</td></tr>
+<tr><td>Användarundervisning och uppsatsarbete: Några ekonomistudenters uppfattningar av undervisningens betydelse för informationssökning och -användning</td></tr>
+<tr><td>Arbetarklasskildringar i Ragnar Järhults och Per Gunnar Evanders författarskap.</td></tr>
+<tr><td>Arbetarlitteraturens återkomst: En diskursinriktad analys kring föreställningar om den samtida arbetarlitteraturen i Sverige 1999-2007</td></tr>
+<tr><td>Arbetsterapeuters informationssökningsbeteende: En intervjuundersökning vid en rehabiliteringsklinik</td></tr>
+<tr><td>Att inte vara ensam: Tonårsflickors vägledning i fyra moderna ungdomsromaner – en textanalys.</td></tr>
+<tr><td>Att katalogisera en specialsamling med hjälp av TEI: En metodprövande studie utförd på Swedenborgsarkivet i Kungl. Vetenskapsakademien</td></tr>
+<tr><td>Att lära med webquest. En fallstudie om studenters erfarenheter av Webquest för barnmorskor vid Karolinska Institutets Universitetsbibliotek</td></tr>
+<tr><td>Att läsa eller icke läsa? En studie om gymnasieelevers uppfattningar av gymnasiebibliotekariens pedagogiska arbete med skönlitteratur</td></tr>
+<tr><td>Att läsa är inte någon oskyldig aktivitet. Om synen på litterära tekniker, läsare och läsning hos tre samtida svenska poeter.</td></tr>
+<tr><td>Att se med samma ögon – äldre synskadade och folkbibliotek</td></tr>
+<tr><td>Att skapa ett informationssystem – en holistisk ansats</td></tr>
+<tr><td>Att ställa ut eller ställa till det: om utställningsverksamhet och tyst pedagogik på folkbiblioteket</td></tr>
+<tr><td>Att tillgängliggöra distributionsstödda titlar med hjälp av marknadsföring – En studie om bibliotekariers ansatser på området</td></tr>
+<tr><td>Att visa framsidan är självklart – Exponering av medier på folkbiblioteks webbsidor.</td></tr>
+<tr><td>Automatisk genreklassifikation : en experimentell studie</td></tr>
+<tr><td>Av kvinnor, för kvinnor. Fy fan! En kvalitativ studie av hur sex svenska folkbibliotek integrerar jämställdhetsaspekter i sin användarorienterade verksamhet.</td></tr>
+<tr><td>Barn i fokus: En komparativ studie av arbetet med barnverksamhet på folkbibliotek i Sverige och Italien.</td></tr>
+<tr><td>Barn kommunicerar om film</td></tr>
+<tr><td>Barn, ungdomar och genusperspektiv: Magisteruppsatsers utgångspunkter och problemval</td></tr>
+<tr><td>Barnbibliotekskonsulenters arbete utifrån barnkonventionen – en framgång?</td></tr>
+<tr><td>Barndeckare och genus. En studie av genusstereotyper i barndeckare från år 2006</td></tr>
+<tr><td>Beslutsprocesser och informationshantering – en fallstudie inom en högskoleorganisation</td></tr>
+<tr><td>Bibliotek möter fritidshem</td></tr>
+<tr><td>Bibliotekarier och biblioteksassistenter. Två yrkesgrupper som krockar?</td></tr>
+<tr><td>Bibliotekarier om bibliotekarier - En diskursanalytisk studie om bibliotekariers kunskaper, uppgifter, roller och föreställningar om bibliotekarier</td></tr>
+<tr><td>Bibliotekariers syn på utbildning och kompetens – de små folkbibliotekens perspektiv</td></tr>
+<tr><td>Bibliotekariers uppfattningar om Bibliotek 2.0 – En fenomenografisk undersökning</td></tr>
+<tr><td>Biblioteken på Tjörn – Biblioteksverksamheten på Tjörn under två tidsperioder.</td></tr>
+<tr><td>Biblioteken som stöd för invandrare under integrationsprocessen - En kvalitativ studie på stadsbiblioteken i Malmö och Lund</td></tr>
+<tr><td>Biblioteket och svenska för invandrare: en undersökning av folkbibliotekets funktion i andraspråksinlärning</td></tr>
+<tr><td>Biblioteket är till för användarna. En studie av folkbibliotekariers syn på bibliotekarieetik</td></tr>
+<tr><td>Biblioteket, bibliotekarien och framtiden</td></tr>
+<tr><td>Biblioteksanvändning &amp; Läsning. Tre användares levnadsberättelser.</td></tr>
+<tr><td>Biblioteksoro: i en svensk kontext</td></tr>
+<tr><td>Biblioteksplanen – skrivbordsprodukt eller effektivt styrdokument. En intervjuundersökning om inställningen till den kommunala biblioteksplanen vid några grundskolor i Malmö</td></tr>
+<tr><td>Biblioteksutvecklingen i Kolbäck 1913-1954</td></tr>
+<tr><td>Biblioterapi på sjukhus – en kvalitativ undersökning av sjukhusbibliotekariers syn på biblioterapi</td></tr>
+<tr><td>Bland Bokbaciller och Vingklippta Änglar – En kvalitativ studie kring bestånd och beståndsarbete på fem sjukhusbiblioteks barn- och ungdomsavdelningar</td></tr>
+<tr><td>Bland puppyshippers och Orange Crushers – en studie av drivkrafterna bakom läsande och skrivande av Harry Potter-fan fiction.</td></tr>
+<tr><td>Blås bort dammet från de äldre boksamlingarna! : En studie om folkbiblioteks bevarande av bokligt kulturarv</td></tr>
+<tr><td>Bokbuss på 2000-talet – hur och varför? En studie baserad på intervjuer med personal inom bokbussverksamhet</td></tr>
+<tr><td>Bokbussens värde och funktion. En kvalitativ intervjuundersökning med bokbussanvändare och bibliotekspersonal</td></tr>
+<tr><td>Boktips från biblioteket: En kvalitativ textanalys utifrån Boktips.net</td></tr>
+<tr><td>Boktryckaren på Visingsö: en granskning av Sven Almqvists forskning om Johann Kankel</td></tr>
+<tr><td>Bookcrossing – Ett äventyr! En fenomenografisk studie av bibliotekariers uppfattningar av bookcrossing</td></tr>
+<tr><td>Böcker på bruket: Sandvikens bibliotekshistoria 1865–1945</td></tr>
+<tr><td>Cross-language information retrieval : sökfrågestruktur &amp; sökfrågeexpansion</td></tr>
+<tr><td>De ska lära sig att leva: En studie av några barnbibliotekariers litteratursyn och deras samarbete med förskolan</td></tr>
+<tr><td>Debatterna om En bok för alla år 1992 och 2007 – En diskursanalys</td></tr>
+<tr><td>Demokrati, inte populism – en studie av en grupp ungdomars tankar kring folkbibliotekets uppdrag i en omvälvande samtid</td></tr>
+<tr><td>Den heterosexuella bibliotekarien: Om BTJ, folkbibliotek och indexering av gaylitteratur</td></tr>
+<tr><td>Den kulturpolitiska forskningens intellektuella bas och inriktningar – En författarcociteringsanalys av artiklar publicerade i International Journal of Cultural Policy 2002-2007</td></tr>
+<tr><td>Den paradoxala kvinnan. En studie av Victoria Benedictssons och Mathilda Mallings kvinnoporträtt under 1880-talets sedlighetsdebatt</td></tr>
+<tr><td>Den är för tjejer och den för killar – en studie av åtta 12-åriga pojkars och flickors serieläsning</td></tr>
+<tr><td>Det finns någon slags Open Access där ute. En idé- och ideologianalys av bibliotekariers förhållningssätt till Open Access vid sex forskningsinstitut.</td></tr>
+<tr><td>Det intelligenta barnbiblioteket – Att skapa ett analysverktyg för barnbiblioteksmiljö</td></tr>
+<tr><td>Det kan alltid bli bättre: Bibliotekens tillgänglighet för funktionshindrade barn och ungdomar</td></tr>
+<tr><td>Det känns som att man tolkar texten utifrån var man befinner sig just nu En studie av det transaktionistiska förhållandet mellan läsare och text</td></tr>
+<tr><td>Det levande biblioteket – retorik kring fördomar och möten. En argumentationsanalys i relation till folkbibliotekets mångfaldsuppdrag.</td></tr>
+<tr><td>Det litterära spädbarnet – en undersökning av folkbibliotekens program för de allra yngsta barnen</td></tr>
+<tr><td>Det sitter i väggarna! – organisationskultur på två folkbibliotek med annorlunda driftsform</td></tr>
+<tr><td>Det spelar ingen roll om de letar efter Nalle Puh eller Hitler – Barnbibliotekariers syn på och hantering av medier som innehåller ämnen med en kontroversiell karaktär.</td></tr>
+<tr><td>Det var väl ändå litteratur det hela skulle handla om? – En idéanalys av värderingar kring Augustpriset i svensk dagspress</td></tr>
+<tr><td>Det är ett yrkesmässigt dilemma – om förmedling av skönlitteratur på ett folkbibliotek.</td></tr>
+<tr><td>Det är ju samma barn och ungdomar vi arbetar med – En intervjustudie om samverkan mellan skola, skol- och folkbibliotek på Gotland</td></tr>
+<tr><td>Dewey Decimal Classification i Sverige?: En studie av synen på bibliografisk praktik i BIBSAM-bibliotekens katalogutredning</td></tr>
+<tr><td>Döm inte boken efter omslaget</td></tr>
+<tr><td>Elev, lintott eller bara barn? Synen på barn i tre kulturpublikationer – en diskursanalys</td></tr>
+<tr><td>En bortglömd guldålder? – Tillgängliggörande av tidig svensk film till en bredare publik</td></tr>
+<tr><td>En författarcociteringsanalys av forskningsfältet socialpsykologi</td></tr>
+<tr><td>En godnattsaga för demokratin? En undersökning av ett läsfrämjande projekt i facklig regi</td></tr>
+<tr><td>En idéanalytisk undersökning av två svenska bibliotekstidskrifter</td></tr>
+<tr><td>En kreativ mötesplats  – Kristinebergs bibliotek och öppna förskolas relation till 1970-talets samhällsdiskussion</td></tr>
+<tr><td>En virtuell bokcirkel blir mer en del utav vardagen…: En kvalitativ studie av virtuella bokcirklar</td></tr>
+<tr><td>Ett medium som alla andra?: Folkbibliotekens marknadsföring av TV-spel mot ungdomar</td></tr>
+<tr><td>Ett nytt stadsbibliotek i Stockholm: En diskursanalys bakom visionen för ett nytt folkbibliotek</td></tr>
+<tr><td>EU och informationsfriheten. En idé- och ideologianalys av informationsfriheten i EU:s datalagringsdirektiv 2006/24/EG.</td></tr>
+<tr><td>Evaluering av återvinningseffektiviteten i Svensk Medicin och Google Scholar med medicinska frågor ur Fråga doktorn.</td></tr>
+<tr><td>Folkbibliotek och TV-spel: En kvalitativ studie av hur införandet av TV-spel på svenska folkbibliotek relaterar till införandet av andra nya medier.</td></tr>
+<tr><td>Folkbibliotekariers uppfattning om personlig integritet i biblioteksverksamheten: En fenomenografisk studie</td></tr>
+<tr><td>Folkbiblioteket – en plats för social sammanhållning</td></tr>
+<tr><td>Folkbiblioteket är demokratins grundpelare: Dagspressens debatt med anledning av moderaternas Kulturen 2.0</td></tr>
+<tr><td>Folkbibliotekets plats i den sociala webbmiljön: En undersökning med fokus på litteraturförmedling och läsfrämjande</td></tr>
+<tr><td>Folkbibliotekets roll i det lokala samhället – Tre kvalitativa fallstudier</td></tr>
+<tr><td>Folkbibliotekets uppdrag : en ideologianalys</td></tr>
+<tr><td>Folksonomi – en förklaring i perspektiv av kunskapsorganisation</td></tr>
+<tr><td>Forskares informationsanvändning och informationsbeteende – En Information Audit på Forskningsbolaget</td></tr>
+<tr><td>Fristående gymnasieskolor och skolbibliotek. En kvalitativ studie av fristående gymnasieskolors inställning till skolbiblioteksservice och undervisning i informationssökning.</td></tr>
+<tr><td>Från idé till IPRED – Svenska Filminstitutets argument kring fildelning, upphovsrätt och Internet</td></tr>
+<tr><td>Från underhållning till motstånd. Om kvinnors läsning av Harry Potter-böckerna</td></tr>
+<tr><td>Får jag ta med min bebis in? En fokusgruppstudie om bebisföräldrar på folkbiblioteket.</td></tr>
+<tr><td>Föräldraskap, kön och jämställdhet i Maria Svelands Bitterfittan</td></tr>
+<tr><td>Förändring av Lidköpings stadsbibliotek 1952-1959: En utbildad bibliotekaries påverkan ur ett aktör- och strukturperspektiv</td></tr>
+<tr><td>Genus och informationsteknik – En studie av kön/genusrelationer bland bibliotekspersonal</td></tr>
+<tr><td>Grundskoleelevers samlärande och undervisningen i informationssökning</td></tr>
+<tr><td>Gymnasieelevers sökning och användning av information – Tankar kring att arbeta tillsammans eller självständigt</td></tr>
+<tr><td>Hur fungerar indexering av skönlitteratur? En konsistensundersökning</td></tr>
+<tr><td>Hur tron finner ankarfäste. Pastorers informationssökande i sin andliga tjänst</td></tr>
+<tr><td>Hänga och må bra eller ta sin bok och dra. Bilden av biblioteket PUNKTmedis efter ungdomsanpassningen.</td></tr>
+<tr><td>Högskolebibliotekens synlighet i lärosätenas strategidokument: En innehållsanalys av högskolornas strategiska dokument och bibliotekens strategiska planer</td></tr>
+<tr><td>Högskolestudenters uppfattning av informationsöverflöd: En studie med fenomenografisk ansats</td></tr>
+<tr><td>Ibland så kan en bok som jag har tyckt vara lite halvdöd plötsligt få liv och piggna till – En kvalitativ studie av formella och informella läsecirklar</td></tr>
+<tr><td>Identitet, image och profil. En diskursiv studie av Malmö stadsbibliotek</td></tr>
+<tr><td>Ideologisk inverkan på SAB:s klassificering av arkeologiavdelning J</td></tr>
+<tr><td>Information som lindring eller hot : Informationssituationen för föräldrar med funktionshindrade barn</td></tr>
+<tr><td>Integritetsperspektiv på självhämtningshyllor – En fenomenografisk studie om högskolebibliotekschefers uppfattningar av självhämtningshyllor</td></tr>
+<tr><td>Interna informationsresurser – Fallstudie av en statlig myndighet</td></tr>
+<tr><td>Internationella Bibliotekets flerspråkiga webbplats: att tillgängliggöra mångkulturell biblioteksverksamhet på webben</td></tr>
+<tr><td>Internationella Bibliotekets webbplats – en utvärdering ur ett användarperspektiv</td></tr>
+<tr><td>Intranät från ett användarperspektiv: En fallstudie om hur en grupp bibliotekarier upplever och använder sig av intranät i deras yrkesroll.</td></tr>
+<tr><td>Jack och Allt: En idéanalytisk studie av litteraturkritik</td></tr>
+<tr><td>Jag tror dom går till en sökmotor och skriver ett ord…: En fenomenografisk undersökning av vuxenutbildares syn på informationssökning i undervisningen</td></tr>
+<tr><td>Karlskrona stadsbibliotek 1906-1959 – En bit av ett biblioteks historia</td></tr>
+<tr><td>Klassifikation av litteratur om film och TV – En komparativ studie av Klassifikationssystem för svenska bibliotek (SAB) och FIAF Classification scheme for literature on film and television</td></tr>
+<tr><td>Klasskildringar i samtida arbetarlitteratur. En idéanalytisk studie</td></tr>
+<tr><td>Kognitiv auktoritet och Wikipedia – En analys av gymnasieelevers källkritiska granskning av Wikipedia</td></tr>
+<tr><td>Komvuxstuderande söker information i en skoluppgift</td></tr>
+<tr><td>Kriminalitet sätter mannen på prov – En studie av identitetsskapande i romanen Snabba Cash.</td></tr>
+<tr><td>Kritikens plats på Dagens Nyheters kultursidor 1997 och 2007</td></tr>
+<tr><td>Kultur – en förmån eller en rättighet? – Kulturförmedlares tankar kring kulturutbudet i nordöstra Skåne</td></tr>
+<tr><td>Kultursponsring på folkbibliotek – en ideologikritisk analys av kulturpolitiska dokument</td></tr>
+<tr><td>Kvalitetsbegrepp och tv-spelsbestånd - En fallstudie av tv-spelsverksamheten på Malmö stadsbibliotek</td></tr>
+<tr><td>Kvalitetsutveckling på folkbibliotek. – En fokusgruppsundersökning av vuxenstuderande som läser svenska som andra språk vid Komvux.</td></tr>
+<tr><td>Kvinnlig chef på en kvinnodominerad arbetsplats – En studie med genusperspektiv av folkbibliotek</td></tr>
+<tr><td>Learning Resource Centre (LRC) – en bibliotekstrend?</td></tr>
+<tr><td>Learning, Literacy and LIS: A Thesis Conversation</td></tr>
+<tr><td>Likhet och särart - en studie av Internationella biblioteket och dess besökare ur ett mångfaldsperspektiv</td></tr>
+<tr><td>Lokal kulturpolitik på 2000-talet? En ideologianalys av fem kommunala kulturpolitiska visionsdokument.</td></tr>
+<tr><td>Läkares användning av medicinska tidskrifter – Är sjukhusbibliotekets bestånd en viktig källa?</td></tr>
+<tr><td>Lättläst väcker starka känslor – en studie av bibliotekspersonals inställning till den lättlästa litteraturen och dess användare utifrån Pierre Bourdieus kultursociologiska teorier.</td></tr>
+<tr><td>Massdigitalisering och kvalitativ digitalisering: En jämförelse av digitaliseringen på nationalbiblioteken i Norge och Sverige</td></tr>
+<tr><td>Med framsidan framåt – En studie av taste-cultures och face-front marketing på två svenska folkbibliotek</td></tr>
+<tr><td>Medier på andra språk än svenska: En studie om det mångkulturella biblioteket</td></tr>
+<tr><td>Mellan råd och praktik – en studie av åtta folkbiblioteks digitaliseringsprojekt</td></tr>
+<tr><td>Mellan stolthet och fördom: Om homosexualitetsdiskurser i biblioteks- och informationsvetenskapliga examensarbeten</td></tr>
+<tr><td>Mobilen den är alltid med: En användarundersökning av elektroniska mediers påverkan på ungdomars livsstil</td></tr>
+<tr><td>Musikklassifikation – En jämförande studie av de tre generella klassifikationssystemen DDC, SAB och UDC</td></tr>
+<tr><td>Musikwebb – En undersökning med fokus på urval, service och digitalisering</td></tr>
+<tr><td>Män som inte läser skönlitteratur: en kvalitativ intervjuundersökning</td></tr>
+<tr><td>Mätmetoder och nyckeltal: en kvalitativ studie om hur bibliotekschefer mäter bibliotek</td></tr>
+<tr><td>Nationellt uppdrag och internationellt samarbete – Nationalbibliotekens bevarandemetadata för digitalt skapat material</td></tr>
+<tr><td>Naturskildringen i ett samhällsperspektiv – en ekokritisk studie av Gösta Berlings saga och Händelser vid vatten</td></tr>
+<tr><td>Några biblioteksanvändares syn på bibliotekariers kunskap: En kvalitativ studie av uppfattningar vid ett folkbibliotek</td></tr>
+<tr><td>När Pippi blev Pippi – en receptionsstudie av Pippi Långstrumptrilogin</td></tr>
+<tr><td>Närhet och distans i det virtuella referenssamtalet. En studie av Fråga bibliotekets chattfunktion.</td></tr>
+<tr><td>Okyssta jungfrur i beigebruna kläder. Diskursanalys av bibliotekariebilder i svensk och amerikansk skönlitteratur.</td></tr>
+<tr><td>Olika fönster mot samma omvärld – En undersökning av omvärldsbevakningen på Stockholms stadsbibliotek och Akademibokhandeln i Stockholm</td></tr>
+<tr><td>Om vägen till ett bättre bestånd vid ett skolbibliotek – en aktionsforskningsansats.</td></tr>
+<tr><td>Optimerad bildsökning – Bör vissa egenskaper prioriteras vid sökning efter en viss kategori av bilder?</td></tr>
+<tr><td>Patentinformation – användning och barriärer En studie av 33 små- och medelstora företag inom Svenska Uppfinnareföreningen</td></tr>
+<tr><td>Pluralism eller propaganda? En ideologianalys av franska Front nationals folkbibliotekspolitik och debatten kring denna</td></tr>
+<tr><td>Pojkarna och bokutbudet. Vad pojkar i årskurs åtta säger att de vill läsa om och vad som erbjuds dem.</td></tr>
+<tr><td>Populära bilderböcker och genus: Genusstrukturerna i de mest utlånade bilderböckerna 2007</td></tr>
+<tr><td>Probleminventering av några forskares informationshantering : En fråga för biblioteket?</td></tr>
+<tr><td>Professionell barnteater på folkbibliotek att bli berörd, att bli glad, att få skratta</td></tr>
+<tr><td>På tal om källor: En studie av lärarstudenters informationsanvändning i examensarbetet</td></tr>
+<tr><td>Queer manga och manhwa på folkbibliotek</td></tr>
+<tr><td>Reading culture and literacy in Uganda. The case of the Children’s Reading Tent</td></tr>
+<tr><td>Reading Promotion in Zambia - Lessons from Three Projects</td></tr>
+<tr><td>Rocchio, Ide, Okapi och BIM : En komparativ studie av fyra metoder för relevance feedback</td></tr>
+<tr><td>Rummets betydelse för kunskapsproduktion – en tolkning av Lunds stadsbiblioteks funktioner i ljuset av dess arkitektur</td></tr>
+<tr><td>Samtalet om biblioteksutvecklingen i Falkenbergs kommun</td></tr>
+<tr><td>Samverkan som strategi. En studie om informationskompetens och samverkan mellan bibliotekarier och högskolelärare på Stockholms Universitet</td></tr>
+<tr><td>Sanna av-slöjanden eller ren dikt? En analys av fyra självbiografier ur ett postkolonialt perspektiv.</td></tr>
+<tr><td>School Libraries : An Analysis of the Socio-Economical Differences in Lima</td></tr>
+<tr><td>Science fiction-litteratur – Hur gör folkbiblioteken i praktiken? En studie av fyra bibliotek.</td></tr>
+<tr><td>Skilda världar? Publiceringsmönster och synen på publicering vid två vetenskapliga institutioner</td></tr>
+<tr><td>Skillnader mellan katalogiseringsregler för ljudupptagningar: En fråga om syften och principer?</td></tr>
+<tr><td>Skolbibliotekscentraler – en undersökning av verksamhet och funktion</td></tr>
+<tr><td>Skolbiblioteksmodeller: en studie i två kommuners sätt att organisera skolbiblioteksverksamhet</td></tr>
+<tr><td>Skurken i informationssamhället. En diskursanalys av upphovsrättsdebatten i svensk och amerikansk dagspress 2001-2006</td></tr>
+<tr><td>Skönlitteratur på svenska folkbibliotek: En diskursanalys</td></tr>
+<tr><td>Skönlitteratur som kulturell bro: om utländsk skönlitteraturs tillgänglighet på svenska</td></tr>
+<tr><td>Små barn behöver stor yta. Om inredningens roll i skapandet av en användarvänlig barnavdelning.</td></tr>
+<tr><td>Strengthening the relationship between librarians and library users: A study of librarians’ and library users’ views on librarianship, services and resources at the Library of National University of Rwanda</td></tr>
+<tr><td>Studenters användning av elektroniska källor – en användarundersökning vid Växjö universitetsbibliotek</td></tr>
+<tr><td>Studenters informationsbeteende och exemplet Studentkåren i Borås</td></tr>
+<tr><td>Talet om informationskompetens: Implikationer för relationen mellan bibliotekarier och användare</td></tr>
+<tr><td>Tillgänglighet för funktionshindrade på ett urval av svenska folkbiblioteks webbplatser – sett utifrån biblioteksplaner och webbplatsundersökningar</td></tr>
+<tr><td>To help them to be wise Balanserat bestånd i svenska folkbibliotek 2007</td></tr>
+<tr><td>Tre biblioteksbloggar för unga – en innehållsanalys</td></tr>
+<tr><td>Tv-spel – självklart: Hermeneutisk studie om inställningen till tv-spel på fyra svenska folkbibliotek</td></tr>
+<tr><td>Undervisning i informationssökning. Diskursiv praktik i två gymnasielärarlag.</td></tr>
+<tr><td>Ungdomsbegreppet i examensarbeten – en diskursanalys av texter skrivna på Bibliotekshögskolan 1972 - 2002</td></tr>
+<tr><td>Upphovsrätten i det generella intellektets era</td></tr>
+<tr><td>Urval vid digitalisering av affischer på Kungl. biblioteket</td></tr>
+<tr><td>Urvalsproblematiken på folkbibliotek; en studie av etik och estetik kring urval av populärlitteratur och erotisk litteratur på sex svenska folkbibliotek</td></tr>
+<tr><td>Vad ska man mäta för att veta? – en studie av resursfördelningen inom Stockholms stadsbibliotek</td></tr>
+<tr><td>Vad sägs om en förändring? – En diskursanalys av hur privatisering av bibliotek framställs i Biblioteksbladet</td></tr>
+<tr><td>Vad sägs om kvalitet? Olika synsätt på litterär kvalitet i två bibliotekstidskrifter.</td></tr>
+<tr><td>Var är biblioteket? En användarstudie om distansstudenters biblioteksbehov</td></tr>
+<tr><td>Varför finns det inga Äppelhyllor för vuxna? Teckenspråksböcker för vuxna</td></tr>
+<tr><td>We have to fix so many things before we can even start living here En grupp utbytesstudenters upplevelser av sökandet efter information under en termin i Prag</td></tr>
+<tr><td>Webbaserade kurser - traditionell förmedlingsundervisning i ny förpackning? En undersökning av den pedagogiska diskursen i webbaserad användarundervisning</td></tr>
+<tr><td>Vetenskaplig publicering i förändring – En fallstudie av en svensk högskolas implementering av ett öppet digitalt arkiv</td></tr>
+<tr><td>Wiki på skolbibliotek – En fallstudie om användningen av wiki som stöd i informationssökningsundervisningen</td></tr>
+<tr><td>Vilken betydelse har ett filialbibliotek? exempel Högsby</td></tr>
+<tr><td>Vilken roll spelar det nya stadsbiblioteket? En användarundersökning på Stadsbiblioteket i Halmstad</td></tr>
+<tr><td>Vision och verklighet - En fallstudie av hur biblioteket på Linnéskolan i Älmhult arbetar för att hjälpa eleverna nå upp till aktuella lärandemål</td></tr>
+<tr><td>Världen är ju full av berättelser – En undersökning av inköp av barn- och ungdomsfilm.</td></tr>
+<tr><td>Västerviks stadsbiblioteks utveckling och dess föregångare 1859-1945</td></tr>
+<tr><td>Ytterligare en dörr till biblioteket - en kvalitativ studie om folkbiblioteks användning av Web 2.0-tjänsterna blogg och MySpace</td></tr>
+	</tbody>
+</table>
+
+<h3 id="appB">Appendix B</h3>
+  <table class="center">
+    <caption><br /> Table B: Core web resources </caption>
+	<tbody>
+<tr><th>Rank</th> <th>Website</th> <th>Citations</th> <th>Cited by n theses</th></tr>
+<tr><td>1</td> <td>Hb.se (University of Borås)</td> <td>46</td> <td>29</td></tr>
+<tr><td>2</td> <td>Scb.se (Statistics Sweden)</td> <td>38</td> <td>26</td></tr>
+<tr><td>3</td> <td>Biblioteksforeningen.org (Swedish Library Association)</td> <td>37</td> <td>23</td></tr>
+<tr><td>4</td> <td>Kulturradet.se (Swedish Arts Council)</td> <td>32</td> <td>19</td></tr>
+<tr><td>5</td> <td>Regeringen.se (Government Offices of Sweden)</td> <td>28</td> <td>19</td></tr>
+<tr><td>6</td> <td>Ifla.org (International Federation of Library Associations)</td> <td>26</td> <td>14</td></tr>
+<tr><td>7</td> <td>Kb.se (National Library of Sweden)</td> <td>28</td> <td>13</td></tr>
+<tr><td>8</td> <td>Btj.se (BTJ, supplier of media services)</td> <td>19</td> <td>11</td></tr>
+<tr><td>9</td> <td>Skolverket.se (The Swedish National Agency for Education)</td> <td>15</td> <td>11</td></tr>
+<tr><td>10</td> <td>Ala.org (American Library Association)</td> <td>9</td> <td>8</td></tr>
+</tbody>
+</table>
+<hr />
+ 
+
+ </section>
+<table class="footer" style="padding:10px;"><tr><td style="text-align:center; vertical-align:top;">
+<br />
+<div><a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={5f239155-a2b5-ed54-8de7-87f4a157f1bb}&amp;template=simple" alt="Hit Counter by Digits" /></a></div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the author, 2017. <br />Last updated: 16 February, 2017 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="colis2016.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../../irsindex.html">Subject index</a> | </li>
+	<li><a href="../../search.html">Search</a> | </li>
+	<li><a href="../../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5046158704890f2e">
+ </script> 
+</body>  
+ </html> 

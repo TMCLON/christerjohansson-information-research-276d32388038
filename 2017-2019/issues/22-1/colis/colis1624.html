@@ -1,0 +1,1258 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <meta charset="utf-8">
+    <title>
+      Internationality in Finnish research: an examination of collaborators, citers, tweeters, and readers
+    </title>
+    <link href="../../IRstyle4.css" rel="stylesheet" media="screen" title="serif"><!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="Internationality in Finnish research: an examination of collaborators, citers, tweeters, and readers">
+    <meta name="author" content="Fereshteh Didegah, Ali Gazni, Timothy D. Bowman, Kim Holmberg">
+    <meta name="dcterms.subject" content="Internationalisation in science is recognised as an important factor towards academic quality and economic growth. This study examines the internationality rate of Finnish research publications in terms of tweeters, Mendeley readers, collaborators and citers.">
+    <meta name="description" content="Internationalisation in science is recognised as an important factor towards academic quality and economic growth. This study examines the internationality rate of Finnish research publications in terms of tweeters, Mendeley readers, collaborators and citers. The publication and citation data were retrieved from Web of Science. Tweeter information was retrieved through Twitter API and readers information was obtained from Mendeley API. Research internationality was measured by examining the geographic dispersion of authors, citers, tweeters, and Mendeley readers of research articles using Euclidean distance. The findings demonstrate that the internationality rate of Finnish research in terms of its citers is significantly higher than that of its Mendeley readers, tweeters, and collaborators. Internationality rates vary across disciplines and that rates are higher for Medical and Health Sciences, Natural Sciences, and Engineering and Technology than Humanities and Social Sciences. International research collaboration is found to be an important factor for higher rates of international visibility, and that particularly more collaborative subject domains (i.e. Medical and Physical Sciences) have a higher rate of internationality of authors and audiences. International staff engagement in the research conducted at Finnish universities is also an important factor and significantly associates with the internationality of Finnish research collaborators and audiences. The findings will be informative for research policy makers and administrators engaging in research evaluation at Finnish institutions to develop international networks to enhance internationality of their research.">
+    <meta name="keywords" content="research evaluation, internationalisation, Finland,"><!--leave the following to be completed by the Editor-->
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="University of Borås">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/22-1/colis/colis1624.html">
+    <meta name="dcterms.relation" content="http://InformationR.net/ir/22-1/infres221.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2017-03-15">
+    <meta name="geo.placename" content="global">
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 22 no. 1, March, 2017
+      </h4>
+    </header>
+    <article>
+      <h1>
+        Internationality in Finnish research: an examination of collaborators, citers, tweeters, and readers
+      </h1>
+      <h2 class="author">
+        <a href="#author">Fereshteh Didegah</a>, <a href="#author">Ali Gazni</a>, <a href="#author">Timothy D. Bowman</a> and <a href="#author">Kim Holmberg</a>
+      </h2><br>
+      <blockquote>
+        <strong>Introduction.</strong> Internationalisation in science is recognized as an important factor towards academic quality and economic growth. This study examines the internationality rate of Finnish research publications in terms of tweeters, Mendeley readers, collaborators and citers.<br>
+        <strong>Method.</strong> The publication and citation data were retrieved from Web of Science. Tweeter information was retrieved through Twitter API and readers information was obtained from Mendeley API. Research internationality was measured by examining the geographic dispersion of authors, citers, tweeters, and Mendeley readers of research articles using Euclidean distance.<br>
+        <strong>Results.</strong> The findings demonstrate that the internationality rate of Finnish research in terms of its citers is significantly higher than that of its Mendeley readers, tweeters, and collaborators. Internationality rates vary across disciplines and that rates are higher for Medical and Health Sciences, Natural Sciences, and Engineering and Technology than Humanities and Social Sciences. International research collaboration is found to be an important factor for higher rates of international visibility, and that particularly more collaborative subject domains (i.e. Medical and Physical Sciences) have a higher rate of internationality of authors and audiences. International staff engagement in the research conducted at Finnish universities is also an important factor and significantly associates with the internationality of Finnish research collaborators and audiences.<br>
+        <strong>Conclusions.</strong> The findings will be informative for research policy makers and administrators engaging in research evaluation at Finnish institutions to develop international networks to enhance internationality of their research.
+      </blockquote><br>
+      <section>
+        <h2>
+          Introduction
+        </h2>
+        <p>
+          Universities are strongly advised to maximize their internationalisation efforts (including research and teaching components) to keep pace with globalisation (<a href="#ada06">Adams and Carfagna, 2006</a>). Traveling scholars and students in the first decades of the sixteenth century who aimed at gaining experience and advantages from scholars beyond national borders were among the first to move science towards internationalisation; it has been shown that this first manifestation of internationalisation was associated with national innovation (<a href="#fil11">Filippetti, Frenz, and Ietto-Gillies, 2011</a>). Knight (<a href="#kni04">2004</a>) defined internationalisation as a “process of integrating an international, intercultural, or global dimension into the purpose, functions or delivery of postsecondary education”, but a comprehensive definition of internationalisation that parametrizes different manifestations and indicators of an institution’s internationalisation is yet missing (<a href="#hay00">Hayward, 2000</a>).
+        </p>
+        <p>
+          Internationalisation in science is recognized as an important factor towards academic quality and economic growth (<a href="#ros14">Rostan, Ceravolo, and Metcalfe, 2014</a>). Financial benefits of internationalisation (such as governmental funding for research publications that are a result of international collaboration or for international teacher exchange programs) motivate institutions to cross national borders and to internationalize their own systems. In addition to economic motives, socio-cultural (e.g., the dissemination of local culture and ideologies) and academic (e.g., international research collaboration and networking) benefits also motivate the internationalisation of institutions.
+        </p>
+        <p>
+          Internationalisation has many different aspects and manifestations that may function differently from one institution to another. One of the manifestations of internationalisation in universities is the internationalisation of research, which can be defined using a variety of dimensions including collaborating with researchers from other countries, publishing in international journals, participating in international conferences, or receiving funds from international agencies. Universities can greatly benefit from each dimension—for instance, international collaboration can provide researchers with the opportunity to gain international experiences and explore research problems that have the greatest impact on a global scale.
+        </p>
+        <p>
+          In bibliometric studies, research internationality has been widely explored by examining international research collaboration (<a href="#abr11">Abramo et al., 2011</a>), journal internationality in terms of the internationality of its authors, readers, and editorial boards (<a href="#kim10">Kim, 2010</a>; <a href="#yue04">Yue, 2004</a>; <a href="#zit98">Zitt and Bassecoulard, 1998</a>), and article internationality in terms of its authors and citers (<a href="#did14">Didegah, 2014</a>). There is nevertheless a gap in the literature with regards to the influence of internationalisation on article impact. This study addresses this gap by examining the internationality level of Finnish research publications through the examination of their authors, citers, tweeters, and Mendeley readers.
+        </p>
+        <h2>
+          Research questions
+        </h2>
+        <p>
+          No studies were found examining the internationality rate of authors, citers, tweeters, and readers of research papers across different institutions and subject domains. This study addresses this gap in the discourse by measuring the level of research internationality in Finland in terms of Finnish researchers’ collaborators and audiences. To fulfill the research goals, the following questions will be answered:
+        </p>
+        <ol>
+          <li>How international is the research published by Finnish institutions and across different disciplines based on their authors, citers, tweeters, and Mendeley readers?
+          </li>
+          <li>Do universities with a larger number of international staff members have more international authors, citers, tweeters, and Mendeley readers?
+          </li>
+        </ol>
+        <h2>
+          Methods
+        </h2>
+        <h3>
+          Data collection
+        </h3>
+        <p>
+          46,730 documents published by Finnish institutions from 2012 to 2014 and citation data to these documents were extracted from the Web of Science (WoS), Thomson Reuters. Out of the total publications, 37,183 documents had DOIs. To obtain Twitter data, the documents with DOI were searched through Twitter API resulting in a total of 13,623 documents that were tweeted at least once. Mendeley API was separately searched for the readership data; out of the 37,183 documents with DOIs, 35,980 documents were found in Mendeley.
+        </p>
+        <p>
+          The authors’ affiliation field for the matched publications was inspected to discover where the authors were geographically located. This resulted in the identification of 154 countries where the 140,211 authors involved in Finnish research originated from. The publications had 567,246 citers who were located across 170 countries. Moreover, 95,277 Twitter users tweeted about these publications and it was found that 63,507 (66.65%) of them had geographic location information recorded by Twitter and captured in the altmetric.com data – those tweeting about Finnish research came from 180 different countries. On Mendeley, 646,437 readers added Finnish publications to their library, out of which 127,789 (19.8%) readers from 163 countries were found to have information about their country location.
+        </p>
+        <p>
+          The institutional affiliation of authors was also investigated in order to analyze the internationality rates across Finnish institutions. With regards to institution name variations, a manual institutional-name disambiguation exercise was performed that included searching for different variations for each Finnish institution.
+        </p>
+        <p>
+          To examine the internationality rates across subject fields, each publication was mapped into one of the six OECD fields<sup><a href="#fn1" id="ref1">1</a></sup>: Natural Sciences, Engineering and Technology, Medical and Health Sciences, Agricultural Sciences, Social Sciences, and Humanities.
+        </p>
+        <h3>
+          Internationality measure
+        </h3>
+        <p>
+          There are absolute and relative approaches to measure research internationality. Relative approaches attempt to normalize for different factors such as national size (i.e. the internationality of total publications by the country) or subject field size, but absolute approaches are not normalized. There are, however, absolute indices such as Gini Coefficient that are easily calculated (<a href="#zit98">Zitt and Bassecoulard, 1998</a>). This work first implemented the Gini coefficient to measure the internationality of authors, citers, Mendeley readers, and tweeters, but when a manual check was completed of the Gini Coefficient for the current sample of articles it was discovered that the results were not accurate. The coefficient was primarily measuring the concentration of authors or audiences in a country regardless of how many countries they were originating from. Therefore instead of the Gini Coefficient it was determined that Euclidean distance would be a better fit for the data; Euclidean distance is a relative index normalized by country size. The Euclidean distance formula used by Gazni and Ghaseminik (<a href="#gaz16">2016</a>) is:
+        </p>
+        <figure class="centre">
+          <img src="colis1624equation1.png" alt="equation1.png" width="555" height="159">
+        </figure>
+        <p>
+          An example of Euclidean distance calculation is as follows:<br>
+          The total number of tweeters who are tweeting about Finnish research publications is 63,507 tweeters, and the total number of tweeters from three selected countries is 17,862 (US), 3,914 (Spain), and 3,094 (Canada). As an example, a specific article has 10 tweeters who are from these three different countries; 5 tweeters from US, 3 tweeters from Spain, and 2 tweeters from Canada. To measure the Euclidean distance of tweeters for this article, the m_i and x_i was calculated for each of the tweeters’ country i.e. US, Spain, and Canada and the calculation for US is as follows:
+        </p>
+        <figure class="centre">
+          <img src="colis1624equation2.png" alt="equation2.png" width="165" height="76">
+        </figure>
+        <p>
+          The Euclidean distance for this article is calculated as below:
+        </p>
+        <figure class="centre">
+          <img src="colis1624equation3.png" alt="equation3.png" width="573" height="56">
+        </figure>
+        <p>
+          The Euclidean distance was manually checked against a sample of articles and it was found to provide accurate results. Henceforth, the Euclidean distance was used to measure the internationality of authors, citers, tweeters, and readers of Finnish research publications. The Euclidean distance is a value between 0 and 1, where the value of 0 represents the least level of internationality and the value of 1 represents the highest internationality.
+        </p>
+        <h3>
+          Limitations
+        </h3>
+        <p>
+          It was found that only 28% of Finnish publications had been tweeted on Twitter. The large amount of missing data may affect the research analyses. Furthermore, country information of tweeters and Mendeley readers is incomplete. Approximately 67% of tweeters’ geographic locations and 19.8% of Mendeley readers were identified for this study. However, in comparison with previous studies reporting that Twitter contains a very small percentage of geographic locations (<a href="#sev15">Severo, Giraud, and Pecout, 2015</a>; <a href="#gra14">Graham, Hale and Gaffney, 2014</a>), the percentage identified for this study is reasonably high.
+        </p>
+        <h2>
+          Results
+        </h2>
+        <h3>
+          Research internationality level in Finland
+        </h3>
+        <p>
+          Research internationality was measured by examining the geographic dispersion of authors, citers, tweeters, and Mendeley readers of research articles. The results demonstrate that citers of Finnish research and scholars who save Finnish publications to their Mendeley library have the highest internationality rate, while Finnish scholars’ co-authors are less geographically dispersed. The average internationality rate of citers and Mendeley readers (0.633 and 0.57, respectively) are significantly (Sig. &lt; 0.05) higher than tweeters and collaborators per research paper (0.556 and 0.501, respectively) as confirmed by ANOVA test (Tables 1 and 2). Although those tweeting about Finnish research were geographically located across 180 countries, the distribution of the tweeters across the different countries is highly skewed, with approximately 68% of tweeters originating from 6 countries (the US, the UK, Spain, Canada, Australia, and Japan) and 48% of tweeters originating from only two countries (28.13% from the US and 20.23% from the UK). Only 3.9% of tweeters were found to be from Finland. The results found that citers of Finnish research are originating from 170 distinct countries around the world. Only 5.82% of total citers of Finnish research are from Finland. About 39% of citers are from the US, Italy, and the UK. The Mendeley API data revealed that readers came from 163 countries and that they were mostly found in Canada (27%). Around 4.08% of Mendeley readers came from Finland. Finnish collaborators originated from 153 different countries. It should be noted that around 31% of Finnish research collaborators are from the US, Italy, and the UK, which demonstrates that collaboration is important for citations as citers are also mainly from countries where collaborators are located. Approximately 24% of authors are Finnish (Table 3 and Figures. 1-4).
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            <strong>Table 1: Internationality rate of citers, readers, tweeters, and collaborators</strong>
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Indicators
+              </th>
+              <th>
+                Avg. Euclide
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Citer internationality
+              </td>
+              <td>
+                0.633
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Reader internationality
+              </td>
+              <td>
+                0.557
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tweeter internationality
+              </td>
+              <td>
+                0.556
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Collaborator internationality
+              </td>
+              <td>
+                0.501
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="center">
+          <caption>
+            <br>
+            <strong>Table 2: ANOVA results for significant differences between internationality rates</strong>. (sig. at p=0.05)
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                ANOVA
+              </th>
+              <th>
+                Sum of Squares
+              </th>
+              <th>
+                df
+              </th>
+              <th>
+                Mean Square
+              </th>
+              <th>
+                F
+              </th>
+              <th>
+                Sig.
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Between Groups
+              </td>
+              <td>
+                36.006
+              </td>
+              <td>
+                3
+              </td>
+              <td>
+                12.329
+              </td>
+              <td>
+                353.231
+              </td>
+              <td>
+                0.000
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Within Groups
+              </td>
+              <td>
+                810.15
+              </td>
+              <td>
+                22598
+              </td>
+              <td>
+                0.029
+              </td>
+              <td>
+                &nbsp;
+              </td>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Total
+              </td>
+              <td>
+                856.19
+              </td>
+              <td>
+                22601
+              </td>
+              <td>
+                &nbsp;
+              </td>
+              <td>
+                &nbsp;
+              </td>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+        <table class="center">
+          <caption>
+            <br>
+            <strong>Table 3: Top 10 countries that collaborators and audiences are coming from</strong>
+          </caption>
+          <tbody>
+            <tr>
+              <th colspan="3">
+                TOP 10 CITERS
+              </th>
+              <th colspan="3">
+                TOP 10 COLLABORATORS
+              </th>
+            </tr>
+            <tr>
+              <th>
+                Country
+              </th>
+              <th>
+                #citers
+              </th>
+              <th>
+                % citers out of<br>
+                total 567,246
+              </th>
+              <th>
+                Country
+              </th>
+              <th>
+                #collaborators
+              </th>
+              <th>
+                % collaborators out of<br>
+                total 106,815
+              </th>
+            </tr>
+            <tr>
+              <td>
+                US
+              </td>
+              <td>
+                132999
+              </td>
+              <td>
+                23.45
+              </td>
+              <td>
+                US
+              </td>
+              <td>
+                23546
+              </td>
+              <td>
+                16.79
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Italy
+              </td>
+              <td>
+                49611
+              </td>
+              <td>
+                8.75
+              </td>
+              <td>
+                Italy
+              </td>
+              <td>
+                11117
+              </td>
+              <td>
+                7.93
+              </td>
+            </tr>
+            <tr>
+              <td>
+                UK
+              </td>
+              <td>
+                36889
+              </td>
+              <td>
+                6.5
+              </td>
+              <td>
+                UK
+              </td>
+              <td>
+                8304
+              </td>
+              <td>
+                5.92
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Germany
+              </td>
+              <td>
+                35753
+              </td>
+              <td>
+                6.3
+              </td>
+              <td>
+                Germany
+              </td>
+              <td>
+                6842
+              </td>
+              <td>
+                4.88
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Finland
+              </td>
+              <td>
+                33030
+              </td>
+              <td>
+                5.82
+              </td>
+              <td>
+                France
+              </td>
+              <td>
+                4635
+              </td>
+              <td>
+                3.31
+              </td>
+            </tr>
+            <tr>
+              <td>
+                France
+              </td>
+              <td>
+                27936
+              </td>
+              <td>
+                4.92
+              </td>
+              <td>
+                Sweden
+              </td>
+              <td>
+                4134
+              </td>
+              <td>
+                2.95
+              </td>
+            </tr>
+            <tr>
+              <td>
+                China
+              </td>
+              <td>
+                20119
+              </td>
+              <td>
+                3.55
+              </td>
+              <td>
+                Spain
+              </td>
+              <td>
+                3571
+              </td>
+              <td>
+                2.55
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Spain
+              </td>
+              <td>
+                19358
+              </td>
+              <td>
+                3.41
+              </td>
+              <td>
+                Netherlands
+              </td>
+              <td>
+                3482
+              </td>
+              <td>
+                2.48
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Canada
+              </td>
+              <td>
+                15508
+              </td>
+              <td>
+                2.73
+              </td>
+              <td>
+                Russia
+              </td>
+              <td>
+                2279
+              </td>
+              <td>
+                1.63
+              </td>
+            </tr>
+            <tr>
+              <th colspan="3">
+                TOP 10 TWEETERS
+              </th>
+              <th colspan="3">
+                TOP 10 READERS
+              </th>
+            </tr>
+            <tr>
+              <th>
+                Country
+              </th>
+              <th>
+                #tweeters
+              </th>
+              <th>
+                % tweeters out of total 63,507<br>
+                tweeters with known location
+              </th>
+              <th>
+                Country
+              </th>
+              <th>
+                #readers
+              </th>
+              <th>
+                % readers out of total 127,789<br>
+                with known location
+              </th>
+            </tr>
+            <tr>
+              <td>
+                US
+              </td>
+              <td>
+                17862
+              </td>
+              <td>
+                28.13
+              </td>
+              <td>
+                Canada
+              </td>
+              <td>
+                34635
+              </td>
+              <td>
+                27.1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                UK
+              </td>
+              <td>
+                12849
+              </td>
+              <td>
+                20.23
+              </td>
+              <td>
+                US
+              </td>
+              <td>
+                15829
+              </td>
+              <td>
+                12.39
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Spain
+              </td>
+              <td>
+                3914
+              </td>
+              <td>
+                6.16
+              </td>
+              <td>
+                UK
+              </td>
+              <td>
+                9606
+              </td>
+              <td>
+                7.52
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Canada
+              </td>
+              <td>
+                3094
+              </td>
+              <td>
+                4.87
+              </td>
+              <td>
+                Germany
+              </td>
+              <td>
+                6110
+              </td>
+              <td>
+                4.78
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Australia
+              </td>
+              <td>
+                2764
+              </td>
+              <td>
+                4.35
+              </td>
+              <td>
+                Brazil
+              </td>
+              <td>
+                5856
+              </td>
+              <td>
+                4.58
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Japan
+              </td>
+              <td>
+                2583
+              </td>
+              <td>
+                4.07
+              </td>
+              <td>
+                Finland
+              </td>
+              <td>
+                5217
+              </td>
+              <td>
+                4.08
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Finland
+              </td>
+              <td>
+                2479
+              </td>
+              <td>
+                3.9
+              </td>
+              <td>
+                Spain
+              </td>
+              <td>
+                4954
+              </td>
+              <td>
+                3.88
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Netherlands
+              </td>
+              <td>
+                1843
+              </td>
+              <td>
+                2.9
+              </td>
+              <td>
+                France
+              </td>
+              <td>
+                3709
+              </td>
+              <td>
+                2.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                France
+              </td>
+              <td>
+                1518
+              </td>
+              <td>
+                2.39
+              </td>
+              <td>
+                Netherlands
+              </td>
+              <td>
+                2802
+              </td>
+              <td>
+                2.19
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Denmark
+              </td>
+              <td>
+                1066
+              </td>
+              <td>
+                1.68
+              </td>
+              <td>
+                Japan
+              </td>
+              <td>
+                2756
+              </td>
+              <td>
+                2.16
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+        <figure class="centre">
+          <img src="colis1624fig1.png" alt="Figure1: Geographic dispersion of tweeters " width="368" height="271">
+          <figcaption>
+            <br>
+            Figure 1: Geographic dispersion of tweeters<sup><a href="#fn2">2</a></sup>
+          </figcaption>
+        </figure><br>
+        <figure class="centre">
+          <img src="colis1624fig2.png" alt="Figure2: Geographic dispersion of citers " width="368" height="271">
+          <figcaption>
+            <br>
+            Figure 2: Geographic dispersion of citers
+          </figcaption>
+        </figure><br>
+        <figure class="centre">
+          <img src="colis1624fig3.png" alt="Figure3: Geographic dispersion of readers " width="368" height="271">
+          <figcaption>
+            <br>
+            Figure 3: Geographic dispersion of readers
+          </figcaption>
+        </figure><br>
+        <figure class="centre">
+          <img src="colis1624fig4.png" alt="Figure4: Geographic dispersion of collaborators " width="368" height="271">
+          <figcaption>
+            <br>
+            Figure 4: Geographic dispersion of collaborators
+          </figcaption>
+        </figure>
+        <h3>
+          International collaboration and its influence on the article visibility
+        </h3>
+        <p>
+          In bibliometric studies, publications are assigned to authors, institutions or countries through either full counting or fractional counting. In the full or standard counting, the publication credit is given to all authors while in the fractional counting for a publication with N authors, each author contribution counts for 1/N. Full counting is the common method used by many bibliometricians in research evaluation projects and is also used in the current study; publications with at least one author affiliated to a Finnish university were considered as a Finnish research publication. But the influence of collaboration and particularly international collaboration on geographic dispersion of publications audiences is inevitable. Finnish researchers are highly collaborative as 90.3% of publications are multi-authored and only 9.7% are single-authored. International collaboration has been rapidly growing in recent decades (Leydesdorff, Wagner, Park, and Adams, 2013) and Finnish researchers no exception. Between 2012 and 2014, Finnish researchers collaborated with researchers from 153 other countries. 54.4% of Finnish publications are the result of international collaboration and the number of foreign countries per publication counts for 4.7 countries on average.
+        </p>
+        <p>
+          A large number of previous studies found that international collaboration is advantageous for citation impact (<a href="#did13">Didegah and Thelwall, 2013</a>; <a href="#soo09">Sooryamoorthy, 2009</a>; <a href="#gla01">Glänzel, 2001</a>) and also contributes to increasing altmetric counts (<a href="#did16">Didegah, Bowman and Holmberg, 2016</a>). International collaboration influences the geographc dispersion of the visibility of research publications in such a way that Finnish publications that are co-authored with for instance American authors are expected to have higher visibility in the US. This may be due to the effects of the social networks of the authors, i.e. other researchers that know the American authors are perhaps more likely to use and share their work. A moderate association was also found between the citers, tweeters, and readers internationality and international collaboration of Finnish publications showing that publications collaborated with more number of countries, have more international citers, tweeters and readers. However, out of 180 countries tweeting Finnish research, 119 countries are the same as the countries of collaborators, 61 are different. In addition, Mendeley readers are from 163 countries, with 119 countries being the same as the countries of the collaborators and 44 different. Citers are from 170 countries, out of which 148 countries are the same as the collaborators’ countries and 22 countries are different from collaborators’ countries.
+        </p>
+        <p>
+          Overall, internationality of tweeters, readers, and citers is moderately influenced by international collaborative networks showing the significance of international collaboration on enhancing visibility of Finnish research across the world.
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 4: Pearson correlation between internationality rate of citers, readers, and tweeters and international collaboration of Finnish publications
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Correlation
+              </th>
+              <th>
+                International collaboration
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Citer internationality
+              </td>
+              <td>
+                0.565
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tweeter internationality
+              </td>
+              <td>
+                0.477
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Reader internationality
+              </td>
+              <td>
+                0.345
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>
+          Internationality level across disciplines
+        </h3>
+        <p>
+          Only 28% of Finnish publications contained altmetric events, which indicates there may be field biases in the altmetrics data. While a large percentage (about 40%) of total Finnish data from Web of Science are in Physical Sciences (including Engineering, Physics, Chemistry, Computer Science and Material Science), half of Finnish research matched with altmetrics are in health and biological sciences.
+        </p>
+        <p>
+          Medical and Health Sciences have the highest internationality rates of authors, citers, and readers, respectively. Social Sciences have the highest internationality rate of tweeters. Humanities research has the weakest performance based on all indicators. In general, internationality rates are higher for Medical and Health Sciences, Natural Sciences, and Engineering and Technology than for Humanities and Social Sciences (Table 4).
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 5: Internationality rates (Euclidean distance) across different disciplines
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Subject area\Indicators
+              </th>
+              <th>
+                Author internationality
+              </th>
+              <th>
+                Citer internationality
+              </th>
+              <th>
+                Tweeter internationality
+              </th>
+              <th>
+                Reader internationality
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Agricultural Sciences
+              </td>
+              <td>
+                0.45
+              </td>
+              <td>
+                0.3
+              </td>
+              <td>
+                0.22
+              </td>
+              <td>
+                0.31
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Engineering and Technology
+              </td>
+              <td>
+                0.44
+              </td>
+              <td>
+                0.56
+              </td>
+              <td>
+                0.29
+              </td>
+              <td>
+                0.52
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Humanities
+              </td>
+              <td>
+                0.2
+              </td>
+              <td>
+                0.19
+              </td>
+              <td>
+                0.21
+              </td>
+              <td>
+                0.18
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Medical and Health Sciences
+              </td>
+              <td>
+                0.53
+              </td>
+              <td>
+                0.74
+              </td>
+              <td>
+                0.46
+              </td>
+              <td>
+                0.49
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Natural Sciences
+              </td>
+              <td>
+                0.32
+              </td>
+              <td>
+                0.47
+              </td>
+              <td>
+                0.31
+              </td>
+              <td>
+                0.37
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Social Sciences
+              </td>
+              <td>
+                0.36
+              </td>
+              <td>
+                0.28
+              </td>
+              <td>
+                0.53
+              </td>
+              <td>
+                0.3
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>
+          International labor input<sup><a href="#fn3">3</a></sup> at universities and research internationality
+        </h3>
+        <p>
+          To examine whether the international personnel engagement level might affect the internationality level of research at Finnish universities, the correlation between different research internationality indicators and percentages of labor input (man-years) by international staff in 12 Finnish universities (Table 5) was tested. Handekn School of Economics and University of Arts were left out from the analysis due to their comparably lower publication counts. The results indicate that greater international staff engagement positively associates with greater numbers of international authors and citers, although quite weakly for tweeters and Mendeley readers of university research (Table 6).
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            <strong>Table 6: International staff labor input and internationality rates across universities</strong>
+          </caption>
+          <tbody>
+            <tr>
+              <th rowspan="2">
+                University
+              </th>
+              <th colspan="2">
+                International staff labor input
+              </th>
+            </tr>
+            <tr>
+              <th>
+                Total
+              </th>
+              <th>
+                % of total staff
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Aalto University
+              </td>
+              <td style="text-align:center;">
+                1981.61
+              </td>
+              <td style="text-align:center;">
+                26.48
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Lappeenranta University of Technology
+              </td>
+              <td style="text-align:center;">
+                353.56
+              </td>
+              <td style="text-align:center;">
+                21.83
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tampere University of Technology
+              </td>
+              <td style="text-align:center;">
+                613.67
+              </td>
+              <td style="text-align:center;">
+                18
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Eastern Finland
+              </td>
+              <td style="text-align:center;">
+                636.87
+              </td>
+              <td style="text-align:center;">
+                14.21
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Helsinki
+              </td>
+              <td style="text-align:center;">
+                2549.74
+              </td>
+              <td style="text-align:center;">
+                20.33
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Jyväskylä
+              </td>
+              <td style="text-align:center;">
+                609.53
+              </td>
+              <td style="text-align:center;">
+                13.74
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Lapland
+              </td>
+              <td style="text-align:center;">
+                55.83
+              </td>
+              <td style="text-align:center;">
+                6.68
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Oulu
+              </td>
+              <td style="text-align:center;">
+                875.49
+              </td>
+              <td style="text-align:center;">
+                18.09
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Tampere
+              </td>
+              <td style="text-align:center;">
+                304.66
+              </td>
+              <td style="text-align:center;">
+                10.11
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Turku
+              </td>
+              <td style="text-align:center;">
+                730.51
+              </td>
+              <td style="text-align:center;">
+                13.82
+              </td>
+            </tr>
+            <tr>
+              <td>
+                University of Vaasa
+              </td>
+              <td style="text-align:center;">
+                150.02
+              </td>
+              <td style="text-align:center;">
+                18.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Åbo Akademi University
+              </td>
+              <td style="text-align:center;">
+                439.54
+              </td>
+              <td style="text-align:center;">
+                21.65
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+        <table class="center">
+          <caption>
+            <br>
+            <strong>Table 7: The correlation between international staff labour input and internationality rates</strong> (*Significant at 0.5 level)
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Spearman
+              </th>
+              <th>
+                % international staff labor input
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Author interationality
+              </td>
+              <td style="text-align:center;">
+                0.413*
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Citer interationality
+              </td>
+              <td style="text-align:center;">
+                0.544*
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tweeter interationality
+              </td>
+              <td style="text-align:center;">
+                0.286*
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Reader interationality
+              </td>
+              <td style="text-align:center;">
+                0.115*
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>
+          Discussion
+        </h2>
+        <p>
+          In answer to the first research question, the findings demonstrate that the internationality rate of Finnish research in terms of its citers is significantly higher than that of its Mendeley readers, tweeters, and collaborators. However, in general, the internationality rate of research based on the four indicators ranges between 0.5 and 0.6, which shows a moderate to high rate of internationality. This may be a result of the strategy of the Finnish Ministry of Education and Culture (beginning in the late 1980s), to consider internationalisation of research as a key policy for developing quality research in Finland (<a href="#hak98">Hakala, 1998</a>). While Hakala (<a href="#hak98">1998</a>) argued that small countries like Finland would find it difficult to receive international recognition, these results have found that the high internationality rate of Finnish research rejects his hypothesis. A high internationality rate indicates that the authors and audiences of Finnish research are widespread around the world.
+        </p>
+        <p>
+          The majority of collaborators and audiences were found to come from the US and the UK, which corresponds with results from Haustein and Costas (<a href="#hau15">2015</a>). They examined the geolocation of 1,489,669 tweeters from Altmetric.com and found that 30% of the tweeters were from the US and the UK. Haustein and her colleagues (<a href="#hau14">2014</a>) also investigated the countries of readers and tweeters of biomedical publications and found that highly read papers on Mendeley were primarily originating from the US and the UK and were tweeted by members of public and scientific community mainly in the US and the UK.
+        </p>
+        <p>
+          One reason for these findings could be the fact that the papers examined in this study were written in English and the collaborators and audiences often originated from English-speaking countries. It is interesting to also note that the citers were predominantly from the same countries as collaborators. Moreover, internationality of tweeters, readers, and citers is moderately influenced by international collaborative networks showing the significance of international collaboration on enhancing visibility of Finnish research from across the world.
+        </p>
+        <p>
+          It was found that internationality rates vary across disciplines and that rates are higher for Medical and Health Sciences, Natural Sciences, and Engineering and Technology than Humanities and Social Sciences (with the exception of higher internationality rate of tweeters of Social Sciences research). This finding confirms results from interviews with academic professors at Finnish universities that demonstrated that research internationality has different meanings in the soft sciences (Social Sciences and Humanities) than in the hard sciences (Medical, Natural, and Physical Sciences) (<a href="#hak98">Hakala, 1998</a>). Professors from the soft sciences reported that internationality was not an essential factor and that it does not necessarily lead to quality, while professors from the hard sciences reported that internationality was necessary for more successful funding applications and the accomplishment of quality research.
+        </p>
+        <p>
+          Different disciplines have different collaboration behaviors. As with previous studies, Natural and Physical Sciences (except for Mathematics) are typified by large research teams and are more collaborative than Social Sciences and Humanities (<a href="#gaz12">Gazni, Sugimoto, and Didegah, 2012</a>). Larger teams have a higher chance of international collaboration, which suggests that more collaborative domains are expected to have more international author contributions resulting in attracting more international attention either by being cited in another work or being added to a Mendeley library for readership purposes. Multi-author research has a citation advantage and the multi-nationality of authors favors the citation advantage even more; the extent to which international collaboration associates with citation counts to articles is significantly higher than that of individual collaboration in all subject domains (<a href="#did14">Didegah, 2014</a>). This indicates that international collaboration is an important factor for citation counts. As more citations indicates more citers, there is a greater possibility that the citers come from a wide range of geographical locations. In addition, articles with a higher number of international authors are expected to have more Mendeley readers and tweeters as the authors increase the chance of more international visibility for the article.
+        </p>
+        <p>
+          With regards to the second question, the results demonstrate that more international staff engagement positively associates with more international authors, citers, tweeters, and Mendeley readers. This shows that more international engagement at universities matter also for the visibility of research publications worldwide. The percentage of international staff is important for different world rankings of universities (e.g., Times Higher Education<sup><a href="#fn4">4</a></sup> or QS<sup><a href="#fn5">5</a></sup> ); one reason for this could be that they bring international collaboration opportunities to universities and that higher international collaboration will increase the visibility of university products and services worldwide. The findings of this work also confirms the impact of international staff on more international collaboration as Finnish universities with a higher engagement of international staff have more international authors and consequently more international citers, tweeters, and Mendeley readers.
+        </p>
+        <h2>
+          Conclusion
+        </h2>
+        <p>
+          In sum, the findings show that the internationality rate of authors and audiences of Finnish research is at a moderate to high rate. The results suggest that international research collaboration is an important factor for higher rates of international visibility, and that particularly more collaborative subject domains (i.e. Medical and Physical Sciences) have a higher rate of internationality of authors and audiences. International staff engagement in the research conducted at Finnish universities is also an important factor and significantly associates with the internationality of Finnish research collaborators and audiences. The findings will be informative for research policy makers and administrators engaging in research evaluation at Finnish institutions to develop international networks to enhance internationality of their research.
+        </p>
+        <hr>
+        <p>
+          <sup id="fn1">1. <a href="http://incites.isiknowledge.com/common/help/h_field_category_oecd_wos.html" target="_blank">http://incites.isiknowledge.com/common/help/h_field_category_oecd_wos.html</a>; <a href="http://incites.isiknowledge.com/common/help/h_field_category_oecd.html" target="_blank">http://incites.isiknowledge.com/common/help/h_field_category_oecd.html</a></sup><br>
+          <sup id="fn2">2. The map shows the number of tweeters of Finnish research from different countries around the world. The darker red the country, the more number of tweeters from that country.</sup><br>
+          <sup id="fn3">3. See this for a definition of staff labor input: <a href="http://www.stat.fi/meta/kas/henkilotyovuosi_en.html" target="_blank">http://www.stat.fi/meta/kas/henkilotyovuosi_en.html</a></sup><br>
+          <sup id="fn4">4. <a href="https://www.timeshighereducation.com" target="_blank">https://www.timeshighereducation.com</a></sup><br>
+          <sup id="fn5">5. <a href="http://www.topuniversities.com" target="_blank">http://www.topuniversities.com</a></sup>
+        </p>
+        <h2 id="author">
+          About the authors
+        </h2>
+        <p>
+          <strong>Fereshteh Didegah</strong> is a postdoctoral researcher at Danish Centre for Studies in Research and Research Policy, Aarhus University (Denmark). She received her Ph.D. in 2014 from School of Technology, University of Wolverhampton (UK). Her research interests fall into two broad categories: Bibliometrics and Altmetrics and her main focus in both areas is on the motivations and reasons for citation and altmetric counts and their implications for research policy makers and research evaluators. She can be contacted at <a href="mailto:fdid@ps.au.dk">fdid@ps.au.dk</a>.<br>
+          <strong>Ali Gazni</strong> is an Assistant Professor in Regional Information Center for Science and Technology, Shiraz, Iran. He received his Ph.D. from Shahid Chamran University of Ahvaz and his research interests are in bibliometrics and how to improve the scientific impact of the countries, universities and authors. He can be contacted at <a href="mailto:ali.gazni@ricest.ac.ir">ali.gazni@ricest.ac.ir</a>.<br>
+          <strong>Timothy D. Bowman</strong> is an assistant professor in the School of Library and Information Science, Wayne State University, where he conducts research on altmetrics, scholarly communication, open science, and social media. Bowman received his Ph.D. from Indiana University, Bloomington. He can be contacted at <a href="mailto:timothy.d.bowman@wayne.edu">timothy.d.bowman@wayne.edu</a>.<br>
+          <strong>Kim Holmberg</strong> is a postdoctoral researcher at the Research Unit for the Sociology of Education at the University of Turku, Finland, where he works on questions related to bibliometrics, altmetrics, open science, and social media. Holmberg is an Honorary Research Fellow at the Statistical Cybermetrics Research Group at the University of Wolverhampton, UK, and he holds the title of Docent in Informetrics at Åbo Akademi University, Finland.
+        </p>
+      </section>
+      <section class="refs">
+        <h2>
+          References
+        </h2>
+        <ul class="refs">
+          <li id="abr11">Abramo, G., D’Angelo, C.A., &amp; Solazzi, M. (2011). The relationship between scientists’ research performance and the degree of internationalization of their research. Scientometrics, 86, 629–643.
+          </li>
+          <li id="ada06">Adams, J.M., &amp; Carfagna, A. (2006). Coming of age in a globalized world: The next generation. Bloomfield, CT: Kumarian Press.
+          </li>
+          <li id="did14">Didegah, F. (2014). Factors associating with the future citation impact of published articles: A statistical modelling approach. PhD thesis. University of Wolverhampton, UK.
+          </li>
+          <li id="did13">Didegah, F., &amp; Thelwall, M. (2013). Which factors help authors produce the highest impact research? Collaboration, journal and document properties. Journal of Informetrics, 7(4), 861-873.
+          </li>
+          <li id="did16">Didegah, F., Bowman, T.D., &amp; Holmberg, K. (2016). Increasing our understanding of altmetrics: identifying factors that are driving both citation and altmetric counts. IConference 2016 Proceedings.
+          </li>
+          <li id="fil11">Filippetti, A., Frenz, M., &amp; Ietto-Gillies, G. (2011). Are innovation and internationalization related? An analysis of European countries. Industry and Innovation, 18(5), 437-459.
+          </li>
+          <li id="gaz16">Gazni, A. &amp; Ghaseminik, Z. (2016). Internationalization of scientific publishing over time: Analyzing publishers and fields differences. Learned Publishing.
+          </li>
+          <li id="gaz12">Gazni, A., Sugimoto, C.R., &amp; Didegah, F. (2012). Mapping world scientific collaboration: authors, institutions, and countries. Journal of the American Society for Information Science &amp; Technology, 63(2), 323-335.
+          </li>
+          <li id="gla01">Glänzel, W. (2001). National characteristics in international scientific co-authorship relations. Scientometrics, 51, 69-115.
+          </li>
+          <li id="gra14">Graham, M., Hale, S.A. &amp; Gaffney, D. (2014). Where in the world are you? Geolocation and language identification in Twitter. <em>The Professional Geographer, 66</em>(4), 568-578.
+          </li>
+          <li id="hak98">Hakala, J. (1998). Internationalisation of Science. Science Studies, 11(1), 52-74.
+          </li>
+          <li id="hau15">Haustein, S. &amp; Costas, R. (2015). Determining Twitter audiences: geolocation and number of followers. Altmetrics15 workshop, Netherlands, Amesterdam, 9 October.
+          </li>
+          <li id="hau14">Haustein, S., Larivière, V., Thelwall, M., Amyot, D., &amp; Peters, I. (2014). Tweets vs. Mendeley readers: How do these two social media metrics differ? IT-Information Technology, 56(5), 207-215.
+          </li>
+          <li id="hay00">Hayward, F. M. (2000). Internationalization of US Higher Education. Preliminary Status Report, 2000.
+          </li>
+          <li id="kim10">Kim, M.-J. (2010). Visibility of Korean science journals: an analysis between citation measures among international composition of editorial board and foreign authorship. Scientometrics, 84, 505-522.
+          </li>
+          <li id="kni04">Knight, J. (2004). Internationalization remodeled: Definition, approaches, and rationales. Journal of studies in international education, 8(1), 5-31.
+          </li>
+          <li id="ros14">Rostan, M., Ceravolo, F.A., &amp; Metcalfe, A.S. (2014). The internationalization of research. In The Internationalization of the Academy. Springer, Netherlands. pp. 119-143.
+          </li>
+          <li id="sev15">Severo, M., Giraud, T., &amp; Pecout, H. (2015). Twitter data for urban policy making: an analysis on four European cities. In C. Levallois (Ed.), Handbook of Twitter for Research. EMLYON.
+          </li>
+          <li id="soo09">Sooryamoorthy, R. (2009). Do types of collaboration change citation? Collaboration and citation patterns of South African science publications. Scientometrics, 81(1), 177–193.
+          </li>
+          <li id="yue04">Yue, W. (2004). Predicting the Citation Impact of Clinical Neurology Journals using Structural Equation Modeling with Partial Least Squares. Doctoral thesis, University of New South Wales.
+          </li>
+          <li id="zit98">Zitt, M. &amp; Bassecoulard, E. (1998). Internationalisation of scientific journals: a measurement based on publication and citation scope. Scientometrics, 41 (1-2), 255-271.
+          </li>
+        </ul>
+        <h4 style="text-align:center;">
+          How to cite this paper
+        </h4>
+        <div>
+          <div class="citing">
+            Didegah, F, Gazni, A, Bowman, T. D. &amp; Holmberg, K (2017). Internationality in Finnish research: an examination of collaborators, citers, tweeters and readers. <em>Information Research, 22</em>(1), CoLIS paper 1624. Retrieved from http://InformationR.net/ir/22-1/colis/colis1624.html (Archived by WebCite® at http://www.webcitation.org/6oUImd0ha)
+          </div>
+        </div>
+      </section>
+    </article><br>
+    <section>
+      
+      <br>
+      
+      <hr>
+    </section>
+    
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer>
+  </body>
+</html>

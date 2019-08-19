@@ -1,0 +1,752 @@
+<!doctype html>  
+ <html>  
+ <head>  
+ <title>'Nobody reads the documentation': true or not?</title>  
+<meta charset=utf-8 />
+ <link href="../../IRstyle3.css" rel="stylesheet" media="screen" title="serif" />  
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="'Nobody reads the documentation': true or not?" />  
+ <meta name="author" content="Brigit van Loggem" />  
+ <meta name="dcterms.subject" content="Give a brief description of your paper" />  
+ <meta name="description" content="This paper describes an empirical study in which two separate groups of respondents were questioned as to their preferred sources of information when working with software. Respondents were asked to imagine working with software and to indicate how much interest they would have in accessing six distinct sources of information about its functioning. This question was asked four times, corresponding to four different situations in which information could imaginably be required. A relational database was created to store the data, which could then be queried in many different ways. The results imply that in general, users of software have a preference for information sources that take little effort to access. This does not, however, mean that software users 'do not read the instructions', as has been suggested in the academic and professional literatures. Software users are quite willing to use documentation as and when required. It is then up to the designers of user documentation to make this worth their while."/>  
+ <meta name="keywords" content="information behaviour, documentation, information in context, manuals, user support" />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+ <meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="Professor T.D. Wilson" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/19-4/isic/isic03.html" />  
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/19-4/infres194.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2014-12-15" /> 
+ <meta name="geo.placename" content="global" />  
+
+ 
+ <script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+
+	</script> 
+
+</head> 
+  
+ <body> 
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 19  no. 4, December, 2014</span>
+<br /><br /> 
+<div class="button">
+ <ul> 
+ <li><a href="../infres194.html">Contents</a>   </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../../search.html">Search</a> |  </li> 
+ <li><a href="../../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr />
+  Proceedings of ISIC: the information behaviour conference, Leeds, 2-5 September, 2014: Part 1.
+ <hr />
+ </header>
+ <article>
+ <h1>'Nobody reads the documentation': true or not?</h1>  <br />  
+ <div style="margin-left: 5%; margin-right:10%;"> 
+ <h4><a href="isic03.html#author">Brigit van Loggem</a><br />
+ Open Universiteit, Heerlen, the Netherlands</h4>  
+ </div>  
+ <br /> 
+
+ <form>  <fieldset>  <legend>Abstract </legend>
+ <blockquote>
+ <strong>Introduction.</strong> This paper describes an empirical study in which two separate groups of respondents were questioned as to their preferred sources of information when working with software.<br />
+ <strong>Method.</strong>Respondents were asked to imagine working with software and to indicate how much interest they would have in accessing six distinct sources of information about its functioning. This question was asked four times, corresponding to four different situations in which information could imaginably be required.<br />
+ <strong>Analysis.</strong>A relational database was created to store the data, which could then be queried in many different ways.<br />
+ <strong>Results.</strong>The results imply that in general, users of software have a preference for information sources that take little effort to access. This does not, however, mean that software users 'do not read the instructions', as has been suggested in the academic and professional literatures.<br />
+ <strong>Conclusions.</strong>Software users are quite willing to use documentation as and when required. It is then up to the designers of user documentation to make this worth their while.
+ </blockquote>  </fieldset>  </form> 
+ 
+  <section>
+ <br />  <div style="text-align:center">  <input type="button" value="change font"
+ class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onClick="doChangeFont()"
+ /></div>  <br /> 
+<h2>Introduction</h2> 
+<p>The study presented in this paper was carried out to provide empirical evidence to confirm, or not, the widely held belief that software users don't read
+    documentation.
+</p>
+<p>In 1991, a short article aimed at a professional audience of programmers appeared in the <em>Communications of the ACM</em> under the title <em>Nobody Reads the Documentation</em> (<a href="isic03.html#_ENREF_14" title="Rettig, 1991 #1">Rettig, 1991</a>). Since then, the idea that users of software "simply won't read the instructions" has become almost an article of faith; and technical writers the world over secretly hope for permission from
+    management to have printed on every page of their user manuals the catch-phrase, "Read The F... Manual!" or RTFM for short. Yet a respondent in a study on
+the appropriation of the iPhone (!) was quoted as saying: "I don't have the time to explore. I miss having a manual that I can lean back and read." (    <a href="isic03.html#_ENREF_1" title="B&oslash;dker, 2012 #145">B&oslash;dker and Christiansen, 2012</a>). This is just anecdote; but if it were indeed so that users of software
+avoid consulting the instructions, then how can we explain the long shelves filled with software-related books (<a href="isic03.html#_ENREF_11" title="van der Meij, 2009 #146">van der Meij, Karreman, and Steehouder, 2009</a>;    <a href="isic03.html#_ENREF_20" title="Wright, 2008 #152">D. Wright, 2008</a>) that are found at any bookshop or public library?
+</p>
+<p>
+    A handful of research studies have previously been carried out to determine whether users are indeed reluctant to consult the documentation that is
+    delivered with a product, and these are surprisingly unanimous in their findings. The different studies vary greatly as to respondents, method and the
+    exact nature of the question. However, they invariably conclude that&mdash;at least for complex and unfamiliar products&mdash;the documentation <em>is</em> consulted;
+    even if it is not read, marked, learned, and inwardly digested in its entirety. Table 1 below shows a summary of the available research, showing the
+    percentage of respondents reported as ever having consulted documentation of a particular type.
+</p>
+ <table class="center">  
+ <caption><br />Table 1: Research studies into the use of documentation<br /></caption> 
+    <tbody>
+        <tr>
+            <th>% 'yes'
+            </th>
+            <th>N
+            </th><th>consultation of
+            </th>
+            <th>ref
+            </th>
+        </tr>
+        <tr>
+            <td>82.9
+            </td>
+            <td style="text-align:center">44
+            </td>
+            <td>the printed documentation for complex equipment such as VCRs
+            </td>
+            <td><a href="isic03.html#_ENREF_21" title="Wright, 1982 #132">P. Wright, Creighton, and Threlfall, 1982</a>
+            </td>
+        </tr>
+        <tr>
+            <td>96
+            </td>
+            <td style="text-align:center">201
+            </td>
+            <td>instruction manuals
+            </td>
+            <td><a href="isic03.html#_ENREF_15" title="Schriver, 1997 #32">Schriver, 1997</a>
+            </td>
+        </tr>
+        <tr>
+            <td>99
+            </td>
+            <td style="text-align:center">400
+            </td>
+            <td>the printed manual for a major word processing program
+            </td>
+            <td><a href="isic03.html#_ENREF_16" title="Smart, 1998 #166">Smart, DeTienne, and Whiting, 1998</a>; <a href="isic03.html#_ENREF_17" title="Smart, 2001 #164">Smart, Whiting, and DeTienne, 2001</a>
+            </td>
+        </tr>
+        <tr>
+            <td>65
+            </td>
+            <td style="text-align:center">400
+            </td>
+            <td>the online Help for a major word processing program
+            </td>
+            <td><a href="isic03.html#_ENREF_16" title="Smart, 1998 #166">Smart et al., 1998</a>; <a href="isic03.html#_ENREF_17" title="Smart, 2001 #164">Smart et al., 2001</a>
+            </td>
+        </tr>
+        <tr>
+            <td>95.5
+            </td>
+            <td style="text-align:center">224
+            </td>
+            <td>the printed manual for an accounting software package
+            </td>
+            <td><a href="isic03.html#_ENREF_19" title="Vromen, 2000 #137">Vromen and Overduin, 2000</a>
+            </td>
+        </tr>
+        <tr>
+            <td>58.9
+            </td>
+            <td style="text-align:center">365
+            </td>
+            <td>the manual of the vehicle that they drive most often
+            </td>
+            <td><a href="isic03.html#_ENREF_10" title="Mehlenbacher, 2002 #133">Mehlenbacher, Wogalter, and Laughery, 2002</a>
+            </td>
+        </tr>
+        <tr>
+            <td>92
+            </td>
+            <td style="text-align:center">201
+            </td>
+            <td>the manual that comes with a product they buy
+            </td>
+            <td><a href="isic03.html#_ENREF_5" title="Jansen, 2002 #134">Jansen and Balijon, 2002</a>
+            </td>
+        </tr>
+        <tr>
+            <td>59
+             </td>
+            <td style="text-align:center">107
+            </td>
+            <td>the printed manual for any piece of software
+            </td>
+            <td><a href="isic03.html#_ENREF_9" title="Martin, 2005 #165">Martin, Ivory, Megraw, and Slabosky, 2005</a>
+            </td>
+        </tr>
+        <tr>
+            <td>57
+            </td>
+            <td style="text-align:center">107
+            </td>
+            <td>the online Help for any piece of software
+            </td>
+            <td><a href="isic03.html#_ENREF_9" title="Martin, 2005 #165">Martin et al., 2005</a>
+            </td>
+        </tr>
+        <tr>
+            <td>91.2
+            </td>
+            <td style="text-align:center">70<br />(older adults)
+            </td>
+            <td>product manuals for technological products
+            </td>
+            <td><a href="isic03.html#_ENREF_18" title="Tsai, 2012 #179">Tsai, Rogers, and Lee, 2012</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+In addition to the studies summarized in Table 1, there are a few reporting considerably lower rates of recourse to documentation (<a href="isic03.html#_ENREF_2" title="Ceaparu, 2004 #168">Ceaparu, Lazar, Bessiere, Robinson and Shneiderman, 2004</a>;    <a href="isic03.html#_ENREF_12" title="Mendoza, 2005 #167">Mendoza and Novick, 2005</a>). These, however, are characterized by a different focus, studying as they
+    did the occurrence of users turning to sources of support on experiencing "frustration" with software as a result of poor usability. Many of the
+    frustrations described did not result from lack of mastery of the software but followed from network breakdowns, time delays, and recognized user errors
+    such as saving a file to the wrong location. In such situations the origin of the frustration is already known, and it is not surprising that no attempt is
+    made to alleviate it by turning to documentation. Also, there is no reason to assume that recourse to documentation is necessarily preceded by a sensation
+    of frustration. It is well imaginable for an individual to turn to documentation while experiencing a non-frustrating desire to know. For these two
+    reasons, the "frustration" studies recorded only a subset of all recourses to documentation, of unknown proportion. They are therefore not included in
+    Table 1.
+</p>
+<p>
+    Doubt has been expressed (<a href="isic03.html#_ENREF_13" title="Novick, 2007 #163">Novick, Elizalde, and Bean, 2007</a>) as to the validity of the results
+    summarized in Table 1. Moreover, some of them pertain to consumer products whilst others discuss the use of documentation when working with software. The
+    study described in this paper, therefore, specifically focused on the sources of information that users of software refer to in the course of their work.
+</p>
+<h2>
+    Study design
+</h2>
+<h3>
+    Instrument and method
+</h3>
+<p>
+    A single-sheet questionnaire was prepared which offsets six possible sources of information against four possible situations in which information can be
+    required when working with software. In the Netherlands, where the study was conducted, the national language is Dutch but there are many environments
+    where English is the working language. For this reason, the questionnaire was prepared in two language versions (Dutch and English). In all respects other
+    than language, the two versions of the questionnaire were identical. An image of the English language version of the questionnaire is presented in Figure
+    1.
+</p>
+<p>
+    The information sources were described as follows (all quotations are taken from the English language version of the questionnaire):
+</p>
+<ul>
+    <li>instructions delivered with the software (in print or as a PDF)</li>
+    <li>Help that you call up from within the software</li>
+    <li>online sources (through a web browser)</li>
+    <li>shop-bought book (either your own or borrowed)</li>
+    <li>ask someone you know (colleague, family member, etc.)</li>
+    <li>other, that is: _______________</li>
+</ul>
+<p>
+    The situations in which information might be sought were described as follows:
+</p>
+<ul>
+<li>understand how the program or part of it works, and what it can do</li>
+<li>look up how to carry out a particular procedure</li>
+<li>quickly look up a particular fact that you don't know or cannot remember right now</li>
+<li>find out what went wrong when there is a problem</li>
+</ul>
+<figure class="centre">
+        <img width="615" height="435" src="isic03fig1.jpg" alt="English language version of the questionnaire" />
+   <figcaption>
+      Figure 1: English language version of the questionnaire
+  </figcaption>
+</figure> 
+      <p>
+        Rather than asking respondents for their preferences, a little narrative was introduced to exert some gentle pressure, prompting respondents to consider their choices more thoroughly than
+        they might have done when presented with a more straightforward questionnaire. Printed on the questionnaire itself were the following instructions:
+      </p>
+      <p><em>
+        Below you see (from top to bottom) four situations in which you could imagine needing information on how a software package that you are working with works. From left to right, a number of
+        possible sources of such information are listed.
+        Now imagine that, whenever a particular situation occurs, you can spend up to 8 cents on actually looking for the information that you need. There is however a limitation: you may never spend
+        more than 2 cents at a time on one particular source of information. How would you spend your 8 cents? Please note, you need not spend them all!
+      </em></p>
+      <p>
+        This unusual design, it was hoped, would slow down respondents enough to make them carefully consider their answers; rather than breeze through a list of similar-looking questions.
+      </p>
+      <p>
+        In November 2013, the 69 students who attended class on the first day of an introductory course on web applications were presented with the Dutch language version of the questionnaire. These
+        students were at the very beginning of their studies at an institution for short tertiary education, and the course they were taking was part of a study program in Communication and
+        Multimedia Design. Most were under 25 years old, having enrolled in the program directly or almost directly after completing upper secondary education; 5 were between 25 and 30 years of age.
+        None of these 69 respondents, who all returned the filled-in questionnaire, held a tertiary educational qualification.
+      </p>
+      <p>
+        Then, in February 2014, the English language version of the questionnaire was administered to employees at the Netherlands office of a developer of a scientific software suite for the
+        interpretation of seismic data. This is a highly skilled area of expertise, as is reflected in these respondents' relatively high level of education. Out of the 30 professionals (as I shall
+        refer to this group from now on) who were in the office on the particular day on which the questionnaire was administered, and who all returned the filled-in questionnaire, 11 held a doctoral
+        degree or equivalent and a further 10 held a master's degree or equivalent. Their overall age was, inevitably, higher than that of the students studied a few months earlier.
+      </p>
+      <h3>
+        Data processing
+      </h3>
+      <p>
+        First, all the filled-in questionnaires were checked for clarity and for violations of the rules that 1) on no situation that information could be needed, more than 8 'cents'-from now on, I
+        shall refer to these as <i>tokens</i>-in total could be spent and 2) no more than 2 tokens could be spent on a particular information source in a particular situation. None of the
+        questionnaires violated either of these rules, nor was it ever unclear how many tokens were spent.
+      </p>
+      <p>
+        The filled-in questionnaires were also checked for 'empty' rows, to see if there were situations in which a respondent had not spent any tokens at all. This was not the case. All respondents
+        had allocated at least one token to at least one information source for every one of the four situations.
+      </p>
+      <p>
+        Separately considered were the explanations given for the information source 'other' in cases where tokens were spent on this source: as it turned out, only two 'other' sources of information
+        were mentioned. One, exclusively mentioned by students, was 'YouTube'; the other, exclusively mentioned by professionals, was 'Help desk'.
+      </p>
+      <p>
+        To allow for the data obtained from the filled-in questionnaires to be analyzed in different ways, a relational database was then created which could be queried using SQL, the standard query
+        language for such databases. In doing so, the six information sources were given a code determining whether that particular source of information is an instance of 'documentation'; where
+        'documentation' was defined as <i>pre-recorded information that is purposefully selected and presented by a human designer to assist future human users deploying a particular tool</i>.
+        Application of this definition led to the information sources 'instructions delivered on paper or PDF', 'Help system', and 'shop-bought book' being labelled 'documentation', where the
+        remaining three categories of 'information found online', 'asking somebody', and 'other' (which had turned out to be either YouTube or Help desk) were not.
+      </p>
+      <p>
+        The database was then filled with the data from the questionnaires. For each combination of a respondent, an information source, and a situation a value was entered into the database
+        recording whether 0, 1 or 2 tokens (the maximum allowed) were allocated.
+      </p>
+      <p>
+        Finally, pertinent SQL queries were run and the results analyzed as described below.
+      </p>
+      <h2>
+        Results
+      </h2>
+      <p>
+        In this section, to determine if there is truth in the saying that "nobody reads the documentation", the question is looked at from a number of different angles.
+      </p>
+      <p>
+        First, an extension to Table 1 is drawn up, allowing for a summary of the results to be compared to earlier studies.
+      </p>
+      <p>
+        Then, the relative use of documentation compared to other sources of information is investigated.
+      </p>
+      <p>
+        Next, the results are investigated in more depth and split up by the type of information source that respondents report they refer to.
+      </p>
+      <p>
+        Finally, the results reported in the first three paragraphs are split up by situation in which information is sought.
+      </p>
+      <h3>
+        Reference to documentation
+      </h3>
+      <p>
+        The first question asked was, very simply and in line with the information presented in Table 1: What is the percentage of respondents in both groups (students and professionals) who at least
+        sometimes, in some situations, refer to documentation?
+      </p>
+      <p>
+        For the professionals this percentage is 100. Out of the six information sources to which respondents were invited to allocate tokens in different situations, some were coded 'documentation'
+        whilst others were not. None of the professionals allocated less than 1 token to the combined information sources instruction manual, Help system and book. Even if we remove the tokens
+        allocated to books from the equation, the answer is still 100: all professionals indicate referring to the 'traditional' documentation genres of instruction manual and Help system at least
+        some of the time.
+      </p>
+      <p>
+        For the students these percentages are a little lower. 10 students never refer to the instructions or the Help system, although 2 of these may occasionally refer to a shop-bought book. This
+        means that in this group 85% consult the instructions or the Help, be it ever so occasionally, while 88.4% may consider turning to any source of information that can be seen as documentation.
+        These numbers are summarized in Table 2 below, in a format similar to that used in Table 1.
+      </p>
+ <table class="center">  
+ <caption><br />Table 2: Use of documentation (present study)<br /></caption> 
+    <tbody>
+        <tr>
+            <th>% 'yes'</th>
+            <th>N</th>
+						<th>consultation of</th>
+            <th>group</th>
+            <th>year</th>
+        </tr>
+        <tr>
+            <td>88.4</td>
+            <td style="text-align:center">69</td>
+            <td>Help system or instructions (in print or PDF) or shop-bought book</td>
+            <td>students</td>
+						<td>2013</td>
+        </tr>
+        <tr>
+            <td>85</td>
+            <td style="text-align:center">69</td>
+            <td>Help system or instructions (in print or PDF)</td>
+            <td>students</td>
+						<td>2013</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td style="text-align:center">30</td>
+            <td>Help system or instructions (in print or PDF) or shop-bought book</td>
+            <td>professionals</td>
+						<td>2014</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td style="text-align:center">30</td>
+            <td>Help system or instructions (in print or PDF)</td>
+            <td>professionals</td>
+						<td>2014</td>
+        </tr>
+      </tbody></table>
+      <h3>
+        Documentation versus other sources of information
+      </h3>
+      <p>
+        High percentages of users indicating that under certain conditions they refer to documentation are not difficult to obtain and therefore not very meaningful. Indeed, almost the same result
+        can be achieved if we count the percentage of respondents that indicate referring, at some time or other, to sources of information <i>other</i> than documentation: for the students as well
+        as for the professionals this turned out to be 100%.
+      </p>
+      <p>
+        In order to determine the relative importance of documentation, we need to know how frequently other sources of information will be referred to when users have a choice. The next question
+        therefore was: To which of the two groupings of information sources, documentation or not, was the highest proportion of tokens allocated?
+      </p>
+<figure class="centre">
+        <img src="isic03fig2.gif" alt="Proportions of tokens spent on documentation" />
+   <figcaption>
+      Figure 2: Proportions of tokens spent on documentation and non-documentation information sources (outer ring: professionals; inner ring: students)
+  </figcaption>
+</figure> 
+      <p>
+        Figure 2 shows a clear preference for information sources that cannot be seen as documentation. Out of a total of 944 tokens spent by the 69 students, only 248 (26%) were allocated to
+        documentation. The 30 professionals together spent 472 tokens, 190 (40%) of which were allocated to documentation.
+      </p>
+      <h3>
+        Reference to different information sources
+      </h3>
+      <p>
+        Thus far, the information sources labelled 'documentation' and those labelled 'not documentation' have been lumped together. It is worth our while looking at the six sources of information
+        separately.
+      </p>
+      <p>
+        One way of doing this is by asking: How is the total number of tokens spent distributed over the various information sources?
+      </p>
+      <p>
+        As it turns out, students and professionals had the same relative preferences. Figure 3 shows how of all tokens that were allocated, by far the most are spent on the information source
+        'online', with 'ask somebody else' as a good second. Only then come the Help system and the instructions, followed by 'other' (which was YouTube for the students and Help desk for the
+        professionals) and finally, the shop-bought book.
+      </p>
+      <p>
+      </p>
+<figure class="centre">
+        <img width="440" height="354" src="isic03fig3.gif" alt="Proportions of tokens spent" />
+   <figcaption>
+      Figure 3: Proportions of tokens spent on the different information sources (outer ring: professionals; inner ring: students)
+  </figcaption>
+</figure> 
+      <p>
+        Another way of looking at the use made of the various sources of information is by counting those respondents who have allocated tokens to a particular information source in at least one
+        situation. As there are six categories rather than one, and the percentages under consideration add up to more than one hundred, the numbers do not lend themselves to presentation in a format
+        comparable to the earlier tables, nor the 'doughnut' chart format used thus far. Figure 4 presents the data as a simple clustered column chart.
+      </p>
+      <p>
+        Although direct comparison between Figures 3 and 4 is difficult, we can still see that shop-bought book and 'other' are the least popular sources of information in both analyses, just as
+        asking somebody and online browsing are the most popular. However, the differences between the information sources are smaller when we ignore the total number of tokens allocated, and the
+        classical documentation genres of instruction manual and Help system manifest themselves much more strongly.
+      </p>
+      <p>
+        Of the 30 professionals, 27 (90%) would refer to the user instructions in at least one situation, and 24 (80%) would look for information in the Help system. Fewer students than professionals
+        would ever turn to traditional documentation products, but still considerably more than half the students would in at least one situation do so: out of the 69 students, 48 (almost 70%) would
+        sometimes consult the instructions and 44 (almost 65%) would sometimes consult the Help system.
+      </p>
+<figure class="centre">
+        <img width="589" height="230" src="isic03fig4.gif" alt="Percentages of respondents who consult the various information sources" />
+   <figcaption>
+      Figure 4: Percentages of respondents who consult the various information sources in at least one situation
+  </figcaption>
+</figure> 
+      <h3>
+        User instructions and Help in different situations
+      </h3>
+      <p>
+        To conclude this analysis, let us consider the relative preferences for the information sources 'instructions' and 'Help' against the different situations in which information is sought. In
+        which situations are these traditional documentation products most frequently referred to?
+      </p>
+      <p>
+        Again, the different percentages do not add up to one hundred; this time because only those tokens allocated to either instructions or Help are taken into consideration while the others are
+        ignored. Figures 5 and 6 present the data therefore once again in the format of a set of clustered column charts.
+      </p>
+<figure class="centre">
+        <img width="589" height="230" src="isic03fig5.gif" alt="Per situation, proportions of tokens spent" />
+   <figcaption>
+      Figure 5: Per situation, proportions of tokens spent on consulting the instructions and the Help in the Students group
+  </figcaption>
+</figure> 
+<figure class="centre">
+        <img width="589" height="230" src="isic03fig6.gif" alt="Per situation, proportions of tokens spent" />
+   <figcaption>
+      Figure 6: Per situation, proportions of tokens spent on consulting the instructions and the Help in the Professionals group
+  </figcaption>
+</figure> 
+      <p>
+        Figures 5 and 6 show that for problem-solving and quick lookup of simple facts, Help is generally preferred over instructions delivered as a printed manual or as PDF. For finding out how the
+        program works and what it can do, and for learning how to carry out a particular procedure, however, the two sources of information are almost equally popular. If anything, the instruction
+        manual is marginally preferred to the Help.
+      </p>
+      <h2>
+        Limitations
+      </h2>
+      <p>
+        The unusual design of the questionnaire seemed to have met its objective of forcing respondents to think before answering. No obvious patterns could be detected simply by looking at the
+        filled-in forms: almost all respondents had spent their tokens so that the distribution over the information sources was different for each of the four situations.
+      </p>
+      <p>
+        However, neither the students nor the professionals spent all the tokens that they had at their disposal. Remember that every respondent was presented with four distinct situations and eight
+        tokens to spend on looking for information in any one situation; they were explicitly told that they need not spend all eight tokens per situation. So, every respondent had a total of 32
+        tokens to spend. Considering that the students spent on average 13.68 tokens and the professionals 15.73, we see in Figure 7 that in both groups more than half the tokens remained unspent.
+      </p>
+      <p>
+        It is difficult to determine how to interpret this. Does the proportion of unallocated tokens somehow provide a measure for how often the average respondent would give up and live with a lack
+        of information rather than look for it? Or is it so that at least some respondents have spent their tokens assigning a score of 2, 1 or 0 in order to indicate a relative preference? Are there
+        respondents who fully expect the answer to a question in a particular situation to be found in one or two particular sources of information, and do not feel the need to spend any 'money' on
+        other information sources? Or is the fact that not all information sources are always available taken into consideration? Informal discussion with a few of the professionals after they had
+        filled in the questionnaire revealed that all of these explanations, and undoubtedly more, in some cases apply. It is not possible therefore to draw hard conclusions from the <i>absolute</i>
+        numbers found; but we can conclude that users of software refer to documentation as well as to other sources of information, and that non-documentation sources are referred to
+        <i>relatively</i> more.
+      </p>
+<figure class="centre">
+        <img src="isic03fig7.gif" alt="Percentages of tokens spent on documentation and non-documentation" />
+   <figcaption>
+      Figure 7: Percentages of tokens spent on documentation and non-documentation information sources, including unallocated tokens (outer ring: professionals; inner ring: students)
+  </figcaption>
+</figure> 
+      <h2>
+        Conclusions
+      </h2>
+      <p>
+        No matter how we look at the numbers, the findings from this study offer strong evidence that reports of the death of user documentation have been greatly exaggerated.
+      </p>
+      <p>
+        Contrary to popular belief, software users <i>do</i> read the documentation. Depending on what exactly is counted, the numbers vary between 26% and 80% of information-seeking behaviours.
+        Interestingly, all the numbers attempting to describe frequency of recourse to documentation in this study are higher for the (better educated, older) group labelled 'professionals' than they
+        are for the (less educated, younger) group labelled 'students'. Although the sample sizes were relatively small and therefore it is not known whether they extrapolate to the general
+        population, this can be seen as encouraging. After all, from an economic perspective, inefficient or ineffective use of software, or under-use of the same, has more serious repercussions when
+        the work is undertaken for profit than when it is undertaken to fulfil private goals. Man-hours wasted; incorrect or invalid results; reduced acceptance of a system after implementation; that
+        which has been paid for not being fully utilized: all these constitute financial losses. If professional users of software are as willing to consult documentation as the findings suggest,
+        then taking pains to design and develop documentation of the highest possible quality is a worthwhile endeavour.
+      </p>
+      <p>
+        In line with popular belief, on the other hand, is the predilection exhibited by both groups of respondent for 'unauthorized' sources of information such as somebody near them or sources
+        found on the open Internet. These results fit a repeatedly-confirmed observation in areas other than that of recourse to (software) documentation. Time and again it is found that ease of
+        access and convenience are the strongest determinants for the choice of an information source, with online browsing as the single most popular method for seeking information (e.g., <a href=
+        "isic03.html#_ENREF_3" title="Connaway, 2011 #170">Connaway, Dickey, and Radford, 2011</a>; <a href="isic03.html#_ENREF_4" title="Fast, 2004 #171">Fast and Campbell, 2004</a>; <a href="isic03.html#_ENREF_6" title=
+        "Julien, 2004 #172">Julien and Michels, 2004</a>; <a href="isic03.html#_ENREF_7" title="Kim, 2011 #183">Kim and Sin, 2011</a>).
+      </p>
+      <p>
+        Even software users who fully realize that answers obtained from a non-authorized source are often not of the same quality as those obtained from the software's supplier-who, having created
+        the software, at least in theory knows it better than any third party ever could- can hardly be blamed for taking the easy route first. It cannot be denied that asking the person at the next
+        desk or entering a few keywords into an online search engine hardly 'costs' at all, be it time or any other resource. And where asking still involves admitting ignorance and imposing on
+        somebody else's time, barriers to turning to one's web browser are completely non-existent. Most of the time, a software user who wants to obtain information about the program he or she is
+        working with, is sitting at the computer; and whatever the working environment, Internet access nowadays is as good as ubiquitous.
+      </p>
+      <p>
+        It is very well imaginable that documentation would be used even more than it already is if high-quality support materials were created by professionals and offered where appropriate, rather
+        than such an approach being dismissed as too expensive. Documentation must be designed so as to be genuinely helpful. There is no reason why the traditional instruction manual or Help system
+        should remain the only genres of user documentation, yet the 'mainstream' approach to documentation has remained unchanged for a number of decades. It is led by guidebooks and standards
+        originally dating from the 1980s. Although regularly updated and added to, such guidelines tend to change only slowly and superficially and by their nature cannot reflect the latest
+        developments. This is illustrated by the fact that it has, for example, proven quite possible to validate an instruction manual for a table loom, published in 1925, to <i>ISO/IEC 26514:2008
+        Systems and software engineering - Requirements for designers and developers of user documentation</i> and establish a high level of conformance (<a href="isic03.html#_ENREF_8" title=
+        "van Loggem, 2014 #180">van Loggem, 2014</a>).
+      </p>
+      <p>
+        Creating high-quality documentation is undeniably expensive. Yet in the long run, misinformed users concluding that a particular software product is useless is even more expensive. Designers
+        and developers of software documentation must be aware of the danger of users finding incomplete or incorrect information in sources other than the ones supplied as 'documentation'. Rather
+        than throw the towel in the ring from a mistaken belief that "users don't read the instructions anyhow", they should make the documentation a worthy competitor to other sources of
+        information. Documentation should be easily accessible and pleasant to use. And it should be made available in old and new formats on the open Internet, search-engine optimized for people to
+        find it.
+      </p>
+ <h2>Acknowledgements</h2> 
+       <p>
+        The study reported on in this paper could not have been carried out without the co-operation of the Hogeschool van Amsterdam (department Communication and Multimedia Design), and that of CGG
+        Jason (Netherlands) B.V.; who kindly gave me access to respectively their students and their employees.
+      </p>
+ <h2 id="author">About the author</h2> 
+  <p><strong>Brigit van Loggem</strong> has been working as a professional documentation developer since 1992. She received her Master's degree in Communication Science from Twente University, Enschede, the Netherlands and is currently working towards a PhD at the Open University, Heerlen, the Netherlands. She can be contacted at: brigit@byteryte.nl</p> 
+ 
+</section>
+<section class="refs">
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">References</legend>  
+ 
+ <ul class="refs">
+<li>        <a id="_ENREF_1">B&oslash;dker, S. &amp; Christiansen, E. T. (2012). <i>Poetry in motion-appropriation of the world of Apps</i>. Paper presented at the ECCE2012, Edinburgh, Scotland, UK.</a></li>
+<li>        <a id="_ENREF_2">Ceaparu, I., Lazar, J., Bessiere, K., Robinson, J. &amp; Shneiderman, B. (2004). Determining causes and severity of end-user frustration. <i>International journal of
+        human-computer interaction, 17</i>(3), 333-356.</a></li>
+<li>				<a id="_ENREF_3">Connaway, L. S., Dickey, T. J. &amp; Radford, M. L. (2011). "If it is too inconvenient I'm not going after it:" Convenience as a critical factor in information-seeking
+        behaviors. <i>Library &amp; Information Science Research, 33</i>(3), 179-190.</a></li>
+				<li><a id="_ENREF_4">Fast, K. V. &amp; Campbell, D. G. (2004). "I still like Google": University student perceptions of searching OPACs and the web. <i>Proceedings of the American Society for
+        Information Science and Technology, 41</i>(1), 138-146.</a></li>
+				<li><a id="_ENREF_5">Jansen, C. &amp; Balijon, S. (2002). How do people use instruction guides? Confirming and disconfirming patterns of use. <i>Document Design, 3</i>(3), 195-204.</a></li>
+				<li><a id="_ENREF_6">Julien, H. &amp; Michels, D. (2004). Intra-individual information behaviour in daily life. <i>Information Processing &amp; Management, 40</i>(3), 547-562.</a></li>
+				<li><a id="_ENREF_7">Kim, K.-S. &amp; Sin, S.-C. J. (2011). Selecting quality sources: Bridging the gap between the perception and use of information sources. <i>Journal of Information
+        Science, 37</i>(2), 178-188.</a></li>
+				<li><a id="_ENREF_8">van Loggem, B. (2014). <i>Software Documentation: a Standard for the 21st Century</i>. Paper presented at the Information Systems and Design of Communication (ISDOC2014),
+        Lisboa, Portugal.</a></li>
+				<li><a id="_ENREF_9">Martin, A. P., Ivory, M. Y., Megraw, R. &amp; Slabosky, B. (2005). Exploring the persistent problem of user assistance. Washington DC: Information School, University of
+        Washington.</a></li>
+				<li><a id="_ENREF_10">Mehlenbacher, B., Wogalter, M. S. &amp; Laughery, K. R. (2002). <i>On the reading of product owner's manuals: Perceptions and product complexity</i>.</a></li>
+				<li><a id="_ENREF_11">van der Meij, H., Karreman, J. &amp; Steehouder, M. F. (2009). Three decades of research and professional practice on printed software tutorials for novices. <i>Technical
+        communication, 56</i>(3), 265-292.</a></li>
+				<li><a id="_ENREF_12">Mendoza, V. &amp; Novick, D. G. (2005). <i>Usability over time.</i> Paper presented at the Proceedings of the 23rd annual international conference on Design of
+        communication: documenting &amp; designing for pervasive information.</a></li>
+				<li><a id="_ENREF_13">Novick, D. G., Elizalde, E. &amp; Bean, N. (2007). <i>Toward a more accurate view of when and how people seek help with computer applications</i>. Paper presented at the
+        SIGDOC 2007, El Paso, TX.</a></li>
+				<li><a id="_ENREF_14">Rettig, M. (1991). Nobody reads documentation. <i>Commun. ACM, 34</i>(7), 19-24.</a></li>
+				<li><a id="_ENREF_15">Schriver, K. (1997). <i>Dynamics in document design</i>. New York: John Wiley &amp; Sons.</a></li>
+				<li><a id="_ENREF_16">Smart, K. L., DeTienne, K. B. &amp; Whiting, M. (1998). <i>Customers' use of documentation: the enduring legacy of print.</i> Paper presented at the Proceedings of the
+        16th annual international conference on Computer documentation.</a></li>
+				<li><a id="_ENREF_17">Smart, K. L., Whiting, M. E. &amp; DeTienne, K. B. (2001). Assessing the need for printed and online documentation: A study of customer preference and use. <i>Journal of
+        Business Communication, 38</i>(3), 285-314.</a></li>
+				<li><a id="_ENREF_18">Tsai, W.-C., Rogers, W. A. &amp; Lee, C.-F. (2012). <i>Older Adults' Motivations, Patterns, and Improvised Strategies of Using Product Manuals</i>.</a></li>
+				<li><a id="_ENREF_19">Vromen, N. &amp; Overduin, M. (2000). The Manual: the Titanic of user support [Original title: Handleiding: de Titanic onder de gebruikersondersteuning]. <i>Tekst [blad],
+        6,</i> 42-46.</a></li>
+				<li><a id="_ENREF_20">Wright, D. (2008). Implicature, Pragmatics, and Documentation: A Comparative Study. <i>Journal of Technical Writing and Communication, 38</i>(1), 27-51.</a></li>
+			  <li><a id="_ENREF_21">Wright, P., Creighton, P. &amp; Threlfall, S. (1982). Some factors determining when instructions will be read. <i>Ergonomics, 25</i>(3), 225-237.</a></li>
+</ul>  
+ </fieldset>  
+ </form> 
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+ How to cite this paper
+ </legend>  
+ <div><br />van Loggem, B. E.  (2014). 'Nobody reads the documentation': true or not?; In  <em>Proceedings of ISIC, the Information Behaviour Conference, Leeds, 2-5 September, 2014: Part 1</em>, (paper isic03). Retrieved from  http://InformationR.net/ir/19-3/isic/isic03.html  (Archived by WebCite&reg; at http://www.webcitation.org/...)</div>  
+ </fieldset>  
+ </form>
+</section>
+</article>
+<br />
+<section>
+ 
+
+ <table class="footer" style="border-spacing:10;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">
+ Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"> 
+ <form method="get" action="http://scholar.google.com/scholar" target="_blank">  
+ <table class="footer">  
+  <tr>  
+  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="information behaviour documentation context manuals user support" /><br />  
+  <input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  </td>  </tr>  
+ </table> 
+  </form>  
+ </td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --> 
+ 
+ <form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr>  
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="information behaviour documentation context manuals user support" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+ <input type="hidden" name="client" value="pub-5081678983212084" />
+ <input type="hidden" name="forid" value="1" /> 
+  <input type="hidden" name="ie" value="ISO-8859-1" />  
+  <input type="hidden" name="oe" value="ISO-8859-1" />  
+  <input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" />  
+  <input type="hidden" name="hl" value="en" />
+  </td>  
+  </tr>  
+  </table>  
+  </form>
+ </td>  
+ <td style="vertical-align:top; text-align:center;">   
+ <form method="get" action="http://www.bing.com" target="_blank">  
+ <table class="footer">
+ <tr> 
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="information behaviour documentation context manuals user support" /> <br />  
+ <input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  
+ </td>  
+ </tr>  
+ </table>  
+ </form> 
+ </td> 
+ </tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/19-4/isic/isic03.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+ <br />
+ <div style="text-align:center;"> 
+     <!-- AddThis Button BEGIN -->
+<div style="text-align:center;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script>
+<!-- AddThis Button END -->  
+</div>
+
+ 
+<table class="footer" style="padding:10;"><tr><td style="text-align:center; vertical-align:top;">  
+<br />
+<div>
+  <a href="http://www.digits.net" target="_blank">
+    <img src="http://counter.digits.net/?counter={1fd73d54-79cf-0ef4-d512-1d5b63fc6ba4}&amp;template=simple" 
+     alt="Hit Counter by Digits"  />
+  </a></div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the author, 2014. <br />Last updated: 21 October, 2014 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+ </section>
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="http://www.informationr.net/ir//19-4/isic/..infres193.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../../irsindex.html">Subject index</a> | </li>
+	<li><a href="../../search.html">Search</a> | </li>
+	<li><a href="../../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+ </body>  
+ </html> 
+

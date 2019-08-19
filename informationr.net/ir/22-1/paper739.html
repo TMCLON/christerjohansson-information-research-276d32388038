@@ -1,0 +1,1210 @@
+<!doctype html>  
+<html lang="en">  
+	<head> 
+    <meta charset=utf-8 /> 
+		<title>An investigation of the intellectual structure of opinion mining research</title>  
+		<link href="../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
+ 
+		<!--Enter appropriate data in the content fields-->  
+		<meta name="dcterms.title" content="An investigation of the intellectual structure of opinion mining research" />  
+		<meta name="author" content="Yongjun Zhu, Meen Chul Kim, Chaomei Chen" />  
+		<meta name="dcterms.subject" content="This study aims to systematically investigate the intellectual structure of the domain of opinion mining." />  
+		<meta name="description" content="Opinion mining has been receiving increasing attention from a broad range of scientific communities since early 2000s. This present study aims to systematically investigate intellectual structure of the domain of opinion mining. Using topic search, citation expansion, and patent search, we collected 5,596 bibliographic records of opinion mining research. Then, we identified intellectual landscapes, emerging trends, and recent developments. We also captured in domain-level citation trends, subject category assignment, keyword co-occurrence, document co-citation network, and landmark articles. Our study was guided by scientometric approaches implemented in CiteSpace, a visual analytic system based on networks of co-cited documents. We also employed a dual-map overlay technique to investigate epistemological characteristics of the domain. We found that the investigation of algorithmic and linguistic aspects of opinion mining has been of the community’s greatest interest when used to understand, quantify, and apply the sentiment orientation of texts. Recent thematic trends reveal that practical applications of opinion mining such as the prediction of market value and the investigation of social aspects of product feedback have received increasing attention from the community. Opinion mining is fast-growing and still developing, exploring the refinements of related techniques and applications in a variety of domains. We plan to apply the proposed analytics to more diverse domains and comprehensive publication materials to gain more generalized understanding of the true structure of a science." />  
+		<meta name="keywords" content="opinion mining, sentiment analysis, scientometrics, domain analysis, visual analytics" />
+ 
+ 
+		<!--leave the following to be completed by the Editor-->  
+		<meta name="robots" content="all" />  
+		<meta name="dcterms.publisher" content="Professor T.D. Wilson" />
+		<meta name="dcterms.type" content="text" />  
+		<meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+		<meta name="dcterms.identifier" content="http://InformationR.net/ir/22-1/paper739.html" />  
+		<meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/22-1/infres221.html" />  
+		<meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+		<meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+		<meta  name="dcterms.issued" content="2017-03-15" /> 
+		<meta name="geo.placename" content="global" />  
+
+ 
+	</head> 
+  
+	<body> 
+		<header>
+			<img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">published quarterly by the university of bor&aring;s, sweden<br /><br />vol. 22  no. 1, March, 2017</span>
+			<br /><br /> 
+			<div class="button">
+				<ul> 
+				<li><a href="infres221.html">Contents</a> |  </li> 
+				<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+				<li><a href="../irsindex.html">Subject index</a> |  </li> 
+				<li><a href="../search.html">Search</a> |  </li> 
+				<li><a href="../index.html">Home</a> </li> 
+				</ul>
+			</div>
+			<hr />
+		</header>
+		<article>
+			<h1>An investigation of the intellectual structure of opinion mining research</h1>  <br />  
+			<h2 class="author"><a href="paper739.html#author">Yongjun Zhu, Meen Chul Kim</a>,  and <a href="paper739.html#author">Chaomei Chen</a></h2>  
+		 
+			<br /> 
+
+					<blockquote>
+						<strong>Introduction.</strong> Opinion mining has been receiving increasing attention from a broad range of scientific communities since early 2000s. The present study aims to systematically investigate the intellectual structure of opinion mining research.<br />
+						<strong>Method.</strong> Using topic search, citation expansion, and patent search, we collected 5,596 bibliographic records of opinion mining research. Then, intellectual landscapes, emerging trends, and recent developments were identified. We also captured domain-level citation trends, subject category assignment, keyword co-occurrence, document co-citation network, and landmark articles.<br />
+						<strong>Analysis.</strong> Our study was guided by scientometric approaches implemented in CiteSpace, a visual analytic system based on networks of co-cited documents. We also employed a dual-map overlay technique to investigate epistemological characteristics of the domain.<br />
+						<strong>Results.</strong> We found that the investigation of algorithmic and linguistic aspects of opinion mining has been of the community’s greatest interest to understand, quantify, and apply the sentiment orientation of texts. Recent thematic trends reveal that practical applications of opinion mining such as the prediction of market value and investigation of social aspects of product feedback have received increasing attention from the community.<br />
+						<strong>Conclusion.</strong> Opinion mining is fast-growing and still developing, exploring the refinements of related techniques and applications in a variety of domains. We plan to apply the proposed analytics to more diverse domains and comprehensive publication materials to gain more generalized understanding of the true structure of a science.<br />
+					</blockquote>  
+
+
+			<section>
+ 
+			<h2>Introduction</h2> 
+				<p>Opinion mining refers to the task of finding opinions of people about specific entities (<a href="paper739.html#fel13">Feldman, 2013</a>). It employs computational linguistics and natural language processing to identify and extract subjective information from source texts. Sentiment analysis, which parallels opinion mining, aims to quantify and determine the polarity of an individual with regards to judgement, affective state, or emotion (<a href="paper739.html#pan08">Pang and Lee, 2008</a>). Sentiment analysis is used to automatically analyse evaluative texts and materials. Opinion mining and sentiment analysis are often seen as interchangeable concepts and express a mutual meaning (<a href="paper739.html#med14">Medhat, Hassan, and Korashy, 2014</a>). Pang and Lee (<a href="paper739.html#pan04">2004</a>) described the year of 2001 as the beginning of widespread awareness of opinion mining and sentiment analysis. Most of the early studies placed emphasis on proposing computational techniques to measure the sentiment orientation of product reviews in a binary way (<a href="paper739.html#thet10">Thet, Na, and Khoo, 2010</a>). Recent studies have been working on in-depth examination of source texts with a variety of techniques and units of analysis such as document, sentence, feature, or aspect. Within this context, these has been an exponentially increasing number of articles written on this topic (See Figure 2). Hundreds of startup companies are also developing sentiment analysis solutions and software packages (<a href="paper739.html#fel13">Feldman, 2013</a>).</p>
+				<p>As the volume of the literature has exponentially grown, a wide range of communities has also paid large attention to opinion mining. Thus, a systematic analysis of the intellectual structure of the field is needed to understand its main applications and current challenges.  The systematic domain analysis will allow the followings. First, it helps the opinion mining community to be more self-explanatory as it has a detailed bibliometric profile. Secondly, researchers in the field can benefit from the systematic domain analysis by better positioning their research, identifying research trends, and expanding research territories. Finally, it guides researchers who are interested in the field to learn about emerging trends and current challenges. To our knowledge, however, there has been little concerted effort which aims to systematically understand the intellectual landscapes in opinion mining. The motivation of the present study lies in our intention to identify the intellectual structure of opinion mining and sentiment analysis research in a quantitative and systematic manner. We explored thematic patterns, landmark articles, emerging trends, and new developments of the field. In particular, our study was guided by a computational approach implemented in CiteSpace, a visual analytic system for illustrating emerging trends and critical changes in scientific literature (<a href="paper739.html#che06">Chen, 2006</a>; <a href="paper739.html#che12">Chen <em>et al.</em>, 2012</a>). We also employed a dual-map overlay technique (<a href="paper739.html#che14">Chen and Leydesdorff, 2014</a>) to expand the present study to the investigation of citation patterns at a disciplinary level  . </p>
+				<p>In what follows, three research questions frame our investigation:</p>
+					<ul>
+						<li><em>Research question #1</em>: what are epistemological characteristics of opinion mining research? </li>
+						<li><em>Research question #2</em>: which thematic patterns of research do occur in the domain? </li>
+						<li><em>Research question #3</em>: what are emerging trends and recent developments in the field?</li>
+					</ul>
+				<p>The rest of the study is organized as follows. First, we survey preceding work. Then, the scientometric methodology of the study is introduced. We describe intellectual structure of the field and key findings. This is followed by the conclusion and proposed future study.</p>
+
+			<h2>Related work</h2>
+				<p>To date, there has been little research that has systematically investigated comprehensive intellectual landscapes and emerging research trends in opinion mining. Therefore, we examined review articles on opinion mining since review papers aim to survey and synthesize key findings and research trends in a specific domain of interest. Pang and Lee (<a href="paper739.html#pan08">2008</a>) presented a detailed review on broad aspects of opinion mining and sentiment analysis. This survey featured applications of opinion mining and sentiment analysis such as classification and extraction of textual units and summarization of sentiment information from a set of single and multi-documents. Based on the authors’ expertise on the field, a large number of articles were surveyed. A list of classifiers and their performance in grouping opinions were discussed by Govindarajan and Romina (<a href="paper739.html#gov13">2013</a>). They summarized the performance of naive Bayes, support vector machine, and genetic algorithm on a variety of data sources along with the selection of different features. Evolution of the field and its future research trends can be found at a work done by Cambria and colleagues (<a href="paper739.html#cam13">2013</a>). They reviewed 1) opinion mining techniques ranging from heuristics to discourse structure, 2) different levels of analysis ranging from document-level to aspect-level, and 3) four approaches regarding the identification of implicit information associated with word tokens such as keyword spotting, lexical affinity, statistical methods, and concept-based approaches. The authors considered the multi-modal sentiment analysis as one of the promising approaches, laying stress on the importance of investigating a variety of sources such as textual, acoustic, and video features. Feldman (<a href="paper739.html#fel13">2013</a>) discussed opinion mining techniques to solve five specific problems: 1) document-level sentiment analysis, 2) sentence-level sentiment analysis, 3) aspect-level sentiment analysis, 4) comparative sentiment analysis, and 5) sentiment lexicon acquisition. He introduced major applications of sentiment analysis such as customer review mining towards products and services, preference mining on candidates running for political positions, and market value prediction. Medhat and colleagues (<a href="paper739.html#med14">2014</a>) surveyed 54 research papers on algorithms and applications of sentiment analysis. They categorized these papers into six groups: 1) sentiment analysis, 2) sentiment classification, 3) feature selection, 4) emotion detection, 5) building resource, and 6) transfer learning. This paper showed that naive Bayes and support vector machine are the most frequently used techniques for grouping opinions. In addition, WordNet was said to be the most commonly used lexical source to solve sentiment analysis problems. </p>
+				<p>The review articles discussed above examined a variety of aspects of opinion mining research. However, there has been little concerted effort to investigate emerging trends and recent developments in opinion mining in such a comprehensive, systematic, and computationally driven manner that we use in the present study. In addition, one commonality of these papers is that the surveyed articles were selected based on prior domain knowledge or without specific selection criteria. While aggregated and/or brief discussions on individual papers were provided, the implication and importance of individual papers to the field were missing. This may have helped readers approach individual papers more systematically and selectively for a deeper understanding. The absence of clear thematic categories is also one possible limitation of these reviews. Therefore, these surveys lack objectivity and clarity in describing the intellectual structure and emerging trends in the field. Since opinion mining is a developing, fast-growing domain, a systematic and comprehensive investigation of intellectual landscapes and recent developments is essential. To bridge these gaps, the present study aimed to explore the intellectual structure of the field through a bibliometric analysis of extensive scientific literature, taking a variety of units of analysis into account. We also took a close look at landmark articles of the field that are chosen by multi-faceted criteria.</p>
+
+			<h2>Methods</h2>	
+            
+				<p>In this section, we introduce the data collection method and analytical approaches of the present study. The research procedure is shown in Figure 1.</p>
+				<figure class="centre">
+					<img src="p739fig1.png" alt="Figure 1: Research procedure" width="651" height="357"/>
+					<figcaption>Figure 1: Research procedure</figcaption>
+				</figure>
+			
+			<h3>Data collection</h3>	
+				<p>The goal of the present study was to explore the intellectual structure of opinion mining research. We aimed to identify thematic patterns, research networks, emerging trends and new developments, together with landmark articles in the domain. Toward that end, we retrieved bibliographic records from the Web of Science, using a topic search. There were two problems that we encountered with this data collection approach per se. First, it is acknowledged that the topic search does not include relevant records if querying terms do not appear in the targeted fields such as titles, abstracts, and keywords. In addition, despite the fact that conference proceedings are a common document type in computer and information-related sciences, the Web of Science under-represents publications from conferences (<a href="paper739.html#kim15">Kim and Chen, 2015</a>). To remedy these issues, we employed a two-step complementary approach in data collection. First, we assumed that if an article cites at least one of the records retrieved by the topic search, then the article is topically relevant to opinion mining (<a href="paper739.html#che12">Chen, Hu, Liu, and Tseng, 2012</a>). As Garfield (<a href="paper739.html#gar79">1979</a>) argues, citation indexing is an alternative strategy to capture a much broader context of a study. Therefore, we collected additional records, using a citation expansion implemented on the Web of Science. The dataset obtained by the topic search was regarded as the core dataset and the expanded one represents a broader context of the core. Using the citation expansion supports our goal to explore much broader landmark references influencing emerging trends and recent developments in opinion mining. Second, we triangulated our data collection by conducting patent and citation searches on Derwent Innovations Index. This database indexes technological inventions in chemical, electrical, electronic, and mechanical engineering.</p>
+				<p>The detailed procedure of our data collection is as follows. First, a data collection method proposed by preceding scientometric research (<a href="paper739.html#che14a">Chen, Dubin, and Kim, 2014a</a>, <a href="paper739.html#che14b">b</a>; <a href="paper739.html#kim15">Kim and Chen, 2015</a>; <a href="paper739.html#kim16">Kim, Zhu, and Chen, 2016</a>) was used. For this basic search, four query phrases identified as representative for the domain were used: <em>“opinion mining”</em> OR <em>“sentiment anal*”</em> OR <em>“subjectivity anal*”</em> OR <em>“review mining”</em>. We employed the wildcard * to capture relevant variations of a word, including no character, such as sentiment analysing and sentiment analytics. The use of double quotation marks helped queries considered to be clauses. Then, a record was regarded as relevant if any of the terms is found in the title, abstract or keyword fields of the record. The queries resulted in 2,010 records from 2002 through 2015 as of August 31 2016 when considering articles, proceeding papers, and review articles as representative record types. Then, the core records were cited by 3,418 articles, proceedings, and review articles on the Web of Science. Finally, the query set returned 168 patent records between 2005 and 2015 from Derwent Innovations Index. We integrated all of these data sets and used the merged one for the present scientometric investigation. Table 1 describes the brief statistics of the dataset. Figure 2 depicts the number of records over time. As depicted in the figure, opinion mining has received exponentially increasing attention from the community. Table 2 describes the query terms used to search records and the number of corresponding records to each term. It shows <em>“sentiment anal*”</em> contributes the literature most.</p>
+ 
+				<table class="center">  
+					<caption><br />Table 1: Data statistics</caption> 
+					<tbody>
+						<tr>
+							<th>Dataset</th>
+							<th>Duration</th>
+							<th>Results</th>
+							<th>Articles</th>
+							<th>Proceedings</th>
+							<th>Reviews</th>
+							<th>Authors</th>
+							<th>References</th>
+							<th>Keywords</th>
+						</tr>	
+						<tr>
+							<td>Core</td>
+							<td style="text-align:center">2002-2015</td>
+							<td style="text-align:center">2,010</td>
+							<td style="text-align:center">643</td>
+							<td style="text-align:center">1,322</td>
+							<td style="text-align:center">45</td>
+							<td style="text-align:center">6,470</td>
+							<td style="text-align:center">52,948</td>
+							<td style="text-align:center">12,815</td>
+						</tr>
+ 						<tr>
+							<td>Expanded</td>
+							<td style="text-align:center">2005-2016</td>
+							<td style="text-align:center">3,418</td>
+							<td style="text-align:center">2,170</td>
+							<td style="text-align:center">1,222</td>
+							<td style="text-align:center">126</td>
+							<td style="text-align:center">11,354</td>
+							<td style="text-align:center">150,503</td>
+							<td style="text-align:center">31,393</td>
+						</tr>
+						<tr>
+							<td>Patent</td>
+							<td style="text-align:center">2005-2015</td>
+							<td style="text-align:center">168</td>
+							<td style="text-align:center">-</td>
+							<td style="text-align:center">-</td>
+							<td style="text-align:center">-</td>
+							<td style="text-align:center">577</td>
+							<td style="text-align:center">936</td>
+							<td style="text-align:center">1,047</td>
+						</tr>
+					</tbody>
+				</table> 
+				
+				<figure class="centre">
+					<img src="p739fig2.png" alt="Figure 2: Records distribution over time" width="600" height="371"/>
+					<figcaption>Figure 2: Records distribution over time</figcaption>
+				</figure>
+
+				<table class="center">  
+					<caption><br />Table 2: Query terms and retrieved records (in descending order of the number of core records)</caption> 
+					<tbody>
+						<tr>
+							<th>Query term</th>
+							<th>Core dataset</th>
+							<th>Expanded dataset</th>
+							<th>Patent dataset</th>
+						</tr>	
+						<tr>
+							<td>sentiment anal*</td>
+							<td style="text-align:center">1,615</td>
+							<td style="text-align:center">2,972</td>
+							<td style="text-align:center">149</td>
+						</tr>
+ 						<tr>
+							<td>opinion mining</td>
+							<td style="text-align:center">767</td>
+							<td style="text-align:center">1,591</td>
+							<td style="text-align:center">17</td>
+						</tr>
+						<tr>
+							<td>subjectivity anal*</td>
+							<td style="text-align:center">34</td>
+							<td style="text-align:center">213</td>
+							<td style="text-align:center">1</td>
+						</tr>
+						<tr>
+							<td>review mining</td>
+							<td style="text-align:center">30</td>
+							<td style="text-align:center">76</td>
+							<td style="text-align:center">1</td>
+						</tr>
+					</tbody>
+				</table> 
+ 
+			<h3>Investigation of the intellectual landscapes, emerging trends, and new developments in opinion mining</h3>
+				<p>Scientometrics is the quantitative study of science. We employed scientometric approaches to analyse bibliographic records for the present domain analysis. There are several advantages in our study in comparison with a conventional domain analysis as follows (<a href="paper739.html#che14b">Chen, Dubin, and Kim, 2014b</a>). Firstly, a much broader and more diverse range of relevant topics can be explored due to the use of citation expansion and patent records. Secondly, this kind of domain investigation can be conducted as frequently as needed, although an inquirer does not have prior expertise in a targeted domain. Finally, a scientometric analysis provides an additional point of reference.</p>
+				<p>CiteSpace, developed by Chen (<a href="paper739.html#che06">2006</a>), is a scientometric toolbox to generate and analyse networks of co-cited references using bibliographic records. The input is a collection of academic literature relevant to a specific topic. Given bibliographic records  , this tool computationally detects and depicts thematic patterns and emerging trends in science. On top of this, CiteSpace provides a visual representation called a dual-map overlay which renders a domain-level view of the growth of the literature (<a href="paper739.html#che14">Chen and Leydesdorff, 2014</a>).</p>
+				<p>In a scientometric study, the intellectual landscapes of a scientific domain can be represented by a variety of networked entities such as cited references and keywords (<a href="paper739.html#che14b">Chen, Dubin, and Kim, 2014b</a>). Specifically, we focused on document citation networks and networks of co-occurring keywords to explore emerging trends and recent developments in opinion mining research. The key features of the present investigation include: 1) domain-level citation paths, 2) frequently assigned subject categories, 3) keyword co-occurrence, 4) networks of highly cited references, and 5) influential articles selected by a variety of metrics.</p>
+		
+			<h3>Terminology</h3>
+				<p>In order to clearly communicate the technical approaches and findings of the present study to the audience, we introduce structural measures and text mining techniques used in this paper as follows:</p>
+				<p><em>g-index</em>: The <em>g</em>-index, suggested by Egghe (<a href="paper739.html#egg06">2006</a>), is an author-level metric to measure the scientific productivity of an individual. It considers the unique largest number of the top <em>g</em> highly cited articles received together more than or equal to <em>g</em> square citations. Examining the entire entities in our data, <em>i.e.</em> keywords and cited references, may be computationally challenging. It may not intuitively communicate the true structure of the domain to the audience as well. In addition, we argue that employing the <em>g</em>-index in selecting core entities is sounder than using the <em>h</em>-index since the <em>g</em> number of cores is always at least as big as the <em>h</em> cores. Thus, we used <em>g</em>-index to select a significant fraction of frequently occurring keywords and cited articles within a 1-year slice of time  .</p>
+				<p><em>Pathfinder networks</em>: Bibliographic networks can be highly dense with many links between entities. Network pruning or link reduction, the process in order to systematically remove excessive links, can address this issue. Based on the proximity of entity pairs, pathfinder networks capture the shortest paths, so links are eliminated when they are not on shortest paths (<a href="paper739.html#sch89">Schvaneveldt, Durso, and Dearholt, 1989</a>). In this study, we employed pathfinder networks to eliminate redundant links between entities of analysis.  </p>
+				<p><em>Betweenness centrality</em>: Betweenness centrality is an indicator of a node considering the number of shortest paths from all vertices to all others that pass through the node (<a href="paper739.html#bra01">Brandes, 2001</a>). A node with a high value of betweenness centrality has a large influence on the transfer of information through the network (<a href="paper739.html#che11">Chen, 2011</a>). If a node provides the only link between two large but previously unconnected groups of nodes, it would have a very high degree of betweenness centrality. In our study, we regarded this topological property as a significant sign of a bibliographic entity’s influence.</p>
+				<p><em>Burstiness</em>: Kleinberg (<a href="paper739.html#kle02">2002</a>) proposed an algorithm called burst detection which captures the burstiness of events with certain features rising sharply in frequency. Based on this concept, an entity can be regarded as having bursting activities if it shows an intensive frequency of appearance during a specific duration of time. It overcomes the limitation of just considering the cumulative number of metrics such as citations as a measure of an entity’s impact.</p>
+				<p><em>Sigma</em>:  Sigma is a measure identifying scientific publications with topological burstiness. It is defined as (betweenness centrality + 1) to the power of burstiness such that the temporal brokerage mechanism plays more prominent role than the rate of raw citations (<a href="paper739.html#che09">Chen, <em>et al.</em>, 2009</a>). We regarded this metric as another important sign of a bibliographic entity’s structural burst.</p>
+				<p><em>Automatic cluster labelling</em>: In order to automatically label clusters of cited references, we extracted candidate terms from titles and abstracts of citing articles. In CiteSpace, these terms are selected by three different algorithms: 1) latent semantic indexing (LSI) (<a href="paper739.html#dee90">Deerwester, <em>et al.</em>, 1990</a>), 2) log-likelihood ratio (LLR) (<a href="paper739.html#dun93">Dunning, 1993</a>), and 3) mutual information (MI). Labels extracted by LSI tend to capture implicit semantic relationships across records, whereas those chosen by LLR and MI tend to reflect a unique aspect of a cluster (<a href="paper739.html#che10">Chen, Ibekwe-SanJuan, and Hou, 2010</a>).</p>
+				
+			<h2>Results</h2>
+			<h3>Research trends at a disciplinary level</h3>
+				<p>A dual-map overlay is an analytical approach that presents the domain-level concentration of citations through their reference paths (<a href="paper739.html#che14">Chen and Leydesdorff, 2014</a>). A base map depicts the interconnections of over 10,000 published journals and these journals are grouped into some regions that represent publications and citation activities at a domain level (<a href="paper739.html#che14a">Chen, Dubin, and Kim, 2014a</a>). The dual-map overlay of opinion mining research is displayed in Figure 3. In the visual representation, the left clusters, <em>i.e.</em> research fronts, represent where the retrieved records publish, while the right clusters indicate where they cite. Regions are labelled by common terms found in the underlying journals. Citation trajectories are distinguished by citing regions’ colours. The thickness of these trajectories is proportional to the z-score-scaled frequency of citations. Based on this map, we can identify patterns of how published articles in opinion mining refer to other intellectual bases (cited references). As rendered in the figure, there are four main citation paths in our dataset. Table 3 summarizes these paths with citing and cited region names. </p>
+				
+				<figure class="centre">
+					<img src="p739fig3.png" alt="Figure 3: Domain-level citation patterns in opinion mining research" width="714" height="333"/>
+					<figcaption>Figure 3: Domain-level citation patterns in opinion mining research</figcaption>
+				</figure>	
+				
+				<table class="center">  
+					<caption><br /><strong>Table 3: Citation trends at a domain level</strong></caption> 
+					<tbody>
+						<tr>
+							<th>Citing region</th>
+							<th>Cited region</th>
+							<th>z-score</th>
+						</tr>	
+						<tr>
+							<td>psychology, education, health</td>
+							<td>psychology, education, social</td>
+							<td style="text-align:center">7.729</td>
+						</tr>
+ 						<tr>
+							<td>mathematics, systems, mathematical</td>
+							<td>systems, computing, computer</td>
+							<td style="text-align:center">5.803</td>
+						</tr>
+						<tr>
+							<td>psychology, education, health</td>
+							<td>systems, computing, computer</td>
+							<td style="text-align:center">2.727</td>
+						</tr>
+						<tr>
+							<td>mathematics, systems, mathematical</td>
+							<td>psychology, education, social</td>
+							<td style="text-align:center">2.468</td>
+						</tr>
+					</tbody>
+				</table> 
+				
+				<p>The relationships are sorted by the z-scores in descending order where the values are rounded to the nearest thousandth. Each row is identified by the same colour of the corresponding path displayed in Figure 3. As described in Table 3, the domains the most frequently covering the records are: 1) <em>6. psychology, education, health</em>, and 2) <em>1. mathematics, systems, mathematical</em>.  Then, this literature is mostly influenced by <em>7. psychology, education, social</em> and <em>1. systems, computing, computer</em>. On top of these domains, <em>5. physics, materials, chemistry</em> (rendered in purple lines), <em>2. molecular, biology, immunology</em> (depicted in yellow lines), and <em>4. medicine, medical, clinical</em> (illustrated in green lines) contribute to the domain-level citation trends in opinion mining. It indicates a multidisciplinary aspect of opinion mining since publications from multiple domains contribute to the citation landscape of the domain. It also shows that social sciences study opinion mining and sentiment analysis within similar disciplinary contexts while the mathematical and algorithmic concepts of the domain are mostly influenced by the literature that investigates systems and computer (See the first and second rows of Table 3). Based on these observations, we argue that opinion mining research is partially multidisciplinary and partially monodisciplinary. We also identify an interdisciplinary characteristic as described at the third and fourth rows of Table 3. It is shown that psychological, educational, and biomedical investigations in opinion mining are based on systems perspectives of computing and vice versa.</p>
+				<p>A subject category of an article can also be regarded as evidence showing an upper-level thematic concentration of the article. In order to specify the findings above, we examined the Web of Science subject categories assigned to the records. Table 4 describes 20 subject categories most frequently given to the dataset. The table shows each category’s year of first occurrence, cumulative frequency, and betweenness centrality in descending order of the assignment frequency (third column). As described in the table, computer science, engineering, linguistics, and social sciences such as library and information science, business, economics, management, and psychology are among the leading subject categories in opinion mining. Among them, computer science, engineering, and their related fields have been assigned to the records most frequently. In addition, the category, interdisciplinary applications of computer science, shows to have the highest betweenness centrality of 0.21. It indicates that interdisciplinary applications of computer science have had the largest influence on the emergence, development, and diffusion of the ideas in opinion mining. In turn, psychology plays an important bridging role between domains that participate in opinion mining research (betweenness centrality: 0.20). It is also obvious that the publications from electrical engineering, artificial intelligence, linguistics, and library and information science have transferred scientific findings to opinion mining. Recently, opinion mining has received significant attention from operations research and management. It is also interesting to see that business and economics have published literature from the very early years of the domain. This may indicate that opinion mining started with an aim of understanding and scaling customers’ subjective opinions toward products. Based on these observations, we assume that the researchers in the domain began by investigating algorithmic, linguistic, and psychological aspects of opinion mining in order to understand, quantify, and measure the sentimental orientation of texts. Successive literature may have explored the improvement and practical applications of the techniques to multiple domains. In the next subsections, we try to understand these findings deeper at the keyword and reference levels.</p>
+ 
+				<table class="center">  
+					<caption><br /><strong>Table 4: Top 20 frequently assigned subject categories in the dataset</strong></caption> 
+					<tbody>
+						<tr>
+							<th>Category</th>
+							<th>First occurrence</th>
+							<th>Frequency</th>
+							<th>Centrality</th>
+						</tr>	
+						<tr>
+							<td>cs</td>
+							<td style="text-align:center">2003</td>
+							<td style="text-align:center">3,453</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>cs, artificial intelligence</td>
+							<td style="text-align:center">2003</td>
+							<td style="text-align:center">1,769</td>
+							<td style="text-align:center">0.10</td>
+						</tr>
+						<tr>
+							<td>cs, information systems</td>
+							<td style="text-align:center">2005</td>
+							<td style="text-align:center">1,671</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>cs, theory & methods</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">1,303</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>engineering</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">1,029</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>engineering, electrical</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">888</td>
+							<td style="text-align:center">0.14</td>
+						</tr>
+						<tr>
+							<td>cs, interdisciplinary apps.</td>
+							<td style="text-align:center">2004</td>
+							<td style="text-align:center">423</td>
+							<td style="text-align:center">0.21</td>
+						</tr>
+						<tr>
+							<td>info. sci. &amp; lib. sci.</td>
+							<td style="text-align:center">2005</td>
+							<td style="text-align:center">348</td>
+							<td style="text-align:center">0.07</td>
+						</tr>
+						<tr>
+							<td>business &amp; economics</td>
+							<td style="text-align:center">2002</td>
+							<td style="text-align:center">332</td>
+							<td style="text-align:center">0.02</td>
+						</tr>
+						<tr>
+							<td>ops. res. &amp; mgmt. sci.</td>
+							<td style="text-align:center">2008</td>
+							<td style="text-align:center">327</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>cs, software engineering</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">326</td>
+							<td style="text-align:center">0.01</td>
+						</tr>
+						<tr>
+							<td>linguistics</td>
+							<td style="text-align:center">2004</td>
+							<td style="text-align:center">251</td>
+							<td style="text-align:center">0.08</td>
+						</tr>
+						<tr>
+							<td>language &amp; linguistics</td>
+							<td style="text-align:center">2004</td>
+							<td style="text-align:center">227</td>
+							<td style="text-align:center">0.02</td>
+						</tr>
+						<tr>
+							<td>business</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">188</td>
+							<td style="text-align:center">0.06</td>
+						</tr>
+						<tr>
+							<td>telecommunications</td>
+							<td style="text-align:center">2008</td>
+							<td style="text-align:center">182</td>
+							<td style="text-align:center">0.06</td>
+						</tr>
+						<tr>
+							<td>cs, hardware &amp; architecture</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">182</td>
+							<td style="text-align:center">0.01</td>
+						</tr>
+						<tr>
+							<td>management</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">177</td>
+							<td style="text-align:center">0.04</td>
+						</tr>
+						<tr>
+							<td>robotics</td>
+							<td style="text-align:center">2008</td>
+							<td style="text-align:center">145</td>
+							<td style="text-align:center">0.00</td>
+						</tr>
+						<tr>
+							<td>cs, cybernetics</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">108</td>
+							<td style="text-align:center">0.04</td>
+						</tr>
+						<tr>
+							<td>psychology</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">106</td>
+							<td style="text-align:center">0.20</td>
+						</tr>
+					</tbody>
+				</table>
+			<h3>Keywords as indicators of emerging trends and new developments</h3>	
+				<p>The investigation of keywords can add richer interpretations to understanding the concentration of research themes since keywords represent underlying concepts of an article. Table 5 describes 20 keywords the most frequently given by authors and indexers to the records. It shows each keyword’s year of first occurrence, cumulative frequency, and betweenness centrality. Based on its frequency of appearance and centrality, it is evident that <em>sentiment analysis</em> is the keyword considered as the most representative of the literature from the early years of the domain. This keyword is followed by <em>opinion mining</em> which is the application of sentiment analysis to a variety of textual materials such as <em>web</em> and <em>review</em>. Following <em>sentiment analysis</em> (betweenness centrality: 0.20), <em>emotion</em> is also located on the shortest path connecting pairs of other concepts in opinion mining research (betweenness centrality: 0.19). It indicates that the identification and extraction of subjective information in source texts have been regarded as the most important concepts in opinion mining and had the largest influence on the growth of the domain. Technique-wise, <em>text mining</em>, <em>machine learning</em>, and <em>natural language processing</em> have been frequently employed to quantify sentiment analysis. Classification is among the most frequently investigated techniques, also being a goal of understanding the sentiment orientation of text. As reflected in the recent keywords such as <em>social media</em>, <em>twitter</em>, <em>social network</em>, and <em>word of mouth</em>, the literature now focuses on the practical applications of opinion mining to marketing and social networking platforms.  </p>
+				<table class="center">  
+					<caption><br />Table 5: Top 20 frequently occurring keywords in the dataset</caption> 
+					<tbody>
+						<tr>
+							<th>Keyword</th>
+							<th>First occurrence</th>
+							<th>Frequency</th>
+							<th>Centrality</th>
+						</tr>	
+						<tr>
+							<td>sentiment analysis</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">1,458</td>
+							<td style="text-align:center">0.20</td>
+						</tr>
+						<tr>
+							<td>opinion mining</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">721</td>
+							<td style="text-align:center">0.09</td>
+						</tr>
+						<tr>
+							<td>social media</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center">378</td>
+							<td style="text-align:center">0.07</td>
+						</tr>
+						<tr>
+							<td>twitter</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center">340</td>
+							<td style="text-align:center">0.06</td>
+						</tr>
+						<tr>
+							<td>classification</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">303</td>
+							<td style="text-align:center">0.07</td>
+						</tr>
+						<tr>
+							<td>text mining</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">246</td>
+							<td style="text-align:center">0.05</td>
+						</tr>
+						<tr>
+							<td>model</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">242</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>social network</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">207</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>machine learning</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">194</td>
+							<td style="text-align:center">0.07</td>
+						</tr>
+						<tr>
+							<td>emotion</td>
+							<td style="text-align:center">2005</td>
+							<td style="text-align:center">184</td>
+							<td style="text-align:center">0.19</td>
+						</tr>
+						<tr>
+							<td>word of mouth</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center">182</td>
+							<td style="text-align:center">0.07</td>
+						</tr>
+						<tr>
+							<td>web</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">179</td>
+							<td style="text-align:center">0.02</td>
+						</tr>
+						<tr>
+							<td>text</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">178</td>
+							<td style="text-align:center">0.11</td>
+						</tr>
+						<tr>
+							<td>information</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">174</td>
+							<td style="text-align:center">0.02</td>
+						</tr>
+						<tr>
+							<td>system</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">165</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>network</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">159</td>
+							<td style="text-align:center">0.03</td>
+						</tr>
+						<tr>
+							<td>natural language processing</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">154</td>
+							<td style="text-align:center">0.04</td>
+						</tr>
+						<tr>
+							<td>review</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center">153</td>
+							<td style="text-align:center">0.01</td>
+						</tr>
+						<tr>
+							<td>sentiment classification</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">145</td>
+							<td style="text-align:center">0.09</td>
+						</tr>
+						<tr>
+							<td>internet</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">132</td>
+							<td style="text-align:center">0.04</td>
+						</tr>						
+					</tbody>
+				</table>	
+				<p>Figure 4 (below) displays the co-occurrence network of these keywords. For the clarity of the figure, we only labelled keywords listed in Table 5. The size of a node is proportional to its frequency and each node is coloured by community membership (<a href="paper739.html#blo08">Blondel, Guillaume, Lambiotte, and Lefebvre, 2008</a>).  Finally, the more frequently keywords co-occur, the more closely they are located. As depicted in the figure, the formulation of the network is consistent with the findings above.</p>
+				
+				<figure class="centre">
+					<img src="p739fig4.png" alt="Figure 4: Keyword co-occurrence network" width="748" height="588"/>
+					<figcaption> Figure 4: Keyword co-occurrence network</figcaption>
+				</figure>	
+				<p>Table 6 (below) describes 20 keywords receiving the most intensive attention during a specific span of time. We sorted the keywords by the beginning years of the bursts so that we could identify temporal patterns. <em>Opinion mining</em> and <em>sentiment analysis</em> are among the most intensively bursting keywords across the entire time duration. <em>Sentiment classification</em> has been one of the most important goals from the earlier years. <em>Opinion extraction</em> is the task of automatically extracting structured opinions from unstructured data such as text. For <em>sentiment classification</em> and <em>opinion extraction</em>, <em>machine learning</em> and <em>text mining</em> have been employed from the community. In the previous section of examining trends in subject category assignment, we assumed that literature in an earlier stage may have explored linguistic aspects sentiment orientation. The burstiness of the keyword <em>language</em> complements this assumption. A variety of techniques to extract sentiment and to apply quantified subjectivity have shown bursting trends with <em>language</em> (See <em>information retrieval</em> and <em>information extraction</em>). Then, the automatic collection of a <em>corpus</em> from consumer contributed content such as <em>blog</em> has had large attention and <em>natural language processing</em> has been intensively employed to this end. Recently, there has been growing interest in applying <em>data mining</em> and <em>sentic computing</em> to a variety of textual genres such as <em>web</em> and <em>microblogging</em>. Thus, investigating the burstiness of keywords adds richer interpretations to the understanding of the emerging trends in opinion mining than just considering the cumulative number of keyword occurrence.</p>
+				
+				<table class="center">  
+					<caption><br /><strong>Table 6: Top 20 bursting keywords in the dataset (bursts rounded to the nearest thousandth)</strong> </caption> 					
+					<tbody>
+						<tr>
+							<th>Keyword</th>
+							<th>Burst</th>
+							<th>Begin</th>
+							<th>End</th>
+							<th>2002-2015</th>
+						</tr>	
+						<tr>
+							<td>opinion mining</td>
+							<td style="text-align:center">52.860</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂<span style="color:red">▃▃▃▃▃▃▃</span>▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>sentiment analysis</td>
+							<td style="text-align:center">8.549</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂<span style="color:red">▃▃▃▃▃▃</span>▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>sentiment classification</td>
+							<td style="text-align:center">7.197</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂<span style="color:red">▃▃▃▃▃▃</span>▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>machine learning</td>
+							<td style="text-align:center">4.859</td>
+							<td style="text-align:center">2006</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂<span style="color:red">▃▃▃▃</span>▂▂▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>text mining</td>
+							<td style="text-align:center">8.486</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂<span style="color:red">▃▃▃▃▃</span>▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>opinion extraction</td>
+							<td style="text-align:center">3.621</td>
+							<td style="text-align:center">2007</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂<span style="color:red">▃▃▃▃▃</span>▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>language</td>
+							<td style="text-align:center">9.148</td>
+							<td style="text-align:center">2008</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂<span style="color:red">▃▃▃▃▃</span>▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>information retrieval</td>
+							<td style="text-align:center">4.798</td>
+							<td style="text-align:center">2008</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂<span style="color:red">▃▃▃▃</span>▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>information extraction</td>
+							<td style="text-align:center">3.619</td>
+							<td style="text-align:center">2008</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂<span style="color:red">▃▃▃</span>▂▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>corpus</td>
+							<td style="text-align:center">2.729</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂<span style="color:red">▃▃▃▃</span>▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>blog</td>
+							<td style="text-align:center">5.115</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">2013</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂<span style="color:red">▃▃▃▃▃</span>▂▂</span></td>
+						</tr>
+						<tr>
+							<td>natural language processing</td>
+							<td style="text-align:center">3.434</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂<span style="color:red">▃▃</span>▂▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>opinion analysis</td>
+							<td style="text-align:center">3.684</td>
+							<td style="text-align:center">2009</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂<span style="color:red">▃▃▃</span>▂▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>data mining</td>
+							<td style="text-align:center">3.700</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂▂<span style="color:red">▃▃▃</span>▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>document</td>
+							<td style="text-align:center">3.796</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">2013</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂▂<span style="color:red">▃▃▃▃</span>▂▂</span></td>
+						</tr>
+						<tr>
+							<td>sentiment analysis</td>
+							<td style="text-align:center">7.981</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂▂<span style="color:red">▃▃▃</span>▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>web</td>
+							<td style="text-align:center">7.511</td>
+							<td style="text-align:center">2010</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂▂<span style="color:red">▃▃▃</span>▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>text analysis</td>
+							<td style="text-align:center">3.220</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center">2013</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂▂▂<span style="color:red">▃▃▃</span>▂▂</span></td>
+						</tr>
+						<tr>
+							<td>microblogging</td>
+							<td style="text-align:center">4.547</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂▂▂<span style="color:red">▃▃</span>▂▂▂</span></td>
+						</tr>
+						<tr>
+							<td>sentic computing</td>
+							<td style="text-align:center">3.922</td>
+							<td style="text-align:center">2011</td>
+							<td style="text-align:center">2012</td>
+							<td style="text-align:center"><span style="color:#42ebf4">▂▂▂▂▂▂▂▂▂<span style="color:red">▃▃</span>▂▂▂</span></td>
+						</tr>						
+					</tbody>
+				</table>
+			<h3>Document co-citation network</h3>
+				<p>Figure 5 (below) visualises the document co-citation network in the dataset. The network consists of <em>g</em> highly cited references within a given slice of time. Each node represents a cited article and the size of a node is proportional to its cited frequency. References with citation bursts are rendered with rings in red whereas nodes with purple rings have high betweenness centrality values. Landmark articles cited more than or equal to 133 times are labelled in black. Nodes are grouped in same lines by a clustering technique called smart local moving (<a href="paper739.html#wal13">Waltman and van Eck, 2013</a>). Clusters are numbered in such a way that higher rankings are given to the clusters containing more references. The colour legend at the top indicates that links and citations in cooler colours happen closely to the year of 2002 whereas hotter ones occur in close years to 2015. Referring to the legend, we can keep track of the thematic trends and temporal developments in opinion mining research.</p>
+				<figure class="centre">
+					<img src="p739fig5.png" alt="Figure 5: Timeline visualization of the network (labelled by LSA)" width="617" height="361"/>
+					<figcaption><br /> Figure 5: Timeline visualization of the network (labelled by LSI)</figcaption>
+				</figure>
+				<p>Considering both the size and recency of member nodes, we consider clusters #0 through #4 as representing emerging research themes in the domain. Table 7 summarizes these clusters in terms of number of member articles, three types of labels extracted from titles and abstracts, and average published year of citees. Among these clusters, cluster #0 is the largest and oldest one in terms of the cluster size and the mean year of cited references. The references in this cluster influenced successive research applying sentiment analysis to the investigations of social media and user requirements. It is interesting that even though social media is one of the recently appearing keywords (See Table 5), relatively old papers influenced research under this theme. Cluster #1 is the second largest and second oldest one. Literature citing references in this group focuses on mining opinion words and analysing customer preferences. Cluster #2, one of the most recent ones, consists of references which influenced successive research on developing a fuzzy system for the extraction of affective information. Cluster #3 includes references affecting later literature on understanding newspaper readers’ opinions and sharing behaviour on social media. Cluster #4 studies the application of sentiment analysis to comparing specific products. It coheres with the findings from examining subject categories as reflected in <em>management</em> and <em>business</em> (See Table 4) and keyword assignment (See <em>word of mouth</em> in Table 5).</p>
+				
+				<table class="center">  
+					<caption><br />Table 7: Emerging clusters in the dataset</caption> 					
+					<tbody>
+						<tr>
+							<th rowspan="2">Cluster</th>
+							<th rowspan="2">Size</th>
+							<th colspan="3">Cluster labelling technique</th>
+							<th rowspan="2">Mean year</th>
+						</tr>	
+						<tr>
+							<th>LSI</th>
+							<th>Log-likelihood ratio</th>
+							<th>Mutual information</th>
+						</tr>
+						<tr>
+							<td style="text-align:center">0</td>
+							<td style="text-align:center">44</td>
+							<td>sentiment analysis | key issues</td>
+							<td>social media</td>
+							<td>user requirement</td>
+							<td style="text-align:center">2004</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">1</td>
+							<td style="text-align:center">37</td>
+							<td>Pessimists | opinion mining</td>
+							<td>opinion word </td>
+							<td>customer preferences analysis</td>
+							<td style="text-align:center">2008</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">2</td>
+							<td style="text-align:center">35</td>
+							<td>sentiment analysis | explicit sentiment analysis</td>
+							<td>affective information</td>
+							<td>fuzzy system</td>
+							<td style="text-align:center">2011</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">3</td>
+							<td style="text-align:center">35</td>
+							<td>critical framing | new york times readers opinions</td>
+							<td>social media</td>
+							<td>sharing behavior</td>
+							<td style="text-align:center">2011</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">4</td>
+							<td style="text-align:center">26</td>
+							<td>comparison | german</td>
+							<td>electronic cigarette</td>
+							<td>comprehensive empirical comparison</td>
+							<td style="text-align:center">2010</td>
+						</tr>
+					</tbody>
+				</table>				
+			<h3>Landmark literature</h3>	
+				<p>Emerging trends and recent developments in a domain can be investigated in detail by surveying influential manuscripts of the discipline. For measuring the importance of an article, we considered a variety of indicators such as cumulative citation counts, intensity of citations during a specific span of time, topological importance, and burstiness of structural importance. Tables 8, 9, 10, and 11 show landmark articles identified by these criteria. Landmark articles are extracted from cited references. In each table, manuscripts are coloured as follows: 1) green: articles that appear three times across all the tables, 2) yellow: articles that appear in two tables, and 3) white: articles that only appear in one table. In reviewing them, we chose only the articles that appear at least twice across the tables. In addition, some articles are not considered for this discussion if they are review papers, books, and book chapters. Topically irrelevant articles are also omitted. We argue that they do not influence thematic patterns and emerging trends in a domain. Eight papers selected in this way are summarized in Table 12. In the following paragraphs, we discuss each of eight papers in chronological order.</p>
+                
+				<table class="center">  
+					<caption><br />Table 8: Top 10 highly cited articles in the dataset</caption> 					
+					<tbody>
+						<tr>
+							<th>Citation count</th>
+							<th>Reference</th>
+							<th>Cluster #</th>
+						</tr>	
+						<tr>
+							<td style="text-align:center">888</td>
+							<td>Pang and Lee (<a href="paper739.html#pan08">2008</a>)</td>
+							<td style="text-align:center">5</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">257</td>
+							<td>Taboada, <em>et al.</em> (<a href="paper739.html#tab11">2011</a>)</td>
+							<td style="text-align:center">5</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">256</td>
+							<td>Liu (<a href="paper739.html#liu10">2010</a>)</td>
+							<td style="text-align:center">5</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">190</td>
+							<td>Bollen, Mao, and Zeng (<a href="paper739.html#bol11">2011</a>) </td>
+							<td style="text-align:center">2</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">174</td>
+							<td style="background-color:#DCFF7F;">Thelwall, <em>et al.</em> (<a href="paper739.html#the10">2010</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">3</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">166</td>
+							<td>Ding, Liu, and Yu (<a href="paper739.html#din08">2008</a>)</td>
+							<td style="text-align:center">1</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">147</td>
+							<td>Abbasi, Chen, and Salem (<a href="paper739.html#abb08">2008</a>) </td>
+							<td style="text-align:center">9</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">144</td>
+							<td>Wilson, Wiebe, and Hoffmann (<a href="paper739.html#wil09">2009</a>) </td>
+							<td style="text-align:center">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">142</td>
+							<td>Liu (<a href="paper739.html#liu12">2012</a>)</td>
+							<td style="text-align:center">7</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">133</td>
+							<td>Cambria, Schuller, Xia, and Havasi (<a href="paper739.html#cam13">2013</a>)</td>
+							<td style="text-align:center">1</td>
+						</tr>
+					</tbody>
+				</table>
+                <br /><br />
+				<table class="center">  
+					<caption><br />Table 9: Top 10 articles with the highest citation bursts</caption> 					
+					<tbody>
+						<tr>
+							<th>Burst</th>
+							<th>Reference</th>
+							<th>Cluster #</th>
+						</tr>	
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">51.24</td>
+							<td style="background-color:#DCFF7F;">Turney (<a href="paper739.html#tur02">2002</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">11</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">47.15</td>
+							<td style="background-color:#DCFF7F;">Pang, Lee, and Vaithyanathan (<a href="paper739.html#pan02">2002</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">46.48</td>
+							<td style="background-color:#DCFF7F;">Turney and Littman (<a href="paper739.html#tur03">2003</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">35.94</td>
+							<td>Wiebe, <em>et al.</em> (<a href="paper739.html#wie04">2004</a>) </td>
+							<td style="text-align:center">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">34.39</td>
+							<td>Pang and Lee (<a href="paper739.html#pan04">2004</a>)</td>
+							<td style="text-align:center">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">28.45</td>
+							<td>Dave, Lawrence, and Pennock (<a href="paper739.html#dav03">2003</a>)</td>
+							<td style="text-align:center">10</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">22.54</td>
+							<td style="background-color:#DCFF7F;">Kim and Hovy (<a href="paper739.html#kim04">2004</a>) </td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">21.49</td>
+							<td>Wilson (<a href="paper739.html#wil05">2005</a>)  </td>
+							<td style="text-align:center">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#96FFB7">20.18</td>
+							<td style="background-color:#96FFB7">Liu, Hu, and Cheng (<a href="paper739.html#liu05">2005</a>)</td>
+							<td style="text-align:center; background-color:#96FFB7">1</td>
+						</tr>
+						<tr> 
+							<td style="text-align:center; background-color:#96FFB7">13.27</td>
+							<td style="background-color:#96FFB7">Pang and Lee (<a href="paper739.html#pan05">2005</a>)</td>
+							<td style="text-align:center; background-color:#96FFB7">10</td>
+						</tr>
+					</tbody>
+				</table>
+                <br /><br />
+				<table class="center">  
+					<caption><br />Table 10: Top 10 articles with the highest betweenness centrality values</caption> 					
+					<tbody>
+						<tr>
+							<th>Centrality</th>
+							<th>Reference</th>
+							<th>Cluster #</th>
+						</tr>	
+						<tr>
+							<td style="text-align:center">0.14</td>
+							<td>Jindal and Liu (<a href="paper739.html#jin08">2008</a>)</td>
+							<td style="text-align:center">10</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#96FFB7">0.12</td>
+							<td style="background-color:#96FFB7">Pang and Lee (<a href="paper739.html#pan05">2005</a>)</td>
+							<td style="text-align:center; background-color:#96FFB7">10</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">0.12</td>
+							<td>Chevalier and Mayzlin (<a href="paper739.html#chev06">2006</a>)</td>
+							<td style="text-align:center">6</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">0.12</td>
+							<td>Tang, Tan, and Cheng (<a href="paper739.html#tan09">2009</a>) </td>
+							<td style="text-align:center">5</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#96FFB7">0.11</td>
+							<td style="background-color:#96FFB7">Liu, Hu, and Cheng (<a href="paper739.html#liu05">2005</a>)</td>
+							<td style="text-align:center; background-color:#96FFB7">1</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">0.10</td>
+							<td>Kanayama and Nasukawa (<a href="paper739.html#kan06">2006</a>)</td>
+							<td style="text-align:center">1</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">0.10</td>
+							<td style="background-color:#DCFF7F;">Thelwall, <em>et al.</em> (<a href="paper739.html#the10">2010</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">3</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">0.10</td>
+							<td>Qiu, Liu, Bu, and Chen (<a href="paper739.html#qiu11">2011</a>)</td>
+							<td style="text-align:center">1</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">0.09</td>
+							<td>Wilson (<a href="paper739.html#wil05">2005</a>)</td>
+							<td style="text-align:center">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">0.09</td>
+							<td style="background-color:#DCFF7F;">Riloff, Wiebe, and Wilson (<a href="paper739.html#ril03">2003</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+					</tbody>
+				</table>
+                <br /><br />
+				<table class="center">  
+					<caption><br />Table 11: Top 10 articles with the highest sigma</caption> 					
+					<tbody>
+						<tr>
+							<th>Sigma</th>
+							<th>Reference</th>
+							<th>Cluster #</th>
+						</tr>	
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">26.48</td>
+							<td style="background-color:#DCFF7F;">Pang, Lee, and Vaithyanathan (<a href="paper739.html#pan02">2002</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">18.09</td>
+							<td style="background-color:#DCFF7F;">Turney (<a href="paper739.html#tur02">2002</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">11</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">14.54</td>
+							<td style="background-color:#DCFF7F;">Turney and Littman (<a href="paper739.html#tur03">2003</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#96FFB7">7.62</td>
+							<td style="background-color:#96FFB7">Liu, Hu, and Cheng (<a href="paper739.html#liu05">2005</a>) </td>
+							<td style="text-align:center; background-color:#96FFB7">1</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">6.12</td>
+							<td>Wilson (<a href="paper739.html#wil05">2005 </a>)</td>
+							<td style="text-align:center">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">4.41</td>
+							<td>Chevalier and Mayzlin (<a href="paper739.html#chev06">2006</a>)</td>
+							<td style="text-align:center">6</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#96FFB7">4.32</td>
+							<td style="background-color:#96FFB7">Pang and Lee (<a href="paper739.html#pan05">2005</a>) </td>
+							<td style="text-align:center; background-color:#96FFB7">10</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">4.21</td>
+							<td style="background-color:#DCFF7F;">Kim and Hovy (<a href="paper739.html#kim04">2004</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center; background-color:#DCFF7F;">3.90</td>
+							<td style="background-color:#DCFF7F;">Riloff, Wiebe, and Wilson (<a href="paper739.html#ril03">2003</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+						</tr>
+						<tr>
+							<td style="text-align:center">2.63</td>
+							<td>Yu and Hatzivassiloglou (<a href="paper739.html#yu03">2003</a>)</td>
+							<td style="text-align:center">0</td>
+						</tr>
+					</tbody>
+				</table>
+<br /><br />
+				<table class="center">  
+					<caption><br />Table 12: Select landmark articles in the dataset</caption> 					
+					<tbody>
+						<tr>
+							<th>Reference</th>
+							<th>Cluster #</th>
+							<th>Citation</th>
+							<th>Burst</th>
+							<th>Centrality</th>
+							<th>Sigma</th>
+						</tr>	
+						<tr>
+							<td style="background-color:#96FFB7">Liu, Hu, and Cheng (<a href="paper739.html#liu05">2005</a>) </td>
+							<td style="text-align:center; background-color:#96FFB7">1</td>
+							<td style="text-align:center; background-color:#96FFB7"></td>
+							<td style="text-align:center; background-color:#96FFB7">X</td>
+							<td style="text-align:center; background-color:#96FFB7">X</td>
+							<td style="text-align:center; background-color:#96FFB7">X</td>
+						</tr>
+						<tr>
+							<td style="background-color:#96FFB7">Pang and Lee (<a href="paper739.html#pan05">2005</a>)</td>
+							<td style="text-align:center; background-color:#96FFB7">10</td>
+							<td style="text-align:center; background-color:#96FFB7"></td>
+							<td style="text-align:center; background-color:#96FFB7">X</td>
+							<td style="text-align:center; background-color:#96FFB7">X</td>
+							<td style="text-align:center; background-color:#96FFB7">X</td>
+						</tr>
+						<tr>
+							<td style="background-color:#DCFF7F;">Turney (<a href="paper739.html#tur02">2002</a>) </td>
+							<td style="text-align:center; background-color:#DCFF7F;">11</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+						</tr>
+						<tr>
+							<td style="background-color:#DCFF7F;">Pang, Lee, and Vaithyanathan (<a href="paper739.html#pan02">2002</a>) </td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+						</tr>
+						<tr>
+							<td style="background-color:#DCFF7F;">Turney and Littman (<a href="paper739.html#tur03">2003</a>) </td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+						</tr>
+						<tr>
+							<td style="background-color:#DCFF7F;">Riloff, Wiebe, and Wilson (<a href="paper739.html#ril03">2003</a>) </td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+						</tr>
+						<tr>
+							<td style="background-color:#DCFF7F;">Kim and Hovy (<a href="paper739.html#kim04">2004</a>)</td>
+							<td style="text-align:center; background-color:#DCFF7F;">0</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+						</tr>
+						<tr>
+							<td style="background-color:#DCFF7F;">Thelwall, <em>et al.</em> (<a href="paper739.html#the10">2010</a>) </td>
+							<td style="text-align:center; background-color:#DCFF7F;">3</td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+							<td style="text-align:center; background-color:#DCFF7F;">X</td>
+							<td style="text-align:center; background-color:#DCFF7F;"></td>
+						</tr>
+					</tbody>
+				</table>	
+				<p>Turney (<a href="paper739.html#tur02">2002</a>) proposed an unsupervised learning algorithm using mutual information to classify reviews into positive and negative groups. The method calculates the semantic orientation of a phrase, considering mutual information between the phrase and the sentiment groups, <em>excellent</em> and <em>poor</em>. The semantic orientation of a review is then classified compared to the average semantic orientation of included phrases. The proposed technique achieved an average accuracy of 74%, given a dataset consisting of documents on automobiles, banks, movies, and travels. Even though the method is simple and straightforward, the performance of the method needs to be further validated, due to the limited size of the dataset. </p>
+				<p>Pang, Lee, and Vaithyanathan (<a href="paper739.html#pan02">2002</a>) tested the performance of three machine learning algorithms: Naïve Bayes, maximum entropy classification, and support vector machine on the sentiment classification of movie reviews. In testing these algorithms, they employed different feature sets such as unigrams, bigrams, and parts of speech. The support vector machine based on unigrams achieved the best performance, which reached 82.9%. The contribution of the work lies in its broad investigation of different features in classifying peoples’ opinions. The authors laid stress on the importance of identifying plausible features that screen whether sentences are on-topic. The application of these approaches to other domains might be helpful for strengthening the generalizability of the study.</p>
+				<p>Turney and Littman (<a href="paper739.html#tur03">2003</a>) introduced a method that infers the semantic orientation of words based on their statistical associations with other positive and negative words. Two co-occurrence based measures, pointwise mutual information and latent semantic analysis, were employed in the study. The evaluation showed an accuracy of 82% and it could be raised up to 95% when applied to mild words. The proposed approach can be applied to a variety of parts of speech such as adjectives, adverbs, nouns, and verbs. The limitation of the method is that it requires a large size of corpora to calculate significant statistical associations among words to achieve better performance.</p>
+				<p>Riloff, Wiebe, and Wilson (<a href="paper739.html#ril03">2003</a>) proposed a system that classifies subjective and object sentences. The system uses extraction patterns to learn subjective nouns using bootstrapping algorithms. Then, a Naïve Bayes classifier was trained using the identified subjective nouns and other features such as discourse features and subjective clues. Results showed that the system achieved 77% recall and 81% precision. A contribution of the work is the use of bootstrapping methods for the identification of extraction patterns.</p>
+				<p>Kim and Hovy (<a href="paper739.html#kim04">2004</a>) proposed a system that determines the sentiment of opinions by examining people who hold opinions toward a given a topic. The system has modules for determining sentiments of words as well as sentences that contain those words. To achieve this, they started with selecting less than 100 seed words (both positive and negative) manually and expanded the list by extracting additional words from WordNet, and finally obtained 20,000 words with the polarity information. They proposed three models with different ways of combing sentiments of individual words: a model that only considers polarities, a model that uses the harmonic mean of sentiment strengths, and a model that uses the geometric mean of sentiment strengths. Evaluation showed that the highest score the system achieved was 81% accuracy. </p>
+				<p>Liu, Hu, and Cheng (<a href="paper739.html#liu05">2005</a>) proposed a system that analyses online customers’ reviews toward products. The system supports a feature-by-feature comparison of customer opinions. A language pattern mining-based approach was proposed for the extraction of product features. This system provides a visual comparison of consumer opinions on competing products. A contribution of this work is the proposal of a supervised pattern discovery method that supports the automated identification of products features from Pros and Cons. </p>
+				<p>Pang and Lee (<a href="paper739.html#pan05">2005</a>) proposed a meta-algorithm for rating-inference problem that take multi-point scale of rating into account. Instead of classifying a review as either positive or negative, they viewed the problem as a multi-category classification. They compared the performance of three approaches: multiclass SVM (OVA), regression, and metric labelling on the task. While there was no single approach that performed best in every cases, each approached showed its own strength in different tasks. </p>
+				<p>Thelwall and colleagues (<a href="paper739.html#the10">2010</a>) proposed a novel algorithm to extract sentiment strength from informal English text. They employed a machine learning approach to optimize sentiment term weightings. The authors extracted sentiment information from texts of nonstandard spelling. An evaluation was performed on MySpace comments and results showed that the proposed method achieved 60% and 72% accuracy in predicting positive and negative emotion respectively.</p>
+				<p>The literature discussed here has examined how to define and quantify the semantic orientation of texts, using lexicon- and/or machine learning-based approaches. Lexicon-based approaches examine words or phrases in a document and use metrics such as mutual information to judge their semantic orientation. Machine learning-based techniques employ widely accepted algorithms such as Naive Bayes and support vector machines. These techniques train classifiers with labelled sentiment. On top of this, classification was among the most frequently employed techniques. In general, lexicon-based techniques   show lower performance but higher applicability, <em>i.e.</em> can be applied to many domains, while machine learning-based techniques outperform, but are only applicable to limited domains. These approaches have been applied to a variety of units of analysis, ranging from individual words to complete reviews that are comprised of multiple sentences.</p>
+				<p>To sum up, most of the landmark papers focused on the computation and grouping of sentiment orientation. Even though often context-specific, they provide practical implications towards the understanding and applications of sentiment analysis. These findings are also consistent with the findings in previous sections.</p>
+ 
+		<h2>Discussion</h2>
+			<h3>Research question #1: what are epistemological characteristics of opinion mining research?</h3>
+				<p>The investigation at the domain level reveals the following epistemological characteristics of opinion mining research. First, most of the studies came from two domain groups, <em>psychology, education, health</em> and <em>mathematics, systems, mathematical</em>, and each of these disciplinary groups cites research within similar fields, <em>psychology, education, social</em> and <em>systems, computing, computer</em>, respectively. The literature from other domains such as <em>physics, materials, chemistry, molecular, biology, immunology</em>, and <em>medicine, medical, clinical</em> also contribute to the domain-level citation trends. Second, we also identified the interdisciplinary nature of opinion mining: the two groups of domains frequently cross-reference to each other. Next, the advent and growth of opinion mining was mainly led by a few subject categories. Interdisciplinary applications of computer science and psychology were the driving forces that have had the largest influence on the emergence, development, and diffusion of the ideas in opinion mining. Moreover, opinion mining is relatively new and still developing. There are a few emerging research themes identified from keyword co-occurrence and document co-citation network. Finally, opinion mining has received large attention from multidisciplinary domains recently.</p>
+			<h3>Research question #2: which thematic patterns of research do occur in the domain?</h3>
+				<p>First, the subject category assignment shows that computer science, engineering, linguistics, and social sciences such as library and information science, business, economics, management, and psychology are among the leading categories in opinion mining research. In particular, computer science, psychology, electrical engineering, artificial intelligence, linguistics, and library and information have transferred important knowledge to the domain. Second, the exploration of keywords adds a richer interpretation: the identification and extraction of subjective information in source texts and the applications of sentiment analysis to a variety of textual materials have been regarded as one of the most important themes of the domain. The detection of emotion from source texts was the concept located on the shortest path connecting pairs of other concepts in opinion mining research. <em>Machine learning, text mining, data mining</em>, and <em>natural language processing</em> have been employed to this end. <em>Classification</em> is among the most frequently investigated techniques, also being a goal of understanding the sentiment orientation of text. The automatic collection of a <em>corpus</em> from a variety of textual genres such as <em>web</em>, <em>blog</em>, and <em>microblogging</em> has received large attention for opinion mining purposes. Finally, the examination of the landmark articles reveals that investigating algorithmic and linguistic aspects of sentiment analysis has been of the community’s greatest interest: they have put stress on understanding, quantifying, and applying the sentimental orientation of texts.</p>
+			<h3>Research question #3: what are emerging trends and recent developments of the field?</h3>
+				<p>Recently, opinion mining has received large attention from many multidisciplinary domains and recent literature has explored the practical applications of opinion mining to marketing and social networking platforms. Bursting keywords such as <em>word of mouth, social media, social network</em>, and <em>twitter</em> evidence this trend. The analysis of document co-citation network identifies that emerging clusters of research include 1) understanding consumer attitudes for effective online marketing and prediction of a product’s market value, 2) developing a system for extracting affective information from text, 3) investigating newspaper readers’ opinions and information sharing behaviour on social media. In recent years, landmark manuscripts also have explored the improvement and applications of opinion mining to a variety of domains such as informal English text. </p>
+ 
+		<h2>Conclusion and future work</h2>
+			<p>In the present study, we aimed to explore the intellectual structure of opinion mining research in a systematic and comprehensive way. Toward that end, we investigated domain-level citation trends, assignment of subject categories, keyword co-occurrence, document co-citation network, and landmark articles. Based on the findings from the study, we articulate that the field of opinion mining is still emerging. For example, a few domains have participated in publication while they mainly cite similar kinds of research. They less frequently cross-cite each other. Next, the advent, development, and diffusion of opinion mining have been largely led by a few domains such as computer science, engineering, linguistics, psychology, and library and information science. These domains have explored algorithmic and linguistic aspects of sentiment analysis to understand, quantify, and apply the sentiment orientation of texts. Recently, multidisciplinary domains have participated in studying opinion mining and this body of literature has explored the practical applications of opinion mining such as to marketing and analysing social networking platforms.</p>
+			<p>The approaches of the present study provide advantages in investigating intellectual structure of a science as follows. First, we systematically triangulated data collection. Conventional studies of domain analysis often cover only a fraction of published literature. The combination of topic search, citation indexing, and patent search in our method provides a systematic way to broaden the coverage of a knowledge domain, thus provides a much broader and more integrated context. Second, we investigated the domain from a multi-faceted point of view. Bursting keywords, document co-citation networks, emerging thematic patterns, and citation trends were identified in this study. In particular, we employed the concept of burstiness for measuring the importance of units of analysis. An entity's frequency of occurrence is a significant indicator reflecting its impact. However, we cannot identify its influence or density of that impact during a particular span of time if only considering the cumulative measure. Instead, we argue that using the concept of citation and keyword bursts is much more convenient in understanding the advent and decline of scientific trends. Finally, the analytical procedure and tool used in the present study enabled us to explore time-aware research trends in the domain. The scientometric approach and tool employed in this study can support comprehensive data collection and scalable analytics. In addition, one can conduct domain analysis of his or her concern as frequently as needed without prior knowledge. Thus, the proposed approaches have advantages such as having a relatively higher reproducibility and lower cost for conducting studies at a larger scale, especially as the number of publications in sciences is fast-growing.</p>
+			<p>There are still several challenges in our study despite the fact that we have a variety of methodological advantages described above. First, the topic search along with citation indexing still may not be able to capture some relevant records. Generally, the vocabulary mismatch is said to present a challenge for keyword-based search (<a href="paper739.html#dee90">Deerwester, Dumais, Furnas, Landauer, and Harshman, 1990</a>). Second, the Web of Science as our source of data may have underrepresented conference proceedings, which is also reported to be an issue for disciplines such as social sciences and arts and humanities (<a href="paper739.html#mon16">Mongeon and Paul-Hus, 2016</a>). In addition, at the time of data collection, we could only collect records from the core collection of the Web of Science due to the institutional subscription. It might be possible that the number of records collected in each organization from the core collection of Web of Science varies due to different subscription policies. Some relevant records might have been omitted from our data sets accordingly. Additional sources such as Scopus are recommended for future refinements of this type of analysis. Unfortunately, at the time of the study, we did not have access to Scopus. Third, we selected <em>g</em> highly cited references for generating the intellectual landscapes. In spite of this metric’s authority, we might be too strict in extracting an important proportion of records. It may be worth conducting a separate study of the theoretical implications of using a variety of conceivable selection criteria. We also plan to apply this scientometirc approach to much more comprehensive records that cover a various type of publication materials.</p>
+
+		<h2 id="author">About the authors</h2> 
+			<p><strong>Yongjun Zhu</strong> is a doctoral candidate in Information Science at Drexel University, Philadelphia, PA. His research interests include information retrieval, network science, and text mining. He can be contacted at <a href="mailto:zhu@drexel.edu">zhu@drexel.edu. </a><br />
+				<strong>Meen Chul Kim</strong> is a doctoral candidate in Information Science at Drexel University, Philadelphia, PA. His research interests include learning analytics and data science.  He can be contacted at <a href="mailto:meenchul.kim@drexel.edu">meenchul.kim@drexel.edu.</a><br />
+				<strong>Chaomei Chen</strong> is a Professor at the College of Computing and Informatics at Drexel University, Philadelphia, PA. His research interests include information visualization, visual analytics, knowledge domain visualization, network analysis and modelling, scientific discovery, science mapping, scientometrics, citation analysis, and human-computer interaction.  He can be contacted at <a href="mailto:chaomei.chen@drexel.edu">chaomei.chen@drexel.edu. </a>
+			</p>
+
+ 
+	</section>
+<section class="refs">
+ 
+<h2>References</h2>  
+	<ul class="refs"> 
+		<li id="abb08">Abbasi, A., Chen, H. &amp; Salem, A. (2008). Sentiment analysis in multiple languages: feature selection for opinion classification in Web forums. <em>ACM Transactions on Information Systems, 26</em>(3), 12.</li> 
+		<li id="blo08">Blondel, V.D., Guillaume, J.-L., Lambiotte, R. &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <em>Journal of Statistical Mechanics: Theory and Experiment, 10</em>, P10008.</li> 
+		<li id="bol11">Bollen, J., Mao, H. &amp; Zeng, X. (2011). Twitter mood predicts the stock market. <em>Journal of Computational Science, 2</em>(1), 1-8.</li> 
+		<li id="bra01">Brandes, U. (2001). A faster algorithm for betweenness centrality. <em>Journal of Mathematical Sociology, 25</em>(2), 163-177.</li> 
+		<li id="cam13">Cambria, E., Schuller, B., Xia, Y. &amp; Havasi C. (2013). New avenues in opinion mining and sentiment analysis. <em>IEEE Intelligent Systems, 28</em>(2), 15-21.</li>
+		<li id="che06">Chen, C. (2006). CiteSpace II: Detecting and visualizing emerging trends and transient patterns in scientific literature. <em>Journal of the American Society for Information Science and Technology, 57</em>(3), 359-377.</li>
+		<li id="che11">Chen, C. (2011). <em>Turning points: The nature of creativity. </em>Beijing: Higher Education Press.</li>
+		<li id="che14a">Chen, C., Dubin, R. &amp; Kim, M.C. (2014a). Emerging trends and new developments in regenerative medicine: A scientometric update (2000-2014). <em>Expert Opinion on Biological Therapy, 14</em>(9), 1295-1317.</li>
+		<li id="che14b">Chen, C., Dubin, R. &amp; Kim, M.C. (2014b). Orphan drugs and rare diseases: A scientometric review (2000-2014). <em>Expert Opinion on Orphan Drugs, 2</em>(7), 709-724.</li>
+		<li id="che09">Chen, C., Chen, Y., Horowitz, M., Hou, H., Liu, Z. &amp; Pellegrino, D. (2009). Towards an explanatory and computational theory of scientific discovery. <em>Journal of Informetrics, 3</em>(3), 191-209.</li>
+		<li id="che12">Chen, C., Hu, Z., Liu, S. &amp; Tseng, H. (2012). Emerging trends in regenerative medicine: a scientometric analysis in CiteSpace. <em>Expert Opinions on Biological Therapy, 12</em>(5), 593-608.</li>
+		<li id="che10">Chen, C., Ibekwe-SanJuan, F. &amp; Hou, J. (2010). The structure and dynamics of co-citation clusters: a multiple-perspective co-citation analysis. <em>Journal of the American Society for Information Science and Technology, 61</em>(7), 1386-1409.</li>
+		<li id="che14">Chen, C. &amp; Leydesdorff, L. (2014). Patterns of connections and movements in dual-map overlays: A new method of publication portfolio analysis. <em>Journal of the American Society for Information Science and Technology, 65</em>(2), 334-351.</li>
+		<li id="chev06">Chevalier, J.A. &amp; Mayzlin, D. (2006). The effect of word of mouth on sales: online book reviews. <em>Journal of marketing research, 43</em>(3), 345-354.</li>
+		<li id="dav03">Dave, K., Lawrence, S. &amp; Pennock, D.M. (2003). Mining the peanut gallery: opinion extraction and semantic classification of product reviews. <em>Proceedings of the 12th International Conference on World Wide Web</em>, 519-528.</li>
+		<li id="dee90">Deerwester, S., Dumais, S.T., Furnas, G.W., Landauer, T.K. &amp; Harshman, R. (1990). Indexing by latent semantic analysis. <em>Journal of the American Society for Information Science, 41</em>(6), 391-407.</li>
+		<li id="din08">Ding, X., Liu, B. &amp; Yu, P. (2008). A holistic lexicon-based approach to opinion mining. <em>Proceedings of the 2008 International Conference on Web Search and Data Mining</em>, 231-240.</li>
+		<li id="dun93">Dunning, T. (1993). Accurate methods for the statistics of surprise and coincidence. <em>Computational Linguistics, 19</em>(1), 61-74.</li>
+		<li id="egg06">Egghe, L. (2006). Theory and practise of the g-index. <em>Scientometrics, 69</em>(1), 131-152.</li>
+		<li id="fel13">Feldman, R. (2013). Techniques and applications for sentiment analysis. <em>Communications of the ACM, 56</em>(4), 82-89.</li>
+		<li id="gar79">Garfield, E. (1979). <em>Citation indexing: its theory and applications in science, technology, and humanities. </em>New York, NY: Wiley.</li>
+		<li id="gov13">Govindarajan, M. &amp; Romina, M. (2013). A Survey of Classification Methods and Applications for Sentiment Analysis. <em>The International Journal of Engineering and Science, 2</em>(12), 11-15.</li>
+		<li id="jin08">Jindal, N. &amp; Liu, B. (2008). Opinion spam and analysis. <em>Proceedings of the 2008 International Conference on Web Search and Data Mining</em>, 219-230.</li>
+		<li id="kan06">Kanayama, H. &amp; Nasukawa, T. (2006). Fully automatic lexicon expansion for domain-oriented sentiment analysis. <em>Proceedings of the 2006 Conference on Empirical Methods in Natural Language Processing</em>, 355-363.</li>
+		<li id="kim15">Kim, M.C. &amp; Chen, C. (2015). A scientometric review of emerging trends and new developments in recommendation systems. <em>Scientometrics, 104</em>(1), 239-263.</li>
+		<li id="kim16">Kim, M.C., Zhu, Y. &amp; Chen, C. (2016). How are they different? A quantitative domain comparison of information visualization and data visualization (2000-2014). <em>Scientometrics, 107</em>(1), 123-165.</li>
+		<li id="kim04">Kim, S.M. &amp; Hovy, E. (2004). Determining the sentiment of opinions. <em>Proceedings of the 20th International Conference on Computational Linguistics</em>, 1367.</li>
+		<li id="kle02">Kleinberg, J. (2002). Bursty and hierarchical structure in streams. <em>Proceedings of the Eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, 91-101.</li>
+		<li id="liu10">Liu, B. (2010). Sentiment Analysis and Subjectivity. <em>Handbook of Natural Language Processing, 2</em>, 627-666.</li>
+		<li id="liu12">Liu, B. (2012). <em>Sentiment Analysis and Opinion Mining: Synthesis Lectures on Human Language Technologies. </em>San Rafael, CA: Morgan &amp; Claypool Publishers.</li>
+		<li id="liu05">Liu, B., Hu, M. &amp; Cheng, J. (2005). Opinion observer: Analyzing and comparing opinions on the web. <em>Proceedings of the 14th International Conference on World Wide Web</em>, 342-351.</li>
+		<li id="med14">Medhat, W., Hassan, A. &amp; Korashy, H. (2014). Sentiment analysis algorithms and applications: a survey. <em>Ain Shams Engineering Journal, 5</em>(4), 1093-1113.</li>
+		<li id="mon16">Mongeon, P. &amp; Paul-Hus, A. (2016). The journal coverage of web of science and Scopus: a comparative analysis. <em>Scientometrics, 106</em>(1), 213-228.</li>
+		<li id="pan04">Pang, B. &amp; Lee, L. (2004). A sentimental education: sentiment analysis using subjectivity summarization based on minimum cuts. <em>Proceedings of the 42th Annual Meeting on Association for Computational Linguistics</em>, 271.</li>
+		<li id="pan05">Pang, B. &amp; Lee, L. (2005). Seeing stars: exploiting class relationships for sentiment categorization with respect to rating scales. <em>Proceedings of the 43rd Annual Meeting on Association for Computational Linguistics</em>, 115-124.</li>
+		<li id="pan08">Pang, B. &amp; Lee, L. (2008). Opinion mining and sentiment analysis. <em>Foundations and Trends in Information Retrieval, 2</em>(1-2), 1-135.</li>
+		<li id="pan02">Pang, B., Lee, L. &amp; Vaithyanathan, S. (2002). Thumbs up? Sentiment classification using machine learning techniques. <em>Proceedings of the 7th ACL-02 Conference on Empirical Methods in Natural Language Processing, 10</em>, 79-86.</li>
+		<li id="qiu11">Qiu, G., Liu, B., Bu, J. &amp; Chen, C. (2011). Opinion word expansion and target extraction through double propagation. <em>Computational Linguistics, 37</em>(1), 9-27.</li>
+		<li id="ril03">Riloff, E., Wiebe, J. &amp; Wilson, T. (2003). Learning subjective nouns using extraction pattern bootstrapping. <em>Proceedings of the seventh conference on Natural language learning at HLT-NAACL 2003, 4</em>, 25-32.</li>
+		<li id="sch89">Schvaneveldt, R.W., Durso, F.T. &amp; Dearholt, D.W. (1989). Network Structures in Proximity Data. In G. Bower (Ed.) <em>The psychology of learning and motivation: Advances in research and theory, 24</em>, 249-284. New York, NY: Academic Press.</li>
+		<li id="tab11">Taboada, M., Brooke, J., Tofiloski, M., Voll, K. &amp; Stede, M. (2011). Lexicon-based methods for sentiment analysis. <em>Computational Linguistics, 37</em>(2), 267-307.</li>
+		<li id="tan09">Tang, H., Tan, S. &amp; Cheng, X. (2009). A survey on sentiment detection of reviews. <em>Expert Systems with Applications, 36</em>(7), 10760-10773.</li>
+		<li id="the10">Thelwall, M., Buckley, K., Paltoglou, G., Cai, D. &amp; Kappas, A. (2010). Sentiment strength detection in short informal text. <em>Journal of the Association for Information Science and Technology, 61</em>(12), 2544-2558.</li>
+		<li id="thet10">Thet, T.T., Na, J.-C. &amp; Khoo, C.S.G. (2010). Aspect-based sentiment analysis of movie reviews on discussion boards. <em>Journal of Information Science, 36</em>(6), 823-848.</li>
+		<li id="tur02">Turney, P.D. (2002). Thumbs up or thumbs down? Semantic orientation applied to unsupervised classification of reviews. <em>Proceedings of the 40th Annual Meeting on Association for Computational Linguistics</em>, 417-424.</li>
+		<li id="tur03">Turney, P.D. &amp; Littman, M. L. (2003). Measuring praise and criticism: inference of semantic orientation from association. <em>ACM Transactions on Information Systems, 21</em>(4), 315-346.</li>
+		<li id="wal13">Waltman, L. &amp; van Eck, N.J. (2013). A smart local moving algorithm for large-scale modularity-based community detection. <em>European Physical Journal B, 86</em>(11), 471.</li>
+		<li id="wie04">Wiebe, J., Wilson, T., Bruce, R., Bell, M. &amp; Martin M. (2004). Learning subjective language. <em>Computational Linguistics, 30</em>(3), 277-308.</li>
+		<li id="wil05">Wilson, T., Wiebe, J. &amp; Hoffmann, P. (2005). Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis. <em>Proceedings of Human Language Technology Conference and Conference on Empirical Methods in Natural Language</em>, 347-354.</li>
+		<li id="wil09">Wilson, T., Wiebe, J. &amp; Hoffmann, P. (2009). Recognizing Contextual Polarity: an Exploration of Features for Phrase-Level Sentiment Analysis. <em>Computational Linguistics, 35</em>(3), 399-433.</li>
+		<li id="yu03">Yu, H. &amp; Hatzivassiloglou, V. (2003). Towards answering opinion questions: separating facts from opinions and identifying the polarity of opinion sentences. <em>AProceedings of the 2003 Conference on Empirical Methods in Natural Language Processing</em>, 129-136.</li>
+	</ul>  
+
+</section>
+<section>
+<hr />
+ <h4 style="text-align:center;">How to cite this paper</h4>
+   <div class="citing">Zhu, Y., Kim, M.C. &amp; Chen, C. (2017). An investigation of the intellectual structure of opinion mining research <em>Information Research, 22</em>(1), paper 739. Retrieved from  http://InformationR.net/ir/22-1/paper739.html   (Archived by WebCite&reg; at http://www.webcitation.org/6oGbzTjxJ)</div>  
+	
+</section>
+</article>
+<br />
+<section>
+ 
+ <table class="footer" style="border-spacing:10;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"><form method="get" action="http://scholar.google.com/scholar" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"> <input type="hidden" name="q" value="opinion mining, sentiment analysis, scientometrics, domain analysis, visual analytics" /><br />  
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" /><input type="hidden" name="num" value="100" />  </td>  </tr></table></form></td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --><form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"><input type="hidden" name="q" value="opinion mining, sentiment analysis, scientometrics, domain analysis, visual analytics" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" /><input type="hidden" name="client" value="pub-5081678983212084" /><input type="hidden" name="forid" value="1" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="hidden" name="oe" value="ISO-8859-1" /><input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" /><input type="hidden" name="hl" value="en" /></td></tr>  
+  </table></form></td>  
+ <td style="vertical-align:top; text-align:center;"><form method="get" action="http://www.bing.com" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"><input type="hidden" name="q" value="opinion mining, sentiment analysis, scientometrics, domain analysis, visual analytics" /> <br /><input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" /> <input type="hidden" name="num" value="100" /></td></tr>  
+ </table></form></td></tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/22-1/paper739.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+ <br />
+ <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox" style="text-align:center;"></div>
+
+<hr />
+</section>
+
+<table class="footer" style="padding:10;"><tr><td style="text-align:center; vertical-align:top;">
+<br />
+<div><a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={6668d714-051c-1114-cde9-6850c7fe9bd6}&amp;template=simple" alt="Hit Counter by Digits" /></a>
+</div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the authors, 2017. <br />Last updated: 10 February, 2017 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="infres221.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a>ç</li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5046158704890f2e"></script> 
+</body>  
+ </html> 
+

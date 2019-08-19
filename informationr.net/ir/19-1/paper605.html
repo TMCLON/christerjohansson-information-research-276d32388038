@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>A survey of stemming algorithms in information retrieval</title>  
+<meta charset="utf-8">
+ <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif">  
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css">  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="A survey of stemming algorithms in information retrieval">  
+ <meta name="author" content="Cristian Moral, Ang&eacute;lica de Antonio, Ricardo Imbert and Jaime Ram&iacute;rezß" >  
+ <meta name="dcterms.subject" content="We provide a review of the evolution and state of the art of stemming algorithms in the last forty-five years, covering not only the functioning of the most well-known and used algorithms for this task , but also analysing evaluations conducted and results obtained by many researchers through experimentation.">  
+ <meta name="description" content="During the last fifty years, improved information retrieval techniques have become necessary because of the huge amount of information people  have available, which continues to increase rapidly due to the use of new technologies and the Internet. Stemming is one of the processes that can improve information retrieval in  terms of accuracy and performance. This paper provides a detailed assessment of the current status of the stemming process framed in an information retrieval application field by  tracing its historical evolution. Papers presenting the first approaches for stemming were reviewed to extract their main features, benefits and drawbacks. Additionally, papers  dealing with stemmers for non-English languages or with some more recent proposals were also consulted and compiled. Finally, experimental papers defining the most well-known  methods and metrics aimed at evaluating and classifying stemmers were also taken into account to expose their contributions and results. Even if not all researchers agree on the  benefits and drawbacks of using stemming in an information retrieval process in general terms, many of them agree on its benefits in specific contexts, such as when the language  is highly inflective, when documents are short or when there is limited space for storing data. Some researchers also state that the nature of the documents can influence the  performance and the accuracy of the stemmer. Despite many researchers having investigated this field over many years, there are still some open questions, such as how to evaluate  a stemmer independently of the information retrieval process, or how much a stemmer improves an information retrieval application in terms of speed. As a summary, some guidelines  are also provided to help readers to determine which is the best stemmer for their needs and the tasks they have to carry out.">  
+ <meta name="keywords" content="Stemming, Morphological Variants, Information Retrieval, Information Processing, Term Conflation, Document Clustering">
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+ <meta name="robots" content="all">  
+ <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+ <meta name="dcterms.type" content="text">  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613">  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/19-1/paper605.html">  
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/19-1/infres191.html">  
+ <meta name="dcterms.format" content="text/html">  <meta name="dc.language" content="en">  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">  
+ <meta name="dcterms.issued" content="2014-04-15"> 
+  <meta name="geo.placename" content="global">  
+
+ 
+ <script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+	</script> 
+
+
+</head> 
+  
+ <body> 
+
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif" width="336"><br>
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 19  no. 1, March, 2014</span>
+<br><br> 
+<div class="button">
+ <ul> 
+ <li><a href="infres191.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../search.html">Search</a> |  </li> 
+ <li><a href="../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr>
+ </header>
+ <article>
+ <h1>A survey of stemming algorithms in information retrieval</h1>  <br>  
+ <div style="margin-left: 20%; margin-right: 10%;">  <h4><a href="paper605.html#author">Cristian Moral</a>, <a href="paper605.html#author">Ang&eacute;lica de Antonio</a>, <a href="paper605.html#author">Ricardo Imbert</a> and <a href="paper605.html#author">Jaime Ram&iacute;rez</a><br>
+ Escuela T&eacute;cnica Superior de Ingenieros Inform&aacute;ticos, Universidad Polit&eacute;cnica de Madrid, Spain</h4>  
+ </div>  
+ <br> 
+
+ <form>  <fieldset>  <legend>Abstract </legend>
+ <blockquote>
+ <strong>Background.</strong> During the last fifty years, improved information retrieval techniques have become necessary because of the huge amount of  information people have available, which continues to increase rapidly due to the use of new technologies and the Internet. Stemming is one of the processes that can improve information retrieval in terms of accuracy and performance.<br>
+ <strong>Aim.</strong> This paper provides a detailed assessment of the current status of the stemming process framed in an information retrieval application  field by tracing its historical evolution. <br>
+ <strong>Method.</strong> Papers presenting the first approaches for stemming were reviewed to extract their main features, benefits and drawbacks. Additionally,  papers dealing with stemmers for non-English languages or with some more recent proposals were also consulted and compiled. Finally, experimental papers defining  the most well-known methods and metrics aimed at evaluating and classifying stemmers were also taken into account to expose their contributions and results. <br>
+ <strong>Results.</strong> Even if not all researchers agree on the benefits and drawbacks of using stemming in an information retrieval process in general terms, many of them agree on its benefits in specific contexts, such as when the language is highly inflective, when documents are short or when there is limited space for storing data. Some researchers also state that the nature of the documents can influence the performance and the accuracy of the stemmer. <br>
+ <strong>Conclusions.</strong> Despite many researchers having investigated this field over many years, there are still some open questions, such as how to evaluate a stemmer independently of the information retrieval process, or how much a stemmer improves an information retrieval application in terms of speed. As a summary, some guidelines are also provided to help readers to determine which is the best stemmer for their needs and the tasks they have to carry out.
+ </blockquote>  </fieldset>  </form> 
+ 
+ <br>  <div style="text-align:center">  <input type="button" value="change font" class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onClick="doChangeFont()"></div>  <br> 
+
+ <section>
+ 
+ <h2>Introduction</h2> 
+ 
+ <p>During recent decades, there has been a huge growth in the volume of data generated around the world. The trend began around fifty years ago when the research community experienced the first explosion of scientific publications coming from many different domains (<a href="paper605.html#luh57">Luhn, 1957</a>), later boosted by the arrival and the subsequent socialization of the Internet. The need to allow researchers to find information among these big collections of  data promoted the implementation of some mechanisms to support the task (<a href="paper605.html#bel79">Bell and Jones, 1979</a>). Today, these mechanisms are part of the information retrieval process (<a href="paper605.html#bae99">Baeza-Yates and Ribeiro-Neto, 1999</a>; <a href="paper605.html#man08">Manning,  Raghavan, and Sch&uuml;tze, 2008</a>), which is a full, extensive, and specialized field of research in information technology.</p>
+ 
+ <p>The main objective of information retrieval is to automatically analyse and treat documents to extract some measures and relevant data allowing users to easily meet, as well as possible, their <i>information need</i>. By information need we mean a high level concept that encompasses not only direct questions (e.g.,  What is stemming?), but also searches for documents referring to a term or set of terms that can be very specific (e.g., stemming) or abstract  search expressions reflecting that the user is not sure about what s/he is looking for (e.g., algorithm to find words' roots). These direct questions, terms and expressions are called <i>queries</i> and they represent the user's input to the system. The output answer is generally a document title or a set of document titles, which can be ranked according to a matching rate between the documents and the query calculated during the process. This process is a pipeline of independent but complementary tasks that uses as input a <i>corpus of documents</i> and a user's query, and returns as output a set of measures showing how well each and every document answers the information need posed by the user.</p> 
+ 
+ <p>One of the first steps in the information retrieval pipeline is stemming (<a href="paper605.html#sal71">Salton, 1971</a>). A stemming algorithm, or <i>stemmer</i>, aims at obtaining the stem of a word, that is, its morphological root, by clearing the affixes that carry grammatical or lexical information about the word. In both  cases, these affixes do not modify the concept the word is related to as the semantic informality has been proven in the literature, especially in languages  that are highly inflective (<a href="paper605.html#pop92">Popovic and Willett, 1992</a>) and in short documents (<a href="paper605.html#kro93">Krovetz, 1993</a>), in terms of <i>recall</i>  and <i>precision</i>.</p> 
+ 
+ <p>In this paper we provide a review of the evolution and state of the art of stemming algorithms in the last forty-five years, covering not only the functioning of the most well-known and used algorithms for this task (<a href="paper605.html#smi08">Smirnov, 2008</a>), but also analysing evaluations conducted and results obtained by many researchers through experimentation. We describe which evaluation metrics have been proposed and which of them have allowed the experts to classify and compare different approaches. We complete the survey including some more recent proposals to improve the process. We finally dissect some algorithms that stem in languages different to English, relying on the same principles but adapting the process to the singularities of each of these languages.</p> 
+  
+ <h2>Stemming algorithms: purpose</h2> 
+ 
+ <p>A stemming algorithm, or stemmer, has three main purposes. The first one consists of clustering words according to their topic. Many words are derivations from the same stem and we can consider that they belong to the same concept (e.g., <i>drive</i>, <i>driven</i>, <i>driver</i>). These derivations are generated through appended affixes (prefixes, infixes, and/or suffixes) but, in general, and more specifically in English, only suffixes are considered, as generally prefixes and infixes modify the meaning of the word, and stripping them would lead to errors of bad topic determination (<a href="paper605.html#hul96">Hull, 1996</a>). Some exceptions to this occur in very <i>inflective languages</i> like German and Dutch (<a href="paper605.html#kra94">Kraaij and Pohlmann, 1994</a>), or in documents belonging to some specific topics, like medicine or chemistry, where prefixes and suffixes maintain the concept of the word. Among these suffixes two types of derivations can be considered (<a href="paper605.html#kro93">Krovetz, 1993</a>). In the first case, <i>inflectional</i> derivations reflect grammatical information, related to the gender, number, case, mood or tense. These derivations do not provoke a change in the <i>part-of-speech</i> of the original word (that is the linguistic category of the word, e.g., noun, verb or adjective) nor in its meaning. On the contrary, <i>derivational</i> suffixes deal with the creation of new words based on an existing word, with which it can share the meaning or not (e.g., words terminating in <i>-IZE</i>, <i>-ATION</i>, <i>-SHIP</i>). Stripping these suffixes from a derived word allows its stem to be obtained, which is nearly its morphological root, and then thematically related words can be identified by matching 
+ their stems. </p>
+ 
+<p> The second purpose of a stemmer is directly related to the information retrieval process, as having the stems of the words allows some phases of the information retrieval process to be improved, among which we can highlight the ability to index the documents according to their topics, as their terms are grouped by stems (that are similar to concepts) or the expansion of a query to obtain more and more precise results. The expansion of the query allows it to be refined by replacing the terms it contains with their related topics that are also present in the collection, or by adding these topics to the original query. This adaption can be done automatically and transparently to users or the system can propose one or more improved formulations of the query to users letting them decide if any of them is more specific and defines better their information needs. Even if interactive query expansion is better in principle because the user has more feedback on what is happening, typically it cannot be done directly with the result of stemming, as stems usually are not understandable by humans (<a href="paper605.html#voo94">Voorhees, 1994</a>). </p>
+  
+<p> Finally, the <i>conflation</i> of the words sharing the same stem leads to a reduction of the dictionary to be taken into  account in the process, as the whole vocabulary contained in the input unprocessed collection of documents can be reduced to a set of topics or stems. This leads to a reduction of the space needed to store the structures used by an information retrieval system (like the index of terms-documents) and then also lightens the computational load of the system.</p> 
+ 
+ <h2>Classical approaches</h2> 
+ 
+ <p>The process of conflating words has been widely investigated during recent decades and, in general terms, two main approaches have been adopted. The first  one is an algorithmic-based approach where no linguistic considerations, such as gender, number or verbal tense, are considered. These stemmers work on the  base of a set of rules defining if a suffix has to be removed or not, depending on some conditions. As no linguistic consideration is taken into account, in  many cases the resulting stem is not a well-formed word (sometimes it is not even a recognizable word) and then it is empty of meaning. Depending on the task,  this can be invisible for users, as the resulting stems are not presented to them (e.g., when indexing documents by concepts) or it can be a drawback, as the  user is not able to understand the extra information given by the system (e.g., query expansion). Then, when the undertaken task requires meaningful output  stems, a different approach has to be chosen. A linguistic-based approach, where the inner semantic information of the word is exploited to group related words  into the same concept independently from their morphology, becomes then the better option. This semantic information can be obtained through dictionaries or thesauri (<a href="paper605.html#mil95">Miller, 1995</a>), which contain hierarchical, semantic and lexical information about words. This second approach has rapidly diverged into a different field of research called <i>lemmatization</i>, which will not be addressed in this paper.</p>
+ 
+ <p>The first stemmer mentioned in the literature is the Lovins Stemmer (<a href="paper605.html#lov68">Lovins, 1968</a>). The <a href="http://www.webcitation.org/6MmMfsMhg">algorithm</a> consists of two steps: elimination of the suffixes and treatment of the remaining stem. The suffix stripping is done by matching the termination of the word with the longest suffix from an ordered list of 294 suffixes and applying one of the twenty-nine associated application rules. After this the remaining stem is treated to solve some linguistic exceptions like <i>double d</i> or <i>double t</i> endings. This step, called the <i>recoding phase</i>, is also based on a set of thirty-five rules that determine if the termination of the remaining stem has to be partially deleted or modified (e.g., <i>inputting</i> should be stemmed to <i>input</i>, not to <i>inputt</i>). Finally, conflation is done with a partial-matching algorithm that groups words whose stems are very close, but not necessarily the same. This permits an increase in the <i>conflation rate</i> and it is based on the assumption that two stems that are mostly equal but have little differences because of the suffix stripping process (e.g., <i>explain</i> and <i>explanation</i> are differently stemmed to <i>explain</i> and <i>explan</i>) belong to the same concept and should be grouped together. Nevertheless, this, obviously, can increase the errors by conflating words that are not related but mostly share the same stem (e.g., <i>probe</i> and <i>probate</i> are respectively stemmed to <i>probe</i> and <i>prob</i>, and then are likely to conflate by partial-matching). To avoid these errors without losing precision or recall, Dawson proposes an adaptation of the Lovins' stemmer (<a href="paper605.html#daw74">Dawson, 1974</a>) based on two modifications. Firstly, the recoding phase is omitted and only the partial-matching routine is used to conflate words. Secondly, to fill the gap left by the recoding phase, he greatly increases the list of common suffixes up to 1200 to handle a lot more situations that were absent in the Lovins stemmer and were many times solved in the recoding phase.</p>
+
+ <p>Even if Lovins stemmer is one of the most widely known stemmers, Porter's stemmer (<a href="paper605.html#por80">Porter, 1980</a>) is the most used in information retrieval, probably because of its balance between simplicity and accuracy. Porter defines a five step <a href="http://webcitation.org/6MmN5jOCW">algorithm</a> applied to every word in the vocabulary. A word is defined as a succession of vowel-consonant pairs [C](VC)<sup>m</sup>[V], where C and V are lists of one or more consonants and vowels respectively and m is the measure of the word.  The algorithm counts on around sixty rules that are divided into five steps that define the conditions under which they get applied (the term suffix has to match the suffix condition appearing in the rule and the remainder of the term, that is, the initial term without the suffix has to satisfy the condition also  indicated in the rule) and how the term is modified to obtain the stem (which suffix replaces the former suffix). As an example, the rule <i>(m > 1) EMENT &rarr; &empty; </i>  indicates that if a term has the suffix <i>-EMENT</i> and the measure <i>m</i> of the remainder of the term is greater than one (in this case <i>m</i>=2), then the suffix  <i>-EMENT</i> is deleted. Then, according to this rule, the stem of the term <i>replacement</i> is <i>replac</i>. The algorithm is considered concise enough  to avoid using a recoding phase or a partial-matching approach, as the set of rules are executed sequentially to remove complex suffixes by treating them as a  set of more simple suffixes that are cleared in every step of the algorithm (e.g., <i>generalizations</i> is incrementally reduced to <i>generalization</i>,  <i>generalize</i>, <i>general</i> and finally <i>gener</i> through four different steps of the algorithm).</p>
+ 
+ <p>Another well-known proposal is the Paice/Husk stemmer (<a href="paper605.html#pai90">Paice, 1990</a>), which is an iterative <a href="http://www.webcitation.org/6MmNBfNCz">algorithm</a> using the same rules and suffixes in every loop. Each rule is divided into five parts, with two of them being optional:</p> 
+ 
+ <ul>
+ 		 <li>the suffix, written in inverse order to ease matching with the words' terminations,</li>
+		 <li>the symbol <b>'*'</b> indicating that the term can be stemmed only one time (optional),</li>
+		 <li>the number of letters that must be cleared from the termination of the term,</li>
+		 <li>the string that must be appended to the cleared form of the term (optional),</li>
+		 <li>the symbol <b>'>'</b> indicating that the term can be treated in the next iteration, or the symbol <b>'.'</b> indicating that the term's final stem  has been obtained.</li>
+ </ul> 
+ 
+ <p>An example of this rule is <i>sei3y></i>, where terms with the termination <i>-IES</i> get their three last letters cleared and the letter <i>-Y</i> is appended. The obtained word is considered again in the next iteration of the stemming process. For example, the term <i>flies</i> would be stemmed to <i>fly</i>. This ability to delete some letters and to append new ones, which in practice means replacing part of the stem, is equivalent to the recoding phase, which is indirectly incorporated into the rules themselves.</p>
+ 
+ <p>Finally, Krovetz (<a href="paper605.html#kro93">1993</a>) has proposed a very simple algorithm which is supposed to cover the three most common inflectional derivations that occur: plural forms, past tense and <i>-ING</i> verb forms. In addition, some recoding rules are defined to obtain meaningful words after deleting the  suffix, using as a support a dictionary against which the stemmed words are compared.</p>
+  
+ <p>Even though some new approaches have been proposed in the literature to address the problem of stemming, most of them are based on the classical ones, or  are developed to stem words from other non-English languages. In fact, nowadays, many researchers still use Porter's stemmer for many different tasks  (<a href="paper605.html#pat13">Patil and Patil, 2013</a>; <a href="paper605.html#chi13">Chintala and Reddy, 2013</a>) or have tried to improve it (<a href="paper605.html#ben13">Ben Abdessalem Karaa, 2013</a>).</p>
+ 
+ <h2>Evaluation and comparison</h2> 
+ 
+ <p>Some metrics have been defined in the literature to determine how well a stemmer behaves. These metrics allow not only measuring the performance (that is the precision and recall) of every single stemmer, but also comparing them in different aspects and, therefore, obtaining some kind of classification.</p>
+  
+  <h3>Stemming errors</h3>
+ 
+ <p>The first step in calculating the precision of a stemmer consists of identifying what type of errors can be made, under which conditions they occur and how they affect the result. In stemming, two main errors have been identified, both related to the aggressiveness with which the stemmer clears the terminations of  the terms. On the one hand, when the stemmer deletes only the terminations that are almost certainly a suffix that must be cleared, there is a risk of keeping  some more complex suffixes or ambiguous terminations in the remaining stem that should also be stripped to obtain the morphological root of the word. This  error is called <i>under-stemming</i>, as the stemmer stripping is under the expected level. On the other hand, a stemmer makes an <i>over-stemming</i> error  when it strips more terminations than it should, clearing parts of the word that belong to the morphological root. When this error occurs, there is a loss of  semantic information as part of the morphological root is deleted. Porter goes beyond these definitions and divides this type of error into two cases  (<a href="paper605.html#por01">Porter, 2001</a>): over-stemming when the suffix stripped provokes a change of the meaning of the stem (that is, the termination  cleared is a suffix, but one belonging to the root) and <i>mis-stemming</i> when the cleared termination is not a suffix, but part of the root.</p>
+ 
+ <p>Both errors imply a decrease in the performance of the stemmer, but differently. When a word is under-stemmed it becomes more difficult to identify if two words are related based on their morphology, as their obtained stems are mostly equal, but not totally because of a suffix that has not been deleted.  The opposite case takes place when over-stemming is done. In this case the problem is that it becomes more possible that two words that are not related  but share part of their morphological root are wrongly detected as related because their stems are equal.</p>
+ 
+ <p>Some solutions have been proposed to reduce these errors as much as possible. For over-stemming most of the proposed stemmers set a minimum size constraint on the resulting stem. This means that a term is stemmed only if its stem has a minimum length that typically is two or three letters. By doing this, the algorithm avoids deleting or modifying the termination of a term that matches one of the suffixes of the list but is not actually a suffix. As an  example, a rule where the suffix <i>-IES</i> is replaced by the suffix <i>-Y</i> should impose on the remaining term a size greater than one to avoid stemming  the conjugated verb <i>DIES</i> to <i>DY</i>. Therefore it is essential to define the stemming rules as carefully as possible to consider most cases and then  prevent uncontrolled situations (<a href="paper605.html#daw74">Dawson, 1974</a>; <a href="paper605.html#por80">Porter, 1980</a>; <a href="paper605.html#pai90">Paice, 1990</a>). In the other case,  the under-conflation provoked by under-stemming can be palliated by applying partial-match algorithms (<a href="paper605.html#daw74">Dawson, 1974</a>; <a href="paper605.html#lov68">Lovins, 1968</a>)  that determine that two stems are related if the similarity between their morphology is over a defined threshold. Even if these solutions are useful only in  some cases and, sometimes, can introduce new errors, globally they yield good results. Their adoption depends on the required needs for the task: if the  conflation is an important aspect, even at expense of the thematic precision of the resulting groups, then solutions against under-stemming will be adopted; conversely, if it is preferable to have perfectly classified groups according to their topic, even if they are little and lack some related documents, then over-stemming errors should especially be addressed. Typically, a trade-off between the two approaches is desired, even if it increases the difficulty of the process.</p>
+ 
+  <h3>Classification and evaluation</h3>
+	
+ <p>Based on the errors defined above, a classification has been proposed to label a stemmer depending on which type of errors it most commonly does. The <i>strength</i> of a stemmer is defined as the aggressiveness with which the stemmer clears the terminations of the terms and it depends on the rate of over-stemming  and under-stemming made by a stemmer. A <i>strong</i> (or <i>heavy</i>) <i>stemmer</i> has a high rate of over-stemming errors, while a <i>weak</i> (or <i>light</i>)  <i>stemmer</i> is characterized by having a high under-stemming rate.</p>
+ 
+ <p>Paice (<a href="paper605.html#pai94">1994</a>) proposes some metrics to evaluate a stemmer regardless of the task carried out: the <i>under-stemming index</i> (<i>UI</i>), the  <i>over-stemming index</i> (<i>OI</i>), the <i>stemming weight</i> (<i>SW</i>) and an <i>error rate relative to truncation</i> (<i>ERRT</i>). An experiment with the Lovins, Porter and Paice/Husk  stemmers showed that Paice/Husk has the highest rate of over-stemming and Porter the lowest and, on the contrary, Porter makes more under-stemming errors than  the others, with Paice/Husk being the one generating least errors of this type. As Paice considers that the strength of a stemmer can be directly defined by  its over-stemming and under-stemming indexes (<i>SW=OI/UI</i>), he concludes that Paice/Husk is the strongest stemmer, followed by Lovins which is still considered a  strong stemmer, and finally Porter, which is the weakest among the three. This result is supported by Frakes and Fox (<a href="paper605.html#fra03">2003</a>) who, using an  inverse modified Hamming distance measure, also affirm that Paice/Husk is stronger than Lovins, which in turn is greatly stronger than Porter. They also  compute the strength of the &quot;S&quot; stemmer, which, as expected, is much weaker than Porter. The &quot;S&quot; stemmer deals only with plural forms and its treatment has  been proposed by Harman (<a href="paper605.html#har91">1991</a>) as a baseline for evaluation and comparison of stemmers. The simple truncation of a fixed number of letters has also been used in many cases as a baseline algorithm for comparisons (<a href="paper605.html#bra04">Braschler and Ripplinger, 2004</a>; <a href="paper605.html#pai94">Paice, 1994</a>).  Table 1 summarizes the main features of the presented stemmers and their strength.</p>
+ 
+ <table class="center" style="width:90%">   
+ <caption><br>Table 1: Summary of classical stemmers features.</caption>
+<tbody>
+<tr>
+<th>Stemmer</th><th>Number of rules</th><th>Number of suffixes</th><th>Use of recoding phase</th><th>Use of partial-matching</th><th>Strength</th><th>Use of constraint rules</th>
+</tr>
+<tr>
+<td style="text-align:center"><b>Lovins</b></td><td style="text-align:center">29</td><td style="text-align:center">294</td><td style="text-align:center">35 rules</td><td style="text-align:center">yes</td><td style="text-align:center">strong</td><td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><b>Dawson</b></td><td style="text-align:center">unknown</td><td style="text-align:center">1200</td><td style="text-align:center">no</td><td style="text-align:center">yes</td><td style="text-align:center">strong</td><td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><b>Porter</b></td><td style="text-align:center">62</td><td style="text-align:center">51</td><td style="text-align:center">no</td><td style="text-align:center">no</td><td style="text-align:center">weak</td><td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><b>Paice/Husk</b></td><td style="text-align:center">115</td><td style="text-align:center">unknown</td><td style="text-align:center">no</td><td style="text-align:center">no</td><td style="text-align:center">very strong</td><td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><b>Krovetz</b></td><td style="text-align:center">unknown</td><td style="text-align:center">5 (-S, -ES, -IES,-ED, -ING)</td><td style="text-align:center">yes (use of dictionary)</td><td style="text-align:center">no</td><td style="text-align:center">very weak</td><td style="text-align:center">no</td>
+</tr>
+</tbody>
+ </table> 
+ 
+ <p>However, these metrics do not allow the evaluation of the accuracy of a stemmer, but only the classification of it according to its typical errors. In order to evaluate the accuracy of the stemming process two metrics, introduced by Kent, <em>et al.</em> (<a href="paper605.html#ken55">1955</a>), are used. These metrics  have been widely adopted in information retrieval as the standard metrics to evaluate the accuracy of the process. The first metric, recall, reflects the rate of relevant documents that are obtained as an answer to a query, while precision represents the rate of the retrieved documents that are relevant to the query. In other words, when the stemmer tends to group as many related documents as possible, even if other non-related documents are also included in the same group, the recall is high, while if the stemmer builds groups with as few non-related documents within a group as possible, even if some related documents are possibly not included in it, the precision is high. These measures have allowed some authors to link performance in terms of recall and precision to the strength of the stemmer, and then to over-stemming and under-stemming (<a href="paper605.html#fra03">Frakes and Fox, 2003</a>; <a href="paper605.html#pai94">Paice, 1994</a>; <a href="paper605.html#har91">Harman, 1991</a>). Their conclusions are that strong stemmers will, in general, increase the recall of the results, as they make more probable that two words belonging to the same concept get conflated together, but they also decrease the precision as a higher number of non-related words also get conflated together because of over-stemming. Accordingly, they confirm that weak stemmers are better at correctly conflating related words, thus increasing the precision, but are more likely to avoid conflating related words because of under-stemming, therefore decreasing the recall.</p>
+ 
+ <p>Another way to evaluate an algorithmic-based stemmer is through its conflation rate, also called the <i>Index Compression Factor (ICF)</i>, which defines how much the stemming process compresses the input vocabulary and then how much it reduces the storage capacity needed and increases the efficiency of the information retrieval system which has to deal with a thinned dictionary. Porter states that his stemmer reduces the initial vocabulary by a third. Many experiments have proven that the vocabulary compression depends on the strength of the stemmer, as can be seen in Table 2. Lennon, <em>et al.</em> (<a href="paper605.html#len88">1988</a>), Frakes and Fox (<a href="paper605.html#fra03">2003</a>), Paice (<a href="paper605.html#pai94">1994</a>) and Harman (<a href="paper605.html#har91">1991</a>) have proved with their experiments that strong stemmers yield a better index compression factor than weaker ones, as they conflate more words.</p>
+  
+  <table class="center">   
+  <caption><br>Table 2: Vocabulary compression (ICF).<br>(Note: ranges are provided for lennon ><i>et al.</i> because experiments are carried out over four collections (see Table 3).)</caption>
+ 				<tbody>
+				  <tr>
+					  <th></th>
+						<th>Lennon <i>et al.</i></th>
+						<th>Frakes</th>
+						<th>Paice</th>
+						<th>Harman</th>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>&quot;S&quot; stemmer</b></td>
+							<td style="text-align:center">-</td>
+							<td style="text-align:center">1%</td>
+							<td style="text-align:center">-</td>
+							<td style="text-align:center">11.48%</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>Porter stemmer</b></td>
+							<td style="text-align:center">from 26.2% to 38.8%</td>
+							<td style="text-align:center">17%</td>
+							<td style="text-align:center">38.90%</td>
+							<td style="text-align:center">28.74%</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>Lovins stemmer</b></td>
+							<td style="text-align:center">from 30.9% to 45.8%</td>
+							<td style="text-align:center">29%</td>
+							<td style="text-align:center">44.60%</td>
+							<td style="text-align:center">38.23%</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>Paice/Husk stemmer</b></td>
+							<td style="text-align:center">-</td>
+							<td style="text-align:center">33%</td>
+							<td style="text-align:center">51.30%</td>
+							<td style="text-align:center">-</td>
+					</tr>
+				</tbody>
+				
+ </table>
+  
+ <p>To rank the stemmers according to their performance many experiments have been carried out. Harman (<a href="paper605.html#har91">1991</a>) compares, in terms of recall 
+ and precision, the behaviour of an &quot;S&quot; stemmer, the Porter stemmer and the SMART system (<a href="paper605.html#sal71">Salton, 1971</a>) 
+ which implements an enhanced version of the Lovins stemmer. In the experiment, an information need is posed through a query and the system returns a ranked list 
+ of documents related to the query. Stemming is applied both to the documents and the query, and the evaluation is done with respect to a simple classic ranking 
+ technique (returns an ordered list of documents whose vocabulary best matches the terms of the query) and a more sophisticated one using term weighting and 
+ query expansion. The results show a non-significant increase of performance when using stemming, but an interesting benefit in terms of space, as the vocabulary 
+ is reduced by nearly 40%. The cause of the low improvement in terms of precision is that the stemmer fails (because of over-stemming or under-stemming, depending 
+ on the selected stemmer) as many times as it succeeds and that is why the author proposes a selective stemming, where the user, depending on the number and 
+ quality of the results and on the task s/he has to carry out, decides whether to use a strong or a weak stemmer. Frakes (<a href="paper605.html#fra84">1984</a>) also carries 
+ out two experiments to evaluate the accuracy of a system based on the Lovins stemmer in terms of a metric called <i>E</i> (<a href="paper605.html#van79">Van Rijsbergen, 1979</a>) 
+ which considers both recall and precision, and concludes that the performance is mostly the same either if the conflation is done manually by experts or if it 
+ is done automatically using a stemmer. Another experiment is undertaken by Hull (<a href="paper605.html#hul96">1996</a>) over five stemmers: &quot;S&quot;, Porter, Lovins, Xerox 
+ inflectional, and derivational analysers (<a href="paper605.html#xer94">Xerox, 1994</a>). Even if his results do not prove a high improvement in information retrieval (4-6%), 
+ he asserts that stemming is clearly beneficial for recall. In fact, Hull bases this conclusion on the results of three measures: the average precision at 
+ eleven points of recall (APR11), the average precision at five to ten documents examined (AP[5-15]) and the average recall at fifty to one hundred and fifty 
+ documents examined (AR[50-150]). The first measure is calculated by averaging the precision obtained for each of the defined levels of recall (that is when 
+ recall is 0.1, precision is measured, then when recall reaches 0.2 precision is calculated again, and so on) using a set of queries. This metric is one of the 
+ most well-known in information retrieval and allows analysing the interdependence between recall and precision. The other two metrics calculate respectively 
+ the average precision and the average recall applying stemming to increasing numbers of documents. In his experimentation, Hull notes that both APR11 and 
+ AP[5-15] measures remain mostly the same with or without stemming, while AR[50-150] increases when stemming is applied. Krovetz (<a href="paper605.html#kro93">1993</a>) 
+ also confirms that the use of stemming brings a big enhancement in terms of performance and especially of recall when the documents are short.</p>
+ 
+ 
+ <p>In addition, Frakes and Fox (<a href="paper605.html#fra03">2003</a>) propose a similarity measure allowing the determination of similarity between two stemmers by 
+ comparing the results they return. This measure allows the easy classification of a new stemmer depending on which is the most similar known-stemmer. The 
+ similarity is calculated on the basis of the inverse modified Hamming distance. The experiment carried out by the authors over four stemmers (&quot;S&quot; stemmer, 
+ Lovins, Porter, Paice/Husk) concludes that Paice and Lovins stemmers are the most similar, while the Paice and &quot;S&quot; stemmers are the most different. Analysing 
+ the similarity measures of all the possible combinations of two stemmers the authors conclude that the algorithms similarity depends on their strength 
+ similarity.</p>
+ 
+ <p>Figure 1 sums up the features presented above for four of the main classical approaches for stemming. This summary reinforces the idea that all the features 
+ depend on the strength of the stemmers and then on the rate of over-stemming and under-stemming errors.</p>
+
+ <figure class="centre">
+   <img src="p605fig1.png" alt="Figure 1: Features summary of classical stemmers." width="500">
+   <figcaption>
+      Figure 1: Features summary of classical stemmers.
+  </figcaption>
+</figure>
+
+ <p>To evaluate stemmers and obtain these measures a big collection of documents is needed. Over recent years, many collections have been proposed and many of 
+ them have become reference sets to test new stemmers and, more generally, to evaluate new approaches to any step of the information retrieval process. Table 3 
+ shows which corpora of documents have been used in the bibliography cited in this paper. In turn, Table 4 lists the most widely known and used collections, and 
+ their main features.</p>
+ 
+   <table class="center"> 
+   <caption><br>Table 3: Corpora used by researchers.</caption>  
+ 				<tbody>
+				  <tr>
+					  <th>Publication</th>
+						<th>Corpora used</th>
+					</tr>
+					
+					<tr>
+						<td>Adam, Asimakis, Bouras and Poulopoulos (<a href="paper605.html#ada10">2010</a>)</td>
+						<td>Unknown collection (News articles and e-mail messages)</td>
+					</tr>
+					
+					<tr>
+						<td>Braschler and Ripplinger (<a href="paper605.html#bra04">2004</a>)</td>
+						<td>CLEF 2001</td>
+					</tr>
+					
+					<tr>
+						<td>Chen and Gey (<a href="paper605.html#che02">2002</a>)</td>
+						<td>Agence France Press (383,872 Arabic articles)</td>
+					</tr>
+					
+					<tr>
+						<td>Fern&aacute;ndez, D&iacute;az, Guti&eacute;rrez and Mu&ntilde;oz (<a href="paper605.html#fer11">2011</a>)</td>
+						<td>MIKTEX 2.6 Dictionary (Spanish terms list)</td>
+					</tr>
+					
+					<tr>
+						<td>Frakes (<a href="paper605.html#fra84">1984</a>)</td>
+						<td>Unknown collection(12,000 abstracts about psychology)</td>
+					</tr>
+					
+					<tr>
+						<td>Frakes and Fox (<a href="paper605.html#fra03">2003</a>)</td>
+						<td>MOBY, Unix spelling dictionary</td>
+					</tr>
+					
+					<tr>
+						<td>Garc&iacute;a Figuerola, G&oacute;mez-D&iacute;az, Zazo Rodr&iacute;guez and Alonso Berrocal (<a href="paper605.html#gar01">2001</a>)</td>
+						<td>CLEF</td>
+					</tr>
+					
+					<tr>
+						<td>Harman (<a href="paper605.html#har91">1991</a>)</td>
+						<td>CACM, MEDLARS, Cranfield</td>
+					</tr>
+					
+					<tr>
+						<td>Hull (<a href="paper605.html#hul96">1996</a>)</td>
+						<td>TREC, WSJ </td>
+					</tr>
+					
+					<tr>
+						<td>Korenius, Laurikkala, J&auml;rvelin and Juhola (<a href="paper605.html#kor04">2004</a>)</td>
+						<td>Unknown collection (53,893 articles from Finnish newspapers)</td>
+					</tr>
+					
+					<tr>
+						<td>Krovetz (<a href="paper605.html#kro93">1993</a>)</td>
+						<td>CACM, Time, NPL, WEST</td>
+					</tr>
+					
+					<tr>
+						<td>Kraaij and Pohlmann (<a href="paper605.html#kra94">1994</a>)</td>
+						<td>CELEX database</td>
+					</tr>
+					
+					<tr>
+						<td>Kraaij and Pohlmann (<a href="paper605.html#kra96">1996</a>)</td>
+						<td>Dutch publishers' database (59,608 articles from three regional newspapers)</td>
+					</tr>
+					
+					<tr>
+						<td>Larkey, Ballesteros and Connell (<a href="paper605.html#lar02">2002</a>)</td>
+						<td>Arabic TREC 2001</td>
+					</tr>
+					
+					<tr>
+						<td>Lennon, Pierce, Tarry and Willett (<a href="paper605.html#len88">1988</a>)</td>
+						<td>Cranfield, Brown, INSPEC, NPL</td>
+					</tr>
+					
+					<tr>
+						<td>Majumder, Mitra and Pal (<a href="paper605.html#maj08">2008</a>)</td>
+						<td>CLEF 2006</td>
+					</tr>
+					
+					<tr>
+						<td>Paice (<a href="paper605.html#pai94">1994</a>)</td>
+						<td>CISI</td>
+					</tr>
+					
+					<tr>
+						<td>Taghva, Elkhoury and Coombs (<a href="paper605.html#tag05">2005</a>)</td>
+						<td>Arabic TREC 2001</td>
+					</tr>
+				</tbody>
+				
+ </table>
+
+ <br/>
+ 
+ <table class="center" style="width:100%">   
+ <caption><br>Table 4: Reference corpora in information retrieval.</caption>
+ 				<tbody>
+				  <tr>
+					  <th style="width:10%;">Name of the corpus</th>
+						<th>Type of data</th>
+						<th style="width:15%;">Volume of data</th>
+						<th style="width:20%;">Topics of data</th>
+						<th style="width:20%;">Source</th>
+						<th>Available at</th>
+						<th>Free</th>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>Brown</b></td>
+							<td style="text-align:center">Documents</td>
+							<td style="text-align:center">500 documents, 1 million terms</td>
+							<td style="text-align:center">Press, religion, skill and hobbies, popular lore, belles-lettres, government and house organs, learned, fiction and humour</td>
+							<td style="text-align:center">American English texts printed in 1961</td>
+							<td style="text-align:center">
+									<a href="http://www.essex.ac.uk/linguistics/external/clmt/w3c/corpus_ling/content/corpora/list/private/brown/brown.html"> Brown Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmNbF6nH">here</a>)
+							</td>
+							<td style="text-align:center">No</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>CACM</b></td>
+							<td style="text-align:center">Abstracts</td>
+							<td style="text-align:center">3204 documents</td>
+							<td style="text-align:center">Engineering</td>
+							<td style="text-align:center">Communications of the ACM journal</td>
+							<td style="text-align:center">
+									<a href="http://ir.dcs.gla.ac.uk/resources/test_collections/cacm/cacm.tar.gz">CACM Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmNuXihC">here</a>)
+							</td>
+							<td style="text-align:center">Yes</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>CISI</b></td>
+							<td style="text-align:center">Abstracts</td>
+							<td style="text-align:center">1460 documents</td>
+							<td style="text-align:center">Library Science</td>
+							<td style="text-align:center">Books and scientific journals</td>
+							<td style="text-align:center">
+									<a href="http://ir.dcs.gla.ac.uk/resources/test_collections/cisi/cisi.tar.gz">CISI Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmO1NFyk">here</a>)
+							</td>
+							<td style="text-align:center">Yes</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>CLEF</b></td>
+							<td style="text-align:center">Articles</td>
+							<td style="text-align:center">2006 edition: 536,678 terms</td>
+							<td style="text-align:center">News</td>
+							<td style="text-align:center">Newspaper in Dutch, English, French, German, Italian and Spanish</td>
+							<td style="text-align:center">
+									<a href="http://www.clef-initiative.eu/dataset/test-collection">CLEF Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmO5kxxU">here</a>)
+							</td>
+							<td style="text-align:center">No</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>Cranfield</b></td>
+							<td style="text-align:center">Abstracts</td>
+							<td style="text-align:center">1400 documents, 139,935 terms (4,632 after stop-words removal)</td>
+							<td style="text-align:center">Aeronautical engineering</td>
+							<td style="text-align:center">Scientific journals</td>
+							<td style="text-align:center">
+									<a href="http://ir.dcs.gla.ac.uk/resources/test_collections/cran/cran.tar.gz">Cranfield Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmOFcwPc">here</a>)
+							</td>
+							<td style="text-align:center">Yes</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>INSPEC</b></td>
+							<td style="text-align:center">Abstracts</td>
+							<td style="text-align:center">10 million documents</td>
+							<td style="text-align:center">Astronomy, electronics, communications, ergonomics, computers and computing, computer science, control engineering, electrical engineering, information technology and physics</td>
+							<td style="text-align:center">Scientific and engineering journals since 1898</td>
+							<td style="text-align:center">
+									<a href="http://inspecdirect.theiet.org/contentcoverage/inspec/index.cfm">Inspec Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmOL2mE8">here</a>)
+							</td>
+							<td style="text-align:center">No</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>MEDLARS</b></td>
+							<td style="text-align:center">Abstracts</td>
+							<td style="text-align:center">1033 documents</td>
+							<td style="text-align:center">Medicine</td>
+							<td style="text-align:center">Scientific journals</td>
+							<td style="text-align:center">
+									<a href="http://ir.dcs.gla.ac.uk/resources/test_collections/medl/med.tar.gz">Medlars Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmONx19F">here</a>)
+							</td>
+							<td style="text-align:center">Yes</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>NPL</b></td>
+							<td style="text-align:center">Abstracts</td>
+							<td style="text-align:center">11,429 documents</td>
+							<td style="text-align:center">Reports of vehicle evaluations</td>
+							<td style="text-align:center">National Physical Laboratory</td>
+							<td style="text-align:center">
+									<a href="http://ir.dcs.gla.ac.uk/resources/test_collections/npl/npl.tar.gz">NPL Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmOUV6qA">here</a>)
+							</td>
+							<td style="text-align:center">Yes</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>Reuters-21578</b></td>
+							<td style="text-align:center">Articles</td>
+							<td style="text-align:center">21,578 documents</td>
+							<td style="text-align:center">News</td>
+							<td style="text-align:center">Reuters</td>
+							<td style="text-align:center">
+									<a href="http://kdd.ics.uci.edu/databases/reuters21578/reuters21578.tar.gz">Reuters-21578 Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmOYv8MU">here</a>)
+							</td>
+							<td style="text-align:center">Yes</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>Time</b></td>
+							<td style="text-align:center">Articles</td>
+							<td style="text-align:center">425 documents</td>
+							<td style="text-align:center">News</td>
+							<td style="text-align:center">Time magazine</td>
+							<td style="text-align:center">
+									<a href="http://ir.dcs.gla.ac.uk/resources/test_collections/time/time.tar.gz">Time Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmOdhgXF">here</a>)
+							</td>
+							<td style="text-align:center">Yes</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>TREC</b></td>
+							<td style="text-align:center">Articles</td>
+							<td style="text-align:center">&asymp;1.89 million documents</td>
+							<td style="text-align:center">News</td>
+							<td style="text-align:center">Newswire and other sources</td>
+							<td style="text-align:center">
+									<a href="http://trec.nist.gov/data/docs_eng.html">Trec Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmOgdwKr">here</a>)
+							</td>
+							<td style="text-align:center">No</td>
+					</tr>
+					
+					<tr>
+							<td style="text-align:center"><b>WSJ</b></td>
+							<td style="text-align:center">Articles</td>
+							<td style="text-align:center">&asymp;30 million of terms</td>
+							<td style="text-align:center">News</td>
+							<td style="text-align:center">Wall Street Journal</td>
+							<td style="text-align:center">
+									<a href="http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC2000T43">WSJ Corpus</a>
+									<br>
+									(Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmOkfDth">here</a>)
+							</td>
+							<td style="text-align:center">No</td>
+					</tr>
+				</tbody>
+				
+ </table> 
+ 
+ <p>Some researchers (<a href="paper605.html#kro93">Krovetz, 1993</a>; <a href="paper605.html#hul96">Hull, 1996</a>; <a href="paper605.html#har91">Harman, 1991</a>) relate the performance of a stemmer 
+ to the collection used as input. In fact, they all confirm after their experimentation that stemmers perform better, mainly in terms of precision, when the 
+ documents are short (less than 200 words per document). This can be explained because the probability that terms used in the query appear in the same form in 
+ the documents decreases as the vocabulary is reduced, and then the conflation obtained by the stemming allows detecting more related terms. This hypothesis also 
+ applies for the length of the query.</p>
+ 
+ <h2> Stemming in other languages </h2>
+ 
+ <p>Although many of the stemmers are aimed at and are evaluated with the English language, some researchers have modified existing approaches or proposed new 
+ ones to handle other languages. According to linguistics, languages can be divided into two main categories depending on their morphological structure: 
+ <i>analytic languages</i> and <i>synthetic languages</i>. The second category can be divided, in turn, into three subcategories, namely <i>agglutinative languages</i>, 
+ <i>fusional</i> (or <i>inflecting</i>) <i>languages</i> and <i>polysynthetic languages</i> (<a href="paper605.html#com89">Comrie, 1989</a>; <a href="paper605.html#pir01">Pirkola, 2001</a>; <a href="paper605.html#aik07">Aikhenvald <em>et al.</em>, 2007</a>).   However, this classification is an idealization, as all languages belong to more than one category, even if they generally fit better into one of them. In fact,  two continuous variables have been proposed to indicate to what extent a language belongs to one type or  another, the <i>index of synthesis</i> and the  <i>index of fusion</i> (<a href="paper605.html#wha97">Whaley, 1997</a>). The index of synthesis describes the extent of morphological synthesis, that is, how much the  words of a language are affixed. At one extreme are the most analytic languages (also called <i>isolating languages</i>), where all morphemes are free  morphemes (language tends to have no morphology at all), while at the other extreme, the most polysynthetic languages tend to have sentences consisting of a  single complex word formed by many morphemes. The second variable, the index of fusion, describes how easy it is to split the words into morphemes. On this  scale, one extreme would be the agglutinative languages that have words that can be easily separated into clearly identifiable morphemes, while at the other  extreme would be the fusional languages, where words are formed by morphemes that are not clearly identifiable. Using these indexes, Table 5 provides the prevailing morphological type of some of the languages for which stemmers have been developed. This diversity of languages and types implies there is also diversity in the problems and challenges that sometimes need to be handled by new non-classical approaches as the classical ones lead to results that are not 
+ as accurate and efficient as in English (<a href="paper605.html#ket09">Kettunen, 2009</a>). </p>
+ 
+<table class="center" style="width:90%;">  
+ <caption><br />Table 5: Prevailing morphological type of some languages </caption>
+ 				<tbody>
+          <tr>
+	<th rowspan="3" style="border-right-color:#FFF; border-right-style:solid; border-right-width:thin;">Language</th>	<th colspan="4" style="border-bottom-color:#FFF; border-bottom-style:solid; border-bottom-width:thin;">Morphological type</th></tr>  
+          <tr>					
+							<th rowspan="2" style="border-right-color:#FFF; border-right-style:solid; border-right-width:thin;">Analytic/<br>isolating</th>
+							<th colspan="3">Synthetic</th>
+					</tr> 
+          <tr>
+							<th style="border-top-color:#FFF; border-top-style:solid; border-top-width:thin; border-right-color:#FFF; border-right-style:solid; border-right-width:thin;">Agglutinative</th>
+							<th style="border-top-color:#FFF; border-top-style:solid; border-top-width:thin; border-right-color:#FFF; border-right-style:solid; border-right-width:thin;">Fusional/inflecting </th>
+							<th style="border-top-color:#FFF; border-top-style:solid; border-top-width:thin;">Polysynthetic</th>
+					</tr>
+					 
+          <tr>
+       				<td>Indonesian (<a href="paper605.html#asi05">Asian <i>et al.</i> 2005</a>)</td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>English (<a href="paper605.html#lov68">Lovins, 1968</a>; <a href="paper605.html#por80">Porter, 1980</a>; <a href="paper605.html#pai90">Paice, 1990</a>; <a href="paper605.html#kro93">Krovetz, 1993</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Finnish (<a href="paper605.html#kor04">Korenius <i>et al.</i>, 2004</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Hungarian (<a href="paper605.html#maj08">Majumder <i>et al.</i>, 2008</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Basque (<a href="paper605.html#otx10">Otxandorena, 2010</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Turkish (<a href="paper605.html#din03">Din&ccedil;er, 2003</a>; <a href="paper605.html#ery04">Eryi&#287;it and Adal&#305;, 2004</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Bengali (<a href="paper605.html#maj07">Majumder <i>et al.</i>, 2007</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>German (<a href="paper605.html#bra04">Braschler and Ripplinger, 2004</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Dutch (<a href="paper605.html#kra94">Kraaij and Pohlmann, 1994</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Portuguese (<a href="paper605.html#ore01">Orengo and Huyck, 2001</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>French (<a href="paper605.html#mou01">Moulinier, McCulloh and Lund, 2001</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Czech (<a href="paper605.html#maj08">Majumder <i>et al.</i>, 2008</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Arabic (<a href="paper605.html#roe00">de Roeck and Al-Fares, 2000</a>; <a href="paper605.html#lar02">Larkey <i>et al.</i>, 2002</a>; <a href="paper605.html#che02">Chen and Gey, 2002</a>; <a href="paper605.html#tag05">Taghva <i>et al.</i>, 2005</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Bulgarian (<a href="paper605.html#maj08">Majumder <i>et al.</i>, 2008</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Slovene (<a href="paper605.html#pop92">Popovic and Willett, 1992</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Greek (<a href="paper605.html#ada10">Adam <i>et al.</i>, 2010</a>)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+              <td style="text-align:center"></td>
+       		</tr>
+					
+					<tr>
+       				<td>Mohawk</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">X</td>
+       		</tr>
+ 				</tbody>
+				</table> 
+
+ <p>In fact, even if modern English can be considered an analytic language, it is also a weakly inflective language due to its heritage of Old English, which was 
+ a fusional language (<a href="paper605.html#mey10">Meyer, 2010</a>). This means it is much easier to obtain the stems of the words than in other very isolating languages 
+ like Mandarin Chinese or Indonesian. In fact, while stemming in English only cares about suffix stripping, stemming in Indonesian must consider and remove a 
+ wider range of affixes, like prefixes, infixes, confixes (combination of prefixes and suffixes), as well as suffixes. Many of the proposed algorithms for 
+ stemming Indonesian words use well-known elements used in classical stemmers like dictionaries, lists of rules and recoding 
+ (<a href="paper605.html#asi05">Asian, Williams and Tahaghoghi, 2005</a>).</p>
+ 
+ <p>With respect to agglutinative languages, Finnish (<a href="paper605.html#ket05">Kettunen, Kunttu and J&auml;rvelin, 2005</a>) and Turkish are good examples of highly inflective languages deriving from a complex morphology. In particular, Turkish has approximately 23,000 stems and words are formed depending on their grammatical function,  which is indicated by adding suffixes to stems. This results in a theoretically infinite number of words that can be created (<a href="paper605.html#han84">Hankamer, 1984</a>).  This theoretical infinity of words makes the use of stemming algorithms highly recommended in order to increase the conflation rate and reduce the storage volume (<a href="paper605.html#din03">Din&ccedil;er, 2003</a>). Due to the morphological complexity of Turkish, typically <i>morphological analysers</i> have been proposed as  stemmers (<a href="paper605.html#ery04">Eryi&#287;it and Adal&#305;, 2004</a>). However, morphological analysers are computationally very costly, which is why other  approaches have tried to reduce this complexity while trying to obtain an acceptable level of accuracy, for example using n-grams  (<a href="paper605.html#ekm96">Ekmek&ccedil;ioglu, Lynch and Willett, 1996</a>) or removing affixes using a set of rules and a list of well-known suffixes, as with Porter's  stemmer (<a href="paper605.html#�il10">&Ccedil;ilden, 2010</a>).</p>
+ 
+ <p>On the other side, fusional languages have a large amount of representatives, as most of the Indo-European languages are of this type. Many of the stemmers 
+ for them are based on Porter's approach, as it fits perfectly with their morphological structure. One example is the algorithmic stemmer proposed by Popovic 
+ and Willett for the Slovene language (<a href="paper605.html#pop92">Popovic and Willett, 1992</a>) that uses a list of 5,276 well-known suffixes. This number is much higher 
+ than Porter's original one because Slovene is morphologically much richer than English, and then the casuistry, both for inflectional and derivational suffixes, 
+ is bigger. The experiments carried out to test this Slovene stemmer show a significant improvement in terms of precision while maintaining recall. In fact, many 
+ researchers ensure that the performance of a stemmer increases as the morphological complexity of the language does 
+ (<a href="paper605.html#pop92">Popovic and Willett, 1992</a>; <a href="paper605.html#che02">Chen and Gey, 2002</a>; <a href="paper605.html#kra94">Kraaij and Pohlmann, 1994</a>). To prove it, Popovic 
+ and Willett carried out the same experiment using as input the Slovene corpus translated to English and compared the performance measures obtained. The results 
+ of the English experiment showed a non-significant improvement in terms of precision and recall, and then confirmed the relation between performance and 
+ morphological complexity of the language. Other more sophisticated approaches have been proposed, always based on the use of suffix removal rules, but improving 
+ the result by adapting their application to the peculiarities of the language. This is the case of the stemmer developed by Adam <i>et al.</i> (<a href="paper605.html#ada10">2010</a>) 
+ dealing with the Greek language, which is also a morphologically rich language. Moreover, Greek has an added difficulty, as many suffixes depend on the 
+ grammatical type of the word within the sentence. That is why the authors propose enriching a typical algorithmic stemmer with an initial <i>part-of-speech tagging 
+ phase</i> to obtain every word's grammatical category. Then, stripping rules are applied to a subset of the list of possible suffixes, depending on the 
+ part-of-speech tag of the term to be stemmed. Due to this, the Greek stemmer proposed yields very good results, as 96.7% of the vocabulary (considering only 
+ nouns, adjectives, verbs and pronouns) is stemmed correctly. Analysing the detail of the errors (12.5% of them are because of over-stemming while the rest are 
+ caused by under-stemming), the stemmer can be classified as a weak stemmer.</p>
+ 
+ <p>Finally, to the best of our knowledge, no stemming algorithms have been proposed for polysynthetic languages, like Mohawk, Blackfoot or Greenlandic. Probably, 
+ in these languages, the fact that words are composed of many morphemes complicates the identification of a single stem per word. </p>
+ 
+
+ <p>Nevertheless, even if some alternative approaches have been proposed to meet the specificities of certain languages, the Porter algorithm is still one of the 
+ most used approaches because of its simplicity, extensibility and adaptability. Moreover, Porter has eased the task by creating 
+ <a href="http://snowball.tartarus.org/"><i>Snowball</i></a> (Archived by WebCite&reg; <a href="http://www.webcitation.org/6MmPkIQjA">here</a>), a framework to 
+ develop new stemmers (<a href="paper605.html#por01">Porter, 2001</a>). <i>Snowball</i>, which is presented as an easy-to-learn and easy-to-use language, permits an ANSI C or 
+ JAVA version of a stemmer to be obtained simply by defining the rules with some lines of code. Currently, stemmers for around twenty different languages have 
+ been implemented using <i>Snowball</i>, among which are the majority of the agglutinative and fusional languages listed in Table 5.</p>
+ 
+ <h2>Recent approaches</h2>
+ 
+ <p>To enhance the performance of the stemming and/or to reduce as much as possible the loss of accuracy because of over and under-stemming errors, some 
+ researchers have proposed alternative approaches in recent years (<a href="paper605.html#may03">Mayfield and McNamee, 2003</a>; <a href="paper605.html#pen07">Peng, Ahmed, Li and Lu, 2007</a>). 
+ Many of them are based on exploiting the context or the domain, either of the term itself or of the document. One example is the work of Xu and Croft 
+ (<a href="paper605.html#xu98">1998</a>), where they propose to consider the co-occurrence of two terms within a collection of documents to determine if they belong to the 
+ same concept. If they do, then they must be conflated under the same stem. Their hypothesis is that if two terms are related and belong to the same topic it is 
+ highly probable that they will occur together in a given window of words within the documents of the collection. According to this, they propose refining the 
+ <i>equivalence classes of terms</i> (all the groups of terms that will conflate into the same stem) obtained after applying a heavy stemmer by subdividing or grouping 
+ them. This refinement, based on the concept of hierarchical clustering, is done with two algorithms that make use of a metric <i>em</i>, based on mutual information 
+ theory, that indicates how possible it is to have the same term within a window of words. The first algorithm, called <i>Connected Component Algorithm (CCA)</i>, 
+ divides an initial equivalence class into subclasses each containing terms with an <i>em</i> higher than a defined threshold. This algorithm can affect the effectiveness 
+ of the retrieval because of the appearance of <i>strings</i> (creation of big classes of equivalence that internally are sparsely connected 
+ (<a href="paper605.html#sal89">Salton, 1989</a>)), which is why the <i>Optimal Partition Algorithm (OPA)</i> is used to calculate the best equivalence groups to maximize the performance 
+ of the whole system. To achieve this, for every pair of words <i>(a, b)</i> the net benefit of conflating them or not is calculated, which is the difference 
+ between the measure <i>em(a, b)</i>, representing the benefit of conflating, and the constant &delta;, representing the harm it causes to precision to conflate 
+ <i>a</i> and <i>b</i>. Finally, the best optimal partition is the one that maximizes the sum of net benefits for every pair of words. The authors carried out 
+ an experiment to evaluate their system in two languages, English and Spanish. In both cases, the results obtained after applying their algorithms to the output 
+ stems returned by the Porter stemmer and by a trigram approach (an n-gram corresponds to the <i>n</i> first letters of a word, then a trigram contains the first 
+ three letters of a word), with a window of 100 words, show a significant improvement with respect to the original stemmers in terms of performance. However, 
+ Larkey <i>et al.</i> (<a href="paper605.html#lar02">2002</a>) apply the same technique to Arabic but their experiments yield better results with a simple stemmer, based on stripping 
+ predefined suffixes and prefixes and also removing stop-words, than with the same approach enriched with co-occurrence analysis.</p>
+ 
+ <p>Performance enhancement of the stemmer is not the only aspect that has been investigated in the literature. An example is the statistical stemmer proposed by 
+ Melucci and Orio (<a href="paper605.html#mel03">2003</a>), where the most important contribution is that it requires no manual work, not even in the training phase, to 
+ generate the model containing the rules of the stemmer. This is possible because a hidden Markov model is used to determine for every term if a letter belongs 
+ to the stem or to the suffix. The parameters used by this hidden Markov model are calculated through an unsupervised training process using expectation 
+ maximization, where no morphological rules or list of known stems are needed. Regarding performance, the authors carried out an experiment where they compared 
+ the Porter stemmer with their system and determined that the performance was equivalent.</p>
+ 
+ <p>Other researchers have proposed stemmers that are not based on rules. Majumder <i>et al.</i> (<a href="paper605.html#maj07">2007</a>) aim at creating stemmers for 
+ languages that lack linguistic resources (like morphological rules or a thesaurus), such as Bengali. The proposal consists of creating equivalent classes of 
+ words using an unsupervised, statistical and agglomerative hierarchical clustering algorithm based on a measure of distance between strings. Besides this, as 
+ in a hierarchical clustering algorithm, obtained classes can be merged depending on their similitude. After carrying out some experiments using as a baseline a 
+ non-stemming approach, two classical approaches (Porter and Lovins) and an adapted cluster-based approach using n-gram to cluster instead of a similarity 
+ measure (<a href="paper605.html#roe00">de Roeck and Al-Fares, 2000</a>), their proposal has an equivalent performance both in English and French in comparison to the 
+ original Porter results, but in Bengali it increases considerably with respect to the non-stemming version (up to around 40% improvement both in recall and 
+ precision).</p>
+ 
+ <p>Another approach to develop stemmers for languages that are extremely complex in terms of morphology or that lack linguistic resources consists of using a 
+ cross-language stemmer, that is, using mechanisms, such as bilingual dictionaries or machine translators, to translate the documents from the source language 
+ to English and then applying to them any of the stemmers developed for English while associating the results to the source document 
+ (<a href="paper605.html#pop92">Popovic and Willett, 1992</a>; <a href="paper605.html#lar02">Larkey <i>et al.</i>, 2002</a>; <a href="paper605.html#che02">Chen and Gey, 2002</a>).</p>
+ 
+ <h2>Conclusion</h2>
+ 
+ <p>Stemming algorithms' purpose is quite simple and specific: find the morphological root of a word. However, no language strictly follows a deterministic set 
+ of rules, so it is difficult to achieve this purpose systematically. That is why a perfect stemmer, able to accurately obtain the stems of any 
+ term independently of its features, does not exist. Researchers have tried to provide some classifications and evaluation metrics to help users when selecting a stemmer 
+ according to the task they have to carry out and to the expected results. To achieve this, two metrics, recall and precision, have been adopted as performance 
+ measures. The problem of these two metrics is that they are highly dependent on other processes of the information retrieval pipeline. In fact, both are related 
+ to the accuracy of the ordered list of documents that best answer an information need posed through a query. Stemming only allows a reduction of related words 
+ to the same morphological root, and then to abstract the words in documents to concepts at a higher semantic level, but other algorithms in the information 
+ retrieval pipeline are in charge of translating these concepts into multidimensional vectors and of figuring out the similitude between every document and the 
+ query, based on a similitude metric that must also be defined. Thus, many factors can have an influence on the precision and recall of an information retrieval 
+ application. The problem is that almost no researcher exposes under which exact conditions and information retrieval algorithms and metrics they carry out their 
+ experiments to evaluate the performance of stemmers. Therefore, it becomes quite difficult to compare performance measures obtained from different experiments 
+ and researchers, as we cannot ensure that all the algorithms and metrics used, except for the stemming algorithm, work at least equivalently. The result is that 
+ there is not a good solution to evaluate a stemmer individually and independently of other information retrieval process factors, in terms of precision and 
+ recall.</p>
+ 
+ 
+ <p>To avoid possible interferences from these other processes in the information retrieval pipeline, some approaches have been proposed to evaluate stemmers' 
+ performance without the need to embed stemming into an information retrieval process, such as quantifying how much they compress the input vocabulary or 
+ characterizing which types of errors they generate. On the one hand, we have seen that stemmers produce two types of errors (over-stemming and under-stemming), 
+ which in turn define the strength of the stemmer. This strength is one of the main features that define a stemmer, as the rest of the properties and metrics 
+ are related to it. If a user needs to classify a collection of documents so that the number of groups is as low as possible and each group contains most of the 
+ topic-related documents, then a stronger stemmer is suitable as they provide a high recall and have a high conflation rate. An example could be a student that 
+ needs to explore exhaustively all the documents related with a topic within a collection of documents: even if some of the retrieved documents do not belong to 
+ the topic, the user can be sure that the vast majority of those which do deal with the topic will be present in the output. Oppositely, if the task requires 
+ the classification to return highly coherent groups (where most of their documents are topic-related), even if two or more of these groups are related in some 
+ way, then the precision offered by a weak stemmer is one of the main features to consider. Notwithstanding, no researcher has proposed an objective and absolute 
+ measure of a stemmer's strength. In fact, proposed classifications have been done in a relative way by ordering the stemmers according to the values obtained 
+ for each of them in terms of under-stemming and over-stemming (as strength directly depends on these two measures).</p>
+ 
+ <p>Besides these performance considerations, other constraints can have an influence on which stemmer is the best adapted to the needs of the user. For example, 
+ a strong stemmer can be the better option if the system has storage restrictions to handle the stemming process (e.g., smartphone), as these stemmers reduce 
+ considerably the dictionary associated to the documents that is needed to calculate the similitude measures between documents or between a document and a query. 
+ Even if no experiments have been explicitly proposed to evaluate the benefits or drawbacks of applying stemming or not in an information retrieval process, it 
+ is assumed that, as the dictionary of terms that is going to be manipulated by the subsequent algorithms in the information retrieval pipeline is considerably 
+ thinner, then their processing speed should also increase considerably. This can be a turning point in devices with hardware limitations (e.g., smartphones) or 
+ in remote systems where the exchanged dataflow should be as low as possible (e.g., client-server systems).</p>
+ 
+ <p>With respect to the usefulness of stemming terms in an information retrieval system, there is not wide agreement. Nevertheless, all experiments seem to 
+ demonstrate that the nature and the length of the collection's documents directly influence the results. As we have seen, short documents like abstracts are 
+ perfect candidates for stemming, as the co-occurrence rate of their terms is lower, and then conflating related words can make hidden thematic relations 
+ flourish. Furthermore, languages that are highly inflective benefit much more from stemming as their terms are morphologically more related, and most of the 
+ derivations or inflections applied to related words are defined by rules that allow a straightforward recognition of the affixes. Finally, both the nature of 
+ the input documents (and their vocabulary) and the purpose of the application (search, explore, classify, etc.) greatly conditions the usefulness of applying 
+ stemming in an information retrieval application.</p>
+ 
+ <h2>Acknowledgements</h2> 
+ 
+ <p>This research work has been partially funded by the Spanish Ministry of Science and Innovation through research project TIN2009-14659-C03-02, and also by  Universidad Polit&eacute;cnica de Madrid (UPM) through grant SBUPM-SIPMHXZ. The authors thank to copy-editors of the journal for their assistance in enabling  them to satisfy the style requirements of the journal.</p> 
+ 
+ <h2 id="author">About the authors</h2> 
+ 
+ <p><strong>Cristian Moral</strong> is a Ph.D. Candidate in the Escuela T&eacute;cnica Superior de Ingenieros Inform&aacute;ticos at Universidad Polit&eacute;cnica de Madrid, Spain. He received his Master of Science in Computer Science both from Universidad Polit&eacute;cnica de Madrid and from Politecnico di Torino (Italy). Cristian is member of the Decoroso Crespo Laboratory  since 2011, where he has participated in some R&amp;D projects in the area of virtual environments. His current research interests are information retrieval, visualization and	manipulation through  adaptive virtual environments and human-computer interaction. He can be contacted at: <a href="mailto:cmoral@fi.upm.es">cmoral@fi.upm.es</a>.<br/>
+      <strong>Ang&eacute;lica de Antonio</strong> has been faculty member in the Escuela T&eacute;cnica Superior de Ingenieros Inform&aacute;ticos at the Universidad Polit&eacute;cnica de Madrid since 1990. She received her Ph.D. in Computer Science in 1994. Angelica is Director of the Decoroso Crespo Laboratory since 1995, where she has led several R&amp;D projects in the areas of intelligent tutoring systems, e-learning, virtual environments and intelligent agents. Her current research interests focus on virtual and augmented reality, adaptive systems and human-computer interaction.	She can be contacted at: <a href="mailto:angelica@fi.upm.es">angelica@fi.upm.es</a>.<br/>
+        <strong>Ricardo Imbert</strong> is an associate professor in the Escuela T&eacute;cnica Superior de Ingenieros Inform&aacute;ticos  at the Universidad Polit&eacute;cnica de Madrid since 2000. He received his Ph.D. in Computer Science in 2005. Ricardo is member of the Decoroso Crespo Laboratory since 1996, where he has led several R&amp;D projects in the areas of intelligent tutoring systems, intelligent software agents, virtual environments and adaptive interactive systems. His current research interests deal with cognitive agent architectures, agent-based software engineering, human-computer interaction and interactive systems. He can be contacted at: <a href="mailto:rimbert@fi.upm.es">rimbert@fi.upm.es</a>.<br/>
+        <strong>Jaime Ram&iacute;rez</strong> is an assistant professor in the Escuela T&eacute;cnica Superior de Ingenieros Inform&aacute;ticos  at Universidad Polit&eacute;cnica de Madrid, Spain. He received his Ph.D. in Computer Science in 2002. Jaime is member of the Decoroso Crespo Laboratory since 1996, where he has participated in several R&amp;D projects in the areas of intelligent tutoring systems, e-learning, virtual environments and intelligent agents. His current research interests are intelligent tutoring systems, virtual environments for training, and user and student modelling using ontologies and data mining. He can be contacted at: <a href="mailto:jramirez@fi.upm.es">jramirez@fi.upm.es</a>.</p> 
+
+ 
+</section>
+
+
+<section class="refs">
+  
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">References</legend>  
+ 
+ <ul class="refs"> 
+ 
+   <li id="ada10">Adam, G., Asimakis, K., Bouras, C. &amp; Poulopoulos, V. (2010). An efficient mechanism for stemming and tagging: the case of Greek language.  In Rossitza Setchi, Ivan Jordanov, Robert J. Howlett and Lakhmi C. Jain , (Eds.), <em>Proceedings of the 14th International Conference on Knowledge-based and  Intelligent Information and Engineering Systems</em>, <strong>Part III</strong>, 389-397. Berlin: Springer-Verlag. </li> 
+   
+	 <li id="aik07">Aikhenvald, A.Y., Talmy, L., Bickel, B., Nichols, J., Corbett, G.G., Timberlake, A... <em>et al.</em>, Thompson, S.
+	 (2007). Language Typology and Syntactic Description. Volume 3: Grammatical Categories and the Lexicon. Shopen, T. (Ed.).  Cambridge: Cambridge University Press</li> 
+	 
+   <li id="asi05">Asian, J., Williams, H. E. &amp; Tahaghoghi, S. M. (2005). Stemming Indonesian. <em>Proceedings of the 28th Australasian conference on Computer  Science - ACSC '05</em>, <strong>38</strong>, 307-314. Newcastle, Australia: Australian Computer Society, Inc. </li> 
+   
+   <li id="bae99">Baeza-Yates, R. A. and Ribeiro-Neto, B. (1999). Modern information retrieval. Boston, MA: Addison-Wesley Longman Publishing Co., Inc.</li> 
+   
+   <li id="bel79">Bell, C. and Jones, K. P. (1979). Towards everyday language information retrieval systems via minicomputers. <em>Journal of the American Society for Information Science</em>, <strong>30</strong>(6), 334-339. </li> 
+   
+   <li id="ben13">Ben Abdessalem Karaa, W. (2013). A new stemmer to improve information. <em>International Journal of Network Security &amp; Its Applications (IJNSA),  5</em>(4), 143-154</li> 
+   
+   <li id="bra04">Braschler, M. &amp; Ripplinger, B. (2004). How effective is stemming and decompounding for German text retrieval? <em>Information Retrieval,  7</em>(3-4), 291-316.</li> 
+   
+   <li id="che02">Chen, A. &amp; Gey, F. (2002). Building an Arabic stemmer for information retrieval. <em>In Proceedings of TREC 2002</em>, 631-639. NIST,   Gaithersburg. </li>
+   
+   <li id="chi13">Chintala, D. R. &amp; Reddy, E. M. (2013). An approach to enhance the CPI using Porter stemming algorithm. 
+   <em>International Journal of Advanced Research in Computer Science and Software Engineering, 3</em>(7), 1148-1156</li>
+   
+   <li id="cil10">&Ccedil;ilden, E. K. (2010). <em><a href="http://www.webcitation.org/6MvJeR7Wz">Stemming Turkish words using Snowball</a></em>. Retrieved 26 January 2014 from http://snowball.tartarus.org/algorithms/turkish/accompanying_paper.doc. (Archived by WebCite&reg; at http://www.webcitation.org/6MvJeR7Wz)</li>
+   
+   <li id="com89">Comrie, B. (1989). <em>Language universals and linguistic typology: syntax and morphology</em>. Chicago, IL: University of Chicago Press</li>
+   
+   <li id="daw74">Dawson, J. (1974). Suffix removal and word conflation. <em>ALLC Bulletin, 2</em>(3), 33-46</li>
+   
+   <li id="roe00">de Roeck, A. N. &amp; Al-Fares, W. (2000). A morphologically sensitive clustering algorithm for identifying Arabic roots.  In  <em>Proceedings of the 38th Annual Meeting on Association for Computational Linguistics</em>, (pp. 199-206). Stroudsburg, PA: Association for Computational Linguistics. </li>
+   
+   <li id="din03">Din&ccedil;er, B.T. (2003). Stemming in agglutinative languages: a probabilistic stemmer for Turkish. In A. Yaz&#305;c&#305; and C. Sener, (Eds.), <em>Computer and Information Sciences - ISCIS 2003</em>, (pp. 244-251.) Berlin: Springer</li>
+   
+   <li id="ekm96">Ekmek&ccedil;ioglu, F. &Ccedil;., Lynch, M. F. &amp; Willett, P. (1996). <a href="http://www.webcitation.org/6NbaMhEBc">Stemming and n-gram matching for term conflation in Turkish texts</a>.  <em>Information Research, 2</em>(2), paper 13. Retrieved from http://www.informationr.net/ir/2-2/paper13.html (Archived by WebCite&reg; at http://www.webcitation.org/6NbaMhEBc)</li>
+   
+   <li id="ery04">Eryi&#287;it, G. C. &amp; Adal&#305;, E. (2004). An affix stripping morphological analyzer for Turkish. In M. H. Hamza, (Ed.),  <em>Proceedings of the International Conference on Artificial Intelligence and Applications - AIA'04</em>, (pp. 299-304). Innsbruck, Austria: ACTA Press.</li>
+   
+   <li id="fer11">Fern&aacute;ndez, A., D&iacute;az, J., Guti&eacute;rrez, Y. &amp; Mu&ntilde;oz, R. (2011). An unsupervised method to improve Spanish stemmer.  In <em>Proceedings of the 16th International Conference on Natural Language Processing and Information Systems</em>, (pp. 221-224). Berlin: Springer-Verlag. </li>
+   
+   <li id="fra84">Frakes, W. B. (1984). Term conflation for information retrieval.   <em>In Proceedings of the 7th annual international ACM SIGIR conference on Research and development in information retrieval</em>, (pp. 383-389).  Swinton, UK: British Computer Society. </li>
+   
+   <li id="fra03">Frakes, W.B. &amp; Fox, C.J. (2003). Strength and similarity of affix removal stemming algorithms. <em>SIGIR Forum, 37</em>(1), 26-30. </li>
+   
+   <li id="gar01">Garc&iacute;a Figuerola, L.C., G&oacute;mez-D&iacute;az, R., Zazo Rodr&iacute;guez, &Aacute;. F. &amp; Alonso Berrocal, J. L. (2001). Stemming in Spanish: a first approach to its impact on information retrieval. <em>Results of the CLEF 2001 Cross-Language System Evaluation Campaign. Working Notes for the CLEF 2001 Workshop</em>, (pp. 197-202). Springer-Verlag</li>
+   
+   <li id="han84">Hankamer, J. (1984). <em>Turkish generative morphology and morphological parsing.</em> Paper presented at the <em>Second International Conference on Turkish Linguistics</em>, Istanbul, Turkey</li>
+   
+   <li id="har91">Harman, D. (1991). How effective is suffixing? <em>Journal of the American Society for Information Science, 42</em>(1), 7-15. </li>
+   
+   <li id="hul96">Hull, D. A. (1996). Stemming algorithms - a case study for detailed evaluation. <em>Journal of the American Society for Information Science, 47</em>, 70-84</li>
+   
+   <li id="ken55">Kent, A., Berry, M. M., Luehrs, F. U. &amp; Perry, J. W. (1955). Machine literature searching VIII. Operational criteria for designing information retrieval systems. <em>American Documentation, 6</em>(2), 93-101</li> 
+  	
+   <li id="ket09">Kettunen, K. (2009). Reductive and generative approaches to management of morphological variation of keywords in monolingual information retrieval: an overview. <em>Journal of Documentation, 65</em>(2), 267-290</li> 
+  	 
+   <li id="ket05">Kettunen, K., Kunttu, T. &amp; J&auml;rvelin, K. (2005). To stem or lemmatize a highly inflectional language in a probabilistic IR environment?  <em>Journal of Documentation, 61</em>(4), 476-496</li>
+  	
+   <li id="kor04">Korenius, T., Laurikkala, J., J&auml;rvelin, K. &amp; Juhola, M. (2004). Stemming and lemmatization in the clustering of Finnish text documents.  In   <em>Proceedings of the thirteenth ACM International Conference on Information and Knowledge Management</em>, (pp. 625-633). New York, NY: ACM Press.</li>  
+  	 
+   <li id="kra94">Kraaij, W. &amp; Pohlmann, R. (1994). Porter's stemming algorithm for Dutch.  In L.G.M. Noordman &amp; W.A.M. de Vroomen (Eds.),  <em>Informatiewetenschap 1994: Wetenschappelijke bijdragen aan de derde STINFON Conferentie</em>, (pp. 167-180). Leiden, Netherlands: Stichting Informatiewetenschap Nederland</li>
+   
+   <li id="kra96">Kraaij, W. &amp; Pohlmann, R. (1996). Viewing stemming as recall enhancement.  In  <em>Proceedings of the 19th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, (pp. 40-48.)  New York, NY: ACM Press.</li> 
+  	
+   <li id="kro93">Krovetz, R. (1993). Viewing morphology as an inference process. In  <em>Proceedings of the 16th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 191-202.   New York, NY: ACM Press.</li> 
+  	 
+   <li id="lar02">Larkey, L.S., Ballesteros, L. &amp; Connell, M. E. (2002). Improving stemming for Arabic information retrieval: light stemming and co-occurrence  analysis. In <em>Proceedings of the 25th annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, (pp. 275-282).  New York, NY: ACM Press.</li>
+  	
+   <li id="len88">Lennon, M., Pierce, D. S., Tarry, B. D. &amp; Willett, P. (1988). Document retrieval systems. In P. Willett (Ed.), <em>Document retrieval systems</em>, (pp. 99-105).    London: Taylor Graham Publishing.</li> 
+    
+   <li id="lov68">Lovins, J. B. (1968). <a href="http://www.webcitation.org/6MmQ25qVU">Development of a stemming algorithm</a>. <em>Mechanical Translation and Computational Linguistics, 11</em>(1/2), 22-31.  Retrieved 26 January 2014 from http://mt-archive.info/MT-1968-Lovins.pdf. (Archived by WebCite&reg; at http://www.webcitation.org/6MmQ25qVU)</li>
+   
+   <li id="luh57">Luhn, H. P. (1957). A statistical approach to mechanized encoding and searching of literary information.  <em>IBM Journal of Research and Development, 1</em>(4), 309-317. </li> 
+  	
+   <li id="maj08">Majumder, P., Mitra, M. &amp; Pal, D. (2008). Bulgarian, Hungarian and Czech stemming using YASS.    In  Carol Peters, Valentin Jijkoun, Thomas Mandl, Henning M&uuml;ller, Douglas W. Oard, Anselmo Pe&ntilde;as, Vivien Petras &amp; Diana Santos (Eds.),    <em>Advances in multilingual and multimodal information retrieval: 8th Workshop of the Cross-Language Evaluation Forum, CLEF 2007, Budpest, Hungary, September 2007. Revised selected papers</em>, (pp. 49-56). Berlin: Springer-Verlag. (Lecture Notes in Computer Science, 5152).</li> 
+  	 
+   <li id="maj07">Majumder, P., Mitra, M., Parui, S. K., Kole, G., Mitra, P. &amp; Datta, K. (2007). <a href="http://www.webcitation.org/6NbketMkE">YASS: yet another suffix stripper</a>.  <em>ACM Transactions on Information Systems, 25</em>(4), paper 18. Retireved from http://cse.iitkgp.ac.in/~pabrita/paper/stemmer.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6NbketMkE)</li>
+  	
+   <li id="man08">Manning, C. D., Raghavan, P. &amp; Sch&uuml;tze, H. (2008). <em>Introduction to information retrieval</em>. New York, NY: Cambridge University Press</li> 
+    
+   <li id="may03">Mayfield, J. &amp; McNamee, P. (2003). Single n-gram stemming. In  <em>Proceedings of the 26th Annual International ACM SIGIR Conference on Research and Development in Informaion Retrieval</em>, (pp. 415-416).    New York, NY: ACM Press.</li>
+   
+   <li id="mel03">Melucci, M. &amp; Orio, N. (2003). A novel method for stemmer generation based on hidden Markov models.  In <em>Proceedings of the Twelfth International Conference on Information and Knowledge Management</em>, (pp. 131-138). New York, NY: ACM Press.</li> 
+  	
+   <li id="mey10">Meyer, C. F. (2010). <em>Introducing English linguistics</em>. Cambridge: Cambridge University Press</li> 
+  	 
+   <li id="mil95">Miller, G. A. (1995). WordNet: a lexical database for English. <em>Communications of the ACM, 38</em>(11), 39-41. </li>
+  	
+   <li id="mou01">Moulinier, I., McCulloh, J. A. &amp; Lund, E. (2001). West Group at CLEF 2000: Non-English monolingual retrieval.   In <em>Revised Papers from the Workshop of Cross-Language Evaluation Forum on Cross-Language Information Retrieval and Evaluation</em>, (pp. 253-260).   London: Springer-Verlag. </li> 
+    
+   <li id="ore01">Orengo, V. &amp; Huyck, C. (2001). A stemming algorithm for the Portuguese language.  In <em>Proceedings of the Eighth International Symposium on String Processing and Information Retrieval 2001 (SPIRE 2001)</em>, (pp. 186-193).  Laguna de San Rafael, Chile: IEEE Computer Society Press. </li>
+   
+   <li id="otx10">Otxandorena, M. (2010). <em><a href="http://www.webcitation.org/6MmQC5KbS">A Basque stemming algorithm</a></em>. Retrieved 26 January 2014 from http://snowball.tartarus.org/algorithms/basque/stemmer.html.  (Archived by WebCite&reg; at http://www.webcitation.org/6MmQC5KbS) </li> 
+  	
+   <li id="pai90">Paice, C. D. (1990). Another stemmer. <em>SIGIR Forum, 24</em>(3), 56-61. </li> 
+  	 
+   <li id="pai94">Paice, C. D. (1994). An evaluation method for stemming algorithms.  In <em>Proceedings of the 17th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, (pp. 42-50).  New York, NY: Springer-Verlag. </li>
+  	
+   <li id="pat13">Patil, C. G. &amp; Patil, S. S. (2013). Use of Porter stemming algorithm and SVM for emotion extraction from news headlines.    <em>International Journal of Electronics, Communication & Soft Computing Science and Engineering, 2</em>(7), 9-13</li> 
+    
+   <li id="pen07">Peng, F., Ahmed, N., Li, X. &amp; Lu, Y. (2007). Context sensitive stemming for Web search.  In <em>Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, (pp. 639-646).  New York, NY: ACM Press. </li>
+   
+   <li id="pir01">Pirkola, A. (2001). Morphological typology of languages for IR. <em>Journal of Documentation, 57</em>(3), 330-348</li> 
+  	
+   <li id="pop92">Popovic, M. &amp; Willett, P. (1992). The effectiveness of stemming for natural-language access to Slovene textual data.    <em>Journal of the American Society for Information Science, 43</em>(5), 384-390.  </li> 
+  	 
+   <li id="por80">Porter, M. F. (1980). An algorithm for suffix stripping. <em>Program: Electronic Library and Information Systems, 40</em>(3), 211-218.  </li>
+  	
+   <li id="por01">Porter, M. F. (2001). <a href="http://www.webcitation.org/6MmQJZdhV">Snowball: a language for stemming algorithms</a>. Retrieved 26 January 2014 from http://snowball.tartarus.org/texts/introduction.html.  (Archived by WebCite&reg; at http://www.webcitation.org/6MmQJZdhV)</li>     
+   
+   <li id="sal71">Salton, G. (1971). <em>The SMART retrieval system - experiments in automatic document processing</em>. Upper Saddle River, NJ: Prentice-Hall, Inc.</li>
+   
+   <li id="sal89">Salton, G. (1989). <em>Automatic text processing: the transformation, analysis, and retrieval of information by computer</em>. Boston, MA: Addison-Wesley Longman Publishing Co., Inc.</li>
+   
+   <li id="smi08">Smirnov, I. (2008). <em><a href="http://www.webcitation.org/6MmQO7y0Sv">Overview of stemming algorithms</a></em>. Retrieved 26 January 2014 from http://the-smirnovs.org/info/stemming.pdf. (Archived by WebCite&reg; at http://www.webcitation.org/6MmQO7y0Sv)</li>
+   
+   <li id="tag05">Taghva, K., Elkhoury, R. &amp; Coombs, J. (2005). Arabic stemming without a root dictionary.   In <em>Proceedings of the International Conference on Information Technology: Coding and Computing (ITCC'05), Volume I</em>, (pp. 152-157).   Washington, DC: IEEE Computer Society. </li>
+   
+   <li id="van79">Van Rijsbergen, C. J. (1979). <em>Information Retrieval</em>. (2nd. ed.). Newton, MA: Butterworth-Heinemann</li>
+   
+   <li id="voo94">Voorhees, E. M. (1994). Query expansion using lexical-semantic relations.   In <em>Proceedings of the 17th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, (pp. 61-69).   New York, NY: Springer-Verlag. </li>
+   
+   <li id="wha97">Whaley, L. J. (1997). <em>Introduction to typology: the unity and diversity of language</em>. Thousand Oaks, CA: Sage Publications.</li>
+   
+   <li id="xer94">Xerox Corporation Ltd. (1994).<em> Xerox linguistic database reference</em> (English version 1.1.4). Norwalk, CT: Xerox Corporation Ltd.</li>
+   
+   <li id="xu98">Xu, J. &amp; Croft, W.B. (1998). Corpus-based stemming using cooccurrence of word variants.   <em>ACM Transactions on Information Systems, 16</em>(1), 61-81. </li>
+</ul> 
+</fieldset>  
+</form> 
+  
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+ How to cite this paper </legend>  
+ 
+ <div><br> Moral, C., de Antonio, A., Imbert, R. &amp; Ram&iacute;rez, J.  (2014). A survey of stemming algorithms in information retrieval/ <em>Information Research</em>, <strong>19</strong>(1) paper 605. [Available at  http://InformationR.net/ir/19-1/paper605.html]</div>  
+ </fieldset>  
+ </form> 
+</section>
+</article>
+<br>
+<section>
+      <table class="footer" style="border-spacing:10;">
+    <tr>
+          <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;"> Find other papers on this subject</td>
+        </tr>
+    <tr>
+          <td style="text-align:center; vertical-align:top;"><form method="get" action="http://scholar.google.com/scholar" target="_blank">
+              <table class="footer">
+              <tr>
+                  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"><input type="hidden" name="q" value="&quot;information retrieval&quot;, &quot;stemming algorithms&quot;" />
+                  <br />
+                  <input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />
+                  <input type="hidden" name="num" value="100" /></td>
+                </tr>
+            </table>
+            </form></td>
+          <td style="vertical-align:top; text-align:center;"><!-- Search Google -->
+         <form method="get" action="http://www.google.com/custom" target="_blank">
+              <table class="footer">
+            <tr>
+                  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"><input type="hidden" name="q" value="&quot;information retrieval&quot;, &quot;stemming algorithms&quot;" />
+                <br />
+                <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+                <input type="hidden" name="client" value="pub-5081678983212084" />
+                <input type="hidden" name="forid" value="1" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="hidden" name="oe" value="ISO-8859-1" />
+                <input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" />                <input type="hidden" name="hl" value="en" /></td>
+                </tr>
+          </table>
+            </form></td>
+          <td style="vertical-align:top; text-align:center;"><form method="get" action="http://www.bing.com" target="_blank">
+              <table class="footer">
+              <tr>
+                  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;"><input type="hidden" name="q" value="&quot;information retrieval&quot;, &quot;stemming algorithms&quot;" />
+                  <br />
+                  <input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />
+                  <input type="hidden" name="num" value="100" /></td>
+                </tr>
+            </table>
+            </form></td>
+        </tr>
+  </table>
+      <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/cholar?hl=en&amp;q=http://informationr.net/ir/19-1/paper605.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+      <br />
+      <!-- AddThis Button BEGIN -->
+      <div style="text-align:center;" class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_counter addthis_pill_style"></a> </div>
+      <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script> 
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script> 
+      <!-- AddThis Button END -->
+      
+      <hr />
+
+      <table class="footer" style="padding:10;">
+    <tr>
+          <td style="text-align:center; vertical-align:top;"><div>  <a href="http://www.digits.net" target="_blank">
+    <img src="http://counter.digits.net/?counter={a6aa8c47-27f2-8ee4-2db9-8f7e9df5fd98}&amp;template=simple" 
+     alt="Hit Counter by Digits" /></a></div></td>
+          <td class="footer" style="text-align:center; vertical-align:middle;"><div> &copy; the authors, 2014. <br />
+              Last updated: 22 February, 2014 </div></td>
+          <td style="text-align:center; vertical-align:middle;">&nbsp;</td>
+        </tr>
+  </table>
+    </section>
+<footer>
+      <hr />
+      <table class="footer">
+    <tr>
+          <td><div class="button">
+              <ul style="text-align: center;">
+              <li><a href="infres191.html">Contents</a> | </li>
+              <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+              <li><a href="../irsindex.html">Subject index</a> | </li>
+              <li><a href="../search.html">Search</a> | </li>
+              <li><a href="../index.html">Home</a></li>
+            </ul>
+            </div></td>
+        </tr>
+  </table>
+      <hr />
+    </footer>
+<script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script> <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>
+</body>
+</html>

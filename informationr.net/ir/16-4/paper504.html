@@ -1,0 +1,1235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+ <head>  
+ <title>SemSEDoc: Utilizaci&oacute;n de tecnolog&iacute;as sem&aacute;nticas en el aprovechamiento de los repositorios documentales de los proyectos de desarrollo de software</title>  
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />  <link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" />  
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css" />  
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" /> 
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dc.title" content="SemSEDoc: Utilizaci&oacute;n de tecnolog&iacute;as sem&aacute;nticas en el aprovechamiento de los repositorios documentales de los proyectos de desarrollo de software" />  
+ <meta name="dc.creator" content="Francisco J. Garc&iacute;a-Pe&ntilde;alvo, Ricardo Colomo-Palacios, Pedro Soto-Acosta, Isabel Mart&iacute;nez-Conesa, Enric Serradell-L&oacute;pez" />  
+ <meta name="dc.subject" content="" />  
+ <meta name="dc.description" content="" />  
+ <meta name="dc.subject.keywords" content="" />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+ <meta name="robots" content="all" />  
+ <meta name="dc.publisher" content="Professor T.D. Wilson" />
+ <meta name="dc.coverage.placename" content="global" />  
+ <meta name="dc.type" content="text" />  
+ <meta name="dc.identifier" scheme="ISSN" content="1368-1613" />  
+ <meta name="dc.identifier" scheme="URI" content="http://InformationR.net/ir/16-4/paper504.html" />  
+ <meta name="dc.relation.IsPartOf" content="http://InformationR.net/ir/16-4/infres164.html" />  
+ <meta name="dc.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dc.date.available" content="2011-12-15" /> 
+ 
+<script language="javascript" type="text/javascript"> 
+ 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</script>
+
+<style type="text/css">
+
+.button {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 0px; WIDTH: 45em; PADDING-RIGHT: 0px; DISPLAY: inline; FONT-FAMILY: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif; COLOR: #000000; FONT-SIZE: small; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.button UL {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline; BORDER-TOP: medium none; LIST-STYLE-IMAGE: none; BORDER-RIGHT: medium none; PADDING-TOP: 0px
+}
+.button LI {
+	MARGIN: 0px; DISPLAY: inline; FONT-FAMILY: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif; FONT-SIZE: small; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.button LI A:hover {
+	BACKGROUND-COLOR: azure; WIDTH: auto; COLOR: #ff0000
+}
+FIELDSET {
+	BORDER-BOTTOM: #5e96fd 1px dotted; BORDER-LEFT: #5e96fd 1px dotted; PADDING-BOTTOM: 0.5em; MARGIN-TOP: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; BACKGROUND: white; MARGIN-LEFT: 15px; BORDER-TOP: #5e96fd 1px dotted; MARGIN-RIGHT: 15px; BORDER-RIGHT: #5e96fd 1px dotted; PADDING-TOP: 0.5em
+}
+LEGEND {
+	BORDER-BOTTOM: navy 1px solid; PADDING-BOTTOM: 0.1ex; BACKGROUND-COLOR: #5e96fd; PADDING-LEFT: 0.5ex; PADDING-RIGHT: 0.5ex; COLOR: white; FONT-SIZE: medium; FONT-WEIGHT: bold; BORDER-RIGHT: navy 1px solid; PADDING-TOP: 0.1ex
+}
+</style>
+
+</head>
+<body bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 16  no. 4, December, 2011</span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infres164.html">Contents</a> |  </li>
+        <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>
+<hr style="COLOR: #5e96fd" size="1" />
+
+<br />
+<h1>SemSEDoc: Utilizaci&oacute;n de tecnolog&iacute;as sem&aacute;nticas en el aprovechamiento de los repositorios documentales de los proyectos de desarrollo de software</h1>
+<br />
+<div style="MARGIN-LEFT: 10%; MARGIN-RIGHT: 10%"> 
+  <h4><a href="paper504.html#authors">Francisco J. Garc&iacute;a-Pe&ntilde;alvo 
+    </a><br />
+    Departamento de Inform&aacute;tica y Autom&aacute;tica, Universidad de Salamanca, 
+    Salamanca, Espa&ntilde;a<br />
+  <a href="paper504.html#authors">Ricardo Colomo-Palacios</a><br />
+    Departamento de Inform&aacute;tica, Universidad Carlos III de Madrid, Madrid, 
+    Espa&ntilde;a <br />
+<a href="paper504.html#authors">Pedro Soto-Acosta</a><br />
+    Departamento de Organizaci&oacute;n de Empresas y Finanzas, Universidad de 
+    Murcia, Murcia, Espa&ntilde;a<br />
+<a href="paper504.html#authors">Isabel Mart&iacute;nez-Conesa</a><br />
+    Departamento de Econom&iacute;a Financiera y Contabilidad, Universidad de 
+    Murcia, Murcia, Espa&ntilde;a<br />
+<a href="paper504.html#authors">Enric Serradell-L&oacute;pez </a><br />
+    Departamento de Estudios en PIMEC-SEFES, Universidad Oberta de Catalunya, 
+    Catalunya, Espa&ntilde;a</h4>
+</div><br />
+<form action="paper504.html">
+<fieldset><legend>Abstract </legend>
+  <blockquote> 
+<strong>Introducci&oacute;n.</strong> Debido a la importancia de los sistemas de informaci&oacute;n en la sociedad actual, el desarrollo de los mismos supone una actividad clave para la sociedad del conocimiento. En este entorno, los sistemas son cada vez m&aacute;s complicados y su desarrollo implica la generaci&oacute;n de una documentaci&oacute;n de soporte a este proceso que debe ser gestionada de forma efectiva y eficiente. <br />
+<strong>M&eacute;todo.</strong> A partir de la necesidad de contar con repositorios documentales de soporte al desarrollo de software, se propone la utilizaci&oacute;n de las tecnolog&iacute;as sem&aacute;nticas para la catalogaci&oacute;n, etiquetado, b&uacute;squeda y visualizaci&oacute;n de los artefactos software almacenados en los repositorios.<br />
+<strong>Resultados.</strong> Los resultados de su implantaci&oacute;n se consideran altamente satisfactorios. Por una parte, el feedback recibido sobre las t&eacute;cnicas empleadas para el anotado y la visualizaci&oacute;n de los resultados es positivo y, en segundo lugar, las pruebas realizadas (Precision, Recall y F1) resultan muy alentadoras para la obtenci&oacute;n de resultados fiables.<br />
+<strong>Conclusiones.</strong> Las tecnolog&iacute;as sem&aacute;nticas por su creciente grado de madurez proporcionan un marco de explotaci&oacute;n eficiente y eficaz para los repositorios documentales generados en los proyectos de desarrollo de software.
+  </blockquote>
+  </fieldset> 
+</form>
+    <br />
+    <div align="center">
+<a href="paper504.html#abs">Abstract in English</a></div>
+<br />
+
+<div align="center"><input class="btn" onclick="doChangeFont()" style="background-color: #5e96fd; font-variant: small-caps; font-family: Verdana; color: white; font-weight: bold" type="button" value="change font" /></div><br />
+<h2>Introduction</h2>
+
+<p>La tecnolog&iacute;a se ha convertido en un agente de primer orden en la Sociedad 
+  del Conocimiento debido a su importancia en el entorno de las organizaciones 
+  y para el funcionamiento de la sociedad en general (<a href="paper504.html#sot08">Soto-Acosta y Mero&ntilde;o-Cerdan   2008</a>, <a href="paper504.html#sot10b">Soto-Acosta <em>et al.</em> 2010b</a>). En las organizaciones actuales, que cada vez 
+  son m&aacute;s intensivas en conocimiento, la tecnolog&iacute;a representa la 
+  columna vertebral que hace que el conocimiento y la informaci&oacute;n se puedan 
+  compartir, crear y almacenar, posibilitando a las organizaciones la oportunidad 
+  de ventajas competitivas basadas en el conocimiento (<a href="paper504.html#lop10">Lopez-Nicolas and Soto-Acosta 
+  2010</a>; <a href="paper504.html#sha10">Sharma <em>et al.</em> 2010</a>). Estos hechos han colocado al conocimiento como un 
+  activo clave en torno al cual se han articulado t&eacute;rminos y conceptos 
+  tales como: &#8220;Sociedad del Conocimiento&#8221;, &#8220;Econom&iacute;a 
+  del Conocimiento&#8221; o &#8220;Cultura del Conocimiento&#8221; (<a href="paper504.html#bak10">Bakry y 
+  Alfantookh 2010</a>).</p>
+  
+<p> En este entorno, las tecnolog&iacute;as de la informaci&oacute;n y la comunicaci&oacute;n 
+ conforman un activo esencial a trav&eacute;s del cual se realizan actividades 
+  intensas en conocimiento en las que las organizaciones cimentan sus operaciones 
+  (<a href="paper504.html#tri09">Trigo <em>et al.</em> 2009</a>). En este sentido, las tecnolog&iacute;as de la informaci&oacute;n y la comunicaci&oacute;n son consideradas fundamentales 
+  para el desarrollo de productos y servicios (<a href="paper504.html#gon10">Gonz&aacute;lvez-Gallego <em>et al.</em> 
+  2010</a>; <a href="paper504.html#sot10c">Soto-Acosta <em>et al.</em> 2010c</a>). El sector de las tecnolog&iacute;as de la informaci&oacute;n y la comunicaci&oacute;n lo componen organizaciones 
+  que se dedican a: desarrollar y comercializar software empaquetado y a medida; 
+  a ofrecer infraestructura tecnol&oacute;gica; y a dar soporte tecnol&oacute;gico 
+  y consultor&iacute;a (<a href="paper504.html#osu10">O'Sullivan and Dooley 2010</a>). La importancia que tiene 
+  el software en el &aacute;mbito de las tecnolog&iacute;as de la informaci&oacute;n y la comunicaci&oacute;n ha convertido a la industria de 
+  desarrollo de software en una de las m&aacute;s influyentes en el mundo y en 
+  una industria clave para el crecimiento econ&oacute;mico. El proceso del desarrollo 
+  de software se basa en tres pilares fundamentales: procesos, tecnolog&iacute;as 
+  y personas. Estos pilares se encuentran interconectados, formando un tri&aacute;ngulo 
+  fundamental para que las organizaciones operen (<a href="paper504.html#her10">Hern&aacute;ndez-Lopez <em>et al.</em> 
+  2010</a>; <a href="paper504.html#sot10a">Soto-Acosta <em>et al.</em> 2010a</a>). Sin embargo, el desarrollo de software implica, 
+  adem&aacute;s de la producci&oacute;n de programas ejecutables y otros elementos 
+  de software, la generaci&oacute;n de documentaci&oacute;n de soporte al proceso 
+  de desarrollo, a la explotaci&oacute;n y al mantenimiento del software. En muchas 
+  ocasiones, la documentaci&oacute;n de soporte no presenta la calidad que s&iacute; 
+  se encuentra en el producto software final (<a href="paper504.html#let03">Lethbridge <em>et al.</em> 2003</a>). Sin embargo 
+  &eacute;ste elemento es una herramienta &uacute;til en dos tareas fundamentales 
+  del proceso de desarrollo de software: el mantenimiento (e.g., <a href="paper504.html#kaj05">Kajko-Mattsson 
+2005</a>) y la reutilizaci&oacute;n (e.g., <a href="paper504.html#yao08">Yao <em>et al.</em> 2008</a>).</p>
+  
+<p> La documentaci&oacute;n es un componente fundamental para la calidad del software 
+  (<a href="paper504.html#kaj05">Kajko-Mattsson 2005</a>), facilitando el mantenimiento perfectivo, defectivo y 
+  adaptativo. La literatura ha demostrado desde los a&ntilde;os 1980 que la ausencia 
+  de documentaci&oacute;n es una de las causas principales de defectos en el mantenimiento, 
+  al mismo tiempo que los costes de mantenimiento de los sistemas que cuentan 
+  con una buena documentaci&oacute;n son menores (e.g., <a href="paper504.html#car87">Card <em>et al.</em> 1987</a>; <a href="paper504.html#rom87">Rombach y Basili 1987</a>). Adem&aacute;s, una buena documentaci&oacute;n permite habilitar 
+  la reutilizaci&oacute;n del software. La reutilizaci&oacute;n del software es 
+  el proceso de crear software desde sistemas existentes en lugar de realizarlo 
+  desde cero (<a href="paper504.html#kru92">Krueger 1992</a>). La reutilizaci&oacute;n es una t&eacute;cnica de 
+  probada efectividad para el ahorro de costes, ya sea, entre otros aspectos, 
+  en los tiempos de desarrollo o en la fiabilidad de los componentes previamente 
+  probados (<a href="paper504.html#fra05">Frakes y Kang 2005</a>; <a href="paper504.html#kim98">Kim y Stohr 1998</a>; <a href="paper504.html#moh07">Mohagheghi y Conradi 2007</a>;  <a href="paper504.html#sel05">Selby 2005</a>).</p>
+  
+  <p>En el entorno de la reutilizaci&oacute;n, los mecanismos de soporte a la b&uacute;squeda 
+  con vistas a la reutilizaci&oacute;n de software suelen estar basados en palabras 
+  clave (<a href="paper504.html#sug03">Sugumaran y Storey 2003</a>). Sin embargo, atendiendo a Yao <em>et al.</em> (<a href="paper504.html#yao08">2008</a>), 
+  estos mecanismos pueden ser enriquecidos de forma sustancial con el uso de t&eacute;cnicas 
+  basadas en el conocimiento que soporten una mejor b&uacute;squeda en los repositorios 
+  software.</p>
+  
+<p> Con el prop&oacute;sito de que tanto la reutilizaci&oacute;n como el mantenimiento 
+  del software se puedan realizar de forma m&aacute;s efectiva, el presente trabajo 
+  presenta la herramienta SemSEDoc (Semantic Software Engineering Documentation). 
+  Esta herramienta propone la utilizaci&oacute;n de tecnolog&iacute;as sem&aacute;nticas 
+  en el aprovechamiento de los repositorios documentales de los proyectos de desarrollo 
+  de software. Para ello, SemSEDoc mediante el uso de Procesamiento del Lenguaje 
+  Natural, lleva a cabo un an&aacute;lisis de la documentaci&oacute;n generada, 
+  anotando sem&aacute;nticamente los documentos gracias al uso de una ontolog&iacute;a 
+  de dominio y otra funcional.</p>
+  
+<h2>Estado del arte</h2>
+
+<p> El advenimiento de la Web sem&aacute;ntica ha supuesto una revoluci&oacute;n 
+  en la forma de acceso y almacenamiento de la informaci&oacute;n. El t&eacute;rmino 
+  Web Sem&aacute;ntica fue acu&ntilde;ado por Berners-Lee <em>et al.</em> (<a href="paper504.html#ber01">2001</a>) para describir 
+  la evoluci&oacute;n desde un paradigma basado en documentos hacia un nuevo paradigma 
+  que incluye de forma coordinada la informaci&oacute;n y los datos con el prop&oacute;sito 
+  de ser manipulado de forma autom&aacute;tica. La utilizaci&oacute;n de soporte 
+  sem&aacute;ntico en soluciones de las tecnolog&iacute;as de la informaci&oacute;n y la comunicaci&oacute;n permite la introducci&oacute;n de inteligencia 
+  en los sistemas software, circunstancia que no es posible en los sistemas basados 
+  en datos simples (<a href="paper504.html#alv10">&Aacute;lvarez-Sabucedo 2010</a>). En particular, atendiendo a 
+  Berners-Lee <em>et al.</em> (<a href="paper504.html#ber06">2006</a>), las tecnolog&iacute;as sem&aacute;nticas se entienden 
+  para la creaci&oacute;n de codificaciones declarativas con el fin de facilitar 
+  la interoperatividad, la integraci&oacute;n y el acceso a los datos. Teniendo 
+  en cuenta que el acceso a la informaci&oacute;n es uno de los retos m&aacute;s 
+  importantes para los sistemas de informaci&oacute;n en la actualidad (<a href="paper504.html#mor09">Morales-Del 
+  Castillo <em>et al.</em> 2009</a>), las tecnolog&iacute;as sem&aacute;nticas se perfilan 
+  como habilitadoras del acceso inteligente y preciso a grandes repositorios de 
+  datos.</p>
+  
+<p>Atendiendo a Warren (<a href="paper504.html#war06">2006</a>), las tecnolog&iacute;as sem&aacute;nticas proporcionan 
+  una visi&oacute;n complementaria que, en muchos casos, ha expandido y reemplazado 
+  los arquetipos de la gesti&oacute;n del conocimiento y de la informaci&oacute;n 
+  (<a href="paper504.html#dav07">Davies <em>et al.</em> 2007</a>). Las ontolog&iacute;as proporcionan vocabularios estructurados 
+  que describen especificaciones formales de las conceptualizaciones. Estas tecnolog&iacute;as 
+  proponen una soluci&oacute;n para representar el significado de la informaci&oacute;n, 
+  lo que conduce a una m&aacute;s efectiva gesti&oacute;n de los datos gracias 
+  al establecimiento de un vocabulario com&uacute;n (<a href="paper504.html#sha06">Shadbolt <em>et al.</em> 2006</a>). Los 
+  beneficios que conllevan la adici&oacute;n de sem&aacute;ntica a los contenidos 
+  consisten en eliminar las inconsistencias terminol&oacute;gicas. La anotaci&oacute;n 
+  sem&aacute;ntica identifica formalmente conceptos y relaciones entre &eacute;stos 
+  (<a href="paper504.html#ure06">Uren <em>et al.</em> 2006</a>). Esta anotaci&oacute;n debe ser expl&iacute;cita, formal 
+  y no ambigua, siendo sus beneficios principales una mejor b&uacute;squeda e 
+  interoperabilidad (<a href="paper504.html#ure06">Uren <em>et al.</em> 2006</a>). Una introducci&oacute;n sobre las principales 
+  herramientas y conceptos relativos al empleo de tecnolog&iacute;as sem&aacute;nticas 
+  se puede encontrar en el trabajo de Brooks (<a href="paper504.html#bro09">2009</a>).</p>
+  
+<p>El empleo de las tecnolog&iacute;as sem&aacute;nticas en aplicaciones industriales 
+  se ha extendido, por su utilidad e impacto (<a href="paper504.html#gar10a">Garc&iacute;a-Crespo <em>et al.</em> 2010a</a>). 
+  As&iacute;, su aplicaci&oacute;n en el campo de la ingenier&iacute;a del software 
+  no es nueva. La literatura ha recogido esfuerzos relativos a la aplicaci&oacute;n 
+  de tecnolog&iacute;as sem&aacute;nticas en campos como: la formaci&oacute;n 
+  y gesti&oacute;n de equipos de desarrollo de software (e.g., <a href="paper504.html#col10">Colomo-Palacios 
+  <em>et al.</em> 2010</a>; <a href="paper504.html#val10">Valencia-Garc&iacute;a <em>et al.</em> 2010</a>); la utilizaci&oacute;n de patrones 
+  (<a href="paper504.html#die08">Dietrich <em>et al.</em> 2008</a>); componentes (<a href="paper504.html#col08">Colomo-Palacios <em>et al.</em> 2008</a>) o como tecnolog&iacute;a 
+  habilitadora para la reutilizaci&oacute;n (<a href="paper504.html#hen08">Henriksson <em>et al.</em> 2008</a>); la gesti&oacute;n 
+  de m&eacute;tricas del software (e.g., <a href="paper504.html#gal08">Gall <em>et al.</em> 2008</a>; <a href="paper504.html#gar09">Garc&iacute;a-Crespo 
+ <em> et al.</em>, 2009</a>); el soporte a los procesos de an&aacute;lisis (<a href="paper504.html#gir08">Girardi y Leite 
+  2008</a>; <a href="paper504.html#tap10">Tappolet <em>et al.</em> 2010</a>); apoyo en el desarrollo de software global (<a href="paper504.html#won09">Wongthongtham 
+  <em>et al.</em> 2009</a>); la ayuda para la evaluaci&oacute;n CMMi (<a href="paper504.html#lee09">Lee and Wang 2009</a>), por 
+  citar algunos de los casos y &aacute;reas m&aacute;s significativos y recientes. 
+  El trabajo de Zhao <em>et al.</em> (<a href="paper504.html#zha09">2009</a>) contiene una revisi&oacute;n detallada de la 
+  aplicaci&oacute;n de t&eacute;cnicas sem&aacute;nticas en diferentes aspectos 
+  relacionados con la ingenier&iacute;a del software.</p>
+
+<p>En el entorno espec&iacute;fico del enriquecimiento sem&aacute;ntico de la 
+  documentaci&oacute;n generada durante el proceso de desarrollo de software, 
+  los esfuerzos tambi&eacute;n son notables y recientes (e.g., <a href="paper504.html#del07">De Lucia <em>et al.</em> 
+  2007</a>; <a href="paper504.html#gar09">Garc&iacute;a <em>et al.</em> 2009</a>; <a href="paper504.html#hyl08">Hyland-Wood <em>et al.</em> 2008</a>; <a href="paper504.html#zha08">Zhang <em>et al.</em> 2008</a>). 
+  Sin embargo, ninguno de los trabajos anteriores posibilita el etiquetado sem&aacute;ntico 
+  semi-autom&aacute;tico de la documentaci&oacute;n generada como soporte al proceso 
+  software, mediante una ontolog&iacute;a funcional y otra de dominio. Dicha funcionalidad 
+  permite una b&uacute;squeda y gesti&oacute;n de la documentaci&oacute;n m&aacute;s 
+  efectiva, habilitando de esta manera un mejor mantenimiento de la propia documentaci&oacute;n 
+  y del software soportado por la misma.</p>
+  
+<h2>SemSEDoc: arquitectura y principales funcionalidades </h2>
+
+<p>SemSEDoc se presenta como una herramienta de apoyo a la gesti&oacute;n de 
+  la documentaci&oacute;n almacenada en repositorios de proyectos. La herramienta 
+  ha sido dise&ntilde;ada para actuar en proyectos realizados bajo la metodolog&iacute;a 
+  M&eacute;trica versi&oacute;n 3. M&eacute;trica3 es una metodolog&iacute;a de 
+  desarrollo elaborada por el Consejo Superior de Inform&aacute;tica del Ministerio 
+  de Administraciones P&uacute;blicas de Espa&ntilde;a. La metodolog&iacute;a 
+  presenta tres procesos principales: A) Planificaci&oacute;n, B) Desarrollo y 
+  C) Mantenimiento de Sistemas de Informaci&oacute;n. De estos tres, se ha considerado 
+  &uacute;nicamente el proceso de Desarrollo de Sistemas de Informaci&oacute;n. 
+  Dentro de este proceso se han tenido en cuenta la documentaci&oacute;n que surge 
+  de los cinco subprocesos que lo componen: A) Estudio de Viabilidad del Sistema; 
+  B) An&aacute;lisis del Sistema de Informaci&oacute;n; C) Dise&ntilde;o del Sistema 
+  de Informaci&oacute;n; D) Construcci&oacute;n del Sistema de Informaci&oacute;n 
+  e Implantaci&oacute;n; y E) Aceptaci&oacute;n del Sistema. En la figura 1, se 
+  plasma la estructura de la herramienta y su relaci&oacute;n con el repositorio 
+  de proyectos y los usuarios.</p> 
+
+<div align="center"><img src="p504fig1.jpg" width="545" height="364" alt="Figure 1 arquitecture de SemSEDoc" /></div>
+  <div align="center"><br /><strong>Figura 1: Arquitectura de SemSEDoc</strong></div>
+  
+<p>SemSEDoc obtiene la informaci&oacute;n necesaria del proyecto mediante una 
+  interfaz de documentos con el repositorio de proyectos. Dicho repositorio contiene 
+  la documentaci&oacute;n generada en diversos proyectos a partir de las recomendaciones 
+  de M&eacute;trica3. La documentaci&oacute;n es analizada mediante un Mecanismo 
+  de PLN que detecta aquellos elementos susceptibles de ser etiquetados, proceso 
+  que se lleva a cabo de forma semi-autom&aacute;tica. Teniendo en cuenta que 
+  la anotaci&oacute;n sem&aacute;ntica, debido al esfuerzo que conlleva, se considera 
+  una barrera potencial para el uso de tecnolog&iacute;as sem&aacute;nticas (Benjamins 
+  <em>et al.</em> 2008), se ha optado por una anotaci&oacute;n semi-autom&aacute;tica, 
+  con el fin de hacer menos tedioso el proceso y evitar los errores de las anotaciones 
+  sem&aacute;nticas autom&aacute;ticas. </p>
+  
+<p>Una vez llevada a cabo la etiquetaci&oacute;n sem&aacute;ntica, que se almacena 
+  debidamente en la capa correspondiente, los mecanismos de b&uacute;squeda y 
+  razonamiento sem&aacute;ntico se encuentran habilitados para llevar a cabo su 
+  labor, directamente relacionada con las capacidades de la herramienta de buscar 
+  elementos relativos a proyectos de desarrollo de software y su interrelaci&oacute;n 
+  con otros. Recordemos que el fin &uacute;ltimo es el de incrementar la reutilizaci&oacute;n 
+  y de acrecentar el mantenimiento del software. </p>
+  
+<p>La arquitectura del aplicativo se compone de tres capas: Presentaci&oacute;n, 
+  Negocio y Datos. Esta soluci&oacute;n arquitect&oacute;nica garantiza un mejor 
+  mantenimiento, adem&aacute;s de permitir un desarrollo m&aacute;s modular. La 
+  capa de Presentaci&oacute;n se comunica dentro de la aplicaci&oacute;n con la 
+  capa de Negocio y sirve de interfaz de SemSeDoc con dos actores cruciales del 
+  sistema. En primer lugar, se comunica con los usuarios a trav&eacute;s del m&oacute;dulo 
+  &#8220;Interfaz Gr&aacute;fica de Usuario&#8221;. Este m&oacute;dulo aglutina 
+  la interacci&oacute;n con el usuario final en relaci&oacute;n a las b&uacute;squedas 
+  y la anotaci&oacute;n sem&aacute;ntica de documentos. El segundo de los m&oacute;dulos 
+  es el encargado de interactuar con el repositorio de proyectos. En la actualidad, 
+  dicho m&oacute;dulo es una interfaz que lleva a cabo la comunicaci&oacute;n 
+  de la aplicaci&oacute;n con el conjunto de documentos listados en un c&uacute;mulo 
+  de proyectos. El requisito para su utilizaci&oacute;n es que dichos documentos 
+  deben encontrarse en un &iacute;ndice y su contenido debe ser codificado en 
+  formato HTML. Esta funcionalidad se plantea ser sustituida por la implementaci&oacute;n 
+  de un crawler que permita una b&uacute;squeda no estructurada de documentos 
+  codificados en diferentes formatos (Portable Document Format, Rich Text Format, 
+  Microsoft Word, etc). </p>
+  
+<p>En la capa de l&oacute;gica de negocio existen tres m&oacute;dulos. El primero 
+  de ellos es el correspondiente al mecanismo para el PLN. Este componente analiza 
+  los documentos que se encuentran en el repositorio de proyectos. As&iacute;, 
+  el componente utiliza las herramientas GATE para la anotaci&oacute;n sint&aacute;ctica 
+  de los contenidos y JAPE para extraer los conceptos relativos a la ontolog&iacute;a 
+  de dominio y la funcional. Posteriormente, a partir de la lista proporcionada 
+  se sugiere la anotaci&oacute;n sem&aacute;ntica de los diferentes elementos 
+  de forma semi-autom&aacute;tica. El segundo de los m&oacute;dulos que presenta 
+  la capa de l&oacute;gica de negocio es el razonamiento sem&aacute;ntico. Un 
+  razonador sem&aacute;ntico t&iacute;picamente deriva hechos de una base de conocimiento 
+  con el prop&oacute;sito &uacute;ltimo de formular nuevas conclusiones. En el 
+  caso particular de la herramienta que nos ocupa consiste en un razonador basado 
+  en OWL (Ontology Web Language). Este lenguaje incorpora un modelo sem&aacute;ntico 
+  que permite la creaci&oacute;n de sistemas de razonamiento. As&iacute;, la herramienta 
+  incorpora a RACER (Renamed ABox and Concept Expression Reasoner) para llevar 
+  a cabo la tarea descrita. El componente de b&uacute;squeda sem&aacute;ntica 
+  utiliza el lenguaje de consultas SPARQL RDF para llevar a cabo consultas en 
+  la capa de datos. Una de las caracter&iacute;sticas de la herramienta es la 
+  b&uacute;squeda por facetas. Con metadatos por facetas (Ranganathan 1962), el 
+  espacio de informaci&oacute;n se divide en particiones utilizando dimensiones 
+  conceptuales ortogonales de los datos. Estas dimensiones se llaman facetas y 
+  representan las caracter&iacute;sticas de los elementos de la informaci&oacute;n. 
+  Estas facetas se utilizan para seleccionar o filtrar elementos relevantes en 
+  un determinado espacio de informaci&oacute;n, llevando as&iacute; a los usuarios 
+  exactamente a la informaci&oacute;n necesaria. Estas facetas son las propiedades 
+  definidas en el dominio de las ontolog&iacute;as. La b&uacute;squeda sem&aacute;ntica 
+  por facetas ha sido utilizada con &eacute;xito en herramientas del &aacute;mbito 
+  sem&aacute;ntico, tal y como reflejan diferentes trabajos en la literatura (e.g., 
+  <a href="paper504.html#gar10b">Garc&iacute;a-Crespo <em>et al.</em> 2010b</a>,  <a href="paper504.html#gar11">2011</a>;  <a href="paper504.html#gom11">G&oacute;mez-Berb&iacute;s <em>et al.</em> 2011</a>;  <a href="paper504.html#pra08">Prasad y Madalli 2008</a>;  <a href="paper504.html#suo09">Suominen <em>et al.</em> 2009</a>).</p>
+  
+<p>  La &uacute;ltima capa es la de datos o persistencia. En dicha capa se almacenan, 
+  por un lado, las ontolog&iacute;as de aplicaci&oacute;n y de negocio y, por 
+  otro, las anotaciones sem&aacute;nticas de los documentos analizados. Dicho 
+  repositorio ha sido implementado utilizando las capacidades de Jena sobre SESAME. 
+  De esta forma, se consigue la persistencia de las ontolog&iacute;as, la realizaci&oacute;n 
+  de consultas en el entorno desarrollado y se ofrece un nivel de abstracci&oacute;n 
+  de la complejidad que permite el almacenamiento y la recuperaci&oacute;n de 
+  ontolog&iacute;as OWL DL en conjunci&oacute;n con su sintaxis RDF.</p>
+  
+<p>A continuaci&oacute;n se describe la evaluaci&oacute;n llevada a cabo con 
+  el prop&oacute;sito de testar si SemSEDoc sirve como sistema de gesti&oacute;n 
+  de la documentaci&oacute;n generada como soporte al proceso de desarrollo de 
+  software en un entorno controlado. </p>
+  
+<h2>Dise&ntilde;o </h2>
+
+<p>Una vez que el sistema ha sido desarrollado y testado desde el punto de vista 
+  del proceso de desarrollo, se necesita probar la validez de SemSEDoc. As&iacute;, 
+  se pretende conocer dos tipos de caracter&iacute;sticas del aplicativo en relaci&oacute;n 
+  con su utilizaci&oacute;n. En primer lugar, la bondad de los resultados del 
+  proceso de b&uacute;squeda y, por ende, del conjunto de funcionalidades de etiquetado 
+  y, en segundo lugar, se pretende testar si el procedimiento de anotaci&oacute;n 
+  semiautom&aacute;tico produce sugerencias de anotaci&oacute;n pertinentes de 
+  acuerdo con el juicio de los expertos. Esta segunda caracter&iacute;stica comprueba 
+  si las sugerencias de anotaci&oacute;n de los diferentes documentos coincide 
+  con la anotaci&oacute;n manual de los expertos. </p>
+  
+<p>Ambos aspectos requieren la utilizaci&oacute;n de m&eacute;tricas conocidas 
+  y efectivas. Para ello, se utilizar&aacute;n las m&eacute;tricas Precision, 
+  Recall y F1. Las dos primeras fueron introducidas por Cleverdon <em>et al.</em> (<a href="paper504.html#cle66">1966</a>). 
+  Con posterioridad, la m&eacute;trica F1 fue dise&ntilde;ada por van Rijsbergen 
+  (<a href="paper504.html#van79">1979</a>) con el prop&oacute;sito de integrar en una &uacute;nica medida y con 
+  importancia equivalente las capacidades de ambas m&eacute;tricas. Un trabajo 
+  reciente y relevante que analiza el uso de las citadas m&eacute;tricas es el 
+  publicado por Good and Tennis (<a href="paper504.html#goo09">2009</a>). Las tres m&eacute;tricas se pueden definir 
+  atendiendo a las siguientes formulaciones:</p>
+  
+<p>Precision = Resultados encontrados correctos / Total de resultados encontrados</p>
+
+<p>Recall = Resultados encontrados correctos / Total de resultados Correctos</p>
+
+<p>F1 = (2 * Precision*Recall) / (Precision+Recall)</p>
+
+<p>Para llevar a cabo ambos procedimientos se cont&oacute; con un repositorio 
+  de proyectos compuesto por un total de 9 proyectos de desarrollo de software 
+  ejecutados bajo los dictados de M&eacute;trica3. Dicho repositorio de proyectos 
+  fue alojado en un ordenador conectado a una red de &aacute;rea local en la que 
+  se encontraba tambi&eacute;n el servidor que albergaba a SemSEDoc. Con el prop&oacute;sito 
+  de testar los aspectos expuestos anteriormente, se cont&oacute; con un total 
+  de 18 sujetos cuya participaci&oacute;n efectiva en los proyectos les habilitara 
+  permite realizar un juicio sobre la bondad de la herramienta en la b&uacute;squeda 
+  y anotaci&oacute;n sem&aacute;ntica.</p>
+  
+<p>Teniendo en cuenta el doble objetivo de la evaluaci&oacute;n, se dise&ntilde;&oacute; 
+  una tarea doble para los sujetos. As&iacute;, y tras llevar a cabo la recolecci&oacute;n 
+  de los datos de identificaci&oacute;n del sujeto, en primer lugar, cada sujeto 
+  deb&iacute;a llevar a cabo la anotaci&oacute;n de uno de los documentos generados 
+  como soporte al desarrollo del proyecto en el que los sujetos hab&iacute;an 
+  llevado a cabo su labor. El documento (un acta de reuni&oacute;n relativa a 
+  la recolecci&oacute;n de requisitos), que en todos los casos hab&iacute;a sido 
+  examinado con anterioridad, conten&iacute;a texto para llevar a cabo un conjunto 
+  suficiente de anotaciones (alrededor de veinte). El dise&ntilde;o del experimento 
+  habilitaba la verificaci&oacute;n de la bondad del proceso de anotaci&oacute;n 
+  en relaci&oacute;n al conjunto de anotaciones posibles mediante la comparaci&oacute;n 
+  de las anotaciones de los expertos con las sugerencias producidas por el sistema. 
+  En segundo lugar, se solicitaba a los sujetos que llevaran a cabo una b&uacute;squeda 
+  de un t&eacute;rmino (un aspecto espec&iacute;fico relativo a un requisito de 
+  usuario) restringiendo la misma a un conjunto de documentos dado (estudio de 
+  viabilidad del sistema y an&aacute;lisis del sistema de informaci&oacute;n). 
+  En este caso, el objetivo es probar si se producen los resultados de b&uacute;squeda 
+  deseados. Los datos de los resultados de b&uacute;squeda se comparan con la 
+  b&uacute;squeda realizada, por los sujetos de forma libre, mediante el acceso 
+  a los documentos utilizando un navegador y capacidades de b&uacute;squeda textual, 
+  adem&aacute;s de la lectura.</p>
+  
+<p>Los sujetos llevaron a cabo su labor asistidos en todo momento por un miembro 
+  del equipo de desarrollo de SemSEDoc y codificaron sus resultados con ayuda 
+  de un cuestionario. A la finalizaci&oacute;n de su trabajo entregaron el cuestionario 
+  al miembro del equipo de proyecto, quien codific&oacute; los resultados utilizando 
+  la herramienta estad&iacute;stica SPSS.</p>
+  
+<h2>Muestra </h2>
+
+<p>La muestra se compone de 18 sujetos. La distribuci&oacute;n de los sujetos 
+  por sexos se establece en 13 hombres (72.22%) y 5 mujeres (27.78%). Todos ellos 
+  cuentan con experiencia en los 9 proyectos objeto de estudio, escogiendo 2 sujetos 
+  por proyecto, con el fin de contar con m&aacute;s de una opini&oacute;n por 
+  proyecto. El rol de los diferentes sujetos en los proyectos se distribuye de 
+  la siguiente manera: Jefe de Proyecto (7), Gestor de Configuraci&oacute;n (5), 
+  Gestor de Calidad (4) y Analista-Programador (2). Todos los sujetos contaban 
+  con experiencia previa en la anotaci&oacute;n sem&aacute;ntica de textos.</p> 
+  
+<h2>Resultados </h2>
+
+<p>La tabla 1 contiene los resultados de las anotaciones de los sujetos y la 
+  herramienta. La columna Sujeto x contiene las anotaciones realizadas por uno 
+  de los sujetos en un determinado proyecto. La columna TOTAL refleja la suma 
+  de las anotaciones diferentes de los dos sujetos que figuran en las columnas 
+  anteriores. SemSEDoc contiene las anotaciones de la herramienta y Comunes exhibe 
+  la intersecci&oacute;n de las anotaciones de la herramienta y de la columna 
+  TOTAL.</p> 
+  
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+ style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+ smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+ normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+ background-color: #fdffdd">
+  <caption align="bottom"><br /><strong>Tabla 1: Comparativa de las anotaciones llevadas a cabo por los sujetos 
+  y la herramienta.</strong></caption> 
+  <tbody>
+    <tr> 
+      <th width="16%">Proyecto</th>
+      <th width="13%">Sujeto 1</th>
+      <th width="14%">Sujeto 2</th>
+      <th width="13%">TOTAL</th>
+      <th width="18%">SemSEDoc</th>
+      <th width="26%">Comunes</th>
+    </tr>
+    <tr> 
+      <td>Proyecto 1</td>
+      <td align="center">21</td>
+      <td align="center">21</td>
+      <td align="center">21</td>
+      <td align="center">19</td>
+      <td align="center">19</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 2</td>
+      <td align="center">24</td>
+      <td align="center">24</td>
+      <td align="center">24</td>
+      <td align="center">25</td>
+      <td align="center">20</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 3</td>
+      <td align="center">19</td>
+      <td align="center">20</td>
+      <td align="center">20</td>
+      <td align="center">21</td>
+      <td align="center">18</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 4</td>
+      <td align="center">26</td>
+      <td align="center">27</td>
+      <td align="center">27</td>
+      <td align="center">29</td>
+      <td align="center">25</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 5</td>
+      <td align="center">22</td>
+      <td align="center">22</td>
+      <td align="center">22</td>
+      <td align="center">23</td>
+      <td align="center">19</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 6</td>
+      <td align="center">19</td>
+      <td align="center">18</td>
+      <td align="center">19</td>
+      <td align="center">18</td>
+      <td align="center">17</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 7</td>
+      <td align="center">18</td>
+      <td align="center">19</td>
+      <td align="center">19</td>
+      <td align="center">19</td>
+      <td align="center">18</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 8</td>
+      <td align="center">20</td>
+      <td align="center">20</td>
+      <td align="center">20</td>
+      <td align="center">18</td>
+      <td align="center">17</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 9</td>
+      <td align="center">25</td>
+      <td align="center">25</td>
+      <td align="center">25</td>
+      <td align="center">23</td>
+      <td align="center">21</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A partir de los resultados mostrados en la Tabla 1, se localiz&oacute; por 
+  parte de los sujetos un total de 197 elementos susceptibles de ser anotados. 
+  La herramienta detect&oacute; un total de 195 elementos, de los que 174 coincid&iacute;an 
+  con los se&ntilde;alados por los usuarios. Con el prop&oacute;sito de verificar 
+  si exist&iacute;an diferencias significativas desde el punto de vista estad&iacute;stico 
+  entre los resultados obtenidos por los expertos (TOTAL) y las anotaciones sugeridas 
+  por SemSEDoc que se consideran correctas (Comunes), se utiliz&oacute; el m&eacute;todo 
+  estad&iacute;stico de la t de Student. El nivel de significaci&oacute;n se situ&oacute; 
+  en 0.05. Los resultados del test indican que ambos resultados no presentan diferencias 
+  significativas (t(9)=2.02, p&gt;0.05) entre s&iacute;, por lo que se puede confirmar 
+  la cercan&iacute;a de los resultados ofrecidos por SemSEDoc al est&aacute;ndar 
+  de anotaci&oacute;n.</p>
+  
+<p>Con respecto a las m&eacute;tricas de bondad, la medida Precision (Precisi&oacute;n) 
+  se situ&oacute; en 0.892307692, mientras que la m&eacute;trica Recall (Exhaustividad) 
+  result&oacute; ser de 0,883248731 y la ponderada arm&oacute;nica F1 fue de 0.887755102.</p> 
+  
+<p>A continuaci&oacute;n, se exponen los resultados de la comparativa entre las 
+  b&uacute;squedas llevadas a cabo por la herramienta desarrollada y la que han 
+  llevado a cabo los usuarios. La Tabla 2 contiene los resultados de dicho proceso. 
+  La descripci&oacute;n de las columnas es an&aacute;loga a la que aparece para 
+  la Tabla 1, con la salvedad de que los resultados son consignados para las b&uacute;squedas 
+  en lugar de las anotaciones.</p> 
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center"
+ style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size:
+ smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style:
+ normal; font-family: verdana, geneva, arial, helvetica, sans-serif;
+ background-color: #fdffdd">
+  <caption align="bottom"><br /><strong>Tabla 2: Comparativa de las b&uacute;squedas llevadas a cabo por los 
+  sujetos y la herramienta.</strong> </caption>
+  <tbody>
+    <tr> 
+      <th width="16%">Proyecto</th>
+      <th width="13%">Sujeto 1</th>
+      <th width="14%">Sujeto 2</th>
+      <th width="13%">TOTAL</th>
+      <th width="18%">SemSEDoc</th>
+      <th width="26%">Comunes</th>
+    </tr>
+    <tr> 
+      <td>Proyecto 1</td>
+      <td align="center">45</td>
+      <td align="center">50</td>
+      <td align="center">52</td>
+      <td align="center">48</td>
+      <td align="center">41</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 2</td>
+      <td align="center">66</td>
+      <td align="center">70</td>
+      <td align="center">71</td>
+      <td align="center">72</td>
+      <td align="center">62</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 3</td>
+      <td align="center">30</td>
+      <td align="center">23</td>
+      <td align="center">31</td>
+      <td align="center">34</td>
+      <td align="center">18</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 4</td>
+      <td align="center">28</td>
+      <td align="center">23</td>
+      <td align="center">28</td>
+      <td align="center">29</td>
+      <td align="center">19</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 5</td>
+      <td align="center">52</td>
+      <td align="center">47</td>
+      <td align="center">54</td>
+      <td align="center">43</td>
+      <td align="center">43</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 6</td>
+      <td align="center">58</td>
+      <td align="center">69</td>
+      <td align="center">75</td>
+      <td align="center">54</td>
+      <td align="center">50</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 7</td>
+      <td align="center">43</td>
+      <td align="center">36</td>
+      <td align="center">44</td>
+      <td align="center">42</td>
+      <td align="center">35</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 8</td>
+      <td align="center">32</td>
+      <td align="center">34</td>
+      <td align="center">34</td>
+      <td align="center">29</td>
+      <td align="center">24</td>
+    </tr>
+    <tr> 
+      <td>Proyecto 9</td>
+      <td align="center">56</td>
+      <td align="center">49</td>
+      <td align="center">59</td>
+      <td align="center">52</td>
+      <td align="center">40</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>De los resultados ofrecidos en la Tabla 2, se desprende que se localizan por 
+  parte de los sujetos un total de 448 resultados de b&uacute;squeda. La herramienta 
+  arroj&oacute; un total de 403 resultados, de los que 332 coinciden con los se&ntilde;alados 
+  por los usuarios. De forma an&aacute;loga a la anterior, los resultados de la 
+  comparaci&oacute;n de medias entre TOTAL y Comunes tampoco presenta diferencias 
+  estad&iacute;sticamente significativas entre ambas poblaciones (t(9)=1.73, p&gt;0.05). 
+  Este hecho implica una semejanza de los resultados obtenidos por los expertos 
+  y la herramienta desde la perspectiva num&eacute;rica.</p>
+<p>Respecto a las m&eacute;tricas de bondad, la medida Precision (Precisi&oacute;n) 
+  result&oacute; ser de 0.82382134, mientras que la m&eacute;trica Recall (Exhaustividad) 
+  alcanz&oacute; un valor de 0.741071429 y la ponderada arm&oacute;nica F1 se 
+  situ&oacute; en 0.780258519.</p>
+  
+<h2>Discusi&oacute;n </h2>
+
+<p>Atendiendo a sus resultados, SemSEDoc se presenta como una herramienta que 
+  puede producir resultados atractivos para la gesti&oacute;n de repositorios 
+  de documentaci&oacute;n relativa al proceso de desarrollo de software. Los resultados 
+  de la anotaci&oacute;n se consideran semejantes a los obtenidos por otras herramientas 
+  de anotaci&oacute;n basadas en procedimientos de PLN (e.g., <a href="paper504.html#gar10a">Garc&iacute;a-Crespo 
+  <em>et al.</em> 2010a</a>; <a href="paper504.html#mia09">Miao <em>et al.</em> 2009</a>), donde la m&eacute;trica combinada F1 ronda 
+  los 0.9 puntos y en algunos casos de forma ligeramente superior a los resultados 
+  ofrecidos por otros trabajos del &aacute;rea (<a href="paper504.html#mor09">Morales del Castillo <em>et al.</em> 2009</a>). 
+  Con relaci&oacute;n a la b&uacute;squeda, teniendo en cuenta que &eacute;sta 
+  basa su efectividad en el anotado de los documentos (se considera madura la 
+  tecnolog&iacute;a de b&uacute;squeda sem&aacute;ntica que sustenta la herramienta) 
+  los resultados son an&aacute;logos, aunque ligeramente inferiores a los obtenidos 
+  en la anotaci&oacute;n. Esto puede ser debido a que, si bien la b&uacute;squeda 
+  se ha llevado a cabo en un entorno compuesto &uacute;nicamente por dos documentos 
+  (Estudio de viabilidad del sistema y An&aacute;lisis del sistema de informaci&oacute;n), 
+  la complejidad de ambos documentos es mucho mayor que el documento de Acta utilizado 
+  para la primera tarea. Adicionalmente, se detect&oacute; que en los proyectos 
+  5 y 8 las diferencias entre las poblaciones proven&iacute;an de una incompleta 
+  definici&oacute;n de los mecanismos de PLN. Dicha incorrecci&oacute;n (no inclusi&oacute;n 
+  de un sin&oacute;nimo en el vocabulario), impidi&oacute; la detecci&oacute;n 
+  de un total de 6 ocurrencias para el Proyecto 5 y de 7 para el Proyecto 8. Esta 
+  incidencia revela un &aacute;mbito de mejora sustancial en la gesti&oacute;n 
+  de los vocabularios para el PLN. Por otra parte, se considera que los mecanismos 
+  sem&aacute;nticos que sustentan el proceso de b&uacute;squeda han producido 
+  resultados muy destacados en efectividad y rendimiento.</p>
+  
+<p>La &uacute;ltima de las cuestiones que se deben plantear son las limitaciones 
+  del estudio emprendido. La primera de las limitaciones tiene que ver con el 
+  &aacute;mbito de la prueba. Dicha prueba se realiz&oacute; en un entorno de 
+  proyectos de tama&ntilde;o peque&ntilde;o y controlado. De esta forma, las obligaciones 
+  de observancia del rendimiento necesarias para la explotaci&oacute;n de SemSEDoc 
+  en un entorno real quedan fuera del &aacute;mbito del presente trabajo. En segundo 
+  lugar, la prueba de b&uacute;squeda y anotaci&oacute;n tambi&eacute;n se realiz&oacute; 
+  en un conjunto de documentos definido, por lo que la riqueza de producci&oacute;n 
+  documental de un proyecto de desarrollo de software (a&uacute;n cuando &eacute;ste 
+  se desarrolla guiado por una metodolog&iacute;a pesada y perfectamente pautada 
+  como M&eacute;trica 3) no fue tenida en cuenta en su totalidad. La tercera de 
+  las limitaciones proviene de la composici&oacute;n de la muestra, que si bien 
+  cubre un total de nueve proyectos, incluye la participaci&oacute;n de s&oacute;lo 
+  dos componentes del equipo de trabajo por proyecto.</p> 
+  
+<h2>Conclusiones y trabajos futuros </h2>
+
+<p>La importancia del software en el mundo de hoy en d&iacute;a supone que su 
+  desarrollo deba ser afrontado desde una perspectiva ingenieril e industrial. 
+  En este escenario, la documentaci&oacute;n que soporta el proceso software, 
+  representa una fuente de informaci&oacute;n y de gesti&oacute;n del conocimiento 
+  que, en muchos casos, no es aprovechada de forma conveniente. Por otra parte, 
+  las tecnolog&iacute;as sem&aacute;nticas se han revelado en los &uacute;ltimos 
+  a&ntilde;os como importantes habilitadoras en aspectos como la gesti&oacute;n 
+  del conocimiento y el aprovechamiento inteligente de la informaci&oacute;n depositada 
+  en repositorios. Teniendo en cuenta ambas circunstancias, en el presente trabajo 
+  se ha presentado SemSEDoc, una herramienta tendente al aprovechamiento de las 
+  ventajas de las tecnolog&iacute;as sem&aacute;nticas en el entorno de la documentaci&oacute;n 
+  generada como soporte al proceso software.</p>
+  
+<p>La herramienta desarrollada permite una gesti&oacute;n de la documentaci&oacute;n 
+  a partir del anotado sem&aacute;ntico semi-autom&aacute;tico de los contenidos. 
+  Dicho anotado se considera semi-autom&aacute;tico, ya que el sistema sugiere 
+  las anotaciones, pero es el usuario el que las realiza. Adicionalmente, y desde 
+  el punto de vista de b&uacute;squeda de informaciones, la aplicaci&oacute;n 
+  permite la navegaci&oacute;n sem&aacute;ntica y la b&uacute;squeda por facetas 
+  de los documentos. Desde el punto de vista de la evaluaci&oacute;n de la herramienta, 
+  SemSEDoc presenta unos resultados muy prometedores en relaci&oacute;n a la gesti&oacute;n 
+  de informaci&oacute;n.</p>
+  
+<p>Por &uacute;ltimo, se quieren poner de manifiesto diversos trabajos futuros 
+  que emanan del dise&ntilde;o e implementaci&oacute;n de SemSEDoc. En primer 
+  lugar, se sugiere la expansi&oacute;n de las funcionalidades del aplicativo 
+  para incluir otras metodolog&iacute;as de desarrollo de sistemas de informaci&oacute;n. 
+  En segundo lugar y desde un punto de vista m&aacute;s t&eacute;cnico, se propone 
+  la realizaci&oacute;n de un crawler que permita la gesti&oacute;n de repositorios 
+  de artefactos software en formatos distintos a HTML, con una organizaci&oacute;n 
+  no conocida y dispersos desde el punto de vista de su acceso y almacenamiento. 
+  En tercer lugar, se propone dotar a la herramienta de capacidades para el an&aacute;lisis 
+  de c&oacute;digo fuente. Dicha funcionalidad ampliar&iacute;a las capacidades 
+  de utilizaci&oacute;n de SemSEDoc en entornos donde la documentaci&oacute;n 
+  no haya sido generada o se haya extraviado, habilitando as&iacute; el uso de 
+  la herramienta en entornos de Reingenier&iacute;a del Software. Por &uacute;ltimo, 
+  se sugiere la incorporaci&oacute;n de tecnolog&iacute;as que permitan el aprendizaje 
+  continuado de SemSEDoc en el &aacute;mbito de la b&uacute;squeda de t&eacute;rminos 
+  para su posterior anotaci&oacute;n. Dichas t&eacute;cnicas relacionadas con 
+  la inteligencia artificial permitir&iacute;an al aplicativo la mejora continuada 
+  en el proceso clave para SemSEDoc: las recomendaciones de anotaci&oacute;n.</p>
+  
+<h2 id="authors">About the authors</h2>
+
+<p> Francisco J. Garc&iacute;a-Pe&ntilde;alvo es Profesor Titular de Universidad 
+  en el Departamento de Inform&aacute;tica y Autom&aacute;tica de la Universidad 
+de Salamanca. Se le puede contactar en el correo electr&oacute;nico: <a href="mailto:fgarcia@usal.es">fgarcia@usal.es</a></p>
+<p>Ricardo Colomo-Palacios es Profesor Titular de Universidad Interino del Departamento 
+  de Inform&aacute;tica de la Universidad Carlos III de Madrid . Se le puede contactar 
+en el correo electr&oacute;nico: <a href="mailto:rcolomo@inf.uc3m.es">rcolomo@inf.uc3m.es</a></p>
+<p>Pedro Soto-Acosta es Profesor Titular de Universidad del Departamento de Organizaci&oacute;n 
+  de Empresas y Finanzas de la Universidad de Murcia. Se le puede contactar en 
+el correo electr&oacute;nico: <a href="mailto:psoto@um.es">psoto@um.es</a></p>
+<p>Isabel Mart&iacute;nez-Conesa es Profesora Titular del Departamento de Econom&iacute;a 
+  Financiera y Contabilidad de la Universidad de Murcia. Se le puede contactar 
+en el correo electr&oacute;nico: <a href="mailto:isabelm.martinez@um.es">isabelm.martinez@um.es</a></p>
+<p>Enric Serradell-L&oacute;pez es Profesor de los Estudios de Econom&iacute;a 
+  y Empresa de la Universidad Oberta de Catalu&ntilde;a. Se le puede contactar 
+en el correo electr&oacute;nico: <a href="mailto:eserradell@uoc.edu">eserradell@uoc.edu</a></p>
+  
+<form action="paper504.html">
+<fieldset>
+<legend 
+style="BORDER-BOTTOM: navy 1px solid; PADDING-BOTTOM: 0.1ex; BACKGROUND-COLOR: #5e96fd; PADDING-LEFT: 0.5ex; PADDING-RIGHT: 0.5ex; COLOR: white; FONT-SIZE: medium; FONT-WEIGHT: bold; BORDER-RIGHT: navy 1px solid; PADDING-TOP: 0.1ex">References</legend>
+
+  <ul>
+    <li id="alv10">&Aacute;lvarez Sabucedo, L., Anido-Rif&oacute;n, L., Corradini, 
+      F., Polzonetti, A. &amp; Re, B. (2010). Knowledge-based platform for eGovernment 
+      agents: a web-based solution using semantic technologies. <em>Expert Systems 
+      with Applications</em>, <strong>37</strong>(5), 3647-3656</li>
+      
+      <li id="bak10">Bakry, S.H. &amp; Alfantookh, A. (2010). Toward building the knowledge 
+      culture: reviews and a KC-STOPE with six sigma view.<em> International Journal 
+      of Knowledge Society Research</em>, <strong>1</strong>(1), 47-65</li>
+      
+    <li id="ben08">Benjamins, V.R., Davies, J., Baeza-Yates, R., Mika, P., Zaragoza, H., 
+      Greaves, M. <em>et al.</em>  (2008). Near-term prospects for semantic technologies.<em> IEEE 
+      Intelligent Systems</em>, <strong>23</strong>(1), 76-88</li>
+      
+      <li id="ber06">Berners-Lee, T., Hall, W., Hendler, J., Shadbolt, N. &amp; Weitzner, J. 
+      (2006). Creating a science of the web. <em>Science</em>, <strong>313</strong>(5788), 
+      769-77</li>
+      
+    <li id="ber01">Berners-Lee, T., Hendler, J. &amp; Lassila, O. (2001). The semantic web. 
+      <em>Scientific American</em>, <strong>284</strong>(5), 34-43</li>
+      
+    <li id="bro09">Brooks, T.A. (2009). <a href="http://informationr.net/ir/14-4/TB0912.html">Watch 
+      this: probe the semantic web with SPARQL.</a> <em>Information Research</em>, 
+      <strong>14</strong>(4) paper TB0912 Retrieved 25 May, 2010 from http://informationr.net/ir/14-4/TB0912.html</li>
+      
+    <li id="car87">Card, D., McGarry, F. &amp; Page, G. (1987). Evaluating software engineering 
+      technologies. <em>IEEE Transactions on Software Engineering</em>, <strong>13</strong>(7), 
+      845-851</li>
+      
+    <li id="cle66">Cleverdon, C.W., Mills, J., &amp; Keen, E.M. (1966). Factors determining 
+      the performance of indexing systems, Cranfield, UK: College of Aeronautics.</li>
+      
+    <li id="col10">Colomo-Palacios, R., Garc&iacute;a-Crespo, A., G&oacute;mez-Berb&iacute;s, 
+      J.M., Casado-Lumbreras, C. &amp; Soto-Acosta, P. (2010). SemCASS: technical 
+      competence assessment within software development teams enabled by semantics. 
+      <em>International Journal of Social and Humanistic Computing</em>, <strong>1</strong>(3), 
+      232-245</li>
+      
+    <li id="col08">Colomo-Palacios, R., G&oacute;mez-Berb&iacute;s, J.M., Garc&iacute;a-Crespo, 
+      A. &amp; Puebla-S&aacute;nchez, I. (2008). Social global repository: using 
+      semantics and social web in software projects. <em>International Journal 
+      of Knowledge and Learning</em>, <strong>4</strong>(5), 452-464</li>
+      
+    <li id="dav07">Davies, J., Lytras, M.D. &amp; Sheth, A.P. (2007). Semantic-web-based 
+      knowledge management. <em>IEEE Internet Computing</em>, <strong>11</strong>(5), 
+      14-16</li>
+      
+    <li id="del07">De Lucia, A., Fasano, F., Oliveto, R. &amp; Tortora, G. (2007). Recovering 
+      traceability links in software artifact management systems using information 
+      retrieval methods. <em>ACM Transactions on Software Engineering and Methodology</em>, 
+      <strong>16</strong>(4), 13(article number)</li>
+      
+    <li id="die08">Dietrich, J., Jones, N. &amp; Wright, J. (2008). Using social networking 
+      and semantic web technology in software engineering &#8211; use cases, patterns, 
+      and a case study. <em>The Journal of Systems and Software</em>, <strong>81</strong>(12), 
+      2183-2193</li>
+      
+    <li id="fra05">Frakes, W.B. &amp; Kang, K. (2005). Software reuse research: status and 
+      future. <em>IEEE Transactions on Software Engineering</em>, <strong>31</strong>(7), 
+      529-536</li>
+      
+    <li id="gal08">Gall, C.S., Lukins, S., Etzkorn, L., Gholston, S., Farrington, P., Utley, 
+      D. <em>et al.</em> (2008). Semantic software metrics computed 
+      from natural language design specifications. <em>IET Software</em>, <strong>2</strong>(1), 
+      17-26</li>
+      
+    <li id="gar09">Garc&iacute;a, F., Ruiz, F., Calero, C., Bertoa, M.F., Vallecillo, A., 
+      Mora, B.  <em>et al.</em> (2009). Effective use of ontologies in software 
+      measurement. <em>The Knowledge Engineering Review</em>, <strong>24</strong>(1), 
+      23-40</li>
+      
+    <li id="gar10b">Garc&iacute;a-Crespo, A., Colomo-Palacios, R., G&oacute;mez-Berb&iacute;s, 
+      J.M. &amp; Garc&iacute;a-S&aacute;nchez, F. (2010b). SOLAR: Social Link 
+      Advanced Recommendation System. <em>Future Generation Computer Systems</em>, 
+      <strong>26</strong>(3), 374-380</li>
+      
+    <li id="gar09b">Garc&iacute;a-Crespo, A., Colomo-Palacios, R., G&oacute;mez-Berb&iacute;s, 
+      J.M. &amp; Mencke, M. (2009). BMR: Benchmarking metrics recommender for 
+      personnel issues in software development projects.<em> International Journal 
+      of Computational Intelligence Systems</em>, <strong>2</strong>(3), 257-267.</li>
+      
+    <li id="gar10a">Garc&iacute;a-Crespo, A., Colomo-Palacios, R., G&oacute;mez-Berb&iacute;s, 
+      J.M., &amp; Ruiz-Mezcua, B. (2010a). SEMO: a framework for customer social 
+      networks analysis based on semantics.<em> Journal of Information Technology</em>, 
+      <strong>25</strong>(2), 178-188.</li>
+      
+    <li id="gar11">Garc&iacute;a-Crespo, &Aacute;., G&oacute;mez-Berb&iacute;s, J.M., Colomo-Palacios, 
+      R. &amp; Garc&iacute;a-S&aacute;nchez, F. (2011). Digital libraries and 
+      web 3.0. The callimachusdl approach. <em>Computers in Human Behavior</em>, 
+      <strong>27</strong>(4), 1424-1430</li>
+      
+    <li id="gir08">Girardi, R. &amp; Leite, A. (2008). A knowledge-based tool for multi-agent 
+      domain engineering.<em> Knowledge-Based Systems</em>, <strong>21</strong>(7), 
+      604-611</li>
+      
+    <li id="gom11">G&oacute;mez-Berbis, J.M., Colomo-Palacios, R., L&oacute;pez-Cuadrado, 
+      J.L., Gonz&aacute;lez-Carrasco, I. &amp; Garc&iacute;a-Crespo, A. (2011). 
+      SEAN: multi-ontology semantic annotation for highly accurate closed domains. 
+      <em>International Journal of the Physical Sciences</em>, <strong>6</strong>(6), 
+      1440-gon101451</li>
+      
+    <li id="gon10">Gonz&aacute;lvez-Gallego, N., Soto-Acosta, P., Molina-Castillo, F.J., 
+      Trigo, A. &amp; Varajao, J. (2010). El papel de las TIC en el rendimiento 
+      de las cadenas de suministro: el caso de las grandes empresas de Espa&ntilde;a 
+      y Portugal. <em>Universia Business Review</em>, <strong>28</strong>(4), 
+      102-114</li>
+      
+    <li id="goo09">Good, B.M. &amp; Tennis, J.T. (2009). <a href="http://informationr.net/ir/14-1/paper395.html">Term 
+      based comparison metrics for controlled and uncontrolled indexing languages.</a> 
+      <em>Information Research</em>, <strong>14</strong>(1), paper 395 Retrieved 
+      25 May, 2010 from http://informationr.net/ir/14-1/paper395.html</li>
+      
+    <li id="hen08">Henriksson, J., Heidenreich, F., Johannes, J., Zschaler, S. &amp; Assmann, 
+      U. (2008). Extending grammars and metamodels for reuse: the reuseware approach. 
+      <em>IET Software</em>, <strong>2</strong>(3), 165-184</li>
+      
+    <li id="her10">Hern&aacute;ndez-L&oacute;pez, A., Colomo-Palacios, R., Garc&iacute;a-Crespo, 
+      &Aacute;. &amp; Soto-Acosta, P. (2010). Team software process in gsd teams: 
+      a study of new work practices and models. <em>International Journal of Human 
+      Capital and Information Technology Professionals</em>, <strong>1</strong>(3), 
+      32-53</li>
+      
+    <li id="hyl08">Hyland-Wood, D., Carrington, D. &amp; Kaplan, S. (2008). Towards a software 
+      maintenance methodology using Semantic web techniques and paradigmatic documentation 
+      modeling. <em>IET Software</em>, <strong>2</strong>(4), 337-347</li>
+      
+    <li id="kaj05">Kajko-Mattsson, M. (2005). A survey of documentation practice within corrective 
+      maintenance. <em>Empirical Software Engineering</em>, <strong>10</strong>(1), 
+      31-55</li>
+      
+      <li id="kim98">Kim, Y. &amp; Stohr, E.A. (1998). Software reuse: survey and research 
+      directions.<em> Journal of Management Information Systems</em>,<strong> 
+      14</strong>(4), 113-147</li>
+      
+    <li id="kru92">Krueger, C.W. (1992). Software reuse. <em>ACM Computing Surveys</em>, 
+      <strong>24</strong>(2), 131-183.</li>
+      
+    <li id="lee09">Lee, C.S. &amp; Wang, M.H. (2009). Ontology-based computational intelligent 
+      multi-agent and its application to CMMI assessment. <em>Applied Intelligence</em>, 
+      <strong>30</strong>(3), 203-219</li>
+      
+    <li id="let03">Lethbridge, T.C., Singer, J. &amp; Forward, A. (2003). How software engineers 
+      use documentation: the state of the practice. <em>IEEE Software</em>, <strong>20</strong>(6), 
+      35-39</li>
+      
+    <li id="lop10">Lopez-Nicolas, C. &amp; Soto-Acosta, P. (2010). Analyzing ICT adoption 
+      and use effects on knowledge creation: an empirical investigation in SMEs. 
+      <em>International Journal of Information Management</em>, <strong>30</strong>(6), 
+      521-528</li>
+      
+    <li id="mia09">Miao, Q., Li, Q. &amp; Dai, R. (2009). AMAZING: A sentiment mining and 
+      retrieval system.<em> Expert Systems with Applications</em>, <strong>36</strong>(3), 
+      7192-7198</li>
+      
+    <li id="moh07">Mohagheghi, P. &amp; Conradi, R. (2007). Quality, productivity and economic 
+      benefits of software reuse: a review of industrial studies. <em>Empirical 
+      Software Engineering</em>, <strong>12</strong>(5), 471-516</li>
+      
+    <li id="mor09">Morales-del-Castillo, J.M., Peis, E., Moreno, J.M. &amp; Herrera-Viedma, 
+      E. (2009). <a href="http://informationr.net/ir/14-2/paper398.html">D-Fussion: 
+      a semantic selective disssemination of information service for the research 
+      community in digital libraries.</a> <em>Information Research</em>, <strong>14</strong>(2) 
+      paper 398 Retrieved 25 May, 2010 from http://informationr.net/ir/14-2/paper398.html</li>
+      
+      <li id="nic08">Nicholson, B. &amp; Sahay, S. (2008). Human resource development policy 
+      in the context of software exports: case evidence from Costa Rica. <em>Progress 
+      in Development Studies</em>, <strong>8</strong>(2), 163-76</li>
+      
+    <li id="osu10">O'Sullivan, D. &amp; Dooley, L. (2010). Collaborative innovation for the 
+      management of information technology resources. <em>International Journal 
+      of Human Capital and Information Technology Professionals</em>, <strong>1</strong>(1), 
+      16-30</li>
+      
+    <li id="pra08">Prasad, A.R.D., &amp; Madalli, D.P. (2008). Faceted infrastructure for 
+      semantic digital libraries. <em>Library Review</em>, <strong>57</strong>(3), 
+      225-234</li>
+      
+    <li id="ran62">Ranganathan, S.R. (1962). <em>Elements of library classification.</em> (3rd ed.); 
+      New Delhi: Asia Publishing House</li>
+
+<li id="rom87">Rombach, H. &amp; Basili, V. (1987). <a href="http://www.webcitation.org/63VTPeQEq">Quantitative assessment of maintenance: an industrial case study</a>. In <em>Proceedings of the IEEE Conference on Software Maintenance, Austin, Texas, 1987</em>, (pp. 134-144). New York, NY: IEEE.  Retrieved 27 November, 2011 from http://www.cs.umd.edu/users/basili/publications/proceedings/P40.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/63VTPeQEq)</li>
+      
+    <li id="sel05">Selby, R.W. (2005). Enabling reuse-based software development of large-scale 
+      systems.<em> IEEE Transactions on Software Engineering</em>,<strong> 31</strong>(6), 
+      495-510</li>
+      
+    <li id="sha06">Shadbolt, N., Hall, W. &amp; Berners-Lee, T. (2006). The semantic web 
+      revisited. <em>IEEE Intelligent Systems</em>, <strong>21</strong>(3), 96-101</li>
+      
+    <li id="sha10">Sharma, R.S., Ng, E.W.J., Dharmawirya, M. &amp; Samuel, E.M. (2010). A 
+      policy framework for developing knowledge societies. <em>International Journal 
+      of Knowledge Society Research,</em> <strong>1</strong>(1), 23-46</li>
+      
+    <li id="sot10a">Soto-Acosta, P., Casado-Lumbreras, C. &amp; Cabezas-Isla, F. (2010a): 
+      Shaping human capital in software development teams. The case of mentoring 
+      enabled by semantics. <em>IET Software</em>, <strong>4</strong>(6), 445-452</li>
+      
+    <li id="sot10b">Soto-Acosta, P., Loukis, E., Colomo-Palacios, R. &amp; Lytras, M.D. (2010b): 
+      An empirical research of the effect of internet-based innovation on business 
+      value. <em>African Journal of Business Management</em>, <strong>4</strong>(18), 
+      4096-4105</li>
+      
+    <li id="sot10c">Soto-Acosta, P., Mart&iacute;nez-Conesa, I. &amp; Colomo-Palacios, R. 
+      (2010c). An empirical analysis of the relationship between IT training sources 
+      and IT value. <em>Information Systems Management</em>, <strong>27</strong>(3), 
+      274-283</li>
+      
+    <li id="sot08">Soto-Acosta, P. &amp; Mero&ntilde;o-Cerdan, A.L. (2008). Analyzing e-Business 
+      value creation from a resource-based perspective.<em> International Journal 
+      of Information Management</em>, <strong>28</strong>(1), 49-60</li>
+      
+    <li id="sug03">Sugumaran, V. &amp; Storey, V.C. (2003). A semantic-based approach to 
+      component retrieval. <em>ACM SIGMIS Database</em>, <strong>34</strong>(3), 
+      8-24</li>
+      
+    <li id="suo09">Suominen, O., Hyv&ouml;nen, E., Viljanen, K. &amp; Hukka, E. (2009). HealthFinland-a 
+      national semantic publishing network and portal for health information. 
+      <em>Journal of Web Semantics</em>, <strong>7</strong>(4), 271-376</li>
+      
+    <li id="tap10">Tappolet, J., Kiefer, C. &amp; Bernstein, A. (2010). Semantic web enabled 
+      software analysis. Web Semantics: Science, S<em>ervices and Agents on the 
+      World Wide Web</em>, <strong>8</strong>(2/3), 225-240.</li>
+      
+    <li id="tri09">Trigo, A., Varaj&atilde;o, J. &amp; Barroso, J. (2009). A practitioner's 
+      roadmap to learning the available tools for information system function 
+      management. <em>International Journal of Teaching and Case Studies</em>, 
+      <strong>2</strong>(1), 29-40</li>
+      
+    <li id="ure06">Uren, V.S., Cimiano, P., Iria, J., Handschuh, S.,Vargas-Vera, M., Motta, 
+      E. &amp; Ciravegna, F. (2006). Semantic annotation for knowledge management: 
+      requirements and a survey of the state of the art. <em>Journal of Web Semantics</em>, 
+      <strong>4</strong>(1), 14-28.</li>
+      
+          <li id="val10">Valencia-Garc&iacute;a, R., Garc&iacute;a-S&aacute;nchez, F., Castellanos-Nieves, 
+      D., Fern&aacute;ndez-Breis, J. &amp; Toval, A. (2010). Exploitation of Social 
+      Semantic Technology for Software Development Team Configuration. <em>IET 
+      Software</em>, <strong>4</strong>(6), 373-385</li>
+                  
+    <li id="van79">van Rijsbergen, C.J. (1979). <em>Information retrieval</em>. Newton, MA: Butterworth-Heinemann.</li>
+      
+    <li id="war06">Warren, P. (2006). Knowledge management and the semantic web: from scenario 
+      to technology. <em>IEEE Intelligent Systems</em>, <strong>21</strong>(1), 
+      53-59</li>
+      
+    <li id="won09">Wongthongtham, P., Chang, E., Dillon, T. &amp; Sommerville, I. (2009). 
+      Development of a software engineering ontology for multisite software development. 
+      <em>IEEE Transactions on Knowledge and Data Engineering</em>, <strong>21</strong>(8), 
+      1205-1217</li>
+      
+    <li id="yao08">Yao, H., Etzkorn, L.H. &amp; Virani, S. (2008). Automated classification 
+      and retrieval of reusable software components. <em>Journal of the American 
+      Society for Information Science and Technology</em>, <strong>59</strong>(4), 
+      613-627</li>
+      
+    <li id="zha08">Zhang, Y., Witte, R., Rilling, J. &amp; Haarslev, V. (2008). Ontological 
+      approach for the semantic recovery of traceability links between software 
+      artifacts. <em>IET Software</em>, <strong>2</strong>(3), 185-203</li>
+      
+    <li id="zha09">Zhao, Y., Dong, J. &amp; Peng, T. (2009). Ontology classification for 
+      semantic-web-based software engineering'. <em>IEEE Transactions on Services 
+      Computing</em>, <strong>2</strong>(4), 303-317.</li>
+  </ul>
+  </fieldset> 
+</form>
+<br />
+<form action="paper504.html">
+
+<fieldset>
+<legend><a id="abs" name="abs">Abstract</a></legend>
+<blockquote>
+<strong>Introduction.</strong> Because of the importance of information systems in today's society, their development is a key activity. In this environment, systems are increasingly complex and their development involves the generation of documentation supporting this process, which must be managed effectively and efficiently.<br />
+<strong>Method</strong>. Given the need for document repositories to support software development, we propose the use of semantic technologies for cataloguing, labelling, searching and displaying artifacts stored in software repositories.<br />
+<strong>Results</strong>. The results of the implementation of these technologies are considered highly satisfactory. On the one hand, the feedback on the techniques used for viewing are positive and, secondly, the tests (precision, recall and F1) are very encouraging for obtaining reliable results.<br />
+<strong>Conclusions</strong>. The growing maturity of semantic technologies provide a framework for efficient and effective operation for document repositories generated in software development projects.
+</blockquote>
+</fieldset> 
+</form>
+
+  <br />
+<form action="paper504.html">
+<fieldset><legend 
+style="BORDER-BOTTOM: navy 1px solid; PADDING-BOTTOM: 0.1ex; BACKGROUND-COLOR: #5e96fd; PADDING-LEFT: 0.5ex; PADDING-RIGHT: 0.5ex; COLOR: white; FONT-SIZE: medium; FONT-WEIGHT: bold; BORDER-RIGHT: navy 1px solid; PADDING-TOP: 0.1ex">How 
+to cite this paper</legend>
+<div><br />
+Garc&iacute;a-Pe&ntilde;alvo, F.J., Colomo-Palacios, R.,  Soto-Acosta, P., Mart&iacute;nez-Conesa, I. &amp; Serradell-L&oacute;pez, E.  (2011). &quot;SemSEDoc: Utilizaci&oacute;n de tecnolog&iacute;as sem&aacute;nticas en el aprovechamiento de los repositorios documentales de los proyectos de desarrollo de software&quot; <em>Information Research</em>, <strong>16</strong>(4) paper 504. [Available at http://InformationR.net/ir/16-4/paper504.html]</div>
+</fieldset> 
+</form>
+<br />
+<table cellspacing="10" align="center"> 
+	<tr> 
+		<td colspan="3" align="center" style="background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr> 
+	<tr> 
+		<td align="center" valign="top"> 
+ 
+<form method="get" action="http://scholar.google.com/scholar" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;software development&quot; repositories &quot;semantic technologies&quot;" /> <br /> 
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" /> 
+<input type="hidden" name="num" value="100" />
+					</td> 
+				</tr> 
+			</table> 
+ 
+
+
+
+</form> 
+		</td> 
+		<td align="center" valign="top"> 
+<!-- Search Google --> 
+ 
+<form method="get" action="http://www.google.com/custom" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;software development&quot; repositories &quot;semantic technologies&quot;" /><br /> 
+<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+<input type="hidden" name="client" value="pub-5081678983212084" />
+<input type="hidden" name="forid" value="1" />
+ <input type="hidden" name="ie" value="ISO-8859-1" />
+<input type="hidden" name="oe" value="ISO-8859-1" />
+<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" /> 
+<input type="hidden" name="hl" value="en" />
+					</td> 
+				</tr> 
+			</table> 
+
+
+
+</form> 
+</td> 
+<td align="center" valign="top"> 
+<form method="get" action="http://www.bing.com" target="_blank"> 
+			<table bgcolor="#ffffff"> 
+				<tr> 
+ 
+					<td nowrap="nowrap" valign="top" align="center" height="32"><input type="hidden" name="q" size="31" maxlength="255" value="&quot;software development&quot; repositories &quot;semantic technologies&quot;" /> <br /> 
+<input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />
+<input type="hidden" name="num" value="100" />
+					</td> 
+				</tr> 
+			</table> 
+</form> 
+ 
+	  </td> 
+	</tr> 
+</table> 
+ 
+
+
+
+<div align="center">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/16-4/paper504.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+<br /> 
+<div align="center"> 
+<img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /> 
+<a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a> </div> 
+
+ 
+ <hr size="1" style="color: #5E96FD;" /> 
+<table align="center" cellpadding="10"> 
+<tr><td align="center" valign="top"><div>  <a href="http://www.digits.net" target="_blank">
+    <img src="http://counter.digits.net/?counter={bd25488d-8bbd-62d4-a114-6712b3ec0132}&amp;template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a></div></td> 
+ 
+<td align="center" valign="top"><div> 
+&copy; the authors, 2011. <br />Last updated: 26 November, 2011
+</div></td> 
+ 
+         <td align="center" valign="middle"><img src="../valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" />
+         <!--ONESTAT SCRIPTCODE START--> 
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+--> 
+<div id="OneStatTag"><table border='0' cellpadding='0' cellspacing='0'><tr><td align='center'> 
+<script type="text/javascript"> 
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('https:')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+ 
+OneStat_Pageview();
+//--> 
+</script> 
+<noscript> 
+<a href="http://www.onestatfree.com"><img border="0" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a> 
+</noscript> 
+</td></tr><tr><td align='center'><div style="COLOR:black;display:none;FONT-FAMILY:'Verdana';"><a href="http://www.onestat.com" style="text-decoration:none;">online web site analytics</a><br /></div></td></tr></table></div> 
+<!--ONESTAT SCRIPTCODE END--> 
+</td></tr> 
+
+
+
+</table> 
+<hr size="3" style="color: #5E96FD;" /> 
+ 
+<table align="center"><tr><td><div class="button"> 
+ 
+
+<ul>
+	<li><a href="infres164.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table> 
+ <hr size="3" style="color: #5E96FD;" /> 
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-672528-1";
+urchinTracker();
+</script> 
+</body> 
+</html> 

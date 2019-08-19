@@ -1,0 +1,1049 @@
+<!doctype html>  
+<html lang="en">  
+	<head>  
+		<title>Can user and task characteristics be used as predictors of success in health information retrieval sessions?</title>  
+		<meta charset="utf-8" />
+		<link href="../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
+
+		<!--Enter appropriate data in the content fields-->  
+		<meta name="dcterms.title" content="Can user and task characteristics be used as predictors of success in health information retrieval sessions? " />  
+		<meta name="author" content="Melinda Oroszlányová, Carla Teixeira Lopes, Sérgio Nunes, Cristina Ribeiro" />  
+		<meta name="dcterms.subject" content="User and task characteristics as predictors of success in health information retrieval sessions" />  
+		<meta name="description" content="The concept and study of relevance has been a central subject in information science. Although research in information retrieval has been focused on topical relevance, other kinds of relevance are also important and justify further study. Motivational relevance is typically inferred by criteria such as user satisfaction and success. Using an existing dataset composed by an annotated set of health Web documents assessed for relevance and comprehension by a group of users, we build a multivariate prediction model for the motivational relevance of search sessions. The analysis was based on lasso variable selection, followed by model selection using multiple logistic regression. We have built two regression models; the full model, which considers all variables of the dataset, has a lower estimated prediction error than the reduced model, which contains the statistically-significant variables from the full model. The higher values of evaluation metrics, including accuracy, specificity and sensitivity in the full model support this finding. The full model has an accuracy of 91.94%, and is better at predicting motivational relevance. Our findings suggest features that can be considered by search engines to estimate motivational relevance, to be used in addition to topical relevance. Among these features, a high level of success in Web search and in health information search on social networks and chats are some of the most influencing user features. This shows that users with higher computer literacy might feel more satisfied and successful after completing the search tasks. In terms of task features, the results suggest that users with clearer goals feel more successful. Moreover, results show that users would benefit from the help of the system in clarifying the retrieved documents." />  
+		<meta name="keywords" content="Prediction models, Online health information, Heath information quality" />
+
+
+		<!--Leave the following to be completed by the Editor-->  
+		<meta name="robots" content="all" />  
+		<meta name="dcterms.publisher" content="University of Borås" />
+		<meta name="dcterms.type" content="text" />  
+		<meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+		<meta name="dcterms.identifier" content="http://InformationR.net/ir/23-3/paper801.html" />  
+		<meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/23-3/infres233.html" />  
+		<meta name="dcterms.format" content="text/html" />
+		<meta name="dc.language" content="en" />  
+		<meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+		<meta  name="dcterms.issued" content="2018-09-15" /> 
+		<meta name="geo.placename" content="global" />  
+	</head> 
+
+	<body> 
+		<header>
+			<img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+			<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">published quarterly by the University of Bor&aring;s, Sweden<br /><br />vol. 23  no. 3, September, 2018</span><br /><br /> 
+			<div class="button">
+				<ul> 
+					<li><a href="infres233.html" >Contents</a> |  </li> 
+					<li><a href="http://www.informationr.net/ir//iraindex.html" >Author index</a> |  </li> 
+					<li><a href="../irsindex.html" >Subject index</a> |  </li> 
+					<li><a href="../search.html" >Search</a> |  </li> 
+					<li><a href="../index.html" >Home</a> </li> 
+				</ul>
+			</div>
+			<hr />
+		</header>
+		<article>
+			<h1>Can user and task characteristics be used as predictors of success in health information retrieval sessions?</h1>  <br />  
+			
+			<h2 class="author"><a href="paper801.html#author" >Melinda Oroszlányová</a>, <a href="paper801.html#author" >Carla Teixeira Lopes</a>, <a href="paper801.html#author" >Sérgio Nunes</a> and <a href="paper801.html#author" >Cristina Ribeiro</a>
+			</h2>  
+
+			<br /> 
+
+			<blockquote>
+				<strong>Introduction</strong>. The concept and study of relevance has been a central subject in information science. Although research in information retrieval has been focused on topical relevance, other kinds of relevance are also important and justify further study. Motivational relevance is typically inferred by criteria such as user satisfaction and success.<br/>
+				<strong>Method</strong>. Using an existing dataset composed by an annotated set of health Web documents assessed for relevance and comprehension by a group of users, we build a multivariate prediction model for the motivational relevance of search sessions.<br/>
+				<strong>Analysis</strong>. The analysis was based on lasso variable selection, followed by model selection using multiple logistic regression.<br/>
+				<strong>Results</strong>. We have built two regression models; the full model, which considers all variables of the dataset, has a lower estimated prediction error than the reduced model, which contains the statistically-significant variables from the full model. The higher values of evaluation metrics, including accuracy, specificity and sensitivity in the full model support this finding. The full model has an accuracy of 91.94%, and is better at predicting motivational relevance.<br/>
+				<strong>Conclusions</strong>. Our findings suggest features that can be considered by search engines to estimate motivational relevance, to be used in addition to topical relevance. Among these features, a high level of success in Web search and in health information search on social networks and chats are some of the most influencing user features. This shows that users with higher computer literacy might feel more satisfied and successful after completing the search tasks. In terms of task features, the results suggest that users with clearer goals feel more successful. Moreover, results show that users would benefit from the help of the system in clarifying the retrieved documents.<br/>
+			</blockquote>    
+
+			<br /> 
+
+			<section>
+				<h2>Introduction</h2> 
+				<p>Information on health topics started to appear on the Web during the 1990s (<a href="paper801.html#Pal95" >Pallen, 1995</a>). With the increased availability of health information, health search on the Web started to have an impact on people’s health care routines (<a href="paper801.html#Fox02" >Fox and Rainie, 2002</a>; <a href="paper801.html#Fox06" >Fox, 2006</a>; <a href="paper801.html#Fox11" >Fox, 2011</a>; <a href="paper801.html#Esp08" >Espanha and Villanueva, 2008</a>). Regarding health information, it has been observed that the Internet is a popular source of information (<a href="paper801.html#Kim09" >Kim, 2009</a>; <a href="paper801.html#Sav08" >Savolainen, 2008</a>). A survey reported that, in 2012, 72% of all adults looked online for health information (<a href="paper801.html#Fox13" >Fox and Duggan, 2013</a>). Users’ habits concerning their Web and health search have been studied in several surveys (<a href="paper801.html#Esp08" >Espanha and Villanueva, 2008</a>; <a href="paper801.html#Fox02" >Fox and Rainie, 2002</a>; <a href="paper801.html#Fox06" >Fox, 2006</a>; <a href="paper801.html#Fox11" >Fox, 2011</a>; <a href="paper801.html#Fox13" >Fox and Duggan, 2013</a>).</p>
+
+				<p>Relevance represents a key concept for evaluating the effectiveness of information retrieval. Although there are several types of relevance, most of the attention has been given to topical relevance, that is, the <em>‘relation between the topic expressed in a query, and topic covered by retrieved texts’</em> (<a href="paper801.html#Sar96" >Saracevic, 1996</a>, p. 12). Fewer studies have focused on motivational relevance, defined by Saracevic as the <em>‘relation between the intents, goals, and motivations of a user, and texts retrieved by a system or in the file of a system, or even in existence; satisfaction, success, accomplishment, and the like being criteria for inferring motivational relevance’</em> (<a href="paper801.html#Sar96" >Saracevic, 1996</a>, p. 12).</p>
+
+				<p>The importance of motivational relevance is visible in the definition above. Since the aim of any retrieval system is to fulfil the user’s goals, we think this kind of relevance should not be disregarded. The objective of the present study is to analyse which characteristics influence the satisfaction of users during health information-seeking, with the help of a set of annotated Web pages that were assessed by users in a user stud (<a href="paper801.html#Lop13" >Lopes, 2013</a>) during which they were assigned a set of search tasks. We want to address the following major research question: How can motivational relevance, that is whether a user feels successful after the search tasks or not, be predicted? More specifically, we want to determine whether (1) it can be predicted through user characteristics such as their experience with Web search, how frequently they conduct health searches or their habits regarding the terminology used during health query formulation; (2) it can be predicted though task features such as the level of clarity, simplicity and familiarity of the tasks for the users or by previous searches conducted by the user about the given tasks. Our goal is to find good descriptors and potential predictors of motivational relevance.</p>
+			</section>
+			
+			<section>
+				<h2>Literature review</h2>
+				<p>The notion of relevance has been studied for decades, and the retrieval of relevant information has become the main concern of any information retrieval system (<a href="paper801.html#Man09" >Manning, <em>et al.</em>, 2009</a>). Relevance is estimated by search engines and is considered <em>‘a measure of the effectiveness of an interaction between a source and a destination’</em> (<a href="paper801.html#Sar75" >Saracevic, 1975</a>, p. 321).</p>
+
+				<p>The exhaustive literature review by Mizzaro (<a href="paper801.html#Miz97" >1997</a>) introduces and discusses the concepts, types and history of relevance in information retrieval, summarising the research studies from 1959 to 1996. He gives references to the origins of the problem of finding relevant information before 1958. Regarding motivational relevance, there are references to user satisfaction and the success of the search as judged by the user, as considered measures for the evaluation of an information retrieval system (<a href="paper801.html#Su91" >Su, 1991</a>; <a href="paper801.html#Su92" >1992</a>; <a href="paper801.html#Su94" >1994</a>). O’Connor (<a href="paper801.html#Oco68" >1968</a>) discusses the types of relevance in terms of satisfying users’ information needs. Sandore’s (<a href="paper801.html#San90" >1990</a>) discovery of a correlation between user satisfaction and the precision of their search is also pointed out in Mizzaro’s study (<a href="paper801.html#Miz97" >1997</a>), as well as other features that affect user satisfaction such as interaction with the intermediary and the library’s location (<a href="paper801.html#Tes77" >Tessier <em>et al.</em>, 1977</a>). Schamber (<a href="paper801.html#Sch94" >1994</a>) also studies user satisfaction in her literature review from 1983 to 1994. Reviews the literature on the themes of behaviour, measurement and terminology, she proposes three different views of relevance (system, information, and situation views) on the basis of a classical IR interaction model; discusses recall, precision, utility, and satisfaction; describes the factors affecting relevance judgments; reports recent results of the criteria identified by the users; sketches the interdisciplinary models and the theoretical approaches to relevance, and discusses some methodological problems.</p>
+
+				<p>Saracevic’s first literature review of relevance from 1975 (<a href="paper801.html#Sar75" >Saracevic, 1975</a>), was followed by two more of his research works focusing on the nature and manifestations of relevance (<a href="paper801.html#Sar07II" >Saracevic, 2007</a>) and its behaviour and effects (<a href="paper801.html#Sar07III" >Saracevic, 2007</a>). These works distinguish between user and system relevance. System (or algorithmic) relevance is defined as the <em>‘relation between a query and information objects in a given system, where the aim is to retrieve a set of information objects that the system inferred as being relevant to a query’</em> (<a href="paper801.html#Sar96" >Saracevic, 1996</a>, p. 12). User relevance is subjective and dependent on the user and context. It is divided into four major categories: topical, cognitive, situational and motivational (<a href="paper801.html#Sar96" >Saracevic, 1996</a>). Topical (or subject) relevance is defined as the <em>‘relation between the topic expressed in a query, and topic covered by retrieved texts’</em> (<a href="paper801.html#Sar96" >Saracevic, 1996</a>, p. 12). Cognitive relevance (or pertinence) is the <em>‘relation between the state of knowledge and cognitive information need of a user, and texts retrieved’</em> (<a href="paper801.html#Sar96" >Saracevic, 1996</a>, p. 12). Situational relevance (or utility) is the <em>‘relation between the task and texts retrieved by a system’</em> (<a href="paper801.html#Sar96" >Saracevic, 1996</a>, p. 12). Finally, motivational (or affective) relevance is defined as the <em>relation between the intents, goals, and motivations of a user, and texts retrieved by a system or in the file of a system, or even in existence; satisfaction, success, accomplishment, and the like being criteria for inferring motivational relevance</em> (<a href="paper801.html#Sar96" >Saracevic, 1996</a>, p. 12).</p>
+
+				<p>Dumais (<a href="paper801.html#Dum12" >2012</a>) summarises various studies on the evaluation of interactive information retrieval, referring to Cole <em>et al.</em> (<a href="paper801.html#Col09" >2009</a>) with respect to motivational relevance. The authors, focusing on the evaluation of interactive information retrieval systems, propose <em>usefulness</em> as a measure of system performance. Belkin (<a href="paper801.html#Bel10" >2010</a>) also suggests that usefulness could be an appropriate criterion for evaluating interactive information retrieval systems. In a previous study, we showed that user and task characteristics are good descriptors and possible predictors of motivational relevance (<a href="paper801.html#Oro15" >Oroszlányová, 2015</a>). Relevance assessment was shown to be influenced by query, document characteristics, user and task (e.g., age, health search experience, task clarity) (<a href="paper801.html#Lop10" >Lopes, 2010</a>).</p>
+			</section>
+
+			<section>
+				<h2>Method</h2>
+				<p>This work studies both how and to what extent task and user characteristics are useful in predicting motivational relevance. With the help of a multivariate prediction model for the motivational relevance of search sessions, we analyse which user and task characteristics influence the motivational relevance of health Web documents. A detailed description of the user and task characteristics is provided in the following subsection.</p>
+
+				<h3>Description of the dataset</h3> 
+				<p>The present study is based on an existing dataset composed by a sample of 4533 annotated health Web documents. This set of documents was initially collected for a user study (<a href="paper801.html#Lop13" >Lopes, 2013</a>), where forty participants performed eight tasks, associated with different health information-seeking situations, based on questions submitted to the health category of the Yahoo! Answers service. From the list of open questions of this category, starting with the most popular, eight questions about treatments for a symptom/disease were selected. For each question, four different search queries were defined, two in English and two in the participant’s native language. In each language, the two queries were formulated by using lay and medico-scientific terminology, respectively. Queries were built by concatenating the eight symptoms or diseases (painful urination/dysuria; head itching/head pruritus; high uric acid/hyperuricaemia; mouth inflammation/stomatitis; bone infection/osteomyelitis; heartburn/pyrosis; hair loss/alopecia; joint pain/arthralgia) with the word <em>treatment</em>, with different medical terminology (lay/medico-scientific). To reduce the risk of Google learning from the previously-submitted queries, it was ensured that returned links were never clicked. Further, to prevent changes in the search engine, all queries were submitted within a very short time span. For each query, the top-thirty results were collected. The documents were assessed by a set of Information Science students in terms of relevance and comprehension using a three-valued scale.</p>
+
+				<p>For these documents, a metadata scheme was defined and used for a latter annotation with manual and automatic approaches (<a href="paper801.html#Sou11" >Sousa, 2011</a>). For instance, the specificity of the vocabulary (related to technical and scientific terms of the health area) was one of the document characteristics, and it was evaluated by annotating a value according to the defined scale: 1: barely perceptible; 2: perceptible; 3: completely perceptible. To evaluate the quality of the annotation, 10% of the documents were also assessed by an external health professional (<a href="paper801.html#Sou11" >Sousa, 2011</a>). The agreement rate between both assessments was very good (93%), thus, the way the characteristics were evaluated/annotated was, in general, well defined.</p>
+
+				<p>Our study includes only user and task variables plus six aggregated variables containing the number of documents in each session assessed as non-relevant (nrel0), partially relevant (nrel1), totally relevant (nrel2), not understood (ncomp0), partially understood (ncomp1) and completely understood (ncomp2). In the present work, motivational relevance is assessed by a question posed at the end of the search session. In this question, users were asked to evaluate their feeling of success with the task in a five-level scale (1-extremely unsuccessful; 5-extremely successful). The metadata scheme that was used to annotate the dataset contains specific characteristics of tasks and users, listed in Table 1. Task-related characteristics include users’ feedback on the tasks’ clarity, simplicity and familiarity. User characteristics describe the user in terms of their health literacy, Web search and health search experience.</p>
+
+				<table class="center">  
+					<caption>Table 1: Task and user characteristics used for predicting motivational relevance.</caption> 
+					<tbody>
+						<tr>
+							<th>Characteristics/Variables</th>
+							<th>Scale</th>
+						</tr> 
+						<tr>
+							<td><em>Tasks</em></td>
+							<td>  </td>
+						</tr>	
+						<tr>
+							<td>Correct answers in the task</td>
+							<td>0-No 1-Yes</td> 
+						</tr>
+						<tr>
+							<td>The user had an exact idea about the information in the tasks</td>
+							<td>1 (Disagree) to 5 (Agree)</td> 
+						</tr>
+						<tr>
+							<td>Level of clarity, simplicity and familiarity of the tasks for the users</td>
+							<td>1 (Unclear/Easy/Unfamiliar) to 5 (Clear/Complex/Familiar)</td> 
+						</tr>
+						<tr>
+							<td>Language of the query</td>
+							<td>Nominal</td> 
+						</tr>
+						<tr>
+							<td>Medical terms in the query</td>
+							<td>0-No 1-Yes</td> 
+						</tr>
+						<tr>
+							<td>Previous search by the user about the given tasks</td>
+							<td>0-No 1-Yes</td> 
+						</tr>
+						<tr>
+							<td>Whether the users knew the technical terms</td>
+							<td>0-No 1-Yes</td> 
+						</tr>
+						<tr>
+							<td>Number of totally relevant documents</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Number of partially relevant documents</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Number of non-relevant documents</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Number of completely understood documents</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Number of partially understood documents</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Number of not understood documents</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td><em>Users</em></td>
+							<td>  </td> 
+						</tr>
+						<tr>
+							<td>English proficiency of the users</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+						<td>Health literacy of the users</td><td>	Continuous</td> 
+						</tr>
+						<tr>
+							<td>Number of medical concepts included in the query, that the user knows</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Age of the users</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Gender of the users</td>
+							<td>Nominal</td> 
+						</tr>
+						<tr>
+							<td>Health status of the users</td>
+							<td>1 (Not healthy) to 5 (Very healthy)</td> 
+						</tr>
+						<tr>
+							<td>Experience of the users with Web search and with health search</td>
+							<td>Continuous</td> 
+						</tr>
+						<tr>
+							<td>Frequency of the users’ Web search and health search</td>
+							<td>1 – Once a year </td>
+							</tr><tr>
+								<td> </td>
+								<td>2 – Once a month</td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>3 – Once a week</td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>4 – Once a day</td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>5 – More often</td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>NULL – No response provided</td>
+							</tr>
+						<tr>
+							<td>Success of the users with Web search and health search</td>
+							<td>1 (Never) to 5 (Always)</td> 
+						</tr>
+						<tr>
+							<td>Health search in Portuguese, English and other language</td>
+							<td>1 (Never) to 5 (Frequently)</td> 
+						</tr>
+						<tr>
+							<td>Use of medico-scientific terminology during Web searches about health subjects</td>
+							<td>1 (Never) to 5 (Always)</td> 
+						</tr>
+						<tr>
+							<td>Level of satisfaction of the users’ health information need on Web pages, blogs, forums, social networks, chats, newsletter and RSS feeds</td>
+							<td>1 (Never) to 5 (Frequently)</td> 
+						</tr>  
+					</tbody>
+				</table> 
+
+				<h3>Statistical analysis</h3>
+				<p>In the subsequent section Multivariate analysis of motivational relevance, we analyse multiple variables from our data collection in relation to motivational relevance. First, we selected the variables to produce a model that best fits our data, using the least absolute shrinkage and selection operator (lasso). The model selects the best subset of predictors by shrinking the regression coefficients towards zero, and estimates their coefficients based on logistic regression (<a href="paper801.html#Jam13" >James, <em>et al.</em>, 2013</a>). The logistic regression models the probability of motivational relevance given the task and user characteristics/variables. We can write it as probability (relevance = yes|characteristics), where the probability values p(characteristics) range between 0 and 1.</p>
+
+				<p>Originally, our model had a multinomial distribution with five relevance levels (0, 1, 2, 3, 4 and 5). Here we merged motivational relevance levels 1, 2, 3 and 4, 5, inducing a binomial distribution of the model.</p> 
+
+				<p>After the lasso variable selection, we included the chosen characteristics in the multiple logistic regression model and used leave-one-out cross-validation (LOOCV) to estimate the accuracy of the model (<a href="paper801.html#Jam13" >James, <em>et al.</em>, 2013</a>). The LOOCV error rate is estimated by averaging the misclassified observations over the total number of observations.</p>
+
+				<p>The LOOCV approach splits the set of observations into a single observation used for the validation set, and into the remaining observations which form the training set, where the prediction is made for the former observation. We also built a second model, which we call reduced model. It contains only the variables which were significant in the full model. Finally, we compared the LOOCV estimates of prediction (or test) errors for the two models.</p>
+			</section>
+	
+			<section>
+				<h2>Results</h2> 
+				<h3>Multivariate analysis of motivational relevance</h3>
+				<p>This section describes how we built the prediction models, the models themselves, and their evaluation, with the aim of predicting whether or not a user feels successful after the search tasks, based on user and task characteristics. Following the statistical strategy defined in the previous section (Statistical analysis), after classifying tasks as successful (fourth and fifth level of the scale) or not (first, second and third levels), we built and evaluated two logistic regression models for motivational relevance. We built the reduced model to analyse whether we could reach similar results using a lower number of features, which would be advantageous for practical reasons.</p>
+
+				<h3>Full model</h3>
+				<p>The first model considers all variables. The analysis began by fitting a lasso model on the training set. In the next step we chose the best tuning parameter using cross-validation and used it to fit the lasso model on the full dataset (section Model definition process). Finally, with the variables selected by the lasso model, we fitted a multiple logistic regression model (section Logistic regression model) and evaluated the results (section Evaluation).</p>
+
+				<h4>Model definition process</h4>
+				<p>Applying the lasso to our dataset and using the potential predictor variables discussed in the section Method, we built a model predicting the motivational relevance. The lasso, with the minimal tuning parameter chosen by cross-validation, yielded a prediction model containing candidate variables to be analysed with the multiple logistic regression model.</p>
+
+				<h4>Logistic regression model</h4>
+				<p>The lasso helped with variable selection, and we continued the analysis with model selection using logistic regression. The resulting variables from the lasso model were added to the multiple logistic regression model which is summarized in Table 2. The first column contains the category of the feature, where T and U refer to task and user, respectively. The variables are listed in the second column, where the numbers in the parentheses indicate the levels of the variables (according to the scales defined in Table 1). The variables’ corresponding estimated coefficients are in the third column. The fourth column lists the standard error when assessing the accuracy of the coefficient estimates. In the fifth column, the z-statistics are listed, and their large (absolute) value indicates evidence against the null hypothesis of the coefficients being equal to zero. The last column contains the corresponding p-values. Those marked in bold relate to the variables that are statistically significant at α = 0.05 in the full regression model.</p> 
+
+				<table class="center">  
+					<caption>Table 2: Summary of the coefficient estimates in the full model. Bold values show variables statistically significant at 0.05. .</caption> 
+					<tbody>
+						<tr>
+							<th>Cat.</th>
+							<th>Variable</th>
+							<th>Estimate</th>
+							<th>Std. Error</th>
+							<th>Z-score</th>
+							<th>Pr(&gt;|z|)</th>
+						</tr> 
+						<tr>
+							<td>T</td>
+							<td>Is the user familiar with the task? (5)</td>
+							<td style="text-align:center">19.534</td>
+							<td style="text-align:center">393.867</td>
+							<td style="text-align:center">0.050</td>
+							<td style="text-align:center">0.960</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task clear? (5)</td>
+							<td style="text-align:center">18.549</td>
+							<td style="text-align:center">206.990</td>
+							<td style="text-align:center">0.090</td>
+							<td style="text-align:center">0.929</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task easy? (5)</td>
+							<td style="text-align:center">13.390</td>
+							<td style="text-align:center">230.042</td>
+							<td style="text-align:center">0.058</td>
+							<td style="text-align:center">0.954</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task easy? (4)</td>
+							<td style="text-align:center">3.572</td>
+							<td style="text-align:center">0.101</td>
+							<td style="text-align:center">35.366</td>
+							<td style="text-align:center">5.60E-274</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Does the user have an idea about the information? (5)</td>
+							<td style="text-align:center">3.567</td>
+							<td style="text-align:center">0.378</td>
+							<td style="text-align:center">9.441</td>
+							<td style="text-align:center">3.69E-21</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task clear? (4)</td>
+							<td style="text-align:center">2.018</td>
+							<td style="text-align:center">0.090</td>
+							<td style="text-align:center">22.487</td>
+							<td style="text-align:center">5.55E-112</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Does the user have an idea about the information? (4)</td>
+							<td style="text-align:center">0.383</td>
+							<td style="text-align:center">0.079</td>
+							<td style="text-align:center">4.846</td>
+							<td style="text-align:center">1.26E-06</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Did the user answer the task correctly? (1)</td>
+							<td style="text-align:center">0.308</td>
+							<td style="text-align:center">0.064</td>
+							<td style="text-align:center">4.828</td>
+							<td style="text-align:center">1.38E-06</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Did the user answer the task correctly? (2)</td>
+							<td style="text-align:center">0.276</td>
+							<td style="text-align:center">0.110</td>
+							<td style="text-align:center">2.512</td>
+							<td style="text-align:center">0.012</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Did the user find the document relevant? (2)</td>
+							<td style="text-align:center">0.036</td>
+							<td style="text-align:center">0.003</td>
+							<td style="text-align:center">13.181</td>
+							<td style="text-align:center">1.13E-39</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task clear? (2)</td>
+							<td style="text-align:center">-0.438</td>
+							<td style="text-align:center">0.114</td>
+							<td style="text-align:center">-3.833</td>
+							<td style="text-align:center">1.26E-04</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task easy? (2)</td>
+							<td style="text-align:center">-1.328</td>
+							<td style="text-align:center">0.094</td>
+							<td style="text-align:center">-14.094</td>
+							<td style="text-align:center">4.12E-45</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Does the user have an idea about the information? (2)</td>
+							<td style="text-align:center">-2.405</td>
+							<td style="text-align:center">0.121</td>
+							<td style="text-align:center">-19.928</td>
+							<td style="text-align:center">2.31E-88</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Is the user healthy? (4)</td>
+							<td style="text-align:center">20.195</td>
+							<td style="text-align:center">697.783</td>
+							<td style="text-align:center">0.029</td>
+							<td style="text-align:center">0.977</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Is the user healthy? (5)</td>
+							<td style="text-align:center">17.961</td>
+							<td style="text-align:center">697.783</td>
+							<td style="text-align:center">0.026</td>
+							<td style="text-align:center">0.979</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Is the user healthy? (3)</td>
+							<td style="text-align:center">17.438</td>
+							<td style="text-align:center">697.783</td>
+							<td style="text-align:center">0.025</td>
+							<td style="text-align:center">0.980</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in chats? (4)</td>
+							<td style="text-align:center">5.705</td>
+							<td style="text-align:center">0.211</td>
+							<td style="text-align:center">27.037</td>
+							<td style="text-align:center">5.48E-161</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in chats? (3)</td>
+							<td style="text-align:center">4.479</td>
+							<td style="text-align:center">0.263</td>
+							<td style="text-align:center">17.050</td>
+							<td style="text-align:center">3.52E-65</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in social networks? (5)</td>
+							<td style="text-align:center">4.400</td>
+							<td style="text-align:center">0.294</td>
+							<td style="text-align:center">14.943</td>
+							<td style="text-align:center">1.74E-50</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Is the user successful in web search? (5)</td>
+							<td style="text-align:center">3.406</td>
+							<td style="text-align:center">0.218</td>
+							<td style="text-align:center">15.636</td>
+							<td style="text-align:center">4.17E-55</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search frequently? (2)</td>
+							<td style="text-align:center">1.007</td>
+							<td style="text-align:center">0.102</td>
+							<td style="text-align:center">9.842</td>
+							<td style="text-align:center">7.42E-23</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in newsletters? (2)</td>
+							<td style="text-align:center">0.292</td>
+							<td style="text-align:center">0.096</td>
+							<td style="text-align:center">3.030</td>
+							<td style="text-align:center">2.44E-03</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in blogs? (2)</td>
+							<td style="text-align:center">-0.557</td>
+							<td style="text-align:center">0.105</td>
+							<td style="text-align:center">-5.279</td>
+							<td style="text-align:center">1.30E-07</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Experience of the user with web search (in years)</td>
+							<td style="text-align:center">-0.663</td>
+							<td style="text-align:center">0.021</td>
+							<td style="text-align:center">-31.868</td>
+							<td style="text-align:center">7.34E-223</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in social networks? (4)</td>
+							<td style="text-align:center">-0.764</td>
+							<td style="text-align:center">0.235</td>
+							<td style="text-align:center">-3.255</td>
+							<td style="text-align:center">1.14E-03</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search on webpages? (4)</td>
+							<td style="text-align:center">-0.821</td>
+							<td style="text-align:center">0.112</td>
+							<td style="text-align:center">-7.328</td>
+							<td style="text-align:center">2.34E-13</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search on webpages? (5)</td>
+							<td style="text-align:center">-1.141</td>
+							<td style="text-align:center">0.138</td>
+							<td style="text-align:center">-8.249</td>
+							<td style="text-align:center">1.60E-16</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in social networks? (2)</td>
+							<td style="text-align:center">-1.339</td>
+							<td style="text-align:center">0.121</td>
+							<td style="text-align:center">-11.030</td>
+							<td style="text-align:center">2.74E-28</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search on webpages? (2)</td>
+							<td style="text-align:center">-2.072</td>
+							<td style="text-align:center">0.281</td>
+							<td style="text-align:center">-7.370</td>
+							<td style="text-align:center">1.71E-13</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user know health search terminology? (2)</td>
+							<td style="text-align:center">-2.275</td>
+							<td style="text-align:center">0.157</td>
+							<td style="text-align:center">-14.463</td>
+							<td style="text-align:center">2.07E-47</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user know health search terminology? (5)</td>
+							<td style="text-align:center">-2.376</td>
+							<td style="text-align:center">0.177</td>
+							<td style="text-align:center">-13.457</td>
+							<td style="text-align:center">2.79E-41</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search frequently? (NULL)</td>
+							<td style="text-align:center">-2.718</td>
+							<td style="text-align:center">0.149</td>
+							<td style="text-align:center">-18.186</td>
+							<td style="text-align:center">6.64E-74</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in RSS feeds? (3)</td>
+							<td style="text-align:center">-3.252</td>
+							<td style="text-align:center">0.154</td>
+							<td style="text-align:center">-21.177</td>
+							<td style="text-align:center">1.54E-99</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in newsletters? (4)</td>
+							<td style="text-align:center">-3.584</td>
+							<td style="text-align:center">0.182</td>
+							<td style="text-align:center">-19.685</td>
+							<td style="text-align:center">2.89E-86</td> 
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>LOOCV estimate of prediction error</td>
+							<td style="text-align:center">0.067</td> 
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table> 
+
+				<h4>Evaluation</h4>
+				<p>Our regression model was verified by leave-one-out cross-validation, and its results are reported in the last row of Table 2. The p-values associated with the variables, marked with bold in Table 2, are statistically significant at α = 0.05. The negative coefficients indicate that users with the corresponding features/variables are less likely to feel successful after the search task than the users without these characteristics, for fixed values of the remaining variables. Variables with large coefficient estimates highlight the importance of such variables (e.g. high level of success in Web search, and in health information search on social networks and chats, or clearly given/defined search tasks) for motivational relevance. To assess the accuracy of the model, we have fitted the model using half of the data (a training dataset), and then examined how well it predicts the held-out data (a test dataset) as explained by James <em>et al.</em> (2013). Using the test dataset, we then computed the probabilities of the document being relevant, allowing us to compute the accuracy, sensitivity and specificity of the model. Given these predictions, we determined how many observations were correctly or incorrectly classified. Our logistic regression has an accuracy of 91.94%, a specificity (true negative rate) of 89.71% and sensitivity (true positive rate) of 93.17%. The LOOCV estimate of prediction error from Table 2 is very low (0.067), meaning that the regression model is of high accuracy.</p> 
+
+				<h3>Reduced model</h3>
+				<p>We built a second model, including only the statistically significant variables from the full model. In this second model, all variables remained significant except the one pertaining to the second level of health search in social networks. Table 3 shows the coefficient estimates for the reduced logistic regression model, i.e., for a logistic regression model that uses the selected 34 variables to predict the probability of a user feeling successful or not after completing the search task. The p-values marked with bold indicate that the corresponding variables are associated with motivational relevance and are statistically significant at α = 0.05 in the reduced regression model. The model's accuracy was assessed using leave-one-out cross-validation, with estimated prediction error of 0.0913. The logistic regression has an accuracy of 89.03%, a specificity of 86.27% and sensitivity of 90.53%. The LOOCV estimate of prediction error for this model is higher than the error estimate for the full regression model in Table 2.</p>  
+
+				<table class="center">  
+					<caption><br />Table 3: Summary of the coefficient estimates in the reduced model.</caption> 
+					<tbody>
+						<tr>
+							<th colspan="1">Cat.</th>
+							<th colspan="1">Variable</th>
+							<th colspan="1">Estimate</th>
+							<th colspan="1">Std. Error</th>
+							<th colspan="1">Z-score</th>
+							<th colspan="1">Pr(&gt;|z|)</th>
+						</tr> 
+						<tr>
+							<td>T</td>
+							<td>Does the user have an idea about the information? (5)</td>
+							<td style="text-align:center">	5.304</td>
+							<td style="text-align:center">	0.335</td>
+							<td style="text-align:center">	15.828</td>
+							<td style="text-align:center">	1.98E-56</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task easy? (4)</td>
+							<td style="text-align:center">3.767</td>
+							<td style="text-align:center">0.087</td>
+							<td style="text-align:center">43.062</td>
+							<td style="text-align:center">0.000</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Does the user have an idea about the information? (4)</td>
+							<td style="text-align:center">2.118</td>
+							<td style="text-align:center">0.064</td>
+							<td style="text-align:center">32.892</td>
+							<td style="text-align:center">2.81E-237</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task clear? (4)</td>
+							<td style="text-align:center">1.002</td>
+							<td style="text-align:center">0.076</td>
+							<td style="text-align:center">13.271</td>
+							<td style="text-align:center">3.42E-40</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Did the user answer the task correctly? (1)</td>
+							<td style="text-align:center">0.148</td>
+							<td style="text-align:center">0.050</td>
+							<td style="text-align:center">2.945</td>
+							<td style="text-align:center">3.23E-03</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Did the user find the document relevant? (2)</td>
+							<td style="text-align:center">0.047</td>
+							<td style="text-align:center">0.002</td>
+							<td style="text-align:center">19.668</td>
+							<td style="text-align:center">4.05E-86</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Is the task clear? (2)</td>
+							<td style="text-align:center">-0.720</td>
+							<td style="text-align:center">0.090</td>
+							<td style="text-align:center">-7.962</td>
+							<td style="text-align:center">1.69E-15</td> 
+						</tr>
+						<tr>
+							<td>T</td><td>Is the task easy? (2)</td>
+							<td style="text-align:center">-0.887</td>
+							<td style="text-align:center">0.071</td>
+							<td style="text-align:center">-12.406</td>
+							<td style="text-align:center">2.44E-35</td> 
+						</tr>
+						<tr>
+							<td>T</td>
+							<td>Does the user have an idea about the information? (2)</td>
+							<td style="text-align:center">-1.786</td>
+							<td style="text-align:center">0.095</td>
+							<td style="text-align:center">-18.780</td>
+							<td style="text-align:center">1.11E-78</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in chats? (4)</td>
+							<td style="text-align:center">4.863</td>
+							<td style="text-align:center">0.132</td>
+							<td style="text-align:center">36.961</td>
+							<td style="text-align:center">4.89E-299</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in social networks? (5)</td>
+							<td style="text-align:center">4.285</td>
+							<td style="text-align:center">0.230</td>
+							<td style="text-align:center">18.654</td>
+							<td style="text-align:center">1.17E-77</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Is the user successful in web search? (5)</td>
+							<td style="text-align:center">3.679</td>
+							<td style="text-align:center">0.160</td>
+							<td style="text-align:center">22.941</td>
+							<td style="text-align:center">1.83E-116</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in chats? (3)</td>
+							<td style="text-align:center">2.068</td>
+							<td style="text-align:center">0.190</td>
+							<td style="text-align:center">10.856</td>
+							<td style="text-align:center">1.88E-27</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search frequently? (2)</td>
+							<td style="text-align:center">0.367</td>
+							<td style="text-align:center">0.073</td>
+							<td style="text-align:center">5.044</td>
+							<td style="text-align:center">4.55E-07</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in newsletters? (2)</td>
+							<td style="text-align:center">0.348</td>
+							<td style="text-align:center">0.088</td>
+							<td style="text-align:center">3.966</td>
+							<td style="text-align:center">7.32E-05</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in blogs? (2)</td>
+							<td style="text-align:center">-0.168</td>
+							<td style="text-align:center">0.071</td>
+							<td style="text-align:center">-2.354</td>
+							<td style="text-align:center">0.019</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in social networks? (2)</td>
+							<td style="text-align:center">-0.185</td>
+							<td style="text-align:center">0.095</td>
+							<td style="text-align:center">-1.954</td>
+							<td style="text-align:center">0.051</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Experience of the user with web search (in years)</td>
+							<td style="text-align:center">-0.703</td>
+							<td style="text-align:center">0.019</td>
+							<td style="text-align:center">-36.368</td>
+							<td style="text-align:center">1.35E-289</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search on webpages? (5)</td>
+							<td style="text-align:center">-1.160</td>
+							<td style="text-align:center">0.120</td>
+							<td style="text-align:center">-9.655</td>
+							<td style="text-align:center">4.67E-22</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user know health search terminology? (5)</td>
+							<td style="text-align:center">-1.259</td>
+							<td style="text-align:center">0.160</td>
+							<td style="text-align:center">-7.852</td>
+							<td style="text-align:center">4.09E-15</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search on webpages? (4)</td>
+							<td style="text-align:center">-1.488</td>
+							<td style="text-align:center">0.100</td>
+							<td style="text-align:center">-14.806</td>
+							<td style="text-align:center">1.33E-49</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user know health search terminology? (2)</td>
+							<td style="text-align:center">-2.008</td>
+							<td style="text-align:center">0.150</td>
+							<td style="text-align:center">-13.378</td>
+							<td style="text-align:center">8.09E-41</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in social networks? (4)</td>
+							<td style="text-align:center">-2.487</td>
+							<td style="text-align:center">0.149</td>
+							<td style="text-align:center">-16.650</td>
+							<td style="text-align:center">3.02E-62</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in RSS feeds? (3)</td>
+							<td style="text-align:center">-2.777</td>
+							<td style="text-align:center">0.121</td>
+							<td style="text-align:center">-22.992</td>
+							<td style="text-align:center">5.61E-117</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search in newsletters? (4)</td>
+							<td style="text-align:center">-3.160</td>
+							<td style="text-align:center">0.146</td>
+							<td style="text-align:center">-21.641</td>
+							<td style="text-align:center">7.32E-104</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search on webpages? (2)</td>
+							<td style="text-align:center">-3.176</td>
+							<td style="text-align:center">0.208</td>
+							<td style="text-align:center">-15.259</td>
+							<td style="text-align:center">1.43E-52</td> 
+						</tr>
+						<tr>
+							<td>U</td>
+							<td>Does the user health search frequently? (NULL)</td>
+							<td style="text-align:center">-3.604</td>
+							<td style="text-align:center">0.121</td>
+							<td style="text-align:center">-29.698</td>
+							<td style="text-align:center">8.23E-194</td> 
+						</tr>
+						<tr>
+							<td> </td>
+							<td>LOOCV estimate of prediction error</td>
+							<td style="text-align:center">0.091</td> 
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table> 
+			</section>
+	
+			<section>
+				<h2>Discussion</h2>
+				<p>As expected, the best model to predict motivational relevance is the one containing all variables suggested by lasso, although the reduced model was very close in terms of error rates and has the advantage of not requiring as much information. In Table 4 we summarize the evaluation metrics of both models. The first row contains the number of variables included in each model. Looking at the second row we can observe that the full model has the lowest prediction error estimate (LOOCV error). The higher values of accuracy, specificity and sensitivity in the full model also support this finding.</p>  
+
+				<table class="center">  
+					<caption><br />Table 4: Comparison of the full and reduced logistic regression models in terms of number of variables and evaluation rates. Figures in bold show the best performance values in each row.</caption> 
+					<tbody>
+						<tr>
+							<th colspan="2">Full model</th>
+							<th  colspan="1">Reduced model</th>
+						</tr> 
+						<tr> 
+							<td>Number of variables</td>
+							<td style="text-align:center">39</td> 
+							<td style="text-align:center">27</td>
+						</tr>
+						<tr> 
+							<td>LOOCV error</td>	  
+							<td style="text-align:center">6.70%</td> 
+							<td style="text-align:center">9.13%</td>
+						</tr>
+						<tr>
+							<td>Accuracy</td>	
+							<td style="text-align:center">91.94%</td> 
+							<td style="text-align:center">89.03%</td>
+						</tr>
+						<tr>
+							<td>Specificity</td>	
+							<td style="text-align:center">89.71%</td> 
+							<td style="text-align:center">86.27%</td>
+						</tr>
+						<tr>
+							<td>Sensitivity</td>	
+							<td style="text-align:center">93.17%</td> 
+							<td style="text-align:center">90.53%</td>
+						</tr> 
+					</tbody>
+				</table> 
+
+				<p>The suggested models let us answer our research questions and were useful in understanding which characteristics are more relevant when estimating whether a user feels successful after the search tasks. The characteristics that significantly contribute to the prediction of motivational relevance, either positively or negatively, might be important for this purpose. For example, search engines might use this information to improve their performance.</p> 
+
+				<p>The production and analysis of these models allowed us to identify important user and task features to estimate motivational relevance. We found that users who frequently conduct health search on chats or social networks feel more successful after completing the search tasks. Users who consider themselves healthy succeeded better in their search task. We ponder whether healthier people are less demanding than less-healthy people on health information seeking. The more successful a user is in Web search, the more successful s/he feels in completing the search tasks.</p> 
+
+				<p>As expected, users feel more successful when they find more totally-relevant documents. This is reasonable, because when the user encounters useful information, s/he will feel more satisfied with the completion of his search task. It did not surprise us to discover that having an initial idea about what to search for also contributes in increasing the users’ feeling of success with the search task. Users who gave appropriate or somewhat appropriate answers to the information need after the search session are considered more successful in completing the health search tasks. This shows that users are somehow aware of the accuracy of the obtained knowledge.</p> 
+
+				<p>On the other hand, the analyses show that users who generally conduct less frequent health search in RSS feeds, newsletters, blogs, and Web pages tend to feel less successful in completing their search tasks. We discovered that the more frequently users use medico-scientific terminology during their Web searches on health subjects, the less they will feel satisfied with their search task. This result is aligned with the findings of Saracevic (<a href="paper801.html#Sar07II" >2007</a>, p. 2136) which state that <em>’lesser subject expertise seems to lead to more lenient and relatively higher relevance ratings’</em>. Considering the number of years users have been searching the Web, we also hypothesize that older users are less successful with their health search tasks. This is aligned with our suspicion that people with more health problems might be more demanding.</p>
+
+				<p>The findings of the present study revealed that, besides the above user characteristics, some of the task features such as the clarity and simplicity of the search task are also useful for estimating motivational relevance.</p>
+
+				<p>Clear and easy tasks positively contribute to the success of users within the search session. These results support our previous findings, where we observed significant positive association between the clarity and simplicity of the search tasks, user familiarity with them, their information idea, success in Web search, respectively, and motivational relevance (<a href="paper801.html#Oro15" >Oroszlányová, 2015</a>).</p>
+
+				<p>There are many variables with multiple levels, which might suggest that regardless of the high values of estimates, some of the features included in the model might be less useful in real situations. Therefore, in practice, it might be useful to consider only one level at once. For instance, we might prefer the fourth level to the third one for the variable health search on chats, because its estimate is higher or because we want to make predictions for users who use chats more frequently, or we might prefer to exclude the variables with no available response (Does the user frequently conduct health search? (NULL))</p> 
+			</section>
+
+			<section>
+				<h2>Conclusions</h2>
+				<p>We conducted a multivariate analysis focused on how and to what extent user and task characteristics are useful in predicting motivational relevance. For this purpose, we built two regression models. Our best model, the full model, had a LOOCV estimate of prediction error of 6.70%, a sensitivity of 93.17%, an accuracy of 91.94%, and a specificity of 89.71%. Several of the features used to estimate motivational relevance are related to users’ search habits, and to characteristics of the task such as their clarity and simplicity.</p>
+
+				<p>Among the variables which were identified to predict motivational relevance, a high level of success in Web search, and in health information search on social networks and chats are some of the most influencing user variables. This might show that users with higher abilities in both Web and health search might feel more satisfied and successful after completing the search tasks. In terms of tasks features, our findings suggest that users need help with performing the search tasks and with clarifying their goals and retrieved information to feel more satisfied with the search tasks.</p>
+
+				<p>The present study resulted in several potential predictors of motivational relevance. These features can be useful in improving the estimation of motivational relevance, particularly in the domain of health Web search. The application of our models to other datasets might be also interesting for the generalisation of our results. As future work, we aim to use the findings of this study to improve information retrieval in the health domain, for example making the search tasks clearer and easier. Since some of the features included in these models can be assessed automatically, they can be useful to improve the estimation of motivational relevance by search engines, particularly on health Web documents. Having found that the more successful a user is in Web search, the more successful he feels in completing the search tasks, we also would like to study the relationship between personality, experience and motivational relevance in more detail. For instance, will positive and confident people naturally feel more successful in Web search or in completing a health search task? We will also work on the development of methods to automatically detect these features.</p>
+			</section>
+
+			<section>
+				<h2>Acknowledgments</h2>
+				<p>This work was supported by Project “NORTE-01-0145- FEDER-000016” (NanoSTIMA), financed by the North Portugal Regional Operational Programme (NORTE 2020), under the PORTUGAL 2020 Partnership Agreement, and through the European Regional Development Fund (ERDF).</p>
+			</section>
+
+			<section>
+				<h2 id="author">About the authors</h2>
+				<p><strong>Melinda Oroszlányová</strong> - Department of Informatics Engineering (DEI), Faculty of Engineering of the University of Porto (FEUP), Porto, Portugal - <a href="mailto:melinda@fe.up.pt" >melinda@fe.up.pt</a><br>
+				<strong>Carla Teixeira Lopes</strong> - Department of Informatics Engineering (DEI), Faculty of Engineering of the University of Porto (FEUP), Porto, Portugal; INESC TEC, Porto, Portugal - <a href="mailto:ctl@fe.up.pt" >ctl@fe.up.pt</a><br>
+				<em>Sérgio Nunes</em> - Department of Informatics Engineering (DEI), Faculty of Engineering of the University of Porto (FEUP), Porto, Portugal; INESC TEC, Porto, Portugal - <a href="mailto:ssn@fe.up.pt" >ssn@fe.up.pt</a><br> 
+				<strong>Cristina Ribeiro</strong> - Department of Informatics Engineering (DEI), Faculty of Engineering of the University of Porto (FEUP), Porto, Portugal; INESC TEC, Porto, Portugal - <a href="mailto:mcr@fe.up.pt" >mcr@fe.up.pt</a></p>
+			</section>
+
+			<section class="refs">
+		<h2>References</h2> 
+ 
+ <ul class="refs"> 
+ 
+<li id="Bel10">Belkin, N. (2010). On the evaluation of interactive information retrieval systems. In, B.Larsen, J.W. Schneider &amp; F. Aström (Eds.) <em>The Janus faced scholar. A festschrift in honour of Peter Ingwersen</em>, s.n. (pp. 13-22) Copenhagen: Royal School of Library and Information Science.</li>
+
+<li id="Col09">Cole, M., Liu, J., Belkin, N.J., Bierig, R., Gwizdka, J., Liu, C., Zhang, J. &amp;amp; Zhang, X.  (2009). Usefulness as the criterion for evaluation of interactive information retrieval. In, <em>Proceedings of the third Workshop on Human-Computer Interaction and Information Retrieval</em> (pp. 1-4). Washington, DC: Catholic University of America.</li>
+
+<li id="Dum12">Dumais, S. (2012). <a href="http://www.webcitation.org/72ESpd8gW">Whole-session evaluation of interactive information retrieval systems</a>, <em>NII Shonan Workshop</em>, Oct 8-12. Retrieved from https://pdfs.semanticscholar.org/dac0/626c7f2191f505d1164da62916493f6b9eee.pdf (Archived by WebCite® at http://www.webcitation.org/72ESpd8gW)</li>
+
+<li id="Esp08">Espanha, R. &amp; Lupiáñez-Villanueva, F., (2008). <a href="http://www.webcitation.org/72ESzUPvN"><em>Health and the Internet: autonomy of the user</em></a>. Lisbon: Lisbon Internet and Networks. Retrieved from http://www.lini-research.org/np4/?newsId=11&amp;amp;fileName=RESPANHA_FLUPPIANEZ_VILLANUEVA_WP6.pdf (Archived by WebCite® at http://www.webcitation.org/72ESzUPvN)</li>
+
+<li id="Fox06">Fox, S. (2006). <a href="http://www.webcitation.org/72ETC6V7N">Online health search</a>. Washington, DC: Pew Internet &amp; American Life Project. Retrieved from http://www.pewinternet.org/files/old-media/Files/Reports/2006/PIP_Online_Health_2006.pdf.pdf (Archived by WebCite® at http://www.webcitation.org/72ETC6V7N)</li>
+
+<li id="Fox11">Fox, S. (2011). <a href="http://www.webcitation.org/72ETN6nDf">The social life of health information</a>. Washington, DC: Pew Internet &amp; American Life Project. Retrieved from http://www.pewinternet.org/files/old-media/Files/Reports/2011/PIP_Social_Life_of_Health_Info.pdf (Archived by WebCite® at http://www.webcitation.org/72ETN6nDf)</li>
+
+<li id="Fox13">Fox, S. &amp; Duggan, M. (2013). <a href="http://www.webcitation.org/72ETWM7ZA">Health online 2013</a>. Washinton, DC: Pew Internet &amp; American Life Project. Retrieved from http://www.pewinternet.org/files/old-media/Files/Reports/PIP_HealthOnline.pdf (Archived by WebCite® at http://www.webcitation.org/72ETWM7ZA)</li>
+
+<li id="Fox02">Fox, S. &amp; Rainie, L. (2002). <a href="http://www.webcitation.org/72ETh1dBf">Vital decisions: a Pew Internet health report</a>. Washington, DC: Pew Internet &amp; American Life Project. Retrieved from http://www.pewinternet.org/~/media//Files/Reports/2002/PIP_Vital_Decisions_May2002.pdf.pdf (Archived by WebCite® at http://www.webcitation.org/72ETh1dBf)</li>
+
+<li id="Jam13">James, G. Witten, D. Hastie, T. &amp; Tibshirani, R. (2013). <em>An introduction to statistical learning with applications in R</em>. New York, NY: Springer.</li>
+
+<li id="Kim09">Kim, J. (2009). Describing and predicting information-seeking behavior on the Web. <em>Journal of the American Society for Information Science and Technology, 60</em>(4), 679-693.</li>
+
+<li id="Lop10">Lopes, C. T. &amp; Ribeiro, C., (2010). Context effect on query formulation and subjective relevance in health searches. In, <em>IIiX'10 Proceedings of the third symposium on Information interaction in context</em>, (pp. 205-214) New York, NY: ACM.</li>
+
+<li id="Lop13">Lopes, C. T. &amp; Ribeiro, C., (2013). Measuring the value of health query translation: An analysis by user language proficiency. <em>Journal of the American Society for Information Science and Technology, 64</em>(5), 951-963.</li>
+
+<li id="Man09">Manning, C. Raghavan, P. &amp; Schütze, H. (2009). <em>Introduction to information retrieval</em>. Cambridge: Cambridge University Press.</li>
+
+<li id="Miz97">Mizzaro, S. (1997). Relevance: the whole history. <em>Journal of the American Society for Information Science and Technology, 48</em>(9), 810-832.</li>
+
+<li id="Oco68">O’Connor, J. (1968). Some questions concerning &amp;quot;information need&amp;quot;. <em>American Documentation, 19</em>(2), 200-203.</li>
+
+<li id="Oro15">Oroszlányová, M., Lopes, C. T., Nunes, S. &amp; Ribeiro, C., (2015). The influence of documents, users and tasks on the relevance and comprehension of health web documents. <em>Procedia Computer Science, 64</em>, 771-778.</li>
+
+<li id="Pal95">Pallen, M. (1995). Guide to the Internet. The world wide web. <em>British Medical Journal, 311</em>(7019), 1552-1556.</li>
+
+<li id="San90">Sandore, B. (1990). Online searching: what measures satisfaction? <em>Library and Information Science Research, 12</em>(1), 33-54.</li>
+
+<li id="Sar75">Saracevic, T. (1975). Relevance: a review of and a framework for the thinking on the notion in information science. <em>Journal of the American Society for Information Science, 26</em>(6), 321-343.</li>
+
+<li id="Sar96">Saracevic, T. (1996). Relevance reconsidered. In, <em>Proceedings of the 2nd International Conference on Conceptions of Library and Information Science: Integration in Perspective (CoLIS2)</em>, (pp. 201-218). Copenhagen: Royal School of Librarianship.</li>
+
+<li id="Sar07II">Saracevic, T. (2007). Relevance: a review of the literature and a framework for thinking on the notion in information science. Part II: Nature and manifestations of relevance. <em>Journal of the American Society for Information Science and Technology, 58</em>(13), 1915-1933.</li>
+
+<li id="Sar07III">Saracevic, T. (2007). Relevance: a review of the literature and a framework for thinking on the notion in information science. Part III: Behavior and effects of relevance. <em>Journal of the American Society for Information Science and Technology, 58</em>(13), 2126-2144.</li>
+
+<li id="Sav08">Savolainen, R. (2008). Source preferences in the context of seeking problem-specific information. <em>Information Processing and Management, 44</em>(1), 274-293.</li>
+
+<li id="Sch94">Schamber, L. (1994). Relevance and information behavior. <em>Annual Review of Information Science and Technology, 29</em>, 3-48.</li>
+
+<li id="Sou11">Sousa, M. I., (2011). <em>Characterization of health web documents</em>. Unpublished master’s dissertation, University of Porto, Porto, Portugal.</li>
+
+<li id="Su91">Su, L.T. (1991). <em>An investigation to find appropriate measures for evaluating interactive information retrieval</em>, Unpublished doctoral dissertation, Rutgers, the State University of New Jersey, New Brunswick, N.J., USA</li> 
+
+<li id="Su92">Su, L.T. (1992). Evaluation measures for interactive information retrieval. <em>Information Processing &amp; Management, 28</em>(4), 503-516.</li>
+
+<li id="Su94">Su, L.T. (1994). The relevance of recall and precision in user evaluation. <em>Journal of the American Society for Information Science, 45</em>(3), 207-217.</li>
+
+<li id="Tes77">Tessier, J.A., Crouch, W.W. &amp; Atherton, P. (1977). New measures of user satisfaction with computer-based literature searches. <em>Special Libraries, 68</em>(11), 383-389.</li>
+</ul>
+			</section>
+
+			<section>
+				<hr />
+				<h4 style="text-align:center;">How to cite this paper</h4>
+				<div class="citing">Oroszlányová, M., Teixeira Lopes, C., Nunes, S., Ribeiro, C. (2018). Can user and task characteristics be used as predictors of success in health information retrieval sessions? <em>Information Research, 23</em>(3), paper 801. Retrieved from  http://InformationR.net/ir/23-3/paper801.html  (Archived by WebCite® at http://www.webcitation.org/72Nq9kfP0)</div>  
+			</section>
+		</article>
+
+		<br />
+
+		<section>
+			<table class="footer" style="border-spacing:10px;">  
+				<tr>  
+					<td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td>
+				</tr>  
+				<tr>
+					<td style="text-align:center; vertical-align:top;">
+						<form action="http://scholar.google.com/scholar" method="get" target="_blank" >
+							<table class="footer">
+								<tr>
+									<td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;">
+										<input type="hidden" name="q" value="Prediction models, Online health information, Heath information quality" /><br />  
+										<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />
+										<input type="hidden" name="num" value="100" />  
+									</td>  
+								</tr>
+							</table>
+						</form>
+					</td>  
+					<td style="vertical-align:top; text-align:center;">  
+						<!-- Search Google -->
+						<form action="http://www.google.com/custom" method="get" target="_blank" >
+							<table class="footer">
+								<tr>
+									<td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;">
+										<input type="hidden" name="q" value="Prediction models, Online health information, Heath information quality" /><br />  
+										<input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+										<input type="hidden" name="client" value="pub-5081678983212084" />
+										<input type="hidden" name="forid" value="1" />
+										<input type="hidden" name="ie" value="ISO-8859-1" />
+										<input type="hidden" name="oe" value="ISO-8859-1" />
+										<input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" />
+										<input type="hidden" name="hl" value="en" />
+									</td>
+								</tr>  
+							</table>
+						</form>
+					</td>  
+					<td style="vertical-align:top; text-align:center;">
+						<form action="http://www.bing.com" method="get" target="_blank" >
+							<table class="footer">
+								<tr>
+									<td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;">
+										<input type="hidden" name="q" value="Prediction models, Online health information, Heath information quality" /> <br />
+										<input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />
+										<input type="hidden" name="num" value="100" />
+									</td>
+								</tr>  
+							</table>
+						</form>
+					</td>
+				</tr>  
+			</table> 
+
+			<div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&q=http://informationr.net/ir/23-3/paper801.html&btnG=Search&as_sdt=2000" >using Google Scholar</a></div>
+			<br />
+			<!-- Go to www.addthis.com/dashboard to customize your tools -->
+			<div class="addthis_inline_share_toolbox" style="text-align:center;"></div>
+			<hr />
+		</section>
+
+		<section>
+			<table class="footer" style="padding:10;">
+				<tr>
+					<td style="text-align:center; vertical-align:top;">
+						<br />
+						<div><a href="https://www.digits.net" target="_blank">
+    <img src="https://counter.digits.net/?counter={07f93196-a77b-32d4-5970-8060989fab73}&amp;template=simple" 
+     alt="Hit Counter by Digits" />
+  </a>
+						</div>
+					</td> 
+					<td class="footer" style="text-align:center; vertical-align:middle;">
+						<div>  &copy; the author, 2018. <br />Last updated: 12 September, 2018 </div>
+					</td> 
+					<td style="text-align:center; vertical-align:middle;">&nbsp;</td>
+				</tr>  
+			</table>  
+		</section>
+
+		<footer>
+			<hr /> 
+			<table class="footer">
+				<tr>
+					<td>
+						<div class="button"> 
+							<ul style="text-align: center;">
+								<li><a href="infres233.html" >Contents</a> | </li>
+								<li><a href="http://www.informationr.net/ir//iraindex.html" >Author index</a> | </li>
+								<li><a href="../irsindex.html" >Subject index</a> | </li>
+								<li><a href="../search.html" >Search</a> | </li>
+								<li><a href="../index.html" >Home</a></li>
+							</ul> 
+						</div>
+					</td>
+				</tr>
+			</table>
+			<hr />
+		</footer>
+
+		<script src="http://www.google-analytics.com/urchin.js"></script>
+		<script>  _uacct =
+		"UA-672528-1"; urchinTracker(); 
+		</script>  
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5046158704890f2e"></script>  
+	</body>  
+</html>

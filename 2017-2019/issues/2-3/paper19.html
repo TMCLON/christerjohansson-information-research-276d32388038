@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="Generator" content="pandoc">
+  <meta name="keywords" content="computer-based methods,  chemical databases, biological screening,  combinatorial libraries, dissimilarity-based compound selection, molecules,  near-maximally dissimilar, combinatorial algorithm, dataset.">
+  <meta name="description" content="There is much current interest in computer-based methods for selecting structurally diverse subsets of chemical databases, <I>e.g.</i>, for inclusion in biological screening programme or for the construction of combinatorial libraries.  This paper summarises recent work in Sheffield on <i>dissimilarity-based compound selection</i>, which seeks to identify a maximally-dissimilar subset of the molecules in the database.  More realistically, this approach seeks to identify a <i>near</i> maximally dissimilar subset, since the identification of the <i>most</i> dissimilar subset requires the use of a combinatorial algorithm that considers all possible subsets of a given dataset. ">
+  <meta name="VW96.objecttype" content="Document">
+  <meta name="ROBOTS" content="ALL">
+  <meta name="DC.Title" content="Molecular diversity techniques for chemical databases">
+   <meta name="DC.Creator" content="Peter Willett">
+  <meta name="DC.Subject" content="computer-based methods,  chemical databases, biological screening,  combinatorial libraries, dissimilarity-based compound selection, molecules,  near-maximally dissimilar, combinatorial algorithm, dataset">
+  <meta name="DC.Description" content="There is much current interest in computer-based methods for selecting structurally diverse subsets of chemical databases, <I>e.g.</i>, for inclusion in biological screening programme or for the construction of combinatorial libraries.  This paper summarises recent work in Sheffield on <i>dissimilarity-based compound selection</i>, which seeks to identify a maximally-dissimilar subset of the molecules in the database.  More realistically, this approach seeks to identify a <i>near</i> maximally dissimilar subset, since the identification of the <i>most</i> dissimilar subset requires the use of a combinatorial algorithm that considers all possible subsets of a given dataset.">
+  <meta name="DC.Publisher" content="Professor T.D. Wilson">
+  <meta name="DC.Coverage.PlaceName" content="Global">
+  <title>Molecular diversity techniques for chemical databases</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h4 id="information-research-vol.-2-no.-3-december-1996">Information Research, Vol. 2 No. 3, December 1996</h4>
+<hr />
+<h1 id="molecular-diversity-techniques-for-chemical-databases">Molecular diversity techniques for chemical databases</h1>
+<h4 id="peter-willett-ph.d.-department-of-information-studies">Peter Willett, Ph.D.<br />
+Department of Information Studies</h4>
+<p>University of Sheffield, U.K</p>
+<div data-align="center">
+<strong>Abstract</strong>
+</div>
+<blockquote>
+<p>There is much current interest in computer-based methods for selecting structurally diverse subsets of chemical databases, <em>e.g.</em>, for inclusion in biological screening programme or for the construction of combinatorial libraries. This paper summarises recent work in Sheffield on <em>dissimilarity-based compound selection</em>, which seeks to identify a maximally-dissimilar subset of the molecules in the database. More realistically, this approach seeks to identify a <em>near</em> maximally dissimilar subset, since the identification of the <em>most</em> dissimilar subset requires the use of a combinatorial algorithm that considers all possible subsets of a given dataset.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>There is much current interest in computer-based methods for selecting structurally diverse subsets of chemical databases, <em>e.g.</em>, for inclusion in biological screening programme or for the construction of combinatorial libraries (<a href="#wil87">Willett, 1987</a>; <a href="#mar95">Martin <em>et al.</em>, 1995</a>; <a href="#she95">Shemetulskis <em>et al.</em>, 1995</a>). This paper summarises recent work in Sheffield on <em>dissimilarity-based compound selection</em>, which seeks to identify a maximally-dissimilar subset of the molecules in the database (<a href="#baw93">Bawden, 1993</a>; <a href="#laj90">Lajiness, 1990</a>; <a href="#hol96a">Holliday <em>et al.</em>, 1996</a>; <a href="#hol96b">Holliday &amp; Willett, 1996</a>; <a href="#tur97">Turner <em>et al.</em>, 1997</a>). More realistically, this approach seeks to identify a <em>near</em> maximally dissimilar subset, since the identification of the <em>most</em> dissimilar subset requires the use of a combinatorial algorithm that considers all possible subsets of a given dataset. For example, the identification of the maximally-diverse subset of size <em>n</em> molecules from a dataset of size <em>N</em> molecules (where, typically, <em>n</em> &lt;&lt; <em>N</em>) requires consideration of up to</p>
+<div data-align="center">
+<img src="Image39.gif" />
+</div>
+<p>possible subsets. Practical considerations hence dictate a simpler form of optimisation such as that illustrated in Figure 1, which is based on work by Bawden (<a href="#baw93">1993</a>) and by Lajiness (<a href="#laj90">1990</a>) and which has an expected time complexity of order <em>O</em>(<em>n</em>�<em>N</em>).</p>
+<p>The Bawden-Lajiness algorithm is very simple in concept but raises two questions:</p>
+<ul>
+<li>how does one define the concept of �most dissimilar� in Step 2 of the algorithm?</li>
+<li>how can it be implemented sufficiently rapidly for use on large datasets?</li>
+</ul>
+<p>This paper describes recent work in Sheffield that addresses these two questions (<a href="#hol96a">Holliday <em>et al.</em>, 1996</a>; <a href="#hol96b">Holliday &amp; Willett, 1996</a>; <a href="#tur97">Turner <em>et al.</em>, 1997</a>) .</p>
+<h2 id="definitions-of-dissimilarity">Definitions of dissimilarity</h2>
+<p>As written, Step 2 of Figure 1 is not sufficiently detailed to allow an implementation, in that several different criteria could be used to select since the “most dissimilar” molecule from among the <em>N-m</em> molecules in <em>Database</em> to add to the <em>m</em> molecules that have already been selected for inclusion in <em>Subset</em>. This situation is analogous to the selection of a fusion criterion in hierarchical agglomerative clustering methods (<a href="#eve93">Everitt, 1993</a>), which involves the fusion of those two existing objects, or clusters of objects, that are least dissimilar to each other at each stage in the generation of an hierarchic classification. The various hierarchic agglomerative clustering methods differ only in the precise definition of �least dissimilar� that is used but it is known that they differ substantially in their ability to cluster databases of chemical structures (<a href="#wil87">Willett, 1987</a>; <a href="#bro96">Brown &amp; Martin, 1996</a>).</p>
+<table align="center" bgcolor="#FBFFAA" border width="600">
+<caption align="bottom">
+<strong>Figure 1</strong> Selection of (near-)maximally dissimilar molecules. The algorithm assumes that molecules are selected from <em>Database</em> (which initially contains <em>N</em> molecules) and placed in <em>Subset</em> (which finally contains <em>n</em> molecules).
+</caption>
+<tbody>
+<tr>
+<td>
+<ul>
+<li>1. Select a molecule at random from <em>Database</em> and place it in <em>Subset</em>.</li>
+<li>2. Identify that molecule in <em>Database</em> that is most dissimilar to the molecules already in <em>Subset</em> and add that molecule to <em>Subset</em>.</li>
+<li>3. Repeat Step 2 a total of <em>n</em>-2 times.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Consider the algorithm shown in Figure 1. Assume that <em>m</em> molecules have already been selected for inclusion in <em>Subset</em> and that we are currently considering the <em>i</em>-th of the <em>N-m</em> molecules in _Database_to determine whether it should be added to <em>Subset</em>; specifically, we need to calculate the dissimilarity <em>di,Subset</em>. Let <em>dij</em> be the dissimilarity between the <em>i</em>-th molecule in <em>Database</em> and the <em>j</em>-th molecule in <em>Subset</em>. Then possible functions from which we can obtain a value for <em>di,Subset</em> include (but are not restricted to) the minimum, the maximum, the median and the sum of the set of <em>dij</em> values, <em>i.e.</em>, MIN<font face="Symbol">{</font> <em>dij<font face="Symbol">}</font></em> , MAX<font face="Symbol">{</font> <em>dij<font face="Symbol">}</font></em> , MED<font face="Symbol">{</font> <em>dij<font face="Symbol">}</font></em> and SUM<font face="Symbol">{</font> <em>dij<font face="Symbol">}</font></em> . Once all of the <em>N-m</em> such dissimilarities have been obtained using the chosen function, that molecule is selected for inclusion in <em>Subset</em> that has the largest calculated value for <em>di,Subset</em>.</p>
+<p>The Bawden-Lajiness algorithm has been implemented using each of the four definitions of dissimilarity given above. To ensure consistency in the results, the same molecule was used on each occasion to provide the initial seed for <em>Subset</em> in Step 1 of the algorithm (rather than selecting a molecule at random); in all of the experiments reported here, the initial molecule was that for which the sum of its dissimilarities to each of the other molecules in <em>Database</em> was a maximum. The experiments reported here (others are discussed by Holliday and Willett (<a href="#hol96b">1996</a>)) used five 1000-compound subsets chosen at random from the Starlist database, which contains the 9518 molecules for which a log _P_oct value has been collected by the Pomona College Medicinal Chemistry Project. Each of the selected molecules was characterised by a 1124-member fragment bit-string, and the dissimilarities between pairs of molecules (one in <em>Database</em> and one in <em>Subset</em>) were calculated using the Tanimoto coefficient (Willett, 1987). The resulting values were subtracted from unity to give the <em>dij</em> values that were then used to identify which new molecule should be added to <em>Subset</em> at each stage of the algorithm.</p>
+<p>The four dissimilarity definitions were each used to create a subset of <em>n</em> molecules from one of the datasets, and the effectiveness of the definitions were compared by means of the diversity of the subsets resulting from their use. We have quantified the concept of �diversity� in three different ways:</p>
+<ul>
+<li>Given the inter-molecular dissimilarity matrix for a set of compounds, calculate the sum of the pairwise dissimilarities.</li>
+<li>Sort the matrix into decreasing dissimilarity order and then take the median dissimilarity.</li>
+<li>Identify the number of bits that are set in the union of the bit-strings representing the <em>n</em> molecules: the more diverse a set of compounds, the greater the number of bits that are set in the resulting union bit-string.</li>
+</ul>
+<table align="center" border cellspacing="2" cellpadding="9" width="309" bgcolor="#FBFFAA">
+<caption align="bottom">
+Table 1 Sums of dissimilarities for 100-molecule subsets selected from five different files of 1000 Starlist molecules.
+</caption>
+<tbody>
+<tr>
+<td width="22%" valign="TOP">
+<p>Dataset</p>
+</td>
+<td width="20%" valign="TOP">
+<p>MIN</p>
+</td>
+<td width="20%" valign="TOP">
+<p>MAX</p>
+</td>
+<td width="20%" valign="TOP">
+<p>MED</p>
+</td>
+<td width="20%" valign="TOP">
+<p>SUM</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>1</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4398.8</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4249.0</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4424.1</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4540.6</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>2</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4386.4</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4161.7</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4342.1</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4530.5</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>3</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4381.0</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4177.9</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4393.1</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4527.6</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>4</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4396.9</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4068.5</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4438.6</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4533.3</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>5</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4392.3</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4175.0</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4295.1</p>
+</td>
+<td width="20%" valign="TOP">
+<p>4529.1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1 lists the sums of dissimilarities that were obtained on selecting 100-member subsets from the five different 1000-compound subsets of the Starlist file. The Kendall Coefficient of Concordance, <em>W</em>, was used to test whether or not the four definitions could be ranked in a statistically significant order of effectiveness. The value of <em>W</em> expresses the degree of agreement between a set of <em>k</em> judges (in this case the five different datasets) on the ranking of <em>N</em> objects (in this case the four different definitions of dissimilarity), with a value of zero (or unity) indicating complete disagreement (or complete agreement) between the <em>k</em> rankings (<a href="#sie56">Siegel, 1956</a>). The calculated value for <em>W</em> for the data in Table 1 is 0.904 (<em>p <font face="Symbol">£</font></em> 0.01). Since a significant measure of agreement has been obtained, it is possible to assign an overall ranking of the definitions in order of decreasing effectiveness (<a href="#sie56">Siegel, 1956</a>): this order is</p>
+<p>SUM <font face="Symbol">&gt;</font> MED <font face="Symbol">&gt;</font> MIN <font face="Symbol">&gt;</font> MAX.</p>
+<table align="center" border cellspacing="2" cellpadding="9" width="305" bgcolor="#FBFFAA">
+<caption align="bottom">
+Table 2 Median values for the <em>n</em>(<em>n</em>-1)/2 pairwise dissimilarity measures for 100-molecule subsets selected from five different files of 1000 Starlist molecules.
+</caption>
+<tbody>
+<tr>
+<td width="22%" valign="TOP">
+<p>Dataset</p>
+</td>
+<td width="19%" valign="TOP">
+<p>MIN</p>
+</td>
+<td width="20%" valign="TOP">
+<p>MAX</p>
+</td>
+<td width="20%" valign="TOP">
+<p>MED</p>
+</td>
+<td width="20%" valign="TOP">
+<p>SUM</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>1</p>
+</td>
+<td width="19%" valign="TOP">
+<p>0.902</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.923</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.957</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.944</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>2</p>
+</td>
+<td width="19%" valign="TOP">
+<p>0.899</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.898</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.957</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.942</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>3</p>
+</td>
+<td width="19%" valign="TOP">
+<p>0.898</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.874</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.952</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.939</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>4</p>
+</td>
+<td width="19%" valign="TOP">
+<p>0.902</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.833</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.952</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.944</p>
+</td>
+</tr>
+<tr>
+<td width="22%" valign="TOP">
+<p>5</p>
+</td>
+<td width="19%" valign="TOP">
+<p>0.900</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.880</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.953</p>
+</td>
+<td width="20%" valign="TOP">
+<p>0.941</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A different ordering of the four criteria is obtained when the diversity is quantified by means of the median dissimilarity, as shown in Table 2. Analysis of these values using the Kendall test shows a coefficient of concordance of 0.936 (<em>p</em> <font face="Symbol">£</font> 0.01), this corresponding to the order</p>
+<p>MED <font face="Symbol">&gt;</font> SUM <font face="Symbol">&gt;</font> MIN <font face="Symbol">&gt;</font> MAX.</p>
+<table align="center" border cellspacing="2" cellpadding="9" width="300" bgcolor="#FBFFAA">
+<caption align="bottom">
+Table 3 Numbers of non-zero bits for 100-molecule subsets selected from five different files of 1000 Starlist molecules.
+</caption>
+<tbody>
+<tr>
+<td width="23%" valign="TOP">
+<p>Dataset</p>
+</td>
+<td width="20%" valign="TOP">
+<p>MIN</p>
+</td>
+<td width="20%" valign="TOP">
+<p>MAX</p>
+</td>
+<td width="18%" valign="TOP">
+<p>MED</p>
+</td>
+<td width="19%" valign="TOP">
+<p>SUM</p>
+</td>
+</tr>
+<tr>
+<td width="23%" valign="TOP">
+<p>1</p>
+</td>
+<td width="20%" valign="TOP">
+<p>722</p>
+</td>
+<td width="20%" valign="TOP">
+<p>667</p>
+</td>
+<td width="18%" valign="TOP">
+<p>531</p>
+</td>
+<td width="19%" valign="TOP">
+<p>679</p>
+</td>
+</tr>
+<tr>
+<td width="23%" valign="TOP">
+<p>2</p>
+</td>
+<td width="20%" valign="TOP">
+<p>729</p>
+</td>
+<td width="20%" valign="TOP">
+<p>704</p>
+</td>
+<td width="18%" valign="TOP">
+<p>570</p>
+</td>
+<td width="19%" valign="TOP">
+<p>703</p>
+</td>
+</tr>
+<tr>
+<td width="23%" valign="TOP">
+<p>3</p>
+</td>
+<td width="20%" valign="TOP">
+<p>720</p>
+</td>
+<td width="20%" valign="TOP">
+<p>696</p>
+</td>
+<td width="18%" valign="TOP">
+<p>580</p>
+</td>
+<td width="19%" valign="TOP">
+<p>677</p>
+</td>
+</tr>
+<tr>
+<td width="23%" valign="TOP">
+<p>4</p>
+</td>
+<td width="20%" valign="TOP">
+<p>728</p>
+</td>
+<td width="20%" valign="TOP">
+<p>644</p>
+</td>
+<td width="18%" valign="TOP">
+<p>501</p>
+</td>
+<td width="19%" valign="TOP">
+<p>645</p>
+</td>
+</tr>
+<tr>
+<td width="23%" valign="TOP">
+<p>5</p>
+</td>
+<td width="20%" valign="TOP">
+<p>735</p>
+</td>
+<td width="20%" valign="TOP">
+<p>678</p>
+</td>
+<td width="18%" valign="TOP">
+<p>421</p>
+</td>
+<td width="19%" valign="TOP">
+<p>663</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Finally, Table 3 lists the numbers of non-zero elements in the union bit-strings. Here, the calculated value for <em>W</em> in the Kendall test is again 0.904 (<em>p <font face="Symbol">£</font></em> 0.01), this corresponding to the order</p>
+<p>MIN <font face="Symbol">&gt;</font> MAX <font face="Symbol">&gt;</font> SUM <font face="Symbol">&gt;</font> MED.</p>
+<p>Thus far, we have considered only gross characteristics of the subsets, without any account being taken of their actual compositions. In the final set of experiments, we compared the constituent molecules of the subsets resulting from the use of each of the four definitions of dissimilarity. Molecules which were common to pairs of the subsets, to triples of the subsets, and to all four of the subsets were identified by combining subsets accordingly. An analysis of the resulting common molecules showed clearly (<a href="#hol96b">Holliday &amp; Willett, 1996</a>) that the four definitions result in very different groups of molecules, even though these subsets may result in a similar level of performance using the various criteria discussed previously</p>
+<p>When this work started, our expectation had been that it would serve to identify the best definition of dissimilarity for use in compound selection, in much the same way as previous studies have resulted in unequivocal conclusions as to the relative merits of different hierarchic agglomerative clustering methods for cluster-based compound selection (<a href="#wil87">Willett, 1987</a>; <a href="#bro96">Brown &amp; Martin, 1996</a>). If this had been the case here, then the three different performance measures we have used might have been expected to yield consistent rankings of the four definitions. However, this is clearly not the case, and we thus conclude that there is no significant difference in the effectiveness of the four definitions, despite the fact that the subsets resulting from the four definitions are markedly different in content. This in turn leads us to conclude that any of the four definitions can be used as the basis for a compound selection programme (although an inspection of the rankings for the three sets of experiments does suggest that the MAX definition is often inferior to the other three definitions).</p>
+<p>**<font size="4"></p>
+<p>A Fast Algorithm For Dissimilarity-Based Compound Selection</p>
+<p></font>**</p>
+<p>We have recently developed a fast implementation of the Bawden-Lajiness algorithm shown in Figure 1, drawing on previous work by Voorhees (<a href="#voo86">1986</a>) on the implementation of the group-average method for clustering document databases. This clustering method involves the fusion of pairs of clusters of objects on the basis of the average of the inter-object similarities, where one object is in one cluster of the pair and the other object is in the other cluster. Voorhees described an efficient algorithm for the group-average method that is appropriate for all similarity measures where the mean similarity between the objects in two sets is equal to the similarity between the mean objects of each of the two sets. However, the basic idea is applicable to any environment where sums of similarities, rather than the individual similarities, are required, and we have used this characteristic of the approach to provide a fast implementation of dissimilarity-based compound selection when the SUM criterion described above is used.</p>
+<p>Let us assume that one wishes to investigate the similarities between each of the molecules in two separate groups, <em>A</em> and <em>B</em>. Next, assume that each molecule, <em>J</em>, in these groups is represented by a vector in which the <em>I</em>-th element, <em>M</em>(<em>J,I</em>), represents the weight of the <em>I</em>-th feature in <em>M</em>(<em>J</em>), <em>e.g.</em>, a one or zero denoting the presence or absence of a particular fragment or a numeric value denoting some physical property. Let <em>AC</em> be the linear combination, or <em>centroid</em>, of the individual molecule vectors <em>M</em>(<em>J</em>) (1 &lt;= <em>J</em> &lt;= <em>N</em>(<em>A</em>)), where <em>N</em>(<em>A</em>) is the number of molecules in the first group) with <em>W</em>(<em>J</em>) being the weight of the <em>J</em>-th vector in <em>A</em>. The <em>I</em>-th element of <em>AC</em>, <em>AC(I)</em>, is thus given by</p>
+<div data-align="center">
+<img src="Image40.gif" />.
+</div>
+<p>The vector <em>BC</em>, which denotes the centroid of the second group, is similarly defined in terms of its <em>N</em>(<em>B</em>) constituent molecules.</p>
+<p>Voorhees showed that the dot product of the two centroids is numerically equal to the sum of the of the pairwise similarities when the cosine coefficient (<a href="#wil87">Willett, 1987</a>; <a href="#hol96a">Holliday <em>et al.</em>, 1996a</a>) is used as the measure of inter-molecular dissimilarity, <em>i.e.,</em> that</p>
+<div data-align="center">
+<em>AC</em>�<em>BC</em> <img src="Image41.gif" />
+</div>
+<p>if, and only if, the weights <em>W</em>(<em>J</em>) are given by</p>
+<div data-align="center">
+<em>W(J)</em> = <img src="Image42.gif" />
+</div>
+<p><em>i.e.,</em> the reciprocal square root of the squared elements of the vector <em>M</em>(<em>J</em>), and similarly for <em>W</em>(<em>K</em>)<em>.</em> Thus, if this weighting scheme is used, the sum of all of the <em>N</em>(<em>A</em>)<font face="Symbol">´</font> <em>N</em>(<em>B</em>) inter-molecular cosine similarities can be obtained by calculating the dot product of the two vector centroids.</p>
+<p>It is simple to apply this equivalence to the selection of <em>n</em> compounds from a database, <em>D,</em> using the algorithm shown in Figure 1. In this case <em>A</em> denotes a single molecule, <em>J</em>, from <em>Database</em> and <em>B</em> denotes all of the molecules that have already been selected, <em>i.e</em>., <em>Subset</em>. It is possible to calculate the sum of the similarities between <em>J</em> and all of the molecules in subset using the equivalence above, which we refer to subsequently as <em>the centroid algorithm</em>, by means of just a single similarity calculation (that between <em>J</em> and the centroid of <em>Subset</em>), rather than by <em>m</em>-1 similarity calculations (between <em>J</em> and each separate molecule in <em>Subset</em>). The centroid algorithm thus provides an extremely efficient way of implementing Step 2 of the Bawden-Lajiness algorithm when the SUM definition of dissimilarity is used. Indeed, a complexity analysis of the resulting algorithm shows that it has an expected time complexity of <em>O</em>(<em>nN</em>), thus enabling dissimilarity-based compound selection to be carried out on very large files of compounds, subject only to:</p>
+<ul>
+<li>the use of the cosine coefficient for the calculation of the inter-molecular similarities (the appropriateness of this coefficient is discussed in detail by Holliday <em>et al</em>. (<a href="#hol96a">1996a</a>)); and</li>
+<li>the representation of each of the molecules by a vector of attribute values (such as physical properties, chemical fragments or topological indices).</li>
+</ul>
+<p>In addition to its use for selecting a diverse subset of an existing database, we have recently applied the centroid algorithm to a related problem, that of selecting a set of external compounds that are as different as possible from an existing database (<a href="#tur97">Turner <em>et al.</em>, 1997</a>). The rationale for this work is the interest that exists in techniques that can augment a corporate database by increasing the diversity of the molecules that are available for biological testing. Additional molecules can come from a range of sources, including publicly-available commercial databases, collaborations with academic synthetic groups, combinatorial chemistry and <em>de novo</em> design programmes, folk medicine, specialist synthetic organisations and compound-exchange agreements with other organisations. In what follows, we shall refer to any set of structures that are possible additions to a company�s existing corporate database as an <em>external dataset</em>.</p>
+<p>Following the previous work on comparing definitions of dissimilarity, we suggest that the diversity, <em>D(A)</em>, of a database, <em>A</em>, containing <em>N</em>(<em>A)</em> molecules, should be defined to be the mean pairwise inter-molecular dissimilarity. This measure of diversity can be calculated very rapidly using a simple modification of the centroid algorithm described above. Specifically, we are interested here in the cosine coefficients, <em>COS</em>(<em>J,K</em>), for the similarity between all pairs the molecules, <em>J</em> and <em>K ,</em> in <em>A</em> and thus in the vector dot product of the centroid of <em>A</em> with itself_, i.e., DOTPROD_(<em>A<sub>C</sub>, A<sub>C</sub></em>)<em>.</em> Writing</p>
+<div data-align="center">
+<img src="Image43.gif" />.
+</div>
+<p>we can hence calculate the sum of all of the pairwise cosine similarities for the molecules in <em>A</em> if the individual molecule vectors are weighted using the reciprocal square-root weighting scheme. The diversity, <em>D</em>(<em>A</em>), is then obtained by dividing this dot product by <em>N</em>(<em>A</em>)� to give the mean similarity when averaged over all pairs of the molecules in <em>A</em>, and subtracting the result from one, <em>i.e.</em>,</p>
+<div data-align="center">
+<img src="Image44.gif" />.
+</div>
+<p>The centroid procedure thus provides a very fast way of calculating all of the pairwise similarities between the molecules within a given database and hence of calculating the diversity of that database.</p>
+<p>The same approach can also be used to quantify the change in diversity that occurs when an external dataset <em>X</em>, containing <em>N</em>(<em>X</em>) molecules and with a centroid <em>XC</em>, is added to an existing database, <em>A</em>, to yield a new, merged database, <em>AX</em> containing <em>N</em>(<em>A</em>)+<em>N</em>(<em>X</em>) molecules and with a centroid <em>AXC</em>. The diversities of <em>A</em>, <em>X</em> and <em>AX</em> are</p>
+<div data-align="center">
+<img src="Image45.gif" />, <img src="Image46.gif" />, and <img src="Image47.gif" />,
+</div>
+<p>respectively. The change in diversity of <em>A</em> as a result of adding <em>X</em> , <font face="Symbol">δ</font> (<em>A</em>), is hence</p>
+<div data-align="center">
+<img src="Image48.gif" />.
+</div>
+<p>Now</p>
+<p><img src="Image49.gif" />. Substituting this value for <img src="Image50.gif" /> into the equation above for <font face="Symbol">δ</font> (<em>A</em>), it is possible to calculate the change in diversity that will take place given just a knowledge of the centroids of, and the numbers of molecules in, the external dataset and the original database. This assumes that <em>A</em> and <em>X</em> are disjoint, <em>i.e.</em>, that they do not have any molecules in common, since this would result in the size of the merged database being less than <em>N</em>(<em>A</em>)+<em>N</em>(<em>X</em>), but this is not a problem since duplicate molecules can be identified extremely rapidly by dictionary look-up prior to the calculation of <font face="Symbol">δ</font> (<em>A</em>).</p>
+<p>If several external datasets, <em>X1</em>, <em>X2</em> <em>etc</em>. are available, the calculation above can be carried out for each such dataset, thus enabling the identification of that which will best serve to increase the structural diversity of the existing corporate database. The centroid algorithm can hence be used to provide a rapid way of screening several external datasets to identify some small number that can then be analysed by more discriminating measures of diversity that take account of factors such as cost, sample availability and synthetic feasibility (<a href="#tur97">Turner, <em>et al.</em>, 1997</a>).</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a name="baw93">Bawden, D.</a>(1993) Molecular dissimilarity in chemical information systems. <em>In</em> Warr, W.A. (editor) <em>Chemical Structures 2</em>. pp. 383-388. Heidelberg: Springer Verlag.</li>
+<li><a name="bro96">Brown, R.D. &amp; Martin, Y.C.</a>(1996) Use of structure-activity data to compare structure-based clustering methods and descriptors for use in compound selection. <em>Journal of Chemical Information and Computer Sciences</em>, <strong>36</strong>,572-584.</li>
+<li><a name="eve93">Everitt, B.S.</a>(1993). <em>Cluster Analysis</em>, 3rd ed. London: Edward Arnold, .</li>
+<li><a name="hol96a">Holliday, J.D., Ranade, S.S. &amp; Willett, P. </a>(1996) A fast algorithm for selecting sets of dissimilar structures from large chemical databases. <em>Quantitative Structure-Activity Relationships</em>, <strong>14</strong>, 501-506.</li>
+<li><a name="hol96b">Holliday, J.D. &amp; Willett, P. </a>(1996) Definitions of �dissimilarity� for dissimilarity-based compound selection. <em>Journal of Biomolecular Screening</em>, <strong>1,</strong> 145-151</li>
+<li><a name="laj90">Lajiness, M. </a>(1990) Molecular similarity-based methods for selecting compounds for screening. <em>In</em> Rouvray, D.H. (editor) <em>Computational Chemical Graph Theory</em>. pp. 299-316. New York, NY:: Nova Science Publishers.</li>
+<li><a name="mar95">Martin, E.J., Blaney, J.M., Siani, M.A., Spellmeyer, D.C., Wong, A.K. &amp; Moos, W. H.</a>(1995) Measuring diversity: experimental design of combinatorial libraries for drug discovery. <em>Journal of Medicinal Chemistry</em>, <strong>38</strong>, 1431-1436.</li>
+<li><a name="she95">Shemetulskis, N.E., Dunbar, J.B., Dunbar, B.W., Moreland, D.W. and Humblet, C. </a>(1995) Enhancing the diversity of a corporate database using chemical database clustering and analysis. <em>Journal of Computer-Aided Molecular Design</em>, <strong>9</strong>, 1995, 407-416.</li>
+<li><a name="sie56">&gt;Siegel, S.</a>(1956) <em>Nonparametric Statistics for the Behavioural Sciences</em>. Tokyo: McGraw-Hill.</li>
+<li><a name="tur97">Turner, D.B., Tyrrell, S.M. &amp; Willett, P. </a>(1997) Rapid quantification of molecular diversity for selective database acquisition. <em>Journal of Chemical Information and Computer Sciences</em>, <strong>37</strong>, 18-22</li>
+<li><a name="voo86">Voorhees, E.M.</a> (1986) Implementing agglomerative hierarchic clustering algorithms for use in document retrieval. <em>Information Processing and Management</em>, <strong>22</strong>, 465-476.</li>
+<li><a name="wil87">Willett, P.</a> (1987) <em>Similarity and Clustering in Chemical Information Systems.</em> : Letchworth: Research Studies Press.</li>
+</ul>
+</body>
+</html>

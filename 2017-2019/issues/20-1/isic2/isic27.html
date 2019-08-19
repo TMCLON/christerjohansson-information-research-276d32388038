@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title>
+      Use of credibility heuristics in a social question-answering service
+    </title>
+    <meta charset="utf-8">
+    <link href="../../IRstyle3.css" rel="stylesheet" media="screen" title="serif">
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../../IRstylesans.css"><!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="Use of credibility heuristics in a social question-answering service">
+    <meta name="author" content="Paul Matthews">
+    <meta name="dcterms.subject" content="Investigating the effect of social cues (collaborative filtering) on content credibility">
+    <meta name="description" content="This study looked at the effect of community peripheral cues (specifically voting score and answerer's reputation) on the user's credibility rating of answers. Students in technology and philosophy were asked to assess the credibility of answers to questions posted on a social QA platform. Through the use of a test interface, the availability of cues as to community rating and the reputation of the answer providers were manipulated. The main analysis concerned the correlations between the students' credibility rating and the community votes the answers had received. Findings showed that across subjects and knowledge levels, the availability of cues increased the level of agreement between the test subjects and the community aggregate vote. Agreement with answerer reputation was weaker but still significant. Furthermore, at low knowledge levels cue visibility increased confidence regarding credibility judgements.The findings are discussed within a framework of social epistemology, which provides a theoretical foundation for the assessment of knowledge systems. Some suggestions are provided for future work aimed at correcting overreliance on heuristics in credibility decisions.">
+    <meta name="keywords" content="information searching, on-line communities, credibility, social question-answering, QA, interface, cognition, heuristics"><!--leave the following to be completed by the Editor-->
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/20-1/isic2/isic27.html">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/20-1/infres201.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2015-03-15">
+    <meta name="geo.placename" content="global">
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 20 no. 1, March, 2015
+      </h4>
+    </header>
+    <article>
+      <h1>
+        Use of credibility heuristics in a social question-answering service
+      </h1><br>
+      <div style="margin-left: 5%; margin-right:10%;">
+        <h4>
+          <a href="#author">Paul Matthews</a><br>
+          University of the West of England, Bristol, Coldharbour Lane, Bristol BS16 1QY
+        </h4>
+      </div><br>
+      <form>
+        <fieldset>
+          <legend>Abstract</legend>
+          <blockquote>
+            <strong>Introduction.</strong>This study looked at the effect of community peripheral cues (specifically voting score and answerer's reputation) on the user's credibility rating of answers.<br>
+            <strong>Method.</strong> Students in technology and philosophy were asked to assess the credibility of answers to questions posted on a social question-answering platform. Through the use of a test interface, the availability of cues as to community rating and the reputation of the answer providers were manipulated.<br>
+            <strong>Analysis.</strong> The main analysis concerned the correlations between the students' credibility rating and the community votes the answers had received.<br>
+            <strong>Results.</strong> Findings showed that across subjects and knowledge levels, the availability of cues increased the level of agreement between the test subjects and the community aggregate vote. Agreement with answerer reputation was weaker but still significant. Furthermore, at low knowledge levels cue visibility increased confidence regarding credibility judgements.<br>
+            <strong>Conclusions.</strong> The findings are discussed within a framework of social epistemology, which provides a theoretical foundation for the assessment of knowledge systems. Some suggestions are provided for future work aimed at correcting overreliance on heuristics in credibility decisions.
+          </blockquote>
+        </fieldset>
+      </form><br>
+      <br>
+      <section>
+        <h2>
+          Introduction
+        </h2>
+        <blockquote>
+          Knowledge is of two kinds. We know a subject ourselves, or we know where we can find information upon it - Samuel Johnson
+        </blockquote>
+        <blockquote>
+          To the aggregate of individuals we need to add the morally textured relations between them, notions like authority and trust and the socially situated norms which identify who is to be trusted, and at what price trust is to be withheld - Steven Shapin
+        </blockquote>
+        <p>
+          Over the years, communities of interest on the web have developed extremely useful knowledge exchange resources on a variety of subjects. Such platforms are widely used by learners and professionals in solving technical and theoretical problems in their field. Answer providers, motivated by community spirit and the willingness to help, often devote hours of their time to monitoring expertise areas and answering questions from the community.
+        </p>
+        <p>
+          A range of social and cognitive factors contribute to user's assessment of community-contributed answers. Factors such as social agreement, expertise and authority have transferred to the online world and are used, sometimes without question, as credibility cues. Seen from the viewpoint of evaluation of online platforms as ideal knowledge exchange environments, there are potential problems with this use of broad-brush cues: social voting mechanisms may unfairly weight particular types of answer, or involve self-reinforcing mechanisms; online reputation may mean something very different to real-world reputation and the sheer speed on online interaction may bypass cognitive faculties designed for the critical assessment of evidence.
+        </p>
+        <p>
+          Because online credibility cues are so important yet relatively poorly understood, research is needed to assess their impact on belief formation and to better understand their benefits and risks. Hugely multiuser, collaboratively edited information resources have been identified as a particular priority (<a href="#rie07">Rieh and Danielson, 2007</a>). This study was therefore designed to investigate the power of social interface heuristics in credibility assessments amongst students. Before presenting the experimental approach, I will present the theoretical connection between online knowledge exchange practice and social epistemology, for what it tells us about how learners may accommodate new evidence and how we can design and evaluate epistemic (knowledge-oriented) systems. There will follow some discussion of the platforms under study and their emergent dynamics. Prior work on online credibility and with the experimental manipulation and evaluation of interfaces will then be discussed.
+        </p>
+        <h3>
+          Philosophical dimensions of knowledge exchange
+        </h3>
+        <p>
+          Social epistemology is the branch of philosophy concerned with studying knowledge and belief in a social setting. Amongst other things social epistemology is concerned with '<em>choices among alternative institutions, arrangements or characteristics of social systems that influence epistemic outcomes</em>' (<a href="#gol10">Goldman, 2010</a>). For online sociotechnical systems designed for knowledge exchange, social epistemology presents a framework for evaluation and a broad set of values that may guide design (<a href="#mat12">Matthews and Simon, 2012</a>)
+        </p>
+        <p>
+          To many social epistemologists, personal testimony is a <em>first class</em> source of knowledge (the non-reductionist position). There are cogent and convincing arguments as to the importance of others' testimony to our knowledge of the world beyond our immediate experience. A strong argument in social epistemology is that acceptance of testimony in neither purely the role of the giver or the receiver but is achieved through the interaction of both with a commitment to reliability on both sides. (<a href="#lac08">Lackey, 2008</a>)
+        </p>
+        <p>
+          The theory of credibility in testimony has largely been construed in face-to-face situations and thought experiments, though more recently epistemologists have considered online knowledge sources. Anonymity and pseudonomy in many of these has been raised as a significant issue in forming credibility judgements (e.g.(<a href="#mag09">Magnus, 2009</a>)). At the same time, any available cues as to authority and credibility, or <em>indicator properties</em>, stand to be challenged (<a href="#gol10">Goldman, 2010</a>). Indeed, the idea of authority is multifaceted and evolving, with accessible, virtue-based systems winning over more entrenched, inherited approaches in some domains (<a href="#ori12">Origgi, 2012</a>)
+        </p>
+        <p>
+          In terms of judgement aggregation, the Condorcet principle has been an influential part of social epistemology theory. Here, aggregated judgements may be more accurate than those of any individual or sub-group given certain conditions. Chief among these are that groups need to be large, independent and diverse (<a href="#gol10">Goldman, 2010</a>, <a href="#sun06">Sunstein, 2006</a>). Amongst epistemologists, there has been some debate over whether weight of numbers toward a particular position should confer stronger epistemological status, with one position being that this is the case only when each individual brings to bear some individual knowledge on the issue and is not simply parroting another's position (<a href="#coa12">Coady, 2012</a>). As related to online collaborative filtering, this is perhaps a caution against accepting weight of agreement as proportional to resource quality, particularly when many voters will not be experts.
+        </p>
+        <h3>
+          Social question answering
+        </h3>
+        <p>
+          <a target="_blank" href="http://www.stackoverflow.com">StackOverflow</a> was the first in what is now a family of topic-specific question answer sites, the StackExchange network. Members post questions on a labelled topic (the StackOverflow site being concerned with aspects of computer programming) and receive answers from the community. Other community members may up- or down- vote question and answers and the original poster can accept a particular answer as the most suitable. Up- votes and accepted answers earn reputation points for the site member. Increases in reputation points above particular thresholds are associated with elevated member privileges, such as the ability to down-vote or move for questions to be closed.
+        </p>
+        <p>
+          The most common type of question on StackOverflow is a <em>how-to</em>, instructional type, with queries regarding errors and discrepancies quite common, along with requests for help with design or technology decisions (<a href="#tre11">Treude, Barzilay and Storey, 2011</a>)
+        </p>
+        <p>
+          Social question-answering sites such as StackOverflow, which expose their content to web indexing and search, attract a far higher number of passive viewers over and above those directly involved in the question and answering process. On StackOverflow it is not uncommon for popular threads to gain half a million views over a five year period but have twenty or fewer member contributions. External viewers cannot contribute (in the form of voting, editing or providing answers) without registering with the service. In many cases, then, the external viewer is interacting in a rather static way with the resource and basing judgements on the activities of the community members who created it.
+        </p>
+        <p>
+          Social question-answering sites such as StackOverflow employ a <em>gamified</em> interface in rewarding contributors with reputation points. This may lead to the <em>fastest gun</em> effect, where users compete to be the first to answer a question, thereby benefitting from the user <em>accepting</em> their answer as the best available (<a href="#mam11">Mamykina, 2011</a>). Analysis suggests that the first answer proferred has a 60% likelihood of being accepted, dropping to 35% by the third. Temporal features are therefore heavily correlated with the likelihood of user acceptance and high ranking in the answer list (<a href="#mat14">Matthews, 2014</a>)
+        </p>
+        <p>
+          The later emergence of new, higher voted answers is a rarity, though it can happen in a small percentage of cases. Even in a short time window, however, the rate at which the later answers may accumulate votes, especially given a large answer pool, may be slow. A snapshot of a thread at any particular time may therefore give a misleading view of the relative answer qualities as perceived by the community.
+        </p>
+        <h3>
+          Online credibility models and social question-answering
+        </h3>
+        <p>
+          Studies of the credibility of web-based information have often divided the concept into characteristics of the source, the message/medium and the receiver (<a href="#hil08">Hilligoss and Rieh 2008</a>, <a href="#met07">Metzger, 2007</a>, <a href="#wat02">Wathen and Burkell, 2002</a>). Source characteristics include expertise, honesty and reputation together with institutional affiliation and motive. On <a target="_blank" href="http://www.quora.com/">Quora</a>, a general social question-answering site, a <em>real names</em> policy helped to ensure that user profiles were more genuine, improving the site's credibility and user satisfaction. On this network, the ability to follow particular users and view users answer history are ways used to assess respondent quality. (<a href="#pau12">Paul, Hong and Chi, 2012</a>). In QandA, reputation may be in algorithmic form, representing user contribution history, or derived from a user's real world identity. In MathOverflow, one of the StackExchange network sites, both online and offline reputation were found to contribute separately to the prediction of answer quality (<a href="#tau11">Tausczik and Pennebaker, 2011</a>).
+        </p>
+        <p>
+          Relevant message characteristics include objectivity, clarity, consistency, coverage and timeliness. Usage of these features may vary with knowledge level. For collaboratively edited articles non-expert users have been found to rely more on surface and source features of the content than semantic features (<a href="#luc11">Lucassen and Schraagen 2011</a>). Notably, credibility studies have traditionally tended to consider the medium and message as one and the same (<a href="#wat02">Wathen and Burkell 2002</a>), or only looked at general aspects of the interface such as usability and usefulness. When studies have looked at the effect of having the same information presented on different types of platform, those media with a collective, multi-user aspect or with more clearly visible gatekeeping may be perceived as more credible (<a href="#kim11">Kim and Sundar 2011</a>).
+        </p>
+        <p>
+          At the side of the receiver, prior conceptions and stereotypes may be significant, as are the general motivational state of the information seeker (strength of the information need, available time and personal stake). These last conditions may determine the extent to which the user engages with central aspects of the message or relies on more peripheral cues (<a href="#hil08">Hilligoss and Rieh, 2008</a>). The selection and application of heuristics in perception, judgement and decision-making has been studied by social psychologists in a range of settings. The dual process theory suggests a fast, automatic cognitive system (system one), attuned to pattern recognition and parallel processing, and a slower analytical system (system two) that is brought to bear on more difficult and complex tasks. Significantly, system one may be that involved in the formation of beliefs and system two with their later ratification or rejection (<a href="#kah11">Kahneman, 2011</a>).
+        </p>
+        <h3>
+          Interface heuristics and credibility
+        </h3>
+        <p>
+          Credibility heuristics are relatively simple to manipulate experimentally and evidence of their influence on credibility judgements exists. Kim and Sundar found '<em>bandwagon cues</em>' in the form of thread views, replies and share count to be more influential than authority cues in the assessment of the credibility of community-provided health information and the intention to share it ( <a href="#kim11">Kim and Sundar, 2011</a>). In a similar study for product reviews, unequivocal bandwagon cues were found to be more powerful than seals of approval in determining purchasing intention (<a href="#sun09">Sundar, Xu, and Oeldorf-Hirsch, 2009</a>)
+        </p>
+        <p>
+          For online news, source credibility may be a key heuristic, though <em>freshness</em> and the number of related stories may take over if the source credibility is not immediately recognisable (<a href="#sun07">Sundar, Knobloch-Westerwick and Hastall, 2007</a>)
+        </p>
+        <p>
+          Popularity signals for community users may also function as a heuristic when present. On Quora, users also reported the tendency for people with large numbers of followers to receive many up-votes for their answers, regardless of the answer quality. This made it more difficult for other answers to receive attention (<a href="#pau12">Paul <em>et al</em>., 2012</a>).
+        </p>
+        <h3>
+          Rationale for credibility judgements
+        </h3>
+        <p>
+          In a large study of the answer selection criteria employed in in Yahoo Answers, Kim and Oh divided criteria into overall classes by content (accuracy, specificity, clarity, rationality, completeness and style), cognitive (novelty, understandability), utility (effectiveness, suitability), information source (use of external sources, answerer expertise), extrinsic (external verification, available alternatives, speed) and socio-emotional (agreement, emotional support, attitude, effort, taste and humour). Socio-emotional, content and utility classes dominated (<a href="#kim09">Kim and Oh, 2009</a>). The authors noted that the importance of the socio-emotional type was connected to the types of thread analysed, which included a number of discussion, opinion-based questions.
+        </p>
+        <h2>
+          Method
+        </h2>
+        <p>
+          The study involved forty-two undergraduates and eleven postgraduates on a range of courses: undergraduates in computing and information science, undergraduates in philosophy and a postgraduate programme in information management. Students were selected as attendees from the author's own teaching programmes except for philosophy, which was arranged separately. Students took part in the investigation voluntarily in class time, though the questions chosen for each group were of relevance to their programme of study, so that participation was made to feel a little like an in-class test. Students were informed that the study was to investigate how students interact with online question-answering systems
+        </p>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table 1: Summary of participants and conditions
+          </caption>
+          <tbody>
+            <tr>
+              <th style="width:31%;">
+                &nbsp;
+              </th>
+              <th style="width:23%;">
+                Undergraduate computing and information science
+              </th>
+              <th style="width:23%;">
+                Postgraduate<br>
+                information science
+              </th>
+              <th style="width:23%;">
+                Undergraduate philosophy
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Subjects
+              </td>
+              <td style="text-align:center">
+                29
+              </td>
+              <td style="text-align:center">
+                11
+              </td>
+              <td style="text-align:center">
+                13
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Questions presented
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td style="text-align:center">
+                5
+              </td>
+              <td style="text-align:center">
+                5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rated answers (cues visible)
+              </td>
+              <td style="text-align:center">
+                294
+              </td>
+              <td style="text-align:center">
+                63
+              </td>
+              <td style="text-align:center">
+                75
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rated answers (cues not visible)
+              </td>
+              <td style="text-align:center">
+                243
+              </td>
+              <td style="text-align:center">
+                66
+              </td>
+              <td style="text-align:center">
+                114
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          An experimental interface for the study was created, employing data from the Stack Exchange family of Websites. Questions were preselected and question and answer text and metadata was downloaded to the interface on demand using the Stack Exchange API. Questions were chosen to be within the curricula of the students' courses, though not always covered in explicit detail or by the time of testing. For the undergraduate students, data was drawn from <a target="_blank" href="http://www.stackoverflow.com">Stack Overflow</a> or <a target="_blank" href="http://philosophy.stackexchange.com/">Philosophy Stack Exchange</a>, whereas for the postgraduate students it came from the <a target="_blank" href="http://area51.stackexchange.com/proposals/12432/libraries-information-science/">Library Stack Exchange Beta</a>. Questions were chosen that had at least three viable answers and when more than three answers were available, a high, medium and low-ranking answer were selected from those available. Question order was randomised and in half of cases (by subject, chosen randomly) the credibility cues of votes, answerer reputation and user acceptance were hidden. In other cases this information was displayed prominently before the text of the users' answers.
+        </p>
+        <figure class="centre">
+          <img src="isic27fig1.png" alt="experimental interface" width="600" height="440">
+          <figcaption>
+            <br>
+            Figure 1: Experimental interface showing question and first answer
+          </figcaption>
+        </figure><br>
+        <figure class="centre">
+          <img src="isic27fig2.png" alt="experimental interface showing cues" width="600" height="428">
+          <figcaption>
+            <br>
+            Figure, 2: Experimental interface with cues shown (highlighting for illustration only)
+          </figcaption>
+        </figure>
+        <p>
+          Subjects were asked to rate the question in terms of the extent of their prior awareness of the topic, and to rate each answer in terms of how convincing they believed them to be (selected as proxies for prior knowledge and credibility respectively and validated with a pilot test). For each answer subjects were encouraged to write a few words to justify their allocated score. Subjects were given unlimited time and asked to review three to five questions presented in random order.
+        </p>
+        <p>
+          Accompanying comments were post-coded inductively via a two-pass method. Categories were created on a first pass, then were merged and further edited on a second pass. A number of comments were removed as they failed to add useful information as to the reasons for the credibility assignment.
+        </p>
+        <p>
+          For data analysis, prior knowledge scores where aggregated into three levels, with scores of 1 and, 2 assigned to low, 3 to medium, and 4 and 5 to high. The same grouping was used for the credibility scores when it came to presentation of the qualitative comments.
+        </p>
+        <h2>
+          Results
+        </h2>
+        <p>
+          855 answer assessments were received, together with 532 usable comments relating to the assigned credibility rating (Table 1).
+        </p>
+        <h3>
+          Effect of credibility cue availability
+        </h3>
+        <p>
+          Table, 2 provides the correlation between the subjects' credibility ratings of answers and the community score (the total up-votes received minus the down-votes during the lifespan of the question). Kendall's Tau was used as a correlation coefficient due to the non-normal distribution of answer and user reputation scores and the need to derive a probability estimate in the presence of ties. Overall the relationship was shown to be significant, though when the cues were visible the strength of the correlation more than doubled. This finding was consistent across the experimental groups, although was less marked for the postgraduates. A similar relationship was observed between the answer provider's reputation score (Table 3) and the user's credibility rating, though in this case the relationship appeared to only be significant when this cue was available.
+        </p>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table, 2: Kendall's tau correlations between community up-votes and user credibility rating, by experimental condition and subject group. Probabilities of zero correlations are shown in brackets.
+          </caption>
+          <tbody>
+            <tr>
+              <th></th>
+              <th>
+                Cues not shown
+              </th>
+              <th>
+                Cues shown
+              </th>
+              <th>
+                Difference
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Undergraduate computing and information science
+              </td>
+              <td style="text-align:center">
+                0.17 (0.001)*
+              </td>
+              <td style="text-align:center">
+                0.273 (0.000)*
+              </td>
+              <td style="text-align:center">
+                0.103
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Postgraduate information science
+              </td>
+              <td style="text-align:center">
+                0.196 (0.054)
+              </td>
+              <td style="text-align:center">
+                0.218 (0.052)
+              </td>
+              <td style="text-align:center">
+                0.022
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Undergraduate philosophy
+              </td>
+              <td style="text-align:center">
+                0.132 (0.078)
+              </td>
+              <td style="text-align:center">
+                0.294 (0.002)*
+              </td>
+              <td style="text-align:center">
+                0.162
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Overall
+              </td>
+              <td style="text-align:center">
+                0.137 (0.000)*
+              </td>
+              <td style="text-align:center">
+                0.284 (0.000)*
+              </td>
+              <td style="text-align:center">
+                0.147
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          When disaggregated instead by prior knowledge level (a measure taken at the level of the question), it was apparent that the low knowledge condition was associated with a heavy reliance on the cues and that in their absence the low knowledge users failed to agree with the community as to the quality of the questions (Table 3, Table 4).
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 3: Kendall's tau correlations between community votes and subject's credibility rating, by condition and prior knowledge level. Probabilities of zero correlations are shown in brackets.
+          </caption>
+          <tbody>
+            <tr>
+              <th></th>
+              <th>
+                Cues not shown
+              </th>
+              <th>
+                Cues shown
+              </th>
+              <th>
+                Difference
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Low
+              </td>
+              <td style="text-align:center">
+                0.087 (0.115)
+              </td>
+              <td style="text-align:center">
+                0.28 (0.000)*
+              </td>
+              <td style="text-align:center">
+                0.193
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Med
+              </td>
+              <td style="text-align:center">
+                0.198 (0.003)*
+              </td>
+              <td style="text-align:center">
+                0.31 (0.000)*
+              </td>
+              <td style="text-align:center">
+                0.112
+              </td>
+            </tr>
+            <tr>
+              <td>
+                High
+              </td>
+              <td style="text-align:center">
+                0.248 (0.005)*
+              </td>
+              <td style="text-align:center">
+                0.3 (0.000)*
+              </td>
+              <td style="text-align:center">
+                0.052
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The overall correlation between answerer's reputation and community votes was 0.498 (p&lt;0.000) for all answers. All coefficients in the study are low, because of the importance of additional factors besides aggregate up-votes in answer ratings. This is also evidence that highly voted answers are not necessarily the highest objective quality (see <em>fastest gun</em> effect above). The difference between correlations with and without cue visibility, however, is felt to be indicative of its use as a credibility heuristic.
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 4: Kendall's tau correlations between answerer's reputation and subject's credibility rating, by condition and prior knowledge level. Probabilities of zero correlations are shown in brackets.
+          </caption>
+          <tbody>
+            <tr>
+              <th></th>
+              <th>
+                Cues not shown
+              </th>
+              <th>
+                Cues shown
+              </th>
+              <th>
+                Difference
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Low
+              </td>
+              <td style="text-align:center">
+                0.076 (0.162)
+              </td>
+              <td style="text-align:center">
+                0.182 (0.001)*
+              </td>
+              <td style="text-align:center">
+                0.106
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Medium
+              </td>
+              <td style="text-align:center">
+                -0.065 (0.309)
+              </td>
+              <td style="text-align:center">
+                0.208 (0.003)*
+              </td>
+              <td style="text-align:center">
+                0.273
+              </td>
+            </tr>
+            <tr>
+              <td>
+                High
+              </td>
+              <td style="text-align:center">
+                0.204 (0.017)*
+              </td>
+              <td style="text-align:center">
+                0.128 (0.057)
+              </td>
+              <td style="text-align:center">
+                -0.076
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Further analysis of the behaviour of subjects under different knowledge conditions revealed that the availability of cues led to a significantly more confident credibility score being assigned on average only for the low knowledge condition. In the medium and low knowledge conditions, the credibility ratings did not appear to be significantly affected by cue availability.
+        </p>
+        <figure class="centre">
+          <img src="isic27fig3.jpg" alt="bar chart of credibility ratings according to prior knowledge level" width="700" height="593">
+          <figcaption>
+            Figure 3: Mean credibility ratings according to prior knowledge level in the two experimental conditions (light grey = cues are shown)
+          </figcaption>
+        </figure>
+        <h3>
+          Supporting rationale
+        </h3>
+        <p>
+          The coding that was assigned to the qualitative comments is summarised in Tables 5, 6 and 7. These broadly related well to Kim and Oh's classification (<a href="#kim09">Kim &amp; Oh, 2009</a>), though those authors only looked at reasons for choosing the best answer and not on reasons for low credibility. Nevertheless, codes tended to be bivalent, with the negation of the code applicable to low credibility answers (e.g., clear/unclear).
+        </p>
+        <p>
+          The most common type of comment was where the subject engaged with the subject of the answer and provided their own argument for or against it. As might be expected, these types of justifications featured more heavily in the Philosophy students than in the others (Table 8). The clarity, accuracy and completeness of answers accounted for a large number of additional comments. Where students had prior experience of a question topic, they tended to cite this as a reason for finding an answer convincing or otherwise.
+        </p>
+        <p>
+          Notably, explicit reference to the community score or answerer's reputation score was only noted in three cases, indicating that users were not consciously using this as a decisive criterion (or were reluctant to record as much!).
+        </p>
+        <p>
+          Simplicity above over-complexity seemed to be valued most by the computing and IS undergraduates (Table 5), illustrative of the technical nature of the subject matter and the range of possible approaches to answering questions. While providing alternative explanations and clear code examples seemed to be valued, longer answers were sometimes criticised for undue complexity.
+        </p>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table 5: Supporting comments by credibility rating (Undergraduate computing and information science)
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Low
+              </th>
+              <th>
+                Medium
+              </th>
+              <th>
+                High
+              </th>
+            </tr>
+            <tr>
+              <td style="vertical-align:top;">
+                argument against answer (17)<br>
+                incomplete explanation or lacking detail (11)<br>
+                lack of clarity (7)<br>
+                unable to say why! (7)<br>
+                over-complexity (6)<br>
+                lack of knowledge of subject (5)<br>
+                tangential/does not answer question (5)<br>
+                Doesn't fit preconception or prior experience (4)<br>
+                lack of detail (4)<br>
+                lack of examples (3)<br>
+              </td>
+              <td style="vertical-align:top;">
+                unable to say why! (8)<br>
+                incomplete explanation or lacking detail (7)<br>
+                clarity (5)<br>
+                lack of detail (5)<br>
+                argument against answer (4)<br>
+                coherence (3)<br>
+                external references provided (3)<br>
+                undecided (3)<br>
+                argument for answer (2)<br>
+                comparative (2)<br>
+              </td>
+              <td style="vertical-align:top;">
+                argument for answer (13)<br>
+                coherence (10)<br>
+                accuracy or completeness (7)<br>
+                multiple explanations (7)<br>
+                clarity (6)<br>
+                examples offered (6)<br>
+                simplicity (5)<br>
+                comparative (4)<br>
+                fits preconception or prior experience (4)<br>
+                succinct (4)<br>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+        <br>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table 6: Supporting comments by credibility rating (Postgraduate)
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Low
+              </th>
+              <th>
+                Medium
+              </th>
+              <th>
+                High
+              </th>
+            </tr>
+            <tr>
+              <td style="vertical-align:top;">
+                argument against answer (7)<br>
+                opinion based (4)<br>
+                incomplete explanation / lacking detail (2)<br>
+                accuracy or completeness (1)<br>
+                lack of detail (1)<br>
+                succinct (1)<br>
+                tangential or does not answer question (1)<br>
+              </td>
+              <td style="vertical-align:top;">
+                argument against answer (4)<br>
+                argument for answer (4)<br>
+                lack of knowledge of subject (3)<br>
+                coherence (2)<br>
+                incomplete explanation / lacking detail (2)<br>
+                tangential/does not answer question (2)<br>
+                accuracy or completeness (1)<br>
+                clarity (1)<br>
+                lack of confidence (1)<br>
+                lack of detail (1)<br>
+              </td>
+              <td style="vertical-align:top;">
+                argument for answer (8)<br>
+                coherence (5)<br>
+                experience of answerer (4)<br>
+                practicality (4)<br>
+                fits preconception or prior experience (3)<br>
+                accuracy or completeness (2)<br>
+                examples offered (2)<br>
+                incomplete explanation or lacking detail (2)<br>
+                sympathise (2)<br>
+                clarity (1)<br>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+        <br>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table 7: Supporting comments by credibility rating (Undergraduate philosophy)
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Low
+              </th>
+              <th>
+                Medium
+              </th>
+              <th>
+                High
+              </th>
+            </tr>
+            <tr>
+              <td style="vertical-align:top;">
+                argument against answer (28)<br>
+                tangential/does not answer question (10)<br>
+                lack of clarity (3)<br>
+                lack of detail (3)<br>
+                incomplete explanation or lacking detail (2)<br>
+                lack of answerer understanding (1)<br>
+              </td>
+              <td style="vertical-align:top;">
+                argument against answer (8)<br>
+                incomplete explanation or lacking detail (4)<br>
+                argument for answer (2)<br>
+                lack of detail (2)<br>
+                coherence (1)<br>
+                examples offered (1)<br>
+              </td>
+              <td style="vertical-align:top;">
+                argument for answer (32)<br>
+                accuracy or completeness (4)<br>
+                succinct (4)<br>
+                coherence (2)<br>
+                answer presentation (1)<br>
+                clarity (1)<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>
+          Discussion
+        </h2>
+        <p>
+          The experimental data reveals the tendency for the availability of credibility cues to cause closer agreement between the users of the resource and user ratings resulting from prior community activity. While the effect was most marked in the condition of low knowledge it existed across the spectrum. Furthermore, in conditions of low knowledge, users became more confident in their judgements when cues were present. Additionally, there is provisional evidence that these effects exist across heterogeneous subject domains. The findings are in general agreement with Kim and Sundar (<a href="#kim11">2011</a>) and Sundar, Xu (<a href="#sun09">2009</a>), that social rating (bandwagon) cues seem to be more powerful than authority cues, though both seem to exert an influence.
+        </p>
+        <p>
+          We see here the double-edged nature of these credibility heuristics: in the absence of cues even those who know something about the topic will be more likely to disagree on the best answer. While much of the time, especially for low knowledge users, the cues can provide a useful guide, they may also draw the eye away from answers that are worthy of greater consideration. It is effectively creating a <em>cascad</em> which otherwise adapts well to a mix of expertise, akin to a Condorcet system but with bias introduced through prior deliberation (<a href="#sun06">Sunstein, 2006</a>). For some information tasks, it has been shown that even small amounts of social influence may act to reduce the diversity of the group without improving its accuracy. At the same time subjective confidence may (mistakenly) increase with this convergence (<a href="#lor11">Lorenz, Rauhut, Schweitzer and Helbing, 2011</a>)
+        </p>
+        <p>
+          A pragmatic approach to counteracting the undesirable influence of credibility heuristics might rely on a three-pronged approach based on user education, additional social/content cues and interface adaptation.
+        </p>
+        <p>
+          While we may rely on heuristics at early phases in learning, we soon gain more autonomy and are able to apply our own experience and that of trusted others to challenge and revise heuristic evidence (<a href="#ori08">Origgi, 2008</a>). At the same time, heuristics are not all-pervasive, but maybe counteracted with some small mental effort (<a href="#dec11">De Cruz, Boudry, De Smedt and Blanke, 2011</a>). It therefore seems reasonable that a meta-knowledge of heuristics may reduce the cascade effect and guide the resource user to a closer interaction with the important. semantic. aspects of the content.
+        </p>
+        <p>
+          Additionally, we may supplement existing cues with those which seek to <em>nudge</em> users in the right direction. In a deliberative task, small interface changes can encourage users to consider more alternative hypotheses and gather more evidence before making decisions (<a href="#jia12">Jianu and Laidlaw, 2012</a>). Given the tendency for question-answering sites to suffer from temporal and first-mover bias, greater emphasis on flagging the merits of newer answers is needed, be they complementary or competing (and a mixture of both is to be encouraged).
+        </p>
+        <h2>
+          Conclusion
+        </h2>
+        <p>
+          We have seen that both source and receiver characteristics are crucial in the exchange of testimonial evidence. Given that most community sites are able to track user profiles, it should be possible to adapt the experience and the prominence of cues to the use case. Adapting the interface to the users <em>stake</em> in the information (reducing heuristics for a higher level of involvement) has been suggested, for instance. (<a href="#sun09">Sundar <em>et al</em>., 2009</a>). More experimental work on this and on the various ways of presenting the user's interaction history is needed to assess the potential for an improved system.
+        </p>
+        <p>
+          Social knowledge exchange and the question-answer format present an immensely powerful opportunity for the evolution of truly inclusive, blended knowledge resources. We still nned to understand the power and also the risks of community filtering and weighting and how it influences the knowledge seeker. The harnessing of heuristics and social cues provide a layer with scope for small adjustments that can have a large impact on how testimony is weighted and considered.
+        </p>
+        <h2>
+          Acknowledgements
+        </h2>
+        <p>
+          This research was supported by the Faculty of Environment and Technology at the University of the West of England. The author would also like to thank the participating students and the ISIC reviewers for their helpful comments.
+        </p>
+        <h2 id="author">
+          About the author
+        </h2>
+        <p>
+          Paul Matthews is a Senior Lecturer in Information Science at the University of the West of England, Bristol, UK. He can be contacted at: <a href="mailto:paul2.matthews@uwe.ac.uk">paul2.matthews@uwe.ac.uk</a>
+        </p>
+      </section>
+      <section class="refs">
+        <form>
+          <fieldset>
+            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+            <ul class="refs">
+              <li id="coa12">Coady, D. (2012). <em>What to believe now: Applying epistemology to contemporary issues</em>. Chichester, UK; Malden, MA: Wiley-Blackwell.
+              </li>
+              <li id="dec11">De Cruz, H., Boudry, M., De Smedt, J. &amp; Blanke, S. (2011). Evolutionary approaches to epistemic justification. <em>Dialectica, 65</em>(4), 517-535.
+              </li>
+              <li id="gol10">Goldman, A. I. (2010). Systems-oriented social epistemology. In T. S. Gendler &amp; J. Hawthorne (Eds.), <em>Oxford studies in epistemology</em>, volume 3. (pp. 189-214). Oxford: Oxford University Press.
+              </li>
+              <li id="hil08">Hilligoss, B. &amp; Rieh, S. Y. (2008). Developing a unifying framework of credibility assessment: Construct, heuristics, and interaction in context. <em>Information Processing &amp; Management, 44</em> (4), 1467-1484.
+              </li>
+              <li id="jia12">Jianu, R. &amp; Laidlaw, D. (2012). <em>An evaluation of how small user interface changes can improve scientists' analytic strategies</em>. Paper presented at the Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, Austin, Texas, USA. 2953-2962.
+              </li>
+              <li id="kah11">Kahneman, D. (2011). <em>Thinking, fast and slow</em> (1st ed.). New York, NY: Farrar, Straus and Giroux.
+              </li>
+              <li id="kim11">Kim, H. &amp; Sundar, S. S. (2011). <em>Using interface cues in online health community boards to change impressions and encourage user contribution</em>. Paper presented at the Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, Vancouver, BC, Canada. 599-608.
+              </li>
+              <li id="kim09">Kim, S. &amp; Oh, S. (2009). Users' relevance criteria for evaluating answers in a social Q&amp;A site. <em>Journal of the American Society for Information Science and Technology 60(4)</em>,
+              </li>
+              <li id="lac08">Lackey, J. (2008). <em>Learning from words: testimony as a source of knowledge</em>Oxford University Press, USA.
+              </li>
+              <li id="lor11">Lorenz, J., Rauhut, H., Schweitzer, F. &amp; Helbing, D. (2011). How social influence can undermine the wisdom of crowd effect. <em>Proceedings of the National Academy of Sciences</em>,
+              </li>
+              <li id="luc11">Lucassen, T. &amp; Schraagen, J. M. (2011). Factual accuracy and trust in information: The role of expertise. <em>Journal of the American Society for Information Science and Technology</em>, <strong>62</strong>(7), 1232-1242.
+              </li>
+              <li id="mag09">Magnus, P. D. (2009). On trusting Wikipedia. <em>Episteme, 6</em>(1), 74-90.
+              </li>
+              <li id="mam11">Mamykina, L., Manoim, B., Mittal, M., Hripcsak, G. &amp; Hartmann, B. (2011). Design lessons from the fastest Q&amp;A site in the west. Paper presented at the <em>Proceedings of the 2011 Annual Conference on Human Factors in Computing Systems</em>, Vancouver, BC, Canada. 2857-2866
+              </li>
+              <li id="mat14">Matthews, P. (2014). Knowledge fixation and accretion: Longitudinal analysis of a social question-answering site. <em>Journal of Documentation, 70</em>(5)
+              </li>
+              <li id="mat12">Matthews, P. &amp; Simon, J. (2012). Evaluating and enriching online knowledge exchange: A socio-epistemological perspective. In A. A. Lazakidou, R. Sharda &amp; S. Voay (Eds.), <em>Virtual communities, social networks and collaboration</em> (pp. 35-59) Springer New York.
+              </li>
+              <li id="met07">Metzger, M. J. (2007). Making sense of credibility on the web: Models for evaluating online information and recommendations for future research. <em>Journal of the American Society for Information Science and Technology, 58</em>(13), 2078-2091.
+              </li>
+              <li id="ori08">Origgi, G. (2008). Wine epistemology. the role of reputation and rating systems in the world of wine. In Smith, B. (ed.), <em>Questions of Taste: The Philosophy of Wine.</em> Oxford University Press. 236-253
+              </li>
+              <li id="ori12">Origgi, G. (2012). A social epistemology of reputation. <em>Social Epistemology, 26</em>(3-4), 399-418.
+              </li>
+              <li id="pau12">Paul, S. A., Hong, L. &amp; Chi, E. H. (2012). <a href="http://arxiv.org/abs/1204.3724v1">Who is authoritative? understanding reputation mechanisms in quora</a>. <em>Arxiv.Org</em>, Retrieved from http://arxiv.org/abs/1204.3724v1
+              </li>
+              <li id="rie07">Rieh, S. Y. &amp; Danielson, D. R. (2007). Credibility: A multidisciplinary framework. <em>Annual Review of Information Science and Technology, 41</em>(1), 307-364.
+              </li>
+              <li id="sun07">Sundar, S. S., Knobloch-Westerwick, S. &amp; Hastall, M. R. (2007). News cues: Information scent and cognitive heuristics. <em>Journal of the American Society for Information Science and Technology, 58</em>(3), 366-378.
+              </li>
+              <li id="sun09">Sundar, S. S., Xu, Q. &amp; Oeldorf-Hirsch, A. (2009). Authority vs. peer: How interface cues influence users. Paper presented at the CHI, Boston, MA, USA. 4231-4236.
+              </li>
+              <li id="sun06">Sunstein, C. R. (2006). <em>Infotopia: How many minds produce knowledge</em>. New York: Oxford.
+              </li>
+              <li id="tau11">Tausczik, Y. R. &amp; Pennebaker, J. W. (2011). <em>Predicting the perceived quality of online mathematical contributions from user's reputations</em>. Paper presented at the Proceedings of CHI 2011, 1885-1888.
+              </li>
+              <li id="tre11">Treude, C., Barzilay, O. &amp; Storey, M. -. (2011). <em>How do programmers ask and answer questions on the web?</em>: NIER track. Paper presented at the Software Engineering (ICSE), 2011 33rd International Conference On, 804-807.
+              </li>
+              <li id="wat02">Wathen, C. N. &amp; Burkell, J. (2002). Believe it or not: Factors influencing credibility on the web. <em>Journal of the American Society for Information Science and Technology, 53</em>(2), 134-144.
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+    </article><br>
+    <section>
+      
+      <br>
+      <div style="text-align:center;">
+        
+        
+      </div>
+      <hr>
+      
+    </section>
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer>
+  </body>
+</html>

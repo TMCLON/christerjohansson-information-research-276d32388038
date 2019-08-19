@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>User query behaviour in different task types in a spoken language vs. textual interface: a wizard of Oz experiment</title>
+<link href="../../IRstyle4.css" media="screen" rel="stylesheet" title="serif"/>
+<!--Enter appropriate data in the content fields-->
+<meta content="User query behaviour in different task types in a spoken language vs. textual interface: a wizard of Oz experiment" name="dcterms.title"/>
+<meta content="Xiaojun (Jenny) Yuan, Ning Sa" name="author"/>
+<meta content="User behaviour" name="dcterms.subject"/>
+<meta content="This paper examined how task type affected user query behaviour in a spoken language interface in comparison to a textual input interface.  Pre-search questionnaire, post-search questionnaire, post-system questionnaire and interviews, and a user-centred wizard of Oz experiment were conducted in the University at Albany, State University of New York to compare the user query behaviour difference between these two system interfaces. Forty-eight participants joined the study. Each participant performed twelve tasks of three types, including factual, interpretive, and exploratory tasks." name="description"/>
+<meta content="user behaviour, speech interface, evaluation" name="keywords"/>
+<!--leave the following to be completed by the Editor-->
+<meta content="all" name="robots"/>
+<meta content="University of Bor&aring;s" name="dcterms.publisher"/>
+<meta content="text" name="dcterms.type"/>
+<meta content="ISSN-1368-1613" name="dcterms.identifier"/>
+<meta content="http://InformationR.net/ir/22-1/isic/isic1615.html" name="dcterms.identifier"/>
+<meta content="http://InformationR.net/ir/22-1/infres221.html" name="dcterms.IsPartOf"/>
+<meta content="text/html" name="dcterms.format"/>
+<meta content="en" name="dc.language"/>
+<meta content="http://creativecommons.org/licenses/by-nd-nc/1.0/" name="dcterms.rights"/>
+<meta content="2017-03-15" name="dcterms.issued"/>
+<meta content="global" name="geo.placename"/>
+
+</head>
+<body>
+<header>
+<img alt="header" height="45" src="http://www.informationr.net/ir//mini_logo2.gif" width="336"/><br/>
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 22 no. 1, March, 2017</span>
+<br/><br/>
+<div class="button">
+<ul>
+<li><a href="http://www.informationr.net/ir//22-1/isic/isic2016b.html">Contents</a> | </li>
+<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+<li><a href="../../irsindex.html">Subject index</a> | </li>
+<li><a href="../../search.html">Search</a> | </li>
+<li><a href="../../index.html">Home</a> </li>
+</ul>
+</div>
+<hr/> Proceedings of ISIC: the information behaviour conference, Zadar, Croatia, 20-23 September, 2016: Part 2.
+ <hr/>
+</header>
+<article>
+<h1>User query behaviour in different task types in a spoken language vs. textual interface: a Wizard of Oz experiment</h1> <br/>
+
+<h2 class="author"><a href="isic1615.html#author">Xiaojun (Jenny) Yuan</a> and <a href="isic1615.html#author">Ning Sa</a></h2>
+
+<br/>
+
+
+<blockquote>
+<strong>Introduction.</strong> This paper examined how task type affected user query behaviour in a spoken language interface in comparison to a textual input interface.<br/> <strong>Method.</strong> Pre-search questionnaire,
+ post-search questionnaire, post-system questionnaire and interviews, and a user-centred wizard of Oz experiment were conducted in the University at Albany, State University of New York to compare the user query behaviour difference
+ between these two system interfaces. Forty-eight participants joined the study. Each participant performed twelve tasks of three types, including factual, interpretive, and exploratory tasks.<br/>
+<strong>Analysis.</strong> Quantitative and qualitative analyses were used to analyse the collected data. Specifically, both Chi-square test and t test were employed in the quantitative data analysis.<br/>
+<strong>Results.</strong> Results indicated that participants initiated significantly fewer queries for both factual and interpretive tasks, and input significantly longer queries for both interpretive and exploratory tasks in the
+ spoken language interface than in the textual interface. Participants employed significantly more stop words for both interpretive and exploratory tasks and used significantly more indicative words in factual tasks in spoken language
+ interface than that in the textual input interface.<br/>
+<strong>Conclusion. </strong>We conclude that task type has a significant effect on user query behaviour. System design implications of the spoken language interfaces were discussed and recommendations were provided.
+</blockquote>
+
+<section>
+<h2>Introduction</h2>
+<p>In the digital society, information systems have become increasingly ubiquitous and important in our everyday lives. People prefer systems that they can easily access to, and can effectively use anytime and anywhere. In recent years, the challenges
+ faced by designers of information systems are three folded, that is, the variety of users of such systems has increased, the techniques and ways of access to information have changed, and the data format and volume have increased sharply.
+ Spoken language systems are drawing increasing attention as evidenced by the fact that major search engine companies (e.g. Google, Microsoft) have been developing voice search systems in which users input the queries by speaking instead
+ of typing.</p>
+<p>Research has shown that users may behave and perceive differently in systems with different input modes (<a href="isic1615.html#cre06">Crestani and Du, 2006</a>). Specifically, Crestani and his colleagues found that there were differences between written quires and spoken
+ queries, and written queries were more effective than spoken queries (<a href="isic1615.html#cre06">Crestani and Du, 2006</a>). Patel, <em>et al.</em> (<a href="isic1615.html#pat09">2009</a>) recruited 45 participants to compare speech and dialed input voice user interfaces for Indian farmers. Results indicated
+ that users felt uncomfortable when speaking to the system and they indicated that speech input was less successful. In a recent study by (<a href="isic1615.html#beg15">Begany, Sa, and Yuan, 2015</a>) with the focus on the factors that affect user perception of a spoken
+ language system, users’ familiarity with the system, ease-of-use of the system, speed of the system, as well as trust, comfort level, fun factor, and novelty were identified as major factors that had an impact on user perception.</p>
+<p>Researchers have found that allowing or encouraging natural query formulation could lead to linguistic expressions indicative of intention (<a href="isic1615.html#bel03">Belkin <em>et al.</em>, 2003</a>; <a href="isic1615.html#mur07">Murdock, Kelly, Croft, Belkin, and Yuan, 2007</a>). In this study, such linguistic
+ expressions are called ‘<em>indicative words</em>’, including ‘<em>what</em>’, ‘<em>when</em>’, ‘<em>where</em>’, ‘<em>which</em>’, ‘<em>why</em>’, ‘<em>who</em>’,
+ ‘<em>whose</em>’, and ‘<em>how</em>.’ It is anticipated that in a spoken language input system, users will be more likely to use indicative words, rather than just keywords, as is usual in standard typed input system.
+ As a result, we aimed to find out whether users would employ more conversational terms, such as stop words and indicative words (e.g. what, how, why, etc.) in a spoken interface than in a textual interface.</p>
+<p>It has been demonstrated that users performed differently when engaging with various kinds of tasks using information systems (<a href="isic1615.html#gwi06">Gwizdka and Spence, 2006</a>; <a href="isic1615.html#kel07">Kellar, Watters, and Shepherd, 2007</a>; <a href="isic1615.html#liu10a">Liu <em>et al.</em>, 2010</a>; <a href="isic1615.html#li08">Li and Belkin, 2008</a>). In this study,
+ we were interested in finding the effect of task types on user query behaviour. Although there is a rich body of research about task types on query behaviour in textual interface, to our knowledge, research is needed to further investigate
+ the relationship between task types and user query behaviour in the context of spoken language interface.</p>
+<p>Our goal of this research is to investigate user query behaviour in a spoken language interface in order to contribute to better understanding of spoken queries and improvement of user experience with spoken language systems.</p>
+<p>In particular, we investigated the following research question (RQ):</p>
+<p><em>RQ: Does task type affect user query behaviour in a spoken language interface vs. textual interface? How?</em></p>
+<h2>Background</h2>
+<h3>Task Type on User Search Behaviour in Textual Interface</h3>
+<p>Task type has been classified using various methods and along different dimensions (<a href="isic1615.html#fre08">e.g., Freund, 2008</a>; <a href="isic1615.html#kel07">Kellar <em>et al.</em>, 2007</a>; <a href="isic1615.html#kim06">Kim, 2006</a>; <a href="isic1615.html#li08">Li and Belkin, 2008</a>).  Li and Belkin (<a href="isic1615.html#li08">2008</a>) designed a scheme to classify tasks based on various dimensions
+ of task features. In her doctoral dissertation, Kim (<a href="isic1615.html#kim06">2006</a>) identified three types of tasks, defined as factual, interpretive, and exploratory.</p>
+<p>Previous researches have examined the effects of task types on user search behaviour. Marchionini (<a href="isic1615.html#mar89">1989</a>) concluded that in open-ended tasks, users consumed more time and did more moves than in close-ended tasks. Kim (<a href="isic1615.html#kim06">2006</a>) found that task
+ type had a significant impact on the number of saved pages and the ratio of viewed pages to saved pages. In a study investigating effects of fact-finding tasks of different complexity on user search behaviour, Gwizdka and Spence (<a href="isic1615.html#gwi06">2006</a>)
+ reported that subjective task difficulty was closely related to user behaviour such as dwell time on a page and the number of visited webpages.</p>
+<p>Qiu (<a href="isic1615.html#qiu92">1992</a>) demonstrated that users behaved differently in searching specific tasks versus general tasks. For example, users tended to use browsing features for general tasks, and analytical searching for specific tasks. Hsieh-Yee (<a href="isic1615.html#hsi98">1998</a>) investigated
+ how users employed various search tactics in four types of search tasks. Results showed no significant difference between searching for texts and graphic information, or between known-item and subject searches. Kellar, Watters, and Shepherd (<a href="isic1615.html#kel07">2007</a>) examined how users interacted with web browser when engaging in four types of tasks (fact-finding, browsing, information gathering, and transactions). They found that when searching the information gathering task, users took more
+ time completing it, viewed more pages, and utilized the web browser functions more often than those of the other tasks. Li (<a href="isic1615.html#liy08">2008</a>) studied the relationship between intellectual and decision/solution tasks and user behaviours. Results indicated
+ that intellectual tasks requested more IR systems consulted, longer queries and more result page viewed than those of decision/solution tasks did. Liu <em>et al.</em> (<a href="isic1615.html#liu10b">2010</a>) studied the impact of task types on search behaviours and concluded that
+ search behaviours such as task completion time, decision time and eye fixations could be used as implicit indicators of the type of task users engaged in.</p>
+<h3>Task Type on User Query Behaviour in Textual Interface</h3>
+<p>It has been widely acknowledged that task type can influence user query behaviour (<a href="isic1615.html#liu10b">Liu <em>et al.</em>, 2010, Toms <em>et al.</em>, 2007</a>). Liu <em>et al.</em> (<a href="isic1615.html#liu10b">2010</a>) found that task type and task situation affected users’ query reformulation behaviour. In their
+ study, simple, hierarchical, and parallel tasks were investigated. In simple tasks, users searched for simple facts; in hierarchical tasks, users explored different characteristics of one concept; while in parallel tasks, users searched
+ for different concepts of the same level in a conceptual hierarchy. It seems that Specialization was used significantly more in Simple and Hierarchical tasks than in Parallel tasks, while Word Substitution was used significantly more in
+ Parallel tasks than in Simple and Hierarchical tasks. A study exploring the effect of task type and users’ cognitive abilities (working memory) on query reformulation behaviours by Liu <em>et al.</em> (<a href="isic1615.html#liu10a">2010</a>) has proved that only task type
+ could significantly influence on query reformulation behaviours. In an analysis of 872 unique search queries of five query types ( New, Add, Remove, Replace and Repeat) collected from a user study of 50 participants performing three types
+ of tasks (exploratory, factorial and abstract), Kinley, Tjondronegoro, Partridge and Edwards (<a href="isic1615.html#kin12">2012</a>) reported that search task types had a significant impact on user query reformulation behaviour. Specifically, search task types affected
+ how users reformulated the New and Repeat queries.</p>
+<p>Toms <em>et al.</em> (<a href="isic1615.html#tom08">2008</a>) studied query behaviour change on two types of task structure (hierarchical and parallel) and three types of tasks (decision-making, fact-finding and information-gathering). They reported that users formulated fewer queries
+ but spent longer time in query result processing for Hierarchical tasks than for Parallel tasks. In addition, they found that decision-making and fact-finding tasks initiated more queries than information-gathering tasks. Users tended
+ to add additional terms in information-gathering than in decision-making tasks. Kim and Can (<a href="isic1615.html#kim12">2012</a>) identified query behavior patterns based on various search task types. They categorized search tasks into three groups based on different
+ user intents, including directed-closed, directed-open and undirected. Results indicated that task types affected user query behavior measured in terms of query interval lengths, query iteration, identical query, failed query and click-through
+ query rate.</p>
+<h3>User query behaviour in spoken interface</h3>
+<p>The work of Zue <em>et al.</em>  (<a href="isic1615.html#zue00">2000</a>) is relatively comprehensive in spoken language query understanding, but it has been applied in limited domains. Fujii (<a href="isic1615.html#fuj01">2001</a>) investigated  technical issues of spoken language input compared to text input
+ of the same query, and found no significant differences. Kamar and Beeferman (<a href="isic1615.html#kam10">2010</a>) presented a log-based study to compare web search patterns between speaking and typing for the purpose of better understanding the factors that can be
+ attributed to users’ decision on speaking instead of typing. Results showed that the factors leading to spoken queries were if a query was generated from an unconventional keyboard, for a search about a person’s location, or
+ for a search topic that can be responded in a ‘<em>hands-free</em>’ mode. </p>
+<p>Du and Crestani (<a href="isic1615.html#duh04">2004</a>) investigated the effectiveness of spoken queries, and proposed a system design for verbal interaction in information systems. Subsequently, in a study by Crestani and Du (<a href="isic1615.html#cre06">2006</a>), the spoken queries and written queries
+ collected in an experimental environment were compared based on length, duration, part of speech, and retrieval effectiveness. They reported that spoken queries were significantly longer than written queries, and that more different types
+ of words were found in spoken queries than in written queries. Results demonstrated that speech input offers a more natural method of expression of information need and stimulates the formulation of longer queries. However, longer spoken
+ queries did not significantly improve retrieval effectiveness in comparison to written queries.</p>
+<p>In Crestani and Du’s study, each participant was asked to enter only one query for each task while a common web search usually involves several queries (<a href="isic1615.html#cre06">Crestani and Du, 2006</a>). In contrast to Crestani and Du (<a href="isic1615.html#cre06">2006</a>), the current study
+ did not limit the number of queries and as a result, the queries collected are closer to the real-life situation.</p>
+<h3>Wizard of Oz Studies and Usability of Spoken Language Interface</h3>
+<p>The Wizard of Oz method (<a href="isic1615.html#for93">Ford and Ford, 1993</a>) has been employed to evaluate natural language dialogue systems (<a href="isic1615.html#joh00">e.g. Johnsen <em>et al.</em>, 2000</a>) and multimodal systems (<a href="isic1615.html#gus00">e.g. Gustafson <em>et al.</em>, 2000</a>; <a href="isic1615.html#sal93">Salber and Coutaz, 1993</a>). The method has been proved
+ to be useful in supporting the design process and evaluating information systems (<a href="isic1615.html#ber97">Bernsen and Dybkjaer, 1997</a>). In Wizard of Oz studies, certain aspect of a complex system is performed not by the system itself, but by a human being (the
+ Wizard). The Wizard (unknown to the subject) simulates that aspect of the system, e.g. accurate transcription of what the subject says. The Wizard of Oz method is adopted when the particular aspect of the system is not yet actually possible
+ or feasible to implement, but it is understood to be implementable in the near future.</p>
+<p>Researchers have reported promising findings on usability of spoken language systems. Litman and Silliman (<a href="isic1615.html#lit04">2004</a>) introduced a spoken language dialogue system called ITSPOKE, in which they tried to utilize speech instead of text-based dialogue
+ tutoring. Later on, Forbes-Riley and Litman (<a href="isic1615.html#for11">2011</a>) employed a wizarded version of ITSPOKE to test two different dynamic student uncertainty adaptations, that is, ‘<em>Simple –adaptive</em>’ and ‘<em>Complex-adaptive</em>.’
+ They concluded that dynamically reacting to students’ affective state (or ‘<em>uncertainty</em>’) can significantly improve their performance on computer tutors. Oulasvirta, Engelbrecht, Jameson, and Moller (<a href="isic1615.html#oul06">2006</a>) concluded
+ that how a system responds to an error could affect how users perceive the usability of the system. Portet <em>et al.</em> (<a href="isic1615.html#por13">2013</a>) conducted a similar study in which they performed a usability testing of a new smart home system with audio-processing
+ technology, called SWEET-HOME. Results demonstrated that speech technology is providing a sense of safety and security for the elderly.</p>
+<p>In order to study the efficacy of spoken language input, and meet all the requirements of the research, including precise interpretation of spoken input, we chose to use the Wizard of Oz method. Some of the research most directly relevant
+ to this study includes (<a href="isic1615.html#ake06">Akers, 2006</a>; <a href="isic1615.html#kle01">Klein, Schwank, Généreux, and Trost, 2001</a>).</p>
+<p>In sum, there exists a number of previous work on tasks and user query behaviour, but to our knowledge, little research has focused on the relationship between task type and user query behaviour in spoken language interface. It is worth examining
+ such a relationship through a user-centred wizard of Oz experiment. Further description of the study’s experimental design follows in the subsequent method section.</p>
+<h2>Method</h2>
+<h3>Experimental Design</h3>
+<p>The experiment employed a within-subject design. Participants conducted searches using the two systems, first one system, and then the other. When using each system, participants first searched on a training topic, and then performed searches
+ on six different topics of three task types (see ‘<em>Tasks and Topics</em>’ section). The first test topic was of the same task type as the training topic, the second topic was of the other task type, and so on. The order
+ of the task types and topics was alternated across participants. The experiment was replicated by exchanging the order of the two systems. In order to satisfy these constraints, forty-eight participants were recruited from University at
+ Albany.</p>
+<h3>Dataset</h3>
+<p>We adopted an English subset of ‘<em>The Wikipedia XML Corpus For Research</em>’ (<a href="isic1615.html#den06">Denoyer and Gallinari, 2006</a>) as the document collection. This collection, which has been used in INEX research groups in the past years, is a set
+ of XML documents (659,388 documents) generated using Wikipedia and encoded in UTF-8. The documents of the Wikipedia XML collections were structured in a hierarchy of categories defined by the authors of the articles.</p>
+<h3>Data Collection</h3>
+<p>The interactions between users and systems were recorded using the computer logs and the logging software called ‘<em>Techsmith Morae 3.1</em>’ (http://www.techsmith.com/morae.html). Morae recorded data also include what the user
+ said during the whole search process and user comments in an exit interview. An entry questionnaire gathered participants’ demographic and background information; a pre-task questionnaire elicited information about participants’
+ knowledge of the topic; a post-task questionnaire collected participants’ comments on the specific search; a post-system questionnaire elicited participants’ opinions about the specific system; and, an exit interview compared
+ search experience and use of the two systems.</p>
+<h3>Procedure</h3>
+<p>After participants arrived, they followed the experiment procedure listed as below.</p>
+<ol>
+<li>Completed an informed consent form, which included detailed instructions about the experiment.</li>
+<li>Filled out the entry questionnaire.</li>
+<li>Finished a brief tutorial of the general interface of the two systems.</li>
+<li>Began a training topic to practise with the first system they would use.</li>
+<li>For each topic, participants filled out a pre-task questionnaire, carried out the search and saved the answers in the given place. When they felt that a satisfactory answer was saved, or they ran out of time, they filled out a brief post-task
+ questionnaire. Participants had up to 10 minutes per search.</li>
+<li>Repeated step 5 until six topics in the first system were completed.</li>
+<li>Repeated steps 4 – 6 for the next set of topics using the second system.</li>
+<li>Took an exit interview.</li>
+</ol>
+<p>Each participant received $30 after completing the experiment.</p>
+<h2>Wizard of Oz</h2>
+<p>A Wizard of Oz experiment was conducted in a usability laboratory which has two separate rooms; one in which the participants performed their assigned tasks; the other in which an experimenter (the Wizard) used a computer terminal to interact
+ with the participants’ terminal. The Wizard could observe the participants by looking at how the participants performed the tasks. The Wizard listened to the participants’ spoken input, and then promptly typed exactly what
+ the participant said into the system. In other words, the search query shown on the interface was actually typed by the wizard. Participants read the query, and then responded to the system. This process continued until the participants
+ completed the tasks using the spoken system. 
+ </p>
+<h3>Tasks and Topics</h3>
+<p>Twelve tasks were categorized into three types according to the analysis by Kim (<a href="isic1615.html#kim06">2006</a>). We list the search topics of each task type as below.</p>
+<p>Factual task (FT)</p>
+<ol>
+<li>The largest cruise ship in 2006</li>
+<li>NASA imaging program</li>
+<li>Hypermarket in Spain</li>
+<li>The name of an actress and two movies</li>
+</ol>
+<p>Interpretive task (IT)</p>
+<ol>
+<li>Differences between Organic food, genetically modified food, and raw food</li>
+<li>Eating disorders in high school</li>
+<li>Charter school, public school, and private school</li>
+<li>Growing fruits</li>
+</ol>
+<p>Exploratory task</p>
+<ol>
+<li>Lead paint poison</li>
+<li>Reasons for vegetarians and vegans</li>
+<li>Beer brewing at home</li>
+<li>Feline intelligence, temperament, behaviors</li>
+</ol>
+<p>Factual tasks are close-ended and collect facts only. Interpretive tasks and exploratory tasks are both open-ended and require the user’s evaluation, inference, and comparison. However, the former are more focused and goal oriented than
+ the latter.</p>
+<p>Below, we give an example topic for each task type.</p>
+<p>Task Type 1 (Factual Task):</p>
+<p><em>Topic: A friend of yours just got a job as casting director for the diving show on a cruise ship, which was the largest cruise ship in the world when it was launched in 2006. He told you that he is able to get you a free week aboard the ship. You just have to get to Miami, where the ship will be docked. You want to go to the cruise line’s website but you forgot the name of the ship and the cruise line. You can't reach your friend because he is out to sea.</em></p>
+<p><em>Task: Find the name of the ship, as well as the name of the cruise line, so that you can find out when it is leaving. Save the document(s) where you have found the information required.</em></p>
+<p>Task Type 2 (Interpretive Task):</p>
+<p><em>Topic: Charter schools are primary or secondary schools that receive public money but are not subject to some of the rules, regulations, and statutes that apply to other public schools. Some critics argue that these schools give too much power to the teachers and the parents. You are a newly graduated teacher about to enter the education work force. </em></p>
+<p><em>Task: You decided to become a teacher to try to improve the education of underprivileged children. Find the pros and cons for charter schools, public schools, and private schools to have a better understanding of which type of institution you would prefer to work in as an educator. Save the document(s) where you have found the information required.</em></p>
+<p>Task Type 3 (Exploratory Task):</p>
+<p><em>Topic: Your classmate Amari has recently become very interested in learning more about beer, brewing and brewing at home. Amari has asked for your help by finding out how to brew beer at home. </em></p>
+<p><em>Task: You want to learn more about the process of brewing beer at home. Save the document(s) where you have found the information required.</em></p>
+<h3>System design and implementation</h3>
+<p>Both the textual input system (baseline, keyboard) and spoken language system (experimental, spoken input) were implemented using the Apache Lucene information retrieval toolkit (<a href="http://lucene.apache.org/">http://lucene.apache.org/</a>).
+ They employed the same underlying information retrieval and presentation system, and also used the same interface. The only difference is on the input mode. When searching with the textual input system, the participants used a standard
+ keyboard to enter queries and a mouse to click buttons and choose results. When using the spoken language system, the participants employed a touch screen to perform clicking and selecting; and spoke out the queries while the wizard entered
+ them into the search box. Figure 1 displays the system interface screenshot. We put text ‘<em>The more you say, the better the results are likely to be</em>’ to encourage users to fully express their information need.</p>
+<figure>
+<img class="centre" src="isic1615Fig1.png" width="590" alt="Figure 1: System interface screenshot"/>
+<figcaption>
+Figure 1: System interface screenshot
+ </figcaption>
+
+</figure>
+<h2>Results</h2>
+<h3>Participants</h3>
+<p>Forty-eight graduate students from University at Albany joined the study. In terms of degree earned, eleven participants have master and thirty-seven have bachelor degree. For the age range, twenty-four participants are in 16-25, sixteen in
+ 26-35, three in 36-45, four in 46-55 and one in 56-65. Regarding the major, nineteen participants are from library and information science, eight from computer science, four from psychology, two from economics, and the rest from other
+ majors. Computer and information searching experience was collected from an entry questionnaire, using a 7-point scale, with 1=low, and 7=high. Results demonstrated that participants used computers ((Mean=7.00, SD=0.00) and performed search
+ very frequently (Mean=6.40, SD=1.47). Their Internet searching experience was high (Mean=6.73, SD=0.64). Their use of touch screen interface was at medium level (Mean=5.13, SD= 1.78). But their use of voice search of search engines (Mean=2.42,
+ SD=1.70) and commercial spoken software was very low (Mean=1.85, SD= 1.13).</p>
+<h3>Task Type on User Query Behavior</h3>
+<p>User query behavior was measured in terms of query length, iterations, terms used in queries, stop word frequency, and indicative word frequency in queries. Table 1 shows the definition of the measures.</p>
+<table class="center">
+<caption>
+Table 1: Definitions of the user query behavior measures
+ </caption>
+<tbody>
+<tr>
+<th>
+Measure
+</th>
+<th>
+Definition
+</th>
+</tr>
+<tr>
+<td>
+Time of Task Completion
+</td>
+<td>
+The amount of time spent in completing each task
+</td>
+</tr>
+<tr>
+<td>
+Query length
+</td>
+<td>
+The number of terms in each query
+</td>
+</tr>
+<tr>
+<td>
+Iteration
+</td>
+<td>
+The number of queries in each task
+</td>
+</tr>
+<tr>
+<td>
+Terms used in queries
+</td>
+<td>
+The exact terms used in each query
+</td>
+</tr>
+<tr>
+<td>
+Stop word frequency
+</td>
+<td>
+The number of stop words in each query
+</td>
+</tr>
+<tr>
+<td>
+Indicative word frequency
+</td>
+<td>
+The number of indicative words in each query
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<p>Results of one-way ANOVA showed that there was a significant impact of task type on participants’ time of task completion, F=13.19, p&lt;.01 (Factual task: Mean=348.14, SD=181.26; Interpretive task: Mean=380.35, SD=152.57; Exploratory
+ task: Mean=294.92, SD=158.64, df=573).</p>
+<p>Figure 2 shows the distribution of query length and iterations. T-test indicated that participants input significantly longer queries in the experimental system than in the baseline system for both interpretive tasks (Experimental: Mean=3.44,
+ SD=2.18; Baseline: Mean=3.08, SD=1.78, t =3.26, df =1278, p&lt;.01), and exploratory tasks (Experimental: Mean=3.23, SD=1.71; Baseline: Mean=2.97, SD=1.63, t = 2.42, df = 987, p&lt;.05).</p>
+<figure>
+<img class="centre" src="isic1615Fig2.png" width="590" alt="Figure 2: Number of queries and query length across systems and tasks"/>
+<figcaption>
+ Figure 2: Number of queries and query length across systems and tasks
+ </figcaption>
+
+</figure>
+<p>With regards to the number of iterations, t-test results showed that participants initiated significantly fewer queries in the experimental system than in the baseline system for both interpretive tasks (Experimental: Mean=4.7, SD=2.83; Baseline:
+ Mean=6.8, SD=4.31, t = -4.00, df = 190, p&lt;.01), and factual tasks (Experimental: Mean=5.55, SD=3.03; Baseline: Mean=7.78, SD=4.84,  t = -3.83, df = 190, p&lt;.01).</p>
+<p>We want to observe if in a spoken language input interface, searchers will be more likely to use linguistic expressions to indicate their intentions, rather than just keywords, as is usual in standard typed input. When looking into the most
+ frequently used queries for each topic/system combination (see Table 2), we didn’t find notable differences between the two systems in terms of these query characteristics.</p>
+
+ <table class="center">
+ <caption>
+  Table 2: Top three queries with frequency
+  </caption>
+ <tbody>
+ <tr>
+ <th>
+ Topic
+ </th>
+ <th>
+ Baseline
+ </th>
+ <th>
+ Experimental
+ </th>
+ </tr>
+ <tr>
+ <td>
+ FT1
+ </td>
+ <td>
+ royal Caribbean (6)<br />
+ largest cruise ship (5)<br />
+ largest cruise ship 2006 (5)
+ </td>
+ <td>
+ largest cruise ship 2006 (5)<br />
+ largest cruise ship (2)<br />
+ largest cruise ship 2006 miami (2)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ FT2
+ </td>
+ <td>
+ nasa imaging program (5)<br />
+ NASA telescopes (5)<br />
+ nasa program four telescopes (4)
+ </td>
+ <td>
+ nasa infrared telescope (3)<br />
+ nasa program (3)<br />
+ nasa infrared satellite (2)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ FT3
+ </td>
+ <td>
+ supermarkets in spain (14)<br />
+ el corte ingles (6)<br />
+ department stores in spain (4)
+ </td>
+ <td>
+ supermarkets in spain (7)<br />
+ el corte ingles (4)<br />
+ stores in spain (3)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ FT4
+ </td>
+ <td>
+ the da vinci code (13)<br />
+ audrey tautou (12)<br />
+ amelie (7)
+ </td>
+ <td>
+ the da vinci code (12)<br />
+ audrey tautou (10)<br />
+ amelie (7)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ IT1
+ </td>
+ <td>
+ organic food (14)<br />
+ raw food (14)<br />
+ genetically modified food (13)
+ </td>
+ <td>
+ organic food (14)<br />
+ raw food (12)<br />
+ genetically modified food (8)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ IT2
+ </td>
+ <td>
+ eating disorders (17)<br />
+ beriberi (7)<br />
+ binge eating disorder (7)
+ </td>
+ <td>
+ eating disorders (8)<br />
+ bulimia (7)<br />
+ binge eating disorder (5)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ IT3
+ </td>
+ <td>
+ private schools (12)<br />
+ public school (12)<br />
+ public schools (11)
+ </td>
+ <td>
+ charter schools (8)<br />
+ public schools (8)<br />
+ private school (7)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ IT4
+ </td>
+ <td>
+ gooseberry (9)<br />
+ strawberries (8)<br />
+ strawberry (8)
+ </td>
+ <td>
+ gooseberries (7)<br />
+ growing strawberries (6)<br />
+ gooseberry cultivation (5)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ ET1
+ </td>
+ <td>
+ lead paint (9)<br />
+ lead poisoning (7)<br />
+ how to know the paint status (4)
+ </td>
+ <td>
+ lead paint (8)<br />
+ lead poisoning (4)<br />
+ lead paint poisoning (3)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ ET2
+ </td>
+ <td>
+ veganism (6)<br />
+ vegetarian (6)<br />
+ vegetarianism (5)
+ </td>
+ <td>
+ vegetarian (8)<br />
+ what is a vegan (3)<br />
+ why some people eat meat and some not (2)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ ET3
+ </td>
+ <td>
+ brewing beer (7)<br />
+ brewing beer at home (6)<br />
+ homebrewing (5)
+ </td>
+ <td>
+ homebrewing (12)<br />
+ how to brew beer (7)<br />
+ homebrew (5)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ ET4
+ </td>
+ <td>
+ cat breeds (12)<br />
+ feline intelligence (12)<br />
+ cat intelligence (8)
+ </td>
+ <td>
+ feline intelligence (9)<br />
+ cat behavior (8)<br />
+ cat breeds (7)
+ </td>
+ </tr>
+ </tbody>
+ </table>
+
+<p>Most participants used task related keyword search in both systems. However, in the exploratory tasks, in particular ET1, ET2 and ET3, participants used indicative words very often (Table 2). Further, when searching for ET2 and ET3, participants
+ employed many more indicative words in the experimental than in the baseline system. As shown in Table 2, some of the most frequently used queries involved indicative words, such as ‘<em>what</em>’, ‘<em>why</em>’,
+ ‘<em>how</em>’, etc. Table 2 also displayed the term frequency of indicative words in the two interfaces. The indicative words investigated in this study are: <em>what, which, who, whose, when, where, why</em>, and <em>how</em>.</p>
+<p>We further looked into the term frequency of stop words in both systems across the three types of tasks. The total number of stop words and their proportion to the total number of all words were compared between two interfaces across different
+ tasks by using Chi-square test. Stop words were used more frequently in the spoken language input interface than in the textual input interface for all the three types of tasks though the difference in factual task was not significant
+ (Interpretive task: X<sup>2</sup>=9.91, p&lt;.01; Exploratory task: X<sup>2</sup>=16.1, p&lt;.01 ).</p>
+<p>In all the three types of tasks, the term frequency of indicative words in spoken language input interface was higher than that in textual input interface though only the difference in factual tasks was significant (X<sup>2</sup>=9.15, p&lt;.01).
+ In Figure 3, a comparison of distributions of indicative words and stop words across systems and tasks was graphically displayed. Table 3 and Table 4 show the stop word frequency and indicative word frequency among different types of tasks.
+ It seems that task types significantly affected the frequency of stop words and indicative words.</p>
+
+<table class="center">
+<caption> Table 3: Stop words across task types </caption> <tbody>
+<tr>
+<th colspan="2"> Task by system </th>
+<th> Total stop word </th>
+<th> Total count of all words </th>
+<th> Proportion </th>
+<th> P value </th>
+</tr>
+<tr>
+<td rowspan="3"> Experimental </td>
+<td> ET </td>
+<td style="text-align: center;"> 335 </td>
+<td style="text-align: center;"> 1518 </td>
+<td style="text-align: center;"> 0.221 </td>
+<td rowspan="3"> X<sup>2</sup>=15.89<br />
+p&lt;.01**. </td>
+</tr>
+<tr>
+<td> FT </td>
+<td style="text-align: center;"> 359 </td>
+<td style="text-align: center;"> 1877 </td>
+<td style="text-align: center;"> 0.191 </td>
+</tr>
+<tr>
+<td> IT </td>
+<td style="text-align: center;"> 305 </td>
+<td style="text-align: center;"> 1834 </td>
+<td style="text-align: center;"> 0.166 </td>
+</tr>
+<tr>
+<td rowspan="3"> Baseline </td>
+<td> ET </td>
+<td style="text-align: center;"> 270 </td>
+<td style="text-align: center;"> 1540 </td>
+<td style="text-align: center;"> 0.175 </td>
+<td rowspan="3"> X<sup>2</sup>=32.16<br />
+p&lt;.01** </td>
+</tr>
+<tr>
+<td> FT </td>
+<td style="text-align: center;"> 463 </td>
+<td style="text-align: center;"> 2623 </td>
+<td style="text-align: center;"> 0.177 </td>
+</tr>
+<tr>
+<td> IT </td>
+<td style="text-align: center;"> 281 </td>
+<td style="text-align: center;"> 2295 </td>
+<td style="text-align: center;"> 0.122 </td>
+</tr>
+<tr>
+<td rowspan="3"> Both </td>
+<td> ET </td>
+<td style="text-align: center;"> 605 </td>
+<td style="text-align: center;"> 3058 </td>
+<td style="text-align: center;"> 0.198 </td>
+<td rowspan="3"> X<sup>2</sup>=44.11<br />
+p&lt;.01** </td>
+</tr>
+<tr>
+<td> FT </td>
+<td style="text-align: center;"> 822 </td>
+<td style="text-align: center;"> 4500 </td>
+<td style="text-align: center;"> 0.183 </td>
+</tr>
+<tr>
+<td> IT </td>
+<td style="text-align: center;"> 586 </td>
+<td style="text-align: center;"> 4129 </td>
+<td style="text-align: center;"> 0.142 </td>
+</tr>
+</tbody>
+</table>
+
+<table class="center">
+<caption> Table 4: Indicative words across task types </caption> <tbody>
+<tr>
+<td colspan="2"> Task by system </td>
+<td> Total indicative words </td>
+<td> Total all words </td>
+<td> Proportion </td>
+<td> P value </td>
+</tr>
+<tr>
+<td rowspan="3"> Experimental </td>
+<td> ET </td>
+<td style="text-align: center;"> 49 </td>
+<td style="text-align: center;"> 1518 </td>
+<td style="text-align: center;"> 0.032 </td>
+<td rowspan="3"> X<sup>2</sup>=37.19<br />
+p&lt;.01** </td>
+</tr>
+<tr>
+<td> FT </td>
+<td style="text-align: center;"> 15 </td>
+<td style="text-align: center;"> 1877 </td>
+<td style="text-align: center;"> 0.008 </td>
+</tr>
+<tr>
+<td> IT </td>
+<td style="text-align: center;"> 19 </td>
+<td style="text-align: center;"> 1834 </td>
+<td style="text-align: center;"> 0.010 </td>
+</tr>
+<tr>
+<td rowspan="3"> Baseline </td>
+<td> ET </td>
+<td style="text-align: center;"> 42 </td>
+<td style="text-align: center;"> 1540 </td>
+<td style="text-align: center;"> 0.027 </td>
+<td rowspan="3"> X<sup>2</sup>=67.49<br />
+p&lt;.01** </td>
+</tr>
+<tr>
+<td> FT </td>
+<td style="text-align: center;"> 5 </td>
+<td style="text-align: center;"> 2623 </td>
+<td style="text-align: center;"> 0.002 </td>
+</tr>
+<tr>
+<td> IT </td>
+<td style="text-align: center;"> 16 </td>
+<td style="text-align: center;"> 2295 </td>
+<td style="text-align: center;"> 0.007 </td>
+</tr>
+<tr>
+<td rowspan="3"> Both </td>
+<td> ET </td>
+<td style="text-align: center;"> 91 </td>
+<td style="text-align: center;"> 3058 </td>
+<td style="text-align: center;"> 0.030 </td>
+<td rowspan="3"> X<sup>2</sup>=102.92<br />
+p&lt;.01** </td>
+</tr>
+<tr>
+<td> FT </td>
+<td style="text-align: center;"> 20 </td>
+<td style="text-align: center;"> 4500 </td>
+<td style="text-align: center;"> 0.004 </td>
+</tr>
+<tr>
+<td> IT </td>
+<td style="text-align: center;"> 35 </td>
+<td style="text-align: center;"> 4129 </td>
+<td style="text-align: center;"> 0.008 </td>
+</tr>
+</tbody>
+</table>
+
+
+
+<figure><img class="centre" src="isic1615Fig3.png" width="590" alt="Figure 3: Distribution of indicative words and stop words across systems and tasks"/>
+<figcaption>Figure 3: Distribution of indicative words and stop words across systems and tasks</figcaption>
+</figure>
+
+<h2>Discussions</h2>
+<p>We carried out a wizard of Oz experiment to compare the user query behaviour in a spoken language input interface versus a textual input interface across three different task types. Results demonstrated that task types significantly affected
+ user query behaviour. Specifically, task types have a significant impact on participants’ time of task completion (F=13.19, p&lt;.01). Participants initiated significantly fewer queries in the spoken language interface than in the
+ textual interface for both factual tasks and interpretive tasks. Participants input significantly longer queries in the spoken language interface than in the textual interface for both interpretive tasks and exploratory tasks. The findings
+ further confirmed the results from Crestani and Du (<a href="isic1615.html#cre06">2006</a>), but seemingly contradicted to the results from (<a href="isic1615.html#kam10">Kamvar and Beeferman, 2010</a>). Kamvar and Beeferman (<a href="isic1615.html#kam10">2010</a>) found that longer queries are more likely to be typed than short queries,
+ and users may speak a query shorter than six words than a longer query. We took a close look on the query length from our study and observed that the average spoken query length was below six. It may be interesting to further explore if
+ such a pattern exists in various studies related to spoken language system design and evaluation.</p>
+<p>Results also indicated that two typical queries involving stop words and indicative words are ‘<em>how to know the paint status (ET</em><em>1)</em>’ and ‘<em>why some people eat meat and some not (</em><em>ET2)</em>.’
+ On the other hand, two typical queries with keywords only are ‘<em>lead paint (ET</em><em>1)</em>’ and ‘<em>vegetarian (</em><em>ET2)</em>’. As reported in (<a href="isic1615.html#kam10">Kamvar and Beeferman, 2010</a>), users tended to speak the
+ familiar queries, such as Location, Food and Drink, Shopping and Travel related. It may be meaningful to consider embedding abundant terms related to these topics in the database of the spoken language system when designing such systems.</p>
+<p>We found that participants used significantly more stop words in the spoken language input interface than in the textual input interface for both interpretive and exploratory tasks. Participants used significantly more indicative words in
+ spoken language input interface than that in the textual input interface for factual tasks.</p>
+<p>It seems that spoken queries involved more stop words and more indicative words than written queries since they are similar to natural language used in our everyday conversation. This finding was consistent with Crestani and Du (<a href="isic1615.html#cre06">2006</a>) in that
+ the interaction between the user and the spoken interface was more conversational. It also confirmed our previous findings (<a href="isic1615.html#beg15">Begany, Sa, and Yuan, 2015</a>) that the spoken interface is a more natural way of interaction.</p>
+<p>Results indicated that when the interface is textual or spoken, the participants seemed to change the way they interacted with the IR system. When using textual interface, the IR system was a computer to the users but when using spoken interface,
+ the IR system became a live object they were communicating with. This finding was confirmed from (<a href="isic1615.html#beg15">Begany, Sa, and Yuan, 2015</a>) in that participants commented that spoken language interface is ‘<em>fun to use</em>.’</p>
+<p>Regarding how term frequency changed according to the task types, we found that in both interfaces, stop words were used least frequently in interpretive tasks. In exploratory tasks and factual tasks, the results from the two interfaces were
+ different. When looking into the indicative word frequency across task types, we found that users employed indicative words most frequently in exploratory tasks and least in factual tasks. This could be attributed to two reasons. One reason
+ is the nature of the factual tasks. Factual tasks were close-ended and collected facts only, while exploratory tasks and interpretive tasks were opened-ended and involved the users’ evaluation, inference, and comparison.  Another
+ reason is that, sometimes users may not be able to find terms appropriate for describing their information problems (<a href="isic1615.html#bel80">Belkin, 1980</a>). Our findings indicated that exploratory and interpretive tasks encouraged users to generate more question-like
+ queries than factual tasks did. We feel it is necessary to take into account the ‘<em>intention-revealing</em>’ words instead of simply discarding them during the process of designing and implementing spoken language systems.
+ Also, it is critical to consider user information problems and interests in designing such systems.</p>
+<h2>Conclusion</h2>
+<p>This paper explored the effect of task types on user query behaviour using a spoken input interface in comparison to a textual input interface. We found that task types had a significant impact on user query behaviour, including query length,
+ iteration, stop word frequency and indicative word frequency in the spoken language interface vs. the textual interface.</p>
+<p>This study has its limitations in terms of limited types of tasks and topics, and limited number of participants. Furthermore, the results from the wizard of Oz experiment may not be the same as the real spoken language system in various ways.
+ In spite of the limitations, this study will contribute to the field with evaluation of a new method of interaction with information systems, in comparison to a traditional keyboard-based interaction; and design standard for a spoken language
+ interface.</p>
+<p>Our study also provides implications for the design and development of the spoken language systems. First, familiar topics should be used to increase users’ comfortable level. Second, user intentions and user needs should be considered.
+ It is critical to know what users really want to find out, and which kind of tasks they could potentially perform using the spoken system. Third, it may be useful if designers can provide users a choice between spoken and textual input
+ for different tasks and topics. This method should address potential discomfort of users. At last, it would be useful if the spoken system can elicit users’ information problems at the very beginning and then make sure the database
+ has enough topics and documents to match with them.</p>
+<p>Nowadays, users tend to share a significant amount of information through the social media platforms. It seems that speaking is becoming the dominant behaviour for users with small screen devices. We feel an urgent need to conduct the similar
+ studies in a social media site in order to discover collaborative behavioural patterns of users, and relate such patterns to various task types.</p>
+<h2>Acknowledgements</h2>
+<p>We thank Institute of Museum and Library Services (IMLS) grant #RE-04-10-0053-10.</p>
+
+<h2 id="author">About the authors</h2>
+<p><strong>Xiaojun (Jenny) Yuan</strong> is an Assistant Professor in the Department of Information Studies of College of Engineering and Applied Sciences at University at Albany, State University of New York. Her research interests include human information behaviour, interactive information retrieval, user interface design and evaluation, and human computer interaction. Email: <a href="mailto:xyuan@albany.edu">xyuan@albany.edu</a>.<br />
+<strong>Ning Sa</strong> is a PhD candidate in Informatics at University at Albany, State University of New York. Her research interests are in human computer interaction in information retrieval. She can be contacted at <a href="mailto:nsa@albany.edu">nsa@albany.edu</a>.</p>
+
+</section>
+<section class="refs">
+
+<h2>References</h2>
+<ul class="refs">
+<li id="ake06">Akers, D. (2006). Wizard of Oz for participatory design: inventing a gestural interface for 3D selection of neural pathway estimates, <em>Proceeding of CHI '06 Extended Abstracts on Human Factors in Computing Systems, </em>454–459.</li>
+<li id="beg15">Begany, G., Sa, N. &amp; Yuan, X.-J. (2015). Factors affecting user perception of a spoken language vs. textual search interface: a content analysis. <em>Journal of Interacting with Computers, 28</em>(2), 170-180.</li>
+<li id="bel80">Belkin, N. (1980). Anomalous states of knowledge as a basis for information retrieval. <em>Canadian Journal of Information Science</em>, (5), 133–143.</li>
+<li id="bel03">Belkin, N. J., Kelly, D., Kim, G., Kim, J.-Y., Lee, H.-J., Muresan, G., … &amp; Cool, C. (2003). Query Length in Interactive Information Retrieval. <em>Proceedings of the 26th Annual International ACM SIGIR Conference on Research and Development in Informaion Retrieval</em>,
+ 205–212
+ </li>
+<li id="ber97">Bernsen, N. O. &amp; Dybkjaer, L. (1997). <em>Designing Interactive Speech Systems: From First Ideas to User Testing</em> (1<sup>st</sup> ed.). Secaucus, NJ, USA: Springer-Verlag New York, Inc.</li>
+<li id="cre06">Crestani, F. &amp; Du, H. (2006). Written versus spoken queries: A qualitative and quantitative comparative analysis. <em>Journal of the American Society for Information Science and Technology</em>, <em>57</em>(7), 881–890.</li>
+<li id="den06">Denoyer, L. &amp; Gallinari, P. (2006). The Wikipedia XML Corpus. <em>SIGIR Forum</em>, <em>40</em>(1), 64–69.</li>
+<li id="duh04">Du, H. &amp; Crestani, F. (2004). Retrieval Effectiveness of Written and Spoken Queries: An Experimental Evaluation. In H. Christiansen, M.-S. Hacid, T. Andreasen, &amp; H. L. Larsen (Eds.), <em>Flexible Query Answering Systems</em> (pp. 376–389). Springer Berlin Heidelberg. Retrieved from http://link.springer.com/chapter/10.1007/978-3-540-25957-2_30</li>
+<li id="for11">Forbes-Riley, K. &amp; Litman, D. (2011). Designing and evaluating a wizarded uncertainty-adaptive spoken dialogue tutoring system. <em>Computer Speech and Language</em>, <em>4</em>, 105-126.</li>
+<li id="for93">Ford, N. &amp; Ford, R. (1993). Towards a cognitive theory of information accessing: an empirical study. <em>Information Processing &amp; Management</em>, <em>29</em>(5), 569-585.</li>
+<li id="fre08">Freund, L. (2008). Exploring task-document relations in support of information retrieval in the workplace. <em>SIGIR Forum</em>, <em>42</em>, 107.</li>
+<li id="fuj01">Fujii, A., Itou, K. &amp; Ishikawa, T. (2001). Speech-Driven Text Retrieval: Using Target IR Collections for Statistical Language Model Adaptation in Speech Recognition. In A. R. Coden, E. W. Brown, &amp; S. Srinivasan (Eds.),
+ <em>Information Retrieval Techniques for Speech Applications</em> (pp. 94–104). Springer Berlin Heidelberg. Retrieved from http://link.springer.com/chapter/10.1007/3-540-45637-6_9</li>
+<li id="gus00">Gustafson, J., Bell, L., Beskow, J., Boye, J., Carlson, R., Edlund, J., … &amp; Wirn, M. (2000). AdApt - a multimodal conversational dialogue system in an apartment domain. <em>Proceedings of ICSLP 2000</em>, 134–137.</li>
+<li id="gwi06">Gwizdka, J. &amp; Spence, I. (2006). What Can Searching Behavior Tell Us About the Difficulty of Information Tasks? A Study of Web Navigation. <em>Proceedings of the American Society for Information Science and Technology</em>,
+ <em>43</em>(1), 1–22.</li>
+<li id="hsi93">Hsieh-Yee, I. (1993). Effects of search experience and subject knowledge on the search tactics of novice and experienced searchers. <em>Journal of the American Society for Information Science</em>, <em>44</em>(3), 161–174.</li>
+<li id="hsi98">Hsieh-Yee, I. (1998). Search Tactics of Web Users in Searching for Texts, Graphics, Known Items and Subjects. <em>The Reference Librarian</em>, <em>28</em>(60), 61–85.</li>
+<li id="kam10">Kamvar, M. &amp; Beeferman, D. (2010). Say what? Why users choose to speak their web queries? Proceeding of <em>Interspeech</em><em> 2010</em>, 1966-1969.</li>
+<li id="kel07">Kellar, M., Watters, C. &amp; Shepherd, M. (2007). A field study characterizing Web-based information-seeking tasks. <em>Journal of the American Society for Information Science and Technology</em>, <em>58</em>(7), 999–1018.</li>
+<li id="kim06">Kim, J. (2006). Task as a Predictable Indicator for Information Seeking Behavior on the Web. <em>Doctoral Dissertation. Rutgers, the State University of New Jersey</em>.</li>
+<li id="kim12">Kim, J. &amp; Can, A. (2012, January). Characterizing queries in different search tasks. <em>Proceeding of HICSS 2012</em>, 1697-1706.</li>
+<li id="kin12">Kinley, K., Tjondronegoro, D., Partridge, H. &amp; Edwards, S. (2012). Relationship between the nature of the search task types and query reformulation behaviour. <em>Proceedings of the Seventeenth Australasian Document Computing Symposium</em><em>,</em> 39-46.</li>
+<li id="kle01">Klein, A., Schwank, I., Généreux, M. &amp; Trost, H. (2001). Evaluating Multi-modal Input Modes in a Wizard-of-Oz Study for the Domain of Web Search. In  Ann Blandford and Jean Vanderdonckt (Eds.), <em>People and Computers XV—Interaction without Frontiers</em> (pp. 475–483). Springer London. </li>
+<li id="li08">Li, Y. &amp; Belkin, N. J. (2008). A faceted approach to conceptualizing tasks in information seeking. <em>Information Processing and Managemen, 44</em>(6), 1822–1837</li>
+<li id="liu10a">Liu, C., Gwizdka, J., Liu, J., Xu, T. &amp; Belkin, N. J. (2010). Analysis and Evaluation of Query Reformulations in Different Task Types. <em>Proceedings of the 73rd ASIS&amp;T Annual Meeting on Navigating Streams in an Information Ecosystem - Volume 47</em><em>, 17, </em>1–10.</li>
+<li id="liu10b">Liu, J., Cole, M. J., Liu, C., Bierig, R., Gwizdka, J., Belkin, N. J., … &amp; Zhang, X. (2010). Search Behaviors in Different Task Types. <em>Proceedings of the 10th Annual Joint Conference on Digital Libraries</em><em>,</em> 69–78.</li>
+<li id="liy08">Li, Y. (2008). Relationships among work tasks, search tasks, and interactive information searching behavior. Unpublished doctoral dissertation. Rutgers University, New Brunswick, NJ, USA.</li>
+<li id="lit04">Litman, D.J. &amp; Silliman, S. (2004). ITSPOKE: An intelligent tutoring spoken dialogue system. <em>Proceeding of HLT-NAACL --Demonstrations '04</em>. 5-8.</li>
+<li id="joh00">Johnsen, M. H., Svendsen, T., Amble, T., Holter, T. &amp; Harborg, E. (2000). TABOR-a norwegian spoken dialogue system for bus travel information. <em>Proceeding of ICSLP 2000</em>, 1049-1052.</li>
+<li id="mar89">Marchionini, G. (1989). Information-seeking Strategies of Novices Using a Full-text Electronic Encyclopedia. <em>Journal of the American Society for Information Science and Technology</em>, <em>40</em>(1), 54–66.</li>
+<li id="mur07">Murdock, V., Kelly, D., Croft, W. B., Belkin, N. J. &amp; Yuan, X. (2007). Identifying and Improving Retrieval for Procedural Questions. <em>Information Processing &amp; Management</em>, <em>43</em>(1), 181–203.</li>
+<li id="oul06">Oulasvirta, A., Engelbrecht, K. P., Jameson, A. &amp; Moller, S. (2006). The relationship between user errors and perceived usability of a spoken dialogue system. <em>Proc</em><em>eeding of the Second ISCA/DEGA Tutorial and Research Workshop on Perceptual Quality of Systems</em>,
+ 61-69.
+ </li>
+<li id="pat09">Patel, N., Agarwal, S., Rajput, N., Nanavati, A., Dave, P. &amp; Parikh, T. S. (2009). A Comparative Study of Speech and Dialed Input Voice Interfaces in Rural India. <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em><em>,</em> 51–54.</li>
+<li id="por13">Portet, F., Vacher, M., Golanski, C., Roux, C. &amp; Meillon, B. (2013). Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects. <em>Personal and Ubiquitous Computing, 17</em>(1),
+ 127-144.</li>
+<li id="qiu92">Qiu, L. (1992). Analytical Searching vs. Browsing in Hypertext Information Retrieval Systems. <em>Canadian Journal of Information and Library Science</em>, <em>18</em>(4), 1-13.</li>
+<li id="sal93">Salber, D. &amp; Coutaz, J. (1993). Applying the Wizard of Oz technique to the study of multimodal systems. In L. J. Bass, J. Gornostaev, &amp; C. Unger (Eds.), <em>Human-Computer Interaction</em> (pp. 219–230). Springer
+ Berlin Heidelberg. Retrieved from http://link.springer.com/chapter/10.1007/3-540-57433-6_51.</li>
+<li id="tom08">Toms, E. G., O’Brien, H., Mackenzie, T., Jordan, C., Freund, L., Toze, S., … MacNutt, A. (2008). Task Effects on Interactive Search: The Query Factor. In N. Fuhr, J. Kamps, M. Lalmas, &amp; A. Trotman (Eds.), <em>Focused Access to XML Documents</em> (pp. 359–372). Springer Berlin Heidelberg. Retrieved from http://link.springer.com/chapter/10.1007/978-3-540-85902-4_31</li>
+<li id="wil04">Wildemuth, B. M. (2004). The Effects of Domain Knowledge on Search Tactic Formulation. <em>Journal of the American Society for Information Science and Technology</em>, <em>55</em>(3), 246–258.</li>
+<li id="zue00">Zue, V., Seneff, S., Glass, J. R., Polifroni, J., Pao, C., Hazen, T. J. &amp; Hetherington, L. (2000). JUPlTER: a telephone-based conversational interface for weather information. <em>IEEE Transactions on Speech and Audio Processing</em>, <em>8</em>(1), 85–96.
+ </li>
+</ul>
+<h3 style="text-align:center;">How to cite this paper</h3>
+   <div class="citing">Xiaojun, Y. &amp; Sa, N. (2017). User query behaviour in different task types in a spoken language vs. textual interface: a Wizard of Oz experiment, In <em>Proceedings of ISIC, the Information Behaviour Conference, Zadar, Croatia, 20-23 September, 2016: Part 2</em>. <em>Information Research, 22</em>(1), paper isic1615. Retrieved from http://InformationR.net/ir/22-1/isic/isic1615.html  (Archived by WebCite&reg; at http://www.webcitation.org/6oGdJGAHG)</div>
+ 
+ </section>
+</article>
+<br/>
+<section>
+<table class="footer" style="border-spacing:10px;">
+<tr>
+<td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: Verdana, Geneva, sans-serif; font-size: small; font-weight: bold;">
+ Find other papers on this subject</td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top;">
+<form action="http://scholar.google.com/scholar" method="get" target="_blank">
+<table class="footer">
+<tr>
+<td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;">
+<input name="q" type="hidden" value="user behaviour, speech interface, evaluation" /><br/>
+<input name="sa" style="font-size: small; font-family: Verdana, Geneva, sans-serif; font-weight: bold;" type="submit" value="Scholar Search"/>
+<input name="num" type="hidden" value="100"/> </td>
+</tr>
+</table>
+</form>
+</td>
+<td style="vertical-align:top; text-align:center;">
+<!-- Search Google -->
+<form action="http://www.google.com/custom" method="get" target="_blank">
+<table class="footer">
+<tr>
+<td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;">
+<input name="q" type="hidden" value="user behaviour, speech interface, evaluation" /><br/>
+<input name="sa" style="font-family: Verdana, Geneva, sans-serif; font-weight: bold; font-size: small;" type="submit" value="Google Search"/>
+<input name="client" type="hidden" value="pub-5081678983212084"/>
+<input name="forid" type="hidden" value="1"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="oe" type="hidden" value="ISO-8859-1"/>
+<input name="cof" type="hidden" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"/>
+<input name="hl" type="hidden" value="en"/>
+</td>
+</tr>
+</table>
+</form>
+</td>
+<td style="vertical-align:top; text-align:center;">
+<form action="http://www.bing.com" method="get" target="_blank">
+<table class="footer">
+<tr>
+<td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;">
+<input name="q" type="hidden" value="user behaviour, speech interface, evaluation" /> <br/>
+<input name="sa" style="font-size: small; font-family: Verdana, Geneva, sans-serif; font-weight: bold;" type="submit" value="Bing"/>
+<input name="num" type="hidden" value="100"/>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+<div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/22-1/isic/isic1615.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+<br/>
+ <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox" style="text-align:center;"></div>
+
+<hr/>
+<table class="footer" style="padding:10px;">
+<tr>
+<td style="text-align:center; vertical-align:top;">
+<br/>
+<div><a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={892932a5-aa03-ef44-955f-c29a4362987a}&template=simple" alt="Hit Counter by Digits" />
+</a></div>
+</td>
+<td class="footer" style="text-align:center; vertical-align:middle;">
+<div>&copy;the authors, 2017. <br/>Last updated: 14 Febrary, 2017</div>
+</td>
+<td style="text-align:center; vertical-align:middle;"> 
+
+ </td>
+</tr>
+</table>
+</section>
+<footer>
+<hr/>
+<table class="footer">
+<tr>
+<td>
+<div class="button">
+<ul style="text-align: center;">
+<li><a href="http://www.informationr.net/ir//22-1/isic/isic2016b.html">Contents</a> | </li>
+<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+<li><a href="../../irsindex.html">Subject index</a> | </li>
+<li><a href="../../search.html">Search</a> | </li>
+<li><a href="../../index.html">Home</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<hr/>
+</footer>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+ _uacct =
+ "UA-672528-1";
+ urchinTracker();
+ </script>
+ <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5046158704890f2e"></script> 
+</body>
+</html>

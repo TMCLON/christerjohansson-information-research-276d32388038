@@ -1,0 +1,2259 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title>
+      Analysis of collaboration and co-citation networks between researchers studying 'violence involving women'
+    </title>
+    <meta charset="utf-8">
+    <link href="../IRstyle4.css" rel="stylesheet" media="screen" title="serif"><!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="Analysis of collaboration and co-citation networks between researchers studying 'violence involving women'">
+    <meta name="author" content="Ana M. Muñoz-Muñoz, M. Dolores Mirón-Valdivieso">
+    <meta name="dcterms.subject" content="We analyse the collaboration and co-citation networks at the international level in scientific articles about violence against women. The aim is to identify who are writing about this subject, if they are women and/or men, who the most influential authors are and which institutions they belong to, and finally which authors are cited most frequently">
+    <meta name="description" content="We analyse the collaboration and co-citation networks at the international level in scientific articles about violence against women. The aim is to identify who are writing about this subject, if they are women and/or men, who the most influential authors are and which institutions they belong to, and finally which authors are cited most frequently. As a source of information we have consulted the Web of Science database, from which we recovered and analysed a total of 8,448 articles. We analysed a sample of 5,219 authors. For the social network analysis and the visualization of centrality measures, collaboration and cocitation we used the software programme Pajek. The collaboration density maps were visualised using VOSViewer. A total of 8,448 publications were analysed, showcasing the authors with a higher collaboration and cocitation centrality as well as their gender. We also present most influencial authors, their collaboration networks and the institutions to which they are affiliated. The results show that research into violence against women is led by women; they publish more articles than men; they collaborate more closely; they hold positions that enable them to channel and disseminate flows of information and collaboration groups; and they have closer links to other authors.">
+    <meta name="keywords" content="networks analysis, scientific collaboration, co-citation, violence against women,">
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/22-2/paper...">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/22-2/infres222.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2017-06-15">
+    <meta name="geo.placename" content="global">
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 22 no. 2, June, 2017
+      </h4>
+    </header>
+    <article>
+      <h1>
+        Analysis of collaboration and co-citation networks between researchers studying violence involving women
+      </h1><br>
+      <h2 class="author">
+        <a href="#author">Ana M. Muñoz-Muñoz</a> and <a href="#author">M. Dolores Mirón-Valdivieso</a>
+      </h2><br>
+      <blockquote>
+        <strong>Introduction</strong>. We analyse the collaboration and co-citation networks at the international level in scientific articles about violence against women. The aim is to identify who are writing about this subject, if they are women and/or men, who the most influential authors are and which institutions they belong to, and finally which authors are cited most frequently.<br>
+        <strong>Method</strong>. As a source of information we have consulted the Web of Science database, from which we recovered and analysed a total of 8,448 articles.<br>
+        <strong>Analysis</strong>. We analysed a simple of 5,219 authors. For the social network analysis and the visualization of centrality measures, collaboration and cocitation we used the software programme Pajek. The collaboration density maps were visualised using VOSViewer.<br>
+        <strong>Results</strong>. A total of 8,448 publications were analysed, showcasing the authors with a higher collaboration and cocitation centrality as well as their gender. We also present most influencial authors, their collaboration networks and the institutions to which they are affiliated.<br>
+        <strong>Conclusions</strong>.The results show that research into violence against women is led by women; they publish more articles than men; they collaborate more closely; they hold positions that enable them to channel and disseminate flows of information and collaboration groups; and they have closer links to other authors.
+      </blockquote><br>
+      <br>
+      <section>
+        <h2>
+          Introduction
+        </h2>
+        <p>
+          It is clear that in recent times, society as a whole has become increasingly aware of the seriousness of violence involving women and the great obstacle it presents for the democratic coexistence of men and women (<a href="#bosch">Bosch Fiol and Ferrer Pérez, 2000</a>).
+        </p>
+        <p>
+          Some of the bibliographic research before this study focused on compiling the contributions relating to the study of violence with women involved (<a href="#bowles">Bowles-Adarkwa and Kennedy, 1997</a>) and various bibliometric studies have been made analysing violence involving women from the perspective of different fields of science.
+        </p>
+        <p>
+          Researchers in psychology (<a href="#rodriguez">Rodríguez Franco, 2009</a>) analysed bibliographical productivity in relation to the term <em>domestic violence</em>, using the PsycINFO database as a source and offering data about year of publication, country, language, sex, age groups, journals and most productive authors. They also examined the victim-aggressor relationship in these publications, reflecting on the importance of the use of this term.
+        </p>
+        <p>
+          A study in the field of nursing (<a href="#rangel">Rángel da Silva, 2011</a>) identified and analysed the literature on violence involving women over the period 2000 to 2009, by reviewing the scientific literature in the nursing journals portal in the Brazilian Virtual Library on Health. This study identified ten publications that explicitly described the relationship of sexual violence and its implications in women’s health-care. They also analysed the articles and identified four categories: those that try to quantify and explain the phenomenon of violence, the relationship of the health professional to this phenomenon, the learning of violence and women’s relationships with husbands or partners.
+        </p>
+        <p>
+          Within the framework of research agendas, <a href="#jordan">Jordan (2009)</a> was struck by the wide scope of disciplines analysing violence against women. Jordan's review extends beyond prior reviews to explore the field's unique challenges, its community of scientists and the state of its written knowledge. The review argues for moving beyond <em>research agendas</em> and proposes the creation of a transdisciplinary science for the field of study of violence against women. In order to confirm her observations, <a href="#jordan">Jordan (2009)</a> analysed the communities of scientists, the methodologies they use and the funding of this kind of research. In the second part of her study, in order to demonstrate the multidisciplinary of the research and the increase in scientific literature on this topic from 1977 to 2007, she conducted a bibliometric analysis of the <em>PsycINFO</em>, <em>Sociological Abstracts</em>, <em>Social Work Abstracts</em>, <em>WestLaw</em> and <em>MEDLINE</em> databases.
+        </p>
+        <p>
+          <a href="#campos">Campos-Beltrán (2003)</a> presented an example in which the network analysis methodology was applied in a Mexican setting to the study of violence involving women. This study analysed networks formed between members of non-governmental organizations, government institutions and academie charged with implementing policies for the response to and prevention of domestic violence in three states in Mexico: Distrito Federal, Guanajuato and Puebla. The analysis was based on the premise that the existence of policy networks in which participants from non-governmental organizations, academia and government institutions come together favours the implementation of sexually-unbiased policies, in particular those relating to the prevention of and response to domestic violence. If the instruments and resources for coordination and solving public problems are shared, the network structure can facilitate the accomplishment of collective goals through the constant exchange of experiences. This enables the complementarity and dissemination of information, which accelerates the learning process for those involved.
+        </p>
+        <p>
+          Bibliometric studies of scientific collaboration have been carried out in various fields (<a href="#glanzel">Glänzel, 2002</a>; <a href="#lariviere">Lariviere, Gingras and Archambault, 2006</a>; <a href="#franceschet">Franceschet, 2011</a>; <a href="#liu">Liu <em>et al</em>., 2012</a>; <a href="#chang">Chang and Huang, 2013</a>; <a href="#han">Han <em>et al</em>., 2014</a>), offering a quantitative dimension of the frequency and the degree of cooperation between different scientists in the practice of their research. One of the methods used to study this collaboration is that of co-authorship network analysis, which focuses on the search for patterns of contacts or interactions between social actors. Other studies using network analysis focus on the relations through citations of bibliographic couplings (<a href="#garfield">Garfield, 1955</a>) and topical associations between papers using co-citations and revealing the intellectual structure of scientific fields (<a href="#small">Small, 1973</a>). Other papers study the similarity between six types of scholarly networks aggregated at the institution level, including bibliographic coupling networks, citation networks, co-citation networks, topical networks, co-authorship networks and co-word networks (<a href="#yan">Yan and Ding, 2010</a>).
+        </p>
+        <p>
+          Our investigation of collaboration and co-citation in research into violence involving women will allow researchers to identify the most influential groups in their subject based on the Web of Science, so that they can expand their field of action or join these groups, as well as enabling them to cite and/or obtain bibliographical information about the most productive authors.
+        </p>
+        <h2>
+          Objectives
+        </h2>
+        <p>
+          The general objective of this paper is to offer a panoramic view at an international level of collaboration and co-citation in scientific papers between authors investigating the subject of violence involving women. The specific objectives have been approached from the perspective of differences between the sexes. Categorising the authors by sex is important because it enables us to analyse the degree of collaboration between men and women on this subject. For this purpose, we established the following research objectives:
+        </p>
+        <ol>
+          <li>Analyse the scientific collaboration network between authors researching the question of violence involving women in order to find out how this community is structured according to network indicators, what are the most productive groups of researchers and which authors are well-connected and which are not.
+          </li>
+          <li>Study the degree of collaboration between the most productive authors and the universities to which they belong in order to find out how many groups of influential authors there are, how they are positioned in the network, how they are connected and which institutions they belong to.
+          </li>
+          <li>Analyse the co-citation networks in order to find out who are the most co-cited authors.
+          </li>
+        </ol>
+        <h2>
+          Materials and methods
+        </h2>
+        <p>
+          As a source of information we used the <a href="https://webofknowledge.com/">Web of Science</a> database. To make an exhaustive search, we made a selection of the most frequently used terms in the field of violence involving women so as to obtain the most suitable keywords. To determine the terms to search for, we selected various specialized glossaries: one specialized on gender-related health issues (Biblioteca Virtual Gensalud), two glossaries on gender studies and battered women (<a href="#centre">Centre Dolors Piera</a>; <a href="#claramunt">Claramunt, 1999</a>), a thesaurus on gender studies (<a href="#atria">Atria, 1992</a>) and two thesauri issued by the European Union (<a href="#european">European Commission 1998</a>, <a href="#equal">Equal, 2007</a>). These glossaries cover a wide variety of terms related to Women and Gender.
+        </p>
+        <p>
+          The search strategy was as follows:
+        </p>
+        <blockquote>
+          Topic=(("Battered women´s shelter" OR Femicide OR Feminicide OR "Wife battering" OR "Violence against women" OR "Gender violence" OR "Gender-based violence") OR (("Chauvinist violence" OR "Property violence" OR "Spousal abuse" OR "Sexual harassment" OR Beating OR Rape OR "Physical violence" OR "Domestic violence" OR "Family violence" OR "Violence in dating relationships" OR "Violence in relationships" OR "Dating violence" OR "Psychological violence" OR "Sexual violence") AND Wom?n))<br>
+          <br>
+          Timespan=1898-2012. Databases=SCI-EXPANDED, SSCI, A&amp;HCI, CPCI-S, CPCI-SSH.<br>
+          <br>
+          Lemmatization=On
+        </blockquote>
+        <p>
+          After restricting the search to scientific articles using the option <em>filter by type of document</em>, the number of results was 11,474. The consultation date was 11 February 2014.
+        </p>
+        <p>
+          We then exported our results to a bibliographic references manager for a review of the results, as in a brief initial analysis we found that some of these articles were not relevant to the subject we were analysing. The necessary and exhaustive review of these articles was done by selecting those that dealt exclusively with violence involving women. Once retrieved, the records were revised by experts in the field in order to ensure the quality of the data. It seems that in some cases the Web of Science database does not relate the term <em>women</em> with the keywords; a further problem was that the keyword <em>beating</em> has three possible meanings, in that in addition to <em>beating someone up</em>, it can also refer to the <em>beating of one's heart</em> and <em>beating someone in a competition</em>. In this way the final selection was reduced to 8,448 articles.
+        </p>
+        <p>
+          In this research we used social network analysis, a method commonly used in bibliometrics for the analysis of collaboration in scientific publications (<a href="#gonzalez">González-Alcaide, Aleixandre-Benavent, Navarro-Molina and Valderrama-Zurián, 2008</a>; <a href="#liu-bollen">Liu, Bollen, Nelson and Van de Sompel, 2005</a>). Social networks analysis allows us to identify the main working groups and networks that are actively producing scientific information, going beyond the existing formal structures for cooperation, thereby enabling the characterization of their scientific activity. This analysis also provides information that may be useful for assessing the degree of collaboration between authors and may lead to closer integration of the groups. In this research we have applied the centrality indicator defined by <a href="#freeman">Freeman (1979)</a> in three ways: degree, closeness and betweenness:
+        </p>
+        <ul>
+          <li>Degree: measures the level of communicative activity (the capacity to communicate directly with others)
+          </li>
+          <li>Closeness: measures independence (the capacity to reach many of the other members of the network directly, i.e. without relying on intermediaries)
+          </li>
+          <li>Betweenness: refers to the control authors exert over communication between others and their capacity to restrict it.
+          </li>
+        </ul>
+        <p>
+          We used the Pajek programme (<a href="#batagelj">Batagelj and Mrva, 2001</a>; <a href="#denooy">De Nooy, Mrvar and Batagelj 2011</a>) to build the network of co-authorships and calculate the network analysis measurements, and the VOSviewer (<a href="#vaneck">Van Eck and Waltman, 2010</a>) software to visualize the co-authorships. We applied the classical method proposed by Crane (1969) to classify the authors according to productivity. Authors with more than ten articles were considered as <em>large producers</em>, those with between five and nine articles were termed <em>moderate producers</em>, those with between two and four articles were dubbed <em>applicants</em> and those with just one published work were referred to <em>passers-by</em>. We decided to focus on the large and moderate producers in this classification, which enabled us to identify 5,219 researchers with a total of 3,417 published articles. We also established the sex of each author, performing a collaboration network analysis broken down by sex. We began by identifying the gender and normalising author names for those records in which the full author name did not appear. We accessed the original document or visited the authors’ personal Websites or those of the institutions to which they belonged in order to ensure that they were correctly identified.
+        </p>
+        <p>
+          The construction of the collaboration and co-citation networks of the authors was the result of a community of large and moderate producers as a whole. To interpret the results, we have calculated the centrality and intermediation values (<a href="#freeman">Freeman, 1979</a>) as well as the closeness value (<a href="#sabidussi">Sabidussi, 1966</a>). These indicators have allowed us to analyse the role of each node in the network. We have also analysed the clustering coefficient of each node, quantifying the connection or isolation of nodes (<a href="#watts">Watts D.J. y Strogatzs S, 1998</a>) and the potential structural holes of the network certain nodes may leave if removed from the network (<a href="#burt">Burt, 1992</a>). We also identified the most&nbsp;&nbsp; productive authors by applying the collaboration network analysis and the relevant measures of centrality (centrality and betweenness), and classified them by sex, institution and country. For the visualization of the collaboration and co-citation networks we used the Kamada-Kawai graph drawing algorithm included in the Pajek network analysis program.
+        </p>
+        <h2>
+          Results
+        </h2>
+        <h3>
+          Analysis of scientific collaboration between authors
+        </h3>
+        <p>
+          When we talk about a network of authors we are referring to researchers who have collaborated on and co-authored scientific papers. The applied network analysis shows that the authors with the highest collaboration density and therefore with the highest level of production are Jacquelyn C. Campbell, Sandra L. Martin, Frederick P. Rivara, Dean G. Kilpatrick, Jay Silverman, Rachel K. Jewkes, Cris M. Sullivan, Alytia A. Lendosky and Jeanette Norris. As can be seen in Figure 1 the largest red nuclei are located around Campbell, Kilpatrick and Silverman, so illustrating the fact that they have the highest degree of collaboration.
+        </p>
+        <figure class="centre">
+          <img src="p758fig1.jpg" alt="Relative density of authors at least five authors" width="566" height="350">
+          <figcaption>
+            <br>
+            <strong>Figure 1: Relative density of authors (Clusters with at least five authors). (Red: biggest producers; Yellow: medium; Green: low)</strong> [<a href="p758fig1.jpg" class="popup2" target="_blank">Click for larger image</a>]<br>
+          </figcaption>
+        </figure>
+        <p>
+          The number of collaborating authors in the network according to the criteria described above is 1,112, of whom 744 (66.9%) are women and 330 (29.7%) are men. We were unable to identify the sex of the remaining 38 (3.4%) authors, because their full name was not given or we were unable to locate their personal Websites.
+        </p>
+        <p>
+          The co-authorship network (Figure 2) shows the groups of co-authorship with the most relationships and greatest productivity in the centre, while the authors who work relatively unconnected are situated on the periphery. As regards the sex of the authors, it is clear that more female than male authors publish about violence involving women.
+        </p>
+        <figure class="centre">
+          <img src="p758fig2.jpg" alt="Network showing the collaboration between authors" width="545" height="292">
+          <figcaption>
+            <br>
+            <strong>Figure 2: Network showing the collaboration between authors (five published articles or more) on violence involving women (Green: Female; Red: Male; White: Sex unknown)</strong> [<a href="p758fig2.jpg" class="popup1" target="_blank">Click for larger image</a>]
+          </figcaption>
+        </figure>
+        <p>
+          Author collaboration was calculated using centrality measures: degree of centrality, degree of betweenness and closeness.
+        </p>
+        <p>
+          <em>Degree centrality</em> is the number of ties that each node has, in other words the number of authors to whom one author is directly linked. As can be seen in Table 1, most of the authors in the degree centrality ranking for research into violence involving women are women and there are very few men. Of the first ten positions, eight are women and two are men, although one of the men, Silverman, is in an important position as the author with the second highest centrality. The author with the highest centrality, and therefore the best known is Campbell, which makes her the most influential researcher in this field.
+        </p>
+        <table class="center" style="width:50%;">
+          <caption>
+            <br>
+            <strong>Table 1. Degree centrality of leading authors</strong>
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Degree centrality (%)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Campbell, Jacquelyn C.
+              </td>
+              <td style="text-align:center">
+                6.2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Silverman, Jay G.
+              </td>
+              <td style="text-align:center">
+                5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kaslow, Nadine J.
+              </td>
+              <td style="text-align:center">
+                4.2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Decker, Michele R.
+              </td>
+              <td style="text-align:center">
+                3.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Watts, Charlotte
+              </td>
+              <td style="text-align:center">
+                3.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kilpatrick, Dean G.
+              </td>
+              <td style="text-align:center">
+                3.4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Jewkes, Rachel K.
+              </td>
+              <td style="text-align:center">
+                3.4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Glass, Nancy
+              </td>
+              <td style="text-align:center">
+                3.4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sullivan, Cris M.
+              </td>
+              <td style="text-align:center">
+                3.2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Resnick, Heidi S.
+              </td>
+              <td style="text-align:center">
+                3.0
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Raj, Anita
+              </td>
+              <td style="text-align:center">
+                3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ellsberg, Mary
+              </td>
+              <td style="text-align:center">
+                3
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          As regards the <em>degree of betweenness</em>,this indicates the frequency with which a node appears in the shortest path (geodesic) that connects two others. As occurred with centrality, the results show that Campbell is the author with the highest degree of betweenness, which can be interpreted as her having certain control over the flow of information and the capacity to keep groups of co-authors separate.
+        </p>
+        <p>
+          Women occupy the first seven positions in the list, which means they have a much greater influence on the flow of information (Table 2).
+        </p>
+        <table class="center" style="width:50%;">
+          <caption>
+            <br>
+            Table 2. Degree of betweenness of leading authors
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Degree of betweenness (%)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Campbell, Jacquelyn C.
+              </td>
+              <td style="text-align:center">
+                0.027
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Martin, Sandra L.
+              </td>
+              <td style="text-align:center">
+                0.021
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Macy, Rebecca J.
+              </td>
+              <td style="text-align:center">
+                0.017
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Moracco, Kathryn E.
+              </td>
+              <td style="text-align:center">
+                0.015
+              </td>
+            </tr>
+            <tr>
+              <td>
+                McNutt, Louise-Anne
+              </td>
+              <td style="text-align:center">
+                0.013
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Norris, Jeanette
+              </td>
+              <td style="text-align:center">
+                0.013
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Lent, Barbara
+              </td>
+              <td style="text-align:center">
+                0.009
+              </td>
+            </tr>
+            <tr>
+              <td>
+                George, William H.
+              </td>
+              <td style="text-align:center">
+                0.008
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Coben, Jeffrey H.
+              </td>
+              <td style="text-align:center">
+                0.007
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kaslow, Nadine J.
+              </td>
+              <td style="text-align:center">
+                0.007
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Swartout, Kevin M.
+              </td>
+              <td style="text-align:center">
+                0.006
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Barth, Richard P.
+              </td>
+              <td style="text-align:center">
+                0.006
+              </td>
+            </tr>
+            <tr>
+              <td>
+                White, Jacquelyn W.
+              </td>
+              <td style="text-align:center">
+                0.006
+              </td>
+            </tr>
+            <tr>
+              <td>
+                OCampo, Patricia
+              </td>
+              <td style="text-align:center">
+                0.005
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Smith, Paige Hall
+              </td>
+              <td style="text-align:center">
+                0.005
+              </td>
+            </tr>
+            <tr>
+              <td>
+                McFarlane, Judith
+              </td>
+              <td style="text-align:center">
+                0.004
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Fisher, Bonnie S.
+              </td>
+              <td style="text-align:center">
+                0.004
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Holt, Victoria L.
+              </td>
+              <td style="text-align:center">
+                0.004
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wilt, Susan
+              </td>
+              <td style="text-align:center">
+                0.004
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Koenig, Michael A.
+              </td>
+              <td style="text-align:center">
+                0.003
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <em>Closeness</em> is the capacity to reach many of the other members of the network directly and it is calculated by adding, or computing the average of, the shortest distances between a node and the rest. Once again we see that the highest positions belong to women, with relatively limited presence of men. Although Campbell exhibits the lowest geodesic distance between the rest of the authors in the network (0.056%), its closeness value is similar to that of Moracco (0.052%) and Coben (0.051%). This reflects that she is not the only author with direct linkages to other authors (Table 3).
+        </p>
+        <table class="center" style="width:50%;">
+          <caption>
+            <br>
+            Table 3. Closeness measure of leading authors
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Closeness (%)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Campbell, Jacquelyn C.
+              </td>
+              <td style="text-align:center">
+                0.056
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Moracco, Kathryn E.
+              </td>
+              <td style="text-align:center">
+                0.052
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Coben, Jeffrey H.
+              </td>
+              <td style="text-align:center">
+                0.051
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Martin, Sandra L.
+              </td>
+              <td style="text-align:center">
+                0.049
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Lent, Barbara
+              </td>
+              <td style="text-align:center">
+                0.049
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Barth, Richard P.
+              </td>
+              <td style="text-align:center">
+                0.048
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ford-Gilboe, Marilyn
+              </td>
+              <td style="text-align:center">
+                0.047
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Varcoe, Colleen
+              </td>
+              <td style="text-align:center">
+                0.047
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wuest, Judith
+              </td>
+              <td style="text-align:center">
+                0.047
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Merritt-Gray, Marilyn
+              </td>
+              <td style="text-align:center">
+                0.046
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Glass, Nancy
+              </td>
+              <td style="text-align:center">
+                0.046
+              </td>
+            </tr>
+            <tr>
+              <td>
+                McFarlane, Judith
+              </td>
+              <td style="text-align:center">
+                0.046
+              </td>
+            </tr>
+            <tr>
+              <td>
+                OCampo, Patricia
+              </td>
+              <td style="text-align:center">
+                0.046
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wathen, C. Nadine
+              </td>
+              <td style="text-align:center">
+                0.045
+              </td>
+            </tr>
+            <tr>
+              <td>
+                MacMillan, Harriet L.
+              </td>
+              <td style="text-align:center">
+                0.045
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Halpern, Carolyn Tucker
+              </td>
+              <td style="text-align:center">
+                0.045
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sharps, Phyllis W.
+              </td>
+              <td style="text-align:center">
+                0.045
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Dienemann, Jacqueline
+              </td>
+              <td style="text-align:center">
+                0.045
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Jones, Alison Snow
+              </td>
+              <td style="text-align:center">
+                0.045
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          We then applied the network clustering coefficient to identify groups of authors, calculating for each node the total of connected links divided by the number of clique linkages (a clique is a subgraph every pair of nodes is connected). A high value indicates that the node is included in a clique. A low value or a value equal to zero means that the node is not connected to any group (Table 4).
+        </p>
+        <table class="center" style="width:50%;">
+          <caption>
+            <br>
+            <strong>Table 4.Authors with the lowest clustering coefficient</strong>
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Lowest clustering coefficient (%)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                White, Jacquelyn W.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Yoshihama, Mieko
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Saltzman, Linda E.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Jaffe, Peter G.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Muftic, Lisa R.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Patel, Vikram
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Postmus, Judy L.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Graham-Bermann, Sandra
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Angel, Ronald J.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Hill, Terrence D.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Radecki Breitkopf, Carmen
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Littleton, Heather
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Lira Ramos, Luciana
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Seng, Julia S.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Schei, Berit
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Messman-Moore, Terri L.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Haj-Yahia, Muhammad M.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cavanaugh, Courtenay E.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wilt, Susan
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Swanberg, Jennifer
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Btoush, Rula
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Paavilainen, Eija
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chamberland, Claire
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Edleson, Jeffrey L.
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Peled, Einat
+              </td>
+              <td style="text-align:center">
+                0.00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          By contrast, the authors with the highest clustering coefficient of 0.29 (Table 5), included Eldridge, Sharp, Howell, Gregory, Johnson, Baird, Dunne, Ramsay and Rutterford.
+        </p>
+        <table class="center" style="width:50%;">
+          <caption>
+            <br>
+            Table 5. Authors with the highest clustering coefficient
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Highest clustering coefficient (%)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Eldridge, Sandra
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sharp, Debbie
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Howell, Annie
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Gregory, Alison
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Johnson, Medina
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Baird, Kathleen
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Dunne, Danielle
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ramsay, Jean
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rutterford, Clare
+              </td>
+              <td style="text-align:center">
+                0.29
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          It is striking that although Campbell has the highest degree of centrality, betweenness and closeness, she does not have the highest clustering coefficient (0.19). This is probably due to the fact that she is not in a cluster as dense as the one of Eldridge.
+        </p>
+        <p>
+          It is important to detect structural holes in the network, that is, those nodes that, if removed, would disconnect clusters of authors, isolating them. Also, these disconnecting authors can extend their influence by collaborating with them (Burt, 1992). In this way an author can maximize his/her intermediation value as he/she can fill this gap, ending the so-called structural holes. The authors Bell, Hack, Geire and McCarthy are in key positions to change the direction of the network and their level of betweenness (Table 6).
+        </p>
+        <table class="center" style="width:50%;">
+          <caption>
+            <br>
+            Table 6: Structural holes
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Structural holes (%)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Bell, I
+              </td>
+              <td style="text-align:center">
+                1.389
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Hack, Lori
+              </td>
+              <td style="text-align:center">
+                1.389
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Geier, JL
+              </td>
+              <td style="text-align:center">
+                1.389
+              </td>
+            </tr>
+            <tr>
+              <td>
+                McCarthy, Sean C.
+              </td>
+              <td style="text-align:center">
+                1.275
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Donnermeyer, Joseph F.
+              </td>
+              <td style="text-align:center">
+                1.184
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Astedt-Kurki, Paivi
+              </td>
+              <td style="text-align:center">
+                1.184
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Havig, Kirsten
+              </td>
+              <td style="text-align:center">
+                1.179
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Houston, S
+              </td>
+              <td style="text-align:center">
+                1.174
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chapleau, Kristine M.
+              </td>
+              <td style="text-align:center">
+                1.167
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kraus, Shane W.
+              </td>
+              <td style="text-align:center">
+                1.167
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Levesque, Sylvie
+              </td>
+              <td style="text-align:center">
+                1.139
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Mouton, CP
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Lasser, NL
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Furniss, K
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nosbusch, Jane Morgan
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rice, Jessica
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kramer, Alice
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Naugle, AE
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Follette, VM
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Bechtle, AE
+              </td>
+              <td style="text-align:center">
+                1.125
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>
+          <em>Analysis of the most influential authors and the institutions to which they belong</em>
+        </h4>
+        <p>
+          We have identified the most productive authors in research on violence involving women, those with more than 100 collaborations. There are twenty-one authors in this group.
+        </p>
+        <p>
+          Figure 3 shows how the large producers are organized into five groups, three of which are connected and two unattached. The author who acts as a bridge between the three groups is Campbell, and the connections are possible due to the collaboration between Macy and Campbell, and Rivara, Abrahams and Leilani with Campbell and Watts. Since we are dealing with communities that have relatively few links between them, these authors play a very important role in the network, as they act as a bridge connecting the big groups which would otherwise be isolated.
+        </p>
+        <figure class="centre">
+          <img src="p758fig3.jpg" alt="Collaboration network of the most influential authors" width="600" height="322">
+          <figcaption>
+            <br>
+            <strong>Figure 3: Collaboration network of the most influential authors</strong>. [<a href="p758fig3.jpg" class="popup1" target="_blank">Click for larger image</a>]
+          </figcaption>
+        </figure>
+        <p>
+          If we apply the centrality measures to the network, we discover that Campbell is the author with the highest centrality and the highest betweenness (Table 7). As a result, and as happened in the network of large and moderate producers, she is the leader in research into violence involving women and serves as a bridge for other authors.
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 7. Degree of centrality and betweenness of the most productive authors
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Centrality
+              </th>
+              <th>
+                Authors
+              </th>
+              <th>
+                Betweenness
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Campbell, Jacquelyn C.
+              </td>
+              <td style="text-align:center">
+                238
+              </td>
+              <td>
+                Campbell, Jacquelyn C.
+              </td>
+              <td style="text-align:center">
+                0.484874
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Watts, Charlotte
+              </td>
+              <td style="text-align:center">
+                134
+              </td>
+              <td>
+                Watts, Charlotte
+              </td>
+              <td style="text-align:center">
+                0.298065
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kilpatrick, Dean G.
+              </td>
+              <td style="text-align:center">
+                68
+              </td>
+              <td>
+                Francisco, Leilani
+              </td>
+              <td style="text-align:center">
+                0.120876
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sullivan, Cris M.
+              </td>
+              <td style="text-align:center">
+                68
+              </td>
+              <td>
+                Abrahams, Naeemah
+              </td>
+              <td style="text-align:center">
+                0.120876
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rivara, Frederick P.
+              </td>
+              <td style="text-align:center">
+                34
+              </td>
+              <td>
+                Macy, Rebecca J.
+              </td>
+              <td style="text-align:center">
+                0.085332
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Macy, Rebecca J.
+              </td>
+              <td style="text-align:center">
+                4
+              </td>
+              <td>
+                Rivara, Frederick P.
+              </td>
+              <td style="text-align:center">
+                0.084003
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Francisco, Leilani
+              </td>
+              <td style="text-align:center">
+                4
+              </td>
+              <td>
+                Kilpatrick, Dean G.
+              </td>
+              <td style="text-align:center">
+                0.015221
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abrahams, Naeemah
+              </td>
+              <td style="text-align:center">
+                4
+              </td>
+              <td>
+                Sullivan, Cris M.
+              </td>
+              <td style="text-align:center">
+                0.015221
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Resnick, Heidi S.
+              </td>
+              <td style="text-align:center">
+                2
+              </td>
+              <td>
+                Resnick, Heidi S.
+              </td>
+              <td style="text-align:center">
+                0
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Of these twenty-one most influential authors, fifteen are women and six are men (Kilpatrick, Silverman, Rivara, George, Saunders and Ruggiero). Most belong to institutions from the United States except for one from South Africa and one from the United Kingdom. Five of these twenty-one authors belong to the Medical University of South Carolina, two to the John Hopkins Bloomberg School of Public Health, two to the George Washington University and two to the University of Washington, and one to each of Boston University, University of Pittsburgh Medical Center, University California San Diego, Emory University, John Hopkins University, the London School of Hygiene and Tropical Medicine, Michigan State University, the South African Medical Research Council, the University of New Mexico and the Virginia Commonwealth University (Table 8).
+        </p>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            <strong>Table 8: The most influential authors on violence involving women with details about sex, number of collaborations, institution and country</strong>
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Authors
+              </th>
+              <th>
+                Sex
+              </th>
+              <th>
+                Collaborations
+              </th>
+              <th>
+                Institution
+              </th>
+              <th>
+                Country
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Kilpatrick, Dean G.
+              </td>
+              <td>
+                M
+              </td>
+              <td style="text-align:center">
+                296
+              </td>
+              <td>
+                Medical University of South Carolina. Dept. of Psychiatry and Behavioral Sciences. National Crime Victims Research &amp; Treatment Center
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Resnick, Heidi S.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                284
+              </td>
+              <td>
+                Medical University of South Carolina. Dept. of Psychiatry and Behavioral Sciences. National Crime Victims Research &amp; Treatment Center
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Silverman, Jay G.
+              </td>
+              <td>
+                M
+              </td>
+              <td style="text-align:center">
+                256
+              </td>
+              <td>
+                University California San Diego. Dept. of Medicine Division of Global Public Health - School of Medicine
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Campbell, Jacquelyn C.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                244
+              </td>
+              <td>
+                Johns Hopkins Bloomberg School of Public Health. Dept. of Health Policy and Management
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Decker, Michele R.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                212
+              </td>
+              <td>
+                Johns Hopkins Bloomberg School of Public Health. Dept. of Population, Family and Reproductive Health
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Raj, Anita
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                194
+              </td>
+              <td>
+                Boston University. Dept. of Medicine. School of Public Health
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Jewkes, Rachel K.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                176
+              </td>
+              <td>
+                South African Medical Research Council. MRC Gender &amp; Health Unit
+              </td>
+              <td>
+                SAF
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kaslow, Nadine J.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                146
+              </td>
+              <td>
+                Emory University. Dept. of Psychiatry and Behavioral Sciences
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ruggiero, Kenneth J.
+              </td>
+              <td>
+                M
+              </td>
+              <td style="text-align:center">
+                138
+              </td>
+              <td>
+                Medical University of South Carolina. Dept. of Psychiatry and Behavioral Sciences. National Crime Victims Research &amp; Treatment Center
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Glass, Nancy
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                134
+              </td>
+              <td>
+                Johns Hopkins University. Dept. of Community-Public Health. Center for Global Health
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Amstadter, Ananda B.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                130
+              </td>
+              <td>
+                Virginia Commonwealth University. Dept. of Psychiatry. Virginia Institute for Psychiatric and Behavioral Genetics / VCU Women's Health
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Watts, Charlotte
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                128
+              </td>
+              <td>
+                London School of Hygiene &amp; Tropical Medicine. Dept. of Global Health and Development
+              </td>
+              <td>
+                UK
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rivara, Frederick P.
+              </td>
+              <td>
+                M
+              </td>
+              <td style="text-align:center">
+                126
+              </td>
+              <td>
+                University of Washington. Dept. of Epidemiology. School of Public Health
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                McCauley, Jenna L.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                124
+              </td>
+              <td>
+                Medical University of South Carolina. Dept. of Psychiatry and Behavioral Sciences. National Crime Victims Research &amp; Treatment Center
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                George, William H.
+              </td>
+              <td>
+                M
+              </td>
+              <td style="text-align:center">
+                124
+              </td>
+              <td>
+                University of Washington. Dept. of Psychology
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sullivan, Cris M.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                114
+              </td>
+              <td>
+                Michigan State University. Dept. of Psychology. Violence Against Women Research and Outreach Initiative
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ellsberg, Mary
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                110
+              </td>
+              <td>
+                The George Washington University. School of Public Health and Health Services / Global Women's Institute
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Reed, Elizabeth
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                108
+              </td>
+              <td>
+                The George Washington University. Dept. of Prevention and Community Health. School of Public Health and Health Services
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Yeater, Elizabeth A.
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                108
+              </td>
+              <td>
+                The University of New Mexico. Dept. of Psychology
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Saunders, Benjamin E.
+              </td>
+              <td>
+                M
+              </td>
+              <td style="text-align:center">
+                104
+              </td>
+              <td>
+                Medical University of South Carolina. Dept. of Psychiatry and Behavioral Sciences. National Crime Victims Research &amp; Treatment Center
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Miller, Elizabeth
+              </td>
+              <td>
+                F
+              </td>
+              <td style="text-align:center">
+                104
+              </td>
+              <td>
+                University of Pittsburgh Medical Center - Children’s Hospital of Pittsburgh of UPMC. Division of Adolescent Medicine
+              </td>
+              <td>
+                USA
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          At first glance we can see that the large producers of research on violence involving women are concentrated in North American universities and that most of the work is done by women. There are few male researchers on this list, although two of the first five positions are men from the Medical University of South Carolina and the University of California San Diego, respectively.
+        </p>
+        <p>
+          It should also be noted that the institution with most collaborations is the Medical University of South Carolina, which has more male authors (three) than female (two), all of whom are assigned to the same research centre: National Crime Victims Research &amp; Treatment Center. Similarly, at the University of Washington, although they belong to different departments, the authors with most connections in research into violence involving women are men.
+        </p>
+        <p>
+          We also discovered that the members of the three interconnected groups (Campbell, Watts and Rivara) belong to different institutions: John Hopkins Bloomberg School of Public Health (USA), the London School of Hygiene and Tropical Medicine (UK) and the University of Washington (USA). The unattached authors (Kilpatrick and Sullivan) belong to the Medical University of South Carolina and Michigan State University, both in the United States.
+        </p>
+        <h4>
+          <em>Co-citation analysis</em>
+        </h4>
+        <p>
+          We identified the existing co-citation relationship by analysing the large and moderate producers, and we determined who the more co-cited authors are in order to establish the intellectual structure of the area. To this endwe drew up a co-citation network and calculated the degrees of centrality, closeness and betweenness. Figure 4 shows the main nodes in the centre of the image and those with less co-citation on the edges. Each node also appears with its number of citations alongside in brackets and characterised by a particular colour, while the shape of the node (triangle or circle) illustrates the author’s sex.
+        </p>
+        <figure class="centre">
+          <img src="p758fig4.jpg" alt="Analysis of co-citation of the large and moderate producers" width="550" height="295">
+          <figcaption>
+            <br>
+            <br>
+            <strong>Figure 4: Analysis of co-citation of the large and moderate producers (Triangle: Woman; Circle: Man)</strong> [<a href="p758fig4.jpg" class="popup1" target="_blank">Click for a larger image</a>]
+          </figcaption>
+        </figure>
+        <p>
+          One hundred and ninety-seven authors were identified in the co-citation network. Of these, 136 (69.0%) are women and 53 (26.9%) are men (4% undetermined). According to the co-citation network (Table 9), Campbell is the author with the highest centrality values and Koss the one with the highest intermediation and closeness.
+        </p>
+        <table class="center" style="width:95%;">
+          <caption>
+            <br>
+            Table 9. Centrality, closeness and betweenness of co-citation
+          </caption>
+          <tbody>
+            <tr>
+              <th style="width:16%;">
+                Authors
+              </th>
+              <th>
+                Degree of centrality
+              </th>
+              <th style="width:16%;">
+                Authors
+              </th>
+              <th>
+                Degree of closeness
+              </th>
+              <th style="width:16%;">
+                Authors
+              </th>
+              <th>
+                Degree of betweenness
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Campbell, JC
+              </td>
+              <td style="text-align:center">
+                44
+              </td>
+              <td>
+                Koss, MP
+              </td>
+              <td style="text-align:center">
+                0.198
+              </td>
+              <td>
+                Koss, MP
+              </td>
+              <td style="text-align:center">
+                0.222
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Koss, MP
+              </td>
+              <td style="text-align:center">
+                40
+              </td>
+              <td>
+                Campbell, JC
+              </td>
+              <td style="text-align:center">
+                0.149
+              </td>
+              <td>
+                Macy, RJ
+              </td>
+              <td style="text-align:center">
+                0.217
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Decker, MR
+              </td>
+              <td style="text-align:center">
+                26
+              </td>
+              <td>
+                Macy, RJ
+              </td>
+              <td style="text-align:center">
+                0.086
+              </td>
+              <td>
+                Norris, J
+              </td>
+              <td style="text-align:center">
+                0.216
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Norris, J
+              </td>
+              <td style="text-align:center">
+                24
+              </td>
+              <td>
+                Gidycz, CA
+              </td>
+              <td style="text-align:center">
+                0.085
+              </td>
+              <td>
+                Smith, PH
+              </td>
+              <td style="text-align:center">
+                0.215
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Testa, M
+              </td>
+              <td style="text-align:center">
+                24
+              </td>
+              <td>
+                Mccauley, JL
+              </td>
+              <td style="text-align:center">
+                0.074
+              </td>
+              <td>
+                Campbell, JC
+              </td>
+              <td style="text-align:center">
+                0.213
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abbey, A
+              </td>
+              <td style="text-align:center">
+                20
+              </td>
+              <td>
+                Norris, J
+              </td>
+              <td style="text-align:center">
+                0.074
+              </td>
+              <td>
+                Moracco, KE
+              </td>
+              <td style="text-align:center">
+                0.212
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Livingston, JA
+              </td>
+              <td style="text-align:center">
+                20
+              </td>
+              <td>
+                Campbell, R
+              </td>
+              <td style="text-align:center">
+                0.064
+              </td>
+              <td>
+                Coker, AL
+              </td>
+              <td style="text-align:center">
+                0.208
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Macy, RJ
+              </td>
+              <td style="text-align:center">
+                20
+              </td>
+              <td>
+                Smith, PH
+              </td>
+              <td style="text-align:center">
+                0.061
+              </td>
+              <td>
+                White, JW
+              </td>
+              <td style="text-align:center">
+                0.206
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Raj, A
+              </td>
+              <td style="text-align:center">
+                20
+              </td>
+              <td>
+                Decker, MR
+              </td>
+              <td style="text-align:center">
+                0.049
+              </td>
+              <td>
+                Campbell, R
+              </td>
+              <td style="text-align:center">
+                0.202
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Coker, AL
+              </td>
+              <td style="text-align:center">
+                18
+              </td>
+              <td>
+                Coker, AL
+              </td>
+              <td style="text-align:center">
+                0.040
+              </td>
+              <td>
+                Abrahams, N
+              </td>
+              <td style="text-align:center">
+                0.198
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Buck, PO
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Moracco, KE
+              </td>
+              <td style="text-align:center">
+                0.039
+              </td>
+              <td>
+                Martin, SL
+              </td>
+              <td style="text-align:center">
+                0.197
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Campbell, R
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Abrahams, N
+              </td>
+              <td style="text-align:center">
+                0.030
+              </td>
+              <td>
+                Jewkes, R
+              </td>
+              <td style="text-align:center">
+                0.196
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Davis, KC
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Jewkes, R
+              </td>
+              <td style="text-align:center">
+                0.028
+              </td>
+              <td>
+                Decker, MR
+              </td>
+              <td style="text-align:center">
+                0.196
+              </td>
+            </tr>
+            <tr>
+              <td>
+                George, WH
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Kilpatrick, DG
+              </td>
+              <td style="text-align:center">
+                0.028
+              </td>
+              <td>
+                Testa, M
+              </td>
+              <td style="text-align:center">
+                0.192
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Kilpatrick, DG
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Sullivan, CM
+              </td>
+              <td style="text-align:center">
+                0.027
+              </td>
+              <td>
+                Abbey, A
+              </td>
+              <td style="text-align:center">
+                0.191
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Mcauslan, P
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Mcnutt, LA
+              </td>
+              <td style="text-align:center">
+                0.021
+              </td>
+              <td>
+                Kupper, LL
+              </td>
+              <td style="text-align:center">
+                0.187
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Mcnutt, LA
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Fisher, BS
+              </td>
+              <td style="text-align:center">
+                0.021
+              </td>
+              <td>
+                Nurius, PS
+              </td>
+              <td style="text-align:center">
+                0.186
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Moracco, KE
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Frye, V
+              </td>
+              <td style="text-align:center">
+                0.020
+              </td>
+              <td>
+                Miller, E
+              </td>
+              <td style="text-align:center">
+                0.186
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Saunders, BE
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Fitzgerald, LF
+              </td>
+              <td style="text-align:center">
+                0.020
+              </td>
+              <td>
+                Livingston, JA
+              </td>
+              <td style="text-align:center">
+                0.184
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Silverman, JG
+              </td>
+              <td style="text-align:center">
+                16
+              </td>
+              <td>
+                Weaver, TL
+              </td>
+              <td style="text-align:center">
+                0.020
+              </td>
+              <td>
+                Mccloskey, LA
+              </td>
+              <td style="text-align:center">
+                0.182
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>
+          Conclusions
+        </h2>
+        <p>
+          This study shows that, in general, women lead research into violence against women; they publish more articles than men, they have a higher degree of collaboration; they occupy positions of centrality in the social network and collaboration groups, and they are closer to other authors. We should not forget, however, that some male authors, such as Silverman and Kilpatrick (both in the top three in terms of number of publications) are also leaders in this field. Although in general women play a greater role in research into violence against women, it is clear that this subject is of interest to both women and men in the research community.
+        </p>
+        <p>
+          By analysing scientific collaboration, we discovered the hubs of the most productive researchers, represented by Campbell, Rivara, Kilpatrick, Silverman, Jewkes, Watts and Sullivan. Of all these, Campbell is the researcher of reference in the field of violence against women: she has a higher degree of centrality, betweenness and closeness because she acts as a bridge author and thereby as a connection for other groups, thanks to which she is capable of influencing or of being influenced more quickly. She also has a greater capacity to reach other authors.
+        </p>
+        <p>
+          In our analysis of the collaboration of the most influential authors we identified five groups, represented by Campbell, Watts, Rivara, Kilpatrick and Sullivan. Three of them are connected by the betweenness of Campbell, while the other two are unattached. All of the leading authors belong to North American institutions with the exception of Watts, who belongs to a British university, in spite of which she is most connected with Kilpatrick and Sullivan, who are both American. As it occurred before, Campbell is the leading author due to her centrality and her importance as a bridge for other authors, something which is possible due to her collaboration with Macy, Abrahams and Leilani.
+        </p>
+        <p>
+          Of the authors with the highest degree of collaboration 71.5% are women and 28.5% are men. This shows that there is influence between the large producers of research on violence against women depending upon the institution to which they belong and whether they are from the United States or from another country. The Medical University of South Carolina and the Johns Hopkins Bloomberg School of Public Health have the highest number of collaborations. The difference is that in the former institution, its five authors belong to the same department, Psychiatry and Behavioral Sciences, and are members of the same centre, the National Crime Victims Research &amp; Treatment Center; whereas in the latter the two researchers belong to different departments (Health Policy and Management, and Population, Family and Reproductive Health), which highlights the interdisciplinary nature of the research, as occurs with the two researchers from the University of Washington.
+        </p>
+        <p>
+          The co-citation analysis has revealed that Campbell is the most cited and co-cited author, although she does not have the highest degree of closeness or of betweenness. By contrast Koss has a higher closeness and betweenness, which means that she has more influence than her fellow authors over the advance of research into violence involving women. Co-citation links are made up mostly of women with a figure of 68.2% compared to 27.2% for men.
+        </p>
+        <p>
+          This study has shown that women play a key role in research on violence involving women. It is women above all that publish on an issue that affects them directly. It is women that tackle the different issues, the physicaland psychological healing and resolution of the victims, even though this is a social problem that has repercussions for both men and women. We have decided to expand this work by making an even more exhaustive bibliometric study of the evolution of the literature, the journals in which they have published, the specific fields of knowledge and the most frequently used descriptors.
+        </p>
+        <h2>
+          Acknowledgements
+        </h2>
+        <p>
+          We would like to thank Nicolás Robinson García colleague from our research group (Evaluation of Science and Scientific Communication from the University of Granada), Mª Carmen Espinola our translator and collegue from our Institute de Research Study of Women and Gender and Francisco J. Martín Fernández our computer assistant and friend.
+        </p>
+        <h2 id="author">
+          About the authors
+        </h2>
+        <p>
+          <strong>Ana M. Muñoz-Muñoz</strong>. Associate Professor of the Department of Information and Communication from the University of Granada. Member of the EC3 Research Group from the University of Granada. Currently Director of the Institute de Recherche Study of Women and Gender at the same university, development Center where my research. She can be contacted at anamaria@ugr.es.<br>
+          <strong>M. Dolores Mirón-Valdivieso</strong>. Master in Information and Scientific Communication from the University of Granada. Collaborating member of the EC3 Research Group from the same university. She can be contacted at lonli@correo.ugr.es.
+        </p>
+      </section>
+      <section class="refs">
+        <h2>
+          References
+        </h2>
+        <ul class="refs">
+          <li id="atria">Atria: Institute on Gender Equality and Women's History (1992). <a href="http://www.webcitation.org/6aBg46dlF"><em>Women's thesaurus</em></a>. Amsterdam: Atria. Retrieved from http://www.atria.nl/atria/eng/library_and_archive/vrouwenthesaurus. (Archived by WebCite® at http://www.webcitation.org/6aBg46dlF).
+          </li>
+          <li id="batagelj">Batagelj, V. &amp; Mrvar, A. (2001). Pajek (version 0.70). Program for large network analysis. Ljubljana: University of Ljubljana.
+          </li>
+          <li>Biblioteca Virtual Gensalud. <a href="http://www.webcitation.org/6aBgkWmPL"><em>Glosario género y salud</em>.</a> [Gender and Health Glossary]. San José: Universidad de Costa Rica. Retrieved from http://genero.bvsalud.org/dol/docsonline/7/8/287-166-Glosario.htm. (Archived by WebCite® at http://www.webcitation.org/6aBgkWmPL).
+          </li>
+          <li id="bosch">Bosch Fiol, E. &amp; Ferrer Pérez, V. A. (2000). <a href="http://www.webcitation.org/6aBhEnFpd">La violencia de género: de cuestión privada a problema social</a>. [Gender violence: from a private issue to a social problem]. <em>Psychosocial Intervention</em>, <em>9</em>(1). Retrieved from http://www.redalyc.org/articulo.oa?id=179818244002. (Archived by WebCite ® at http://www.webcitation.org/6aBhEnFpd).
+          </li>
+          <li id="bowles">Bowles-Adarkwa, L. &amp; Kennedy, A. (1997). Global priorities for women: a bibliography of resources and research strategies. <em>Women’s Studies International Forum, 20</em>(1), 165-178.
+          </li>
+          <li id="burt">Burt, R. S. (1992). <em>Structural holes: the social structure of competition</em>. Cambridge, MA; Harvard University Press.
+          </li>
+          <li id="campos">Campos-Beltrán, M.R. (2003). <a href="http://www.webcitation.org/6aBhP6XR6">Análisis de redes de políticas en la prevención y atención de la violencia familiar</a>. [Analysis of policy networks in the prevention and treatment of family violence]. <em>Redes: Revista hispana para el análisis de redes sociales, 4</em>(1). Retrieved from http://revista redes.rediris.es/webredes/textos/cancun rosariocampos.htm. (Archived by WebCite® at http://www.webcitation.org/6aBhP6XR6).
+          </li>
+          <li id="centre">Centre Dolors Piera (CDP) d'Igualtat d'Oportunitats i Promoció de les Dones. (2010). <a href="http://www.webcitation.org/6aBw4lSwJ"><em>Glosario sobre violencia de genero</em></a>. [Glossary on gender violence]. Lleida, Spain: Universitat de Lleida. Retrieved from http://www.cdp.udl.cat/home/index.php/es/asesorarse/violencia-de-genero/glosario-sobre-violencia. (Archived by WebCite® at http://www.webcitation.org/6aBw4lSwJ).
+          </li>
+          <li id="chang">Chang, H. W. &amp; Huang, M. H. (2013). Prominent institutions in international collaboration network in astronomy and astrophysics. <em>Scientometrics, 97</em>(2), 443–460.
+          </li>
+          <li id="claramunt">Claramunt, M. C. (1999). <a href="http://www.webcitation.org/6aBwWqoCd"><em>Mujeres maltratadas: guía de trabajo para la intervención en crisis</em></a>. [Battered women: working guide for crisis intervention]. San José, Costa Rica: Organización Panamericana de la Salud, Programa Mujer, Salud y Desarrollo. Retrieved from http://www.paho.org/spanish/hdp/hdw/gph1.pdf. (Archived by WebCite® at http://www.webcitation.org/6aBwWqoCd).
+          </li>
+          <li id="crane">Crane, D. (1969). <a href="http://www.webcitation.org/6aBwuGJp6">Social structure in a group of scientists: a test of the “invisible college" hypothesis</a>. <em>American Sociological Review, 34</em>(3), 335-352. Retrieved from http://www.jstor.org/stable/2092499?seq=1#page_scan_tab_contents. (Archived by WebCite® at http://www.webcitation.org/6aBwuGJp6).
+          </li>
+          <li id="denooy">De Nooy, W., Mrvar, A. &amp; Batagelj, V. (2011). <em>Exploratory social network analysis with Pajek</em>. New York, NY: Cambridge University Press.
+          </li>
+          <li id="european">European Commission. (1998). <a href="http://www.webcitation.org/6aBx3MMMO"><em>100 palabras para la igualdad. Glosario de términos relativos a la igualdad entre hombres y mujeres</em></a>. [100 words for equality. Glossary of terms on equality between men and women]. Luxembourg: European Commission, Directorate-General for Employment, Labour Relations and Social Affairs. Retrieved from http://www.europarl.europa.eu/transl_es/plataforma/pagina/celter/glosario_genero.htm#G. (Archived by WebCite ® at http://www.webcitation.org/6aBx3MMMO).
+          </li>
+          <li id="franceschet">Franceschet, M. (2011). Collaboration in computer science: a network science approach. <em>Journal of the American Society for Information Science and Technology, 62</em>(10), 1992–2012.
+          </li>
+          <li id="freeman">Freeman L.C. (1979). Centrality in social networks: conceptual clarification. <em>Social Networks, 1</em>(3), 215–239.
+          </li>
+          <li id="garfield">Garfield, E. (1955). Citation indexes for science. <em>Science, 122</em>(3159), 108-111.
+          </li>
+          <li id="glanzel">Glänzel, W. (2002). Coauthorship patterns and trends in the sciences (1980–1998): a bibliometric study with implications for database indexing and search strategies. <em>Library Trends, 50</em>(3), 461–473.
+          </li>
+          <li id="gonzalez">González-Alcaide, G., Aleixandre-Benavent, R., Navarro-Molina, C. &amp; Valderrama-Zurián, J. C. (2008). Coauthorship networks and institutional collaboration patterns in reproductive biology. <em>Fertility and sterility, 90</em>(4), 941-956.
+          </li>
+          <li id="han">Han, P., Shi, J., Li, X., Wang, D., Shen, S. &amp; Su, X. (2014). International collaboration in LIS: global trends and networks at the country and institution level. <em>Scientometrics, 98</em>(1), 53-72.
+          </li>
+          <li id="jordan">Jordan, C. E. (2009). Advancing the study of violence against women: evolving research agendas into science. <em>Violence Against Women, 15</em>(4), 393-419.
+          </li>
+          <li id="lariviere">Lariviere, V., Gingras, Y. &amp; Archambault, E. (2006). Canadian collaboration networks: a comparative analysis of the natural sciences, social sciences and the humanities. <em>Scientometrics, 68</em>(3), 519–533.
+          </li>
+          <li id="liu-bollen">Liu, X., Bollen, J., Nelson, M. L. &amp; Van de Sompel, H. (2005). Co-authorship networks in the digital library research community.&nbsp; <em>Information processing &amp; management, 41</em>(6), 1462-1480.
+          </li>
+          <li id="liu">Liu, H. I., Chang, B. C. &amp; Chen, K. C. (2012). Collaboration patterns of Taiwanese scientific publications in various research areas. <em>Scientometrics, 92</em>(1), 145–155.
+          </li>
+          <li id="equal">Proyecto EQUAL “En clave de culturas”. (2007).&nbsp;<em><a href="http://www.webcitation.org/6niRaMEk1">Glosario de términos relacionados con la transversalidad de género</a></em>. [Glossary of terms relating to gender mainstreaming]. Secretaría Técnica del Proyecto Equal “En Clave de Culturas”. (Archived by WebCite® at http://www.webcitation.org/6niRaMEk1).
+          </li>
+          <li>Project ICEBERG. (2011). <em>What is ICEBERG—community embrace?</em> Retrieved from http://www.iceberg-project.eu/en/contents/pages/view/descripcion-general. (Archived by WebCite® at http://www.webcitation.org/6aBxVqtWn).
+          </li>
+          <li id="rangel">Rangel da Silva, L., Domingues Bernardes Silva, M., Mota Xavier de Meneses, T., Rodríguez Borrego, M.A., Meneses dos Santos, I.M. &amp; Lemos, A. (2011). <a href="http://www.webcitation.org/6aBxk0jWT">El fenómeno de la violencia de género en la mujer a partir de la producción científica de enfermería</a>. [The phenomenon of domestic violence on women from nursing scientific production]. <em>Enfermería Global, 10</em>(2). Retrieved from http://revistas.um.es/eglobal/article/view/123591/116911. (Archived by WebCite® at http://www.webcitation.org/6aBxk0jWT).
+          </li>
+          <li id="rodriguez">Rodríguez Franco, L., López-Cepero, J. &amp; Rodríguez Díaz, F. J. (2009). Violencia doméstica: una revisión bibliográfica y bibliométrica. [Domestic violence: a bibliographic and bibliometric review] <em>Psicothema, 21</em>(2), 248-254.
+          </li>
+          <li id="sabidussi">Sabidussi, G. (1966). The centrality index of a graph. <em>Psychometrika, 31</em>(4), 581–603.
+          </li>
+          <li id="small">Small, H. (1973). Cocitation in the scientific literature: a new measure of the relationship between two documents. <em>Journal of the American Society for Information Science, 24</em>(4), 265-269.
+          </li>
+          <li id="usa10">United States. <em>National Center for Injury Prevention and Control</em>. (2010). The national intimate partner and sexual violence survey (NISV). Atlanta, GA: National Center for Injury, Prevention and Control. Division of Violence Prevention. Retrieved from http://www.cdc.gov/violenceprevention/nisvs/. (Archived by WebCite® at http://www.webcitation.org/6aBxu43oX).
+          </li>
+          <li id="vaneck">Van Eck, N.J. &amp; Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. <em>Scientometrics, 84</em>(2), 523-538.
+          </li>
+          <li id="watts">Watts, D. J. &amp; Strogatz, S. (1998). Collective dynamics of small-world networks. <em>Nature, 393</em>(6682), 440-442.
+          </li>
+          <li id="yan">Yan, E. &amp; Ding, Y. (2012) Scholarly network similarities: how bibliographic coupling networks, citation networks, cocitation networks, topical networks, coauthorship networks, and coword networks relate to each other. <em>Journal of the American Society for Information Science and Technology, 63</em>(7), 1313–1326.
+          </li>
+        </ul>
+        <h4 style="text-align:center;">
+          How to cite this paper
+        </h4>
+        <div class="citing">
+          Muñoz-Muñoz, A.M. &amp; Mirón-Valdivieso, M.D. (2017). Analysis of collaboration and co-citation networks between researchers studying 'violence involving women'. <em>Information Research, 22</em>(2), paper 758. Retrieved from http: informationr.net/ir/22-2/paper758.html (Archived by WebCite® at http://www.webcitation.org/6r5U5gOsZ).
+        </div>
+      </section>
+    </article><br>
+    <section>
+      <p style="text-align:center;">
+        &nbsp;
+      </p>
+      
+      <br>
+      
+      
+      <hr>
+    </section>
+    
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer><!-- Go to www.addthis.com/dashboard to customize your tools -->
+  </body>
+</html>

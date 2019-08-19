@@ -1,0 +1,426 @@
+<!doctype html>  
+ <html>  
+ <head>  
+ <title>How do children reformulate their search queries?</title>  
+<meta charset=utf-8 />
+ <link href="../../IRstyle3.css" rel="stylesheet" media="screen" title="serif" />  
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="How do children reformulate their search queries?" />  
+ <meta name="author" content="Sophie Rutter, Nigel Ford, Paul Clough" />  
+ <meta name="dcterms.subject" content="Give a brief description of your paper" />  
+ <meta name="description" content="This paper investigates techniques used by children in year 4 (age eight to nine) of a UK primary school to reformulate their queries, and how they use information retrieval systems to support query reformulation. An in-depth study analysing the interactions of twelve children carrying out search tasks in a primary school lesson; including observations, search recordings, post-task interviews and teacher interview. The search screen recordings were analysed for task performance. The queries were categorised using both Broder's taxonomy (2002) and query reformulation type schemes. The interviews and observations were analysed inductively using thematic analysis. Children reformulated queries by switching information retrieval system, extracting information from search results, and by using did you mean and auto-complete functionality. The children also reformulated queries by using previous queries, correcting errors, and making their queries more specific. The type of query reformulation support the children used varied according to the type of query entered, with children submitting both question queries and broad-based topic queries. The children mostly reformulated queries based on their interactions with information retrieval systems, rather than their prior knowledge. Search systems could further support children by (1) tailoring tools to the type of query (question / broad-based) entered, (2) making suggestions for the narrowing of queries as the children found this particularly difficult (3) accommodating children's linear scanning of search results as this led to unnecessary query reformulations." />  
+ <meta name="keywords" content="children, human-computer interaction, information behaviour, information retrieval, information searching, search engines" />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+ <meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="Professor T.D. Wilson" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/20-1/isic2/isic..." />  
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/20-1/infres201.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2015-03-15" /> 
+  <meta name="geo.placename" content="global" />  
+
+ 
+ <script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+
+	</script> 
+
+</head> 
+  
+ <body> 
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 20  no. 1, March, 2015</span>
+<br /><br /> 
+<div class="button">
+ <ul> 
+ <li><a href="isic2.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../../search.html">Search</a> |  </li> 
+ <li><a href="../../index.html">Home</a> </li> 
+ </ul>
+ </div>
+<hr />Proceedings of ISIC: the information behaviour conference, Leeds, 2-5 September, 2014: Part 2.
+ <hr />
+ </header>
+ <article>
+ <h1>How do children reformulate their search queries?</h1>  <br />  
+ <div style="margin-left: 5%; margin-right:10%;"> 
+ <h4><a href="isic31.html#author">Sophie Rutter, Nigel Ford</a> and <a href="isic31.html#author">Paul Clough</a><br />
+ Information School, University of Sheffield, Regent Court, 211 Portobello, Sheffield, South Yorkshire, U.K., S1 4DP</h4>  
+ </div>  
+ <br /> 
+
+ <form>  <fieldset>  <legend>Abstract </legend>
+ <blockquote>
+ <strong>Introduction.</strong> This paper investigates techniques used by children in year 4 (age eight to nine) of a UK primary school to reformulate their queries, and how they use information retrieval systems to support query reformulation.<br />
+ <strong>Method.</strong> An in-depth study analysing the interactions of twelve children carrying out search tasks in a primary school lesson; including observations, search recordings, post-task interviews and teacher interview.  <br />
+ <strong>Analysis.</strong> The search screen recordings were analysed for task performance. The queries were categorised using both Broder's taxonomy (2002) and query reformulation type schemes. The interviews and observations were analysed inductively using thematic analysis. <br />
+ <strong>Results.</strong> Children reformulated queries by switching information retrieval system, extracting information from search results, and by using 'did you mean' and auto-complete functionality. The children also reformulated queries by using previous queries, correcting errors, and making their queries more specific. The type of query reformulation support the children used varied according to the type of query entered, with children submitting both question queries and broad-based topic queries. <br />
+ <strong>Conclusions.</strong> The children mostly reformulated queries based on their interactions with information retrieval systems, rather than their prior knowledge. Search systems could further support children by (1) tailoring tools to the type of query (question or broad-based) entered, (2) making suggestions for the narrowing of queries as the children found this particularly difficult (3) accommodating children's linear scanning of search results as this led to unnecessary query reformulations.
+ </blockquote>  </fieldset>  </form> 
+  <section>
+ <br />  <div style="text-align:center">  <input type="button" value="change font"
+ class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onClick="doChangeFont()"
+ /></div>  <br /> 
+
+
+ 
+ <h2>Introduction</h2> 
+ 
+ <p>Users of information retrieval systems formulate queries to search for information, and reformulate queries to improve search results or gain new information. The process is iterative, with queries reformulated from the user's own prior knowledge or with the help of the information retrieval system (<a href="isic31.html#Hua09">Huang and Efthimiadis, 2009</a>). From an analysis of transaction logs from Web search engines, over one third of all queries submitted are reformulations (<a href="isic31.html#Jan09">Jansen, Booth and Spink, 2009</a>).</p>
+ 
+ <p>Although there is an increasing interest in children's search, very little research examines the query reformulation behaviour of children (see Related Work). This paper is based on an initial study that investigates how children interact with retrieval systems to reformulate queries. This involved an in-depth study of twelve children's searches during an information and communication technology lesson. In particular this paper examines the following: (1) how children use more than one information retrieval system within a single search task, and (2) how children reformulate queries using functionality, such as '<em>did you mean</em>' and auto-complete, as well as in response to reading search results pages. Specifically we address the following research questions:</p>
+ <ul>
+<li>RQ1: why do children reformulate their search queries? </li> 
+<li>RQ2: how do information retrieval systems support children with query reformulation? </li>
+<li>RQ3: how do children reformulate their queries?</li> </ul>
+
+<h3>Related work</h3>
+ <p>Much of the research into children's information-seeking behavior focuses on the differences between child and adult search behaviour (<a href="isic31.html#Mar89">Marchionini, 1989</a>; <a href="isic31.html#Bil02">Bilal and Kirby, 2002</a>; <a href="isic31.html#Dua10">Duarte Torres, Hiemstra and Serdyukov, 2010</a>; <a href="isic31.html#Gos11">Gossen, Low and Nurnberger, 2011</a>) and the impact of search task on search behaviour (<a href="isic31.html#Bil02">Bilal, 2002</a>). Query reformulation is usually discussed in relation to these areas; however, children's query formulation and reformulation has also been considered in relation to the differences between success and lack of success (<a href="isic31.html#Mar89">Marchionini, 1989</a>; <a href="isic31.html#Dua10">Duarte Torres, <em>et al.</em>, 2010</a>; <a href="isic31.html#Kam12">Kammerer and Bohnacker, 2012</a>).</p> 
+ 
+ <p>The most comprehensive research study into children's query reformulation patterns is the examination of children's search behavior from an analysis of search engine transaction logs (<a href="isic31.html#Dua10">Duarte Torres,  <em>et al.</em>, 2010</a>). The analysis provides a good overview of the types of query reformulation children enter, and the frequency of reformulation. However, as the analysis is only based on the data collected in search logs, the reasons for the reformulations cannot be adequately explained. Furthermore, search logs by their very nature only record the data for one search engine, and the analysis cannot capture the way queries are reformulated across different information retrieval systems. In observational studies, research has also tended to concentrate on how children search for information in one search system because the search system itself is also being evaluated (<a href="isic31.html#Mar89">Marchionini, 1989</a>; <a href="isic31.html#Bil02">Bilal, 2002</a>). However, in real life situations, similar to adults, children use more than one search system to find information. </p> 
+ 
+ <p>Research into how children use information retrieval system assistance for query reformulation, and under what circumstances, is very limited. In part, this is because many of the features offered to support query formulation and reformulation are relatively new and either unavailable in earlier research (<a href="isic31.html#Mar89">Marchionini, 1989</a>; <a href="isic31.html#Bil02">Bilal, 2002</a>) or not yet adopted by children (<a href="isic31.html#Dru09">Druin <em>et al</em>., 2009</a>). It is only recently that children have been observed using assistance (<a href="isic31.html#Joc10">Jochmann-Mannak, Huibers Lentz and Sanders, 2010</a>; <a href="isic31.html#Kam12">Kammerer and Bohnacker, 2012</a>). In this study we use a more naturalistic approach to studying query reformulation by children that is able to overcome the limitations of using only transaction logs and of focusing on search sessions based on interaction with single information retrieval systems. </p> 
+ 
+ <h2>Method</h2>
+ 
+<p>In this section, the rationale for the study approach, the sampling procedure, the search task, the data collection and analysis methods, and the limitations of the study are discussed in detail.</p>
+
+<h3>Rationale</h3>
+
+<p>In observational studies, children are usually studied singly, with search tasks recorded outside of the classroom/lesson (for example, <a href="isic31.html#Mar89">Marchionini, 1989</a>; <a href="isic31.html#Bil00a">Bilal 2000a</a>, <a href="isic31.html#Bil00b">Bilal, 2000b</a>; <a href="isic31.html#Bil02">Bilal, 2002</a>; <a href="isic31.html#Mad07">Madden, Ford, Miller and Levy, 2007</a>; <a href="isic31.html#Fos12">Foss <em>,</em>, 2012</a>). However, although observation is a key technique for understanding user behavior, observation can only shed light on users' behaviour if it is real-life behaviour that is observed (<a href="isic31.html#Mar05">Martzoukou, 2005</a>). For this reason, this study takes a naturalistic approach to data collection. </p>
+ 
+ <p>The information and communication technology teacher of a Sheffield (UK) primary school agreed to the recording of children's searches in his lesson. The researcher had no input into the planning of the search task or lesson, and as much as possible tried to remain anonymous during the class. However, the children (including those not in the research group) were interested in the study so it cannot be claimed that this research did not have any impact on the children's behaviour. </p> 
+ 
+ <p>The children, in common with most other primary school children, worked in pairs when using technology in schools. Although it is more usual to research children's search tasks individually, it was considered more important to collect the data naturalistically, and include observations of children's collaborative behaviour in the data collection.</p>
+ 
+ <h3>Sampling</h3>
+ 
+<p>Purposive sampling was used to determine the year group of the children to study, and the children selected from the year group. Following a discussion with the ICT teacher, Year 4 children (aged eight to nine) were chosen on the basis that they were the youngest age where they could mostly search for information independently and, therefore, the recorded searches would represent the searching behaviour of the children, not the supervising adults. </p>
+
+<p>The school has two Year 4 classes and it was decided that six children would be selected from each class as two smaller groups would be easier for the researcher to observe. Furthermore, when testing the screen recording software it became apparent that the school network connection slowed as more computers ran the screen recording software. </p>
+
+<p>The participants were selected by the class teachers: the teachers explained the research to the children, and pupils interested in taking part placed their names in a hat. Each teacher drew six children's names. Letters detailing the research were sent home with the children, and the parents were asked for their consent. Consent was received for all twelve children selected (seven girls and five boys). Immediately before the recording of the children's searches the researcher also explained the purpose of the research to the children, and the children were shown the recording equipment. The children's verbal consent was sought and received before all data collection exercises.</p>
+
+<h3>Search task </h3>
+
+<p>The research was conducted in a Sheffield (UK) primary school with search task data collected during two ICT lessons that ran consecutively. For each lesson, six pupils aged eight to nine worked in pairs to search for the answers to three questions. The questions were chosen by the class and were based on the topic the children were learning about that term, <em>the human skeleton</em>. At the start of the class the teacher explained to the children the importance of safe searching and the need for reliable information. The children then spent between ten and twenty minutes searching for the answers, with the time dictated by the length of the lesson and the need to set up computers within the lesson time. </p>
+
+ <h3>Data collection</h3>
+ 
+ <p>Data were collected from observations, recording of search tasks, group interviews with the children and an interview with the teacher. </p>
+ 
+ <h4>Observations</h4>
+ 
+ <p>Observations of the children's collaborative and physical behaviour were recorded by the researcher in a notebook. In practice, there was little time to record observations as the research took place; instead, observations were recorded immediately after the searches were finished.</p>
+ 
+ <h4>Screen recordings</h4>
+ 
+ <p>The search task was recorded using Camtasia screen recording software. Prior to data collection, Camtasia was temporarily installed on the school equipment. </p>
+ 
+ <h4>Interviews with children</h4>
+ 
+ <p>To allow for initial analysis of the search recordings, the children were interviewed a few days after the search task. The children were shown screenshots of their searches and were asked (1) how they thought search engines worked (2) the purpose of search tools (3) the reason for the phrasing of their queries (4) what they found easy and what they found hard and (5) if they had a magic wand what it would do. Because children may find it difficult to express their experiences to an adult (<a href="isic31.html#Liv13">Livingstone, Olafsson and Haddon, 2013</a>) the children were interviewed in two groups to boost their confidence. The first group consisted of four children from the first class, and the second group consisted of the six children from the second class plus the remaining two children from the first class who had previously been unable to attend. As it happened, the children were confident communicators and more than able to explain their experiences. Most of the children were very keen to provide explanations, and the hardest part of the interview was to give each child time to answer before another child jumped in.</p>
+ 
+ <h4>Interview with information and communication technology teacher</h4>
+ 
+ <p>A week after interviewing the children, the teacher was also interviewed. The time lapse allowed for some preliminary analysis of the children's search behaviour and the children's explanations of their search behaviour. The interview questions were semi-structured and the teacher was invited to comment on the preliminary analysis. The teacher confirmed the analysis but suggested that in general children from the school have above average language skills so find query reformulation easier age for age than in some other schools the teacher has taught in.</p>
+ 
+<h4>Verification</h4>
+
+<p>Verification of the analysis was sought from the school, and both the teacher and headmaster were given a written report of the findings. No formal feedback was obtained, but the findings were informally discussed with one of the class teachers and the  teacher. </p>
+ 
+ <h3>Data analysis</h3>  
+ 
+ <p>The data were analysed both qualitatively and quantitatively with the emphasis on the qualitative analysis to produce a holistic and in-depth explanation of the children's search behaviour (<a href="isic31.html#Mas02">Mason, 2002</a>). </p>
+ 
+ <h4>Screen recordings</h4>
+ 
+<p>Initially, the screen recordings were analysed according to the time taken to complete the tasks, the impact of queries on the search results, and the use of assistance. Then, all of the queries were categorised using two classification schemes. Firstly, queries were categorised into <em>informational</em> and <em>navigational</em> queries using Broder's (<a href="isic31.html#Bro02">2002</a>) taxonomy. Informational queries are those used to find information relating to the search task question; navigational queries are those used to find known sites. Secondly, all queries were categorised by query reformulation type based on prior schemes (<a href="isic31.html#Jan09">Jansen, Booth and Spink, 2009</a>; <a href="isic31.html#Jes13">Jesper, Clough and Hall, 2013</a>): <em>New</em> (first query for search question); <em>Assistance</em> ('<em>did you mean</em>' or auto-complete used); <em>Specialisation</em> (the query contains more terms or uses more specific terms); <em>Generalisation</em> (the query contains fewer terms or uses broader terms); <em>Revision</em> (a spelling mistake or grammatical error has been corrected); <em>Previous</em> (the query has been submitted before). </p>
+
+ <h4>Children's interviews</h4>
+ 
+<p>The children's interviews were coded inductively using thematic analysis (Braun and Clarke, 2006). The initial codes were identified from the data, rather than the research literature, and three broad themes identified: (1) information retrieval system differences, (2) the phrasing of search questions, and (3) choosing between answers.</p>
+
+ <h4>Information and communication technology teacher interview and children observations</h4>
+ 
+ <p>The teacher interview and search observations were analysed inductively for initial codes. The data set was small so the initial codes were not developed into themes; instead, the initial codes were incorporated into the themes found in the children's interviews.</p>
+ 
+ <h3>Limitations</h3>
+ 
+ <p>Recording detailed observations of children's collaborative and physical behaviours by hand by a single researcher was impractical. An overview of their behaviour was obtained, and confirmed with the teacher, but for a more detailed analysis other data collection methods need to be considered. However, the low key approach meant that the children were relaxed about the research. The addition of more recording equipment or more researchers would have improved the data collection but would have resulted in a less naturalistic study.</p>
+ 
+ <p>The chosen method allows for a deep understanding of how children may use information retrieval systems in real-life, but while the findings apply to twelve children at a Sheffield (UK) primary school, as with other studies based on observation the results are not generalisable (<a href="isic31.html#Kel09">Kelly, Dumais and Pederson, 2009</a>) as the sample is size is small and only one task was analysed. Furthermore, children at a Sheffield (UK) primary school perform above average (<a href="isic31.html#Ofs11">Ofsted, 2011</a>) and so the results are not necessarily comparable to children in the same year group at other schools.</p>
+ 
+ <h2>Results and discussion</h2>
+ 
+ <h3>Task performance</h3>
+ 
+<p>During the search session, the children could choose up to three search questions to answer. However, four pairs only searched for one search question, and the remaining two pairs for two questions. In research involving transaction logs and observations, children were found to enter fewer new queries than adults (<a href="isic31.html#Dua10">Duarte Torres, Hiemstra and Serdyukov, 2010</a>) and take longer to complete tasks (<a href="isic31.html#Bil02">Bilal and Kirby, 2002</a>). In this study, the lengthy time taken to complete search tasks can in part be attributed to the time taken to enter queries (for example, the query '<em>how long is the spine in the average human body</em>' took over two minutes to enter) and the children's reading skills. However, another reason for the lengthy task completion time was that the answers to some of the questions were not easy. Unlike with researcher set tasks, the teacher was unable to check the availability of answers before the lesson, because the questions were decided during the class.</p>
+ 
+ <p>Four pairs used auto-complete and three pairs used '<em>did you mean</em>' assistance. In the group interviews, all the children demonstrated knowledge of these tools and they discussed the different ways in which these tools could be used. All the children started their searches in Google with five of the six pairs additionally entering searches in Bing, Wikipedia or Dictionary by Farlex.</p>
+ 
+ <p>None of the children could touch type so to enter queries they needed to look for letters on the keyboard. In some studies, the need to look at the keyboard resulted in children only looking at the keyboard and therefore being unable to interact with auto-complete (<a href="isic31.html#Dru09">Druin <em>et al</em>., 2009</a>), but in this study all of the children did periodically look at the screen for this functionality while typing (<a href="isic31.html#Joc10">Jochmann-Mannak, Huibers, Lentz and Sanders, 2010</a>).  </p>
+ 
+ <p>All the children worked in pairs and took it in turns at the keyboard, swapping over if (and when) a search question was answered. It was observed in each pair that the child who typed the query decided the query. This contrasts with their behaviour in other areas of the search where the children did confer, notably, which information retrieval system to use, how to spell words, the meaning of words, and location of results in the search results pages, although even then ultimately the child at the keyboard controlled the search. This is similar to studies of adults where finding is a solitary process, but needing and using can be a collaborative activity (<a href="isic31.html#Toz11">Toze, Peet and Toms, 2011</a>).</p>
+ 
+ <h3>Query formulation</h3>
+ 
+<p>Altogether, nine navigational queries and twenty-six informational queries were submitted. In the group interviews, the children distinguished between navigational and informational queries, with navigational queries described as easier than informational queries: '<em>if you were trying to find a specific thing you just type in like if you were trying to find out about a person you could just check, type their name in and then it might find them</em>' (P12).</p>
+ 
+ <p>Although the task was informational in nature, three pairs of children entered navigational queries to find known sites within which they could search for information. During the search task, only one pair directly typed a website address into the address bar; in all other cases children navigated to known sites by entering the name of the site in the search box. Two of the pairs of children entered navigational queries at the start of the task to go to Wikipedia, and during the task, two pairs of children used navigational queries to change information retrieval system before reformulating informational queries, with those children iterating between navigational and informational queries. </p>
+ 
+ <p>From the group interviews it was clear that all of the children put considerable thought into the phrasing of queries and how the phrasing affected the answer. It was not something they always found easy. When asked '<em>if you had a magic wand, what would it do</em>', two of the children wanted help with the wording of a query: '<em>If I were finding it hard to look something up then I'd just tell the computer to find the best words to know to look something up and then it would find me the best words that would be easier to make my search</em>' (P7). The children were also concerned with how much detail to put in a query. One child explained '<em>because if you just put what is the longest bone it could be what if it were an elephant or a cheetah</em>' (P1). The ICT teacher also encouraged the children to be specific with their queries as they will be less likely to come across inappropriate material with more defined queries. </p>
+ 
+ <h3>Examining search results</h3>
+ 
+ <p>All children had some difficulty finding information in the results pages (<a href="isic31.html#Lar02">Large, Beheshti and Rahmen, 2002</a>; <a href="isic31.html#Bil00a">Bilal, 2000a</a>; <a href="isic31.html#Lar00">Large and Beheshti, 2000</a>). They frequently missed relevant information, and found it hard to choose between search results. In the interviews, one child complained of the search results page '<em>there's like a really long list</em>' (P3), and for five pairs of children relevant or related information was available within the search results that they did not see. These children were able to enter effective searches for questions; they just could not see the answers. Children's failure to extract information has previously been linked to information overload (<a href="isic31.html#Bil00a">Bilal, 2000a</a>; <a href="isic31.html#Kam12">Kammerer and Bohnacker, 2012</a>) and loss of focus on search task (<a href="isic31.html#Mar89">Marchionini, 1989</a>). However, from observing the children in this study another explanation is apparent. Using mouse movements as an indicator it is likely that all of the children linearly, rather than selectively, scanned the search results page. The mouse always moved from left to right, from top to bottom of screen. Because the screen was read systematically relevant information further down the screen was missed, and this resulted in unnecessary query reformulation. For example, one pair on seeing the answer for dinosaur bones in the first search result reacted with the following: '<em>doh, we need to write human skeleton</em>' (P2). But the required answer was actually in the search result immediately underneath.</p>
+ 
+ <p>In the group interviews, the children discussed finding it hard to choose between search results and they were concerned about the reliability of answers: '<em>if you were looking something up you might want to check that because say you looked on Wikipedia, they might be wrong</em>' (P7). These children were also aware that performance is different for each retrieval system, and one child explained: '<em>if you use different search engines then you'll find different things</em>' (P9).</p>
+ 
+ 
+ <h3>Research Question 1: why do children reformulate their search queries?</h3>
+ 
+<p>Altogether there were three reasons for the children's query reformulation: they could not find the required information, they wanted to validate information found, or they wanted to correct queries.</p>
+
+ <p>Only three of the informational queries were reformulated because the information was not available. Five of the six pairs of children reformulated queries, despite relevant or related information appearing in the search results page. The reason, in this study, was connected to the linear scanning of results as the children reacted to information in the order in which it appeared. Only one pair checked or verified their answer. They did so by using another retrieval system: swapping from Google to Bing and entering a near-identical query. Three pairs also revised their queries by accepting '<em>did you mean</em>' suggestions and two pairs corrected their queries for spelling mistakes when the correct spelling was identified in the search results.</p>
+ 
+ <h3>Research Question 2: how do information retrieval systems support children with query reformulation?</h3>
+ 
+<p>From an examination of the informational queries, it is apparent that two very different types of informational queries were entered. Four pairs slightly adapted the original task questions and entered queries as specific questions. Two pairs, instead of basing the queries on the search task, entered queries based on the broader class topic. For example, for the search question '<em>what is the longest bone</em>' one pair entered the query as a specific question, '<em>what is the longest bone in the skeleton</em>', and another pair entered the query as the broader class topic '<em>human body</em>'.  </p>
+ 
+ <p>In a study that compared children's keyword and natural language queries, children were marginally more successful when using natural language queries because the search results were more applicable to the search task questions (<a href="isic31.html#Kam12">Kammerer and Bohnacker, 2012</a>), and in this study answers to the questions were often available within the search results for the question queries but the results needed to be examined for the broad topic queries. However, there were also other differences between the two query types, as the different styles of queries resulted in different query reformulation behaviour with information retrieval assistance used in different ways. </p>
+ 
+ <h4>Question queries</h4>
+ 
+ <p>When employing question queries, the children used the retrieval systems for support in query reformulation by applying the '<em>did you mean</em>' suggestions and extracting information from the search results. Auto-complete was not used for this purpose.</p>
+ 
+ <p>Three pairs of children reformulated queries based on their reading of the search results pages: queries were corrected for spelling mistakes, and also refined to make use of information found. Three pairs of children accepted '<em>did you mean</em>' suggestions in the search results page. For example, for the query '<em>what is the longest bone</em>' the '<em>did you mean</em>' synonym suggestion of '<em>what is the largest bone</em>' was accepted. For the question queries, auto-complete was only used to correct spellings and provide typing shortcuts. From the recordings, it is apparent that the wording of the queries had been pre-planned and auto-complete was only selected when it matched the exact wording of the planned query, with other appropriate suggestions ignored. For example, for the planned query '<em>how many bones in a human babys foot</em>', auto-complete made alternative suggestions, but because none of the suggestions exactly matched the planned query, auto-complete was not used. </p>
+ 
+ <h4>Broad topic queries</h4>
+ 
+<p>The two pairs of children entering broad topic queries did not reformulate queries based on their reading of the search results pages, and the retrieval systems did not offer '<em>did you mean</em>' suggestions. The two pairs used auto-complete to assist both the initial query formulation and subsequent reformulations. In the group interviews, it was apparent that some of the children seemed to associate retrieval systems with either having or not having information (for example, '<em>some of the search engines might not have the question, might not have the answer to your question</em>' (P4)) rather than linking results to differences in query formulation. This may account for why auto-complete was used to suggest queries.</p>
+ 
+ <h3>Research Question 3: how do children reformulate their queries?</h3>
+ 
+ <p>Of the informational queries, 8 (31%) were classified as New; 7 (27%) Assistance; 4 (15%) Specialisation; 3 (12%) Previous; 2 (8%) Revision; and 1 (4%) New/Assistance. No Generalisation type was used and one query reformulation was submitted by mistake. There were no reformulations of the navigational queries. In the same way that children used different types of support depending on the type of query entered, how the children reformulated the query also varied depending on the query type.</p>
+ 
+ <h4>Navigational queries</h4>
+ 
+<p> In this study, none of the children reformulated navigational queries, although one might expect to see this if the navigational queries were difficult to spell or the name of the site the children intended to visit was not fully known. However, two pairs of children did iterate between navigational and informational queries, and after submitting a navigational query the next informational query was a Previous query. In fact, all three of the Previous queries were submitted in a new information retrieval system. That children resubmit previously used queries is well known (for example, <a href="isic31.html#Gos11">Gossen, Low and Nurnberger, 2011</a>), but this is usually linked to children's cognition and recall difficulties (<a href="isic31.html#Bil02">Bilal and Kirby, 2002</a>) rather than an intentional technique. This was clearly a technique other children used too, and when questioned over whether it was necessary to use another retrieval system to check information, a child wisely pointed out '<em>well you could check on the same but on a different search engine you'll get a wider range</em>' (P9). </p>
+ 
+ <h4>Question queries</h4>
+ 
+ <p>The children made Assistance, Specialisation and Revision type reformulations when their queries were questions. Five of the Assistance reformulations were made following '<em>did you mean</em>' suggestions. The suggestions included spelling error corrections, synonym change and broadening queries.</p>
+ 
+<p>In most instances the children were concerned to make their question queries specific, and notably queries were not generalized except for when following '<em>did you mean</em>' suggestions. As well as reformulating queries to make them more specific, the children also increased the specificity of the search task questions in the initial New queries. However, the implementation of Specialisation was often misguided. For example, one pair tried to use their topic knowledge to increase specificity and added '<em>mans average foot</em>' to the task question '<em>how many bones in your foot</em>'. While adding <em>mans</em> does increase the specificity because a baby's foot has more bones (and the pair knew this), adding '<em>average</em>' does not increase the specificity because adult feet typically have the same number of bones. The specificity of queries was also increased by including information found in the search results. This was also problematic. For example, one pair changed '<em>spine</em>' to '<em>spinal cord</em>' in '<em>how long is the spine in an average adult</em>' but the length of the spine and spinal cord are not equivalent. Analysis from the study of a transaction log found that it was more common for children to add rather than remove words from a query, but reducing the number of words was more effective. However, all query reformulation types (except for Previous Query) led to children selecting higher ranked results (<a href="isic31.html#Tor10">Torres, Hiemstra and Serdyukov, 2010</a>). </p>
+
+<p>For Revision type reformulations, two pairs of children revised their queries, based on their readings of the search results, to correct grammar and spelling mistakes. For example, despite seeing relevant results, one pair realised there was an error in their query and changed '<em>how many bones in a human babys foot'</em> to '<em>how many bones in a human babies foot</em>', ironically introducing another error. The revisions were not necessary and did not improve the search results. However, the children were in a school lesson where they are assessed on spelling and grammar so it is understandable why the corrections were made. During the interview with the ICT teacher the importance of spelling was stressed in terms of speed ('<em>I say when you are doing a search make sure your spellings are correct so it will make your search quicker</em>') and Internet safety in case a misspelling led to inappropriate results.</p>
+
+<h4>Broad topic queries</h4>
+
+<p>The children only used Assistance type reformulations when their queries were based on the broad topic, and they only used auto-complete to do this. In all of these cases the children used auto-complete to specialise their queries. For example, one pair started their search by typing '<em>human skeleton</em>' into the search box and then selected '<em>human skeleton for kids</em>' from auto-complete. After examining the search results page with no success, they again typed '<em>human skeleton</em>' in the search box and then this time selected '<em>human skeleton facts</em>' from auto-complete.  </p>
+
+<h2>Conclusions</h2>
+
+<p>This study investigates the query reformulation patterns of children based on an in-depth study of twelve children carrying out a search task in the classroom. The findings suggest that there is a clear role for information retrieval systems to provide support for children's query reformulation: the children used prior knowledge to formulate queries but mostly reformulated queries based on their interactions with the information retrieval systems. To do this the children used a number of techniques, including retrieval system switching, examination of search results, and use of "did you mean" and auto-complete functionality. However, more tailored support could be offered. Firstly, the children had the most difficulty with, and need the most support for, narrowing their queries. Secondly, there were two distinct types of information queries (broad topic and questioning queries) which resulted in different usages of search tools, and these tools could be developed in accordance with how the children are using them. Thirdly, more could be done to accommodate children's linear (rather than selective) scanning of search results as this resulted in unnecessary reformulations.</p>
+
+<p>A further collection of data is planned to see whether these findings are also seen across a larger dataset, how query reformulations vary by search task type, and whether query reformulation patterns change when a search task spans multiple search sessions.</p>
+ 
+<h2>Acknowledgements</h2> 
+ 
+<p>Thank you to all who participated from a Sheffield (UK) Primary. Firstly, to the children who generously and eloquently shared their information-seeking experiences. Secondly, to the information and communication technology teacher who very kindly allowed his lesson to be recorded and his time taken up with numerous questions on children's use of search engines. Thirdly, to the headmaster, assistant head and class teachers who consented to the research taking place, and then arranged the collecting of consents from the children.</p> 
+ 
+
+ 
+</section>
+<section class="refs">
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">References</legend>  
+  <ul class="refs"> 
+<li id="Bil00a">Bilal, D. (2000a). Children's use of Yahooligans! Web Search Engine: 1. Cognitive, physical and affective behaviours on fact-based search tasks. <em>Journal of the American Society for Information Science, 51</em>(7), 646-665.</li> 
+<li id="Bil00b">Bilal, D. (2000b). Children's use of the Yahooligans! Web search engine: II. Cognitive and physical behaviors on research tasks. <em>Journal of the American Society for Information Science and Technology, 52</em>(2), 118-136.</li> 
+<li id="Bil02">Bilal, D. (2002). Children's use of Yahooligans! Web search engine. III. Cognitive and physical behaviours on fully self-generated search tasks. <em>Journal of the American Society for Information Science and Technology, 53</em>(13), 1170-1183.</li> 
+<li id="Bil02a">Bilal, D. &amp; Kirby, J. (2002). Differences and similarities in information seeking: children and adults as Web users. <em>Information processing and management, 38</em>(5), 649-670.</li> 
+<li id="Bra06">Braun, V. &amp; Clarke, V. (2006). Using thematic analysis in psychology. <em>Qualitative research in psychology, 3</em>(2), 77-101.</li>
+<li id="Bro02">Broder, A. (2002). <em>A taxonomy of web search. ACM Sigir forum, 36</em>(2), 3-10.</li>
+<li id="Dru09">Druin, A., Foss, E., Hatley, L., Golub, E., Guha, M. L., Fails, J. &amp; Hutchinson, H. (2009). How children search the internet with keyword interfaces. <em>Proceedings of the 8th International Conference on Interaction Design and Children</em>, (pp. 89-96). New York, NY: ACM.</li>
+<li id="Dua10">Duarte Torres, S., Hiemstra, D. &amp; Serdyukov, P. (2010). An analysis of queries intended to search information for children. <em>Proceedings of the third symposium on Information interaction in context</em>, (pp. 235-244). New York, NY: ACM.</li>
+<li id="Fos12">Foss, E., Druin, A., Brewer, R., Lo, P., Sanchez, L., Golub, E. &amp; Hutchinson, H.  (2012). Children's search roles at home: implications for designers, researchers, educators, and parents. <em>Journal of the American Society for Information Science and Technology, 63</em>(3), 558-573.</li>
+<li id="Gos11">Gossen, T., Low, T. &amp; N&uuml;rnberger, A. (2011). What are the real differences of children's and adults' web search. <em>Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval</em>, (pp. 1115-1116). New York, NY: ACM.</li>
+<li id="Hua09">Huang, J. &amp; Efthimiadis, E. (2009). Analysing and evaluating query reformulation strategies in web search logs. <em>Proceedings of the 18th ACM conference on information and knowledge management</em>, (pp.77-86). New York, NY: ACM.</li>
+<li id="Jan09">Jansen, B. J., Booth, D. L. &amp; Spink, A. (2009). Patterns of query reformulation during Web searching. <em>Journal of the American Society for Information Science and Technology, 60</em>(7), 1358-1371.</li>
+<li id="Jes13">Jesper, S., Clough, P. &amp; Hall, M. (2013). Regional Effects on Query Reformulation Patterns. <em>Research and Advanced Technology for Digital Libraries</em>, (pp. 382-385). Berlin, Germany: Springer.</li>
+<li id="Joc10">Jochmann-Mannak, H., Huibers, T., Lentz, L., and Sanders, T. (2010). Children searching information on the Internet: Performance on children's interfaces compared to Google. In Towards Accessible Search Systems. <em>Proceedings of the Workshop of the 33rd Annual International ACM SIGR conference on research and development in Information Retrieval</em>, pp. 27-35. New York: ACM Press.</li>
+<li id="Kam12">Kammerer, Y. &amp; Bohnacker, M. (2012). Children's web search with Google: the effectiveness of natural language queries. <em>Proceedings of the 11th International Conference on Interaction Design and Children</em>, (pp. 184-187). New York, NY: ACM. </li>
+<li id="Kel09">Kelly, D., Dumais, S. &amp; Pedersen, J. O. (2009). Evaluation Challenges and Direction for Information-Seeking Support Systems. <em>IEEE Computer, 42</em>(3), 60-66.</li> 
+<li id="Lar00">Large, A. &amp; Beheshti, J. (2000). The web as a classroom resource: Reactions from the users. <em>Journal of American Society for Information Science and Technology, 51</em>(12), 1069-1080.</li>
+<li id="Lar02">Large, A., Beheshti, J. &amp; Rahman, T. (2002). Gender differences in collaborative web searching behavior: an elementary school study. <em>Information Processing &amp; Management, 38</em>(3), 427-443.</li>
+<li id="Liv13">Livingstone, S.,&Oacute;lafsson, K. &amp; Haddon, L. (2013) How to research children and online technologies? Frequently asked questions and best practice. <em>EU Kids Online</em>. London: EU Kids Online Network.</li>
+<li id="Mad07">Madden, A. D., Ford, N. J. &amp; Miller, D. (2007). Information resources used by children at an English secondary school: perceived and actual levels of usefulness. <em>Journal of Documentation, 63</em>(3), 340-358.</li>
+<li id="Mar89">Marchionini, G. (1989). Information-seeking strategies of novices using a full-text electronic encyclopedia. <em>Journal of the American Society for Information Science and Technology, 40</em>(1), 54-66.</li> 
+<li id="Mar05">Martzoukou, K. (2005). A review of Web information seeking research: considerations of method and foci of interest. <em>Information Research, 10</em>(2).</li>
+<li id="Mas02">Mason, J. (2002). <em>Qualitative researching</em>. 2nd ed. London: Sage.</li>
+<li id="Ofs11">Ofsted. (2011). <em>School Inspection Report</em>. Retrieved from http://www.ofsted.gov.uk/inspection-reports/find-inspection-report</li>
+<li id="Toz11">Toze, S. L., McCay Peet, L. &amp; Toms, E. G. (2011). Group participation in the search process?. <em>Collaboration Technologies and Systems</em> (CTS), 69-76. IEEE. </li>
+
+</ul>  
+ </fieldset>  
+ </form> 
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+ How to cite this paper
+ </legend>  
+ <div><br />  Rutter, S., Ford, N. &amp; Clough, P. A  (2015). How do children reformulate their search queries? In  <em>Proceedings of ISIC, the Information Behaviour Conference, Leeds, 2-5 September, 2014: Part 2</em>, (paper isic31). Retrieved from  http://InformationR.net/ir/20-1/isic2/isic31.html (Archived by WebCite&reg; at http://www.webcitation.org/6WxJ2xopV)</div>  
+ </fieldset>  
+ </form> 
+</section>
+</article>
+<br />
+<section>
+ 
+
+ <table class="footer" style="border-spacing:10;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">
+ Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"> 
+ <form method="get" action="http://scholar.google.com/scholar" target="_blank">  
+ <table class="footer">  
+  <tr>  
+  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="children, human-computer interaction, information behaviour, retrieval,  searching, search engines" /><br />  
+  <input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  </td>  </tr>  
+ </table> 
+  </form>  
+ </td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --> 
+ 
+ <form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr>  
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="children, human-computer interaction, information behaviour, retrieval,  searching, search engines" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+ <input type="hidden" name="client" value="pub-5081678983212084" />
+ <input type="hidden" name="forid" value="1" /> 
+  <input type="hidden" name="ie" value="ISO-8859-1" />  
+  <input type="hidden" name="oe" value="ISO-8859-1" />  
+  <input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" />  
+  <input type="hidden" name="hl" value="en" />
+  </td>  
+  </tr>  
+  </table>  
+  </form>
+ </td>  
+ <td style="vertical-align:top; text-align:center;">   
+ <form method="get" action="http://www.bing.com" target="_blank">  
+ <table class="footer">
+ <tr> 
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="children, human-computer interaction, information behaviour, retrieval,  searching, search engines" /> <br />  
+ <input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  
+ </td>  
+ </tr>  
+ </table>  
+ </form> 
+ </td> 
+ </tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/20-1/isic2/isic31.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+ <br />
+ <div style="text-align:center;"> 
+     <!-- AddThis Button BEGIN -->
+<div style="text-align:center;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script>
+<!-- AddThis Button END -->  
+</div>
+<hr />
+
+ 
+ 
+<table class="footer" style="padding:10;"><tr><td style="text-align:center; vertical-align:top;">  
+<br />
+<div><a href="http://www.digits.net" target="_blank">
+    <img src="http://counter.digits.net/?counter={b251633f-2a34-8e64-f523-36ab157a9b32}&amp;template=simple" 
+     alt="Hit Counter by Digits"  />
+  </a></div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the authors, 2015. <br />Last updated: 27 December, 2014 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr></table>  
+ </section>
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="isic2.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../../irsindex.html">Subject index</a> | </li>
+	<li><a href="../../search.html">Search</a> | </li>
+	<li><a href="../../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+ </body>  
+ </html> 
+

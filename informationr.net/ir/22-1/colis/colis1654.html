@@ -1,0 +1,267 @@
+<!doctype html>  
+ <html lang="en">  
+ <head> 
+ <meta charset="utf-8" /> 
+ <title>Mediation machines: how principles from traditional knowledge organization have evolved into digital mediation systems</title>  
+
+<link href="../../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="Mediation machines: how principles from traditional knowledge organization have evolved into digital mediation systems" />  
+ <meta name="author" content="Kim Tallerås,Nils Pharo" />  
+ <meta name="dcterms.subject" content="We discuss digital information systems’ ability to mediate cultural resources. Mediation techniques embedded in search and recommendation systems are compared with those activities developed for mediating culture heritage in libraries, archives and museums, or so-called LAM-institutions." />  
+ <meta name="description" content="We discuss digital information systems’ ability to mediate cultural resources. Mediation techniques embedded in search and recommendation systems are compared with those activities developed for mediating culture heritage in libraries, archives and museums, or so-called LAM-institutions. Digital mediation systems are examined in light of theories and techniques from knowledge organization, exemplified with implementations of such theories and techniques in public libraries. Our analysis sheds light on similarities between the digital mediation in recommendation systems and libraries’ mediation of culture, but also reveals some important differences. We find that the digital mediation systems follow many principles and techniques of traditional knowledge organization such as those related to classification and metadata. Further they mimic the librarian who knows her users, knowledge organization systems and collection. An important challenge is the mechanical rationality embedded in the computation of recommendations, which may limit the exposure of material of interest to the user that the system finds irrelevant. Digital mediation systems have implemented traditional theories and techniques of knowledge organization, and they can be interpreted as “mediators” in a LAM context.  However, their mechanical approach to information behaviour risk to be inconsistently adaptive to users emotional needs and to not facilitate serendipitous discoveries very well.
+" />  
+ <meta name="keywords" content="digital libraries, information systems" />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+<meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="University of Borås" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/22-1/colis/colis1654.html" />  
+ <meta name="dcterms.relation" content="http://InformationR.net/ir/22-1/infres221.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2017-03-15" /> 
+  <meta name="geo.placename" content="global" />
+</head> 
+   <body> 
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">published quarterly by the university of bor&aring;s, sweden<br /><br />vol. 22  no. 1, March, 2017</span>
+<br /><br /> 
+<div class="button">
+ <ul> 
+ <li><a href="colis2016.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../../search.html">Search</a> |  </li> 
+ <li><a href="../../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr />
+ <h2 style="text-align:center;">Proceedings of the Ninth International Conference on Conceptions of Library and Information Science, Uppsala, Sweden, June 27-29, 2016</h2>
+ </header>
+ <article>
+<h1>Mediation machines: how principles from traditional knowledge organization have evolved into digital mediation systems</h1>
+
+<h2 class="author"><a href="colis1654.html#author">Kim Tallerås</a> and <a href="colis1654.html#author">Nils Pharo</a></h2>  
+ <br />
+
+ <blockquote>
+<strong>Introduction.</strong> We discuss digital information systems’ ability to mediate cultural resources. Mediation techniques embedded in search and recommendation systems are compared with those activities developed for mediating culture heritage in libraries, archives and museums, or so-called LAM-institutions.
+<br /><strong>Method.</strong> Digital mediation systems are examined in light of theories and techniques from knowledge organization, exemplified with implementations of such theories and techniques in public libraries.
+<br /><strong>Analysis.</strong> Our analysis sheds light on similarities between the digital mediation in recommendation systems and libraries’ mediation of culture, but also reveals some important differences.
+<br /><strong>Results.</strong> We find that the digital mediation systems follow many principles and techniques of traditional knowledge organization such as those related to classification and metadata. Further they mimic the librarian who knows her users, knowledge organization systems and collection. An important challenge is the mechanical rationality embedded in the computation of recommendations, which may limit the exposure of material of interest to the user that the system finds irrelevant. 
+<br /><strong>Conclusion.</strong> Digital mediation systems have implemented traditional theories and techniques of knowledge organization, and they can be interpreted as “mediators” in a LAM context.  However, their mechanical approach to information behaviour risk to be inconsistently adaptive to users emotional needs and to not facilitate serendipitous discoveries very well.
+
+</blockquote> 
+<br />
+
+ <section>
+<br/>
+<p>Mediation is an essential task in all kinds of libraries, archives and museums, so-called LAM-institutions, holding a collection of resources to be made available to an audience. In library schools librarians are trained to become skilled intermediaries, being able to analyse information or recreational needs, and to connect those needs to relevant resources. Meanwhile, Google claims that their “mission is to organize the world’s information and make it universally accessible and useful.” Their vast suite of search systems, databases and other services have helped them come far in realizing this goal. Does this mean that Google is a mediator, performing the same kind of mediation as LAM-institutions? Although the users’ interaction with Google is “faceless” and based on algorithms, these algorithms use knowledge about human information behavior and needs as a starting point. At the same time companies like Amazon and Netflix use sophisticated algorithms to create tailored recommendations of books and movies for their customers. They can thus be considered as digital intermediaries, in a communication of filtered and targeted information, from machines to users.</p>
+<p>However, systems for “faceless” mediation are not a new phenomenon, neither in LAM-institutions. Different systems and techniques have been used to guide users to the relevant documents – from analogue list of books in antiquity and card files in the twentieth century to contemporary online catalogues. This is the tradition of knowledge organization which the digital systems mentioned above partly build upon. In this paper, we aim to discuss knowledge organizational aspects of digital mediation of cultural products. We will start by showing how analogue principles of knowledge organization are implemented in physical libraries. Thereafter we discuss the concept mediation in light of system-based processes. In the third part, we present digital retrieval and recommendation systems before we discuss some limitations of “mediation machines”.</p>
+<p>In the paper, we take mediation of culture in the public library as a starting point and provide some initial examples from this domain of practice. The term “kulturformidling” is used in the Scandinavian library and information science (LIS) literature to denote what we have translated into “mediation of culture” (<a href="colis1654.html#gro10">Grøn, 2010</a>; <a href="colis1654.html#tve04">Tveit, 2004</a>). The concepts are under continuous debate and no English terms directly cover the activities described by the Scandinavian term. Central in common definitions is the intermediary as a person helping users to find books or other culture products that satisfy their informational or recreational needs. </p>
+</section>
+
+<section>
+ <h2>Mediation in libraries</h2>
+ <p>In a traditional public library, fiction is organized alphabetically on the shelves according to the authors’ last name. Fiction in Norwegian is placed separately from fiction in other languages. The scientific literature is organized according to subject using Dewey’s Decimal Classification (DDC). Thus books that the librarians have assessed as being about birds are placed under the DDC number 598, whereas “To kill a mockingbird” by Harper Lee is placed alphabetically on “Lee” in the section of English fiction.</p>
+ <p>The book on birds will be surrounded by other books on birds, animals and natural history whereas Lee’s books will all (or both) be placed together. These examples of providing order by shelving reflect how principles of mediation are embedded in the knowledge organization principles used in physical libraries. Such principles can be general, such as the alphabetical systems, or they may be based on well-established classification standards like the DDC.</p>
+ <p>In addition to offering direct access to the physical documents, libraries provide searchable access points to their collections via metadata, “data about data”, collected in catalogues. The catalogue has had many forms; organized chronologically in book form; as cardboard cards filed under titles, subjects and author names; and currently in digital form available via the Internet, facilitating access via all metadata recorded for the documents.</p>
+ <p>Within literary science different kinds of “meta” information is often referred to as “paratexts”. The Danish library and information scientist Jack Andersen (<a href="colis1654.html#and02">2002</a>) discusses how metadata in the form of bibliographic records can be interpreted in light of Genette’s (<a href="colis1654.html#gen97">1997</a>) paratext concept and the consequences of such an interpretation on information retrieval and reading:</p>
+ <blockquote>For instance, the initial relevance judgments happen when a user is confronted with the bibliographic record. What decisions a user makes as to its relevance are based on the paratextual elements present. That way the bibliographic record affects the reading activity of the user. (<a href="colis1654.html#and02">Andersen, 2002, p. 59</a>)</blockquote>
+ <p>The bibliographic record, continues Andersen, viewed as a text, does not provide mere “access” to the document, but is “rather, a matter of indicating what kind of intellectual content is to be expected” (<a href="colis1654.html#and02">Andersen, 2002, p. 59</a>). Reading starts in the bibliographic record, which guides the document selection and subsequent the reading activity. Thus, metadata do not only facilitate documents retrieval, but represents an adjustment and an initial mediation of the documents’ content.</p>
+ <p>Cataloguing principles as formulated by Cutter (<a href="colis1654.html#cut76">1876</a>) and the International Federation of Library Associations and Institutions (<a href="colis1654.html#int09">2009</a>) (IFLA) concretely express such adjustments, stating e.g. that the catalogue shall enable the user:</p>
+ 
+	<ul>
+	<li>4.1. to find bibliographic resources in a collection as the result of a search using attributes or relationships of the resources:
+	 <ul>
+	 <li>4.1.1. to find a single resource</li>
+	 <li>4.1.2. to find sets of resources representing
+		<ul>
+		<li>all resources belonging to the same work</li>
+		<li>all resources embodying the same expression</li>
+		<li>all resources exemplifying the same manifestation</li>
+		<li>all resources associated with a given person, family, or corporate body</li>
+		<li>all resources on a given subject</li>
+		<li>all resources defined by other criteria (language, place of publication, publication date,   content type, carrier type, etc.), usually as a secondary limiting of a search result;</li>
+		</ul>
+	 </li>
+	 </ul>
+	</li>
+	<li>4.2. to identify a bibliographic resource or agent (that is, to confirm that the described entity corresponds to the entity sought or to distinguish between two or more entities with similar characteristics);</li>
+	<li>4.3. to select a bibliographic resource that is appropriate to the user’s needs (that is, to choose a resource that meets the user’s requirements with respect to medium, content, carrier, etc., or to reject a resource as being inappropriate to the user’s needs);</li>
+	<li>4.4. to acquire or obtain access to an item described (that is, to provide information that will enable the user to acquire an item through purchase, loan, etc., or to access an item electronically through an online connection to a remote source); or to access, acquire, or obtain authority data or bibliographic data;</li>
+	<li>4.5. to navigate within a catalogue and beyond (that is, through the logical arrangement of bibliographic and authority data and presentation of clear ways to move about, including presentation of relationships among works, expressions, manifestations, items, persons, families, corporate bodies, concepts, objects, events, and places). (<a href="colis1654.html#int09">International Federation of Library Associations and Institutions, 2009, pp. 3–4</a>)</li>
+	</ul>
+ 
+
+<p>The principles are developed to ease library users’ access to the documents, e.g. letting the users choose books based on their format (point 4.3). In addition, the principles recommend concrete adaption of the content stating metadata should couple all resources that belong to a particular “work” (point 4.1.2).</p>
+<p>Point 4.5 describes a type of navigation across documents, which was difficult in a card-based catalogue, but has become much easier with the documents being digitized and made available with the help of web technology. An experiment at Oslo public library illustrates how literature mediation has gained from digital technology. Metadata representing works by a selection of important Norwegian authors were analyzed in order to see how well they fit the functional requirements for bibliographic records, the so-called FRBR-model, specified by IFLA (<a href="colis1654.html#int98">International Federation of Library Associations and Institutions Study Group on the Functional Requirements for Bibliographic Records, 1998</a>). A central part of this model, the so-called group 1-entities, represents different document “conditions”. A “work” represents the intellectual or artistic creation (e.g. Shakespeare’s Macbeth), an “expression” is the form the work takes when it is realized (e.g. the newest Norwegian translation of Macbeth), the “manifestation” is the physical embodiment of the expression (e.g. a pocket book edition), and an “item” being one single copy of the manifestation. The analyzed metadata, created following old cataloguing rules developed for the card catalogue, had a manifestation focus. Queries in the metadata resulted in very complex result lists from the OPAC (Online Public Access Catalog). A query on the author Knut Hamsun returned 585 hits, separately listing, e.g., all editions of the same works, all parts of collected works and all translations. In a physical shelf-based system, this way of knowledge organization was a necessity. With some restructuring of the data querying the same data set in an experimental system reduced the result list to 40 genuine Hamsun works (<a href="colis1654.html#wes12">Westrum, Rekkavik, and Tallerås, 2012</a>). The interface facilitated user navigation between different translations and editions of the works. Some studies have indicated that the FRBR-model reflects the users’ mental models of the bibliographic universe (e.g. <a href="colis1654.html#pis10">Pisanski and Žumer, 2010</a>).</p>
+<p>After these experiments, Oslo public library has decided to transfer their bibliographic metadata to a system based on new standards and technologies since the currently used standards do not solve the needs for literature mediation in a large public library. The standards, the Anglo American Cataloguing Rules and the Machine-Readable Cataloging (MARC) were developed at the very beginning of digitization in the late 1960s. Both standards were, however, constrained by the leading knowledge organization technology: the card catalogue. </p>
+<p>In addition to having technologically fallen behind, the knowledge organization systems have been criticized from philosophical and societal perspectives, including questions such as: How did classification systems end up with their particular classes? In what worldview have classification systems been developed? How do the classes in the system influence the use? Although DDC has been revised several times since it was first released, the basic classes developed by Melville Dewey in the late 19th century are still used.</p>
+<p>Radford (<a href="colis1654.html#rad03">2003</a>) uses library classification as an example of what Michel Foucault’s calls “discursive formation”: </p>
+<blockquote>Consider the choices made by a cataloger when allocating books to a subject heading, a call number, and a particular place on the library shelf. How does the cataloger do this task? What is the nature of the preexisting subjects (discursive formations) to which a new book can be assigned a place? What are the rules by which a book is assigned to Philosophy and not to History or Language? (<a href="colis1654.html#rad03">Radford, 2003, p. 4</a>)</blockquote> 
+<p>According to Radford the classification system, considered as an intermediary in a mediation situation, is based on rules with a discursive potential. Similarly, to librarians in a physical library the classification system conveys one out of several potential world-views. Such discursive formations not only characterize analogue systems for knowledge organization, but all kinds of mediation systems based on rules and principles of categorization. Systems developed in a digital context included.</p> 
+</section>
+
+<section>
+<h2>“There is no shelf”</h2> 
+<p>In a digital library there are no shelves. The straightjacket requiring that a book physically can only stand in one place is off. Files that contain texts, images, sound and video are retrieved directly or via metadata describing them. A user searching for the author Neil Gaiman will also include works Gaiman co-created with other artists, e.g. Terry Pratchett, as well as documents mentioning Gaiman. Books about Norway and World War II are found when both terms are combined in a query. Some systems will know that this is an interest area of yours and will “mediate” it as a result of the simple query “Norway”. The limitations of shelving is replaced by an infinite number of orders of succession.</p>
+<p>In principle there are no limitations on what kind of (meta)data that can be used to retrieve documents and information. A user may be interested in audio books in Swahili recorded with female voices, and if the information system stores and indexes metadata representing such characteristics, it will be simple to retrieve matching documents. The same user may also be interested in books that are liked by students in sociology. This is another type of information that systems have started to collect and which can be used in a mediation process. Automatic indexing of whole documents can make all terms in a document potential retrieval endpoints. This has an enormous potential for retrieval, but at the same time raise a lot of challenges for literature mediation. Will a user be interested in being presented all texts containing the term “Gaiman”?</p>
+<p>The flexibility and new possibilities offered by digitization are overwhelming. To retrieve and mediate digital collections a whole new set of techniques have been developed that partly build upon the analogue techniques described above and partly are based on analysis of context and user preferences.</p> 
+</section>
+
+<section>
+<h2>Quality assessment in knowledge organization and information retrieval</h2> 
+<p>The purpose of systems for knowledge organization and information retrieval (IR) is to secure that their users find “documents” (including books, images, music, video, archival records and other media used for representing ideas and knowledge) that may help them solve a task, satisfy an information need or satisfy a need for recreation. </p>
+<p>In order to evaluate how good IR systems work, the measures recall and precision are commonly used (<a href="colis1654.html#bae11">Baeza-Yates, 2011</a>). Recall is defined as the number of relevant documents in a retrieved set of documents divided by the number of relevant documents in the collection. Precision is the number of relevant documents in the retrieved set divided by the total number of retrieved documents. Typically, precision and recall measures are used in experimental evaluation processes following the procedure of the so-called Cranfield experiments. The goal of these experiments was to measure the efficiency of indexing systems (<a href="colis1654.html#spa76">Sparck Jones and van Rijsbergen, 1976</a>). Originally, the indexing systems were different types of classification systems or other manual systems. Today the same evaluation model is used for measuring the efficiency of algorithms used for search engines.</p>
+<p>Criticism raised against the Cranfield model is based on it having as point of departure an “objective” assessment of relevance. The critics claim that relevance is individual and context dependent, making it a “fluent” measure of quality which changes over time. Defendants of the Cranfield model, on the other hand, claims that it is a good tool for securing consistent comparison of different systems since they are compared under equal conditions with controlled variables.</p> 
+<p>In the late 1960s a counter movement to the system oriented paradigm that Cranfield represented emerged. American pioneer of information science, Robert S. Taylor (<a href="colis1654.html#tay68">1968</a>) pointed out that the information seeker does not necessarily choose optimal strategies when trying to solve his or her needs. This is an important condition for the recall/precision based evaluation methods. Taylor refers  to an empirical study conducted by Victor Rosenberg (<a href="colis1654.html#ros66">1966</a>) to support the claim that “’ease of access’ to an information system is more significant than ‘amount or quality of information’ retrievable” (<a href="colis1654.html#tay68">Taylor, 1968, p. 181</a>). In other words, it is not necessary for the information seeker to invest lots of time and effort to find the “perfect document” as long as she is able to find “good enough” answers. Some years later Nick Belkin developed a “cognitive viewpoint” pointing out it being unreasonable to equalize information needs with document content: </p>
+<blockquote>“[t]he assumption that expression of information need and document text are functionally equivalent also seems unlikely, except in the special case in which the user is able to specify that which is needed as a coherent or defined information structure. A document, after all, is supposed to be a statement of what its author knows about a topic, and is thus assumed to be a coherent statement of a particular state of knowledge. The expression of an information need, on the other hand, is in general a statement of what the user does not know” (<a href="colis1654.html#odd82">Oddy, Belkin, and Brooks, 1982, p. 64</a>)</blockquote>
+<p>Marcia Bates was, with her “berrypicking” model (<a href="colis1654.html#bat89">Bates, 1989</a>), among the first to develop an alternative model of user-system interaction. In her model she emphasizes that several types of search behavior may satisfy the user’s information needs. Not all of these can be evaluated using precision and recall. A user may, e.g., browse different potential sources, pick a little bit of information from each source, look at reference lists, and get some ideas from colleagues while continuously reformulating her information need, dependent on what is found. The “berrypicking” metaphor is based on such shifts between “berry patches”. It is a good model to explain how users construct their information needs through iterative processes. </p>
+<p>When evaluating how well a system is for mediating cultural resources, user-centered approaches such as Bates’ model, are invaluable. As we shall see, technological development has made it possible to develop more sophisticated IR systems that take into account user models. One example of such systems is recommendation systems. We shall discuss how recommendation systems build upon user knowledge and problematize the challenges of such systems.</p>
+</section>
+
+<section>
+<h2>Recommendation systems</h2>
+<p>In full-text IR systems, such as Google, the distribution of terms in the documents has played the most important part in indexing algorithms. The term frequency–inverse document frequency (tf-idf) weight (<a href="colis1654.html#spa72">Sparck Jones, 1972</a>) was developed to reflect how important a term was for representing a document. Other components have been included in the retrieval algorithms, but most of these have been document centric. This also includes Google’s PageRank (<a href="colis1654.html#bri98">Brin and Page, 1998</a>), which was inspired by citation networks and, put very simply, gives weight to web pages depending on their number of ingoing links. Relevance feedback (<a href="colis1654.html#sal90">Salton and Buckley, 1990</a>) represents an attempt at implementing user preferences in the retrieval process. Users assess the relevance, explicitly or implicitly, of the retrieved documents and the system uses content in the relevant documents to retrieve documents similar to these. Pseudo-relevance feedback (<a href="colis1654.html#eft96">Efthimiadis, 1996</a>) is particularly interesting, since it is based on the assumption that the highest ranked documents in the retrieved list are relevant and thus the system automatically uses these documents’ content to retrieve the final result set. Web based IR systems also often use “cookies” to collect data about the user in order to build profiles to tailor and personalize query results.</p>
+<p>Recommendation systems try to predict what documents the users are interested in. Companies like Amazon and Netflix have been in the forefront in developing recommendation techniques, but such techniques are also used by non-commercial services. At Oslo public library, the service <a href="http://digital.deichman.no/blog/2012/10/16/active-shelves/ ">Aktive hyller</a> (Active shelves) use elements based on this technology when it recommends related books based on a patron’s current selection. The service collects rating data from three different sources (<a href="http://www.goodreads.com/ ">Goodreads</a>, <a href="http://bokelskere.no ">Bokelskere</a>, and <a href="http://www.ebscohost.com/novelist ">NoveList</a>) and suggest books that are assessed as similar in topic and genre. The concept “recommendation system” is used to describe everything from simple top 10-lists based on general consumption frequency (“the 10 most read news articles”) to personalized recommendations based on complex forms of social profiling and network analysis.</p>
+<p>Basically there are two types of recommendation systems, <i>content-based filtering</i> and <i>collaborative filtering systems</i> (<a href="colis1654.html#ric11">Ricci, Rokach, and Shapira, 2011</a>). Content-based filtering systems base their recommendations on comparing the characteristics of the documents’ content, e.g., their genre, topicality and format. A user that previously has liked crime books in audio format where the action is located in Oslo will probably be interested in other books with the same characteristics. Content-based filtering may be based on traditional knowledge organization techniques such as cataloguing and classification. The content must be described in a precise, consistent and exhaustive way to facilitate the best possible filtering. These description may be created by experts, but in some cases users will be co-creators of the metadata, e.g. when adding un-controlled keyword (‘tags’). Oslo public library’s experiments with “FRBRizing” their collection, which we described above, makes it possible to accumulate recommendations on the work level and reduce the so-called cold-start problem (<a href="colis1654.html#sch02">Schein, Popescul, Ungar, and Pennock, 2002</a>) which is caused by having to few recommendations per item.</p>
+<p>Collaborative filtering uses characteristics of the user and the user’s digital “neighborhood” with other users. Data used in collaborative filtering systems can be “self-exposure” in the form of purchases, library loans, ratings, reviews, wish lists and other forms of assessments. In addition systems may register demographic data, such as age and gender, and implicit data from systems logs that register clicks, navigation patterns and consumption techniques (e.g. from e-book readers or streaming services). These data are used for user profiling and the idea is that users that have similar profiles have an overlapping taste in books, music, films etc.</p>
+<p>Often the different techniques are combined in <i>hybrid</i> recommendation systems. User A, who has a certain profile, may give a book with specific formal and literary characteristics a high rating. In this way, the book increases its coupling with other books with similar characteristics that other users, with profiles that are similar to User A, have rated highly. The combined approach is another way of reducing cold-start problems for new items.</p>
+<p>Recommendation systems may be evaluated using techniques similar to those used in experimental IR, i.e. the Cranfield model. When Netflix <a href=" http://www.netflixprize.com/">organized a competition</a> to improve their recommendation system the goal was to improve the accuracy of their own “Cinematch” algorithm with more than 10 %. Suggested algorithms used a training set of Netflix data consisting of 100 million user ratings given by 480 000 users on 17 700 films. In the competition data set (2.8 million films) ratings were removed and the goal was to use the training set to recreate or predict the ratings of the films in the competition set. This is parallel to the Cranfield-test collection method where queries are matched against relevance-assessed documents. The “best” algorithms are those best at retrieving the documents assessed relevant for the queries (<a href="colis1654.html#spa76">Sparck Jones and van Rijsbergen, 1976</a>). There are, however, also attempts at involving users more directly in evaluating recommendation systems (<a href="colis1654.html#sha11">Shani and Gunawardana, 2011</a>). </p>
+
+<p>Digital mediation of literature with recommendation systems is a promising idea. In many ways, the recommendation systems mimic the librarian who knows her user and collection. Interviewing the user and knowing their book borrowing history and how other patron have used the library, the librarian come up with suggestions. The automatization of such processes and the digital library’s lack of shelves raise some issues. Of these, the meeting between the rationalizations embedded in computer algorithms and the users’ various forms of needs, is among the most important. Related to this we will also discuss how recommendation systems probably decrease the chances of serendipity.</p>
+<p>As mentioned above, users often may be satisfied with answers that are good enough when searching for information. Denise Agosto (<a href="colis1654.html#ago02">2002</a>) discussed the concept “satisficing”, originally coined by Herbert Simon, and how it relates to information searching and Web-based decision making. Of particular interest is Agosto’s reference to Kuhlthau’s (<a href="colis1654.html#kuh91">1991</a>) work on the “information seeking process” and how this is not purely a cognitive process, but also has an affective dimension. Nick Belkin points out that “there has been almost no serious research effort in understanding the role of affect in the information seeking situation in general and the IR situation in particular, nor in IR system design.” (<a href="colis1654.html#bel08">Belkin, 2008, pp. 50–51</a>). IR algorithms are less capable of implementing emotional than cognitive aspects. In particular, this is evident when the algorithms are not only used for solving informational needs, but also to satisfy users’ needs for affection and recreation. We do not think that <i>emotion retrieval</i> (ER) will take place separately from IR systems, since users will also express their emotional needs with terms that can be matched with an IR algorithm. Thus, ER may be performed with IR algorithms in combination with other techniques. Probably it is possible to adjust weights that better take into account user preferences, e.g. in the form of “likes”, in recommendation systems. In his doctoral thesis Moshfeghi (<a href="colis1654.html#mos12">2012</a>) tested out “emotion information” in two collaborative filtering systems and found that they perform better when taking emotion features into account compared to when only rating information is considered. Considerable work is necessary to meet user’s affectional and recreational needs.</p>
+<p>The “rationality” of IR systems and recommendation system also may affect serendipity, i.e. finding something by chance. In a physical library, the user is exposed to shelves of books, magazines, posters on the wall and many other “irrelevant” information sources that may influence him or her. Björneborn (<a href="colis1654.html#bjo08">2008</a>) identified ten factors in the library that may be a source of serendipity, including “explorability” and “browsing”. Elaine Toms suggests four approaches to research in order to facilitate serendipity in IR:</p>
+<ol>
+<li>Role of chance or ‘blind luck’: implemented via a random information node generator.</li>
+<li>Pasteur principle („chance favours the prepared mind“): implemented via a user profile.</li>
+<li>Anomalies and exceptions: partially implemented via poor similarity measures.</li>
+<li>Reasoning by analogy: implementation is unknown at the moment. (<a href="colis1654.html#tom00">Toms, 2000</a>)</li>
+</ol>
+<p>André, Schraefel, Teevan and Dumais (<a href="colis1654.html#and09">2009</a>) points out that serendipity consists of two different aspects, the first being “its accidential nature and the delight and  surprise of something unexpected (e.g., the synthesis of copper phthalocyanine)”, whereas the second is “the breakthrough or discovery made by drawing an unexpected connection – the sagacity (e.g, using copper phthalocyanine as dye)”. The focus of system designers, they claim, has been to try to facilitate the former whereas the latter has been ignored. Therefore they argue that a more holistic picture of serendipity and have several suggestion on paths to follow, including the support of domain expertise, creation of common language models and facilitation of networks.</p>
+</section>
+
+<section>
+<h2>Summary and conclusions</h2>
+<p>We have shown how mediation of culture has been embedded in knowledge organization systems since when they were analogue up until the rather sophisticated recommendation systems of today. In her book on mediation of literature (“litteraturformidling”) Åse Kristine Tveit states that to “index is to mediate” (<a href="colis1654.html#tve04">Tveit, 2004, p. 17</a>) (our translation). However, she draws a distinction between this kind of “technical” mediation and a more personal mediation, which requires a direct initiative from the intermediary. The distinction is seemingly in contrast with our description of analogue and digital systems for mediation. One could perhaps argue that knowledge organization represents a <i>second-order mediation</i> (inspired by the terminology of Weinberger (<a href="colis1654.html#wei07">2007</a>)), extending mere (first-order) accessibility of material with systematized metadata. However, interpreted as paratexts one could also argue that metadata facilitates direct (third-order) mediation, by guiding cultural consumption. Today, when search and recommendation systems have connected typical LAM-metadata to user data and “mined” them algorithmically, with customized recommendations as a result, they are definitively close to adapt the mediation performed by flesh-and-blood-librarians. Thus, we argue that such “mediation machines” do facilitate direct interaction between cultural products and their potential users, and that they can be interpreted as a mediator of culture in line with the modern practices of LAM-institutions.</p>
+<p>This adaptation is not free of challenges. Modern information systems, or “mediation machines”, have the capability to accurately match users’ information need. Such systems, however, face the challenge of becoming too “rational” and not facilitate serendipitous discoveries. Although attempts have been made to address these problems, the ideas are mainly theoretical. Implementing emotion retrieval and serendipity-sensitive retrieval has proven to be difficult.</p>
+<p>It should also be noted that the motivation of Google and other commercial vendors of digital mediation services differs a lot from the purposes served by LAM-institutions. The latter have specific social responsibilities, are often funded by public money and regulated by laws. This stand in contrast to the commercial business models of the former. The two types of services we have compared thus may have very different understanding of mediation as a concept, and further in the realization of mediation techniques. This would be an interesting topic for further investigation.</p>
+
+ <h2 id="author">About the authors</h2>
+ 
+ <p><strong>Kim Tallerås</strong> is a research fellow at the Department of Archivistics, Library and Information Science at Oslo and Akershus University College of Applied Sciences. He can be contacted at: <a href="mailto:kim.talleras@hioa.no">kim.talleras@hioa.no</a>.<br />
+<strong>Nils Pharo</strong> is Professor at the Department of Archivistics, Library and Information Science at Oslo and Akershus University College of Applied Sciences and can be contacted at <a href="mailto:nils.pharo@hioa.no">nils.pharo@hioa.no</a>.</p>
+</section>
+
+<section class="refs">
+  
+<h2>References</h2>
+  
+ <ul class="refs"> 
+ <li id="ago02">Agosto, D. E. (2002). Bounded rationality and satisficing in young people’s Web-based decision making. <em>Journal of the American Society for Information Science and Technology, 53</em>(1), 16–27.</li>
+ <li id="and02">Andersen, J. (2002). Materiality of works: the bibliographic record as text. <em>Cataloging &amp; Classification Quarterly, 33</em>(3–4), 39–65. </li>
+ <li id="and09">André, P., Schraefel, M. C., Teevan, J., &amp; Dumais, S. T. (2009). Discovery is never by chance: designing for (un)serendipity. In <em>Proceedings of the Seventh ACM Conference on Creativity and Cognition</em> (pp. 305–314). New York, NY: ACM. </li>
+ <li id="bae11">Baeza-Yates, R. (2011).<em> Modern information retrieval : the concepts and technology behind search</em> (2nd ed.). Addison Wesley.</li>
+ <li id="bat89">Bates, M. J. (1989). The design of browsing and berrypicking techniques for the online search interface. <em>Online Information Review, 13</em>(5), 407–424. </li>
+ <li id="bel08">Belkin, N. J. (2008). Some(What) Grand challenges for information retrieval. <em>SIGIR Forum, 42</em>(1), 47–54. </li>
+ <li id="bjo08">Björneborn, L. (2008). Serendipity dimensions and users’ information behaviour in the physical library interface. <em>Information Research, 13</em>(4), paper 370. Retrieved from http://www.informationr.net/ir/13-4/paper370.html (Archived by WebCite® at <a href="http://www.webcitation.org/6REoRyS5E" target=_blank>http://www.webcitation.org/6REoRyS5E</a>)</li>
+ <li id="bri98">Brin, S., &amp; Page, L. (1998). The anatomy of a large-scale hypertextual Web search engine. <em>Computer Networks and Isdn Systems, 30</em>(1–7), 107–117. </li>
+ <li id="cut76">Cutter, C. A. (1876). <em>Rules for a printed dictionary catalogue.</em> Washington.</li>
+ <li id="eft96">Efthimiadis, E. N. (1996). Query expansion. <em>Annual Review of Information Science and Technology, 31</em>, 121–87.</li>
+ <li id="gen97">Genette, G. (1997). <em>Paratexts: thresholds of interpretation</em> (Vol. 20). Cambridge University Press.</li>
+ <li id="gro10">Grøn, R. (2010). Oplevelsens rammer : former og rationaler i den aktuelle formidling af skønlitteratur for voksne på danske folkebiblioteker : ph.d. afhandling fra forskningsprogrammet Videnskultur og vidensmedier på Danmarks Biblioteksskole. Det Informationsvidenskabelige Akademi.</li>
+ <li id="int09">International Federation of Library Associations and Institutions. (2009). <em>IFLA cataloguing principles : the Statement of International Cataloguing Principles (ICP) and its glossary: in 20 languages</em> (Vol. v. 37). KGSaur.</li>
+ <li id="int98">International Federation of Library Associations and Institutions Study Group on the Functional Requirements for Bibliographic Records. (1998). <em>Functional requirements for bibliographic records : final report</em> (Vol. 19). Saur.</li>
+ <li id="kuh91">Kuhlthau, C. C. (1991). Inside the search process: information seeking from the user’s perspective. <em>Journal of the American Society for Information Science, 42</em>(5), 361–371. </li>
+ <li id="mos12">Moshfeghi, Y. (2012). <em>Role of emotion in information retrieval</em> (Ph.D.). University of Glasgow. Retrieved from http://theses.gla.ac.uk/3118/ (Archived by WebCite® at <a href="http://www.webcitation.org/6kz5q7Xp4" target=_blank>http://www.webcitation.org/6kz5q7Xp4</a>)</li>
+ <li id="odd82">Oddy, R., Belkin, N., &amp; Brooks, H. (1982). ASK for information retrieval: part I. background and theory. <em>Journal of Documentation</em>., 61–71.</li>
+ <li id="pis10">Pisanski, J., &amp; Žumer, M. (2010). Mental models of the bibliographic universe. part 1: mental models of descriptions. <em>Journal of Documentation, 66</em>(5), 643–667. </li>
+ <li id="rad03">Radford, G. P. (2003). Trapped in our own discursive formations: toward an archaeology of library and information science. <em>Library Quarterly, 73</em>(1), 1–18.</li>
+ <li id="ric11">Ricci, F., Rokach, L., &amp; Shapira, B. (2011). Introduction to recommender systems handbook. In F. Ricci, L. Rokach, B. Shapira, &amp; P. B. Kantor (Eds.), <em>Recommender Systems Handbook</em> (pp. 1–35). Springer.</li>
+ <li id="ros66">Rosenberg, V. (1966). <em>The application of psychometric techniques to determine the attitudes of individuals toward information seeking and the effect of the individual’s organizational status on these attitudes</em>. Bethlehem, PA: Center for Information Science, Lehigh Univ.</li>
+ <li id="sal90">Salton, G., &amp; Buckley, C. (1990). Improving retrieval performance by relevance feedback. <em>Journal of the American Society for Information Science, 41</em>(4), 288–297. </li>
+ <li id="sch02">Schein, A. I., Popescul, A., Ungar, L. H., &amp; Pennock, D. M. (2002). Methods and Metrics for Cold-Start Recommendations. In <em>Proceedings of the 25th Annual International Acm Sigir Conference on Research and Development in Information Retrieval</em> (pp. 253–260).</li>
+ <li id="sha11">Shani, G., &amp; Gunawardana, A. (2011). Evaluating Recommendation Systems. In F. Ricci, L. Rokach, B. Shapira, &amp; P. B. Kantor (Eds.), <em>Recommender Systems Handbook</em> (pp. 257–297). Springer. </li>
+ <li id="spa72">Sparck Jones, K. (1972). A statistical interpretation of term specificity and its application in retrieval. <em>Journal of Documentation, 28</em>(1), 11–21. </li>
+ <li id="spa76">Sparck Jones, K., &amp; van Rijsbergen, C. J. (1976). Information retrieval test collections. <em>Journal of Documentation, 32</em>(1), 59–75.</li>
+ <li id="tay68">Taylor, R. S. (1968). Question-negotiation and information seeking in libraries. <em>College &amp; Research Libraries, 29</em>(3), 178–194. Retrieved from http://crl.acrl.org/content/29/3/178.full.pdf+html (Archived by WebCite® at <a href="http://www.webcitation.org/6kz6RGynq" target=_blank>http://www.webcitation.org/6kz6RGynq</a>)</li>
+ <li id="tom00">Toms, E. (2000). Serendipitous information retrieval. In <em>Proceedings of the First DELOS Network of Excellence Workshop on Information Seeking, Searching and Querying in Digital Libraries</em> (pp. 11–12).</li>
+ <li id="tve04">Tveit, Å. K. (2004). <em>Innganger : om lesing og litteraturformidling</em>. Fagbokforl.</li>
+ <li id="wei07">Weinberger, D. (2007). <em>Everything is miscellaneous: the power of the new digital disorder.</em> Times Books.</li>
+ <li id="wes12">Westrum, A.-L., Rekkavik, A., &amp; Tallerås, K. (2012). Improving the presentation of library data using FRBR and Linked data. <em>Code4Lib Journa</em>l, (16). Retrieved from http://journal.code4lib.org/articles/6424/comment-page-1 (Archived by WebCite® at <a href="http://www.webcitation.org/6kz6hUB8F" target=_blank>http://www.webcitation.org/6kz6hUB8F</a>)</li>
+ 
+
+</ul>
+ <h4 style="text-align:center;">How to cite this paper</h4>
+<div>
+   <div class="citing">Tallerås, K. &amp; Pharo, N.  (2017). Mediation machines: how principles from traditional knowledge organization have evolved into digital mediation systems. <em>Information Research, 22</em>(1),  CoLIS paper 1654. Retrieved from  http://InformationR.net/ir/22-1/colis/colis1654.html  (Archived by WebCite® at http://www.webcitation.org/6oTPowyn2)</div>  
+</div>
+</section>
+</article>
+<br />
+<section>
+
+ <table class="footer" style="border-spacing:10px;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #7986B7; color: white; font-family: verdana, sans-serif; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"><form method="get" action="http://scholar.google.com/scholar" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"> <input type="hidden" name="q" value="Digital libraries, information systems" /><br />  
+<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana, sans-serif; font-weight: bold;" /><input type="hidden" name="num" value="100" />  </td>  </tr></table></form></td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --><form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="Digital libraries, information systems" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana, sans-serif; font-weight: bold; font-size: small;" /><input type="hidden" name="client" value="pub-5081678983212084" /><input type="hidden" name="forid" value="1" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="hidden" name="oe" value="ISO-8859-1" /><input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" /><input type="hidden" name="hl" value="en" /></td></tr>  
+  </table></form></td>  
+ <td style="vertical-align:top; text-align:center;"><form method="get" action="http://www.bing.com" target="_blank">
+ <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="Digital libraries, information systems" /> <br /><input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana, sans-serif; font-weight: bold;" /> <input type="hidden" name="num" value="100" /></td></tr>  
+ </table></form></td></tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/22-1/colis/colis1654.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+ <br />
+ <div class="addthis_inline_share_toolbox" style="margin-left:10%;"></div>
+<hr />
+</section>
+
+<table class="footer" style="padding:10px;"><tr><td style="text-align:center; vertical-align:top;">
+<br />
+<div><a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={6060b8e7-aa8a-9a54-e145-a835ce07eb2b}&amp;template=simple" alt="Hit Counter by Digits" /></a></div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the authors, 2017. <br />Last updated: 8 February, 2017 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="colis2016.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../../irsindex.html">Subject index</a> | </li>
+	<li><a href="../../search.html">Search</a> | </li>
+	<li><a href="../../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5046158704890f2e">
+ </script> 
+</body>  
+ </html> 

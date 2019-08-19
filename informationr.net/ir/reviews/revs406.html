@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Book Review: Introducing HTML 5</title>
+<!--the layoout and text stylesheets-->
+<link href="reviews.css" media="all" rel="stylesheet" />
+
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk" />
+<meta name="DC.Title" content="Book review:  Introducing HTML 5" />
+<meta name="DC.Creator" content="T.D. Wilson" />
+<meta name="DC.Subject" content="HTML 5" />
+<meta name="DC.Description" content="Book review" />
+<meta name="DC.Subject.keywords" content="HTML 5" />
+<meta name="distribution" content="global" />
+<meta name="robots" content="ALL" />
+<meta name ="description" content="book review" />
+<meta name="DC.Type" content="text" />
+<meta name="DC.Identifier" scheme="ISSN" content="1368-1613" />
+<meta name="dc.identifier" scheme="URI" content="http://InformationR.net/ir/reviews/revs406.html"/>
+<meta name="DC.Relation.IsPartOf" content="http://InformationR.net/ir/16-2/infres162.html" />
+<meta name="DC.Format" content="text/html" />
+<meta name="DC.Language" content="en" />
+<meta name="DC.Date.Available" content="2011-06-15" />
+<meta name="DC.Publisher" content="Professor T.D. Wilson" />
+<meta name="DC.Rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+<meta name="DC.Coverage.placename" content="global" />
+
+</head>
+
+
+<body class="mocha">
+<div id="main_wrapper">
+<div id="header">
+	<div id="header_inner">
+		<img src="http://www.informationr.net/ir//mini_logo2.gif" width="336" height="45" alt="header" /><br />
+		<!-- end header_nav -->
+ 	</div><!-- end header_inner -->
+</div>
+<!-- end header -->
+<div id="nav">
+	<div id="nav_inner">
+<ul>
+	<li><a href="reviews.html"><strong>New reviews</strong></a></li>
+	<li><a href="reviews.html#past"><strong>Past reviews</strong></a></li>
+	<li><a href="reviews.html#srev"><strong>Software reviews</strong></a></li>
+	<li><a href="../index.html"><strong>Home</strong></a></li>
+</ul>
+	</div><!-- end nav_inner -->
+</div><!-- end nav -->
+
+<div id="content">
+	<div id="content_inner">
+	<h2>BOOK AND SOFTWARE REVIEWS</h2>
+	<br />
+   <h3> Lawson, Bruce &amp; Sharp, Remy <em>Introducing HTML 5</em>. Berkeley, CA: New Riders, 2011.  xvi, 223 p.  ISBN 978-0-321-68729-6.  $34.99 &pound;25.99</h3>
+<br />
+
+<p>Just about every Website you come across uses a combination of the mark-up language HTML version 4.0 and a combination of cascading style sheets (CSS) and javascript.  HTML version 4.0 was published in 1998, which, in computing terms, is an aeon ago, but now the HTML 5 specification <a href="http://dev.w3.org/html5/markup/Overview.html">has been published</a> albeit as a draft in development and books on the subject are beginning to flow.  Why the length of time between versions?  Well, as the authors of this work point out, W3C - the World Wide Web Consortium anticipated that HTML would be replaced by the rather more rigorous, XML and a modification of HTML 4, XHTML (used by this journal), was produced to steer things in the right direction.  However, XML did not take over the world of Web publishing and even XHTML is far from being a standard: most people continue to use HTML 4.</p>
+
+<p>Will the publication of HTML 5 make much difference to this situation?  That's a very difficult question to answer, since varoius tools have emerged to provide Web page capabilities that cannot be delivered by HTML alone: such things as Flash.  The result is that HTML 5 provides capabilities for video and audio as well as drawing possibilities through the HTML code itself.  The video capability is shown here: a short, totally boring video taken with  my phone, while I as writing the review - you see the book on the left, the review in progress on the screen, as well as my Goldtouch ergonomic keyboard, my mouse and teacup, none of it in HD :-).  </p>
+
+
+<video src="http://www.informationr.net/ir//reviews/VIDEO0003.theora.ogv" controls height="200" width="250" preload></video>
+
+<p>The code for this is very simple:</p>
+
+<div style="font-family:monospace;">&lt;video src=&quot;VIDEO0003.theora.ogv&quot; controls height=&quot;200&quot; width=&quot;250&quot; preload&gt;&lt;/video&gt;</div><br />
+
+<p>You can guess that the video is a file called &quot;VIDEO0003.theora.ogv&quot;, then &quot;controls&quot; simply means that the usual vidoe player controls are provided, i.e., forward, pause, volume control, and &quot;preload&quot; simply ensures that the file is loaded when you load the Web page, rather than waiting until you click on &quot;play&quot; before loading.  Note that, with Safari at least, you can also expand the video to full screen: it's probably even more boring that way!</p>
+
+<p>Of course, not all browsers will enable you to see the video.  The authors show how this problem can be overcome by using code to use Flash. Formats are a problem for browsers: the original formal from the phone was 3GP, which is pretty well standard for phones, but the only browswer that would show the video was Safari on my iMac. I tried converting to formats such as AVI, WAV and MOV, but none of these worked on Chrome or Firefox, although all of them worked on Safari and on Opera; finally, I converted to the .theora.ogv format and all of these browsers seem to cope with that open source format. The result of this little exercise suggests that if you want to be sure of seeing any kind of video file, choose Safari or Opera. </p>
+
+<p>I shan't attempt to demonstrate the &lt;canvas&gt; tag - to which the authors devote and entire chapter. As I understand it, and I may be wrong, the main purpose of this tag and the associated API, is to provide capabilities for drawing applications that function within the browser.  Reference is made to demonstration systems that replicate the old Microsoft Paint program and you can try out <a href="http://mrdoob.com/projects/harmony" target="blank">Harmony</a>.</p>
+   
+<p>However, there are also new features in the basic mark-up tags, some of which are referred to as endowing <i>semantic</i> capability.  However, let us be clear about this: semantics has to do with meaning and there is nothing in the tags that conveys anything about the meaning of the text within those tags.  For example, a new tag is &lt;article&gt;, which can be used to identify text as being, say, an online newspaper article, or a scholarly paper in this journal - the entire text of the article would be set between these tags.  But that conveys no <em>semantic</em> information whatsoever: it conveys no information about the meaning of the content within the tags; it only conveys information about the function of the tag.  The same is true of <span style="font-family: monospace; font-size:medium;">&lt;aside&gt;, &lt;audio&gt;, &lt;datalist&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;section&gt;, &lt;source&gt;</span> and <span style="font-family: monospace; font-size:medium;">&lt;summary&gt;</span>: all of them useful additions to the list of tags, but none of them conveying the meaning of what lies between them. Some, like <span style="font-family: monospace; font-size:medium;">&lt;datalist&gt;</span> and <span style="font-family: monospace; font-size:medium;">&lt;figure&gt;</span> tell you what kind of information is to be found, but not what the data or the figure are <em>about</em> - and semantics is concerned with <em>aboutness</em></p>
+
+<p>I suspect that it is this mis-use of the idea of semantics that has given rise to the notion of the Semantic Web (although I haven't heard much about that lately), while a moment's thought will tell you that, in order to convey, the meaning of what lies between tags would require a universal classification scheme, at the least and every tag would have to have a set of classes specified to represent that classification scheme.  In short, it's not achievable.</p>
+
+<p>However, this minor grumble over language does not detract from the usefulness of this book: to begin with it is quite short, although I have no doubt that the HTML 5 'bibles' are already on the shelves;  it is also well-written and effectively illustrated.  If you want to know what is happening with HTML, this is the book for you.  It is rather a pity that the various code listings and Website links are not available on the publisher's Website, but, then, one can't have everything.</p>
+
+
+<h5>Professor Tom Wilson<br />
+Editor-in-Chief<br />
+April, 2011</h5>
+
+	</div><!-- end nav_inner -->
+</div><!-- end nav -->
+<div id="promo">
+	<div id="promo_inner">
+	<iframe src="http://rcm.amazon.com/e/cm?t=informatirese-20&o=1&p=8&l=as1&asins=0321687299&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&npa=1&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+					<script type="text/javascript"><!--
+google_ad_client = "pub-5081678983212084";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text";
+google_ad_channel = "";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+
+<div id="footer">
+	<div id="footer_inner">
+		<hr size="1" style="color:maroon;">
+<h3>How to cite this review</h3>
+<p>Wilson, T.D.  (2011).  Review of:  Lawson, Bruce &amp; Sharp, Remy <em>Introducing HTML 5</em>. Berkeley, CA: New Riders, 2011.   <em>Information Research</em>, <strong>16</strong>(2), review no. R406  [Available at: http://informationr.net/ir/reviews/revs406.html</a>]</p>
+
+<hr size="1" style="color:maroon;" />
+	<div align="center">
+<img  src="valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="16" width="44" />
+</div>
+</div>
+</div>
+
+</div><!--end main wrapper-->
+
+</body>
+</html>
+

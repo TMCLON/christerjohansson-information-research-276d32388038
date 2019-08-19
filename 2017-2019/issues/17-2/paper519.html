@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+    <meta name="dcterms.title" content="A risk perception model: simulating public response to news reports in China">
+    <meta name="author" content="Jiuchang Wei, Fei Wang and Dingtao Zhao,
+    School of Management,University of Science and Technology of China, Hefei, China">
+    <meta name="dcterms.subject" content="Give a brief description of your paper">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/17-2/paper519.html">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/17-2/infres172.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2012-06-15">
+    <meta name="geo.placename" content="global">
+</head>
+<body>
+<h4 id="vol-17-no-2-june-2012">vol. 17 no. 2, June 2012</h4>
+<h1 id="a-risk-perception-model-simulating-public-response-to-news-reports-in-china">A risk perception model: simulating public response to news reports in China</h1>
+<h4 id="jiuchang-wei-fei-wang-and-dingtao-zhao"><a href="#authors">Jiuchang Wei, Fei Wang and Dingtao Zhao</a></h4>
+<p>School of Management,University of Science and Technology of China, Hefei, China.</p>
+<h4 id="abstract">Abstract</h4>
+<blockquote>
+<p><strong>Introduction.</strong> The media have a great influence on public perception of risk. This study sought to explore how the public perceive crisis information from news reports.<br>
+<strong>Method.</strong> We proposed a mathematical model to describe and investigate public risk perception by simulation analyses.<br>
+<strong>Analysis.</strong> The simulations were carried out using the mathematical software MATLAB, and then compared with public risk perception in three patterns of news reports which were selected from the Website of SINA.com in China.<br>
+<strong>Results.</strong> Our findings showed that the public had different perceptions of what caused the crisis depending on the type of news report. Public risk perceptions developed dynamically and the process can be divided into three general stages: the sensitive period, the rational period and the forgotten period.<br>
+<strong>Conclusions.</strong> These findings have implications for emergency management and highlight the importance of considering public perception of risk when handling emergencies.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>A disaster is a sudden, emergent event, which may cause significant casualties, property losses, and endanger public safety(<a href="#nor02">Norris <em>et al.</em> 2002</a>). This decade has seen an increasing number of natural and man-made disasters. The 2004 Indian Ocean tsunami, the Wenchuan earthquake in 2008 in China and the earthquake in 2011 in Japan, to name a few, killed tens of thousands of people. These disasters also caused tremendous stress and a series of social problems. Effective communication is one of the key points to consider when dealing with disasters.</p>
+<p>Researchers usually focus on the release regularity of crisis information or the communication process. Perry (<a href="#per07">2007</a>)revealed the importance of knowing how communication channels worked in a given national context and compared the efficiency of the five principal dissemination channels: telephone calls; face-to-face conversations; radios; television and newspapers. Wei <em>et al.</em> (<a href="#wei09">2009</a>) proposed the growth models of news reports on disasters, which indicate how the number of news stories changes during the days that the disasters are covered by mass media. The models are very useful for the disaster decision-makers to implement effective measures in response to media reports. However, few of them attached importance on how to release emergency information strategically. This problem seems to be more serious in China. For example, in the acute stage of crisis, the public may develop a protective response because of stress, fear, anxiety and other negative emotions, which leads to herd-like behaviour, such as the phenomenon of snapping up drugs and grain during the SARS epidemic.</p>
+<p>This article relates how the public perceive information from the media in times of crisis or disaster and compares the differences at different stages of the crisis. Furthermore, this study explores how crisis information could be communicated more effectively if public perceptions were taken into consideration. The findings provide a theoretical framework for the design of communication strategies for the general public in times of crisis.</p>
+<p>The rest of the article proceeds as follows. The next section reviews the literature about crisis communication and the models of information release. The risk perception models are presented in the methodology and sample, and then we describe the simulation graphics and analyse how the public perceive crises from the news reports. Finally, the system framework of communication is provided.</p>
+<h2 id="literature-review">Literature review</h2>
+<p>The objective of information communication is to meet the information needs of the public and offer timely support (<a href="#kes05">Keselman <em>et al.</em> 2005</a>). Rapid transmission of disaster information can effectively control the impact of that disaster (<a href="#per04">Perez-Lugo 2004</a>). Dominick (<a href="#dom96">1996</a>) also pointed out that the mass media not only have the function of information transmission, but also play the role of communication bridge, which often provides social support when disasters occur.</p>
+<p>The process of information communication is complex. Sources of information must be trustworthy, credible, honest, transparent and accountable. A lack of trust and credibility can doom risk communication efforts (<a href="#wor04">Working Group on Governance Dilemmas in Bioterrorism Response 2004</a>). Sorenson (<a href="#sor00">2000</a>) showed that the public response to emergency information is influenced by the content of the message. Message consistency, specificity, certainty, credibility and familiarity are all important factors. Fischhoff <em>et al.</em> (<a href="#fis02">2002</a>) also indicated that public risk perceptions were highly dependent on how messages were framed, who communicated them, and how they were communicated. Pollard (<a href="#pol03">2003</a>) considered the public perception of information sources regarding bioterrorism. His findings highlighted the importance of selecting proper information channels. The gender, age, income, education and ethnicity of recipients of information also affect their responses. For example, women perceive risks differently to men and are more risk averse (<a href="#ste93">Stern <em>et al.</em> 1993</a>). Lindell and Perry(<a href="#lin03">2003</a>) also noted that race and ethnicity influence a wide range of perceptions, such as threat perception and trust of authorities. Similarly, Peacock et al.(<a href="#pea05">2005</a>) examined the influence of socio-economic and demographic characteristics such as age, income and education on shaping public perception of hurricanes.</p>
+<p>To overcome these difficulties, some investigators explored analytical methods to study how to release emergency information. Duggan and Banwell (<a href="#dug04">2004</a>) constructed an information dissemination model for emergencies that divided the factors affecting the dissemination into internal factors and external elements, and emphasised the encoding rule of information sender. Their model is important for understanding the influence factors of information diffusion, but hardly explains the method of releasing crisis information. To improve the accuracy of emergency information dissemination, it is necessary to establish a quantitative assessment model of information impact on the public. Mullainathan (<a href="#mul02">2002</a>) established the model of public information memory based on the principles of recency, similarity and repetition. Subsequent to this study, the information manipulation model was constructed by Sarafidis (<a href="#sar07">2007</a>), as a standard dynamic optimisation problem by introducing parameters such as the principal of recency, cue dependency and rehearsal. The greatest advantage of this model is that it quantitatively assesses the effect of the information dissemination on the target groups. Wei <em>et al.</em> (<a href="#wei10">2010</a>) proposed an audience coverage model of crisis information release, which addresses the problem of optimal release time via television. The Bad News Response Model was constructed by Sweeny and Shepperd (<a href="#swe09">2009</a>) to predict responses to bad news and aid bad news-givers in achieving the best response, which is very helpful for dissemination of the emergency information under various circumstances.</p>
+<p>In summary, most studies focused on the information sender, but ignored the requirements and perceptions of the recipients, and few studies examined how the crisis information is communicated by the government at a macro strategic level.</p>
+<h2 id="methodology-and-sample">Methodology and Sample</h2>
+<p>Over the past few years, a lot of work has been done on the determinants of risk perception, especially for the news media. Payne (<a href="#pay94">1994</a>) noted that media services were the essential means whereby the public became aware of catastrophes, sometimes arriving at the scene of a disaster well before local emergency services. Television was the major mass media carrier of emergency information when a crisis occurred (<a href="#jur06">Juric 2006</a>; <a href="#per07">Perry 2007</a>; <a href="#pel08">Peltz <em>et al.</em> 2008</a>; <a href="#ras02">Rasinski <em>et al.</em> 2002</a>). In a study of 9/11, results also demonstrated that respondents directly exposed to the disaster were more like to associate television viewing with post-traumatic stress disorder and depression (<a href="#ahe02">Ahern <em>et al.</em> 2002</a>; <a href="#pan03">Pantin <em>et al.</em> 2003</a>). Others argue that the content of media reports has a significant influence on the formation of public risk perceptions since the negative and sensational news shared by the mass media can mislead the public (<a href="#nac05">Nacos 2005</a>; <a href="#see02">Seeger 2002</a>). In addition to the propagation path and content of the news, the number of news reports can also affect the public's response to crisis (<a href="#cdc02">CDC 2002</a>). In conclusion, this paper has the basic assumption that the mass media has the main influence on the public's perception of risk (<a href="#kon94">Koné &amp; Mullet 1994</a>), and the more crisis information the media provides, the stronger the effect (<a href="#W%C3%A5h00">Wåhlberg and Sjöberg 2000</a>).</p>
+<p>This article quantitatively explores how public risk perceptions are affected by the news reports. However, many analyses derive theories based on qualitative content analysis of news reports. This research is based on the growth models of news stories on disasters which were proposed by Wei <em>et al.</em> (<a href="#wei09">2009</a>). The factors that influenced the likelihood of the growth models include disaster types, newsworthy material, disaster severity, and economic development of the affected area. Three types of growth models were proposed: the damped exponential model, the normal model , and the fluctuating model. This line of thought leads to some important questions: (1) do the public's perceptions of what caused the crisis differ according to the types of news reports they have experienced; (2) what differences in disaster perceptions are evident in the news coverage; (3) how is it possible to measure perception in the news coverage?</p>
+<p>Risk perception is defined as the subjective assessment of risk, not actual risk. Risk perception determines how people respond to hazards (<a href="#pen00">Pennings and Smidts 2000</a>; <a href="#pen03">Pennings and Smidts 2003</a>). There is a difference between the subjective assessment of risk and the objective assessment of the actual risk. People tend to overrate the severity of the risk.</p>
+<p>The formation of risk perception is the process of remembering information resulting from emergency communication. Emergency information acts as a stimulus or motivation to form perceptions about a given situation (<a href="#mil00">Mileti and Peek 2000</a>). When citizens receive various forms of emergency information, they look for confirmation and verification to decide whether or not the information is trustworthy and relevant. Not all emergency information stimulates the formation of risk perception, only the emergency information that people trust and decide to remember. Furthermore, the memorability of news reports is affected by changes in psychology. In a heightened state of anxiety, there is a human need to obtain and remember more information to protect self and family (<a href="#ben99">Bennett 1999</a>; <a href="#pol03">Pollard 2003</a>). We can therefore use the fluctuation in memory of crisis information as a measurement to describe public perception of risk; the greater the increment of memorability of news reports, the stronger the perception of risk.</p>
+<p>It is important to be aware however of the wide differences in individual's memories. Age, occupation and social class all influence one's ability to remember. To simplify the model, we assume that each individual has the same memory faculty which follows the Ebbinghaus forgetting curve (<a href="#ebb85">Ebbinghaus 1885</a>). We also assume that the public receive all the news disseminated by the mass media. There is another point to be considered. Given that the learning process is much shorter than the forgetting process and the mass media can be highly informative in a single day, we only consider the forgetting curve and ignore the learning process.</p>
+<p>The public perception model is constructed as follows. Let M (t) denote the memory of the information at time t, and M (t) decay exponentially over time at a constant rate of ?, 0</p>
+<p><img src="p519fig1.png" alt=""> (1)</p>
+<p>Note that equation 1, separating the variables, can be written as:</p>
+<p><img src="p519fig2.png" alt="2"> (2)</p>
+<p>It is important to stress that crisis information will be gradually spread out through various media when a crisis arises. So, we assume that <img src="p519fig3.png" alt="3"> is the amount of crisis information released during the period, i, the life-cycle of the crisis, and n, the amount of news coverage during the cycle<img src="p519fig4.png" alt="4">. Thus the total memory function at time t is:</p>
+<p><img src="p519fig5.png" alt="5"></p>
+<p><img src="p519fig6.png" alt="6"> (3)</p>
+<p>Where p (t) is the usual indicator function of the growth of news reports, which can be expressed as:</p>
+<p><img src="p519fig7.png" alt="7"> (4)</p>
+<p><img src="p519fig8.png" alt="8">refers to the amount of information released during the period i, which may follow different distribution. Besides, let Z (t) denote the memory of evolutionary function during the whole cycle of the media coverage, which refers to the increment to the memory of t-period information from the information in period t+1.</p>
+<p>As long as<img src="p519fig9.png" alt="8">, Z (t) can be neatly summarised in the following equation:</p>
+<p><img src="p519fig10.png" alt="9"></p>
+<p><img src="p519fig11.png" alt="10"></p>
+<p><img src="p519fig12.png" alt="11"> (5)</p>
+<p>Similarly, when<img src="p519fig13.png" alt="12">:</p>
+<p><img src="p519fig14.png" alt="13"></p>
+<p><img src="p519fig15.png" alt="14"> (6)</p>
+<p>Consequently, using equation 5 and 6, we have the risk perception model:</p>
+<p><img src="p519fig16.png" alt="15"> (7)</p>
+<p>Up to this point, we have constructed the risk perception model based on memory theory. In the next section, we will discuss how the public perceive crisis information from different types of media reports.</p>
+<h3 id="data-collection">Data collection</h3>
+<p>The typical cases were selected from the Website of SINA.com which was the most recognised Internet brand in China and among Chinese communities globally for its quick and comprehensive coverage of domestic and overseas events. The choice of the crises was based on the previous research findings revealed by Wei <em>et al.</em> (<a href="#wei09">2009</a>), which indicated that disasters exhibiting the normal model, the damped exponential model and the fluctuating model are more likely to be respectively man-made disasters like mine explosions and fires, natural or sudden disasters and gradual and natural disasters with more newsworthiness, lower maximum daily news reportage and longer duration. We thus chose the seep water accident in Wangjialing Coal Mine of Shanxi, the &quot;3.11&quot; earthquake in Japan and the oil spillage accident in Bohai Sea area as the samples.</p>
+<p>Reports of the three most notable disasters were collected from Webpages of special coverage in SINA.com. The special coverage pages are like the special reports in BBC.com. They contain disaster news links whose contents are adopted from most of the major media agencies in China, and the news links are arranged in chronological order. To illustrate the growth in news stories, we generated statistics of the amount of news reports on a daily basis. Although some links refer to previous stories on the SINA site, we consider them all as new statistical samples. The description of the disasters is shown in Table 1.</p>
+<table class="center" style="width:90%;"><caption>  
+Table 1: The data of the samples</caption>
+<tbody>
+<tr>
+<th>The model</th>
+<th>Disaster name</th>
+<th>Disaster data (YYYY/MM/DD)</th>
+<th>Duration</th>
+<th>The number of news reports</th>
+</tr>
+<tr>
+<td>Normal model</td>
+<td>The Seep Water accident in Wangjialing coal mine in Shanxi</td>
+<td style="text-align:center;">2010/03/28- 2010/04/17</td>
+<td style="text-align:center;">21 days</td>
+<td style="text-align:center;">698</td>
+</tr>
+<tr>
+<td>Damped exponential model</td>
+<td>The "3.11" earthquake in Japan</td>
+<td style="text-align:center;">2011/03/11- 2011/05/04</td>
+<td style="text-align:center;">55 days</td>
+<td style="text-align:center;">6886</td>
+</tr>
+<tr>
+<td>Fluctuating model</td>
+<td>The oil spillage accident in Bohai Sea area</td>
+<td style="text-align:center;">2011/07/01- 2011/10/25</td>
+<td style="text-align:center;">86 days</td>
+<td style="text-align:center;">357</td>
+</tr>
+</tbody>
+</table>
+<p>Equation 7 is the general model of disaster perception. In fact, the results show significant differences in the three growth models of news stories on disasters. In the following part, we will discuss the perception model in the normal model, the damped exponential model and the fluctuationg model.</p>
+<h2 id="simulation-results-and-discussion">Simulation results and discussion</h2>
+<p>The public's distinct preferences on the news reports lead to different rates of forgetting. Therefore, we give the different values of ?, 0.2, 0.5 and 0.8, and compare the public risk perceptions among them. The values of ? that are chosen can represent diverse groups of people with different characteristics. Take age for example, the three values can represent the memory ability of different age groups (<a href="#win88">Winocur 1988</a>). Changing the model parameters may help us better understand the differences of the risk perceptions among different communities.</p>
+<h3 id="the-risk-perception-model-in-the-normal-model">The risk perception model in the normal model</h3>
+<p>We got the distribution curve of the sample data taken from the nomral model case by using curve fitting. The solid line in Figure 1 is the distribution curve which is based on empirical data of the news reports, and the dotted lines are simulations which represent public risk perceptions in three different forgetting rates.</p>
+<figure>![NM moedl](p519fig17.png)
+<figcaption>Figure 1: The simulation of risk perception in the normal model</figcaption>
+</figure>
+<p>To account for the process of public risk perception, we divide the period of the crisis into the prodromal crisis stage, acute crisis stage, chronic crisis stage, and crisis resolution stage (<a href="#fin86">Fink 1986</a>). The characteristics of public risk perception relating to each stage will be discussed next.</p>
+<p>In the prodromal and acute stages, it can be clearly observed that the public risk perception increases gradually along with the accumulation of news reports. Large volumes of information may serve as a risk amplifier, which mobilise latent fears about a particular risk and enhance the recollection of previous accidents or enlarge the extent to which particular failures, events, or consequences can be imagined (<a href="#kas88">Kasperson <em>et al.</em> 1988</a>). Additionally, since the massive quantity of media coverage not only reports the events but also defines and shapes the issues ((<a href="#maz84">Mazur 1984</a>), non authentic sources of risk information may also increase public perceptions of risk. The simulation results also show the growth rate of risk perception increases until it reaches the maximum point This illustrates public sensitivity to crisis information resulting from proactive behaviour such as seeking and confirming emergency information to protect self and family (<a href="#pol03">Pollard 2003</a>; <a href="#maw05">Mawson 2005</a>).</p>
+<p>In the chronic crisis stage, the public risk perception reaches a peak and then decreases along with the dissemination of news reports. As we can see the perception of risk and the quantity of news stories peak around the same time. This can be explained by evidence from the Mt. St. Helen's eruption where detailed information led to higher levels of perceived risk (<a href="#per80">Perry <em>et al.</em> 1980</a>). As the media coverage increases, the public become much more rational to make decisions of whether or what they should do as they reassess the crisis (<a href="#fit94">Fitzpatrick and Mileti 1994</a>).</p>
+<p>So far the perception curves located above the x-axis indicate that the public's assessment of the crisis has exceeded the truth. This would directly lead to an emotional response to the crisis. It is particularly important for the emergency managers to consider public risk perception when they receive crisis communication, because they often have difficulty processing information in a state of negative emotion (<a href="#gli07">Glik 2007</a>).</p>
+<p>In the crisis resolution stage, public risk perceptions become negative and then close to zero. The simulation result shows that public memorability of the disaster begins to gradually fade away and public risk perceptions are processed and reprocessed to fit into the context of reality (<a href="#mil00">Mileti and Peek 2000</a>). This is because the public tend to forget and exhibit lower risk estimates when they cannot receive adequate crisis information (<a href="#wie89">Wiegman <em>et al.</em> 1989</a>).</p>
+<p>Overall, we can divide the evolution of public risk perception into three stages: sensitive period, rational period, and forgotten period (Figure 2).</p>
+<figure>![](p519fig18.gif)
+<figcaption>Figure 2: The schematic diagram of evolution of public risk perception</figcaption>
+</figure>
+<p>To explore how the parameter in the model affects public risk perception, the perception curves in different forgetting rates are compared. It is clear that the forgetting rate has a positive effect on public risk perception. Fluctuations in risk perception are smoothed out and the perception period is shortened. We also take age into account. Since older people, in general, have more experience of handling dangerous situations, they are more likely to have an accurate perception of risk (<a href="#tie93">Tierne 1993</a>).</p>
+<h3 id="the-risk-perception-model-in-the-damped-exponential-model">The risk perception model in the damped exponential model</h3>
+<p>The simulation method is the same as above and the result is shown in Figure 3.</p>
+<figure>![DEM model](p519fig19.gif)
+<figcaption>Figure 3: The simulation of risk perception model of the damped exponential model</figcaption>
+</figure>
+<p>Figure 3 suggests that the simulation result is similar in part to the simulation of risk perception model in the normal model, shown in Figure 1. However, there are several differences between them. The first point is that this crisis is characterised by sudden outbreaks compared with the previous example that follows a normal distribution. Thus, there is no cognitive transition process for the public. As soon as the disaster occurs, their risk perceptions reach the maximum and so too do the number of news reports. There is a causal connection between them. When the large amount of news reports bunched together are disseminated, the memories of these press releases are reinforced in the minds of the public (<a href="#sar07">Sarafidis 2007</a>), which causes a high level of risk perception. The second difference is the higher attenuation rate of risk perception. This might be owing to a more rational and objective assessment on the risk that results from a deeper understanding and analysis of the large amount of news reports released in the beginning. This will cause public perception to enter the forgotten period much earlier.</p>
+<h3 id="the-disaster-perception-model-in-the-fluctuating-model">The disaster perception model in the fluctuating model</h3>
+<p>The news reports of the oil spillage accident in the Bohai sea area relative to the data of the disaster is presented by a scatter plot in Figure 4</p>
+<figure>![FM](p519fig20.png)
+<figcaption>Figure 4: The scatter plot of the number of news stories on the oil spillage accident</figcaption>
+</figure>
+<p>It is obvious that this crisis exhibits frequent fluctuations, has great newsworthiness and the longest life-cycle. Wåhlberg and Sjöberg (<a href="#W%C3%A5h00">2000</a>) indicated that it is exceedingly difficult to predict risk perceptions by processing the available information, thus we take each news point as a separate incident. The conclusions above can be used to analyse the risk perception that is composed of the normal model and the damped exponential model. From the simulation results in Figure 5 (the simulation method is also the same as above) the deduction can also be proved. Compared with the first two models from the simulation, the public perception of risk here remains relatively low level since first entering the forgotten period. It is essential for the government to realise that the dissemination of emergency information will be most needed in the prophase of the crisis due to the higher risk perception.</p>
+<figure>![FM 2](p519fig21.png)
+<figcaption>Figure 5: The simulation of risk perception in the fluctuating model</figcaption>
+</figure>
+<h2 id="conclusions">Conclusions</h2>
+<p>This article proposes a model to examine how the public perceive different types of crisis. It is based on the growth models of news reports on disasters, and presents a new theoretical perspective on crisis management by integrating the memory theory into current research of crises. The findings of this study are as follows: (1) public perceptions of what caused the crisis depend on the type of news report they have experienced (2) the public perception of the crisis develops in a dynamic way, depending on the crisis situation, the process of which can be divided into three stages: the sensitive period, the rational period, and the forgotten period.</p>
+<p>This study has implications on how governments communicate in times of crisis and how they are managed at the macro level. As shown in Figure 5, the framework provides a new way of thinking about crisis communication from the perspectives of situation assessment, communication channels, monitoring information and message coding. The focus of the framework is to guide public perception by identifying the channel, the timing, and the content of emergency information.</p>
+<figure>![FM 2](p519fig21.png)
+<figcaption>Figure 6: The systematic communication framework based on public risk perception</figcaption>
+</figure>
+<p>Since public risk perceptions differ in different types of crisis, policymakers should firstly build a situation assessment system to identify the growth model of news reports. This will help to develop policies that relate to public risk perceptions on the basis of the analysis and conclusions above. To disseminate the emergency information precisely, the government needs to know and fulfil public demands for information which depend on the evolution process of public perception. So, it is necessary to choose a suitable release pattern to match the characteristics of public perception in different types of crises. The choice of communication channel and the timing and content of emergency information is especially important in the sensitive period of public perception. The last step is to balance the number of news reports by monitoring crisis information dynamically so that the government can prevent the transformation among the three growth models of news reports. This will greatly improve the efficiency of emergency management.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>The authors are grateful to the editor and two anonymous referees for their helpful and constructive comments and suggestions that improved the quality of this paper. This research is funded by the National Natural Science Foundation of China (61004108,91024027, 71121061).</p>
+<h2 id="about-the-author">About the author</h2>
+<p>Jiuchang Wei is Associate Professor of School of Management at University of Science and Technology of China. He received his PhD in Management Science and Engineer from University of Science and Technology of China. His primary research interests are crisis management, sustainable development in China, information management. He can be contacted at: <a href="mailto:weijc@ustc.edu.cn">Weijc@ustc.edu.cn.</a></p>
+<p>Fei Wang is a Ph.D. student in School of Management, University of Science and Technology of China, P.R. China. His research interests include information management and crisis communication. He can be contacted at: <a href="mailto:wf504202@mail.ustc.edu.cn">wf504202@mail.ustc.edu.cn.</a></p>
+<p>Dingtao Zhao is Professor of School of Management at University of Science and Technology of China. His primary research interests are strategy management, sustainable development in China, crisis management. He can be contacted at: <a href="mailto:Box@ustc.edu.cn">Box@ustc.edu.cn.</a></p>
+<h4 id="references">References</h4>
+<ul>
+<li>Ahern, J., Galea, S., Resnick, H., Kilpatrick, D., Bucuvalas, M., Gold, J., &amp; Vlahov, D. (2002). Television images and psychological symptoms after the September 11 terrorist attacks. <em>Psychiatry</em>, <strong>65</strong>(4), 289-300.</li>
+<li>Bennett, P. (1999). Understanding responses to risk: some basic findings. In: Bennett P., and Calman K. (Eds.). <em>Risk Communication and Public Health</em> (pp. 3–19). New York: Oxford University Press.</li>
+<li>Center for Disease Control and Prevention (CDC). (2002). <a href="http://emergency.cdc.gov/cerc/pdf/CERC-SEPT02.pdf">Crisis and emergency risk communication</a>. Retrieved 13 January, 2012 from: http://emergency.cdc.gov/cerc/pdf/CERC-SEPT02.pdf.</li>
+<li>Dominick, J.R. (1996). The Dynamics of Mass Communication. New York: McGraw-Hill.</li>
+<li>Duggan, F. &amp; Banwell, L. (2004). <a href="http://informationr.net/ir/9-3/paper178.html">Constructing a model of effective information dissemination in a crisis</a>. Information Research. Retrieved 13 January, 2012 from http://informationr.net/ir/9-3/paper178.html.</li>
+<li>Ebbinghaus, H. (1885). Memory: A Contribution to Experimental Psychology. New York: Dover Publications.</li>
+<li>Fink, S. (1986). Crisis management: Planning for the inevitable. NewYork: American Management Association.</li>
+<li>Fischhoff, B., Bostrom, A. &amp; Quadrel, M.J. (2002). Risk perception and communication. In: R. Detels, J. McEwan, R. Beaglehole &amp; H. Tanaka (Eds.). Oxford Textbook of Public Health: The Methods of Public Health (4th ed.) (pp. 1105–1123). New York: Oxford University Press.</li>
+<li>Fitzpatrick, C., &amp; Mileti, D.S. (1994). Public Risk Communication. In R. R. Dynes &amp; K. J. Tierney (Eds.). <em>Disasters</em>, Collective Behavior, and Social Organization (pp. 71-84). Newark, NJ: University of Delaware Press.</li>
+<li>Glik, D.C. (2007). Risk communication for public health emergencies. <em>The Annual Review of Public Health</em>, <strong>28</strong>, 33-54.</li>
+<li>Juric, P. (2006). <a href="http://etd.lsu.edu/docs/available/etd-04032006-220749/">Mass media usage during a natural disaster: LSU college students and Hurricane Katrina</a>. Retrieved 13 January, 2012 from: http://etd.lsu.edu/docs/available/etd-04032006-220749/.</li>
+<li>Kasperson, R.E., Renn, O., Slovic, P., Brown, H.S., Emel, J., Goble, R., Kasperson, J.X. &amp; Ratick,S. (1988). The Social Amplification of Risk: A Conceptual Framework. <em>Risk Analysis</em>, <strong>8</strong>(2), 177-187.</li>
+<li>Keselman, A., Slaughter, L. &amp; Patel, V.L. (2005). Toward a framework for understanding lay public's comprehension of disaster and bioterrorism information. <em>Journal of Biomedical Informatics</em>, <strong>38</strong>(4), 331-344.</li>
+<li>Koné, D. &amp; Mullet, E. (1994). Societal risk perception and media coverage. <em>Risk Analysis</em>, <strong>14</strong>(1), 21–24.</li>
+<li>Lindell, M.K. &amp; Perry, R.W. (2003). Communicating environmental risk in Multiethnic Communities. Thousand Oaks: Sage Publications.</li>
+<li>Mawson, A.R. (2005). Understanding mass panic and other collective responses to threat and disaster. <em>Psychiatry</em>, <strong>68</strong>(2), 95–113.</li>
+<li>Mazur, A. (1984). The journalist and technology: Reporting about Love Canal and Three Mile Island. <em>Minerva</em>, <strong>22</strong>(1), 45-66.</li>
+<li>Mileti, D.S. &amp; Peek, L. (2000). The social psychology of public response to warnings of a nuclear power plant accident. <em>Journal of Hazardous Materials</em>, <strong>75</strong>(2-3), 181-194.</li>
+<li>Mullainathan, S. (2002). A memory based model of bounded rationality. <em>Quarterly Journal of Economics</em>, <strong>117</strong>(3), 735-774.</li>
+<li>Nacos, B.L. (2005). Mediated terror: teaching terrorism through publicity and propaganda. In J.J.F. Forest (Ed.). The making of a terrorist: Recruitment, training and root causes. Vol 2: Training (pp.98-115). London: Praeger Security International.</li>
+<li>Norris, F.H., Friedman, M.J., Watson, P.J., Byrne, C.M., Diaz, E. &amp; Kaniasty, K. (2002). 60,000 disaster victims speak: part I. An empirical review of the empirical literature, 1981–2001. <em>Psychiatry</em>, <strong>65</strong>(3), 207–239.</li>
+<li>Pantin, H.M., Schwartz, S.J., Prado, G., Feaster, D.J. &amp; Szapocznik, J. (2003). Posttraumatic stress disorder symptoms in Hispanic immigrants after the September 11th attacks: Severity and relationship to previous traumatic exposure. <em>Hispanic Journal of Behavioral Sciences</em>, <strong>25</strong>(1), 56–72.</li>
+<li>Payne, C. (1994). Handling the press. <em>Disaster Prevention and Management</em>, <strong>3</strong>(1), 24-32.</li>
+<li>Peacock, W. G., Brody, S. D. &amp; Highfield, W. (2005). Hurricane risk perceptions among Florida's single family homeowners. <em>Landscape and Urban Planning</em>, <strong>73</strong>(2-3), 120-135.</li>
+<li>Peltz, R., Galit, A., Ventura-Gabay, M. &amp; Bar-Dayan, Y. (2008). Differences in sources of information used by the population between the affected area and the general population during the first phase of a Bird Flu Outbreak. <em>Prehospital and Disaster Medicine</em>, <strong>23</strong>(1), 57-59.</li>
+<li>Pennings, J.M.E. &amp; Smidts, A. (2000). Assessing the construct validity of risk attitude. <em>Management Science</em>, <strong>46</strong>(10), 1337–1348.</li>
+<li>Pennings, J.M.E. &amp; Smidts, A. (2003). The shape of utility functions and organizational behavior. <em>Management Science</em>, <strong>49</strong>(9), 1251–1263.</li>
+<li>Perez-Lugo, M. (2004). Media uses in disaster situations: A new focus on the impact phase. <em>Sociological Inquiry</em>, <strong>74</strong>(2), 210-225.</li>
+<li>Perry, R.W., Greene, M.R. &amp; Lindell, M.K. (1980). Enhancing evacuation warning compliance: suggestions for emergency planning. <em>Disasters</em>, <strong>4</strong>(4), 433–449.</li>
+<li>Perry, S. D. (2007). Tsunami warning dissemination in Mauritius. <em>Journal of Applied Communication Research</em>, <strong>35</strong>(4), 399-417.</li>
+<li>Pollard, W.E. (2003). Public perceptions of information sources concerning bioterrorism before and after anthrax attacks: an analysis of national survey data. <em>Journal of Health Communication</em>, <strong>8</strong>(suppl 1), 93–103.</li>
+<li>Rasinski, K.A., Berktold, J., Smith, T.W. &amp; Albertson, B.L. (2002). America Recovers: A Follow-up to a National Study of Public Response to the September 11th Terrorist Attacks. Chicago, IL: NORC.</li>
+<li>Sarafidis, Y. (2007). What have you done for me lately? Release of information and strategic manipulation of memories. <em>The Economic Journal</em>, <strong>117</strong>(March), 307-326.</li>
+<li>Seeger, M.W. (2002). Chaos and crisis: propositions for a general theory of crisis communication. <em>Public relations review</em>, <strong>28</strong>(4), 329-337.</li>
+<li>Sorenson, J.H. (2000). Hazard warning systems: Review of 20 years of progress. <em>Natural Hazards Review</em>, <strong>1</strong>(2), 119–125.</li>
+<li>Stern, P.C., Dietz, T. &amp; Kalof, L. (1993). Value orientations, gender, and environmental concern. <em>Environment and Behavior</em>, <strong>25</strong>(5), 322-348.</li>
+<li>Sweeny, K., &amp; Shepperd, J. A. (2009). Responding to negative health events: A test of the Bad News Response Model. <em>Psychology &amp; Health</em>, <strong>24</strong>(8), 895-907.</li>
+<li>Tierney, K.J. (1993). <a href="http://dspace.udel.edu:8080/dspace/handle/19716/579">Disaster Preparedness and Response: Research Findings and Guidance from the Social Science Literature</a>. Retrieved 13 January, 2012 from: http://dspace.udel.edu:8080/dspace/handle/19716/579.</li>
+<li>Wåhlberg, A.A. &amp; Sjöberg, L. (2000). Risk perception and the media. <em>Journal of Risk Research</em>, <strong>3</strong>(1), 31-50.</li>
+<li>Wei, J., Zhao, D., Yang, F., Du, S. &amp; Marinova, D. (2010). Timing crisis information release via television. <em>Disasters</em>, <strong>34</strong>(4), 1013-1030.</li>
+<li>Wei,J., Zhao, D. &amp; Liang, L. (2009). Estimating the growth models of news stories on disasters. <em>Journal of the American Society for Information Science and technology</em>, <strong>60</strong>(9), 1741–1755.</li>
+<li>Wiegman, O., Gutteling, J. M., Boer, H. &amp; Houwen, R. J. (1989). Newspaper coverage of hazards and the reactions of readers. <em>Journalism Quarterly</em>, <strong>66</strong>(4), 846-852.</li>
+<li>Winocur, G. (1988). A neuropsychological analysis of memory loss with age. <em>Neurobiology of Aging</em>, <strong>9</strong>(5-6), 487-494.</li>
+<li>Working Group on Governance Dilemmas in Bioterrorism Response. (2004). Leading during bioattacks and epidemics with the public's trust and help. <em>Biosecurity and Bioterrorism: Biodefense Strategy, Practice, and Science</em>, <strong>2</strong>(1), 25-40.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,2171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0040)http://informationr.net/ir/template.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<meta http-equiv="Content-Language" content="en-gb">
+<TITLE>Analysis of the similarity within the response of the Web search engines: 
+an </TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+title=serif media=screen href="../IRstyle2.css" rel=stylesheet><LINK title=sans 
+media=screen href="Template for papers_archivos/IRstylesans.css" type=text/css 
+rel="alternate stylesheet"><LINK rev=made href="mailto:t.d.wilson@shef.ac.uk"><!--Enter appropriate data in the content fields-->
+<META content="Analysis of the similarity within the response of the Web search engines: an 
+approach since users’ trends." name=dc.title>
+<META content="[Give author(s) name(s) - separate by commas]" name=dc.creator>
+<META content="[Give a brief description of your paper]" name=dc.subject>
+<META content="We report an investigation into the similarity of the responses of Web search engines.
+We discuss the coincidence of documents and their position in the response, in
+order to proportionate a measure closest to the user’s context by incorporating
+several aspects and reflections established within this field of study. We
+introduce a method for calculating based in the cosine function, slightly
+adapted. First calculations were performed manually and to simplify the process
+we have implemented a metasearcher. <span style='mso-spacerun:yes'> </span>We
+applied a first set of thirty questions to these systems during different
+periods of time. Secondly, we examined the similarity of the documents returned
+in the top ten, twenty and thirty positions. Subsequently, we conducted another
+round of searches (with fewer terms in the equations) to verify whether it
+affected the average values of similarity. The estimated similarity is low-,
+between 15% and 18%, - and it has not changed significantly over the past five
+years. The number of terms used in the searches does not affect to these averages." name=dc.description>
+<META 
+content="[Provide keywords, using those in the journal's list (http://informationr.net/ir/Index_terms.html) where possible]" 
+name=dc.subject.keywords><!--leave the following to be completed by the Editor-->
+<META content=all name=robots>
+<META content="Professor T.D. Wilson" name=dc.publisher>
+<META content=global name=dc.coverage.placename>
+<META content=text name=dc.type>
+<META scheme=ISSN content=1368-1613 name=dc.identifier>
+<META scheme=URI content=http://InformationR.net/ir/... name=dc.identifier>
+<META content=http://InformationR.net/ir/... name=dc.relation.IsPartOf>
+<META content=text/html name=dc.format>
+<META content=en name=dc.language>
+<META content=http://creativecommons.org/licenses/by-nd-nc/1.0/ name=dc.rights>
+<META content=2008-03-15 name=dc.date.available>
+<SCRIPT language=javascript type=text/javascript>
+
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+		
+	</SCRIPT>
+
+<STYLE type=text/css>.button {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: small; PADDING-BOTTOM: 0px; WIDTH: 45em; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+.button UL {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; LIST-STYLE-TYPE: none; BORDER-BOTTOM-STYLE: none
+}
+.button LI {
+	DISPLAY: inline; FONT-WEIGHT: bold; FONT-SIZE: small; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif; TEXT-DECORATION: none
+}
+.button LI A:hover {
+	WIDTH: auto; COLOR: #ff0000; BACKGROUND-COLOR: azure
+}
+FIELDSET {
+	BORDER-RIGHT: #5e96fd 1px dotted; PADDING-RIGHT: 0.5em; BORDER-TOP: #5e96fd 1px dotted; MARGIN-TOP: 0.5em; PADDING-LEFT: 0.5em; BACKGROUND: white; PADDING-BOTTOM: 0.5em; MARGIN-LEFT: 15px; BORDER-LEFT: #5e96fd 1px dotted; MARGIN-RIGHT: 15px; PADDING-TOP: 0.5em; BORDER-BOTTOM: #5e96fd 1px dotted
+}
+LEGEND {
+	BORDER-RIGHT: navy 1px solid; PADDING-RIGHT: 0.5ex; PADDING-LEFT: 0.5ex; FONT-WEIGHT: bold; FONT-SIZE: medium; PADDING-BOTTOM: 0.1ex; COLOR: white; PADDING-TOP: 0.1ex; BORDER-BOTTOM: navy 1px solid; BACKGROUND-COLOR: #5e96fd
+}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	text-underline:single}
+</STYLE>
+
+<META content="Microsoft FrontPage 5.0" name=GENERATOR>
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</HEAD>
+<BODY bgColor=#ffffff><!--<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tbody>
+  <tr>
+    <td align="center" colspan="5" height="30"><img height="45" alt="header" src="../mini_logo2.gif" 
+      width="336" /><br /><span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. XX  no. X, <<date>></span><br /><br />
+      <div class="button">
+      <ul>
+        <li><a href="infresXXX.html">Contents</a> |  </li>
+        <li><a href="../iraindex.html">Author index</a> |  </li>
+        <li><a href="../irsindex.html">Subject index</a> |  </li>
+        <li><a href="../search.html">Search</a> |  </li>
+        <li><a href="../index.html">Home</a>  </li>
+   </ul></div></td></tr>
+  <tr>
+    <td>&nbsp;</td></tr></tbody></table>-->
+<HR style="COLOR: #5e96fd" SIZE=1>
+
+<H1>Analysis of the similarity within the response of the Web search engines: an 
+approach since users’ trends.</H1><BR>
+<DIV style="MARGIN-LEFT: 10%; MARGIN-RIGHT: 10%">
+<H4><A href="mailto:Your%20e-mail%20address">J.V. Rodríguez Jr. , F.J. Martínez 
+and J.V. Rodríguez.</A><BR>Department of Information and Documentation. 
+University of Murcia. Campus of Espinardo - Murcia, SPAIN. Tel: +34 
+968367249&nbsp; Fax: +34 968367141</H4>
+</DIV><BR>
+<FORM>
+<FIELDSET><LEGEND>Abstract </LEGEND>
+<BLOCKQUOTE>
+  <p align="justify"><BR><STRONG>Introduction.</STRONG> We report an 
+  investigation into the similarity of the responses of Web search engines. We 
+  discuss the coincidence of documents and their position in the response, in 
+  order to proportionate a measure closest to the user’s context by 
+  incorporating several aspects and reflections established within this field of 
+  study.<BR><STRONG>Method.</STRONG> We introduce a method for calculating based 
+  in the cosine function, slightly adapted. First calculations were performed 
+  manually and to simplify the process we have implemented a metasearcher.<BR><STRONG>Analysis.</STRONG> 
+  We applied a first set of thirty questions to these systems during different 
+  periods of time. Secondly, we examined the similarity of the documents 
+  returned in the top ten, twenty and thirty positions. Subsequently, we 
+  conducted another round of searches (with fewer terms in the equations) to 
+  verify whether it affected the average values of similarity. 
+  <BR><STRONG>Conclusions.</STRONG> The estimated similarity is low, between 
+  15%-18%, and it has not changed significantly over the past five years. The 
+  number of terms used in the searches does not affect to these averages.</p>
+</BLOCKQUOTE></FIELDSET> </FORM><BR>
+<DIV align=center><INPUT class=btn style="FONT-WEIGHT: bold; COLOR: white; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #5e96fd; FONT-VARIANT: small-caps" onclick=doChangeFont() type=button value="change font"></DIV><BR>
+<H2>Introduction</H2>
+<p>Web information retrieval systems have been evaluated almost from the origin 
+and implementation of the Web. This should not surprise us because the need for 
+evaluation has always accompanied the development of information retrieval 
+systems. A broad set of qualitative and quantitative aspects have been 
+evaluated. We can group them into four fields of interest: (i) performance, 
+usually based in the effectiveness as we can see in <a href="#Oppenheim">Oppenheim (2000)</a> and
+<a href="#Martinez2003">Martínez &amp; Rodríguez (2003)</a>, with a supplementary set of works that avoid the 
+use of the precision ratio to measure the effectiveness because it is affected 
+by human subjectivity (<a href="#Hersh">Hersh et al. 1995</a>,
+<a href="#Landoni">Landoni and Bell 2000</a>); (ii) the 
+proposal of <a href="#Berners-Lee">Berners-Lee et al. (2001)</a> and the World Wide Web Consortium for a semantic 
+Web based upon an extensive use of metadata, which has been evaluated by 
+<a href="#Zhang2005a">Zhang 
+and Dimitroff (2005a)</a> <a href="#Zhang2005b">(2005b)</a>; (iii) how users search the Web
+<a href="#Spink1998">(Spink et al. 1998)</a>, <a href="#Spink2004">(Spink 
+and Jansen 2004)</a>, (<a href="#Jansen2006">Jansen and Spink, 2006)</a> and (iv) the system-user interaction 
+<a href="#Schlichting">(Schlichting and Nilsen 1997)</a>,(<a href="#Johnson">Johnson et al. 2001</a>) and 
+<a href="#Marchionini">(Marchionini, 20<span lang="es">0</span>0)</a>.
+</p>
+<p>Leaving aside the nature of these engines, what could be the origin of this 
+interest? We suppose that it may due to questions like ‘<i>Dear Professor, what 
+is the best Web retrieval system?</i>’ This question might be answered (by the 
+professor) saying, ‘P<i>robably the answer depends on the point of view of the 
+persons who will make the analysis</i>’. It is logical that, if they rate 
+effectiveness as more important, they will consider measures such as time of 
+response, precision, recall, overlap, etc. To improve precision, they could 
+measure the influence of metadata, a matter not sufficiently resolved today. 
+Perhaps, the researcher will prefer to know the trends of Web usage, then 
+analyse Web queries, the use of Boolean operators, Web query reformulation, the 
+use of relevance feedback, viewing results, etc. Finally, if they 
+consider the interaction between systems and people, they will focus their study 
+the interface design and other usability aspects that could affect to the 
+information retrieval. </p>
+<P>While there is great diversity among these lines of work, we think that it is 
+possible to integrate some of them for adding an user’s perspective to the 
+traditional evaluation of performance. More concretely, we propose to 
+incorporate data about the position a document in the search output like a 
+measure of the overlap between the Web retrieval systems, with the goal of 
+transforming a simple measure of coincidence of documents in a response to an 
+extent of the overlap of documents in the useful response for users. It seeks to 
+combine different viewpoints with the idea of bringing added value to the ratios 
+that have so far been used.</P>
+<P>It is a fact that the Web retrieval systems index large collections of 
+documents. It is also true that the similarity between these indexes is very 
+small. It has been traditionally assumed that this similarity is approximately 
+15%. If this is correct (usually this kind of comments is not supported by any 
+study), it would mean an enormous diversity in the composition of these indexes 
+which, in some way, most people would see when performing the same search in 
+different systems (incidentally, this is becoming less frequent). Nevertheless, 
+another factor intervenes in the diversity of the reply, which is the ranking 
+algorithm that the systems use to provide the response. Each system implements a 
+different algorithm; consequently, the level of divergence of the response the 
+users can see is even greater.</P>
+<P>Which of the levels of similarity -or divergence- is the most interesting for 
+our analysis? From the point of view of the end user, we would choose that of 
+the given response and, from the point of view of the administrator of a Web 
+retrieval system, it would also be interesting to analyse the composition of the 
+indexes, but for the users of the Web this is less important. We should not 
+forget that it is very difficult to have access to all of these collections in 
+order to analyse them. We can only find data on this concordance in the works of 
+<a href="#Ljosland2000a">Losjland (2000a)</a>, <a href="#Ljosland2000b">(2000b)</a> and
+<a href="#Martinez2002">Martínez (2002)</a>, besides the data on the overlap 
+of Web retrieval systems which <a href="#Notess">Notess (2002)</a> took into account for the blog searchengineshowdown.com (data not updated) and more recently 
+<a href="#Jansen2006">Jansen and Spink (2006)</a>. So, 
+it is difficult to find more sources of updated information on this subject. </P>
+<P>For this reason, we find it interesting to bring about a method enabling us 
+to carry out a periodical analysis of this factor and to use it in the response 
+of the most used Web retrieval systems in the current World Wide Web. </P>
+<h2><span lang="es">Our original proposal</span></h2>
+<P>Our initial research was included in the field of the performance assessment. 
+The most quoted projects are those related to effectiveness, particularly the 
+work of <a href="#Chu">Chu and Rosenthal (1996)</a>, which analyses more features. We should also 
+mention the contributions of <a href="#Leighton">Leighton and Svristava (1999)</a>, and finally, the 
+work of <a href="#Gordon">Gordon and Pathak (1999)</a>, who analysed more systems than anyone else. 
+One of the first experiments developed in <a href="#Martinez2002">Martinez (2002)</a> determined the level 
+of similarity in the responses of six Web retrieval systems (Google, Altavista, 
+All the Web, Terra, MSN, and Wisenut). Thirty queries (in Spanish) were carried 
+out in these systems and the level of similarity was analysed among the first 
+ten, twenty and thirty documents of the response. In order to determine this 
+similarity, and inspired by <a href="#Ljosland2000a">Lojsland (2000a)</a>, we used a the ‘cosine’ similarity 
+function <a href="#Salton">(Salton &amp; Harman, 1983)</a> with the necessary adjustments to the context 
+of the experiment, since this function was created in order to determine the 
+similarity of two one-dimensional vectors and, in this case, we had 
+bi-dimensional vectors: the Web search engine and its reply to a given question.</P>
+<P>Why the limit of thirty documents, which is obviously a very small portion of 
+the possible response?. <a href="#Spink2004">Spink and Jansen (2004)</a> give us the justification: </P>
+<blockquote>
+<P>‘…from 1996 to 1999, for more than 70 percent of the time, a user only viewed 
+the top ten results. On average, users viewed 2.35 pages of results (where one 
+page equals ten hits). Over half the users did not access results beyond the 
+first page. <a href="#Jansen1998">Jansen et al.(1998)</a> found that more three in four 
+users did not go beyond viewing two pages. By 2001, only roughly one-thirs of 
+users looked beyond the second page of Web sites retrieved. </P>
+</blockquote>
+<P>We can find similar actions in <a href="#Tang">Tang and Sun (2003)</a> where the authors, basing their 
+work on that of of <a href="#Jansen1998">Jansen et al.(1998)</a>:</P>
+<blockquote>
+<P>‘…decided to collect only the top 20 links among the thousands retrieved in 
+light of previous studies showing that 80 percent of users view only the first 
+two pages of results’. </P>
+</blockquote>
+<P><a href="#Jansen2006">Jansen and Spink (2006)</a> affirm that “the first result page represents the top 
+results that an engine found for a given query and therefore is a barometer for 
+the most relevant results an engine has to offer”. It seems clear that thirty is 
+the maximum number that most users are willing to consult. It is the useful
+<span lang="es">response</span>, the rest of the documents are ignored. In 
+practice, it is possible that we are setting too high a value to this limit.</P>
+<P><span lang="es">As discussed above, we introduced several changes in the 'cosine' 
+similarity </span>function <span lang="es">to approach it </span>to the context 
+of the experiment, since this function was created in order to determine the 
+similarity of two one-dimensional vectors and, in this case, we had 
+bi-dimensional vectors: the Web retrieval system and the reply to a given 
+question. Obviously, it was necessary to resize the results before using this 
+function<span lang="es"> but it was not the unique change introduced into this 
+calculation. We consider the position of documents in the response, favouring 
+those that appeared in the top positions. Thus, the weight of each resulting 
+document depending on its position in the response vector of the Web retrieval 
+system (known as the ‘relevance factor’) was taken into account. This idea is 
+based on the '<i>first 20 full precision</i>' idea introduced by 
+<a href="#Leighton">Leighton and 
+Srivastava (1999)</a> which gave an added value to the ability to place relevant 
+documents within the first twenty delivered in response to the user. This 
+function measured at the same time, accuracy and the capacity to show the 
+relevant documents before the irrelevant (something very important for the user). 
+If you regard inactive and duplicate documents as irrelevant, you favour those 
+search engines that are up to date through the refreshment of their indexes. 
+This factor enabled us to assess not only the coincidence of the documents in 
+the response (that is, the overlap), but also in trying to assess the similarity 
+of the useful response (those the user actually reads) taking into account the 
+order these documents in the response.</span></P>
+<P>Before calculating the similarity, we have to resolve an additional question, 
+the type of operators to be used in the query formulation. We 
+used (1) Boolean operators (more concretely, the ‘AND’ operator) and (2) the 
+‘AND’ operator combined with the ‘exact phrase’. The obtained results were very 
+similar. Noting further that the use of Boolean operators is growing on the Web 
+<a href="#Spink2004">(Spink and Jasen 2004)</a>, we consider that it is appropriate to experiment only 
+with such operators. </P>
+<h3>An example.</h3>
+<P>To exemplify the method, suppose that a search has been carried out in the 
+Web retrieval system A and in the Web retrieval system B. The results are 
+represented in the following <b>Table 1</b> (the coinciding URLs are in bold). 
+The column on the right shows the weight given to each URL (in bold) depending 
+on its position (the relevance factor):</P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="642" align=center border=1 height="216">
+  <CAPTION align=bottom><BR><STRONG>Table 1: </STRONG><b>Example of calculation 
+  of the cosine function adapted to our experiment</b></CAPTION>
+  <TBODY>
+  <TR>
+    <TH vAlign=center height="16" width="251">Web retrieval system A</TH>
+    <TH vAlign=center height="16" width="274">Web retrieval system B</TH>
+    <TH height="16" width="91">Weight</TH></TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.first.com</b></TD>
+    <TD height="16" width="274"><b>http://www.first.com</b></TD>
+    <TD align=middle height="16" width="91">1</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.second.com</b></TD>
+    <TD height="16" width="274">http://www.two.com</TD>
+    <TD align=middle height="16" width="91">0.99</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.third.com</b></TD>
+    <TD height="16" width="274">http://three.com</TD>
+    <TD align=middle height="16" width="91">0.98</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.fourth.com</TD>
+    <TD height="16" width="274"><b>http://www.second.com</b></TD>
+    <TD align=middle height="16" width="91">0.97</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.fifth.com</b></TD>
+    <TD height="16" width="274"><b>http://www.fifth.com</b></TD>
+    <TD align=middle height="16" width="91">0.96</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.sixth.com</b></TD>
+    <TD height="16" width="274"><b>http://www.sixth.com</b></TD>
+    <TD align=middle height="16" width="91">0.95</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.seventh.com</TD>
+    <TD height="16" width="274"><b>http://www.third.com</b></TD>
+    <TD align=middle height="16" width="91">0.94</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.eighth.com</TD>
+    <TD height="16" width="274">http://www.eight.com</TD>
+    <TD align=middle height="16" width="91">0.93</TD>
+    </TR></TBODY></TABLE>
+<P>As previously mentioned, there is a distribution of elements with two 
+characteristics: URL and ‘weight’ or relevance factor of the objective. In order 
+to determine the similarity it is necessary to reduce the distribution achieved 
+to a common n-dimensional space where ‘n‘ is the number of coinciding URLs for 
+each of the pair of vectors of the results plus the number of the relevant URLs 
+found by each separate search engine. In order to do this, the initial vectors 
+of the results become two individual vectors composed of the values of the 
+relevance factor presented by each URL in the original search engines. This 
+transformation of the vector space leads to <b>Table 2</b> which represents the 
+vector of global result and the vectors V (Web retrieval system A) and V (Web 
+retrieval system B):</P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="504" align=center border=1 height="216">
+  <CAPTION align=bottom><BR><STRONG>Table 2: </STRONG><b>Transformation of the 
+  initial vectors of our experiment.</b></CAPTION>
+  <TBODY>
+  <TR>
+    <TH vAlign=center height="16" width="251">Result vector</TH>
+    <TH vAlign=center height="16" width="182">V(Web retrieval system A)</TH>
+    <TH vAlign=center height="16" width="205">V(Web retrieval system B)</TH>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.first.com</b></TD>
+    <TD height="16" width="182" align="center">1</TD>
+    <TD height="16" width="205" align="center">1</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.second.com</b></TD>
+    <TD height="16" width="182" align="center">0.99</TD>
+    <TD height="16" width="205" align="center">0.97</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.third.com</b></TD>
+    <TD height="16" width="182" align="center">0.98</TD>
+    <TD height="16" width="205" align="center">0.94</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.fourth.com</TD>
+    <TD height="16" width="182" align="center">0.97</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.fifth.com</b></TD>
+    <TD height="16" width="182" align="center">0.96</TD>
+    <TD height="16" width="205" align="center">0.96</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.sixth.com</b></TD>
+    <TD height="16" width="182" align="center">0.95</TD>
+    <TD height="16" width="205" align="center">0.95</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.seventh.com</TD>
+    <TD height="16" width="182" align="center">0.94</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.eighth.com</TD>
+    <TD height="16" width="182" align="center">0.93</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.two.com</TD>
+    <TD height="16" width="182" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.99</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://three.com</TD>
+    <TD height="16" width="182" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.98</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.eight.com</TD>
+    <TD height="16" width="182" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.93</TD>
+    </TR></TBODY></TABLE>
+<P>Now we can calculate the cosine function with these two new vectors:</P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="504" align=center border=1 height="216">
+  <CAPTION align=bottom><STRONG>Table 3: Final calculation of the similarity 
+  function</STRONG><b>.</b></CAPTION>
+  <TBODY>
+  <TR>
+    <TH vAlign=center height="16" width="251">Result vector</TH>
+    <TH vAlign=center height="16" width="182">V(A)=<br>
+    V(Web retrieval system A)</TH>
+    <TH vAlign=center height="16" width="205">V(B)= V(Web retrieval system B)</TH>
+    <TH vAlign=center height="16" width="205">V(A)•V(B) (scalar product)</TH>
+    <TH vAlign=center height="16" width="205">[V(A)]<sup><font face="Verdana">2</font></sup></TH>
+    <TH vAlign=center height="16" width="205">[V(B)]<sup><font face="Verdana">2</font></sup></TH>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.first.com</b></TD>
+    <TD height="16" width="182" align="center">1</TD>
+    <TD height="16" width="205" align="center">1</TD>
+    <TD height="16" width="205" align="center">1</TD>
+    <TD height="16" width="205" align="center">1</TD>
+    <TD height="16" width="205" align="center">1</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.second.com</b></TD>
+    <TD height="16" width="182" align="center">0.99</TD>
+    <TD height="16" width="205" align="center">0.97</TD>
+    <TD height="16" width="205" align="center">0.96</TD>
+    <TD height="16" width="205" align="center">0.98</TD>
+    <TD height="16" width="205" align="center">0.94</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.third.com</b></TD>
+    <TD height="16" width="182" align="center">0.98</TD>
+    <TD height="16" width="205" align="center">0.94</TD>
+    <TD height="16" width="205" align="center">0.92</TD>
+    <TD height="16" width="205" align="center">0.96</TD>
+    <TD height="16" width="205" align="center">0.88</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.fourth.com</TD>
+    <TD height="16" width="182" align="center">0.97</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.94</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.fifth.com</b></TD>
+    <TD height="16" width="182" align="center">0.96</TD>
+    <TD height="16" width="205" align="center">0.96</TD>
+    <TD height="16" width="205" align="center">0.92</TD>
+    <TD height="16" width="205" align="center">0.92</TD>
+    <TD height="16" width="205" align="center">0.92</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"><b>http://www.sixth.com</b></TD>
+    <TD height="16" width="182" align="center">0.95</TD>
+    <TD height="16" width="205" align="center">0.95</TD>
+    <TD height="16" width="205" align="center">0.90</TD>
+    <TD height="16" width="205" align="center">0.90</TD>
+    <TD height="16" width="205" align="center">0.90</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.seventh.com</TD>
+    <TD height="16" width="182" align="center">0.94</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.88</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.eighth.com</TD>
+    <TD height="16" width="182" align="center">0.93</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.86</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.two.com</TD>
+    <TD height="16" width="182" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.99</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.98</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://three.com</TD>
+    <TD height="16" width="182" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.98</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.96</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251">http://www.eight.com</TD>
+    <TD height="16" width="182" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.93</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0</TD>
+    <TD height="16" width="205" align="center">0.86</TD>
+    </TR>
+  <TR>
+    <TD height="16" width="251"></TD>
+    <TD height="16" width="182" align="center"></TD>
+    <TD height="16" width="205" align="center"><font face="Verdana">Total</font></TD>
+    <TD height="16" width="205" align="center">4.7</TD>
+    <TD height="16" width="205" align="center">7.44</TD>
+    <TD height="16" width="205" align="center">7.44</TD>
+    </TR></TBODY></TABLE>
+<P>The result is obtained by dividing 4.70 within a value of 7.44 which gives a 
+value of 0.63. This means that the systems A and B coincide in 63% for this 
+search.</P>
+<h3>Our original results.</h3>
+<P>Applying this method, the obtained results of our original experiment were:</P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="508" align=center border=1 height="190">
+  <CAPTION align=bottom><STRONG>Table 4: Average similarities obtained in our 
+  experiment of 2002</STRONG><b>.</b></CAPTION>
+  <TBODY>
+  <tr>
+    <td valign="top" style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <b><br>
+    Pos</b></td>
+    <td valign="top" style="width: 41; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AW-GO</span></b></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AW-MS</span></b></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AW-TE</span></b></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AW-WI</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AV-AW</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AV-GO</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AV-MS</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AV-TE</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">AV-WI</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">GO-MS</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">GO-TE</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">GO-WI</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">MS-TE</span></b></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">MS-WI</span></b></td>
+    <td width="38" valign="top" style="width: 28.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="26">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><b>
+    <span lang="EN-GB" style="font-size:9.0pt">TE-WI</span></b></td>
+  </tr>
+  <tr>
+    <td valign="top" style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    1-10</td>
+    <td valign="top" style="width: 41; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.21</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.10</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.12</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.16</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.13</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.10</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.05</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.05</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.12</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.15</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.17</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.15</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.3</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.13</span></td>
+    <td width="38" valign="top" style="width: 28.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.15</span></td>
+  </tr>
+  <tr>
+    <td valign="top" style="width: 45; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    11-20</td>
+    <td valign="top" style="width: 41; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.22</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.10</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.14</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.16</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.14</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.12</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.06</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.06</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.11</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.17</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.17</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.18</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.3</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.15</span></td>
+    <td width="38" valign="top" style="width: 28.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="29">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.16</span></td>
+  </tr>
+  <tr>
+    <td valign="top" style="width: 45; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    21-30</td>
+    <td valign="top" style="width: 41; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.23</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.12</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.15</span></td>
+    <td width="41" valign="top" style="width: 30.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.17</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.14</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.13</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.07</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.07</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.12</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.19</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.20</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.20</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.3</span></td>
+    <td width="38" valign="top" style="width: 28.6pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.17</span></td>
+    <td width="38" valign="top" style="width: 28.3pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.16</span></td>
+  </tr>
+  <TR>
+    <TD height="36" width="3234" align="center" colspan="16"><b>Pos</b>: set of 
+    analysed documents. <b>AW</b>: All the Web. <b>GO</b>: Google. <b>MS</b>: 
+    Microsoft Network.<br>
+    <b>TE</b>: Terra Networks. <b>WI</b>: Wisenut. <b>AV</b>: Altavista. </TD>
+    </TR></TBODY></TABLE>
+<P>The greatest similarities, around 30%, were obtained by two second level (in 
+terms of number of documents indexed and proportion of Web searchers) Web 
+retrieval systems: Terra and MSN. In this time, these systems shared the same 
+search technology (<i>Inktomi</i>), and have a high proportion of indexed 
+documents in common, thus this high level of similarity in comparison to the 
+rest. The average value of the obtained similarity for the first ten and twenty 
+documents was 0.15, and 0.16 for the first thirty documents. These values 
+confirmed the general idea of a coincidence level of 15%.</P>
+<h2>What has happened in the World Wide Web in recent years?</h2>
+<P>So many changes have happened in the Web in the last five years that many 
+people, such as <a href="#OReilly">O’Reilly (2005)</a>, say that we are in the age of “Web 2.0”. In the 
+field of Web retrieval systems, many developments have occurred also which we 
+can summarise as follows:</P>
+<ol>
+  <li>The overlap of the search engines has been poorly evaluated. The mentioned 
+  data from the blog searchengineshowdon.com <span lang="es"><a href="#Notess">
+  (Nottes, 2005)</a> </span>are<span lang="es"> not updated </span>and we have only the 
+  data from <a href="#Jansen2006">Jansen and Spink (2006)</a>. The main analysts, such as 
+  <a href="#Nielsen">Nielsen/Netratings</a>, 
+  Comscore or <a href="#searchenginewatch">searcheenginewatch.com</a>, offer a different kind of information. It 
+  is difficult to locate updated data about the similarity of the response of 
+  Web retrieval systems.</li>
+  <li>An important set of new developments have occurred in Web retrieval 
+  systems. Through mergers and takeovers, Yahoo! has integrated the Altavista 
+  and All the Web technology and it became a search engine in February 2004. 
+  Microsoft has replaced MSN by the portal live.com. These two systems, together 
+  with Google dispute the size of their collection of indexed documents, which 
+  already surpasses twenty billion documents. </li>
+  <li>The users basically use three Web retrieval systems: Google (58%), Yahoo! 
+  (18%), live.com (12%) and exceptionally American Online (4.5%) and Ask (3%). 
+  The data vary slightly from one source of information to the other: 
+  <a href="#Nielsen">Nielsen/Netratings</a> 
+  (2007), Comscore (2007), and it will vary more depending on the part of the 
+  planet under analysis (for example, in Europe, Google reaches much higher 
+  percentages, around 75% of the searches). The most important act is that these 
+  five systems concentrate 90% of the daily searches of the Web. The degree of 
+  importance of the rest is residual.</li>
+</ol>
+<P>Bearing this information in mind, we can extrapolate the obtained results in 
+2002 by allocating the results of MSN to live.com, and the best values of 
+similarity reached by All the Web or Altavista with each engine to Yahoo!, which 
+is the system that, to a degree, has replaced them. Finally, the engines that 
+people do not use will be removed because they represent only ten percent of 
+searches carried out routinely by Web users. Consequently, we have the adapted
+<b>Table 5</b>: </P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="508" align=center border=1 height="187">
+  <CAPTION align=bottom><STRONG>Table 5: Average similarities obtained in our 
+  experiment of 2002</STRONG><b>.</b></CAPTION>
+  <TBODY>
+  <tr>
+    <td valign="top" style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <b><br>
+    Pos / Sim</b></td>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><span style="font-size: 9pt"><b><br>
+    Yahoo! - Google</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Yahoo! - live.com</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Google - live.com</b></span></td>
+  </tr>
+  <tr>
+    <td valign="top" style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="31">
+    1-10</td>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.21</span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align: center; margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.10</span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm" align="center">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.15</span></td>
+  </tr>
+  <tr>
+    <td valign="top" style="width: 45; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    11-20</td>
+    <td valign="top" style="border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.22</span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.10</span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align: center; margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.17</span></td>
+  </tr>
+  <tr>
+    <td valign="top" style="width: 45; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28">
+    21-30</td>
+    <td valign="top" style="border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.23</span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.12</span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align: center; margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.19</span></td>
+  </tr>
+  <TR>
+    <TD height="32" width="3234" align="center" colspan="4"><b>Pos</b>: set of 
+    analysed documents. <b>Sim</b>: similarity</TD>
+    </TR></TBODY></TABLE>
+<h2>September 2007 (our second experiment).</h2>
+<P>Since it is necessary to have updated data and it is not possible to continue 
+doing this type of analysis manually, we decided to develop a metasearcher that 
+could perform the search equations of the systems that are the objective of our 
+study and, also, which could automatically determine the similarity of the 
+obtained results. Consequently, we simplify this kind of experiment and are able 
+to update the results. </P>
+<h2>The implementation of the metasearcher.</h2>
+<P>Our development is based on taking the Application Programming Interfaces 
+(API), which each search engine provides and to integrate them within one 
+system. Through the analysis of each of these modules, we confirm that on the 
+way towards supremacy in the market for information retrieval on the Web, the 
+main retrieval systems establish their own rules. Some, such as Google, 
+seriously restrict the number of results obtained (until the beginning of 
+December 2007 it offered eight documents, but now it offers 32 results), or they 
+force the use of proprietary programming languages, as in the case of live.com. 
+Currently, Yahoo! is the search engine which enables the least restricted use of 
+its indexes. As explained previously, the new Google API restricted the number 
+of obtained results for each consultation to eight. This was a constraint in the 
+first phase of our study, carried out in September 2007. It was only possible to 
+take eight samples of each engine for each query. Nevertheless, we do not think 
+that this factor devalues the results obtained at the end of the study since, in 
+any case, we would have achieved a comparison of almost all of the first page of 
+the results given by each engine. The next step in the process requires the 
+implementation of the necessary codes in order to interrogate each engine and to 
+retrieve the result sets given by each, in order to create a database of 
+samples, which will be studied and analysed.</P>
+<P>In view of the diversity of the APIs given by each system, it is necessary, 
+as far as possible, to establish a programming criterion in which to place the 
+core of the metasearcher and, from this, to lay out the rest of the parts of 
+this tool. The end result will be a tool in which the code is partitioned 
+depending on its functionality. In short, we have the following:</P>
+<ul>
+  <li>Navigation core based in the PHP and Javascript programming languages, and 
+  in the HTML code.</li>
+  <li>&nbsp;Search engine. We differentiate the fragments for each search 
+  engine. Google: carries out the communication through JavaScript and using 
+  AJAX technology. Yahoo!: uses communication through REST queries using PHP 
+  code. live.com: has a Web Service which can be accessed through a SOAP client 
+  written in PHP.</li>
+  <li>Database interface. It is written in PHP, and it is responsible for the 
+  communication with the MySQL database.</li>
+</ul>
+<p align="center"><STRONG><font face="Verdana" size="2">Figure 1: The interface 
+of our metasearcher operating with Google</font>.<br>
+</STRONG>
+<img border="0" src="Template%20for%20papers_archivos/img1.gif" width="86%" height="86%" alt="Interface of our implemented  metasearcher "></p>
+<P>The database of our metasearcher allows the results of each search to be 
+stored. It compiles the URL, title, description, ranking, and query-engine 
+relation of each result. It also has a table for storing the statistics of each 
+query.</P>
+<h3>The repetition of the experiment.</h3>
+<P>In order to test whether the current situation differs from 2002, the 
+experiment was repeated by entering in the metasearcher the same queries used at 
+that time: </P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="642" align=center border=1 height="216">
+  <CAPTION align=bottom><STRONG>Table 6: </STRONG><b>Set of queries used in the 
+  experiments</b></CAPTION>
+  <TBODY>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Turismo rural en la Sierra del Segura</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Alquiler de apartamentos en Málaga</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span lang="EN-GB" style="font-size: 10.0pt">Historia del Camino de Santiago</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Curso a distancia de Programación en PHP</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span lang="EN-GB" style="font-size: 10.0pt">Principio de incertidumbre de 
+    Heisenberg</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Diseño de sistemas multimedia para el 
+    aprendizaje</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Academias de idiomas en Valencia</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span lang="EN-GB" style="font-size: 10.0pt">Discurso del Método de 
+    Descartes</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Diseño accesible a páginas Web</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Recetas de cocina y dieta mediterránea</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Teoría de la Evolución de Darwin</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span lang="EN-GB" style="font-size: 10.0pt">Semana Santa en Murcia</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span lang="EN-GB" style="font-size: 10.0pt">Bibliografía de Miguel de 
+    Unamuno</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Estrategias de Representación del 
+    Conocimiento</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Galerías de Arte en Murcia</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Empresas de fabricación de calzado en 
+    Alicante</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Influencia de la televisión en los niños</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span lang="EN-GB" style="font-size: 10.0pt">Apuntes de Sistemas Digitales</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span lang="EN-GB" style="font-size: 10.0pt">Apuntes de Estadística 
+    Descriptiva</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Modelos pedagógicos para la educación a 
+    distancia</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Principio de Conservación de la Energía</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Librerías de antiguo en España</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Apuntes de Historia del Arte Barroco</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Temario de Oposiciones de Matemáticas en 
+    Secundaria</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Recopilación de Legislación en Derecho Civil</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Historia de la ciudad de Ceuta</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Compra-Venta de automóviles de segunda mano 
+    en Madrid</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Evaluación de la calidad de la enseñanza 
+    universitaria</span></td>
+  </tr>
+  <tr>
+    <td width="283" nowrap valign="bottom" style="width: 212.4pt; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Literatura Española en el Siglo de Oro</span></td>
+    <td width="298" valign="bottom" style="width: 223.65pt; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" style="text-align:justify">
+    <span style="font-size: 10.0pt">Plan de Estudios de Licenciado en 
+    Comunicación Audiovisual</span></td>
+  </tr>
+  </TBODY></TABLE>
+<P>The similarity results of the first eight documents for each system in this 
+second experiment (September 2007) have been the following:</P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="508" align=center border=1 height="165">
+  <CAPTION align=bottom><STRONG>Table 7: Average similarities obtained in our 
+  second experiment (2007)</STRONG><b>.</b></CAPTION>
+  <TBODY>
+  <tr>
+    <td valign="top" style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="51">
+    <b><br>
+    Pos / Sim</b></td>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="51">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><span style="font-size: 9pt"><b><br>
+    Yahoo! - Google</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="51">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Yahoo! - live.com</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="51">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Google - live.com</b></span></td>
+  </tr>
+  <tr>
+    <td style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="47" align="center">
+    <b>1-8</b></td>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="47">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.17</span></td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="47" align="center">
+    <p class="MsoNormal" style="text-align: center; margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.15</span></td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="47" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm" align="center">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.11</span></td>
+  </tr>
+  <TR>
+    <TD height="43" width="3234" align="center" colspan="4"><b>Pos</b>: set of 
+    analysed documents. <b>Sim</b>: similarity</TD>
+    </TR></TBODY></TABLE>
+<P>Assuming that there may be a slight difference between these results, if we 
+would have been able to determine the similarity of the ten first documents 
+instead of the first eight documents, we can compare these results with those 
+obtained in 2002 and we can see that the average similarity values in the reply 
+decrease very little (from 15% to 14%). This means that the similarity between 
+the first results of each system is stable. This is surprising, since the size 
+of the indexes has increased considerably and consequently there are many more 
+documents on any subject, so the coincidence is much more complicated (or so we 
+thought). Even if a dozen of documents is a very small sample in order to 
+evaluate the similarity of the reply, we cannot ignore the large number of Web 
+users who only read the first page of the system output. Within this context, 
+coincidence value gains much more significance and importance.</P>
+<h2>The present. </h2>
+<P>We have previously commented that at the end of 2007, the Google API 
+announced that it had enlarged the maximum number of documents obtained with 
+each query from eight to thirty-two. This obviously helped our experiment and we 
+introduced a set of changes in the metasearcher. This was not as easy as we 
+expected, because Google presented the results in the form of four pages of 
+eight results. This made the analysis of the response more difficult, since the 
+other APIs give the results in an unique list. Nevertheless, we managed to make 
+the necessary changes. Currently, the metasearcher can determine the similarity 
+values up to the 'first 32' documents obtained by the three systems under 
+analysis. In this case, the searches were<span lang="es"> made </span>&nbsp;in 
+two languages, English and Spanish<span lang="es"> in order to verify whether 
+the similarity is influenced by the language. </span>The following results were obtained by repeating the experiment with 
+the new limit: </P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="508" align=center border=1 height="119">
+  <CAPTION align=bottom><STRONG>Table 8: Average similarities obtained with the 
+  limit of 32 documents per reply</STRONG><b>.</b></CAPTION>
+  <TBODY>
+  <tr>
+    <td valign="top" style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="40">
+    <b><br>
+    Pos / Sim</b></td>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="40">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><span style="font-size: 9pt"><b><br>
+    Yahoo! - Google</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="40">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Yahoo! - live.com</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="40">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Google - live.com</b></span></td>
+  </tr>
+  <tr>
+    <td style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="27" align="center">
+    <b>1-32<span lang="es"> (Spanish)</span></b></td>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="27">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.1</span>9</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="27" align="center">
+    <p class="MsoNormal" style="text-align: center; margin: 6.0pt 0cm">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.21</span></td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="27" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm" align="center">
+    <span lang="EN-GB" style="font-size:
+  10.0pt">0.14</span></td>
+  </tr>
+  <tr>
+    <td style="width: 45; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="27" align="center">
+    <span lang="es"><b>1-32 (English)</b></span></td>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="27">
+    <span lang="es">0.15</span></td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="27" align="center">
+    <span lang="es">0.11</span></td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="27" align="center">
+    <span lang="es">0.10</span></td>
+  </tr>
+  <TR>
+    <TD height="28" width="3234" align="center" colspan="4"><b>Pos</b>: set of 
+    analysed documents. <b>Sim</b>: similarity</TD>
+    </TR></TBODY></TABLE>
+<P>In comparison to the results obtained in 2002, there are variations in the 
+similarity engine by engine but not in the average value, which is 0.18 in both 
+cases. This value is slightly higher than when only the first eight documents of 
+the response are analysed. The current experiments seem to indicate that Google 
+and live.com offer the most different responses, although in fact the 
+differences are still small.<span lang="es"> The behaviour of the questions made 
+in English is very similar although the average values are lower (0.12). We 
+think that it is logical because the space in which to locate documents is 
+broader (in the Web context there are more documents written in English than in 
+Spanish).&nbsp; </span></P>
+<h3>Complementing the experiment with ‘short queries’.</h3>
+<P>One of the more repeated experiments by researchers on information searching 
+is to determine the average length of the searches. <a href="#Spink2004">Spink 
+and Jansen (2004)</a> give more information 
+about it, noting that the average is small (between one and two words per 
+search). Our previous searches intended to simulate the behaviour of students 
+interested in some subject ('Heisenberg Principle', 'Einstein Theory of 
+Relativity', 'History of Ceuta', etc.) or the behaviour of a simple person who 
+wishes to pass wonderful holidays in Málaga or to buy a second hand car. The 
+truth is that as our average search length exceeds the normal ratio, it does not 
+reflect the general user’s behaviour.</P>
+<P>It would be interesting to verify if the average values of similarity vary 
+with shorter searches. In order to replicate the behaviour of current Web users, 
+we extracted the terms for the new queries from the <i>2006 Top 10 US Search 
+Ranking</i> <a href="#Kopytoff">(Kopytoff 2007)</a>, choosing the ten most commonly used terms in each 
+of the three Web retrieval systems, forming a new group of thirty queries closer 
+to the Web context and their users. </P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="508" align=center border=1 height="80">
+  <CAPTION align=bottom><STRONG>Table 9: Terms most searched in USA during the 
+  year 2006.</STRONG></CAPTION>
+  <TBODY>
+  <tr>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="1" align="center">
+    <p class="MsoNormal" style="margin:6.0pt 0cm; "><span style="font-size: 9pt"><b>Google</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="1" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span style="font-size: 9pt"><b>Yahoo!</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="1" align="center">
+    <p class="MsoNormal" style="margin: 6.0pt 0cm">
+    <span style="font-size: 9pt"><b>live.com</b></span></td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Bebo</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Britney Spears</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    MySpace</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    MySpace</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    WWE</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Dictionary</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    World Cup</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Shakira</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Games</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Metacafe</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Jessica Simpson</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Cars</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Radioblog</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Paris Hilton</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Food</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Wikipedia</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    American Idol</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Song lirycs</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Video</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Beyonce Knowles</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Poems</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Rebelde</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Chris Brown</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    New York</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Mininota</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Pamela Anderson</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Baby names</td>
+  </tr>
+  <tr>
+    <td style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center" height="20">
+    Wiki</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Lindsay Lohan</td>
+    <td style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" align="center">
+    Music</td>
+  </tr>
+  </TBODY></TABLE>
+<P>In the same direction, we only calculated the similarity of the ten first 
+results of each Web retrieval systems. As we can easily see in the next table, 
+the changes in obtained average values of similarity in this new experiment with 
+respect to the previous ones are barely significant (0.14 against 0.18), 
+although, like novelty, in some particular cases they appear null values of 
+similarity (the query ‘American Idol’ does not have any common document in the 
+Yahoo! and Windows Live responses, for example), this did not occur frequently 
+in the previous searches, which used longer search formulations.</P>
+<TABLE 
+style="FONT-SIZE: smaller; BORDER-LEFT-COLOR: #99f5fb; BORDER-BOTTOM-COLOR: #99f5fb; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #99f5fb; FONT-STYLE: normal; FONT-FAMILY: verdana, geneva, arial, helvetica, sans-serif; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #fdffdd; BORDER-RIGHT-COLOR: #99f5fb; BORDER-BOTTOM-STYLE: solid" 
+cellSpacing=0 cellPadding=3 width="525" align=center border=1 height="159">
+  <CAPTION align=bottom><STRONG>Table 10: Average similarities obtained with 
+  'sort queries'</STRONG><b>.</b></CAPTION>
+  <TBODY>
+  <tr>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28" width="125">
+    <b><br>
+    Query</b></td>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28" width="60">
+    <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm;text-align:justify"><span style="font-size: 9pt"><b><br>
+    Yahoo! - Google</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28" width="60">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Yahoo! - live.com</b></span></td>
+    <td valign="top" style="border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="28" width="60">
+    <p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><br>
+    <span style="font-size: 9pt"><b>Google - live.com</b></span></td>
+  </tr>
+  <tr>
+    <td valign="top" style="border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21" width="125">
+    American Idol</td>
+    <td width="76" valign="bottom" style="width: 60; height: 7; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2590</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 7; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 7; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2604</span></td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20" width="125">
+    Baby names</td>
+    <td width="76" valign="bottom" style="width: 60; height: 9; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 9; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 9; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right"><b>
+    <span lang="EN-GB" style="font-size:10.0pt">0,5060</span></b></td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18" width="125">
+    Bebo</td>
+    <td width="76" valign="bottom" style="width: 60; height: 7; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1262</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 7; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3800</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 7; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1328</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Beyonce 
+    Knowles</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2512</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1288</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Britney 
+    Spears</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1235</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3773</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Cars</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2383</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Chris Brown</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">David 
+    Beckham</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2643</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3827</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1328</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Dictionary</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1249</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2563</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1301</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Food</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1301</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1173</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Games</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2446</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Jessica 
+    Simpson</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2578</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Lindsay 
+    Lohan</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2576</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Metacafe</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2604</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Mininova</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1342</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Music</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2434</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">MySpace</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1288</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:
+    10.0pt">New York</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Pamela 
+    Anderson</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2525</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:
+    10.0pt">Paris</span><span lang="EN-GB" style="font-size:10.0pt"> Hilton</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1342</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2590</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2564</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Poems</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1211</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Radioblog</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2510</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3786</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Rebelde</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3787</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Shakira</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3699</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1211</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3827</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Song lyrics</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2526</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Video</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Wiki</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right"><b>
+    <span lang="EN-GB" style="font-size:10.0pt">0,3892</span></b></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1315</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2500</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">Wikipedia</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2656</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right"><b>
+    <span lang="EN-GB" style="font-size:10.0pt">0,3945</span></b></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,3906</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">World Cup</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1274</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1342</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1185</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="width: 125; height: 12.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal"><span lang="EN-GB" style="font-size:10.0pt">WWE</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,0000</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,1302</span></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+    <p class="MsoNormal" align="right" style="text-align:right">
+    <span lang="EN-GB" style="font-size:10.0pt">0,2656</span></td>
+  </tr>
+  <tr>
+    <td nowrap valign="bottom" style="height: 12pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" width="125">
+    <p align="right">Averages</td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <b>0.1486</b></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <b>0.1149</b></td>
+    <td width="76" valign="bottom" style="width: 60; height: 12.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="center">
+    <b>0.1583</b></td>
+  </tr>
+  </TBODY></TABLE>
+<h2>The immediate future</h2>
+<P>We have conceived two lines of work for the immediate future. The first, more 
+focused on measuring performance effectiveness, intends to overcome the limit of 
+thirty-two documents in each analysed query, reaching a total of 100 documents. 
+The second line is closer to the user’s behaviour: we shall try to incorporate a 
+set of parameters related to other emerging patterns in Web search, such as Web 
+query reformulations, the distribution of search terms and the use of relevance 
+feedback. If we are able to incorporate some of these aspects in our work, we 
+will be able to show the real Web context. We can also repeat these experiments 
+using only one language, instead of both Spanish and English as reported here: 
+the results of the two experiments on search query length could be of interest 
+when the two languages are compared.</P>
+<p>Another objective is to extend the number of Web retrieval systems studied. 
+Initially we considered incorporating the API of Ask (<a href="#Antezeta">Antezeta 
+2007</a>) or of any of its associated systems, although, after a subsequent 
+study, we have opted for a comprehensive redesign of our metasearcher because we 
+only can use a small number of available APIs and they are very limited by their 
+owners. So, we are working in the initial implementation of a new version of our 
+metasearcher, more complete and powerful, and more independent of the Web 
+retrieval systems’s design. </p>
+<p>This extension of the reach of our metasearcher has another objective: to 
+determine the distance between the reply of an Web retrieval systems to an 
+individual question and the ideal reply for this information need. This reply 
+would be based in the semantics of the reply given by each of the Web retrieval 
+systems and by using the techniques of decomposition of singular values with a 
+similar approach to the automatic allocation of the best article reviewers sent 
+to a scientific magazine proposed by<a href="#Dumais"> Dumais and Nielsen (1992)</a>. 
+We would need to make use of a wider and stronger information basis, so that we 
+may increase the amount of analysed documents. The amount of sources also 
+becomes essential.</p>
+<h2>Conclusions</h2>
+<p>We think it is possible to approach the performance evaluation of the Web 
+retrieval systems from the perspective of information searching, incorporating 
+several aspects of Web users’ trends and habits into the design of an evaluation 
+methodology. The indexes of the Web retrieval systems are very different. Each 
+system seems to have indexed different spaces in the Web, with very little 
+overlap, mainly in the first documents of the replies (which is unlikely to lead 
+to user satisfaction). <span lang="es">This overlap is is slightly lower with 
+documents written in English with those written in Spanish. </span>Certainly, the different criteria for implementing the 
+ranking algorithms contribute to this. Our study confirms that there is little 
+similarity between the responses of these systems. From the analysed Web 
+retrieval systems, Google and live.com have least overlap and for an exhaustive 
+information search, it is necessary to employ several Web retrieval systems at 
+the same time.</p>
+<p>The number of search terms does not introduce significant differences in the 
+similarity of the reply, it is not a decisive factor for search engines. It may 
+be that comparing sets of thirty documents is too small, given the magnitude of 
+the indexes of the Web retrieval systems. These conclusions need to be confirmed 
+by extending the number of documents of the analysed sample. Having more 
+information and a consistent basis for calculation (for the number of documents 
+obtained and the analysed sources of information) can help us to create an 
+“ideal response” for a given information request. If we involve in the 
+calculation factors that are close to the users, we are calculating the ideal 
+response to a user. Undoubtedly, this would be a significant achievement.</p>
+<H2>Acknowledgements</H2>
+<p>This work and our stay in Vilnius would not have been possible without the 
+invaluable help of Tom Wilson and Elena Maceviciute. Our sincere <span lang="es">
+a</span>cknowledgement to them.</p>
+<P></P>
+<FORM action="">
+<FIELDSET><LEGEND 
+style="BORDER-RIGHT: navy 1px solid; PADDING-RIGHT: 0.5ex; PADDING-LEFT: 0.5ex; FONT-WEIGHT: bold; FONT-SIZE: medium; PADDING-BOTTOM: 0.1ex; COLOR: white; PADDING-TOP: 0.1ex; BORDER-BOTTOM: navy 1px solid; BACKGROUND-COLOR: #5e96fd">References</LEGEND>
+<UL>
+  <li>Antezeta.com (2007). <i>Decrypting Ask's Web Search API</i>. Retrieved Dec 11, 
+  2007, from:
+  <a href="http://www.antezeta.com/ask/decrypting-ask-web-search-api.html">
+  http://www.antezeta.com/ask/decrypting-ask-web-search-api.html</a> </li>
+  <li>Berners-Lee, T., Hendler, 
+  J. and Lassila, O. (2001). The semantic Web. <i>Scientific American</i>, 284(5), 
+  34-56. <span lang="es">Retrieved Jan 10, 2008 from
+  <a href="http://www.sciam.com/article.cfm?id=the-semantic-web">
+  http://www.sciam.com/article.cfm?id=the-semantic-web</a></span> </li>
+  <li><span lang="es">c</span>om<span lang="es">S</span>core<span lang="es"> 
+  (2008) <i>comScore Data Center: measuring the digital world</i>. Retrieved Jan 5, 
+  2008 from <a href="http://www.comscore.com/press/data.asp">
+  http://www.comscore.com/press/data.asp</a> </span></li>
+  <li><a name="Chu">Chu</a>, H. and Rosenthal, M. (1996). Search engines for the 
+  World Wide Web: a comparative study and evaluation methodology. Paper 
+  presented at the <i>ASIS 1996 Annual Conference</i>, October 19-24 1996. Retrieved 
+  Jan 12, 2008, from
+  <a href="http://www.asis.org/annual-96/ElectronicProceedings/chu.html">
+  http://www.asis.org/annual-96/ElectronicProceedings/chu.html</a></li>
+  <li><a name="Dumais">Dumais</a>, S. and Nielsen, J. (1992). Automating the 
+  assignment of submitted manuscripts to reviewers. In <i>Proceedings of the 15th 
+  annual international ACM SIGIR conference on Research and development in 
+  information retrieval</i>. Copenhagen: ACM SIGIR 1992, 233-244.</li>
+  <li><a name="Hersh">Hersh</a>, W.R. et al. (1995). Towards new measures of Information Retrieval 
+  Evaluation. In <i>Proceedings of the 18th annual international ACM SIGIR 
+  conference on Research and development in information retrieval</i>. Seatle: ACM 
+  SIGIR 1995, 164-170.</li>
+  <li><a name="Gordon">Gordon</a>, M. &amp; Pathak, P. (1999). Finding information on the World Wide Web: the 
+  retrieval effectiveness of search engines. <i>Information Processing and 
+  Management</i> 35, 141-180.</li>
+  <li><a name="Jansen1998">Jansen</a>, B.J. Spink, A. Bateman, J. &amp; Saracevic, T. (1998). Real life 
+  information retrieval: a study of user queries on the Web. <i>SIGIR Forum</i> 32 (1), 
+  5-17.</li>
+  <li><a name="Jansen2006">Jansen</a></a>, B. and Spink, A. (2006). How are Web searching the World Wide Web? A 
+  comparison of nine search engine transaction logs. <i>Information Processing and 
+  Management </i>42, 248-263.</li>
+  <li><a name="Johnson">Johnson</a>, F.C., Griffiths, J.R. and Hartley, R.J. (2001). DEVISE: a framework 
+  for the evaluation of Internet search engines. Retrieved April<span lang="es"> 
+  20, </span>2008 from 
+  <a href="http://www.cerlim.ac.uk/projects/devise/devise-report.pdf">http://www.cerlim.ac.uk/projects/devise/devise-report.pdf</a> </li>
+  <li><a name="Kopytoff">Kopytoff</a>, V. (2006). Year's top search terms. <i>San 
+  Francisco Chronicle</i>, Dec 25, 2006. Retrieved Aug 4, 2007, from: 
+  <a href="http://sfgate.com/cgi-bin/article.cgi?f=/c/a/2006/12/25/BUGOBN387R1.DTL">http://sfgate.com/cgi-bin/article.cgi?f=/c/a/2006/12/25/BUGOBN387R1.DTL</a> </li>
+  <li>
+  <a name="Landoni">Landoni</a>, M. and Bell, S. (2000). Information retrieval techniques for 
+  evaluating search engines: a critical overview. <i>Aslib Proceedings</i>, vol. 52, 3, 
+  124-129.</li>
+  <li><a name="Leighton">Leighton</a>, H.V. and Srivastava, J. (1999). First 20 precision among World Wide 
+  Web search services (search engines). <i>Journal of the American Society for 
+  Information Science</i> 50 (10), 870-881. </li>
+  <li><a name="Ljosland2000a">Ljosland</a>, M. (2000a). Evaluation of Web search engines and the search for 
+  better ranking algorithms. Paper presented at the <i>SIGIR99 Workshop on 
+  Evaluation of Web Retrieval</i>, Aug 19, 1999. Retrieved Jan 19, 2008, from: 
+  <a href="http://www.aitel.hist.no/~mildrid/dring/paper/SIGIR.html">http://www.aitel.hist.no/~mildrid/dring/paper/SIGIR.html</a></li>
+  <li><a name="Ljosland2000b">Ljosland</a>, M. (2000b). Evaluation of twenty Web search engines on ten rare 
+  words ranking algorithms. Retrieved Jan 11, 2008, from: 
+  <a href="http://www.aitel.hist.no/~mildrid/dring/paper/Comp20.doc">http://www.aitel.hist.no/~mildrid/dring/paper/Comp20.doc</a></li>
+  <li><a name="Marchionini">Marchionini</a>, G. (2004). From Information Retrieval to Information Interaction. 
+  Keynote Address to the <i>26th Annual European Conference on Information 
+  Retrieval</i>. Retrieved May 8, 2008, from: 
+  <a href="http://ils.unc.edu/~march/ECIR.pdf">http://ils.unc.edu/~march/ECIR.pdf</a> </li>
+  <li><a name="Martinez2002">Martínez 
+  Méndez</a>, F.J. 
+  <span lang="es">(2002). </span><i>Propuesta y desarrollo de un modelo para la 
+  evaluación de la recuperación de información en Internet</i><span lang="es">. Retrieved 
+  Oct 12, 2007 from&nbsp;
+  </span>
+  <a href="http://www.cervantesvirtual.com/FichaObra.html?Ref=10010">
+  http://www.cervantesvirtual.com/FichaObra.html?Ref=10010</a><span lang="es">
+  </span></li>
+  <li><a name="Martinez2003">Martínez</a> Méndez, F. J. &amp; Rodríguez Muñoz, J.V. (2003). Síntesis y crítica de 
+  las evaluaciones de la efectividad de los motores de búsqueda en la Web. 
+  <i>Information Research</i>, 8(2), paper no. 148. Retrieved Jan 18, 2008, from: 
+  <a href="http://InformationR.net/ir/8-2/paper148.html">http://InformationR.net/ir/8-2/paper148.html</a></li>
+  <li><a name="Nielsen">Nielsen</a>/NetRatings. (2007). <i>Nielsen Online Reports Topline U.S. Data for 
+  November 2007</i>. Retrieved Jan 7, 2008, from: 
+  <a href="http://www.nielsen-netratings.com/press.jsp">http://www.nielsen-netratings.com/press.jsp</a> </li>
+  <li><a name="Notess">Notess</a>, G.R. (200<span lang="es">5</span>) <i>Search engine statistics</i>. Retrieved Jan 10, 2007, from:
+  <span lang="es"><a href="http://www.searchengineshowdown.com/statistics/">
+  http://www.searchengineshowdown.com/statistics/</a> </span></li>
+  <li><a name="Oppenheim">Oppenheim</a>, C., Morris, A., McKnight, C. &amp; Lowley, S. (2000). The evaluation of 
+  WEB search engines. <i>Journal of Documentation</i>, 56(2), 190-211.</li>
+  <li><a name="OReilly">O’Reilly</a> (2005) <i>What is Web 2.0? Design Patterns and Business Models for the 
+  Next Generation of Software</i>. Retrieved Jan 10, 2008, from: 
+  <a href="http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-Web-20.html">http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-Web-20.html</a></li>
+  <li><a name="Salton">Salton</a><span lang="es">; G. </span>and <span lang="es">
+  Mc Gill, M.J. (1983)<i> Introduction to Modern Information Retrieval</i>. New 
+  York: Mc Graw-Hill Computer Series.</span></li>
+  <li><a name="Schlichting">Schlichting</a>, C. and Nilsen, E. <i>Signal Detection Analysis of WEB Search 
+  Engines</i>. Retrieved April 18, 2008, from: 
+  <a href="http://www.microsoft.com/usability/Webconf/schlichting/schlichting.htm">http://www.microsoft.com/usability/Webconf/schlichting/schlichting.htm</a></li>
+  <li><a name="searchenginewatch">searchenginewatch.com</a> (2007) <i>U.S. Search Engine Rankings, September 2007</i>. 
+  Retrieved Dec 19, 2007, from: 
+  <a href="http://searchenginewatch.com/showPage.html?page=3627654">http://searchenginewatch.com/showPage.html?page=3627654</a></li>
+  <li><a name="Spink1998">Spink</a>, A., Bateman, J. &amp; Jansen, B.J. (1998) Searching heterogeneous 
+  collections on the Web: behaviour of Excite users. <i>Information Research</i>, 4(2). 
+  Retrieved April 18, 2008, from: 
+  <a href="http://informationr.net/ir/4-2/paper53.html">http://informationr.net/ir/4-2/paper53.html</a></li>
+  <li><a name="Spink2004">Spink</a>, A. and Jansen, B.J. (2004). A study of Web search trends. 
+  <i>Webology</i>, 
+  Volume 1 num 2. Retrieved May 17, 2008, from: 
+  <a href="http://www.Webology.ir/2004/v1n2/a4.html">http://www.Webology.ir/2004/v1n2/a4.html</a></li>
+  <li><a name="Tang">Tang</a>, M. and Sun, Y. (2003) Evaluation of Web-bases search engines using 
+  user-effort measures. <i>LIBRES: library and information science research 
+  electronic journal</i>, Vol.13 (2). Retrieved May 11, 2008, from: 
+  <a href="http://libres.curtin.edu.au/libres13n2/tang.htm">http://libres.curtin.edu.au/libres13n2/tang.htm</a> </li>
+  <li><a name="Zhang2005a">Zhang</a>, J. and Dimitroff, A. (2005). The impact of Webpage content 
+  characteristics on Webpage visibility in search engine results (Part I). 
+  <i>Information Processing and Management </i>41, 661-690.</li>
+  <li><a name="Zhang2005b">Zhang</a>, J. and Dimitroff, A. (2005). The impact of Webpage content 
+  characteristics on Webpage visibility in search engine results (Part II).<i> 
+  Information Processing and Management</i> 41, 691-715.</li>
+</UL></FIELDSET> </FORM>
+<FORM action="">
+<FIELDSET><LEGEND 
+style="BORDER-RIGHT: navy 1px solid; PADDING-RIGHT: 0.5ex; PADDING-LEFT: 0.5ex; FONT-WEIGHT: bold; FONT-SIZE: medium; PADDING-BOTTOM: 0.1ex; COLOR: white; PADDING-TOP: 0.1ex; BORDER-BOTTOM: navy 1px solid; BACKGROUND-COLOR: #5e96fd">How 
+to cite this paper</LEGEND>
+<DIV><BR><span lang="es">Rodriguez J.V. Sr. and Martinez, F.J. and Rodriguez J.V.
+  </span>(2008). "Analysis of the similarity within the response of the Web 
+  search engines: an approach since users’ trends.&quot; <EM>Information Research</EM>, 
+<STRONG>1<span lang="es">4</span></STRONG>(1) paper xxx. [Available at 
+http://InformationR.net/ir/13-1/paperxxx.html]</DIV></FIELDSET> </FORM>
+<P>[Ignore what follows: the editor will complete these sections]</P>
+<TABLE cellSpacing=10 align=center>
+  <TBODY>
+  <TR>
+    <TD 
+    style="FONT-WEIGHT: bold; FONT-SIZE: small; COLOR: white; FONT-FAMILY: verdana; BACKGROUND-COLOR: #5e96fd" 
+    align=middle colSpan=3>Find other papers on this subject</TD></TR>
+  <TR>
+    <TD vAlign=top align=middle>
+      <FORM action=http://scholar.google.com/scholar method=get target=_blank>
+      <TABLE bgColor=#ffffff>
+        <TBODY>
+        <TR>
+          <TD vAlign=top noWrap align=middle height=32><INPUT type=hidden 
+            maxLength=255 size=31 
+            value='"health information" ("information seeking" or "information searching" or "information use") Canada' 
+            name=q></INPUT> <BR><INPUT style="FONT-WEIGHT: bold; FONT-SIZE: small; FONT-FAMILY: Verdana" type=submit value="Scholar Search" name=sa></INPUT> 
+            <INPUT type=hidden value=100 name=num></INPUT> 
+      </TD></TR></TBODY></TABLE></FORM></TD>
+    <TD vAlign=top align=middle><!-- Search Google -->
+      <FORM action=http://www.google.com/custom method=get target=_top>
+      <TABLE bgColor=#ffffff>
+        <TBODY>
+        <TR>
+          <TD vAlign=top noWrap align=middle height=32><INPUT type=hidden 
+            maxLength=255 size=31 
+            value='"health information" ("information seeking" or "information searching" or "information use") Canada' 
+            name=q></INPUT><BR><INPUT style="FONT-WEIGHT: bold; FONT-SIZE: small; FONT-FAMILY: Verdana" type=submit value="Google Search" name=sa></INPUT> 
+            <INPUT type=hidden value=pub-5081678983212084 name=client></INPUT> 
+            <INPUT type=hidden value=1 name=forid></INPUT> <INPUT type=hidden 
+            value=ISO-8859-1 name=ie></INPUT> <INPUT type=hidden 
+            value=ISO-8859-1 name=oe></INPUT> <INPUT type=hidden 
+            value=GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1; 
+            name=cof></INPUT> <INPUT type=hidden value=en name=hl></INPUT> 
+        </TD></TR></TBODY></TABLE></FORM></TD>
+    <TD vAlign=top align=middle>
+      <FORM action=http://www.live.com method=get target=_blank>
+      <TABLE bgColor=#ffffff>
+        <TBODY>
+        <TR>
+          <TD vAlign=top noWrap align=middle height=32><INPUT type=hidden 
+            maxLength=255 size=31 
+            value='"health information" ("information seeking" or "information searching" or "information use") Canada' 
+            name=q></INPUT> <BR><INPUT style="FONT-WEIGHT: bold; FONT-SIZE: small; FONT-FAMILY: Verdana" type=submit value="Windows Academic" name=sa></INPUT> 
+            <INPUT type=hidden value=100 name=num></INPUT> 
+      </TD></TR></TBODY></TABLE></FORM></TD></TR></TBODY></TABLE><!-- <div align="center">Articles citing this paper, <a href="http://scholar.google.com/scholar?hl=en&lr=&cites=15087050128968045568" target="_blank">according to Google Scholar</a></div>
+<br /> -->
+<DIV align=center>
+  <IMG src="Template for papers_archivos/delicious.small.gif" width="10" height="10"> 
+<A 
+onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;" 
+href="http://del.icio.us/post">Bookmark This Page</A> </DIV>
+<HR style="COLOR: #5e96fd" SIZE=1>
+
+<TABLE cellPadding=10 align=center>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=middle>
+      <DIV><IMG height=20 alt=counter hspace=4 
+      src="Template for papers_archivos/paperxxx.png" width=60 align=middle 
+      vspace=2 border=0><BR><A href="http://www.digits.net/">Web Counter</A> 
+      </DIV></TD>
+    <TD vAlign=top align=middle>
+      <DIV>© the authors, 2008. <BR>Last updated: 18 October, 2007 </DIV></TD>
+    <TD vAlign=center align=middle><IMG height=16 alt="Valid XHTML 1.0!" 
+      src="" width=44><!--ONESTAT SCRIPTCODE START--> <!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+      <DIV id=OneStatTag>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <SCRIPT type=text/javascript>
+<!--
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="281971";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('https:')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<a href="http://www.onestatfree.com/aspx/login.aspx?sid='+sid+'" target=_blank><img id="ONESTAT_TAG" border="0" src="'+p+'" alt="This site tracked by OneStatFree.com. Get your own free site tracker."></'+'a>');
+}
+
+OneStat_Pageview();
+//-->
+            </SCRIPT>
+            <NOSCRIPT>
+            <A href="http://www.onestatfree.com/"><IMG 
+            alt="online web site analytics" 
+            src="Template for papers_archivos/stat.gif" border=0></A></NOSCRIPT></TD></TR>
+        <TR>
+          <TD align=middle>
+            <DIV style="DISPLAY: none; COLOR: black; FONT-FAMILY: 'Verdana'"><A 
+            style="TEXT-DECORATION: none" href="http://www.onestat.com/">online 
+            web site analytics</A><BR></DIV></TD></TR></TBODY></TABLE></DIV><!--ONESTAT SCRIPTCODE END--></TD></TR></TBODY></TABLE>
+<HR style="COLOR: #5e96fd" SIZE=3>
+
+<TABLE align=center>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV class=button><!-- 
+<ul>
+	<li><a href="infres131.html">Contents</a> | </li>
+	<li><a href="../iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index.html">Home</a></li>
+</ul> 
+--></DIV></TD></TR></TBODY></TABLE>
+<SCRIPT src="Template for papers_archivos/urchin.js" type=text/javascript>
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+_uacct = "UA-672528-1";
+urchinTracker();
+</SCRIPT>
+</BODY></HTML>

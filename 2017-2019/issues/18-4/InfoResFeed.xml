@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Information Research Feed</title>
+  <link>http://informationr.net/ir/contents.html</link>
+  <description>An RSS feed to keep up to date with Information Research</description>
+  <image>
+  <url>http://informationr.net/ir/mini_logo.gif</url>
+  <title>Information Research</title>
+  <link>http://informationr.net</link>ß
+</image>
+  <item>
+    <title>Editorial</title>
+    <link>http://informationr.net/ir/19-1/editor191.html</link>
+    <description>An introduction to the issue</description>
+  </item>
+    <item>
+    <title>Conceptualizing outcome and impact measures for intelligence services, by Rhiannon Gainor and France Bouthillier</title>
+    <link>http://informationr.net/ir/19-1/paper602.html</link>
+    <description>The purpose of this qualitative, exploratory study is to clarify ambiguous concepts in competitive intelligence services literature specifically related to measurement of intelligence outcomes and impact.</description>
+  </item>
+      <item>
+    <title>Open for business? An historical, comparative study of public access to information about two controversial coastal developments in North-east Scotland, by Graeme Baxter</title>
+    <link>http://informationr.net/ir/19-1/paper603.html</link>
+    <description>This paper compares public access to information about two controversial coastal developments in North-east Scotland: the construction of a gas terminal by the British Gas Council and Total in the 1970s, and the current development of 'the world's greatest golf course' by the tycoon Donald Trump.</description>
+  </item>
+      <item>
+    <title>Continuum thinking and the contexts of personal information management, by Isto Huvila, Jon Eriksen, Eva-Maria H&auml;usner and Ina-Maria Jansson</title>
+    <link>http://informationr.net/ir/19-1/paper604.html</link>
+    <description>Recent personal information management literature has underlined the significance of the contextuality of personal information and its use. The present article discusses the applicability of the records continuum model and its generalisation, continuum thinking, as a theoretical framework for explicating the overlap and evolution of the diverse contexts of personal information and their implications for personal information management practices.</description>
+  </item>
+      <item>
+    <title>A survey of stemming algorithms in information retrieval, by Cristian Moral, Ang&eacute;lica de Antonio, Ricardo Imbert and Jaime Ram&iacute;rez</title>
+    <link>http://informationr.net/ir/19-1/paper605.html</link>
+    <description>During the last fifty years, improved information retrieval techniques have become necessary because of the huge amount of information people have available, which continues to increase rapidly due to the use of new technologies and the Internet. Stemming is one of the processes that can improve information retrieval in terms of accuracy and performance.</description>
+  </item>
+  <item>
+  <title>The role of motivators in improving knowledge-sharing among academics, by Christine Nya-Ling Tan and T. Ramayah</title>
+  <link>http://informationr.net/ir/19-1/paper606.html</link>
+  <description>This research addresses a primary issue that involves motivating academics to share knowledge. Adapting the theory of reasoned action, this study examines the role of motivation that consists of intrinsic motivators (commitment; enjoyment in helping others) and extrinsic motivators (reputation; organizational rewards) to determine and explain the behaviour of Malaysian academics in sharing knowledge. </description>
+  </item>
+    <item>
+  <title>Learning information literacy, by Rae-Anne Diehm and Mandy Lupton</title>
+  <link>http://informationr.net/ir/19-1/paper607.html</link>
+  <description>This paper reports on university students' experiences of learning information literacy.</description>
+  </item>
+    <item>
+  <title>Inner circles and outer reaches: local and global information-seeking habits of authors in acknowledgment paratext, by Nadine Desrochers and Jen Pecoskie</title>
+  <link>http://informationr.net/ir/19-1/paper608.html</link>
+  <description>This research investigates paratextual acknowledgements in published codices in order to study how relationships inform the information-seeking habits of authors, an understudied group in library and information science.</description>
+  </item>
+    <item>
+  <title>Creating possible selves: information disclosure behaviour on social networks, by Jenny Bronstein</title>
+  <link>http://informationr.net/ir/19-1/paper609.html</link>
+  <description>This study investigates the creation of alternative identities or possible selves on social networks by examining self-presentation and self-disclosure as elements of the information disclosure behaviour of Facebook users.</description>
+  </item>
+    <item>
+  <title>Proposed model of information behaviour in crisis: the case of Hurricane Sandy, by Irene Lopatovska and Bobby Smiley</title>
+  <link>http://informationr.net/ir/19-1/paper610.html</link>
+  <description>The paper proposes a model of information behaviour in crisis. No previous model has attempted to integrate information resources, information behaviour and needs of the storm-affected communities within the temporal stages of a natural disaster.</description>
+  </item>
+      <item>
+  <title>Creating and sharing: teens’ information practices in digital communities, by Mary Ann Harlan, Christine Bruce and Mandy Lupton</title>
+  <link>http://informationr.net/ir/19-1/paper611.html</link>
+  <description> In a connected world youth are participating in digital content creating communities. This paper introduces a description of teens' information practices in digital content creating and sharing communities. </description>
+  </item>
+      <item>
+  <title>Book reviews</title>
+  <link>http://informationr.net/ir/reviews/reviews.html</link>
+  <description>Seven new books are reviewed in this issue</description>
+  </item>
+   </channel>
+ </rss>
+
+
+

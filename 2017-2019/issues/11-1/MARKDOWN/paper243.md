@@ -1,0 +1,3061 @@
+#### Vol. 11 No. 1, October, 2005
+
+
+
+# Comunicación de conocimiento. ¿Habilidad de los profesores universitarios?
+
+#### [J. Licea de Arenas](mailto:%20jlicea@servidor.unam.mx)  
+Facultad de Filosofía y Letras, Universidad Nacional Autónoma de México,  
+Ciudad Universitaria, México, D.F. 04510, Mexico  
+
+[J.V. Rodríguez](mailto:jovi@um.es) and [J.A. Gómez](mailto:jgomez@um.es)  
+Facultad de Comunicación y Documentación, Universidad de Murcia,  
+Campus de Espinardo, Murcia 30071, España  
+
+and  
+
+M. Arenas  
+Departamento de Producción Agrícola y Animal  
+Universidad Autónoma Metropolitana Unidad Xochimilco  
+Calz. del Hueso y Canal Nacional, México, D.F. Mexico  
+
+
+
+#### Resumen
+
+> **Introducción:** Las competencias que todo ser humano debe reunir para estar plenamente alfabetizado en información están relacionadas con la capacidad para hacer ciencia. Los profesores universitarios no son la excepción.  
+> **Objetivo:** Determinar, a través de sus publicaciones en las revistas de la vertiente principal aparecidas en el periodo 1994-2001, el grado en que el personal académico de la Universidad de Murcia está alfabetizado en información  
+> **Métodos:** Se utilizaron las tres bases de datos de la Web of Science para identificar las revistas centrales en las que los profesores de la Universidad de Murcia comunican los resultados de sus investigaciones, así como en el Journal Citation Reports para asignar las disciplinas en que publicaron.    
+> **Resultados:** Los artículos indizados en A&CI fueron escasos, mientras que los cubiertos por el SSCI permanecieron constantes en el periodo estudiado. El SCI indizó 1,923 artículos de 1994 a 2001 y el 72% de ellos fue citado. Los artículos fueron publicados principalmente en idioma inglés y de la autoría de profesores adscritos a centros relacionados con las ciencias biológicas. Las disciplinas con mayor actividad fueron la química, bioquímica y biología molecular, así como las neurociencias.  
+> **Conclusiones:** Las bases de datos que utilizamos son criticadas por sus sesgos, sin embargo, reunimos evidencia de que los académicos de la Universidad realizan investigación principalmente en ciencias. También, que ellos están alfabetizados en información: su producción científica aparece en las revistas visibles, es decir, han vencido barreras de producción de conocimiento y comunicación de la ciencia.
+
+
+
+## Introducción
+
+Un grupo de actores universitarios, los profesores, con el cual la universidad se relaciona cuando despliega su actividad cotidiana, reúne competencias que le son reconocidas para la conducción de su actividad. Dicho grupo se caracteriza por la similitud de intereses que existe entre ellos para la búsqueda de objetivos semejantes ([Villaseñor García, 1994](#VIL)) y comparte, además, el impulso de generar conocimiento científico a través de la investigación, con base en una serie de normas que, según [Merton](#MER) (1957) en su conjunto son características del ethos de la ciencia moderna.
+
+Destaca, entre ellas, aquella que establece que los logros tienen que compartirse con el fin de que el conocimiento sea utilizado libremente, es decir, para que las disciplinas avancen no es suficiente que se prueben nuevas metodologías o se realicen observaciones, mediciones o experimentos: los resultados de esas investigaciones tienen que comunicarse. Sin embargo, en las universidades de hoy en día -del viejo y del nuevo mundo- todavía coexiste una separación entre quienes ejercen la docencia y la investigación, separación que ha favorecido la desvinculación de las dos actividades argumentándose, incluso, que un profesor comprende y explica procesos, mientras que el investigador comparte hallazgos. Asimismo, que el profesor requiere de una cultura verbal, mientras que el investigador necesita de capacidades para expresarse por escrito ([Glazman Nowalski 1990](#GLA)).
+
+Para los fines de este trabajo entendemos que el profesor es el sujeto que investiga en la docencia, para la docencia y produce conocimiento para comunicarlo a sus pares. De esta manera, tiene que someterse a procesos de evaluación prospectiva y retrospectiva. En el primer tipo de evaluación se incluyen sus manuscritos o protocolos de investigación; en el segundo, los productos de su investigación que ya son patrimonio del conocimiento público. Sin embargo, los modelos de evaluación impuestos, fuertemente influenciados por la ideología de la meritocracia ([Sutherland 1996](#SUT)), ya forman parte de la vida cotidiana de las universidades pese a que no se comprenden con claridad, a la confusión de sus objetivos y, principalmente, a las formas, a menudo incorrectas, de evaluar ([Goldstein & Lewis 1996](#GOL)). Las disposiciones legales establecidas para tal efecto reconocen la publicación de artículos científicos en revistas con factores de impacto altos. Los profesores, por su parte,  reciben estímulos.
+
+A nivel mundial, regional, nacional o institucional se reúne la información sobre los productos de la investigación en disciplinas científicas donde “...la concepción institucional de la ciencia como parte del dominio público puede estar relacionada con el imperativo de comunicar los resultados de investigación...” ([Merton 1957](#MER)) que “...aparecerán usualmente como artículos cortos dirigidos únicamente a los colegas, cuyo conocimiento de un paradigma compartido puede asumirse a la vez que prueba que son los únicos que pueden leer los artículos dirigidos a ellos” ([Kuhn 1962](#KUH)). El artículo científico, escrito y publicado para describir los hallazgos de investigación original ([Day 1998](#DAY)) sirve, también, como fuente para los estudios bibliométricos.  No obstante, los burócratas de los organismos encargados de la administración de la ciencia toman en consideración aspectos tales como el impacto de las publicaciones en los indicadores de desempeño ([Not-so-deep... 2005](#NOT)).
+
+De acuerdo con lo anterior, intentamos determinar, bibliométricamente, la habilidad para producir conocimiento de los profesores de la **Universidad de Murcia**, tomando en cuenta que dicha habilidad comprende, además, la demostración de sus capacidades para hacer ciencia, redactar y alcanzar la visibilidad a través de las revistas de la vertiente principal. No se intentó presentar una evaluación de la investigación científica de la Universidad ni de compararla con otras instituciones españolas, sino sólo mostrar el grado en que los profesores dominan la habilidad de comunicar, una de las exigencias para estar plenamente alfabetizado en información.
+
+## Métodos
+
+El periodo de análisis comprendió ocho años: 1994-2001, con el fin de actualizar la serie que sobre la Universidad de Murcia apareció en el estudio titulado "[La ciencia y la tecnología en la Región de Murcia. Datos para un estudio de la producción científica (1986-1993)](#LA)" (1995) y presentar información adicional a la que se proporciona en la publicación "20 años de ciencia en la Región de Murcia. Análisis bibliométrico" ([Muñoz Muñoz, 2003](#MUN)). En esta investigación utilizamos el Science Citation Index Expanded (SCI) y cubrimos también las dos restantes bases de datos del Institute for Scientific Information (ISI): Arts & Humanities Citation Index (A&HCI) y Social Sciences Citation Index (SSCI), bases de datos disponibles a través de la Web of Science.
+
+Las limitaciones de dichas bases de datos y otras han sido criticadas por sus sesgos de cobertura, no obstante,  intentamos situar a todos los profesores de la Universidad en igualdad de condiciones: la dificultad de publicar en las revistas centrales, las que se supone tienen los más altos estándares de selección de manuscritos, es decir, trabajamos con las bases de datos más selectivas en vez de aquellas que privilegian las publicaciones nacionales.
+
+Del Journal Citation Reports (JCR) se tomaron las disciplinas de publicación y el factor de impacto correspondiente a cada título de revista.
+
+## Resultados y discusión
+
+El número de artículos registrados anualmente por el ISI fue poco significativo en el caso del A&HCI y constante, tratándose del SSCI. En el SCI salvo los años de 1995 1997 y 1998 en que se manifestó un descenso, los artículos indizados aumentaron (Cuadros 1-3). En el periodo 1986-1993, según la información publicada en "[La ciencia y la tecnología en la Región de Murcia](#LA)" (1995), se registraron 1513 documentos, incluyendo artículos, revisiones, notas, cartas, editoriales y comunicaciones, mientras que en el lapso de 1994 a 2001 se registraron en el mismo SCI 1923 artículos, es decir, se incrementó la actividad científica en forma de artículos o bien se logró la publicación de aquellos que ya estaban avanzados en su preparación.
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 1\. Presencia de la U. de Murcia en el Arts & Humanities Citation Index**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**AÑOS**</td>
+
+<td align="center">**ARTÍCULOS**</td>
+
+<td align="center">**ARTÍCULOS CITADOS**</td>
+
+<td align="center">**CITAS**</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1994</td>
+
+<td align="center">10</td>
+
+<td align="center">0</td>
+
+<td align="center">0</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1995</td>
+
+<td align="center">8</td>
+
+<td align="center">1</td>
+
+<td align="center">10</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1996</td>
+
+<td align="center">13</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1997</td>
+
+<td align="center">6</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1998</td>
+
+<td align="center">12</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1999</td>
+
+<td align="center">4</td>
+
+<td align="center">0</td>
+
+<td align="center">0</td>
+
+</tr>
+
+<tr>
+
+<td align="center">2000</td>
+
+<td align="center">14</td>
+
+<td align="center">0</td>
+
+<td align="center">0</td>
+
+</tr>
+
+<tr>
+
+<td align="center">2001</td>
+
+<td align="center">8</td>
+
+<td align="center">0</td>
+
+<td align="center">0</td>
+
+</tr>
+
+<tr>
+
+<td align="center">**TOTAL**</td>
+
+<td align="center">75</td>
+
+<td align="center">4</td>
+
+<td align="center">14</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 2\. Presencia de la U. de Murcia en el Social Sciences Citation Index**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**AÑOS**</td>
+
+<td align="center">**ARTÍCULOS**</td>
+
+<td align="center">**ARTÍCULOS CITADOS**</td>
+
+<td align="center">**CITAS**</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1994</td>
+
+<td align="center">2</td>
+
+<td align="center">2</td>
+
+<td align="center">7</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1995</td>
+
+<td align="center">16</td>
+
+<td align="center">10</td>
+
+<td align="center">263</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1996</td>
+
+<td align="center">9</td>
+
+<td align="center">5</td>
+
+<td align="center">39</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1997</td>
+
+<td align="center">19</td>
+
+<td align="center">10</td>
+
+<td align="center">59</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1998</td>
+
+<td align="center">20</td>
+
+<td align="center">14</td>
+
+<td align="center">53</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1999</td>
+
+<td align="center">28</td>
+
+<td align="center">10</td>
+
+<td align="center">26</td>
+
+</tr>
+
+<tr>
+
+<td align="center">2000</td>
+
+<td align="center">25</td>
+
+<td align="center">7</td>
+
+<td align="center">7</td>
+
+</tr>
+
+<tr>
+
+<td align="center">2001</td>
+
+<td align="center">24</td>
+
+<td align="center">4</td>
+
+<td align="center">5</td>
+
+</tr>
+
+<tr>
+
+<td align="center">**TOTAL**</td>
+
+<td align="center">143</td>
+
+<td align="center">62</td>
+
+<td align="center">459</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 3\. Presencia de la U. de Murcia en el Science Citation Index**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**AÑOS**</td>
+
+<td align="center">**ARTÍCULOS**</td>
+
+<td align="center">**ARTÍCULOS CITADOS**</td>
+
+<td align="center">**CITAS**</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1994</td>
+
+<td align="center">235</td>
+
+<td align="center">211</td>
+
+<td align="center">2382</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1995</td>
+
+<td align="center">159</td>
+
+<td align="center">136</td>
+
+<td align="center">1540</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1996</td>
+
+<td align="center">277</td>
+
+<td align="center">235</td>
+
+<td align="center">2403</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1997</td>
+
+<td align="center">87</td>
+
+<td align="center">72</td>
+
+<td align="center">606</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1998</td>
+
+<td align="center">107</td>
+
+<td align="center">86</td>
+
+<td align="center">436</td>
+
+</tr>
+
+<tr>
+
+<td align="center">1999</td>
+
+<td align="center">377</td>
+
+<td align="center">285</td>
+
+<td align="center">1438</td>
+
+</tr>
+
+<tr>
+
+<td align="center">2000</td>
+
+<td align="center">336</td>
+
+<td align="center">223</td>
+
+<td align="center">737</td>
+
+</tr>
+
+<tr>
+
+<td align="center">2001</td>
+
+<td align="center">345</td>
+
+<td align="center">133</td>
+
+<td align="center">264</td>
+
+</tr>
+
+<tr>
+
+<td align="center">**TOTAL**</td>
+
+<td align="center">1923</td>
+
+<td align="center">1381</td>
+
+<td align="center">9806</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+Los artículos publicados en las revistas de la vertiente principal fueron principalmente en lengua inglesa. Parte de los artículos en español aparecieron en las revistas nacionales incluidas en los índices del ISI y, pese a que se identificaron títulos de revistas en inglés publicadas en España, el número de artículos y citas que atrajeron fue escaso (Cuadro 4).
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 4\. Citas acumuladas por la U. de Murcia en el periodo 1994-2001, según idioma de publicación**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**ÍNDICE**</td>
+
+<td align="center">**CITAS**</td>
+
+<td align="center">**ALEMÁN**</td>
+
+<td align="center">**ESPAÑOL**</td>
+
+<td>**FRANCÉS**</td>
+
+<td>**INGLÉS**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">A&HCI</td>
+
+<td align="center">14</td>
+
+<td align="center">0</td>
+
+<td align="center">1</td>
+
+<td align="center">0</td>
+
+<td align="center">13</td>
+
+</tr>
+
+<tr>
+
+<td align="left">SSCI</td>
+
+<td align="center">459</td>
+
+<td align="center">0</td>
+
+<td align="center">12</td>
+
+<td align="center">0</td>
+
+<td align="center">447</td>
+
+</tr>
+
+<tr>
+
+<td align="left">SCI</td>
+
+<td align="center">9806</td>
+
+<td align="center">7</td>
+
+<td align="center">45</td>
+
+<td align="center">4</td>
+
+<td align="center">9750</td>
+
+</tr>
+
+<tr>
+
+<td align="left">**TOTAL**</td>
+
+<td align="center">10279</td>
+
+<td align="center">7</td>
+
+<td align="center">58</td>
+
+<td align="center">4</td>
+
+<td align="center">10210</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+La actividad científica universitaria estuvo distribuida en 17 centros universitarios ubicados, principalmente, en la ciudad de Murcia. En Cartagena se publicó un 0.70% del total de artículos. Las Facultades de Biología y Química predominaron como centros de actividad científica (Cuadro 5).
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 5\. Artículos citados o no por el espacio universitario según la Web of Science**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**ESPACIO**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**%**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biología</td>
+
+<td align="center">604</td>
+
+<td align="center">28.21</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Química</td>
+
+<td align="center">460</td>
+
+<td align="center">21.48</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Veterinaria</td>
+
+<td align="center">230</td>
+
+<td align="center">10.74</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Física</td>
+
+<td align="center">187</td>
+
+<td align="center">8.73</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina</td>
+
+<td align="center">170</td>
+
+<td align="center">7.94</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Matemáticas</td>
+
+<td align="center">129</td>
+
+<td align="center">6.02</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Informática</td>
+
+<td align="center">55</td>
+
+<td align="center">2.57</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Hospital "Virgen de la Arrixaca"</td>
+
+<td align="center">47</td>
+
+<td align="center">2.20</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Psicología</td>
+
+<td align="center">39</td>
+
+<td align="center">1.82</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Tecnología de los Alimentos</td>
+
+<td align="center">38</td>
+
+<td align="center">1.78</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Hospital General "Reina Sofia"</td>
+
+<td align="center">26</td>
+
+<td align="center">1.21</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Educación</td>
+
+<td align="center">18</td>
+
+<td align="center">0.84</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Economía y Empresa</td>
+
+<td align="center">12</td>
+
+<td align="center">0.56</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Filosofía</td>
+
+<td align="center">10</td>
+
+<td align="center" width="149" height="15">0.47</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Letras</td>
+
+<td align="center">5</td>
+
+<td align="center">0.23</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Hospital "Morales Meseguer"</td>
+
+<td align="center">3</td>
+
+<td align="center">0.14</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Unidad de Evaluación</td>
+
+<td align="center">1</td>
+
+<td align="center">0.04</td>
+
+</tr>
+
+<tr>
+
+<td align="left">No Identificado</td>
+
+<td align="center">107</td>
+
+<td align="center">5.00</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+Las disciplinas científicas con mayor presencia en la Universidad, por el número de citas recibidas, en las artes y humanidades, ciencias sociales y ciencias fueron las siguientes: arqueologia -en las artes y humanidades-; neurociencias y psicología -en las ciencias sociales-, así como química, bioquímica & biología molecular, neurociencias, y biología del desarrollo -en las ciencias- (Cuadro 6-8).
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 6\. Distribución por disciplina de artículos de Artes y Humanidades citados en el Arts & Humanities Citation Index**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**ÁREA**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+<td align="center">**CITAS/ARTÍCULO**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Arqueología</td>
+
+<td align="center">1</td>
+
+<td align="center">10</td>
+
+<td align="center">10</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Filología</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Linguistica</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+<td align="center">2</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Teatro</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 7\. Distribución por disciplina de artículos de Ciencias Sociales citados en el Social Sciences Citation Index**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**ÁREA**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+<td align="center">**CITAS/ARTÍCULO**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Adicciones</td>
+
+<td align="center">1</td>
+
+<td align="center">7</td>
+
+<td align="center">7.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Antropología</td>
+
+<td align="center">3</td>
+
+<td align="center">13</td>
+
+<td align="center">4.3</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ciencias Sociales</td>
+
+<td align="center">1</td>
+
+<td align="center">5</td>
+
+<td align="center">5.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Criminología</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">6.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Economía</td>
+
+<td align="center">2</td>
+
+<td align="center">2</td>
+
+<td align="center">1.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Educación</td>
+
+<td align="center">6</td>
+
+<td align="center">13</td>
+
+<td align="center">2.1</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Endocrinología</td>
+
+<td align="center">1</td>
+
+<td align="center">13</td>
+
+<td align="center">13.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ética</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+<td align="center">2.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Farmacología y Farmacia</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Fisiología</td>
+
+<td align="center">1</td>
+
+<td align="center">13</td>
+
+<td align="center">13.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Informática</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Investigacion de Operaciones</td>
+
+<td align="center">5</td>
+
+<td align="center">11</td>
+
+<td align="center">2.2</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina Legal</td>
+
+<td align="center">1</td>
+
+<td align="center">4</td>
+
+<td align="center">4.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Neurociencias</td>
+
+<td align="center">3</td>
+
+<td align="center">200</td>
+
+<td align="center">66.6</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Nutrición</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Políticas y Servicios de Salud</td>
+
+<td align="center">2</td>
+
+<td align="center">7</td>
+
+<td align="center">3.5</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Psicología</td>
+
+<td align="center">27</td>
+
+<td align="center">141</td>
+
+<td align="center">5.2</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Psiquiatría</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">6.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Rehabilitación</td>
+
+<td align="center">1</td>
+
+<td align="center">4</td>
+
+<td align="center">4.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Salud Pública</td>
+
+<td align="center">1</td>
+
+<td align="center">8</td>
+
+<td align="center">8.0</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Sociología</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.0</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 8\. Distribución por disciplina de artículos de ciencias citados en el Science Citation Index**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**ÁREA**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+<td align="center">**CITAS/ARTÍCULO**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Adicciones</td>
+
+<td align="center">1</td>
+
+<td align="center">7</td>
+
+<td align="center">7.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Agricultura</td>
+
+<td align="center">4</td>
+
+<td align="center">15</td>
+
+<td align="center">3.75</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Alergología</td>
+
+<td align="center">1</td>
+
+<td align="center">13</td>
+
+<td align="center">13.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Anatomía y Morfología</td>
+
+<td align="center">29</td>
+
+<td align="center">154</td>
+
+<td align="center">5.30</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Anestesiología</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+<td align="center">2.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Astronomía y Astrofísica</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Automatizacion y Sistemas de Control</td>
+
+<td align="center">2</td>
+
+<td align="center">13</td>
+
+<td align="center">6.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Bacteriología</td>
+
+<td align="center">5</td>
+
+<td align="center">25</td>
+
+<td align="center">5.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biofísica</td>
+
+<td align="center">15</td>
+
+<td align="center">221</td>
+
+<td align="center">14.70</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biología</td>
+
+<td align="center">12</td>
+
+<td align="center">68</td>
+
+<td align="center">5.60</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biología Celular</td>
+
+<td align="center">40</td>
+
+<td align="center">253</td>
+
+<td align="center">6.30</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biología de la Reproducción</td>
+
+<td align="center">7</td>
+
+<td align="center">24</td>
+
+<td align="center">3.40</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biología del Desarrollo</td>
+
+<td align="center">20</td>
+
+<td align="center">643</td>
+
+<td align="center">32.10</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biología Marina y de Agua Dulce</td>
+
+<td align="center">13</td>
+
+<td align="center">37</td>
+
+<td align="center">2.80</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Bioquímica y Biología Molecular</td>
+
+<td align="center">158</td>
+
+<td align="center">1217</td>
+
+<td align="center">7.70</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biotecnología</td>
+
+<td align="center">31</td>
+
+<td align="center">202</td>
+
+<td align="center">6.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Botánica</td>
+
+<td align="center">80</td>
+
+<td align="center">351</td>
+
+<td align="center">4.30</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Cardiología y Sistema Cardiovascular</td>
+
+<td align="center">14</td>
+
+<td align="center">104</td>
+
+<td align="center">7.40</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ciencia de la Leche</td>
+
+<td align="center">2</td>
+
+<td align="center">7</td>
+
+<td align="center">3.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ciencia de los Alimentos</td>
+
+<td align="center">78</td>
+
+<td align="center">369</td>
+
+<td align="center">4.70</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ciencia de los Materiales</td>
+
+<td align="center">6</td>
+
+<td align="center">18</td>
+
+<td align="center">3.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ciencias</td>
+
+<td align="center">12</td>
+
+<td align="center">379</td>
+
+<td align="center">31.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ciencias Ambientales</td>
+
+<td align="center">9</td>
+
+<td align="center">32</td>
+
+<td align="center">3.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ciencias Nucleares</td>
+
+<td align="center">5</td>
+
+<td align="center">51</td>
+
+<td align="center">10.20</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Cirugía</td>
+
+<td align="center">14</td>
+
+<td align="center">129</td>
+
+<td align="center">9.20</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Dermatología</td>
+
+<td align="center">2</td>
+
+<td align="center">24</td>
+
+<td align="center">12.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ecología</td>
+
+<td align="center">4</td>
+
+<td align="center">16</td>
+
+<td align="center">4.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Edafología</td>
+
+<td align="center">4</td>
+
+<td align="center">41</td>
+
+<td align="center">10.20</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Educación</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Endocrinología</td>
+
+<td align="center">8</td>
+
+<td align="center">38</td>
+
+<td align="center">4.70</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Enfermedades Infecciosas</td>
+
+<td align="center">2</td>
+
+<td align="center">7</td>
+
+<td align="center">3.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Enfermedades Vasculares Periféricas</td>
+
+<td align="center">2</td>
+
+<td align="center">51</td>
+
+<td align="center">25.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Entomología</td>
+
+<td align="center">3</td>
+
+<td align="center">6</td>
+
+<td align="center">2.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Espectroscopia</td>
+
+<td align="center">3</td>
+
+<td align="center">4</td>
+
+<td align="center">1.30</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Estadística</td>
+
+<td align="center">12</td>
+
+<td align="center">34</td>
+
+<td align="center">2.80</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ética Médica</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+<td align="center">2.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Farmacología y Farmacia</td>
+
+<td align="center">21</td>
+
+<td align="center">85</td>
+
+<td align="center">4.04</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Física</td>
+
+<td align="center">63</td>
+
+<td align="center">298</td>
+
+<td align="center">4.70</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Fisicoquímica</td>
+
+<td align="center">19</td>
+
+<td align="center">119</td>
+
+<td align="center">6.20</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Fisiología</td>
+
+<td align="center">23</td>
+
+<td align="center">167</td>
+
+<td align="center">7.20</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Gastroenterología y Hepatología</td>
+
+<td align="center">4</td>
+
+<td align="center">35</td>
+
+<td align="center">8.70</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Genética</td>
+
+<td align="center">5</td>
+
+<td align="center">39</td>
+
+<td align="center">7.80</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Geociencias</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Geología</td>
+
+<td align="center">1</td>
+
+<td align="center">3</td>
+
+<td align="center">3.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Hematología</td>
+
+<td align="center">6</td>
+
+<td align="center">52</td>
+
+<td align="center">8.66</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Horticultura</td>
+
+<td align="center">8</td>
+
+<td align="center">22</td>
+
+<td align="center">2.75</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Informática</td>
+
+<td align="center">12</td>
+
+<td align="center">43</td>
+
+<td align="center">3.58</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Inmunología</td>
+
+<td align="center">11</td>
+
+<td align="center">133</td>
+
+<td align="center">12.09</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Instrumentos e Instrumentación</td>
+
+<td align="center">3</td>
+
+<td align="center">8</td>
+
+<td align="center">2.66</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Inteligencia Artificial</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+<td align="center">2.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Investigación de Operaciones</td>
+
+<td align="center">5</td>
+
+<td align="center">5</td>
+
+<td align="center">1.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Matemáticas</td>
+
+<td align="center">48</td>
+
+<td align="center">125</td>
+
+<td align="center">2.60</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Mecánica</td>
+
+<td align="center">1</td>
+
+<td align="center">8</td>
+
+<td align="center">8.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina</td>
+
+<td align="center">8</td>
+
+<td align="center">59</td>
+
+<td align="center">7.37</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina Crítica</td>
+
+<td align="center">2</td>
+
+<td align="center">5</td>
+
+<td align="center">2.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina Legal</td>
+
+<td align="center">7</td>
+
+<td align="center">22</td>
+
+<td align="center">3.14</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina Tropical</td>
+
+<td align="center">1</td>
+
+<td align="center">5</td>
+
+<td align="center">5.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina Veterinaria</td>
+
+<td align="center">41</td>
+
+<td align="center">182</td>
+
+<td align="center">4.43</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Metalurgia</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Micología</td>
+
+<td align="center">3</td>
+
+<td align="center">27</td>
+
+<td align="center">9.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Microbiología</td>
+
+<td align="center">13</td>
+
+<td align="center">99</td>
+
+<td align="center">7.61</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Neurociencias</td>
+
+<td align="center">49</td>
+
+<td align="center">777</td>
+
+<td align="center">15.80</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Neurología</td>
+
+<td align="center">19</td>
+
+<td align="center">293</td>
+
+<td align="center">15.40</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Nutrición</td>
+
+<td align="center">8</td>
+
+<td align="center">18</td>
+
+<td align="center">2.25</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Obstetricia y Ginecología</td>
+
+<td align="center">2</td>
+
+<td align="center">3</td>
+
+<td align="center">1.50</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Oceanografía</td>
+
+<td align="center">1</td>
+
+<td align="center">4</td>
+
+<td align="center">4.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Odontología</td>
+
+<td align="center">4</td>
+
+<td align="center">13</td>
+
+<td align="center">3.25</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Oftalmología</td>
+
+<td align="center">16</td>
+
+<td align="center">205</td>
+
+<td align="center">12.81</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Oncología</td>
+
+<td align="center">8</td>
+
+<td align="center">61</td>
+
+<td align="center">7.62</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Optica</td>
+
+<td align="center">14</td>
+
+<td align="center">126</td>
+
+<td align="center">9.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Ornitología</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+<td align="center">1.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Otorrinolaringología</td>
+
+<td align="center">2</td>
+
+<td align="center">2</td>
+
+<td align="center">2.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Paleontologia</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">6.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Parasitología</td>
+
+<td align="center">3</td>
+
+<td align="center">15</td>
+
+<td align="center">5.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Patología</td>
+
+<td align="center">3</td>
+
+<td align="center">5</td>
+
+<td align="center">1.60</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Pediatría</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">6.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Pesca</td>
+
+<td align="center">13</td>
+
+<td align="center">73</td>
+
+<td align="center">5.61</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Psiquiatría</td>
+
+<td align="center">2</td>
+
+<td align="center">8</td>
+
+<td align="center">4.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Química</td>
+
+<td align="center">28</td>
+
+<td align="center">1894</td>
+
+<td align="center">6.60</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Radiología</td>
+
+<td align="center">1</td>
+
+<td align="center">12</td>
+
+<td align="center">12.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Recursos Acuíferos</td>
+
+<td align="center">8</td>
+
+<td align="center">23</td>
+
+<td align="center">2.87</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Silvicultura</td>
+
+<td align="center">3</td>
+
+<td align="center">15</td>
+
+<td align="center">5.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Toxicología</td>
+
+<td align="center">5</td>
+
+<td align="center">36</td>
+
+<td align="center">7.20</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Trasplantes</td>
+
+<td align="center">9</td>
+
+<td align="center">80</td>
+
+<td align="center">8.88</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Urología y Nefrología</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+<td align="center">2.00</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Zoología</td>
+
+<td align="center">11</td>
+
+<td align="center">24</td>
+
+<td align="center">2.18</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+De acuerdo con las disposiciones españolas que evalúan el rendimiento docente y científico del profesorado universitario, se “valorarán preferentemente las aportaciones que sean artículos en revistas de reconocido prestigio , aceptándose como tales las que ocupen posiciones relevantes en el Subject Category Listing...”, es decir, la medida la constituye el Journal Citation Reports tratándose de las ciencias y las ciencias sociales ([CNEAI](#CIE)). Los artículos de los profesores de la Universidad que acumularon el mayor número de citas cumplieron con esa indicación: 6 artículos, de 21,  incluidos en el SSCI aparecieron en revistas colocadas en el tercio superior, mientras que sólo 5 artículos, de un total de 35 indizados en el SCI aparecieron en revistas que no se ubicaron en el primer tercio de las correspondientes categorías (Cuadros 9-10) ([Jiménez Contreras et al., 2002](#JIM)).
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 9\. Revistas que publicaron los artículos más citados de acuerdo con el SSCI  
+ (con (*) las publicaciones que se encuentran en el tercio superior)**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**TÍTULO**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+<td align="center">**POSICIÓN JCR**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Acta Psychiatrica Scandinavica</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">14/77(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">American Journal of Public Health</td>
+
+<td align="center">1</td>
+
+<td align="center">8</td>
+
+<td align="center">1/54(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Brain Behavior and Evolution</td>
+
+<td align="center">1</td>
+
+<td align="center">63</td>
+
+<td align="center">112/197</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Diabetes Care</td>
+
+<td align="center">1</td>
+
+<td align="center">13</td>
+
+<td align="center">11/90(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Drug and Alcohol Dependence</td>
+
+<td align="center">1</td>
+
+<td align="center">7</td>
+
+<td align="center">3/9(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">International Journal for Quality in Health Care</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">10/39(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Archaeological Science</td>
+
+<td align="center">1</td>
+
+<td align="center">10</td>
+
+<td align="center">---------</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Comparative Physiology</td>
+
+<td align="center">1</td>
+
+<td align="center">13</td>
+
+<td align="center">33/74</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Cross-Cultural Psychology</td>
+
+<td align="center">1</td>
+
+<td align="center">16</td>
+
+<td align="center">18/43</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Neuroscience</td>
+
+<td align="center">1</td>
+
+<td align="center">135</td>
+
+<td align="center">13/197(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Personality and Individual Differences</td>
+
+<td align="center">1</td>
+
+<td align="center">5</td>
+
+<td align="center">20/43</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Physiology & Behavior</td>
+
+<td align="center">7</td>
+
+<td align="center">88</td>
+
+<td align="center">10/15</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Psychology Crime & Law</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">11/22</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Quality and Quantity</td>
+
+<td align="center">1</td>
+
+<td align="center">5</td>
+
+<td align="center">46/55</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Reading and Writing</td>
+
+<td align="center">1</td>
+
+<td align="center">6</td>
+
+<td align="center">69/101</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 10\. Revistas que publicaron los artículos más citados de acuerdo con el SCI  
+(con (*) las publicaciones que se encuentran en el tercio superior)**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**TÍTULO**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+<td align="center">**POSICIÓN JCR**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">American Journal of Physiology</td>
+
+<td align="center">1</td>
+
+<td align="center">31</td>
+
+<td align="center">10/74(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Analytical Biochemistry</td>
+
+<td align="center">2</td>
+
+<td align="center">70</td>
+
+<td align="center">144/305</td>
+
+</tr>
+
+<tr>
+
+<td align="left">BBA</td>
+
+<td align="center">1</td>
+
+<td align="center">39</td>
+
+<td align="center">49/305(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Biophysical Journal</td>
+
+<td align="center">2</td>
+
+<td align="center">129</td>
+
+<td align="center">8/63(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Bone Marrow Transplantation</td>
+
+<td align="center">1</td>
+
+<td align="center">41</td>
+
+<td align="center">3/16(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Brain Behavior and Evolution</td>
+
+<td align="center">1</td>
+
+<td align="center">63</td>
+
+<td align="center">112/197(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">British Journal of Surgery</td>
+
+<td align="center">1</td>
+
+<td align="center">43</td>
+
+<td align="center">5/139(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Development</td>
+
+<td align="center">3</td>
+
+<td align="center">380</td>
+
+<td align="center">3/33(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Developmental Biology</td>
+
+<td align="center">1</td>
+
+<td align="center">101</td>
+
+<td align="center">4/33(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">EMBO Journal</td>
+
+<td align="center">1</td>
+
+<td align="center">31</td>
+
+<td align="center">12/305(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">European Journal of Neuroscience</td>
+
+<td align="center">1</td>
+
+<td align="center">83</td>
+
+<td align="center">37/197(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Food Chemistry and Toxicology</td>
+
+<td align="center">1</td>
+
+<td align="center">58</td>
+
+<td align="center">7/94(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Investigative Ophthalmology & Visual Science</td>
+
+<td align="center">1</td>
+
+<td align="center">86</td>
+
+<td align="center">2/43(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Biological Chemistry</td>
+
+<td align="center">1</td>
+
+<td align="center">98</td>
+
+<td align="center">29/305(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Biological Rhythms</td>
+
+<td align="center">1</td>
+
+<td align="center">38</td>
+
+<td align="center">2/41(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Biotechnology</td>
+
+<td align="center">1</td>
+
+<td align="center">30</td>
+
+<td align="center">45/131</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of the Chemical Society-Dalton Tr.</td>
+
+<td align="center">1</td>
+
+<td align="center">32</td>
+
+<td align="center">10/42(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Comparative Neurology</td>
+
+<td align="center">2</td>
+
+<td align="center">63</td>
+
+<td align="center">42/197(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Immunology</td>
+
+<td align="center">1</td>
+
+<td align="center">30</td>
+
+<td align="center">8/113(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Neuroscience</td>
+
+<td align="center">1</td>
+
+<td align="center">85</td>
+
+<td align="center">13/197(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Mechanisms of Development</td>
+
+<td align="center">1</td>
+
+<td align="center">66</td>
+
+<td align="center">8/33(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Molecular and Cellular Neuroscience</td>
+
+<td align="center">1</td>
+
+<td align="center">70</td>
+
+<td align="center">25/197(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Nature</td>
+
+<td align="center">1</td>
+
+<td align="center">255</td>
+
+<td align="center">1/45(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Neurology</td>
+
+<td align="center">1</td>
+
+<td align="center">84</td>
+
+<td align="center">6/136(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Neuroscience</td>
+
+<td align="center">1</td>
+
+<td align="center">85</td>
+
+<td align="center">51/197(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Organometallics</td>
+
+<td align="center">2</td>
+
+<td align="center">81</td>
+
+<td align="center">8/51(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Science</td>
+
+<td align="center">1</td>
+
+<td align="center">50</td>
+
+<td align="center">2/45(*)</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Talanta</td>
+
+<td align="center">1</td>
+
+<td align="center">32</td>
+
+<td align="center">23/68</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Tetrahedron</td>
+
+<td align="center">1</td>
+
+<td align="center">33</td>
+
+<td align="center">14/51(*)</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+Las revistas españolas estuvieron presentes en nuestro análisis (Cuadro 11), sin embargo, están lejos de competir con las presentadas en los cuadros 9-10.
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 11\. Revistas españolas citadas**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**TÍTULO**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Actas Españolas de Psiquiatría</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Afinidad</td>
+
+<td align="center">3</td>
+
+<td align="center">5</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Anales de Química</td>
+
+<td align="center">3</td>
+
+<td align="center">6</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Grasas y Aceites</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Histology and Histopathology</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Journal of Physiology and Biochemistry</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Medicina Clínica</td>
+
+<td align="center">2</td>
+
+<td align="center">8</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Methods and Findings in Experimental and Clinical Pharmacology</td>
+
+<td align="center">1</td>
+
+<td align="center">2</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Neurocirugía</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Psicologís Conductual</td>
+
+<td align="center">2</td>
+
+<td align="center">4</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Psicothema</td>
+
+<td align="center">6</td>
+
+<td align="center">9</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Revista de Neurología</td>
+
+<td align="center">2</td>
+
+<td align="center">4</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Revista Española de Cardiología</td>
+
+<td align="center">2</td>
+
+<td align="center">2</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Revista Española de Ciencia y Tecnologia de los Alimentos</td>
+
+<td align="center">1</td>
+
+<td align="center">1</td>
+
+</tr>
+
+<tr>
+
+<td align="left">Scientia Marina</td>
+
+<td align="center">2</td>
+
+<td align="center">4</td>
+
+</tr>
+
+<tr>
+
+<td align="left">**TOTAL**</td>
+
+<td align="center">29</td>
+
+<td align="center">51</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+La alfabetización en información de los profesores más citados se hizo evidente: colocaron su producción en las revistas más centrales venciendo, en muchos casos, la barrera lingüística y, posiblemente, la discriminación, si bien sólo cuatro artículos se publicaron en revistas prestigiosas como Proceedings of the Nacional Academy of Sciences (n=2), Nature y Science. ¿Y los artículos que pasaron inadvertidos al aparecer en revistas menos conocidas? ¿Será la investigación de estos autores de menor calidad o escogieron mal el mercado de su producto por desconocer la existencia de revistas más visibles, es decir, sus capacidades para seleccionar no estuvieron desarrolladas?
+
+El agrupamiento de las revistas en que publicaron los profesores de la Universidad los artículos más citados, según su factor de impacto, sólo tuvo como intención mostrar la categoría de las revistas preferidas y no dar una falsa imagen mezclando disciplinas, dado que cada una tiene un comportamiento diferente (Cuadros 12-13).
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 12\. Factor de impacto de la revista fuente de los artículos más citados en el SSCI**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**FACTOR DE IMPACTO**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+</tr>
+
+<tr>
+
+<td>5 <</td>
+
+<td align="center">2</td>
+
+<td align="center">148</td>
+
+</tr>
+
+<tr>
+
+<td>3 < F I < 5</td>
+
+<td align="center">1</td>
+
+<td align="center">8</td>
+
+</tr>
+
+<tr>
+
+<td>1 < F I < 3</td>
+
+<td align="center">13</td>
+
+<td align="center">189</td>
+
+</tr>
+
+<tr>
+
+<td>0 < F I < 1</td>
+
+<td align="center">4</td>
+
+<td align="center">22</td>
+
+</tr>
+
+<tr>
+
+<td>No identificado</td>
+
+<td align="center">1</td>
+
+<td align="center">10</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table align="center" border="1" cellspacing="0" cellpadding="3" style="background-color: #FDFFDD; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: smaller; font-style: normal; border: solid;"><caption align="bottom">  
+**Cuadro 13\. Factor de impacto de la revista fuente de los artículos más citados en el SCI**</caption>
+
+<tbody>
+
+<tr>
+
+<td align="center">**FACTOR DE IMPACTO**</td>
+
+<td align="center">**NO ARTÍCULOS**</td>
+
+<td align="center">**NO CITAS**</td>
+
+</tr>
+
+<tr>
+
+<td>8 <</td>
+
+<td align="center">7</td>
+
+<td align="center">336</td>
+
+</tr>
+
+<tr>
+
+<td>5 < F I < 8</td>
+
+<td align="center">7</td>
+
+<td align="center">453</td>
+
+</tr>
+
+<tr>
+
+<td>3 < F I < 5</td>
+
+<td align="center">13</td>
+
+<td align="center">708</td>
+
+</tr>
+
+<tr>
+
+<td>0 < F I < 3</td>
+
+<td align="center">9</td>
+
+<td align="center">356</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+Los resultados anteriores en cuanto a publicaciones y citas podrían proporcionar una medida de la fortaleza de la ciencia universitaria ([Alemany, 1999](#ALE)), sin embargo, también evidencian el esfuerzo de los profesores de la Universidad por participar en la cruzada por la alfabetización en información, independientemente de su empeño para que el país forme parte de aquellos de primera fila, de acuerdo con el documento [Ciencia y tecnología en 2002](#CIE) (2003). El análisis de las patentes ([Ayuso García & Ayuso Sánchez, 2003](#AYU)) para medir la participación de la Universidad en el desarrollo tecnológico de España y su relación con la formación de capital humano, queda pendiente.
+
+## Conclusiones
+
+La alfabetización en información, al ser un proceso que se pretende iniciar a edad temprana, intenta formar para la vida. De esta manera, los profesores universitarios alfabetizados en información no sólo reúnen las competencias necesarias para comunicar los resultados de su quehacer, sino que saben seleccionar las publicaciones más visibles, las que se encuentran en la vertiente principal.
+
+Así, es evidente que un grupo de profesores de la Universidad de Murcia está plenamente alfabetizado en información: conoce la lógica lingüística de su disciplina, sabe cómo escribir, sabe cómo presentar los resultados de investigación y seleccionar las revistas más importantes de su especialidad. Asimismo, las citas recibidas se relacionan con la alfabetización en información puesto que los artículos son citados no sólo por su calidad sino, también, por el canal de comunicación seleccionado.
+
+## Agradecimientos
+
+Nuestro agradecimiento a las Universidades Nacional Autónoma de México y de Murcia por la ayuda recibida para la realización de este estudio. Asimismo, los autores reconocen la colaboración de Alida González de la Universidad de Alicante y Pablo Pérez Ballester, hoy en la Biblioteca Regional de Murcia, así como la de Javier Valles.
+
+## Referencias
+
+*   <a name="ALE"></a>Alemany, M. (1999). _Investigar en España es llorar._ Barcelona: Universitat de Barcelona.
+*   <a name="AYU"></a>Ayuso García, M. D. & Ayuso Sánchez, M. J. (2003). _La innovación en España y la Unión Europea: tipología, fuentes y sistemas._ Murcia: DM.
+*   <a name="CIE"></a>_Ciencia y tecnología en 2002._ (2003). Madrid: Asociación Española de Periodismo Científico.
+*   <a name="DAY"></a>Day, R. A. (1998). _How to write & publish a scientific paper_. 5th ed. Westport, CT: Oryx.
+*   <a name="GLA"></a>Glazman Nowalski, R. (1990). _La universidad pública: la ideología en el vínculo investigación-docencia._ México City: Ediciones El Caballito.
+*   <a name="GOL"></a>Goldstein, H. & Lewis, T. (1996). Preface. En _Assessment: problems, developments and statistical issues._ (p. ix) Chichester: Wiley.
+*   <a name="JIM"></a>Jiménez Contreras, E., Delgado López Cozar, E., Ruiz Pérez, R. & Fernández, V. M. (2002). Impact-factor rewards affect Spanish research. _Nature_, **417**(6892), 898.
+*   <a name="KUH"></a>Kuhn, T. S. (1962). _The structure of scientific revolutions._ Chicago, IL: University of Chicago.
+*   <a name="LA"></a>_La ciencia y la tecnología en la Región de Murcia. Datos para un estudio de la producción científica (1986-1993); Plan Regional de Investigación Científica y Técnica (PRICT)._ (1995). Murcia: Consejería de Cultura y Educación, Región de Murcia.
+*   <a name="MER"></a>Merton, R. K. (1957). _Social theory and social structure._ New York, NY: Free Press.
+*   <a name="MUN"></a>Muñoz Muñoz, E. (2003). _20 años de ciencia en la región de Murcia. Análisis bibliométrico._ Murcia: Academia de Ciencias de la Región de Murcia.
+*   <a name="NOT"></a>Not-so-deep impact: research assessment rests too heavily on the inflated status of the impact factor. Editorial. (2005). _Nature_, **435**(7045), 1003-1004.
+*   <a name="SUT"></a>Sutherland, G. (1996) Assessment: some historical perspectives. En H. Goldstein & T. Lewis (Eds) _Assessment: problems, developments and statistical issues._ (pp. 9-20) Chichester: Wiley.
+*   <a name="VIL"></a>Villaseñor García, G. (1994). _La universidad pública alternativa._ Distrito Federal, México: Universidad Autónoma Metropolitana Unidad Xochimilco, Centro de Estudios Educativos, A. C.
+
+* * *
+
+<div align="center"><a id="abs" name="abs"></a>**Abstract**</div>
+
+> **Introduction:** All fully information literate people possess a series of skills that are associated with the ability to perform research. University faculty are no exception.  
+> **Objective:** In order to determine to what extent academics of the University of Murcia are fully information literate we look at their research performance measured through their published papers in mainstream journals from 1994 to 2001.  
+> **Methods:** We used the three databases of the Web of Science to identify the output of the University of Murcia faculty. We also used the Journal Citation Reports to assign their subject category to published papers.  
+> **Results:** We identified indexed papers published in mainstream journals. Articles covered by A&HCI were few, while papers indexed by SSCI remained constant over the studied period. SCI indexed 1,923 papers from 1994 to 2001; 72% of them were cited. Most papers were published in English by faculty working in centres related to the biological sciences. Disciplines that showed more activity were chemistry, biochemistry & molecular biology and neurosciences.  
+> **Conclusions:** We were aware that the databases we used are criticised by their biases. However, we gather evidence that academics of the University of Murcia carry out research mainly in the hard sciences. Also, that academics are information literate: their output is published in mainstream journals, i.e. they have overcome the barriers of knowledge generation and science communication.
+
+
+

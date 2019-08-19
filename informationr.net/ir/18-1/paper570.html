@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Factores para la adopci&oacute;n de <em>linked data</em> e implantaci&oacute;n de la
+web sem&aacute;ntica en bibliotecas, archivos y museos Adoption drivers
+of <em>linked data</em> and Semantic Web spreading in libraries, archives
+and museums</title>
+    <meta charset="utf-8">
+    <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif">
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans"
+
+href="http://www.informationr.net/ir//IRstylesans.css">
+    <!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="Factores para la adopci&oacute;n de <em>linked data</em> e implantaci&oacute;n de la
+web sem&aacute;ntica en bibliotecas, archivos y museos Adoption drivers
+of <em>linked data</em> and Semantic Web spreading in libraries, archives
+and museums">
+    <meta name="author" content="Tom&aacute;s Saor&iacute;n, Fernanda Peset, Antonia Ferrer-Sapena">
+    <meta name="dcterms.subject" content="Give a brief description of your paper">
+    <meta name="description" content="Introducci&oacute;n. Se elabora un marco para identificar el nivel de penetraci&oacute;n y madurez de las tecnolog&iacute;as linked data, como una faceta espec&iacute;fica del modelo abierto del W3C para la web sem&aacute;ntica, en el sector de las bibliotecas, archivos y museos.M&eacute;todo. Se aplica el marco conceptual de la teor&iacute;a cl&aacute;sica de la difusi&oacute;n de innovaciones, junto con los patrones de an&aacute;lisis del ciclo de vida de tecnolog&iacute;as (hype cycle) desarrollados por la consultora Gartner Group. A partir de ellos compone un modelo de an&aacute;lisis de factores globales, adaptado a la naturaleza de la tecnolog&iacute;a <em>linked data</em>. Resultados. Contemplando de forma conjunta los diferentes factores de adopci&oacute;n de linked data, obtenemos un marco para identificar el nivel de madurez de la tecnolog&iacute;a. Nuestro an&aacute;lisis indica que, pese a la intensa actividad que se detecta en el sector de bibliotecas y archivos, a&uacute;n no hay un equilibrio suficiente entre publicaci&oacute;n, consumo, regulaci&oacute;n y tecnolog&iacute;as para afirmar que estamos entrando en la fase de madurez. Conclusiones. Conviene profundizar en la extensi&oacute;n de iniciativas <em>linked data</em> para aplicaciones de consumo de datos, explotar su dimensi&oacute;n colaborativa y tejer colaboraciones con entidades de fuera del sector libraries, archives and museums. El liderazgo actual de grandes instituciones debe extenderse y estimularse la innovaci&oacute;n abierta.">
+    <meta name="keywords" content="linked open data, semantic web, technology adoption drivers">
+    <!--leave the following to be completed by the Editor-->
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/17-4/...">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/17-4/infres174.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2012-12-15">
+    <meta name="geo.placename" content="global">
+    <script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+
+	</script>
+  </head>
+  <body>
+    <header> <img alt="header" src="http://www.informationr.net/ir//mini_logo2.gif" height="45" width="336"><br>
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 18 no. 1, March, 2013</span> <br>
+<br>
+<div class="button">
+<ul>
+  <li><a href="infres181.html">Contents</a> | </li>
+  <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+  <li><a href="../irsindex.html">Subject index</a> | </li>
+  <li><a href="../search.html">Search</a> | </li>
+  <li><a href="../index.html">Home</a> </li>
+</ul>
+</div>
+<hr> </header>
+    <article>
+<h1>Factores para la adopci&oacute;n de <em>linked data</em> e implantaci&oacute;n de la web sem&aacute;ntica en bibliotecas, archivos y museos <br>
+</h1>
+<div style="margin-left: 20%; margin-right: 10%;">
+<h4><a href="paper570.html#author">Tom&aacute;s Saor&iacute;n</a><br>
+  Universidad de Murcia, Grupo de Investigaci&oacute;n en Tecnolog&iacute;as
+  de la Informaci&oacute;n, Campus de Espinardo, 30071, Murcia, Espa&ntilde;a<br>
+<a href="paper570.html#author">Fernanda Peset</a> y <a href="paper570.html#author">Antonia Ferrer-Sapena</a><br>
+  Universidad Polit&eacute;cnica de Valencia, Departamento de
+  Comunicaci&oacute;n Audiovisual, Documentaci&oacute;n e Historia del Arte,
+  Camino de Vera, s/n, 46022, Valencia,  Espa&ntilde;a</h4>
+</div>
+<br>
+<form>
+<fieldset> <legend style="color: white; background-color: rgb(94, 150, 253); font-size: medium; padding: 0.1ex 0.5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+Abstract</legend>
+  <blockquote><strong></strong><strong>Introducci&oacute;n.</strong> Se
+elabora un marco para identificar el nivel de penetraci&oacute;n y
+madurez de las tecnolog&iacute;as linked data, como una faceta
+espec&iacute;fica del modelo abierto del W3C para la web sem&aacute;ntica,
+en el sector de las bibliotecas, archivos y museos.<br>
+<strong>M&eacute;todo.</strong> Se aplica el marco conceptual de la
+teor&iacute;a cl&aacute;sica de la difusi&oacute;n de innovaciones, junto con los
+patrones de an&aacute;lisis del ciclo de vida de tecnolog&iacute;as (Hype
+Cycle) desarrollados por la consultora Gartner Group. A
+partir de ellos compone un modelo de an&aacute;lisis de factores
+globales, adaptado a la naturaleza de la tecnolog&iacute;a linked
+data.<br>
+<strong>Resultados.</strong> Contemplando de forma conjunta
+los diferentes factores de adopci&oacute;n de linked data,
+obtenemos un marco para identificar el nivel de madurez de
+la tecnolog&iacute;a. Nuestro an&aacute;lisis indica que, pese a la
+intensa actividad que se detecta en el sector de bibliotecas
+y archivos, a&uacute;n no hay un equilibrio suficiente entre
+publicaci&oacute;n, consumo, regulaci&oacute;n y tecnolog&iacute;as para afirmar
+que estamos entrando en la fase de madurez.<br>
+<strong>Conclusiones.</strong> Conviene profundizar en la
+extensi&oacute;n de iniciativas <em>linked data</em> para aplicaciones de
+consumo de datos, explotar su dimensi&oacute;n colaborativa y tejer
+colaboraciones con entidades de fuera del sector LAM (<em>libraries, archives y museums</em>). El
+liderazgo actual de grandes instituciones debe extenderse y
+estimularse la innovaci&oacute;n abierta. <br>
+  </blockquote>
+</fieldset>
+</form>
+<br>
+<div style="text-align: center;"> <a href="paper570.html#abs">Abstract in
+  English</a></div>
+<br>
+<br>
+<div style="text-align: center;"> <input value="change font" class="btn"
+
+  style="font-variant: small-caps; font-weight: bold; font-family: Verdana; color: white; background-color: rgb(94, 150, 253);"
+
+  onclick="doChangeFont()" type="button"></div>
+<br>
+<section>
+<h2>Introducci&oacute;n</h2>
+<p>Reflexionamos sobre el proceso de adopci&oacute;n de est&aacute;ndares para
+  el mundo web, y c&oacute;mo han madurado las recomendaciones sobre
+  web sem&aacute;ntica desde sus primeras formulaciones en torno a
+  2001-2002.</p>
+  <p>
+  La influyente voz de Tim Berners-Lee afirm&oacute; que el movimiento
+  de datos abiertos impactar&iacute;a globalmente en el a&ntilde;o 2010 (<a href="paper570.html#berners-lee-2010">Berners-Lee 2010</a>)
+  A partir de estas fechas es el t&eacute;rmino <em>linked data</em> el
+  que focaliza el inter&eacute;s conjunto del sector tecnol&oacute;gico y el
+  del conocimiento abierto y libre. <em>linked data</em> es la cara
+  tangible en el mercado de la informaci&oacute;n del concepto
+  globalizador de web sem&aacute;ntica.</p>
+  <p>
+  <em>Linked data </em>est&aacute; irrumpiendo con fuerza en la terminolog&iacute;a de
+  nuestro sector. ¿Se trata de una nueva <em>buzzword</em>, una etiqueta
+  m&aacute;s para la impulsar las ventas en tecnolog&iacute;as? ¿Debemos
+  prestarle una atenci&oacute;n diferenciada del t&eacute;rmino <em>web
+  sem&aacute;ntica</em>? En definitiva, queremos clarificar si las
+  tecnolog&iacute;as asociadas a <em>linked data</em> constituyen una verdadera
+  transformaci&oacute;n que afectar&aacute; a la forma en la que se dise&ntilde;ar&aacute;n
+  los sistemas de informaci&oacute;n, la integraci&oacute;n de fuentes de
+  datos, la producci&oacute;n social de conocimiento y la organizaci&oacute;n
+  de informaci&oacute;n digital.</p>
+  <p>
+  Se parte de la hip&oacute;tesis de que el movimiento de datos
+  enlazados ( ) est&aacute; alcanzando desde la segunda mitad
+  del a&ntilde;o 2011 la masa cr&iacute;tica de contenidos, tecnolog&iacute;as,
+  visibilidad, usuarios y aplicaciones para situarse en el
+  inicio de la fase de adopci&oacute;n a gran escala. En la actualidad
+  contamos con los est&aacute;ndares b&aacute;sicos de la web sem&aacute;ntica –rdf,
+  owl, sparql, lod- que permitir&iacute;an avanzar en el ciclo de vida
+  de los datos enlazados: extracci&oacute;n, creaci&oacute;n, enriquecimiento,
+  enlazado, visualizaci&oacute;n y mantenimiento. Y la pregunta que nos
+  planteamos es si acabar&aacute; adopt&aacute;ndose en nuestro sector – <em>libraries, archives and museums</em>:
+  - y cu&aacute;les ser&aacute;n los factores que
+  determinar&aacute;n la velocidad de penetraci&oacute;n y amplitud de
+  difusi&oacute;n.</p>
+  <p>
+  Este ejercicio de prospectiva permitir&aacute; identificar los
+  factores clave que pueden llevar al &eacute;xito o fracaso de
+  iniciativas orientadas a <em>linked data</em> y la web sem&aacute;ntica,
+  ofreciendo una orientaci&oacute;n a los responsables de estrategia
+  tecnol&oacute;gica de centros, servicios de informaci&oacute;n y otros
+  agentes del macrosector de la comunicaci&oacute;n cultural. </p>
+  <p>
+  Para ello delimitamos el papel de <em>linked data</em> en la web
+  sem&aacute;ntica, es decir, seleccionamos las iniciativas concretas
+  que han de ser tomadas en cuenta en nuestro an&aacute;lisis, ya que
+  nos interesa concentrarnos en una serie limitada de elementos,
+  pero con gran capacidad de interconexi&oacute;n y efectos sin&eacute;rgicos.
+  Para su an&aacute;lisis, la teor&iacute;a de la difusi&oacute;n de la innovaci&oacute;n (<a
+   href="paper570.html#rogers2003">Rogers 2003</a>) nos permite contar con
+  un marco conceptual inicial sobre el que estructurar los datos
+  y hechos recogidos de esta observaci&oacute;n directa de, en nuestro
+  caso, el sector de los datos enlazados. Nos permite
+  identificar&nbsp; los ciclos de vida del proceso de innovaci&oacute;n
+  y matizar los modelos lineales mediante la introducci&oacute;n de
+  discontinuidades como las que plantean Moore y la consultora
+  Gartner Group.</p>
+  <p>
+  Con estos mimbres, y los instrumentos del macro-an&aacute;lisis
+  estrat&eacute;gico de negocio para identificar los factores e
+  interdependencias de los factores pol&iacute;ticos, econ&oacute;micos,
+  sociales, tecnol&oacute;gicos, ambientales y legales, elaboramos un
+  modelo coherente de factores en tensi&oacute;n y equilibrio, que
+  permita pronunciarse con mayor seguridad sobre la penetraci&oacute;n
+  de las tecnolog&iacute;as <em>linked data</em>.
+</p>
+
+<h2>linked data: el frente m&aacute;s activo de la web sem&aacute;ntica.</h2>
+
+<p>Dado que en este trabajo hemos puesto el foco en los <em>datos
+  enlazados</em> realizaremos&nbsp; un r&aacute;pido vistazo a los hitos de
+  su formulaci&oacute;n. Desde la primera versi&oacute;n de Resource
+  Description Framework, (RDF) en 1999 hasta la liberaci&oacute;n en
+  2011 del paquete LOD2 (<a href="paper570.html#ver11">Verdonckt 2011</a>) 
+  para la gesti&oacute;n integral del ciclo de vida de <em>linked data</em> se
+  ha experimentado un progresivo inter&eacute;s desde m&uacute;ltiples
+  instancias. Pero sin duda ha sido clave el papel del creador
+  de la Web, Tim Berners-Lee, como l&iacute;der del W3C, organismo
+  impulsor del desarrollo abierto de la web. Dos de las l&iacute;neas
+  centrales del W3C son los est&aacute;ndares abiertos y los metadatos.
+  Frente a otras figuras de referencia, como Miller, Heath,
+  Hendler o Bizer, hemos optado por la de Berners-Lee porque
+  combina al mismo tiempo el liderazgo entre los tecn&oacute;logos con
+  el de la proyecci&oacute;n en la esfera pol&iacute;tica y medi&aacute;tica. Sus
+  manifestaciones cuentan, a priori, con un mayor impacto. En el
+  recuadro 1 recogemos algunos de sus posicionamientos
+  espec&iacute;ficos sobre <em>linked data</em> en el foro TED de amplia
+  difusi&oacute;n. </p>
+  
+<table class="center">
+ <caption><br>Recuadro 1. Tim Berners-Lee, de la web sem&aacute;ntica a la web de los
+datos</caption>
+  <tbody>
+<tr>
+<td><p>En febrero de 2009 tiene lugar la conferencia p&uacute;blica
+en el influyente foro de tendencias tecnol&oacute;gicas TED
+(Technology, Education &amp; Design: Ideas worth
+spreading. Berners-Lee (<a href="paper570.html#berners-lee-2009">2009</a>)
+solicita que se publiquen datos con el lema 'Raw data
+now!', desgranando la importancia del concepto 'Linked
+Data'. En septiembre de 2009 se convierte en asesor del
+gobierno brit&aacute;nico, donde influir&aacute; en la pol&iacute;tica de
+datos p&uacute;blicos abiertos y enlazados.<br>
+&nbsp;<br>
+En la TED Talk del a&ntilde;o siguiente, en 2010, lleva la idea
+hacia los 'Linked Open Data', tratando de demostrar su
+efecto en la producci&oacute;n de servicios de gran potencia e
+impacto. Afirma que 2010 ser&aacute; 'the year Open Data went
+worldwide'.</p></td>
+</tr>
+  </tbody>
+</table>
+ 
+    
+<p>La semilla de la web sem&aacute;ntica exist&iacute;a desde las primeras
+formulaciones de la web, pero &eacute;sta creci&oacute; sobre un modelo mucho
+m&aacute;s sencillo de enlaces indiferenciados. No obstante se estaba
+trabajando en el 'Semantic web Roadmap' (1998). Podemos hablar
+de una segunda fase a partir del impacto combinado del libro
+ <em>Weaving the Web</em> (<a href="paper570.html#berners-lee-1999">Berners-Lee y Fischetti 1999</a>) y del
+art&iacute;culo en la revista Scientific American (<a href="paper570.html#berners-lee-2001">Berners-Lee <em>et al.</em> 2001</a>)
+hasta la formalizaci&oacute;n a partir del lanzamiento en 2007 del
+Linking Open Data community project en el W3C, dentro del grupo
+de inter&eacute;s SWEO (Semantic Web Education and Outreach), cuando se
+acu&ntilde;a el t&eacute;rmino definitivamente. Observamos c&oacute;mo aparece linked
+data como una parte especializada de la web sem&aacute;ntica, enfocada
+a la publicaci&oacute;n de datos estructurados en RDF usando Uniform
+Resource Identifier (URI), dejando a un lado, temporalmente, las
+ontolog&iacute;as e inferencias. Esta simplificaci&oacute;n reduce las
+barreras de entrada a los proveedores de datos, facilitando la
+extensi&oacute;n de su adopci&oacute;n (<a href="paper570.html#hausenblas2009">Hausenblas
+  2009, 5</a>). Al igual que ha ocurrido en casos anteriores,
+como TCP/IP o RSS, una cierta simplificaci&oacute;n de requisitos
+genera un gran impacto al generalizarse su r&aacute;pida difusi&oacute;n.</p>
+
+  
+<p>Podemos ver que desde la formulaci&oacute;n gen&eacute;rica de web sem&aacute;ntica,
+como diagn&oacute;stico y tratamiento global a los problemas
+estructurales de la web, se camina hacia una formulaci&oacute;n
+pr&aacute;ctica: los datos enlazados. Esta f&oacute;rmula para generar las
+condiciones para la web sem&aacute;ntica a trav&eacute;s de los datos
+distribuidos da lugar al t&eacute;rmino 'web de los datos'. Tambi&eacute;n
+O’Reilly (<a href="paper570.html#oreilly2005">2005</a>)&nbsp; hace de los
+datos en la web uno de los elementos constitutivos de la Web2.0:
+'<em>los datos son el nuevo Intel inside</em>'. Heath y Bizer (<a href="paper570.html#heath2011">2011</a>)
+hablan del '<em>data deluge</em>' en el que si antes '<em>la World Wide Web
+ha revolucionado la forma en que conectamos y consumimos
+documentos, ahora est&aacute; revolucionando la forma en que
+descubrimos, accedemos e integramos y usamos datos</em>'.</p>
+
+     <p>La web sem&aacute;ntica aparentemente va materializ&aacute;ndose siempre de
+forma incompleta y distribuida, y a veces contradictoria. Esta
+es la forma natural de la web; 
+
+<blockquote>
+utilizar t&eacute;rminos como «objetivos», «planificaci&oacute;n» o «metas» en el &aacute;mbito de la web es un sinsentido, ya que las necesidades o ideas nuevas, precisan de herramientas que se crean y perfeccionan sobre la marcha, fruto de la obtenci&oacute;n de resultados tras su aplicaci&oacute;n  (<a href="paper570.html#pastor2011">Pastor  2011, 19</a>). 
+</blockquote>
+
+<p>Establecer una analog&iacute;a con el movimiento Open
+Access permite apreciarlo con claridad. Si bien los repositorios
+basados en el protocolo Open Archives Initiative (OAI) son la
+parte m&aacute;s visible y homog&eacute;nea, se fueron desarrollando desde
+acciones de muy diversa &iacute;ndole, que est&aacute;n conduciendo a un &eacute;xito
+incontestable. Y como se&ntilde;ala Suber (<a href="paper570.html#poynder2011">Poynder 2011</a>) el proceso ha sido org&aacute;nico y no planificado: no ha
+existido una estructura formal ni jer&aacute;rquica, ni un l&iacute;der
+indiscutible, imponi&eacute;ndose al lobby de las editoriales
+establecidas.</p>
+
+<h2>Modelos para analizar el &eacute;xito y la difusi&oacute;n de las innovaciones tecnol&oacute;gicas </h2>
+
+<h3>Los efectos de red </h3>
+
+<p>Castells (<a href="paper570.html#castells1996">1996</a>) se&ntilde;ala el enfoque
+  en red en el capitalismo informacional como una forma
+  espec&iacute;fica para analizar grupos y fen&oacute;menos sociales. Las
+  redes son estructuras abiertas, capaces de expandirse sin
+  l&iacute;mites mientras puedan comunicarse entre s&iacute;. Por lo tanto una
+  estructura social basada en las redes es un sistema muy
+  din&aacute;mico y abierto, susceptible de innovarse sin amenazar su
+  equilibrio. En las redes intensivas en comunicaci&oacute;n
+  multidireccional, el fen&oacute;meno denominado capilaridad estimula
+  la innovaci&oacute;n (<a href="paper570.html#cornella2007">Cornell&aacute; y Flores 2007</a>).</p>
+  
+  <p>Las formas de crecimiento de la propia web, y de muchas de sus
+  aplicaciones, han tra&iacute;do a primer plano el llamado <em>network
+  effect</em>, que se podr&iacute;a explicar como el incentivo creciente
+  por participar en un fen&oacute;meno que se va extendiendo
+  asim&eacute;tricamente en una red. '<em>The more people who are playing
+  now, the more attractive it is for new people to start
+  playing</em>'. Allemang y Hendler (<a href="paper570.html#allemang2008">2008</a>,
+  8-9) identifican este modelo como clave para la expansi&oacute;n de
+  la web sem&aacute;ntica. En su estudio de las leyes econ&oacute;micas de la
+  informaci&oacute;n, Shapiro y Varian (<a href="paper570.html#shapiro2000">2000</a>)
+  identifican que el feedback positivo en las tecnolog&iacute;as
+  sometidas a fuertes efectos de red suele tener una primera
+  fase relativamente lenta de asentamiento, seguida de un
+  crecimiento explosivo.</p>
+  
+<p>    En econom&iacute;a se denominan 'externalidades de red' a los efectos
+  que hacen que el valor de un producto o servicio para un
+  usuario dependa no s&oacute;lo del producto o servicio en s&iacute; mismo,
+  sino del n&uacute;mero de usuarios que lo utilicen (<a href="paper570.html#lopez2006">L&oacute;pez  S&aacute;nchez y Arroyo Barrigüete 2006: 22)</a>. Las externalidades
+  de red se consideran un fallo de mercado, porque la cantidad
+  de usuarios previos de un servicio limita la entrada posterior
+  de competencia. Existen distintos tipos de externalidades de
+  red, pero nos interesan especialmente las llamadas '<em>de
+  aprendizaje</em>', pues se encuentran muy relacionadas con Linked
+  Data. Las externalidades de aprendizaje ponen el foco de
+  atenci&oacute;n en los conocimientos espec&iacute;ficos que pueden tener
+  usuarios y proveedores de servicios sobre una tecnolog&iacute;a. </p>
+  
+ <p> Frecuentemente se menciona la Ley de Metcalfe que cuantifica
+  el efecto de red para espacios interconectados, como los
+  fen&oacute;menos web 2.0 y Web sem&aacute;ntica (<a href="paper570.html#hendler2008">Hendler;   Golbeck 2008, 14</a>). Metcalfe enuncia que mientras el
+  coste de una red crece linealmente con el aumento del n&uacute;mero
+  de conexiones, su valor es proporcional al cuadrado del n&uacute;mero
+  de usuarios. Aunque los t&eacute;rminos matem&aacute;ticos de la ley han
+  sido sometidos a controversia, la idea central del valor de la
+  interconexi&oacute;n mantiene una gran fuerza explicativa en
+  diferentes contextos de uso. Se se&ntilde;ala que la web de datos no
+  puede perder de vista el adjetivo '<em>enlazados</em>', que es el que
+  aporta sustancialmente su valor. La misma dependencia de la
+  capacidad de ser enlazados explica los ciclos de consumo y
+  producci&oacute;n de los contenidos generados por usuarios,
+  especialmente '<em>where the Social Web meets the Semantic Web</em>' (<a
+href="paper570.html#hendler2008">Hendler and Golbeck 2008: 17</a>).</p>
+
+<h3>Modelos descriptivos y prospectivos de adopci&oacute;n de tecnolog&iacute;as </h3>
+
+<p>El conocimiento de los procesos de innovaci&oacute;n es un &aacute;rea de
+  inter&eacute;s para las pol&iacute;ticas cient&iacute;ficas e industriales ya que
+  en mercados sometidos a la competencia global, el liderazgo
+  tecnol&oacute;gico constituye un valor econ&oacute;mico. No hemos de ver la
+  innovaci&oacute;n simplemente como una mejora tecnol&oacute;gica, sino como
+  la explotaci&oacute;n con &eacute;xito de nuevas ideas de forma sostenible,
+  incluyendo casi tanto m&aacute;s que la invenci&oacute;n, la
+  comercializaci&oacute;n o implementaci&oacute;n.</p>
+  
+  <p>En el anterior apartado hemos destacado el liderazgo y la
+  visibilidad de Berners-Lee, puesto que las expectativas son
+  una parte de los atributos de la innovaci&oacute;n. Otros atributos
+  que influyen en la adopci&oacute;n de una nueva tecnolog&iacute;a son,
+  conforme al modelo de Rogers de difusi&oacute;n de innovaciones (<a href="paper570.html#rogers2003">2003</a>):
+</p>
+
+<ul>
+  <li>Ventaja:&nbsp; grado en que una innovaci&oacute;n es percibida como buena idea.</li>
+  <li>Complejidad: percepci&oacute;n de la dificultad de entendimiento de uso.</li>
+  <li>Compatibilidad:&nbsp; capacidad de pervivir con los valores existentes y el sistema social.</li>
+  <li>Experimentaci&oacute;n: capacidad de formar parte de un plan y ser probada.</li>
+  <li>Visibilidad: grado en que los resultados son visibles a otros.</li>
+</ul>
+
+<p>Del modelo de Rogers suele usarse su parte m&aacute;s visible: la
+  representaci&oacute;n gr&aacute;fica mediante una curva que combina el
+  factor temporal junto con la cantidad de usuarios que adoptan
+  una tecnolog&iacute;a, estableci&eacute;ndose varias tipolog&iacute;as de usuarios.
+  El n&uacute;mero de usuarios en un momento dado permite describir el
+  estado de implantaci&oacute;n de una tecnolog&iacute;a y analizar las
+  evoluciones en el ciclo de vida. En diferentes presentaciones
+  y documentos sobre la web sem&aacute;ntica se han usado estas curvas
+  y los tipos de usuarios asociados a sus fases: Innovadores,
+  Primeros adoptantes, Mayor&iacute;a precoz y Mayor&iacute;a rezagada. La
+  figura 1 muestra la percepci&oacute;n del W3C en la que se observa
+  que las tecnolog&iacute;as sem&aacute;nticas aparecen a&uacute;n en la fase
+  ascendente de un mercado precoz.</p>
+  
+  <p>Sobre estas curvas hay autores que introducen tambi&eacute;n las
+  discontinuidades que originan cambios de estado, con el fin de
+  aportar una visi&oacute;n m&aacute;s intermitente de la evoluci&oacute;n en la
+  implantaci&oacute;n de innovaciones tecnol&oacute;gicas (<a href="paper570.html#moore2008">Moore  2008</a>). Moore se&ntilde;ala un punto cr&iacute;tico en la transici&oacute;n
+  hacia la "Mayor&iacute;a precoz", que denomina "El abismo" (The
+  chasm), donde cada factor puede ser cr&iacute;tico para la
+  continuidad del crecimiento o su estancamiento.&nbsp;</p>
+
+<figure class="centre"> 
+<img alt="Ubicaci&oacute;n de la web sem&aacute;ntica en el ciclo de vida de la adopci&oacute;n de tecnolog&iacute;as" src="p570fig01.jpg">
+  <figcaption> Figura 1: Ubicaci&oacute;n de la web sem&aacute;ntica en el ciclo de vida de la adopci&oacute;n de tecnolog&iacute;as. Fuente: Adaptaci&oacute;n de figura de  Ivan Herman (<a href="paper570.html#her2011">2011</a>) 
+  </figcaption>
+</figure>
+
+<p>La importancia de estas discontinuidades fundamenta otros
+  modelos, como el de la prestigiosa consultora tecnol&oacute;gica
+  Gartner Group, que introduce en la curva el concepto de
+  expectativas o hype cycles (<a href="paper570.html#fenn2008">Fenn y Raskino
+2008</a>). La metodolog&iacute;a de an&aacute;lisis hype cycles ofrece una
+  representaci&oacute;n gr&aacute;fica de la madurez en la adopci&oacute;n de
+  tecnolog&iacute;as y aplicaciones, as&iacute; como su capacidad para ser
+  potencialmente relevantes en la resoluci&oacute;n de problemas reales
+  de las empresas y en explotar nuevas oportunidades. En lugar
+  de representar un crecimiento continuado, las curvas muestran
+  un pico de crecimiento muy acelerado, conocido como
+  <em>sobreexpectaci&oacute;n</em>, que corresponde a una fase inicial de
+  euforia tecnol&oacute;gica.</p>
+ 
+  <p>Las fases delimitadas en este modelo son: </p>
+  
+<ul>
+  <li><em>Lanzamiento</em> (Technology trigger): presentaci&oacute;n del producto o cualquier otro evento, por lo que genera inter&eacute;s y presencia en los medios.</li>
+  <li><em>Pico de expectativas sobredimensionadas</em> (Peak of inflated expectations): el impacto en los medios genera normalmente un entusiasmo y expectativas poco realistas. Es posible que algunas experiencias pioneras se lleven a cabo con &eacute;xito, pero habitualmente hay m&aacute;s fracasos.</li>
+  <li><em>Abismo de desilusi&oacute;n</em>  (Trough of disillusionment): el inter&eacute;s por la tecnolog&iacute;a decae con fuerza porque no se cumplen las expectativas. Por lo general la prensa abandona el tema.</li>
+  <li><em>Rampa de consolidaci&oacute;n</em> (Slope of enlightenment): aunque el foco de atenci&oacute;n se haya desplazado a otras tecnolog&iacute;as, algunas empresas contin&uacute;an su esfuerzo por entender los beneficios que puede proporcionar.</li>
+  <li><em>Meseta de productividad</em> (Plateau of productivity):  los  beneficios se han demostrado y aceptado. La tecnolog&iacute;a se vuelve cada vez m&aacute;s estable y evoluciona en segunda y tercera generaci&oacute;n. La altura final de la meseta var&iacute;a en funci&oacute;n de si la tecnolog&iacute;a es ampliamente aplicable, o de si s&oacute;lo beneficia a un nicho de mercado.</li>
+</ul>
+
+<p>Su perspectiva evolutiva la hace &uacute;til para la planificaci&oacute;n adaptada a contextos prospectivos: </p>
+
+<ul>
+  <li>Separar las <em>estrellas rutilantes</em> (hype) de aquellas que ofrecen una promesa de tecnolog&iacute;a en fase comercial.</li>
+  <li>Reducir el riesgo de las decisiones de inversi&oacute;n en tecnolog&iacute;as.</li>
+  <li>Comparar la comprensi&oacute;n Internet del valor de la tecnolog&iacute;a para una compa&ntilde;&iacute;a con&nbsp; an&aacute;lisis objetivos realizados por expertos en tecnolog&iacute;as de la informaci&oacute;n, que pueden complementar el punto de vista limitado a un sector o a una problem&aacute;tica.</li>
+</ul>
+
+<p>Este modelo de representaci&oacute;n tambi&eacute;n permite contemplar si
+  los adoptantes de una tecnolog&iacute;a se han precipitado, han
+  abandonado demasiado pronto, la han adoptado demasiado tarde
+  o, incluso, si llevan demasiado tiempo descolgados de una
+  tecnolog&iacute;a madura y con buenos resultados demostrados.</p>
+  
+  <p>Sus informes anuales cubren m&aacute;s de 75 &aacute;reas tem&aacute;ticas y 1800
+  tecnolog&iacute;as. Nos interesa prestar antenci&oacute;n al informe
+  monogr&aacute;fico 'hype cycle for Web and user interaction
+  technologies' de 2010 y 2011.</p>
+  
+<figure class="centre"> <img src="p570fig02.jpg" alt="Figura 2"> 
+<figcaption> 
+Figura 2. Adaptaci&oacute;n y selecci&oacute;n de elementos del '<a href="http://es.wikipedia.org/wiki/Archivo:Gartner_Hype_Cycle.svg">Hype cycle for Web and user interaction technologies</a>. Gartner Group, 2011'
+  </figcaption> 
+  </figure>
+  
+ <p> En ellos sigue identific&aacute;ndose 'web sem&aacute;ntica', mientras que
+<em>linked data</em> a&uacute;n no ha entrado como etiqueta ni en &eacute;ste ni en
+los otros informes de la serie hype cycle (por ejemplo <em>master
+data management</em>, <em>data management</em> o <em>enterprise information
+management</em>). La Web sem&aacute;ntica se recoge espec&iacute;ficamente en sus
+informes desde 2008 (el a&ntilde;o anterior se denominaba <em>Web services
+semantic standards</em>), y se situaba en fase de ca&iacute;da. Sin embargo
+a partir del a&ntilde;o siguiente, 2009, vuelve a tomar impulso y en
+lugar de seguir el proceso completo, vuelve a situarse iniciando
+el ascenso hacia el pico de sobreexpectaci&oacute;n. Esta ser&iacute;a su
+cronolog&iacute;a:</p>
+ 
+ 
+<table class="center" style="width:95%;">
+  <tbody>
+<tr>
+<th>&nbsp;</th>
+<th>Hype cycle 2010</th>
+<th>Hype cycle 2011</th>
+<th>Plazo para implantaci&oacute;n a gran escala</th>
+</tr>
+<tr>
+<td><strong>Web sem&aacute;ntica</strong><br>
+</td>
+<td>Ascendiendo la &uacute;ltima parte de la curva de sobreexptaci&oacute;n </td>
+<td>En el m&aacute;ximo pico de sobreexpectaci&oacute;n.</td>
+<td>M&aacute;s de 10 a&ntilde;os</td>
+</tr>
+  </tbody>
+</table>
+
+<p>Gartner considera en 2011 estas tecnolog&iacute;as a&uacute;n como
+  adolescentes, con una penetraci&oacute;n en el mercado entre el 1-5
+  %, pero con altas posibilidades de beneficio a largo plazo,
+  donde pueden desarrollarse modelos de negocio sostenibles, en
+  especial en los campos de la salud, ciencias bio-sanitarias,
+  bibliotecas, defensa, servicios p&uacute;blicos y servicios
+  financieros.</p>
+  
+  <p>Las conclusiones de Gartner aconsejan valorar con cautela el
+  impacto real de las continuas noticias sobre sofware para
+  publicar-consumir RDF, proyectos que usan la etiqueta linked
+  data y conjuntos de datos en RDF de diferentes sectores. Los
+  movimientos de las grandes empresas tecnol&oacute;gicas (ORACLE,
+  Google, Yahoo o Microsoft, entre otras) que est&aacute;n apostando en
+  muchos de sus productos y servicios por las tecnolog&iacute;as de la
+  Web Sem&aacute;ntica, e incluso desarrollando proyectos conjuntos,
+  podr&iacute;an ser vistos como una enmienda al an&aacute;lisis de Gartner, e
+  indicar que la fase de declive se est&aacute; dejando atr&aacute;s y
+  comenzando la madurez para un mercado. Pese a tratarse de
+  tecnolog&iacute;as de prop&oacute;sito general, el ritmo de penetraci&oacute;n en
+  cada sector es diferente. En &aacute;reas como el seguimiento de
+  grandes flujos de informaci&oacute;n en redes sociales,
+  posicionamiento web y manejo de datos corporativos se pueden
+  estar consolidando mercados, mientras que el sector cultural
+  nos encontremos en una fase menos avanzada.</p>
+
+<h2>Modelo para el an&aacute;lisis estrat&eacute;gico de la implantaci&oacute;n de los datos enlazados.</h2>
+  
+<p>El an&aacute;lisis estrat&eacute;gico se aplica a organizaciones e
+  instituciones, con el fin de orientar adecuadamente sus
+  objetivos a largo plazo, adapt&aacute;ndose a los elementos de cambio
+  decisivos del entorno. Una comprensi&oacute;n rica de los factores
+  del internos y externos del mercado permite construir con
+  antelaci&oacute;n suficiente estrategias defensivas, ofensivas, de
+  supervivencia o de reorientaci&oacute;n (<a href="paper570.html#arjonilla2009">Arjonilla  Dom&iacute;nguez; Medina Garrido 2009, 109</a>).</p>
+  
+  <p>Para el estudio de la implantaci&oacute;n social de las tecnolog&iacute;as
+  de la informaci&oacute;n, se utilizan diferentes aproximaciones que,
+  m&aacute;s all&aacute; de los datos factuales (volumen de ventas, n&uacute;mero de
+  empresas, hogares conectados, etc.), intentan explicar la
+  interdependencia entre los siguientes elementos: pr&aacute;cticas
+  sociales, mercado e infraestructuras.</p>
+
+<h3>Factores de despegue de las tecnolog&iacute;as linked data</h3>
+
+<p>Como hemos presentado con anterioridad, la idea de web
+  sem&aacute;ntica es un proyecto que tiene ya un largo recorrido, m&aacute;s
+  te&oacute;rico y de laboratorio, que pr&aacute;ctico y de aplicaci&oacute;n
+  industrial.  Pedraza-Jim&eacute;nez; <em>et al.</em> (<a href="paper570.html#pedraza2007">2007</a>) todav&iacute;a
+  no aparece el concepto <em>linked data</em> dentro de un estado de la
+  cuesti&oacute;n sobre la web sem&aacute;ntica, por lo que reiteramos nuestra
+  hip&oacute;tesis de partida. Desde la esfera de la web sem&aacute;ntica,
+  surgen las tecnolog&iacute;as <em>linked data</em> pasando en poco tiempo de
+  ser consideradas un subproducto tecnol&oacute;gico (<em>spin-off</em>) a ser
+  visibles aut&oacute;nomamente, concentr&aacute;ndose en ellas muchos
+  esfuerzos, desde diferentes &aacute;reas, actuando como nodo impulsor
+  del resto de factores necesarios para la difusi&oacute;n de una
+  innovaci&oacute;n, generando una retroalimentaci&oacute;n positiva con
+  efecto red. </p>
+  
+  <p>La sociolog&iacute;a de la tecnolog&iacute;a nos ha ense&ntilde;ado a dejar de ver
+  la evoluci&oacute;n de la tecnolog&iacute;a como un proceso natural de
+  progresiva implantaci&oacute;n. Las formas que se adoptan son
+  resultado de tensiones entre intereses contradictorios
+  influyendo distintos factores como son la inversi&oacute;n de
+  recursos econ&oacute;micos, las habilidades pr&aacute;cticas o las formas
+  organizativas.</p>
+  
+  <p>En los an&aacute;lisis estrat&eacute;gicos para contextos m&aacute;s amplios que el
+  de la organizaci&oacute;n individual, el enfoque PESTEL para
+  macro-entornos (<a href="paper570.html#gillespie2007">Gillespie 2007), </a>pueden   sernos de utilidad, al contemplar los siguientes factores:
+  pol&iacute;ticos,&nbsp; econ&oacute;micos, sociales, tecnol&oacute;gicos,
+  ambientales y factores legales. La utilidad de este enfoque no
+  ser&aacute; tan solo la enumeraci&oacute;n de factores, sino la comprensi&oacute;n
+  de la medida en que afectan al caso de an&aacute;lisis, as&iacute; como las
+  tensiones entre ellos. En especial, la identificaci&oacute;n de los
+  elementos que act&uacute;an como facilitadores o impulsores (o al
+  contrario, como barreras) permitir&aacute; priorizar la acci&oacute;n y
+  distribuir correctamente los esfuerzos. Dado el car&aacute;cter
+  sist&eacute;mico de las tecnolog&iacute;as linked data, consideramos
+  conveniente adoptar este enfoque, puesto que ninguna
+  iniciativa puede desarrollarse aislada del contexto de la red
+  y del resto de actores que act&uacute;an en la cadena de generaci&oacute;n y
+  reutilizaci&oacute;n de informaci&oacute;n. Para salir del laboratorio al
+  mercado, y ser un agente de transformaci&oacute;n con impacto, ha de
+  construirse una densa trama de interrelaciones a muchos
+  niveles diferentes.</p>
+  
+  <p>Tambi&eacute;n el punto de vista de los mercados, como modelos de
+  comportamiento econ&oacute;mico y social en reequilibrio constante,
+  nos ofrece ejemplos de modelos para comprender el ciclo de los
+  productos a partir de factores interrelacionados, como la
+  'Br&uacute;jula de posicionamiento competitivo'
+  (<em>competitive-positioning compass</em>) de Moore (<a href="paper570.html#moore2008">2008</a>,
+  100-116) que se articula a partir de cuatro puntos cardinales:
+  tecnolog&iacute;as, producto, empresa y mercado. El las fases de
+  mercado precoz, en el que las decisiones est&aacute;n dominadas por
+  un reducido n&uacute;mero de entusiastas e innovadores, los valores
+  clave son las tecnolog&iacute;as y los productos. Cuando se penetra
+  en un mercado masivo, en el que las decisiones est&aacute;n dominadas
+  por el grupo de usuarios pragm&aacute;ticos y conservadores, los
+  aspectos dominantes son el mercado y las empresas. En este
+  contexto, la barrera que hay que cruzar, es la de la
+  transici&oacute;n desde los valores centrados en el producto a los
+  centrados en el mercado.</p>
+  
+  <p>Existen otros modelos aplicables a la planificaci&oacute;n de la
+  implantaci&oacute;n de linked data, como la Metodolog&iacute;a RISP
+  (Reutilizaci&oacute;n de la Informaci&oacute;n del Sector P&uacute;blico) del CTIC
+  que identifica en el contexto del <em>open goverment</em> las fases de:
+  Sensibilizaci&oacute;n, an&aacute;lisis inicial de los datos,
+  enriquecimiento sem&aacute;ntico, y, por &uacute;ltimo, exposici&oacute;n y
+  reutilizaci&oacute;n.</p>
+  
+  <p>Pero aunque permiten conceptualizar el proceso interno de una
+  instituci&oacute;n para liberar sus datos, no recogen los factores
+  existentes en un contexto social, en el ecosistema digital.
+  As&iacute; hace Abella (<a href="paper570.html#abella2011">2011</a>) al contemplar
+  en los factores avanzados de una estrategia de reutilizaci&oacute;n
+  el 'ecosistema', definido como la forma en que la 'entidad
+  publicadora promueve que haya interacci&oacute;n entre los distintos
+  agentes industriales que reutilizan la informaci&oacute;n'.</p>
+  
+  <p>Haremos a continuaci&oacute;n una primera enumeraci&oacute;n de algunos de
+  los elementos de muy diversa naturaleza (econ&oacute;mica,
+  institucional, tecnol&oacute;gica, de servicio, liderazgo, etc.), que
+  creemos que demuestran que estamos avanzando hacia la
+  maduraci&oacute;n de Llinked Data, y por tanto de las tecnolog&iacute;as de
+  la web sem&aacute;ntica. Dado que Llinked Data es una tecnolog&iacute;a de
+  prop&oacute;sito general, junto a los casos del sector de las
+  bibliotecas-archivos-museos, se incluyen otros de car&aacute;cter
+  intersectorial.</p>
+  
+<h4>Factores econ&oacute;micos y de mercado</h4>
+
+<ul>
+  <li><em>Reducci&oacute;n de costes de proceso.</em> Cuando una
+tecnolog&iacute;a permite una sustancial reducci&oacute;n de los costes de
+producci&oacute;n termina imponi&eacute;ndose. En el &aacute;mbito de la
+informaci&oacute;n, la reducci&oacute;n de costes puede aparecer de
+m&uacute;ltiples formas: una simplificaci&oacute;n de los procesos de
+transformaci&oacute;n, una sustituci&oacute;n de tecnolog&iacute;as complejas, o
+una reducci&oacute;n del tiempo de elaboraci&oacute;n. Para la integraci&oacute;n
+de datos, uno de los caballos de batalla de los sistemas de
+informaci&oacute;n, la radical normalizaci&oacute;n sint&aacute;ctica y sem&aacute;ntica
+que plantea RDF implica que el uso masivo de datos sea
+accesible a un mayor n&uacute;mero de empresas y organizaciones.</li>
+  <li><em>Oportunidad de mercado para empresas tecnol&oacute;gicas. </em>Son
+   necesarios modelos de negocio asociados a una tecnolog&iacute;a que
+proporcione servicios de calidad. Es vital la existencia de
+empresas de referencia, capaces de liderar la oferta de
+soluciones t&eacute;cnicas, plataformas e innovaci&oacute;n sostenible. Ha
+de existir un sector empresarial especializado que d&eacute;
+respuesta a una necesidad social, facilitando la
+contrataci&oacute;n de servicios y la rentabilidad del cambio.
+Podr&iacute;amos pensar en Talis o, en nuestro sector, Digibis. </li>
+</ul>
+
+<h4>Factores tecnol&oacute;gicos y operativos</h4>
+
+<ul>
+  <li><em>Reglas sencillas. </em>Ya en ocasiones se ha
+demostrado que los avances de la red tienden a imponerse con
+versiones sencillas de est&aacute;ndares tecnol&oacute;gicos. La sencillez
+y gradualidad de implantaci&oacute;n forman parte del c&oacute;digo de los
+datos enlazados, adoptando diferentes niveles de calidad,
+que permiten transiciones progresivas hacia un espacio de
+datos global. </li>
+  <li><em>Divisi&oacute;n del trabajo. </em>Es uno de los principios
+de la econom&iacute;a de mercado, y en el caso de <em>linked data</em> m&aacute;s
+a&uacute;n: cada agente del proceso puede ocuparse de una peque&ntilde;a
+parcela (vocabularios, publicaci&oacute;n de datasets, consumo), lo
+que facilita un crecimiento no planificado, independiente.
+Tambi&eacute;n permite que los costes se repartan y se distribuyen
+en el tiempo y entre los agentes. Esa diferencia de ritmos,
+que a veces puede ser exasperante, sin embargo permite que
+funcionen las din&aacute;micas del 'network effect'. La principal
+divisi&oacute;n se detecta entre productores de datos y creadores
+de aplicaciones (integraci&oacute;n, presentaci&oacute;n y
+utilidad-valor), es decir los consumidores de primer nivel
+de esos datos, que ofrecen servicios al usuario final.</li>
+</ul>
+
+<h4>Factores de alcance social y sectorial</h4>
+
+<ul>
+  <li><em>Utilidad corporativa.</em> A diferencia de tecnolog&iacute;as
+como OAI/PMH, rdf tiene una aplicaci&oacute;n directa en la
+integraci&oacute;n de los propios sistemas internos de las
+organizaciones (middleware linked data), y por lo tanto
+pueden existir modelos de servicio antes de que se expanda
+en la web p&uacute;blica. Tambi&eacute;n en el marco B2B (Bussiness to
+Bussiness) los beneficios de Llinked Data son muy tangibles,
+puesto que sitios web de empresas pueden integrar a bajo
+coste datos de otras empresas con las que medien alianzas o
+acuerdos de colaboraci&oacute;n. El uso de <em>linked data</em> en &aacute;mbitos
+de Open Governmet a veces eclipsa el campo del 'Enterprise
+linked data' (<a href="paper570.html#wood2010">Wood 2010</a>), en el &aacute;rea
+de gesti&oacute;n de los datos, para integraci&oacute;n e interpretaci&oacute;n.</li>
+  <li><em>Complementariedad con otros sectores. </em>Cuando una
+tecnolog&iacute;a apoya m&aacute;s de una funci&oacute;n se multiplican los
+efectos de red. <em>linked data</em> puede influir en buscadores,
+posicionamiento, accesibilidad, redes sociales, integraci&oacute;n
+de datos, portales distribuidos, etc. Adem&aacute;s su
+aplicabilidad multisectorial es una de sus bazas, sobre todo
+para bibliotecas, que pueden ver como su mercado de
+proveedores de servicios se diversifica y se abarata debido
+a la competencia.</li>
+  <li><em>'Killer application'. </em>La existencia de
+aplicaciones conocidas y con una excelente experiencia de
+usuario, desvela para otras empresa el valor oculto de una
+tecnolog&iacute;a, influyendo en hacerla masiva. Podr&iacute;amos pensar
+en la adopci&oacute;n de rdf por Facebook a trav&eacute;s de Opengraph
+como un paso en esta direcci&oacute;n. A&uacute;n no detectamos, en el
+sector de las bibliotecas, una aplicaci&oacute;n de gran &eacute;xito,
+dado que las principales iniciativas a&uacute;n son de publicaci&oacute;n
+de datos y vocabularios. El est&iacute;mulo de proyectos piloto con
+capacidad de demostraci&oacute;n, como los derivados del <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fdiscovery.ac.uk%2F&amp;date=2013-03-08">ProgramaDiscovery de JISC y RLUK</a> para reforzar un '<em>ecosistema para los metadatos</em>', son
+importantes, pero de impacto a&uacute;n limitado.</li>
+  <li><em>Innovaci&oacute;n y creatividad. </em>La innovaci&oacute;n se ve
+estimulada cuando existe un margen para experimentar de
+forma creativa, para diferenciarse y para construir una
+experiencia nueva. Un ejemplo claro son los Hackathons de
+<em>linked data</em> o el Desaf&iacute;o Abredatos (<a href="paper570.html#sierra">Sierra 2011</a>).
+Los voluntarios que proponen sistemas de representaci&oacute;n
+infogr&aacute;fica o geoposicionada de datos complejos permiten
+incorporar a los proyectos otros perfiles ajenos a las
+tecnolog&iacute;as: dise&ntilde;o, arte y comunicaci&oacute;n. La creatividad
+tiene una dimensi&oacute;n aplicada, la innovaci&oacute;n, que en nuestro
+marco de an&aacute;lisis, se presenta como innovaci&oacute;n abierta,
+aportando un elemento de est&iacute;mulo determinante para su
+difusi&oacute;n (<a href="paper570.html#saorin2011">Saor&iacute;n 2011</a>).</li>
+</ul>
+
+<h4>Factores normativos y de reconocimiento</h4>
+
+<ul>
+  <li><em>Exigencia reguladora.</em> Cuando tanto las propias
+tecnolog&iacute;as como las pol&iacute;ticas de informaci&oacute;n van unidas a
+una exigencia legal en una jurisdicci&oacute;n (nacional, europea,
+federal) se facilitan los procesos de decisi&oacute;n. Junto a los
+motivos econ&oacute;micos y operativos para el cambio se suman los
+requisitos a cumplir ante los reguladores (compliance o
+conformidad). Lo hemos visto ya en el desarrollo de las
+normativas para el acceso a datos personales, en los
+mandatos de Open Access, en la ley de reutilizaci&oacute;n de&nbsp;
+datos y en los mandatos Goverment Open Data.</li>
+  <li><em>Reconocimiento y est&aacute;ndares de calidad. </em>El
+reconocimiento p&uacute;blico de un esfuerzo de calidad interno
+proporciona un elemento de refuerzo a las decisiones que se
+adopten Este refuerzo externo, junto con la superaci&oacute;n de
+auditor&iacute;as, permite a las organizaciones salir de sus
+din&aacute;micas internas. Tanto las presiones del entorno
+regulador como la perspectiva de mejorar su percepci&oacute;n por
+los clientes particulares y corporativos suponen un est&iacute;mulo
+para que las organizaciones adopten las innovaciones. La
+certificaci&oacute;n p&uacute;blica de calidad, o de responsabilidad
+social corporativa, es un lubricante para el cambio
+organizativo, como sucede con los sistemas de calidad o la
+accesibilidad en la web. Alcanzar las cinco estrellas de
+linked data, o entrar en alguno de los mapas-directorios de
+iniciativas open data, da a las organizaciones una meta y un
+reconocimiento en los medios.</li>
+</ul>
+   
+<p>Podr&iacute;amos continuar esta enumeraci&oacute;n con otros aspectos tanto
+  o m&aacute;s importantes que los rese&ntilde;ados hasta ahora: masa cr&iacute;tica
+  de datos, cambios legislativos, reducci&oacute;n de barreras legales
+  y barreras de entrada al negocio, tecnolog&iacute;as accesibles y
+  baratas, inclusi&oacute;n en programas formativos universitarios,
+  desarrollo de est&aacute;ndares, est&aacute;ndares de facto, diferenciaci&oacute;n
+  con otras tecnolog&iacute;as, asentamiento de encuentros t&eacute;cnicos
+  monogr&aacute;ficos, inserci&oacute;n en la financiaci&oacute;n p&uacute;blica sobre
+  ciencia y sociedad digital, coherencia de iniciativas
+  descentralizadas, credibilidad y confianza, m&eacute;tricas, etc. 
+</p>
+
+<p>Finalmente nos gustar&iacute;a volver a insistir en la importancia
+  del liderazgo. El peque&ntilde;o grupo de usuarios innovadores y
+  adoptantes precoces de una tecnolog&iacute;a cumplen un papel vital
+  en la extensi&oacute;n de su uso, y sus posicionamientos son cr&iacute;ticos
+  en el paso a un mercado maduro. Para el Liderazgo personal e
+  institucional ya hemos destacado la importancia de que
+  <em>semantic web</em> y <em>linked data</em> est&eacute;n asociadas a Tim
+  Berners-Lee -premio pr&iacute;ncipe de Asturias, doctor honoris causa
+  y figura reconocible en el nacimiento de la web- lo que
+  estimula la atenci&oacute;n social al concepto y a las tecnolog&iacute;as
+  asociadas. Habr&iacute;a que identificar qu&eacute; figuras (e
+  instituciones) en cada comunidad sectorial y geogr&aacute;fica act&uacute;an
+  de l&iacute;deres de opini&oacute;n, influyendo en la agenda p&uacute;blica. W3C es
+  un l&iacute;der promotor del cambio, que adem&aacute;s ha considerado a las
+  bibliotecas en una posici&oacute;n muy necesaria, a trav&eacute;s de uno de
+  sus Grupos Incubadora sectoriales (LLD XG)<a href="paper570.html#w3c2011">W3C 2011</a>.
+  La British Library y la Biblioteca Nacional de Espa&ntilde;a est&aacute;n
+  actuando con decisi&oacute;n en el campo de las bibliotecas,
+  experimentando la producci&oacute;n de datos a partir de registros
+  MARC. Tampoco hemos de olvidar la puesto en marcha de Centros
+  de Investigaci&oacute;n y redes de excelencia: ejemplo de ello son el
+  <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.fundacionctic.org&amp;date=2013-03-08">CTIC</a> y la <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fred.linkeddata.es%2Fweb%2Fguest%3Bjsessionid%3D99DA57AF3FDD9B9E43E80FB87FAFD737&amp;date=2013-03-08">Red Tem&aacute;tica Espa&ntilde;ola</a> de <em>linked data</em> en Espa&ntilde;a,
+  el <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.deri.ie&amp;date=2013-03-08">Digital Enterprise Research Institute</a> (DERI) en Irlanda
+  o el <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.planet-data.eu&amp;date=2013-03-08">Planet Data de la Uni&oacute;n Europea</a>.
+  A un nivel m&aacute;s amplio, el Data Curation Center (DCC) brit&aacute;nico
+  entronca al mismo tiempo con las iniciativas de datos
+  cient&iacute;ficos abiertos.</p>
+
+<h3>Cuadrante de factores clave de proyectos Linked Open Data Bibliotecarios</h3>
+
+<p>La anterior enumeraci&oacute;n de factores adquiere una forma m&aacute;s
+  inteligible si tratamos de estructurarlos alrededor de los
+  siguientes seis conceptos vinculados a los proyectos <em>linked open data</em>:<br>
+</p>
+<ul>
+  <li><em>Definiciones de datos y vocabularios de valores.&nbsp;</em>
+Ontolog&iacute;as, conjuntos de elementos de metadatos, profiles,
+registros de metadatos. En definitiva, conjuntos de datos y
+metadatos disponibles.</li>
+  <li><em>Conjuntos de datos (<em>datasets</em>). </em>Fuentes de datos
+que ser&aacute;n el contenido susceptible de interesar a los
+usuarios y de aportar valor por agregaci&oacute;n, combinaci&oacute;n o
+reutilizaci&oacute;n.</li>
+  <li><em>Aplicaciones de consumo: </em>servicios que combinan,
+aplican, reutilizan y ofrecen valor a partir de los datos.</li>
+  <li><em>Tecnolog&iacute;as: </em>plataformas que hacen sencillo
+publicar, consultar y enlazar informaci&oacute;n en contextos de
+gesti&oacute;n de contenidos de prop&oacute;sito general (CMS) y
+corporativos (ECM), comunicaci&oacute;n personal, redes sociales,
+especializadas y corporativas.</li>
+  <li><em>Regulaci&oacute;n: </em>normativa, legislaci&oacute;n y pol&iacute;ticas</li>
+  <li><em>Pr&aacute;cticas sociales y culturales. </em>Extensi&oacute;n del
+uso de aplicaciones que usan datos enlazados, percepci&oacute;n
+profesional y social sobre los datos abiertos y enlazados y,
+en sentido amplio, implantaci&oacute;n de la cultura open data.</li>
+</ul>
+<p>Estos elementos nos permiten identificar pares de
+  complementariedades b&aacute;sicas presentes en los proyectos <em>linked open data</em>
+  (Figura 3).</p>
+  
+<figure class="centre"><img alt="Figura 3" src="p570fig03.jpg"> <figcaption>
+Figura 3: Pares de complementariedades en proyectos <em>linked open data</em>.
+Fuente: Elaboraci&oacute;n propia </figcaption> </figure>
+
+<ul>
+  <li><em>Publicar y Consumir.</em> Una fuente de datos
+potencialmente valiosa nunca ser&aacute; percibida como tal hasta
+que algunas aplicaciones de &eacute;xito usen sus datos para
+ofrecer una propuesta de valor tangible,&nbsp; aceptada
+ampliamente por los usuarios. Podr&iacute;a denominarse tambi&eacute;
+Datasets y Aplicaciones de consumo, para hacer referencia a
+las tecnolog&iacute;as centradas en publicar datos enlazados frente
+a las de consulta e integraci&oacute;n de datos de diferente
+procedencia.</li>
+  <li><em>Datasets y Vocabularios.</em> Para muchas necesidades
+de publicar datos enlazados pueden bastar las ontolog&iacute;as
+existentes, o usarse una combinaci&oacute;n de elementos de varias
+de ellas. Se considera conveniente el m&aacute;ximo de
+reutilizaci&oacute;n de los vocabularios m&aacute;s extendidos, para as&iacute;
+favorecer la conexi&oacute;n de datos y la facilidad de uso. Las
+instituciones tienen que distribuir sus esfuerzos entre
+publicar vol&uacute;menes significativos de informaci&oacute;n valiosa, y
+la definici&oacute;n de modelos de datos ajustados a sus
+necesidades. A partir de cierto punto, poblar de datos es
+m&aacute;s relevante que la creaci&oacute;n de nuevas ontolog&iacute;as, y se
+recomienda usar ontolog&iacute;as ligeras.</li>
+  <li><em>Normas y pr&aacute;cticas.</em> Muchos de los avances en la
+web funcionan por acuerdos pr&aacute;cticos de m&iacute;nimos, flexibles,
+basados en una buena relaci&oacute;n esfuerzo-beneficio. El apoyo a
+ciertas normas de facto que han demostrado su
+funcionamiento, suele preceder a la consolidaci&oacute;n de una
+norma o la regulaci&oacute;n de un marco normativo riguroso. </li>
+  <li><em>Negocio y Apertura.</em> La creaci&oacute;n de un mercado
+para los datos enlazados puede requerir la creaci&oacute;n de una
+amplia base de uso a partir de datos abiertos de uso
+gratuito y libre. Las decisiones sobre el momento y el lugar
+para introducir costes y relaciones comerciales es delicada
+para el equilibrio y crecimiento del ecosistema. Muchos de
+los productos estrella de la web no surgieron con un modelo
+de negocio bien definido. Lo fueron desarrollando a partir
+de los patrones de uso durante su crecimiento, a trav&eacute;s de
+ingresos directos o indirectos. La adopci&oacute;n de servicios y
+fuentes de datos enlazados se basa en la eliminaci&oacute;n de las
+barreras econ&oacute;micas.</li>
+  <li><em>Tecnolog&iacute;as y Contenidos.</em> El entusiasmo de parte
+del sector de la ingenier&iacute;a de la informaci&oacute;n por las
+bondades de las tecnolog&iacute;as de publicaci&oacute;n y consumo de
+datos enlazados, tiene que ser respaldado por unos
+contenidos valiosos que permitan crear utilidad en servicios
+concretos. Las tecnolog&iacute;as est&aacute;n al servicio de datos y
+metadatos. Ser&aacute; necesario invertir recursos para liberar
+nuevas fuentes de datos que no est&aacute;n f&aacute;cilmente disponibles.</li>
+</ul>
+
+<p>Cada uno de estos factores puede tener ciclos de desarrollo y
+  atenci&oacute;n propios. Los desequilibrios y sinergias que se
+  producen entre ellos nos permiten entenderlos como un
+  ecosistema. En el sector brit&aacute;nico de bibliotecas, archivos y
+  museos est&aacute; en marcha Discovery, a metadata ecology for UK
+  Education &amp; Research, basada en una combinaci&oacute;n de
+  licencias abiertas para estimular la innovaci&oacute;n en servicios (<a href="paper570.html#disc2012">Discovery... 2012</a>). De hecho se habla de
+  'espacio global de datos' (<a href="paper570.html#heath2011">Heath; Bizer
+2011</a>), y como tal espacio se entiende una construcci&oacute;n
+  social din&aacute;mica multidimensional. Rufus Pollock (<a href="paper570.html#pollock2011">2011</a>),  desde la Open Knowledge Foundation usa tambi&eacute;n la
+  conceptualizaci&oacute;n de 'Open Data Ecosystem', de forma parecida
+  a la ecolog&iacute;a de metadatos anteriormente mencionada. Dado que
+  en la extensi&oacute;n de <em>linked data</em> no se aprecian apoyos
+  institucionales decididos (centros que se vean obligados a
+  implementarlos), la motivaci&oacute;n en el mundo open se apoya en
+  circunstancias m&aacute;s dif&iacute;ciles de identificar. Aquellos
+  proyectos en los que coexistan factores a su favor, e
+  interrelacionados, en todas las &aacute;reas, contar&aacute;n con muchas m&aacute;s
+  posibilidades de &eacute;xito y continuidad. Pretendemos por tanto
+  ayudar a visualizar la globalidad de las acciones y actores
+  necesarios en la adopci&oacute;n de los datos enlazados.
+</p>
+
+<p>Para construir un modelo que sirva para describir el nivel de
+  madurez de linked data, en un sector dado, es necesario
+  reducir los elementos representados, de cara a conseguir mayor
+  claridad visual. Para ello usamos la forma convencional de un
+  doble eje, en el que se modulan 4 caracter&iacute;sticas, con las que
+  se delimitan cuadrantes. Para ello se agrupa en una sola
+  categor&iacute;a los Conjuntos de datos y los Vocabularios o Esquemas
+  de Metadatos, y en otra la Regulaci&oacute;n y Pr&aacute;cticas
+  sociales-culturales. El resultado es: 
+</p>
+
+<ol>
+  <li><em>Tecnolog&iacute;as.</em> Este eje refleja los aspectos
+estrictamente t&eacute;cnicos para los datos enlazados. La
+facilidad de acceso a herramientas de diferente tipo y
+alcance multiplica el alcance y la entrada de usuarios hasta
+alcanzar un mercado maduro. </li>
+  <li><em>Conjuntos de datos (Datasets) y Definiciones de datos
+y vocabularios de valores. </em>La materia prima b&aacute;sica
+del ecosistema de datos enlazados es la puesta a disposici&oacute;n
+de conjuntos de datos relevantes, fiables y que usen
+ontolog&iacute;as suficientemente expresivas.</li>
+  <li><em>Aplicaciones de consumo. </em>Este eje contempla los
+aspectos de mercado y servicios, dirigidos a comunidades de
+usuarios concretas, estimulando el crecimiento y mejora de
+los anteriores ejes.</li>
+  <li><em>Regulaci&oacute;n y pr&aacute;cticas sociales-culturales. </em>Este
+eje recoge la dimensi&oacute;n social que toda innovaci&oacute;n
+tecnol&oacute;gica conlleva, tanto en los aspectos de
+institucionalizaci&oacute;n como en los de cambio cultural y
+educativo. Este eje impone limitaciones o est&iacute;mulos a los
+anteriores, mediante normas, requisitos, conductas y
+estrategias.</li>
+</ol>
+
+<p>El equilibrio entre estos 4 polos delimita una 'zona de
+  madurez' de la tecnolog&iacute;a <em>linked data</em>. Cada uno de los
+  factores tiende a ser dominante en cada nuevo proyecto:
+  identificando sus carencias en el resto de &aacute;reas podremos
+  mejorar la gesti&oacute;n de un proyecto de <em>linked data</em> (por ejemplo un
+  prototipo de aplicaci&oacute;n que no dispone de licencia para
+  explotar los contenidos, o la orientaci&oacute;n de las tecnolog&iacute;as
+  hacia la publicaci&oacute;n de datos y no hacia el consumo).<br>
+  <br>
+  Podemos tomar estas l&iacute;neas de fuerzas para elaborar un mapa
+  dividido en cuadrantes, en el que situar cada uno de los
+  avances que se van produciendo en <em>linked data</em>. Variando su
+  localizaci&oacute;n en el diagrama podemos tanto describir la
+  evoluci&oacute;n temporal de un elemento, o bien representar la
+  transformaci&oacute;n que hemos planificado en un proyecto de mejora.
+  <br>
+  <br>
+  En la Figura 4 se representa el modelo para representar la
+  madurez de las iniciativas de datos enlazados, aplicable al
+  sector libraries, archives and museums. Se trazan los siguientes cuadrantes:<br>
+</p>
+
+<figure class="centre">
+ <img alt="Cuadrantes para la madurez de linked data" src="p570fig04.JPG"> <figcaption>
+Figura 4: Cuadrantes para la madurez de <em>linked data</em>. Fuente:
+elaboraci&oacute;n propia </figcaption> 
+</figure>
+
+<p><em> A.&nbsp;&nbsp;&nbsp; Implicaci&oacute;n institucional en Linked
+  Open Data</em>, delimitado por los polos de 'Regulaci&oacute;n' y
+'Datos y Metadato')</p>
+<ul>
+  <li>A.1. Pol&iacute;ticas orientadas hacia datos y modelos de datos.</li>
+  <li>A.2. Movimientos orientados hacia ampliar la apertura de
+datos.</li>
+</ul>
+<p><em> B.&nbsp;&nbsp;&nbsp; Oferta de Datos y Contenidos</em>,
+delimitado por 'Tecnolog&iacute;as, Plataformas' y 'Datos y Metadatos'. </p>
+<ul>
+  <li>B.1. Esquemas de metadatos y vocabularios de valores
+publicados como datos enlazados.</li>
+  <li>B.2. Datasets publicados de forma din&aacute;mica.</li>
+</ul>
+<p><em> C.&nbsp;&nbsp;&nbsp; Oferta de Servicios y Aplicaciones</em>,
+delimitado por los 'Tecnolog&iacute;as, Plataformas' y 'Aplicaciones de
+consumo'. </p>
+<ul>
+  <li>C.1. Tecnolog&iacute;as de publicaci&oacute;n.</li>
+  <li>C.2. Tecnolog&iacute;as de agregaci&oacute;n y consumo de datos.</li>
+</ul>
+<p><em> D.&nbsp;&nbsp;&nbsp; Mercado eficiente y seguro</em>,
+delimitado por 'Aplicaciones de consumo' y 'Regulaci&oacute;n'.</p>
+<ul>
+  <li>D.1. Aplicaciones y servicios libres.</li>
+  <li>D.2. Aplicaciones y servicios comerciales.</li>
+</ul>
+
+<figure class="centre"> <img alt="Figura 5" src="p570fig05.JPG"> <figcaption>
+Figura 5. Aplicaci&oacute;n del modelo en proyectos <em>linked open data</em>-libraries, archives and museums.
+Fuente: elaboraci&oacute;n propia </figcaption> </figure>
+
+<p>En el esquema hemos situado, a modo de ejemplo, varios ejemplos
+del sector libraries, archives and museums, como VIAF (Virtual International Authority
+File), EDM (Europeana Data Model), o LEM (Lista de
+Encabezamientos de Materias para Bibliotecas P&uacute;blicas), Digibis
+(Software para Biblioteca Digitales). Se observa que el
+cuadrante D (Mercados eficientes y seguros) es en el que menos
+ejemplos significativos se pueden encontrar a&uacute;n: faltan
+aplicaciones, suficientemente difundidas y valoradas, que
+incorporen datos enlazados bibliotecarios.</p>
+
+<p>La cercan&iacute;a a los ejes significa que se observa mayor
+compenetraci&oacute;n entre dos caracter&iacute;sticas pr&oacute;ximas, y la
+proximidad al centro, una mayor alineaci&oacute;n con el resto de los
+elementos, y por lo tanto, mayor relevancia en el ecosistema.</p>  
+
+<p>Tomemos como ejemplo un conjunto de datos publicado por una
+Biblioteca Nacional:</p>
+
+<ul>
+  <li>El elemento se situar&iacute;a inicialmente en el eje de Datos y
+Metadatos, equidistante de los ejes contiguos y alejado del
+punto de cruce.</li>
+  <li>Si se basa en un marco jur&iacute;dico claro que regula la
+difusi&oacute;n y el tipo de licencia, se representar&iacute;a desplazado
+al cuadrante A.</li>
+  <li>Si, por el contrario, el aspecto principal es la
+tecnolog&iacute;a estandarizada y las mejores pr&aacute;cticas de
+publicaci&oacute;n, y est&aacute;n bien integradas en los sistemas
+corporativos de manejo de datos primarios, el elemento se
+desplazar&iacute;a hacia el cuadrante B.</li>
+  <li>Si al mismo tiempo existen ya aplicaciones que integran
+sus datos en servicios al usuario final, se ir&iacute;a aproximando
+hacia el cuadrante D.</li>
+  <li>Si las cuatro facetas estuvieran equilibradas, la
+ubicaci&oacute;n del elemento tender&iacute;a hacia la zona central,
+indicando mayor madurez, al producirse sinergias entre los
+diferentes factores de influencia.</li>
+</ul>
+
+<p>Si, por ejemplo, pusi&eacute;ramos el foco en Europeana,&nbsp;
+  podr&iacute;amos preguntarnos de forma estructurada por los factores
+  normativos y de financiaci&oacute;n puestos en marcha por la Comisi&oacute;n
+  Europea, la problem&aacute;tica con las licencias de reutilizaci&oacute;n,
+  el volumen y calidad de datos, el acceso al contenido final,
+  la adecuaci&oacute;n de los repositorios nacionales al EDM (European
+  Data Model), la existencia de SPARQL (Protocol and RDF Query
+  Language) endpoints para su integraci&oacute;n en otros webs, y la
+  aparici&oacute;n de servicios o aplicaciones que consuman estos datos
+  proporcionando utilidad al p&uacute;blico en general e, incluso,
+  modelos de negocio. Tambi&eacute;n nos permitir&iacute;a representar de
+  forma diferenciada las facetas de Europeana como dataset y
+  modelo de datos, como&nbsp; pol&iacute;tica de la agenda digital
+  europea, como tecnolog&iacute;as de agregaci&oacute;n o como aplicaci&oacute;n de
+  consumo. La existencia de elementos en cada uno de los
+  cuadrantes, ser&iacute;a un indicador de una fase de mayor madurez y
+  penetraci&oacute;n de Europeana.</p>
+  
+  <p>El modelo es una simplificaci&oacute;n que busca facilitar la
+  comprensi&oacute;n y comunicaci&oacute;n, y no ha de tomarse como sustituto
+  de otros instrumentos de an&aacute;lisis, como los cat&aacute;logos e
+  informes t&eacute;cnicos.</p>
+  
+<h2>Conclusiones. </h2>
+
+<p>El conjunto de todos los elementos expuestos hasta ahora
+  podr&iacute;a inclinarnos a se&ntilde;alar la madurez de las tecnolog&iacute;as de
+  datos enlazados, dado que en un conjunto de frentes
+  (econ&oacute;micos, organizativos, t&eacute;cnicos, sociales y culturales)
+  se est&aacute;n produciendo acciones sin&eacute;rgicas a favor de la mejora
+  del acceso abierto a datos enlazados. Es arriesgado acertar a
+  asignar el impacto a corto y medio plazo de los diferentes
+  hitos que cierran el a&ntilde;o 2011: OCLC hace accesible <a href="http://www.webcitation.org/query?url=http%3A%2F%2Ffast.oclc.org%2Ffast%2F&amp;date=2013-03-08">FAST</a>
+  (Faceted Application of Subject Terminology) como datos
+  enlazados; la British Library libera la bibliograf&iacute;a nacional y sus <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.bl.uk%2Fschemas%2F&amp;date=2013-03-08">modelos de datos en RDF</a>; <a href="http://www.webcitation.org/query?url=http%3A%2F%2Fwww.bne.es%2Fes%2FInicio%2FPerfiles%2FBibliotecarios%2FDatosEnlazados%2Findex.html&amp;date=2013-03-08 ">la Biblioteca Nacional de Espa&ntilde;a</a> publica sus cat&aacute;logos bibliogr&aacute;ficos y de
+  autoridades en RDF, utilizando las ontolog&iacute;as o vocabularios
+  est&aacute;ndares de la IFLA (ISBD y familia derivada de los
+  Functional Requirements);
+  el Incubator Group sobre Datos Enlazados Bibliotecarios del
+  W3c publica su informe final, la web de datos ocupa gran parte
+  de las ponencias de <a href="http://www.webcitation.org/query?url=http%3A%2F%2Felag2011.techlib.cz%2Fen%2F779-2011-conference%2F&amp;date=2013-03-08">la Conferencia ELAG</a>  (European Library Automation Group) bajo el lema '<em>It’s the context, stupid</em>';
+  Europeana incorpora <em><a href="http://www.webcitation.org/query?url=http%3A%2F%2Fpro.europeana.eu%2Flinked-open-data&amp;date=2013-03-08">linked open data</a></em> en su estrategia y
+  desarrolla proyectos piloto,  etc. Aunque resultan hitos significativos, vinculados a
+  instituciones de alto nivel, denotan un movimiento de arriba
+  abajo, falto todav&iacute;a de la suficiente masa cr&iacute;tica y
+  diversidad de actores para transformar el panorama real de los
+  datos bibliotecarios en red. De hecho, el propio sector echa
+  en falta un inventario de las aplicaciones de consumo, <a href="http://www.webcitation.org/query?url=https%3A//github.com/okfn/ckanext-apps&amp;date=2013-03-08">aunque CKAN ha dado alg&uacute;n paso en este sentido</a>,
+  as&iacute; como el gobierno brit&aacute;nico en su portal '<a href="http://www.webcitation.org/query?url=http%3A%2F%2Fdata.gov.uk%2Fapps&amp;date=2013-03-08">Opening up  government</a>' </p>
+  
+<p>  No es f&aacute;cil identificar el momento en que la dial&eacute;ctica entre
+  limitaciones y oportunidades se decanta a favor de la
+  innovaci&oacute;n. Las resistencias al cambio que presentan los
+  sistemas socio-t&eacute;cnicos complejos a menudo reflejan unas
+  utilidades que no se perciben conscientemente y&nbsp; que
+  tienden a permanecer casi inalterables pese a las prospectivas
+  optimistas, especialmente cuando el valor del cambio tiene que
+  ser fuertemente percibido para que compense los altos costes
+  de cualquier transici&oacute;n.</p>
+  
+<p>  Observamos que los pasos hacia una fase de madurez de Linked
+  Data en el sector libraries, archives and museums a&uacute;n est&aacute;n demasiado escorados hacia la
+  publicaci&oacute;n de datos, en muchos casos en sus primeras
+  versiones, y con muchos avances en la regulaci&oacute;n y las
+  estrategias de instituciones centrales de mayor entidad
+  (Bibliotecas Nacionales y grandes consorcios). Se percibe a&uacute;n
+  la falta de tecnolog&iacute;as de referencia ampliamente aceptadas y
+  de aplicaciones de consumo de datos bibliotecarios
+  aut&eacute;nticamente demostrativas del valor que se le supone a los
+  datos enlazados. Los sectores A y B de nuestro modelo est&aacute;n
+  m&aacute;s desarrollados que los C y D. Nos inclinamos a considerar
+  2012 como un a&ntilde;o clave para valorar si un crecimiento
+  equilibrado entre ellos nos permite afirmar, en un plazo
+  corto, que entramos en la fase de madurez para 2013.</p>
+  
+<p>  No est&aacute; de m&aacute;s recordar que los datos pueden jugar el papel de
+  una nueva materia prima. Igual que con cada material se inicia
+  un proceso de innovaci&oacute;n para aprovechar sus cualidades, ¿est&aacute;
+  ocurriendo lo mismo con los datos? Ya no ser&aacute; s&oacute;lo una
+  cuesti&oacute;n de tecn&oacute;logos, sino que entrar&aacute; de lleno la
+  administraci&oacute;n de su propiedad y las restricciones sociales de
+  uso. La abundancia de datos normalizados como factor de
+  producci&oacute;n ayudar&aacute; a definir nuevos espacios econ&oacute;micos y de
+  valor. El ciclo de vida de los Llinked Data, tanto si nos
+  circunscribimos a una organizaci&oacute;n, como si hablamos de
+  contextos sociales m&aacute;s amplios, implica un ciclo constante de
+  re-equilibrio entre iniciativas para publicar datos,
+  consumirlos, mejorar la sem&aacute;ntica y calidad de los datos,
+  definir pol&iacute;ticas y marcos regulatorios y desarrollar
+  tecnolog&iacute;as eficientes para gestionar la ingente cantidad de
+  datos e interconexiones en sistemas distribuidos. Otros
+  autores prefieren el t&eacute;rmino 'cadena de valor' (<a href="paper570.html#latif2009">Latif  <em>et al.</em> 2009</a>) dando m&aacute;s importancia al progresivo
+  enriquecimiento de los datos y funcionalidades mediante la
+  participaci&oacute;n de diferentes agentes hasta llegar a los
+  usuarios finales.</p>
+  
+  <p>La caracter&iacute;stica principal que cabe resaltar es que <em>linked open data</em> es un
+  movimiento masivo y no sectorial, cuyos est&aacute;ndares de
+  infraestructura pueden ser adoptados en campos dispares que
+  van desde la informaci&oacute;n meteorol&oacute;gica a la catalogaci&oacute;n
+  bibliogr&aacute;fica. Por lo tanto las instituciones documentales
+  debemos posicionar bien nuestras iniciativas, para que
+  nuestros esfuerzos de publicaci&oacute;n sintonicen con las
+  tecnolog&iacute;as, las iniciativas de consumo y la&nbsp; regulaci&oacute;n.
+  Esto implica ampliar el abanico de acuerdos de colaboraci&oacute;n
+  m&aacute;s all&aacute; de las redes tradicionales, captando la atenci&oacute;n de
+  servicios afines con los que hasta ahora quiz&aacute; no haya habido
+  espacios de colaboraci&oacute;n estrecha. Se adivina pues un per&iacute;odo
+  de comunicaci&oacute;n de nuestras fuentes de informaci&oacute;n para
+  conseguir que sean enlazadas. La construccion de un marco
+  regulatorio a todos los niveles que sea propicio al uso de los
+  datos puede estimular el surgimiento de servicios que generen
+  valor usando nuestros datos. En este proceso se ver&aacute;n
+  involucrados los agentes bibliotecarios tradicionales, pero
+  tambi&eacute;n nuevos y diversos actores que pueden activarse al
+  abrirse los datos de forma radical.</p>
+  
+ <p> Los modelos revisados nos muestran la realidad
+  econ&oacute;mico-social de un fen&oacute;meno de red que va m&aacute;s all&aacute; de la
+  simple producci&oacute;n de datos, entorno en que nuestro sector se
+  inscribe. El an&aacute;lisis del escenario aumentado – sumando
+  tecnolog&iacute;as, consumo y regulaci&oacute;n- da cuenta de que estamos en
+  los momentos iniciales de un fen&oacute;meno al que Glibraries, archives and museums todav&iacute;a
+  puede sumarse, pese a que la competencia y alternativas entre
+  proveedores de datos aumentan.</p>
+  
+  <p>Ser&iacute;a un ejercicio ilustrativo trazar un paralelismo con la
+  extensi&oacute;n que el movimiento Open Access ha tenido en la &uacute;ltima
+  d&eacute;cada. De la febril actividad de este campo pueden extraerse
+  lecciones de inter&eacute;s para comprender los elementos clave para
+  la consolidaci&oacute;n de una tendencia tecnol&oacute;gica relacionada con
+  la informaci&oacute;n. Sin que se trate de casos iguales, encontramos
+  ciertos paralelismos entre este ejemplo y el despegue
+  incipiente de <em>linked data</em> en nuestro sector. </p>
+  
+  <p>Es importante profundizar nuestra comprensi&oacute;n de las din&aacute;micas
+  del aut&eacute;ntico ecosistema del espacio global de datos. La mera
+  planificaci&oacute;n no abarca todas las interacciones presentes,
+  aunque las tendencias son el resultado de delicados
+  equilibrios de &eacute;xito, adopci&oacute;n, experimentaci&oacute;n y visibilidad.
+  La evoluci&oacute;n de linked data, y por consiguiente de la web
+  sem&aacute;ntica, es un asunto colaborativo, o si se quiere
+  competitivo, en el que el encadenamiento de efectos positivos
+  mutuos entre agentes es el que produce la masa cr&iacute;tica. Por
+  ello no puede ser dirigida ni planificada con los instrumentos
+  tradicionales de las pol&iacute;ticas p&uacute;blicas, demasiado orientados
+  a pautar los procesos.</p>
+  
+  <p><em>linked open data</em> va actuar de espoleta para la realizaci&oacute;n pr&aacute;ctica de la
+  web sem&aacute;ntica, porque apoyada en los servicios e inversiones
+  desarrollados con estas tecnolog&iacute;as, la web sem&aacute;ntica se va a
+  tangibilizar. La etiqueta 'Linked Open Data' puede, durante un
+  per&iacute;odo, 'oscurecer' a la web sem&aacute;ntica, aunque est&eacute; asentando
+  la infraestructura de base para construirla.</p>
+  
+<h2 id="authors">Sobre los autores</h2>
+<p><strong>Tom&aacute;s Saor&iacute;n</strong> es doctor en Documentaci&oacute;n, y trabaja como
+  documentalista en la Comunidad Aut&oacute;noma de la Regi&oacute;n de
+  Murcia. Ha sido profesor asociado de la Facultad de
+  Comunicaci&oacute;n y Documentaci&oacute;n de la Universidad de Murcia. Su
+  email de contacto es <a href="mailto:tsp@um.es">tsp@um.es</a>.<br>
+  <strong>Fernanada Peset</strong> es doctora en Documentaci&oacute;n y profesora
+  titular de la Universidad Polit&eacute;cnica de Valencia. Participa
+  en proyectos como IraLIS, E-LIS y el Grupo Ciepi. Su email de
+  contacto es: <a href="mailto:mpesetm@upv.es">mpesetm@upv.es</a>.<br>
+  <strong>Antonia Ferrer</strong> es doctora en t&eacute;cnicas y m&eacute;todos actuales en
+  informaci&oacute;n y documentaci&oacute;n, profesora titular de la
+  Universidad Polit&eacute;cnica de Valencia (UPV) y coordinadora de
+  investigaci&oacute;n en&nbsp; Florida Universitaria. Ha coordinado
+  numerosos proyectos nacionales e internacionales. Su email de
+  contacto es: <a href="mailto:anfersa@upv.es">anfersa@upv.es</a></p>
+    
+
+</section>
+<section class="refs">
+<form>
+  <fieldset> <legend style="color: white; background-color: rgb(94, 150, 253); font-size: medium; padding: 0.1ex 0.5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">Referencias</legend>
+  <ul class="refs">
+<li id="arjonilla2009">Arjonilla Dom&iacute;nguez, S.J. y  Medina Garrido, J.A. (2009). La gesti&oacute;n de los sistemas de informaci&oacute;n en la empresa: teor&iacute;a y casos
+pr&aacute;cticos. Madrid: Pir&aacute;mide.</li>
+
+<li id="abella2011">Abella, A. (2011). <a href="http://www.webcitation.org/6CdebbuAN">Reutilizaci&oacute;n de informaci&oacute;n p&uacute;blica y privada en Espa&ntilde;a: avance de
+situaci&oacute;n para agentes p&uacute;blicos y privados. Una oportunidad para los negocios y el empleo</a>. Madrid: Rooter Analysis.  Mayo 2011, http://www.rooter.es/node/87
+(Archived by WebCite&reg; at http://www.webcitation.org/6CdebbuAN)</li>
+
+<li id="allemang2008">Allemang, D. y Hendler, J.A. (2008). Semantic Web for the working ontologist: effective modeling in RDFS and OWL. San Francisco, CA: Morgan Kaufmann; Oxford: Elsevier Science.</li>
+
+<li id="berners-lee-2006">Berners-Lee, T. (2006). <a href="http://www.webcitation.org/6CdekvSsi">Linked data. World Wide Web Consortium design issues</a>. http://www.w3.org/DesignIssues/LinkedData.html (Archived by WebCite&reg; at http://www.webcitation.org/6CdekvSsi)</li>
+
+  <li id="berners-lee-2009">Berners-Lee, T. (2009). Tim Berners-Lee on the next Web.  [Video podcast].  Consultado el 08 de marzo 2013 de http://www.ted.com/talks/lang/en/tim_berners_lee_on_the_next_web.html (Archived by WebCite&reg; at )</li> 
+  
+  <li id="berners-lee-2010">Berners-Lee, T.  (2010). <em><a href="http://www.webcitation.org/6EyAa0ri6">The year open data went worldwide.</a></em> [Video podcast].  Consultado el 08 de marzo 2013 de http://www.ted.com/talks/tim_berners_lee_the_year_open_data_went_worldwide.html  (Archived by WebCite&reg; at http://www.webcitation.org/6EyAa0ri6)</li>
+
+<li id="berners-lee-1999">Berners-Lee, T.  &amp; Fischetti, M. (1999). <em>Weaving the Web: the original design and ultimate destiny of the World Wide Web.</em> New York, NY: Harper-Collins.</li>
+
+  <li id="berners-lee-2001">Berners-Lee, T., Hendler, J. &amp; Lassila, O. (2001).  <a href="http://www.webcitation.org/6EyQVevVv">The semantic Web</a>.  <em>Scientific American</em>, <strong>284</strong>(5), 34-56. Consultado el 08 de marzo 2013 de from http://www.sciam.com/article.cfm?id=the-semantic-web (Archived by WebCite&reg; at http://www.webcitation.org/6EyQVevVv)</li>
+
+<li id="bizer2007">Bizer, C., Cyganiak, R. y Heath, T. (2007). <a href="http://www.webcitation.org/6CdeoBlkz"><em>How to publish linked data on the web</em></a>. Retrieved 8 March, 2013 from http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/ (Archived by WebCite&reg; at http://www.webcitation.org/6CdeoBlkz)</li>
+
+<li id="bizer2009">Bizer, C., Heath, T. y Berners-Lee, T. (2009).  Linked data, the story so far. <em>International Journal on Semantic Web and Information Systems</em>, <strong>5</strong>(3), 1-22</li>
+
+<li id="castells1996">Castells, M. (1996). <em>La era de la informaci&oacute;n: econom&iacute;a, sociedad y cultura.</em> Vol. 1. <em>La sociedad red.</em> Madrid: Alianza. </li>
+
+<li id="cornella2007">Cornell&aacute;, A. y Flores, A. (2007). <em>La alquimia de la innovaci&oacute;n.</em>Barcelona: Deusto Ediciones. </li>
+
+  <li id="disc2012">Discovery Programme. (2012).  <em><a href="http://www.webcitation.org/6EyWZFYzU">Discovery open metadata principles.</a></em>  Consultado el 08 de marzo 2013 de http://discovery.ac.uk/businesscase/principles/  (Archived by WebCite&reg; at http://www.webcitation.org/6EyWZFYzU)</li>
+
+<li id="gillespie2007">Gillespie, A. (2007). <a  href="http://www.webcitation.org/6F2rSYZon"><em>Foundations of economics. Additional chapter on business strategy</em></a>. Oxford
+University Press. Retrieved 8 March, 2013 from http://fdslive.oup.com/www.oup.com/orc/resources/busecon/economics/gillespie_econ2e/01student/additional/business_strategy.pdf
+(Archived by WebCite&reg; at http://www.webcitation.org/6F2rSYZon)</li>
+
+<li id="lopez2006">L&oacute;pez S&aacute;nchez, J.I. y Arroyo Barrig&uuml;ete, J.L. (2006). Externalidades de red en la econom&iacute;a digital: una revisi&oacute;n te&oacute;rica.<em>Econom&iacute;a Industrial</em>,  No. 361,  21-31</li>
+
+<li id="fenn2011">Fenn, J. (2011).<em>Gartner's hype cycle special report for 2011</em>. Stamford, CT: Gartner.</li>
+  
+<li id="fenn2008">Fenn, J. y Raskino, M. (2008).<em>Mastering the hype cycle: how to choose the right innovation at the right time</em>. Boston, MA: Harvard Business Press.</li>
+
+<li id="hausenblas2009">Hausenblas, M. (2009).  <a href="http://www.webcitation.org/6F2E35aXP">Linked data applications: the genesis and the challenges of using linked data on the web</a>. Galway, Ireland: Digital Enterprise Research Institute. (DERI Technical Report 2009-07-26). Retrieved 8 March, 2013 from http://linkeddata.deri.ie/tr/2009-ld2webapp (Archived by WebCite&reg; at http://www.webcitation.org/6F2E35aXP)</li>
+
+<li id="heath2011">Heath, T. y Bizer, C. (2011).<a href="http://www.webcitation.org/6CdewiUO6"><em>Linked data: evolving the web into a global data space</em></a>. San Raphael, CA: Morgan &amp; Claypool Publishers. (Synthesis Lectures on the Semantic Web: Theory and Technology, 2011, v.1, n. 1). Retrieved 8 March, 2013 from http://linkeddatabook.com/book (Archived by WebCite&reg; at http://www.webcitation.org/6CdewiUO6)</li>
+
+<li id="hendler2008">Hendler, J. y Golbeck, J. (2008).  <a href="http://www.webcitation.org/5bD4j1v3T">Metcalfe's law, Web 2.0, and the semantic web</a>.  <em>Journal
+  of Web Semantics</em>, <strong>6</strong>(1), 14-20. Retrieved 11 marh 2013 from http://www.cs.umd.edu/~golbeck/downloads/Web20-SW-JWS-webVersion.pdf (Archived by WebCite&reg; at http://www.webcitation.org/5bD4j1v3T)</li>
+  
+   <li id="her2011">Herman, I. (2011).  <em><a href="http://www.w3.org/People/Ivan/CorePresentations/Applications/Applications.pdf">Semantic Web adoption and applications</a></em>.  Consultado el 08 de marzo 2013 de http://www.w3.org/People/Ivan/CorePresentations/Applications/Applications.pdf</li>  
+
+<li id="latif2009">Latif, A., Saeed, A.U., Hoefler, P., Stocker, A. y Wagner, C. (2009).<a href="http://www.webcitation.org/6F2s0kMYZ">The linked data value chain: a lightweight model for business engineers</a>. In <em>Proceedings of the 5th International Conference on Semantic Systems, 2-4 September, Graz, Austria.</em> (pp. 568-575).  Retrieved 11 march 2013 from http://know-center.tugraz.at/download_extern/papers/ldvc.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6F2s0kMYZ)</li>
+
+<li id="moore2008">Moore, G.A. (2001).  <em>Crossing the chasm: marketing and selling high-tech products to mainstream customers.</em> (Revised ed.). New York, NY: PerfectBound.</li>
+
+<li id="oreilly2005">O'Reilly, T. (2005). <a href="http://www.webcitation.org/6Cdf8Xtpx">What is Web 2.0: design patterns and business models for the next generation of software</a>. Sebastopol, CA: O’Reilly Media.  Retrieved 8 March, 2013 from http://oreilly.com/web2/archive/what-is-web-20.html (Archived by WebCite&reg; at http://www.webcitation.org/6Cdf8Xtpx)</li>
+
+<li id="pastor2011">Pastor S&aacute;nchez, J.A. (2011).  <em>Tecnolog&iacute;as de la web sem&aacute;ntica.</em> Barcelona: Editorial Universitat Oberta de Catalunya.</li>
+
+<li id="pedraza2007">Pedraza-Jim&eacute;nez, R., Codina, L. y Rovira, C. (2007). <a href="http://www.webcitation.org/6F2tj1XND">Web sem&aacute;ntica y ontolog&iacute;as
+  en el procesamiento de la informaci&oacute;n documental</a>.<em>El  profesional de la informaci&oacute;n</em>, <strong>16</strong>(6), 569-578. Retrieved 11 March
+2013 from http://eprints.rclis.org/14298/1/webSemanticaOntologias2007.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6F2tj1XND)</li>
+
+<li id="peset2011">Peset, F., Ferrer-Sapena, A. y Subirats-Coll, I. (2011). <a href="http://www.webcitation.org/6CdfGsbLB">Open data y linked open data: su impacto en el &aacute;rea de bibliotecas y documentaci&oacute;n</a>. <em>El profesional de la informaci&oacute;n</em>, <strong>10</strong>(2), 165-173. (Archived by WebCite&reg; at http://www.webcitation.org/6CdfGsbLB)</li> 
+
+<li id="phifer2011">Phifer, G. (2011). <em>Hype cycle for web and user interaction technologies, 2011</em>. Stamford, CT: Gartner.</li>
+
+<li id="pollock2011">Pollock, R. (2011).  <a href="http://www.webcitation.org/6CefTj7HU">Building the (open) data ecosystem</a>.  [Web log post] Retrieved 8 March, 2013 from
+http://blog.okfn.org/2011/03/31/building-the-open-data-ecosystem/ (Archived by WebCite&reg; at http://www.webcitation.org/6CefTj7HU)</li>
+
+<li id="poynder2011">Poynder, R. (2011).<a href="http://www.webcitation.org/6CefRRXYE">Suber: leader of a leaderless revolution</a>. <em>Information  Today</em>,<strong>28</strong>(7). Retrieved 8 March, 2013 from http://www.infotoday.com/it/jul11/Suber-Leader-of-a-Leaderless-Revolution.shtml (Archived by WebCite&reg; at http://www.webcitation.org/6CefRRXYE)</li>
+
+<li id="rogers2003">Rogers, E.M. (2003). <em>Diffusion of innovations.</em> (5ª ed.). New York, NY: Free Press </li>
+  
+<li id="saorin2011">Saor&iacute;n, T. (2011). <a href="http://www.webcitation.org/6CefOMeMD">C&oacute;mo linked open data impactar&aacute; en las bibliotecas a trav&eacute;s de la innovaci&oacute;n abierta</a>.<em>Anuario ThinkEPI</em>,<strong>6</strong>, 288-292. Retrieved 8 March, 2013 from http://www.thinkepi.net/como-linked-open-data-impactara-en-las-bibliotecas-a-traves-de-la-innovacion-abierta (Archived by WebCite&reg; at http://www.webcitation.org/6CefOMeMD)</li>
+
+<li id="shapiro2000">Shapiro, C. y Varian, H.R. (2000).  <em>El dominio de la informaci&oacute;n: Gu&iacute;a estratégica para la econom&iacute;a de la red</em>. Barcelona: Antoni Bosch
+Editor.</li>
+
+<li id="sierra">Sierra, D. (2011, May 11).  <a href="Abredatos.webarchive">ImprimirAbredatos 2011, c&oacute;mo poner informaci&oacute;n p&uacute;blica al servicio del ciudadano.</a> [Web log post].  Retrieved 12 March, 2013 from http://www.rtve.es/noticias/20110511/abredatos-2011-como-poner-datos-publicos-servicio-del-ciudadano/431358.shtml</li>
+
+<li id="smulders2011">Smulders, C. (2011).  <a href="http://www.webcitation.org/6CefL2J6R">Magic quadrants: positioning technology players within a specific market</a>.  Stamford, CT: Gartner.   Retrieved 8 March, 2013 from http://www.gartner.com/technology/research/methodologies/research_mq.jsp (Archived by WebCite&reg; at http://www.webcitation.org/6CefL2J6R)</li>
+
+ <li id="ver11">Verdonckt, L. (2011, October 3). <a href="http://www.webcitation.org/6EyBNWDtW">First release of the LOD2 stack.</a> [Web log post].  Consultado el 08 de marzo 2013 de http://lod2.eu/BlogPost/677-first-release-of-the-lod2-stack.html  (Archived by WebCite&reg; at http://www.webcitation.org/6EyBNWDtW)</li>
+ 
+   <li id="w3c2011">W3C. <em>Library Linked Data Incubator Group</em>. (2011).  <em><a href="http://www.webcitation.org/6EyVvQXgR">Final report</a></em>.  Consultado el 08 de marzo 2013 de http://www.w3.org/2005/Incubator/lld/XGR-lld-20111025/  (Archived by WebCite&reg; at http://www.webcitation.org/6EyVvQXgR)</li>
+
+<li id="wood2010">Wood, D. (ed.) (2010). <a href="http://www.webcitation.org/6CefIdLXA"><em>Linking enterprise data</em></a>. 3RoundStones.com Retrieved 8 March, 2013 from http://3roundstones.com/led_book/led-contents.html (Archived by WebCite&reg; at http://www.webcitation.org/6CefIdLXA)</li>
+    </ul>
+ </fieldset>
+</form>
+<br>
+<form>
+  <fieldset> <legend id="abs" style="color: white; background-color: rgb(94, 150, 253); font-size: medium; padding: 0.1ex 0.5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+Abstract in english</legend>
+<blockquote><strong>Introduction.</strong> The paper develops a framework for identifying the level of penetration and maturity of <em>linked data</em> technologies,
+as a specific facet of the W3C open model for the semantic Web, in the field of libraries, archives and museums.<br>
+<strong>Method.</strong> The paper applies the conceptual framework of the classical theory of diffusion of innovations, along with patterns of life-cycle analysis of technologies (hype cycle) developed by Gartner Group. We compose a model for the analysis of global factors, adapted to the nature of <em>linked data</em> technology.<br>
+<strong>Results.</strong> A framework for identifying the level of maturity of the linked data technology drivers is outlined. Our analysis indicates that, despite the intense activity detected in the libraries and archives sector, there is still not enough balance between publication, consumption, regulation and technologies to state that we are entering in the phase of maturity.<br>
+<strong>Conclusions.</strong> More linked data initiatives aimed at apps and consumer data are needed, besides exploiting collaborative aspects and build further networks with entities outside the field of  libraries, archives and museums. We assume that leadership from the biggest institutions will continue and open innovation will be intensified. <br>
+</blockquote>
+  </fieldset>
+</form>
+<br>
+<form>
+  <fieldset> <legend style="color: white; background-color: rgb(94, 150, 253); font-size: medium; padding: 0.1ex 0.5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+How to cite this paper </legend>
+<div><br>Saor&iacute;n, T., Peset, F. &amp; Ferrer-Sapena, A. (2013). Factores para la adopci&oacute;n de <em>linked data</em> e implantaci&oacute;n de la web sem&aacute;ntica en bibliotecas, archivos  y museos. <em>Information Research</em>, <strong>18</strong>(1) paper 570.  [Available at http://InformationR.net/ir/18-1/paper570.html]</div>
+  </fieldset>
+</form>
+</section>
+    </article>
+    <br>
+    <section>
+
+<table class="footer" style="">
+<tbody>
+  <tr>
+<td colspan="3" style="text-align: center; background-color: rgb(94, 150, 253); color: white; font-family: verdana; font-size: small; font-weight: bold;">
+Find other papers on this subject</td>
+  </tr>
+  <tr>
+<td style="text-align: center; vertical-align: top;">
+<form method="get" action="http://scholar.google.com/scholar"
+
+target="_blank">
+<table class="footer">
+<tbody>
+  <tr>
+    <td style="white-space: nowrap; vertical-align: top; text-align: center;">
+<input name="q" value="&quot;linked data&quot;  &quot;semantic web&quot; libraries archives museums"
+
+type="hidden"><br>
+<input name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;"
+
+type="submit"> <input name="num" value="100"
+
+type="hidden"> </td>
+  </tr>
+</tbody>
+</table>
+</form>
+</td>
+<td style="vertical-align: top; text-align: center;">
+<!-- Search Google -->
+<form method="get" action="http://www.google.com/custom" target="_blank">
+<table class="footer">
+<tbody>
+  <tr>
+    <td style="white-space: nowrap; vertical-align: top; text-align: center;">
+<input name="q" value="&quot;linked data&quot;  &quot;semantic web&quot; libraries archives museums"
+
+type="hidden"><br>
+<input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;"
+
+type="submit"> <input name="client" value="pub-5081678983212084"
+
+type="hidden"> <input name="forid" value="1"
+
+type="hidden"> <input name="ie" value="ISO-8859-1"
+
+type="hidden"> <input name="oe" value="ISO-8859-1"
+
+type="hidden"> <input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;"
+
+type="hidden"> <input name="hl" value="en" type="hidden">
+    </td>
+  </tr>
+</tbody>
+</table>
+</form>
+</td>
+<td style="vertical-align: top; text-align: center;">
+<form method="get" action="http://www.bing.com" target="_blank">
+<table class="footer">
+<tbody>
+  <tr>
+    <td style="white-space: nowrap; vertical-align: top; text-align: center;">
+<input name="q" value="&quot;linked data&quot;  &quot;semantic web&quot; libraries archives museums"
+
+type="hidden"> <br>
+<input name="sa" value="Bing" style="font-size: small; font-family: Verdana; font-weight: bold;"
+
+type="submit"> <input name="num" value="100"
+
+type="hidden"> </td>
+  </tr>
+</tbody>
+</table>
+</form>
+</td>
+  </tr>
+</tbody>
+</table>
+<div style="text-align: center;">Check for citations, <a href="http://scholar.google.co.uk/cholar?hl=en&amp;q=http://informationr.net/ir/18-1/paper570.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+<br>
+<!-- AddThis Button BEGIN -->
+<div style="text-align: center;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a> <a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script>
+<!-- AddThis Button END -->
+<hr>
+
+<table class="footer" style="">
+<tbody>
+  <tr>
+<td style="text-align: center; vertical-align: top;">
+<div>  <a href="http://www.digits.net" target="_blank">
+    <img src="http://counter.digits.net/?counter={b24a9395-aa1e-59c4-e16f-1d45750676d6}&amp;template=simple" 
+     alt="Hit Counter by Digits"  />
+  </a></div>
+</td>
+<td class="footer" style="text-align: center; vertical-align: middle;">
+<div>&copy; the authors, 2013. <br>
+Last updated: 8 March, 2013</div>
+</td>
+<td style="text-align: center; vertical-align: middle;">&nbsp;
+</td>
+  </tr>
+</tbody>
+</table>
+    </section>
+    <footer>
+<hr>
+<table class="footer">
+<tbody>
+  <tr>
+<td>
+<div class="button">
+<ul style="text-align: center;">
+<li><a href="infres181.html">Contents</a> | </li>
+<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+<li><a href="../irsindex.html">Subject index</a> | </li>
+<li><a href="../search.html">Search</a> | </li>
+<li><a href="../index.html">Home</a></li>
+</ul>
+</div>
+</td>
+  </tr>
+</tbody>
+</table>
+<hr> </footer>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">  </script>
+    <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>
+  </body>
+</html>
+

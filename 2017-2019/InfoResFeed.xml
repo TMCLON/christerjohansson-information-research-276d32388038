@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Information Research Feed</title>
+  <link>http://informationr.net/ir/contents.html</link>
+  <description>An RSS feed to keep up to date with Information Research</description>
+  <image>
+  <url>http://informationr.net/ir/mini_logo.gif</url>
+  <title>Information Research</title>
+  <link>http://informationr.net</link>
+</image>
+  <item>
+    <title>Editorial</title>
+    <link>http://informationr.net/ir/22-2/editor222.html</link>
+    <description>An introduction to the issue</description>
+  </item>
+ <br />
+    <item>
+    <title>Karryl Kim Sagun, and Brendan Luyt – Cultured and popular literary circuits on Facebook: a case study of Singaporean print culture in social media</title>
+    <link>http://informationr.net/ir/22-2/paper746.html</link>
+    <description>This article presents a case study of social media use by the independent Singaporean bookstore, BooksActually. 
+ A genre analysis based on Bhatia’s list of facets was conducted on the bookstore’s Facebook page. BooksActually's Facebook posts, collected in reverse chronological order in March 2015 and cleaned using the software NVivo, were analysed. </description>
+  </item>
+
+      <br />
+    <item>
+    <title>Sara Nelissen, Jan Van den Bulck and Kathleen Beullens – A typology of cancer information seeking, scanning and avoiding: results from an exploratory cluster analysis</title>
+    <link>http://informationr.net/ir/22-2/paper747.html</link>
+    <description>This study aims to (a) construct a typology of how individuals acquire cancer information, and (b) examine whether these types differ regarding socio-demographics and cancer-related knowledge, attitudes and behaviour.  A standardized, cross-sectional survey among cancer diagnosed and non-diagnosed individuals in Flanders, Belgium (N= 2008) was conducted. </description>
+  </item>
+ <br />
+    <item>
+    <title>Chi-Cheng Huang - Cognitive factors in predicting continued use of information systems with technology adoption models.</title>
+    <link>http://informationr.net/ir/22-2/paper748.html</link>
+    <description>The ultimate viability of an information system is dependent on individuals’ continued use of the information system. In this study, we use the technology acceptance model and the theory of interpersonal behaviour to predict continued use of information systems.  We established a Web questionnaire on the mysurvey Website and recruited participants via social networks. Data were collected from a sample of 1154 Webmail users in Taiwan.</description>
+  </item>
+<br />
+    <item>
+    <title>Andrew Cox and Melanie Benson - Visual methods and quality in information behaviour research: the cases of photovoice and mental mapping</title>
+    <link>http://informationr.net/ir/22-2/paper749.html</link>
+    <description>The purpose of the paper is to explore the ways in which visual methods can increase the quality of qualitative information behaviour research. The paper examines Tracy’s framework of eight criteria for research quality: worthy topic, rich rigour, sincerity, credibility, resonance, significant contribution, ethical issues and meaningful coherence. It explores photovoice and mental mapping as examples of visual research methods, to consider how far they have the potential to increase research quality against these criteria.</description>
+  </item>
+
+      <br />
+
+    <item>
+    <title>Ameera Mansour and Helena Francke - Credibility assessments of everyday life information on Facebook: a sociocultural investigation of a group of mothers</title>
+    <link>http://informationr.net/ir/22-2/paper750.html</link>
+    <description>The article explores whether members of a Facebook group view the group as a source of credible information and how they evaluate the credibility of information provided in the group.  The data for this study were collected using semi-structured interviews with 19 members of a closed Facebook group for mothers.</description>
+  </item>
+  
+  <item>
+    <title>Noa Aharony and Romina Goldman - E-health literacy and the vaccination dilemma: an Israeli perspective</title>
+    <link>http://informationr.net/ir/22-2/paper751.html</link>
+    <description>Parents' hesitancy to use vaccines is becoming more prevalent in Israel. The aim of the current research is to examine whether there is a relationship between the increase in parents’ level of involvement in the decision to vaccinate their children, and the increase in searching for and filtering information from online electronic sources. The current research is based on Hochbaum and Rosenstock's health belief model from 1952 and the Lily model, which relates to e-health literacy.</description>
+  </item>
+  
+    <item>
+    <title>Prabha Rajagopal and Sri Devi Ravana - Document level assessment of document retrieval systems in a pairwise system evaluation</title>
+    <link>http://informationr.net/ir/22-2/paper752.html</link>
+    <description>The use of averaged topic-level scores can result in the loss of valuable data and can cause misinterpretation of the effectiveness of system performance. This study aims to use the scores of each document to evaluate document retrieval systems in a pairwise system evaluation.  The chosen evaluation metrics are document-level precision scores against topic-level average precision (AP) scores, and document-level rank-biased precision scores against topic-level rank-biased precision at cut-off k (k=100) scores.</description>
+  </item>
+
+  <item>
+  <title>Bo Hsiao, Yu-Qian Zhu and Li-Yueh Chen - Untangling the relationship between Internet anxiety and Internet identification in students: the role of Internet self-efficacy</title>
+<link>http://informationr.net/ir/22-2/paper753.html</link>
+<description></description>
+</item>
+
+<item>
+<title>Yuanyuan Feng and Denise E. Agosto - The experience of mobile information overload: struggling between needs and constraints</title>
+<link>http://informationr.net/ir/22-2/paper754.html</link>
+<description>This exploratory study investigates the phenomenon of mobile information overload. We present a multi-faceted picture of smartphone users’ information tasks in relation to their experience of mobile information overload.  We used qualitative interviewing methods, incorporating a modified critical incident technique and elements of contextual inquiry, to collect data from nine smartphone users. </description>
+</item>
+
+<item>
+<title>Virpi Pietikäinen, Terttu Kortelainen, and Pirkko Siklander - Public librarians as partners in problem-based learning in secondary schools: a case study in Finland</title>
+<link>http://informationr.net/ir/22-2/paper755.html</link>
+<description>Teachers in Finland are demanded to develop students’ competencies in information literacy. However, they can meet this demand only by collaborating with public librarians. The aim in this case study was to explore the perspectives of teachers, librarians and students in a problem-based project and to analyse the advantages and challenges of collaboration between teachers and librarians.</description>
+</item>
+ <br />
+ 
+ <item>
+ <title>Petros Kostagiolas, Charilaos Lavranos, Konstantina Martzoukou and Joseph Papadatos - The role of personality in musicians’ information seeking for creativity</title>
+ <link>http://informationr.net/ir/22-2/paper756.html</link>
+  <description> This paper explores the relationship between musicians' information seeking behaviour and their personality traits within the context of musical creativity. Although previous research has addressed different socio-technological and behavioral aspects of music information seeking, the role of personality characteristics around creative activities has been an under-researched area.  Research was conducted by means of a questionnaire survey administered to Greek musicians. Survey questions were developed based on theory from the domains of information behaviour and musical creativity. Different personality characteristics were measured using the Core Self-Evaluations Scale based on self-efficacy, self-esteem, locus of control and neuroticism.</description>
+  </item>
+  <br />
+  
+  <item>
+ <title>Helena Francke, Jonas Gamalielsson, and Björn Lundell - Institutional repositories as infrastructures for long-term preservation</title>
+ <link>http://informationr.net/ir/22-2/paper757.html</link>
+  <description>The study describes the conditions for long-term preservation of the content of the institutional repositories of Swedish higher education institutions based on an investigation of how deposited files are managed with regards to file format and how representatives of the repositories describe the functions of the repositories.  The findings are based on answers to a questionnaire completed by thirty-four institutional repository representatives (97% response rate).</description>
+  </item>
+  <br />
+  
+    <item>
+ <title>Ana M. Muñoz-Muñoz and M. Dolores Mirón-ValdiviesoAnalysis of collaboration and co-citation networks between researchers studying violence involving women</title>
+ <link>http://informationr.net/ir/22-2/paper758.html</link>
+  <description>We analyse the collaboration and co-citation networks at the international level in scientific articles about violence against women. The aim is to identify who are writing about this subject, if they are women and/or men, who the most influential authors are and which institutions they belong to, and finally which authors are cited most frequently.  As a source of information we have consulted the Web of Science database, from which we recovered and analysed a total of 8,448 articles. </description>
+  </item>
+  <br />
+  
+      <item>
+  <title>Book reviews</title>
+  <link>http://informationr.net/ir/reviews/reviews.html</link>
+  <description>Several new books are reviewed in this issue</description>
+  </item>
+  </channel>
+ </rss>
+
+
+

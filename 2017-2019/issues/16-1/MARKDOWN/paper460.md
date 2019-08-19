@@ -1,0 +1,789 @@
+#### vol. 16 no. 1, March 2011
+
+# "I asked my Mum, but" and other cases of unsuccessful information seeking by asking
+
+#### [Isto Huvila](#author)  
+Department of Archives, Library and Information, and Museum and Cultural Heritage Studies, Uppsala University, Box 625, SE-75126 Uppsala, Sweden
+
+#### Abstract
+
+> **Introduction.** Failure to find information is common. An exploratory analysis of cases when family members or friends were asked for information can provide better understanding of when, how and why interpersonal information seeking within a close network of individuals fails.  
+> **Method.** A sample of utterances (in form of "I asked my mum, but") was harvested from the Web using LexiURL Searcher software.  
+> **Analysis.** The material (327 utterances) was analysed with content analysis and categorised using the constant comparative method.  
+> **Results.** People utter on the Web different types of, mostly fact-related, questions they have asked earlier of their family members and friends. Multiple factors were found to affect interpersonal information seeking including a major barrier, bashfulness, which has not been discussed earlier in the literature.  
+> **Conclusions.** Success in asking questions of family and friends is a broad issue of mastering information content, social environment and other contexts of information seeking rather than a technical ability.
+
+## Introduction
+
+Failure to find information is common. Anxiety, reformulation of needs and queries, doubts about the quality of results and satisficing are typical in information seeking (e.g., [Kuhlthau 1993](#kuhlthau1993); [Arora _et al._ 2008](#Arora2008)), and especially in exploratory, _open ended_ information seeking ([Mansourian 2008b](#Mansourian2008b)). Failure to find information and suboptimal information searching have been studied before (e.g., [Meho and Tibbo 2003](#mehotibbo2003); [Huotari and Wilson 2001](#Huotari2001); [Mansourian and Ford 2007](#Mansourian2007)), but there is little information science research that has looked specifically at information seeking by asking other people outside the scope of formal reference situations ([White 2000](#White2000)).
+
+A number of studies on information source selection and preferences point out that different types of information sources are preferred in different situations ([Savolainen 2008](#Savolainen2008a)). Process and continuum oriented approaches and studies of information seeking (e.g., [Dervin 1998](#dervin1998); [Kuhlthau 2004](#Kuhlthau2004)) cover instances when a source preference changes because of a failure. Process approaches have also placed an emphasis on tracing information pathways through different types of sources during the process of seeking information ([Savolainen 2008](#Savolainen2008a)). However, there has been only a little specific interest in the particular moment and conditions when the preference and mode of seeking changes.
+
+The purpose of this paper is to explore failures in question asking and to discuss when a failure causes people to turn from one mode of information seeking to another and what makes people to change the source or channel and to express utterances of their earlier failed information seeking attempts.
+
+This paper discusses the results of an exploratory study that analyses utterances of failures when information was sought by asking family members. The aim is to understand better when, how and why social information seeking within a close network of individuals fails. Unlike earlier studies, this study is not limited to a specific context of information needs or problems such as particular profession ([Alwis et al. 2006](#Alwis2006)), hobby or higher things ([Kari and Hartel 2007](#Kari2007a)) or search environment ([Savolainen and Kari 2006](#Savolainen2006c)), but attempts to get a broader picture of the phenomenon by using open Web as a source of utterances. The findings contribute to the general understanding of information sharing practices and information seeking behaviour, information source preferences ([Savolainen 2008](#Savolainen2008a)) and especially to how, why and when asking family members is successful and when it fails.
+
+## Literature overview
+
+### Unsuccessful information seeking
+
+Wilson ([1981](#wilson1981)) underlined the prominence of the concept of failure in information behaviour. Failure is often described as a failure of obtaining needed materials or accessing desired sources of information (e.g., [Meho and Tibbo 2003](#mehotibbo2003)). Wilson defines failed information seeking as a failure if information is not _used_. He also introduces the concept _level of satisfaction_, which describes how satisfied an individual is with the information seeking and its results. Huotari and Wilson ([2001](#Huotari2001)) have studied organizational information needs and the effects of failed information seeking to the success and failure of an organisation by using a critical success factor approach. Their results suggest of complexity of the underpinnings of success and failure similar to the study by Savolainen ([1995](#savolainen1995)), which discusses the concept of mastery of life and its relation to the anticipated success and failure of problem solving.
+
+Earlier research has identified several different reasons for failure. One of the early studies of success and failure in information seeking was conducted by Tagliacozzo and Kochen ([1970](#Tagliacozzo1970)) in the context of known-item searches. They classified failures as collection failures (a book does not exist) and user's failures (user failed to find a book). Mansourian and Ford ([2007](#Mansourian2007)) found that searchers themselves attributed clearly their failures to internal (e.g., ability or effort) andexternal (e.g., luck or information not being available) factors. Savolainen and Kari ([2006](#Savolainen2006c)) studied gaps and gap bridging in Web searching from a sense-making theory point of view. They found eleven gaps with three major explaining factors: problematic content of information, insufficient search competence and problems caused by the search environment.
+
+Failure is a contextual and subjective matter. Mansourian _et al._ ([2008](#Mansourian2008)) studied unsuccessful information searching of academics and identified three types of failures: unexpected failures (searcher was surprised that information was not found), unexplained failures (searcher could not explicate why searching failed) and predicted failures (searcher anticipated that information would not be found). Sub-optimal information seeking performance may also be perceived to be acceptable. The choice to accept sub-optimal results depends on both cognitive and environmental factors and is more closely related to the costs of searching than the quality of information ([Fu and Gray 2006](#Fu2006)).
+
+Consequences of failed information seeking are diverse. The result may be no information at all, but also unusable or in some cases, even dangerous information as in the case of medical consultation ([Cline and Haynes 2001](#Cline2001)). Mansourian ([2008a](#Mansourian2008a)) has analysed coping strategies of Web information seekers and identified active (seeking help to get more satisfactory results) and passive (minor modifications to query, acceptance) approaches. A major cause of sensed failure in information seeking is often assumed or abbreviated to be related to the problems of defining and understanding the problem that triggers information seeking activity ([Marchionini 1997](#Marchionini1997): 55). Rather unsurprisingly, training in using search systems increases success (e.g., [Bennett _et al._ 2006](#Bennett2006)). In case of family members and question asking, it may assumed that information seekers are comparatively well _trained_ in using the particular information sources, but this does not mean that information seeking would be problem-free.
+
+### Information source selection
+
+Both information sources discussed in the present study, interpersonal sources and the Web, have been found to be essential for individuals and groups. Warner _et al._ ([1973](#Warner1973)) demonstrated the importance of interpersonal information sources already in the early 1970s. Later studies have confirmed the findings (e.g., [Lu 2007](#Lu2007); [Zimmer _et al._ 2007](#Zimmer2007)). During the last decade, the Web has become an increasingly important source of information in both work ([Tenopir _et al._ 2009](#Tenopir2009); [Case 2006](#case2006)) and everyday life contexts (e.g., [Rieh 2004](#Rieh2004)).
+
+As Savolainen stresses ([2008](#Savolainen2008a)), source selection is a related, but different phenomenon from the notion of relevance judgment. Source selection is done earlier than relevance judgments and based on assumptions of the potential relevance and usability of sources. Besides being an indication of a relevance judgment or failure, an utterance of unsuccessful information seeking can be also an indication of continued effort. Several studies have addressed information source preferences and selection criteria in diverse everyday life and work related contexts. Savolainen ([2008](#Savolainen2008a)) has studied information source selection and mapped how information seeking proceeds from one type of source to another concluding that typical length of an _information pathway_ is between three and four types of sources.
+
+Fisher and Naumer ([2006](#Fisher2006)) identified several preference criteria for information sources in their study of information grounds. The criteria included reliability or trustworthiness; contact, access or convenience; inexpensiveness; ease of use; and communication and acquaintance with the personal needs of the seeker. The findings of Chen and Hernon pointed out the importance of familiarity and known reliability of information sources. In work contexts, the principal criteria tend to relate to factors such as accessibility and availability ([Savolainen 1995](#savolainen1995); [Huvila 2006](#huvila2006)), although as Xu _et al._ ([2006](#xu2006b)) point out, in some cases, quality considerations might have a far more significant role than the notion of least effort.
+
+## Empirical study
+
+### Material and method
+
+The material of the present study consists of 327 utterances of unsuccessful information seeking collected from the Web. The heuristically generated utterances used here are listed in Table [1](#1-150011). The heuristics was based on an in-depth exploration of Web-based discussion forums and blogs. The purpose of the heuristics was to discern typical patterns of expressing failures of interpersonal information seeking. An analysis of a larger material with more utterance types is left to a future study. Each of the chosen candidate expressions was tested by using a Google search. The first ten results returned by Google were overviewed to evaluate their relevance for the study, i.e., whether or not the utterances were related to information seeking.
+
+The data were collected using [LexiURL Searcher software](http://www.webcitation.org/query?url=http%3A%2F%2Flexiurl.wlv.ac.uk%2F&date=2011-02-09) with the Bing search engine API in November 2009\. The total number of hits returned and analysed in the present study is listed in Table [1](#1-150011) together with the number of valid information-seeking-related hits and codes (prefix+utterance #) used to refer to the individual utterances later in the text.
+
+<table width="80%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 1: Utterances of unsuccessful social information seeking examined in the present study**</caption>
+
+<tbody>
+
+<tr>
+
+<th>Utterance</th>
+
+<th>Hits returned</th>
+
+<th>Valid information related hits</th>
+
+<th>Code</th>
+
+</tr>
+
+<tr>
+
+<td>"i asked my friends but"</td>
+
+<td align="center">75</td>
+
+<td align="center">39</td>
+
+<td align="center">F# (e.g., F1)</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my [mum/mom] but"*****</td>
+
+<td align="center">55</td>
+
+<td align="center">31</td>
+
+<td align="center">M#</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my mother but"</td>
+
+<td align="center">102</td>
+
+<td align="center">65</td>
+
+<td align="center">MO#</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my father but"</td>
+
+<td align="center">41</td>
+
+<td align="center">16</td>
+
+<td align="center">FA#</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my dad but"</td>
+
+<td align="center">116</td>
+
+<td align="center">93</td>
+
+<td align="center">D#</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my sister but"</td>
+
+<td align="center">56</td>
+
+<td align="center">48</td>
+
+<td align="center">S#</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my brother but"</td>
+
+<td align="center">53</td>
+
+<td align="center">43</td>
+
+<td align="center">B#</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my daughter but"</td>
+
+<td align="center">10</td>
+
+<td align="center">9</td>
+
+<td align="center">DA#</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my son but"</td>
+
+<td align="center">23</td>
+
+<td align="center">14</td>
+
+<td align="center">SO#</td>
+
+</tr>
+
+<tr>
+
+<td colspan="4">***** ? (hits for the two spellings are analysed together)</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+The motivation to focus, on one hand, on failed social information seeking and, on the other hand, on the Web as a source of utterances was based on earlier findings on the importance of interpersonal information sources Warner _et al._ ([1973](#Warner1973)) and the Web as an information source ([Rieh 2004](#Rieh2004); [Case 2006](#case2006)).
+
+The study is limited by the fact that the use of explicit utterances of failed information seeking places the focus of the study to very particular contexts of the Web. Such utterances are common on discussion forums, question and answer services, blogs and in other contexts of personal writing on the Web. Because the aim of the study is to map the variety of the phenomenon of unsuccessful information seeking by asking family members and friends and not to present a complete overview of the field, the limitation may be considered acceptable. Even though most of the utterances were followed by a question to other users of the particular Web service in which the utterance occurred, the majority of the utterances did account for, at least, a partial context of the failed search. Finally, a further limitation of this study is that the material is limited to an unknown sample of English speaking information seekers. The utterances and their contexts contained only occasional and consequential evidence exist of the age, gender or other characteristics of the studied population.
+
+The Web pages that contained the utterances were analysed using content analysis ([White & Marsh 2006](#White2006)) and close reading ([DuBois 2003](#DuBois2003)) to map the variety of characteristics and patterns in the information seeking situations and their contexts. Finally, the utterances were classified using the constant comparative method ([Glaser and Strauss 1967](#glaserstrauss1967)).
+
+## Results
+
+### Quantitative overview
+
+The majority of the analysed utterances of were related to information issues i.e. the _asking_ referred to _asking questions_ instead of _asking permission_ or _asking for company_.
+
+<table width="100%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 2: Quantitative overview of the utterances**</caption>
+
+<tbody>
+
+<tr style="center">
+
+<th> </th>
+
+<th> </th>
+
+<th colspan="4">% of information related questions</th>
+
+</tr>
+
+<tr style="center">
+
+<th>Utterance</th>
+
+<th>Information related  
+(of all hits)</th>
+
+<th>Did not get  
+an answer</th>
+
+<th>Factual question</th>
+
+<th>Experience- &  
+opinion-related  
+questions</th>
+
+<th>Asked for  
+an information-  
+related resource</th>
+
+</tr>
+
+<tr>
+
+<td>"i asked my friends but"</td>
+
+<td align="center">52.0%  
+(39/75)</td>
+
+<td align="center">61.5%  
+(24/39)</td>
+
+<td align="center">35.9%  
+(14/39)</td>
+
+<td align="center">25.6%  
+(10/39)</td>
+
+<td align="center">5.1%  
+(2/39)</td>
+
+</tr>
+
+<tr>
+
+<td>"is asked my mum/mom but"</td>
+
+<td align="center">56.4%  
+(31/55)</td>
+
+<td align="center">38.7%  
+(12/31)</td>
+
+<td align="center">32.3%  
+(10/31)</td>
+
+<td align="center">12.9%  
+(4/31)</td>
+
+<td align="center">6.5%  
+(2/31)</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my mother but"</td>
+
+<td align="center">63.6%  
+(38/102)</td>
+
+<td align="center">44.7%  
+(17/38)</td>
+
+<td align="center">55.3%  
+(21/38)</td>
+
+<td align="center">10.5%  
+(4/38)</td>
+
+<td align="center">?</td>
+
+</tr>
+
+<tr style="center">
+
+<td>"i asked my father but"</td>
+
+<td align="center">37.2%  
+(16/41)</td>
+
+<td align="center">31.3%  
+(5/16)</td>
+
+<td align="center">37.5%  
+(6/16)</td>
+
+<td align="center">6.3%  
+(1/16)</td>
+
+<td align="center">?</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my dad but"</td>
+
+<td align="center">80.2%  
+(93/116)</td>
+
+<td align="center">77.4%  
+(72/93)</td>
+
+<td align="center">61.3%  
+(57/93)</td>
+
+<td align="center">?</td>
+
+<td align="center">5.4%  
+(5/93)</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my sister but"</td>
+
+<td align="center">85.7%  
+(48/56)</td>
+
+<td align="center">52.1%  
+(25/48)</td>
+
+<td align="center">39.6%  
+(19/48)</td>
+
+<td align="center">8.3%  
+(4/48)</td>
+
+<td align="center">4.2%  
+(2/48)</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my brother but"</td>
+
+<td align="center">81.1%  
+(43/53)</td>
+
+<td align="center">53.3%  
+</td>
+
+<td align="center">56.7%  
+</td>
+
+<td align="center">3.3%  
+</td>
+
+<td align="center">6.7%  
+</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my daughter but"</td>
+
+<td align="center">90.0%  
+(9/10)</td>
+
+<td align="center">90.0%  
+</td>
+
+<td align="center">70.0%  
+</td>
+
+<td align="center">20.0%  
+</td>
+
+<td align="center">?</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my son but"</td>
+
+<td align="center">60.9%  
+(14/23)</td>
+
+<td align="center">64.3%  
+(9/14)</td>
+
+<td align="center">50.0 %  
+(7/14)</td>
+
+<td align="center">14.3%  
+(2/14)</td>
+
+<td align="center">7.1%  
+(1/14)</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+In comparison to experience-related questions, _friends_ were asked factual questions somewhat less frequently (35.9% of the cases) whereas some of the family members were used as sources of factual information (_daughters_, _dads_, _mothers_ and _brothers_) rather than of experience. Of all the groups, the _friends_ were most commonly asked experience-related questions (25.6%). _Mothers_ (55.3%) were more likely sources of factual information than _mums_ (32.3%) while _dads_ (61.3%) were more often asked factual questions than _fathers_ (37.5%). Also _brothers_ (56.7%) were more likely to be asked factual questions than _sisters_ (39.6%).
+
+Experience and opinion related questions are asked and uttered on the Web more seldom than factual questions. Besides _friends_ (as mentioned), experiences and opinions were asked, to a notable extent, only of _daughters_ (20.0%). It was rather uncommon to utter questions related to attempts to find information resources. Individual askers were also playing with questions. In a couple of cases, askers were deliberately asking their parents and relatives questions to which they were unlikely to give correct answers. such as having an idea what fantasy monsters looked like (M3, M18). Another asker was trying to be funny by writing that she had asked her mother what orgasm is (although she had not asked the question) and repeating the same question on the Web(M1).
+
+<table width="100%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd"><caption align="bottom">  
+**Table 3: Quantitative overview of frequent reasons of not getting an answer**</caption>
+
+<tbody>
+
+<tr>
+
+<th></th>
+
+<th colspan="7" align="center">% of information related questions</th>
+
+</tr>
+
+<tr>
+
+<th>Utterance</th>
+
+<th align="center">Answerer did not know the answer</th>
+
+<th align="center">Answerer did not  
+remember the  
+answer</th>
+
+<th align="center">Answer was not  
+comprehensible</th>
+
+<th align="center">Answer was  
+unsatisfactory</th>
+
+<th align="center">Seeking  
+confirmation</th>
+
+<th align="center">Answerer did not  
+know the context  
+of the question</th>
+
+<th align="center">Answerer  
+did not  
+answer  
+the question</th>
+
+</tr>
+
+<tr>
+
+<td>"i asked my friends but"</td>
+
+<td align="center">20.5%  
+(8/39)</td>
+
+<td align="center">?</td>
+
+<td align="center">2.6%  
+(1/39)</td>
+
+<td align="center">2.6%  
+(1/39)</td>
+
+<td align="center">7.7%  
+(3/39)</td>
+
+<td align="center">?</td>
+
+<td align="center">2.6%  
+(1/39)</td>
+
+</tr>
+
+<tr>
+
+<td>"is asked my mum/mom but"</td>
+
+<td align="center">25.8%  
+(8/31)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">19.4%  
+(6/31)</td>
+
+<td align="center">6.5%  
+(2/31)</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my mother but"</td>
+
+<td align="center">49.5%  
+(15/38)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my father but"</td>
+
+<td align="center">25.0%  
+(4/16)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">12.5%  
+(2/16)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my dad but"</td>
+
+<td align="center">33.3%  
+(31/93)</td>
+
+<td align="center">17.2%  
+(16/93)</td>
+
+<td align="center">10.8%  
+(10/93)</td>
+
+<td align="center">5.4%  
+(5/93)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my sister but"</td>
+
+<td align="center">31.3%  
+(15/48)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">10.4%  
+(5/48)</td>
+
+<td align="center">6.3%  
+(3/48)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my brother but"</td>
+
+<td align="center">16.3%  
+(7/43)</td>
+
+<td align="center">7.0%  
+(3/43)</td>
+
+<td align="center">2.3%  
+(1/43)</td>
+
+<td align="center">9.3%  
+(4/43)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">7.0%  
+(3/43)</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my daughter but"</td>
+
+<td align="center">44.4%  
+(4/9)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">11.1%  
+(1/9)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td>11.1%  
+(1/9)</td>
+
+</tr>
+
+<tr>
+
+<td>"i asked my son but"</td>
+
+<td align="center">28.6%  
+(4/14)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">21.4%  
+(3/14)</td>
+
+<td align="center">?</td>
+
+<td align="center">?</td>
+
+<td align="center">7.1%  
+(1/14)</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+The most frequent reason (Table [3](#1-150033)) for not getting an answer was that the person asked did not know it. _Mothers_ (49.5% of the cases) and _daughters_ (44.4%) did worst at knowing an answer while _brothers_ seemed to be the best in this respect (in 16.3% cases not knowing an answer). Another typical reason was that the answer was not satisfactory for various reasons. _Dads_ (17.2%) and _brothers_ (7.0%) were the most frequent answerers who did not remember the answers or could not answer in a comprehensible manner (10.8% and 2.3% respectively). In some cases with _friends_ (7.7%) and _sisters_ (6.3%) the respondents answered the questions, but the askers had decided to seek confirmation. Finally, a relatively frequently occurring reason to utter was that respondent had refused to answer the question (in five categories up to 11.1% of cases).
+
+Other reasons of failure mentioned were, for instance, that all answerers had different opinions, answerer did not bother to answer at the moment (although it had been stated that the question could be answered later), and that answerer did not answer as the asker had expected.
+
+### Qualitative analysis
+
+The contexts of the questions vary considerably from domestic and personal affairs to work- and hobby-related questions. Diverse computer and software-related issues formed a common topic with all groups of informants. It seems that family members and friends are used as rather all-round sources of first hand information. _Friends_ were a typical source of hobby- and interest-related information. _Mums_ and _mothers_ were asked about health and intimate topics. _Mothers_ and _fathers_ were also mentioned frequently in the context of ancestry- and genealogy-related questions (e.g., "I asked my mother but she doesn't know who the boy standing next to NN in this photo is" (MO7)). _Dads_ were asked often about school-work-related topics such as geometry (D1), Robert Boyle's Experiment (D8), but also about older cinema(e.g., persons in Star Wars, (D18)) and sometimes, although infrequently, about personal health-related matters (e.g., D6). _Sisters_ were asked for opinions (e.g., best bulletin board, (S18)), interest-related facts (e.g., about artists S3) and their areas of expertise (S8, S11). _Brothers_, on the other hand, were primarily sources of factual and technical information (e.g., how to edit profile in a bulletin board (B25), shrapnel and the damage it causes (D10), and how to get a working license (B2)). _Daughters_ and _sons_ seemed to function mostly as information sources for elderly parents who asked them about current affairs (e.g., what is finance crisis (DA2)), technology (e.g., how to install a printer (SO8)), and their siblings' specific areas of knowledge or expertise (e.g., diabetes lancing devices (SO14)).
+
+The most typical reason why a factual question could not be answered was that the answerer did not know an answer. The particular answerer might not know an existing answer (What is the [name of the] Earth's galaxy? (D9)). In some cases the answer did not necessarily exist, at least anymore, as with the questions of recognising old deceased relatives. In some cases, the asker was unable to formulate a clear enough question (e.g., asked for a definition of a word that was badly misspelled (S20)). Another frequent failure of information seeking by asking, especially, family members seemed to be that the consulted person refused to answer. The most common contexts of unanswered questions related to personal matters, most typically to sexuality.
+
+Failure to get an answer was not, however, the only reason to utter failures on the Web. Friends were used for seeking confirmation, but also _vice versa_, various Web forums were used to seek confirmation to information given by friends. Family members were, on the other hand, more typically consulted first and if they did not know an answer or refused to answer, other sources were consulted.
+
+Dissatisfaction with answers was another occasional motivation to seek more information. In most cases it was clearly a question of contextual relevance. The people who sought for an alternative answer could not apply earlier answers to their personal contexts or they were unwilling to do so.
+
+## Discussion
+
+The patterns and problems of information seeking depend on the context of seeking, but there are clear parallels between different environments. Similarly to the study of [Meho and Tibbo](#mehotibbo2003) ([2003](#mehotibbo2003)), in the present study, the described reasons of failure were mostly elementary, for instance, the people who were asked a question did not know an answer. The findings indicate also a profound complexity of seeking information by asking in form of a need to seek confirmation, unsuitability of answers or refusal to answer as suggested by Wilson ([1981](#wilson1981)) and Huotari and Wilson ([2001](#Huotari2001)).
+
+There are some evident limitations in the study. The material is collected from the Web and is likely to represent only a very biased sample of all possible utterances related to failed social information seeking. The uneven occurrence of the types of analysed utterances makes also any comparisons, at the best, indicative. Finally, besides information seeking related reasons, some of the utterances can be more plausibly explained by other factors such as convention. In some cases, the people who wrote their utterances hoping to get an answer seemed to substantiate the validity of asking a particular question by writing that someone else did not know an answer. This may be partly customary although in many cases it clearly serves a purpose. A typical answer to a personal teenager's question in many discussion forums appeared to be advice to ask your mother, father or friends. It seems plausible that some information seekers were deliberately trying to avoid getting these sources of advice.
+
+However, in spite of the occurrence of utterances and questions that are unrelated to information seeking, the present material presents a range of insights into social information seeking, how it fails and how it is linked to information seeking on the Web. The analysed material contains instances of failures related to both _collection_ (respondent did not know an answer) and users (respondent could not understand the question or for some reason or another did not answer) ([Tagliacozzo and Kochen 1970](#Tagliacozzo1970)) although the latter types of failures were rare. Asking people allows askers to articulate their questions in an iterative manner and reformulate both question and information need (e.g., as in [White 1998](#White1998)). Askers seemed also to be rather _well trained_ to use their family and friends as information system (cf. [Bennett _et al._ 2006](#Bennett2006)).
+
+The types of failures observed by Mansourian _et al._ ([2008](#Mansourian2008)) could also be discerned in the material. Because of the interactivity of social information seeking it is not surprising that unexplained failures to get information were uncommon. With most utterances it is conceivable that the asker did not expect that the question would not be answered (unexpected failure). Searchers seemed to have been anticipating that their questions could not be answered (predicted failure) only when parents were deliberately asked impossible questions about computer games or similar topics outside their known sphere of knowledge. Similarly, the immediate cause of failure in getting an answer was in most cases the incompetence of the answerer (_external reason_, [Mansourian & Ford 2007](#Mansourian2007)) although it seems that some of the askers had rather great expectations of the knowledgeability or willingness of their friends and family members to answer their questions (_internal reason_). The nature of the failures seems to suggest that in asking questions, the major cause of failure is not related to problem formulation, as with information systems ([Marchionini 1997](#Marchionini1997): 55). A more plausible explanation is the lack of mastery of the complex life-world-wide system formed by answerers, questions and information. The cases when information seeking failed due to a clear inability to formulate a comprehensible question were rare. In contrast, a rather plausible explanation to the failures may be found in Savolainen's ([1995](#savolainen1995)) observations on the relation of the mastery of life and anticipated failures and success in information seeking. The present findings may be interpreted as an indication that in the analysed type of information seeking, the mastery of life is directly related to the effectiveness of information seeking as suggested by Ek ([2005](#ek2005)).
+
+Even though the question asking differs from information searching on the Web or other systems on the level of failures, the major gaps are quite similar to those identified by [Savolainen & Kari](#Savolainen2006c) ([2006](#Savolainen2006c)). In the present material, the gaps are, however, very difficult to distinguish from each other. The utterances identified in the present study can be rather confidently explained as results of varying degrees of problems with the
+
+1.  content of information (unidentified persons in old photographs (MO7));
+2.  competence in asking right (types of) questions (e.g., question about 'gunera' when the asker was possibly interested in gonorrhoea (S20)); and
+3.  problems caused by the search environment (people are unwilling to answer certain types of questions, e.g., What is a prostitute? (M15)).
+
+All of the utterances are signs of active rather than passive coping strategies ([Mansourian _et al._ 2008](#Mansourian2008)). People who utter about the failure of getting an answer are not accepting the state of affairs and are actively seeking for more or better information. In this sense, the uttered failures were indications of continued effort. In most cases the complete _information pathway_ ([Savolainen 2008](#Savolainen2008a)) could not be discerned from the material, but in individual cases the utterers stated, for instance, that they had used a search engine (M20) . Unsurprisingly, the importance of the Web as a place of utterance ([Tenopir _et al._ 2009](#Tenopir2009); [Case 2006](#case2006); [Rieh 2004](#Rieh2004)), and the interpersonal information sources as a starting point of information seeking activity ([Warner _et al._ 1973](#Warner1973)) were clear in the present material.
+
+An analysis of the topics asked from different family members and friends showed variation that suggest of preference criteria. In the present material, accessibility, availability (e.g., [Savolainen 1995](#savolainen1995); [Huvila 2006](#huvila2006)) and acquaintance ([Fisher and Naumer 2006](#Fisher2006)) seem to have been major criteria even if the material does not allow a similarly detailed analysis of preferences and their motivations, or choice within a group than the one conducted, for instance, in the study of Xu _et al._ ([2006](#xu2006b)). Assumed potential relevance ([Savolainen 2008](#Savolainen2008a)) seems to be another major factor. _Sisters_ are consistently asked artist-related questions (e.g., M3, M22), technical and shaving related questions are directed to _brothers_; _dads_ are asked about facts (mostly by younger askers), _fathers_ are asked about the family, _mums_ are used as all-round information sources and _mothers_ are consulted mostly about health and other similar serious matters. _Friends_ are asked more often about experiences and opinions. The existence of failures, and especially the number of contextual problems, difficulty to understand answer and unwillingness to answer do, however, point out that even though askers are knowledgeable about the differences between different informants, asking a right person a right question is a more complex contextual issue (as in [Xu _et al._ 2006](#xu2006b)), than a question of selecting an accessible person that is supposed to know an answer. Even though it may be assumed that in the most of the cases, the askers were rather well _educated_ in using the _system_ ([Bennett _et al._ 2006](#Bennett2006)), they could fail miserably.
+
+The category of questions that were unanswered because the answerer refused to answer a question is of specific interest in the context of the discussion on the barriers of information seeking. Refusal is rather seldom cited as a reason why information seeking may fail (with exception of, for example, [McKenzie 2002](#McKenzie2002a)). From an asker's point of view, it may be seen as a specific case of _unavailable_ information, but the two notions of unavailability and refusal to provide information have major differences . On the basis of the language of the questions, it may be assumed that most of the information seekers who were declined an answer, were teenagers for whom their parents and family members are an important general information resource (pointed out already in earlier studies, [Madden _et al._ 2007](#Madden2007); [Schaefer _et al._ 2009](#Schaefer2009)). Another instance of the same phenomenon is the role of _brothers_ as an information source. On the basis of the utterances, it seems that some of the reluctance of _brothers_ to answer questions might relate to their difficulty of admitting that they did not know an answer. They refused to answer questions altogether and, even more suspiciously, refused to do so at the particular moment when the question was asked. The common characteristics of these cases seem to suggest that _bashfulness_ is a notable barrier for information seeking by asking questions. People are reluctant to talk about particular private topics such sexuality or their own ignorance.
+
+The high number of utterances related to factual rather that experience-related questions might also be seen as somewhat remarkable. It would seem logical to assume that a factual question might be answered in many cases by searching on the Web and there would be less interest in writing an utterance on a Website. The result might, however, indicate the ease of asking and answering questions about experiences and, on the other hand, the difficulty and lack of skills of finding relevant factual information. For instance, one person had tried to search in Google for _gunera_, meaning (apparently) _gonorrhoea_ (S20). The general lack of interest for information sources instead of answers might also indicate of the same phenomenon.
+
+The types of questions asked and the reasons of dissatisfaction to the answers differed notably between the different groups of respondents. It seems that people ask different types of questions from their different social contacts. _Fathers_ and _mums_ were not as common or good sources of factual information as _dads_ and _mothers_. This probably reflects the fact that teenagers ask fact questions of their fathers calling them _dad_, while those who asked of their _fathers_ were more frequently adults and teenagers with more serious concerns such as health. In case of _mums_, it seems apparent that the younger information seekers ask their _mums_ relatively diverse and simple questions and youngsters have frequent problems of understanding the proper context of their own questions. _Mothers_, on the other hand, were asked more complex questions and, respectively, they were less likely to know an answer.
+
+Finally, the material contains less frequent instances of varying types of questions. Asking seriously critical questions with equally critical consequences of failure ([Cline and Haynes 2001](#Cline2001)) relating, for instance, to health and wellbeing was uncommon, but not inexistent (e.g. about diabetes (M4)). In comparison to critical questions, it was more common to ask questions for amusement. Parents were asked about a topic there were unlikely to know and people were trying to be funny by stating that they had asked an (apparently) awkward question (What is orgasm? (M1)). The jesting questions seemed to be primarily motivated by an attempt to be funny, but also by the possibility to prove that, for instance, parents or some Web users are unknowledgeable enough not to get the point of the question. Some wordings such as one question about astronomy may, however, suggest that the questions might also serve a broader purpose of seeking the limits of particular information sources and establishing one's own expertise, for instance, with the fantasy-related questions asked of mothers (M3) or when a person asked for second opinions and factual reasons whether and why she might take a trip of which her mother would not approve (M4).
+
+The instances of seeking confirmation and alternative answers underline the contextual nature of the assumed potential relevance of information and the fact that anticipated relevance is related to non-factual categories such as preferred versus correct answers and to the clearly social forms of asking and answering. In some cases, information seeking failed because information seeker was not satisfied with the answers (_wrong_ opinions about the best movie ever (F18)) or with the partiality of the close respondents (whether this poem is good or not (F47)). In some cases a relevant answer could be anything that is entirely different from the obvious answers the information seeker had already obtained (e.g., what kind of hair colour would suit me best (F69)).
+
+In summary, the findings show that social contacts and the Web are important parts in a complex life-world-wide environment for seeking information and confirmation as, for instance, Savolainen ([1995](#savolainen1995)) and Ek ([2005](#ek2005)) have discussed earlier. People are failing in their information seeking and information source selection because they are unable to find the right person to answer a question, to ask and to use answers because of a variety of external and internal, contextual and subjective factors. Answerers are chosen on the basis of the topic of the question, convenience, ease, acquaintance and the type of the answer that is sought as suggested by earlier research ([Fisher and Naumer 2006](#Fisher2006)).The present findings also emphasise that even if people are 'well trained' (cf.[Bennett _et al._ 2006](#Bennett2006)) in asking other people, the selection of a perfect source of information is a complex contextual issue with multiple challenges. All of those, who have written about their failed searches have clearly adopted an active strategy to cope with their failure ([Mansourian _et al._ 2008](#Mansourian2008)). Bashfulness as a barrier for information seeking illustrates well this complexity. Not a very uncommon reason for not getting an answer was that the answerer refused to answer because of unwillingness to talk about embarrassing topics.
+
+## Conclusions
+
+Asking family members and friends, failing to get an answer and uttering about the failure on the Web is a phenomenon that sheds light to various aspects of information seeking. The phenomenon is, _per se_, an indication of how question asking and the Web are overlapping as environments for information seeking. Even though people are skilful in using people close to them as information sources, there are multiple issues. In the present study, the majority of the utterances were related to factual questions. The findings suggest that it is easier to ask and get answers to questions about experiences and that askers do not expect that uttering such a question on the Web would be useful.
+
+There are clear differences between the types of questions and purposes of asking questions, for instance, between _mums_, _mothers_, _dads_, _fathers_, _brothers_ and _sisters_. Even though the choice of information source might be right (person knows an answer), the person might not be able to provide a satisfactory answer or might refuse to answer. The most typical reason for failure is that the answer was not known or, when _dads_ or _brothers_ were asked, could not be remembered. Other typical reasons were comprehension and context-related problems, unsatisfactory answers and a need for confirmation. Availability, accessibility, acquaintance and familiarity with the person seem to be important criteria for selecting the right person to act as an information source.
+
+Finally, the results suggest that one further reason of refusal, _bashfulness_, might be a major barrier in information seeking by asking questions from family and friends. _Mothers_ refuse to tell their children what is a prostitute and _brothers_ are concealing their ignorance by saying, '_I am not willing to answer the question today_'. In summary, it seems that failure and mastery in seeking information by asking family members and friends is a question of mastering not only the art of selecting a person that knows or should to know the answer. It is a broad life-world-wide issue.
+
+## Acknowledgements
+
+This research is part of the research project "Library 2.0 - a new participatory context" at Information Studies, School of Business and Economics, Abo Akademi University, Finland, financed by the Academy of Finland.
+
+## About the author
+
+Isto Huvila is a post-doctoral research fellow at the department of Archives, Library and Information, and Museum and Cultural Heritage Studies at Uppsala University in Sweden and a member of the _Library 2.0: A New Participatory Context_ research group at the Department of Information Studies at ?bo Akademi University in Turku, Finland. He received a MA degree in cultural history at the University of Turku in 2002 and a PhD degree in information studies at Abo Akademi University in 2006\. He can be contacted at: isto.huvila@abm.uu.se
+
+#### References
+
+*   Alwis, G. de, Majid, S. & Chaudhry, A.S. (2006). Transformation in managers' information seeking behaviour: a review of the literature. _Journal of Information Science_, **32**(4), 362-377.
+*   Arora, N.K., Hesse, B.W., Rimer, B.K., Viswanath, K., Clayman, M.L. & Croyle, R.T. (2008). Frustrated and confused: the American public rates its cancer-related information-seeking experiences. _Journal of General Internal Medicine_, **23**(3), 223-228.
+*   Bennett, N., Casebeer, L., Zheng, S. & Kristofco, R. (2006). Information-seeking behaviors and reflective practice. _Journal of Continuing Education in the Health Professions_, **26**(2), 120-127.
+*   Case, D.O. (2006). Information behavior. _Annual Review of Information Science and Technology_, **40**, 293-327.
+*   Cline, R.J.W. & Haynes, K.M. (2001). Consumer health information seeking on the Internet: the state of the art. _Health Education Research_, **16**(6), 671-692.
+*   Dervin, B. (1998). Sense-making theory and practice: an overview of user interests in knowledge seeking and use. _Journal of Knowledge Management_, **2**(2), 36-46.
+*   DuBois, A. (2003). Close reading: an introduction. In F. Lentricchia & A. DuBois (Eds.), _Close reading: a reader_, (pp. 1-40). Durham, NC: Duke University Press.
+*   Ek, S. (2005). _Om information, media och h?lsa in en samh?llelig kontext. En empirisk och analytisk studie_. [On information, media and health in a social context. An empirical and analytical study.] Unpublished doctoral dissertation, Information Studies, ?bo Akademi University, ?bo (Turku), Finland
+*   Fisher, K. & Naumer, C. (2006). Information grounds: theoretical basis and empirical findings on information flow in social settings. In Amanda Spink and Charles Cole, (Eds.). _New directions in human information behavior_, (pp. 93-111). Dordrecht, The Netherlands: Springer.
+*   Fu, W-T. & Gray, W.D. (2006).Suboptimal tradeoffs in information seeking. _Cognitive Psychology_, **52**(3), 195-242.
+*   Glaser, B.G. & Strauss, A.L. (1967). The discovery of grounded theory: strategies for qualitative research. Chicago, IL: Aldine.
+*   Huotari, M.-L. & Wilson, T. (2001). [Determining organizational information needs: the critical success factors approach.](http://www.Webcitation.org/5w31e0jJm) _Information Research_, **6**(3), paper Retrieved 9 February, 2011 from http://informationr.net/ir/6-3/paper108.html. (Archived by WebCite? at http://www.Webcitation.org/5w31e0jJm)
+*   Huvila, I. (2006). _[The ecology of information work - a case study of bridging archaeological work and virtual reality based knowledge organisation.](http://www.webcitation.org/5wMjwP0qO)_ ?bo (Turku), Finland: ?bo Akademi University Press. [Dissertation of ?bo Akademi University] Retrieved 9 February, 2011 from http://www.doria.fi/bitstream/handle/10024/4153/TMP.objres.83.pdf?sequence=2 (Archived by WebCite? at http://www.webcitation.org/5wMjwP0qO)
+*   Kari, J. & Hartel, J. (2007). Information and higher things in life. Addressing the pleasurable and the profound in information science. _Journal of the American Society for Information Science and Technology_, **58**(8) 1131-1147.
+*   Kuhlthau, C.C. (1993). A principle of uncertainty for information seeking. _Journal of Documentation_, **49**(4), 339-55.
+*   Kuhlthau, C. C. (2004). _Seeking meaning: a process approach to library and information services_. Westport, CT: Libraries Unlimited.
+*   Lu, Y. (2007). The human in human information acquisition: understanding gatekeeping and proposing new directions in scholarship. _Library & Information Science Research_, **29**(1) 103-123.
+*   Madden, A.D., Ford, N.J. & Miller, D. (2007). Information resources used by children at an English secondary school: perceived and actual levels of usefulness. _Journal of Documentation_, **63**(3), 340 - 358.
+*   Mansourian, Y. (2008a). Coping strategies in Web searching. _Program: electronic library and information systems_, **42**(1) 28-39.
+*   Mansourian, Y. (2008b). Exploratory nature of, and uncertainty tolerance in, qualitative research. _New Library World_, **109**(5/6), 273-286
+*   Mansourian, Y. & Ford, N. (2007). Web searchers' attributions of success and failure: an empirical study. _Journal of Documentation_, **63**(5), 659-679.
+*   Mansourian, Y., Ford, N., Webber, S. & Madden, A. (2008). An integrative model of "information visibility" and "information seeking" on the Web. _Program: electronic library & information systems_, **42**(4), 402-417.
+*   Marchionini, G. (1997). _Information seeking in electronic environments_. Cambridge: Cambridge University Press.
+*   McKenzie, P.J. (2002). Communication barriers and information-seeking counterstrategies in accounts of practitioner-patient encounters. _Library & Information Science Research_, **24**(1), 31-47.
+*   Meho, L.I. & Tibbo, H.R. (2003). Modeling the information-seeking behavior of social scientists: Ellis's study revisited. _Journal of the American Society for Information Science and Technology_, **54**(6), 570-587.
+*   Rieh, S. (2004). On the Web at home: information seeking and Web searching in the home environment. _Journal of the American Society for Information Science and Technology_, **55**(8), 743-753.
+*   Savolainen, R. (1995). Everyday life information seeking: approaching information seeking in the context of 'way of life'. _Library and Information Science Research_, **17**(3), 259-94.
+*   Savolainen, R. (2008). Source preferences in the context of seeking problem-specific information. _Information Processing & Management_, **44**(1), 274-293.
+*   Savolainen, R. & Kari, J. (2006). Facing and bridging gaps in Web searching. Information Processing & Management, **42**(2), 519-537.
+*   Schaefer, A.D., Parker, R.S. & Hermans, C.M. (2009). Information source usage in teen apparel purchases: China, Japan and the United States. _Journal of Fashion Marketing and Management_, **13**(4), 541 - 552.
+*   Tagliacozzo, R. & Kochen, M. (1970). Information-seeking behavior of catalog users. _Information storage and retrieval_, **6**(5), 363-381.
+*   Tenopir, C., King, D.W., Edwards, S. & Wu, L. (2009). Electronic journals and changes in scholarly article seeking and reading patterns. _Aslib Proceedings_, **61**(1), 5-32.
+*   Warner, E.S., Murray, A.D. & Palmour, V.E. (1973). _Information needs of urban residents. Final report._ Washington, DC: US Department of Health, Education, and Welfare, Office of Education, Bureau of Libraries and Learning Resources.
+*   White, M. (1998). Questions in reference interviews. _Journal of Documentation_, **54**(4), 443-465.
+*   White, M. & Marsh, E. (2006). Content analysis: a flexible methodology. _Library Trends_, **55**(1), 22-45
+*   White, M.D. (2000). Questioning behavior on a consumer health electronic list. _The Library Quarterly_, **70**(3), 302-334.
+*   Wilson, T.D. (1981). On user studies and information needs. _Journal of Documentation_, **37**(1), 3-15.
+*   Xu, Y.C., Tan, C.Y.B. & Yang, L. (2006). Who will you ask? An empirical study of interpersonal task information seeking. _Journal of the American Society for Information Science and Technology_, **57**(12). 1666-1677.
+*   Zimmer, J., Henry, R. & Butler, B. (2007). Determinants of the use of relational and nonrelational information sources. _Journal of Management Information Systems_, **24**(3), 297-331.

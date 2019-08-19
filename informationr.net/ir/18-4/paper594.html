@@ -1,0 +1,670 @@
+﻿<!doctype html>  
+ <html>  
+ <head>  
+ <title>Investigation into the existence of the indexer effect in key phrase extraction</title>  
+<meta charset=utf-8 />
+ <link href="../IRstyle3.css" rel="stylesheet" title="serif" type="text/css" media="screen" />  
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="Investigation into the existence of the indexer effect in key phrase extraction" />  
+ <meta name="author" content="Jung Eun Hahm, Su Yeon Kim, Meen Chul Kim, Min Song" />  
+ <meta name="dcterms.subject" content="A study investigating whether the indexers' effect exists in key phrase extraction" />  
+ <meta name="description" content="The indexer effect has been studied in several research studies in the field of Information Science to reveal intellectual structures. In this study, we bring that concept into document classification to verify whether it also influences the results in key phrase extraction. We employ the well-known key phrase extraction technique called key phrase extraction algorithm for our study. In particular, we extract key phrases from three different datasets: 1) papers in the same journal, 2) papers from different journals in the same field, and 3) papers from journals in different fields. All of these datasets provide keywords and index terms which we used as training data for the algorithm. For evaluation, we compare the difference in the performance of key phrases between two groups of key phrases that were extracted using the algorithm: 1) those that used author-provided keywords for the training set and 2) those that used indexer-assigned index terms for the training set. We analyse those two groups of extracted key phrases in terms of exact (100%) and fair (70%) matching, which is based on the average number of key phrases extracted correctly per document. We conclude that automatic key phrase extraction based on index terms performs better than its counterpart based on author-provided keywords in most cases. However, it also reveals that indexers tend to assign terms more inconsistently. The findings of the study provide some insights into making use of index terms as training data in key phrase extraction. On the other hand, it should be also noted that automatically extracted key phrases might lead users to irrelevant documents in information retrieval" />  
+ <meta name="keywords" content="indexer effect, key phrases, " />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+ <meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="Professor T.D. Wilson" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/18-4/paper594.html" />  
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/18-4/infres184.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2013-12-15" /> 
+  <meta name="geo.placename" content="global" />  
+
+ 
+ <script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+
+	</script> 
+
+</head> 
+  
+ <body> 
+
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 18  no. 4, December, 2013</span>
+<br /><br /> 
+<div class="button">
+ <ul> 
+ <li><a href="infres184.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../search.html">Search</a> |  </li> 
+ <li><a href="../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr />
+ </header>
+ <article>
+ <h1>Investigation into the existence of the indexer effect in key phrase extraction</h1>  <br />  
+ <div style="margin-left: 20%; margin-right: 10%;">  
+ <h4><a href="paper594.html#author">Jung Eun Hahm</a>, <a href="paper594.html#author">Su Yeon Kim</a>, <a href="paper594.html#author">Meen Chul Kim</a> and <a href="paper594.html#author">Min Song</a><br />
+Department of Library and Information Science, Yonsei University, Seoul, Korea</h4>
+  </div>  
+ <br /> 
+
+ <form>  <fieldset>  <legend>Abstract </legend>
+ <blockquote>
+ <strong>Introduction.</strong> The <em>indexer effect</em> has been studied in several research studies in the field of information science to reveal intellectual structures.  In this study, we bring that concept into document classification to verify whether it also influences the results in key phrase extraction.<br />
+ <strong>Method.</strong> We employ the well-known key phrase extraction technique called the key phrase extraction algorithm for our study. In particular, we extract key phrases from three different datasets:  1) papers in the same journal, 2) papers from different journals in the same field, and 3) papers from journals in different fields.   All of these datasets provide keywords and index terms which we used as training data for the algorithm.<br />
+ <strong>Analysis.</strong> For evaluation, we compare the difference in the performance of key phrases between two groups of key phrases that were extracted using the algorithm: 1) those that used author-provided keywords for the training set, and 2) those that used indexer-assigned index terms for the training set.  We analyse those two groups of extracted key phrases in terms of exact (100%) and fair (70%) matching, which is based on the average number of key phrases extracted correctly per document.<br />
+ <strong>Results.</strong> We conclude that automatic key phrase extraction based on index terms performs better than its counterpart  based on author-provided keywords in most cases. However, it also reveals that indexers tend to assign terms more inconsistently.<br />
+ <strong>Conclusions.</strong> The findings of the study provide some insights into making use of index terms as training data in key phrase extraction. On the other hand, it should be also noted that automatically extracted key phrases might lead users to irrelevant documents in information retrieval.
+ </blockquote>  </fieldset>  </form> 
+ 
+ <br />  <div style="text-align:center">  <input type="button" value="change font"
+ class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onClick="doChangeFont()"
+ /></div>  <br /> 
+
+ <section>
+ 
+ <h2>Introduction</h2> 
+ 
+ <p>Drowning in the flood of data that is overwhelming in this information age, people barely keep their head above water. Fortunately there are lifeguards, the so-called indexers, who help information users to land on the right resources for their needs. They select words to represent documents and thereby make information retrieval more effective and efficient. However, providing proper terms about each document manually is laborious and time-consuming, and it becomes a daunting task due to the rapid increase in electronic data. Thus, many researchers have studied ways of determining the representative words for documents automatically. Two of the popular methods are known as key phrase assignment and key phrase extraction.</p>
+ 
+ <p>key phrase assignment selects the phrases that describe a document from a controlled vocabulary, while key phrase extraction, the approach used in this study, chooses key phrases from the text itself without using a controlled vocabulary. There have been rigorous attempts to find keywords or phrases that are representative of documents based on those methods. A typical approach to key phrase assignment or extraction uses supervised learning, which is a machine learning technique of inferring a document's characteristics from labeled training data. key phrases are groups of keywords, which consist of more than one word. A study shows that indexers prefer to assign index terms in the form of phrases over words  (<a href="paper594.html#med08">Medelyan <em>et al.</em>, 2008</a>) that might be different from an author's preference. It is also worth noting that important terms in articles are usually comprised of more than one word, emphasising the contextual meaning in the reading.</p>
+ 
+ <p>Healey <em>et al.</em> (<a href="paper594.html#hea86">1986</a>) pointed out a possible <em>indexer effect</em> in choosing words for documents properly. It indicates that the assignment of index terms represents the analyst's subjective view of the contents rather than the author's original view, and it is expressed in the choice of words. This is because individuals interpret documents differently when they read, thus the words that authors provide sometimes differ from those indexers choose for the index. This also implies that the results of automatic key phrase extraction based on index terms might be quite distinct from those based on keywords.</p>
+ 
+ <p>Therefore, in this study we investigate whether there is any distinction in automatic key phrase extraction between two different points of view. In addition, we analyse the results to explain what makes it different. Performance is measured by comparing the results of the supervised-learning technique with pre-defined key phrases. We conduct two sets of experiments with the same datasets in the training phrase; one with keywords that authors provide and the other with index terms that indexers assign.</p>
+ 
+ <p>We pose three research hypotheses. First, in the same journal, the results of key phrase extraction based on terms that an indexer assigns would be more effective than author-provided keywords in terms of the number of matched words. Second, in different journals in the same field, the results of key phrase extraction based on indexer-provided terms would be more effective than author-provided keywords in terms of matched words. Third, in journals in different fields, the results of key phrase extraction based on indexer-provided terms would be more effective than author-provided keywords in terms of matched words. The results of the experiments show that key phrase extraction based on indexer-assigned terms, which are brought from a professional index database, performs better in general than those based on author-provided keywords. This implies that the concept of the <em>indexer effect</em> does exist in key phrase extraction.</p> 
+ 
+ <p>The rest of the paper is organised as follows. The next section discusses related works to our paper. Then we introduce the procedure for key phrase extraction. We describe the research questions and methodology. We compare the results, and these are analysed in the Discussion. Lastly, we conclude the paper with a summary and suggestions for future work.</p> 
+ 
+ <h2>Related works</h2> 
+ 
+ <p>The <em>indexer's effect</em> has been widely investigated in co-word analysis (<a href="paper594.html#cal86">Callon <em>et al</em>. 1986</a>; <a href="paper594.html#law88">Law <em>et al</em>. 1988</a>; <a href="paper594.html#whi89">Whittaker 1989</a>; <a href="paper594.html#mar01">Marion and McCain 2001</a>),  but rarely studied in other topics. Most of the research has empirically confirmed the existence of the <em>indexer's effect</em> in analysing intellectual structures, showing the distinct differences between keyword-based and index term-based domain maps.  Iivonen and Kivimaki (<a href="paper594.html#Iiv98">1998</a>) compared the indexing of forty-nine documents, focusing on three factors: 1) the types of concepts presented in indexing, 2) the degree of concept consistency and concept similarities in indexing, and 3) differences in the indexing of concepts. Based on these qualitative observations, they identified that the indexer's subjectivity and inconsistency could be seen reflected in representing concepts in academic works.  Mai (<a href="paper594.html#mai01">2001</a>) manually examined several existing indexing methods of academic documents. Through exhaustive analysis to understand the indexer's cognitive process, the study revealed that indexing is not a neutral and objective representation of a document's subject matter but an interpretation for future use. He also suggested a semiotic framework for the subject indexing process. Providing proper terms about each document manually, however, is laborious and time-consuming, and it becomes a daunting task due to the rapid increase of information. Based on these empirical and qualitative observations,  therefore, we seek to investigate 1) whether the <em>indexer's effect</em> exists in the automatic key phrase extraction technique, and 2) whether the indexer's subjectivity and inconsistency can be measured quantitatively. We also evaluate the extraction performance in a rigorous manner which previous studies have not considered.</p> 
+ 
+ <p>Previous works on key phrase generation can be categorised into two major approaches: key phrase extraction and key phrase assignment. In key phrase extraction, phrases in a document are identified on the basis of properties such as term frequency and length. key phrase assignment, however, aims at finding appropriate key phrases based on a pre-defined set of terms such as a thesaurus. The latter has an obvious limit because the continuous expansion of controlled vocabularies is inefficient. Against this backdrop, we will briefly discuss what previous research has revealed, especially for key phrase extraction, which serves as a foundation for our experiment.</p>
+
+  <h3>Key phrase extraction</h3>
+ 
+ <p>Key phrase extraction is widely used for the tasks of indexing, summarisation, clustering, categorisation, and more recently, in improving search results and in ontology learning. A number of systems have addressed the task of key phrase extraction, most of which employed supervised machine learning techniques (<a href="paper594.html#tur00">Turney 1999</a>; <a href="paper594.html#wit99">Witten <em>et al.</em> 1999</a>; <a href="paper594.html#bar00">Barker <em>et al.</em> 2000</a>; <a href="paper594.html#wan06">Wang <em>et al.</em> 2006</a>; <a href="paper594.html#ngu07">Nguyen <em>et al.</em> 2007</a>; <a href="paper594.html#wu08">Wu <em>et al.</em> 2008</a>).  There have also been studies with unsupervised machine learning techniques (<a href="paper594.html#el09">El-Beltagy 2009</a>; <a href="paper594.html#son">Song <em>et al.</em> forthcoming</a>).</p>
+ 
+ <p>The first system, GenEx (Generic Extractor), employs machine learning-based key phrase extraction devised by Turney (<a href="paper594.html#tur00">1999</a>). The GenEx system has two different components: the Extractor algorithm identifies candidate phrases, and scores them depending on their length and position in the text. Next, the Extractor presents the top-ranked key phrases as outcomes to the user, while the Genitor algorithm searches for overlap among the key phrases.   Witten <em>et al.</em> (<a href="paper594.html#wit99">1999</a>) suggested a competing key phrase extraction system called the key phrase extraction algorithm, which identifies candidate key phrases using lexical methods, calculates feature values for each candidate and uses a machine-learning algorithm to predict which candidates are proper key phrases. The performance of the algorithm proves to be highly accurate and robust when it is compared to that of any other system. Hence, we used it for our key phrase extraction experiment.</p>
+ 
+ <p>There are some studies which added new features to the existing techniques.  Barker <em>et al.</em> (<a href="paper594.html#bar00">2000</a>) presented a system for choosing noun phrases from a document as key phrases. Contrary to  Turney (<a href="paper594.html#tur00">1999</a>) and other works, it restricted key phrases only to noun phrases. However, a limitation when extracting key phrases can be experienced if an important term is not recognised as a noun.  Turney (<a href="paper594.html#tur03">2002</a>) presented a new feature, the concept of a coherence set to measure cohesiveness between candidate phrases. He pointed out that extracted key phrases are sometimes outliers, which means they have no semantic relationships with other key phrases in a document. This new feature is calculated as the statistical association between a candidate and a small group of top candidate phrases.</p>
+ 
+ <p>Other innovative algorithms to extract key phrases also have been devised. Their features and approaches usually prove to be efficient and effective. 
+ Nguyen <em>et al.</em> (<a href="paper594.html#ngu07">2007</a>) extended the algorithm for extracting key phrases from scientific publications. They added two more features to the  algorithm: the positions of phrases in documents and morphological factors found in scientific key phrases, such as whether a candidate key phrase is an acronym or uses terminologically productive suffixes.  Wang <em>et al.</em> (<a href="paper594.html#wan06">2006</a>) proposed a key phrase extraction approach based on neural networks. They adopted the following features to extract key phrases from given documents: term frequency and inverted document frequency respectively, and frequency of appearance in the paragraphs of the documents.  Wu <em>et al.</em> (<a href="paper594.html#wu08">2008</a>) proposed a <em>key phrase identification program</em> algorithm which extracts key phrases based on the composition of noun phrases. In this algorithm, the more keywords a phrase contains, the more likely this phrase is to be a key phrase. The <em>key phrase identification program</em> first extracts a list of candidate key phrases, then assigns scores to them based on three factors: frequency of occurrence in a document, composition, and how specific these words and sub-phrases are in the domain of the document. For our experiment, we employ a new feature, index term as training data for key phrase extraction. In addition, we compare the performance of index term-based key phrase extraction to that of keyword-based extraction to identify the existence of the <em>indexer effect.</em></p>
+ 
+  <h2>General procedure of the key phrase extraction algorithm</h2> 
+ 
+ <p>In this section, we explain the key phrase extraction technique based on the key phrase extraction algorithm (<a href="paper594.html#wit99">Witten <em>et al.</em>, 1999</a>) 
+ that is used for this study. This algorithm was chosen because it is an open source system written in Java and provides the flexibility of customising the procedure. It is an algorithm for extracting key phrases from the text of a document:  all candidate phrases in a document are identified and the features are computed for each candidate phrase. After that, machine learning is used to generate a classifier that determines which candidates should be chosen as key phrases. Figure 1 describes the general procedure of the key phrase extraction system based on supervised learning.</p> 
+ 
+ <figure class="centre">
+   <img src="p594fig1.jpg" alt="The procedure of the key phrase extraction algorithm" width="495" height="222" />
+   <figcaption>
+      Figure 1: The procedure of the key phrase extraction algorithm
+  </figcaption>
+</figure>
+
+  <h3>Candidate identification</h3> 
+  
+ <p>Each document in the collection is first segmented into tokens on the basis of white space and punctuation. Clues to syntactic boundaries such as punctuation marks, digits and paragraph separators are retained. Next, all word n-grams that do not cross phrase boundaries are extracted and the number of occurrences of each n-gram in the documents is counted. Case folding and stemming is also done to treat different variations on a phrase as the same thing.</p>
+ 
+<h3>Feature calculation</h3>
+
+ <p>A simple but robust machine-learning scheme is used to determine the final set of key phrases for a document. It uses a set of attributes as input, which is defined for each candidate term. Two features are used in the standard algorithm: a term frequency-inverse document frequency score and the position of first occurrence.</p> 
+ 
+ <p>The frequency score compares the frequency of a phrase's use in a particular document with the frequency of that phrase in general use. General usage is identified by the number of documents containing the phrase in the global corpus of documents. By default, the training set is regarded as the global corpus but this can be changed if required. The position of first occurrence of a term is calculated as the distance of a phrase from the beginning of a document in words, normalised by the total number of words in the document. The result represents the proportion of the document preceding the phrase's first appearance. Candidates that have very high or very low values for this feature are more likely to be valid key phrases, because they appear either in the introductory parts of the document such as a title, abstract, table of contents and introduction, or in its final sections such as conclusion and reference lists.</p> 
+ 
+ <p>There are more features we can use: length of phrase in words and node degree. The length of a candidate phrase measured in words boosts the probability of two-word candidates being key phrases. The statistical analysis of the experimental data revealed that indexers prefer to assign descriptors consisting of two words whereas most terms in the corresponding thesaurus are one word (<a href="paper594.html#med08">Medelyan <em>et al.</em>, 2008</a>). The node degree measures how richly the term is connected in the thesaurus graph structure. The degree of a term is the number of semantic links that connect the term to other phrases in the document that have been identified as candidate phrases. Additionally, we use the length of phrases in words feature in our study.</p> 
+ 
+  <h3>Training: building the model</h3>
+  
+ <p>In order to build the model, a training set of documents with known key phrases is required. For each training document, candidate pseudo-phrases are identified and their feature values described above are calculated. Each phrase is marked as a key phrase or not, using the actual key phrases for those document. The prediction model is then constructed from these training instances with the data mining software, Waikato Envrionment for Knowledge Analysis, which applies a machine learning scheme to learn two sets of numeric weights from the discretised feature values, one set to positive instances and the other to negative ones. In other words, this is binary classification. the key phrase extraction algorithm uses the na&iuml;ve Bayes technique, which is simple and yields good results. In addition, we also use a decision tree technique to compare the performance with that from na&iuml;ve Bayes. The final component of the model is the number of positive and negative examples in the training data. To select key phrases from a new document, the algorithm identifies candidate pseudo-phrases and their feature values, and then applies the learned model. Candidate phrases are ranked according to this value, and the first <em>n</em> phrases are returned, where <em>n</em> is the number of key phrases requested by user.</p>
+
+  <h2>Research hypotheses</h2>
+ 
+ <p>This study investigates the existence of the <em>indexer effect</em> when using index terms in place of keywords for automatic key phrase extraction. Because two different people interpret disciplines based on their own understanding, they sometimes use different words in representing a document. This causes inequality in the results of machine-learning, when using different people's document representations for intellectual clues. Regarding this, Marion and McCain (<a href="paper594.html#mar01">2001</a>) argue that authors view a discipline from the perspective of insiders, whereas indexers do so as outsiders. Therefore, we focus on verifying the indexers' influence in document classification by introducing the concept of the <em>indexer effect</em>. We also suggest the possibility of using index terms as training data especially in the situation where keywords are not provided in the articles.</p> 
+ 
+ <p>Table 1 gives an example of an article with keywords and index terms. We extracted keywords from the article, and used index terms from <em>Library and Information Science Abstracts</em>. </p> 
+ 
+ <table class="center">  
+ <caption><br />Table 1: Keywords and index terms for Ahmed, S. Z., McKnight, C. &amp; Oppenheim, C. (2004). A study of users' performance and satisfaction with the Web of Science IR interface. <em>Journal of Information Science</em>, <strong>30</strong>(5), 459-468.</caption> 
+ <tbody>
+ <tr><th>Keywords: given by author</th><th>Index terms: given by indexer</th></tr>
+<tr>
+  <td>Online information retrieval</td>
+  <td>Online information retrieval</td>
+</tr>
+ <tr>
+   <td><strong>Web databases</strong></td>
+   <td>&nbsp;</td>
+ </tr>
+ <tr>
+   <td>Searching</td>
+   <td>Searching</td>
+ </tr>
+ <tr>
+   <td>User interface</td>
+   <td>User interface</td>
+ </tr>
+ <tr>
+   <td>User satisfaction</td>
+   <td>User satisfaction</td>
+ </tr>
+ <tr>
+   <td><strong>Gender differences</strong></td>
+   <td><strong>&nbsp;</strong></td>
+ </tr>
+ <tr>
+   <td>Retrieval performance measures</td>
+   <td>Retrieval performance measures</td>
+ </tr>
+ <tr>
+   <td>&nbsp;</td>
+   <td><strong>Evaluation</strong></td>
+ </tr>
+ <tr>
+   <td><strong>Experts</strong></td>
+   <td><strong>Expert users</strong></td>
+ </tr>
+ <tr>
+   <td><strong>Novices</strong></td>
+   <td><strong>Novice users</strong></td>
+ </tr>
+ <tr>
+   <td><strong>Comparative studies</strong></td>
+   <td>&nbsp;</td>
+ </tr>
+ <tr>
+   <td>Web of Science</td>
+   <td>Web of Science</td>
+ </tr>  
+ </tbody>
+ </table>
+ 
+ <p>As shown above, although some words from each perspective are identical, others differ slightly. Among the given words, six of them are exactly the same: <em>online information retrieval</em>, <em>searching</em>, <em>user interface</em>, <em>user satisfaction</em>, <em>retrieval performance measures</em>, and <em>Web of Science</em>. There are several words that somewhat match from each viewpoint. For example, the author assigns <em>experts</em> and <em>novices</em> to this document, which is very similar to <em>expert users</em> and <em>novice users</em> used by the indexer. In addition, new words are offered from only one viewpoint. For instance, the author deems <em>Web databases</em> and <em>gender differences</em> as important terms, which are not included in the index list.</p> 
+ 
+ <p>This disparity comes from several distinct conditions related to the circumstance of each group. First, authors are more professional in giving keywords for articles compared to indexers. Authors have knowledge of what people want to find in their field, so they are able to give more appropriate access points for information. In addition, authors provide the words for the articles they write, so they know the precise words for representing their writing. Hence, the keywords authors provide are more specific than words in an index because authors consider their article within the context of their fields.</p> 
+ 
+ <p>Secondly, authors want people to cite their articles, so they sometimes exaggerate the contents of their writing. Information users usually decide to continue their reading by looking through the first few paragraphs, so making a good first impression is important for authors. Keywords help people understand reading materials quickly, not only by showing core words indicating major points in the articles but also by offering access points matching people's interests in topics. However, indexers just guide people to the right paths without any profit for themselves. This implies that words based on authors' intellectual structures might be subjective and perhaps even deceptive compared to words in an index, even for the same article.</p> 
+ 
+ <p>Finally, indexers usually review various disciplines at the same time, so they tend to remain superficial in offering an index for articles. Even though they are information specialists, indexers may not be deeply knowledgeable in many academic areas. In addition, compared to the small number of indexers, the enormous number of works they are dealing with forces them to complete their work hastily and, perhaps, imprecisely, spending not enough time reading an article in detail. Indexers, therefore, connect more general words to the information resources they handle.</p>
+ 
+<p>Considering the different situations these two groups face, their intellectual base might also be different, which leads to using different terms for description, even in the same document. We have already confirmed this by comparing the word list for an article based on each point of view above. Depending on this gap, we may be able to conclude there is an  <em>indexers' effect</em> in the choice of words, which determines access points for people. This also means the possibility of displaying distinct results when automatically extracting words to describe documents, because it uses either keywords or index terms individually. We assume key phrase extraction performance from one particular viewpoint is more efficient than the other, which means selecting the right terms that the group intends to pick for descriptors. If it isn't so, then we can suggest the utility of index terms as the intellectual base for machine-learning, instead of keywords which are rarely provided. This highlights the importance of our experiments to check whether the  <em>indexer effect</em> really exists in automatic key phrase extraction or not. The three research hypotheses we set in this study are as follows:</p> 
+
+ <blockquote>1.	In the same journal, the results of key phrase extraction based on indexer-provided terms are more effective than author-provided keywords, in terms of comparing the number of matched words.<br />
+2.	In different journals in the same field, the results of key phrase extraction based on indexer-provided terms are more effective than author-provided keywords, in terms of comparing the number of matched words.<br />
+3.	In journals from different fields, the results of key phrase extraction based on indexer-provided terms are more effective than author-provided keywords, in terms of comparing the number of matched words.
+</blockquote>
+
+  <h2>Methods</h2>
+  
+   <h3>Data collection</h3> 
+   
+ <p>To verify the research hypotheses, we collected data from the five different journals shown in Table 2. To evaluate automatic key phrase extraction techniques, articles should have keywords assigned and be found in the index database with appropriate index terms. For journal selection, we first referred to the Web of Science <em>Journal Citation Reports</em>. Two important criteria for the journal selection were: 1) whether the subject matter of the journals was suitable for testing our hypotheses and 2) whether the journals had articles to which keywords as well as indexing terms had been assigned. It was important to gather large enough data sets since the precision of key phrase extraction is negatively influenced by a training data set comprised of a small number of observations.</p> 
+ 
+ <table class="center" style="width:90%">  
+ <caption><br />Table 2. Index database list for journal data</caption> 
+ <tbody>
+ <tr><th>Discipline</th><th>Journal title</th><th>Index database</th></tr>  
+ <tr><td>Information science</td><td>Journal of Information Science, Journal of Informetrics,   Scientometrics</td>
+ <td>LISA</td></tr>
+ <tr><td>Education</td><td>American Educational Research Journal</td><td>ERIC</td></tr>
+ <tr><td>Social science</td><td>Sociological Methods and Research</td><td>Social Services Abstracts</td></tr>
+ </tbody>
+ </table>
+ 
+ <p>We selected journals in the field of information science as the main training data in our study under the assumption that authors in this discipline might provide keywords in a similar way indexers do. We chose the  <em>Journal of Information Science</em> for the first research hypothesis. We chose the <em>Journal of Informetrics</em> and  
+ <em>Scientometrics</em> for the second research hypothesis, which addresses different journal data in the same field. Lastly, we included two additional fields for our experiment; one close to information science and the other a little farther from this field, and selected one journal from each discipline. They were the 
+ <em>American Educational Research Journal</em> and <em>Sociological Methods and Research</em>.</p> 
+ 
+ <p>From these journals, we collected full-text articles with keywords and converted the full-text articles into text files. To find index data for each article, we referred to an index database such as <em>Library and Information Science Abstracts</em>. Then, we retrieved articles that we collected from the index databases and manually matched the respective index terms.</p> 
+ 
+ <p>We collected full-text articles from <em>Journal of Information Science</em> published between 2004 and 2011. The number of articles available is 330 in total (Table 3).</p> 
+ 
+ <table class="center">  
+ <caption><br />Table 3.The number of articles in each year in <em>Journal of Information Science</em><br />
+ </caption> 
+ <tbody>
+ <tr><th colspan="9"><strong>Journal of Information Science</strong></th></tr>  
+ <tr><th>2011</th><th>2010</th><th>2009</th><th>2008</th><th>2007</th><th>2006</th><th>2005</th><th>2004</th><th>Total</th></tr>
+ <tr><td>44</td><td>45</td><td>37</td><td>46</td><td>45</td><td>41</td><td>34</td><td>38</td><td>330</td></tr>
+ </tbody>
+ </table>
+ 
+ <p>We used them for training as well as test data for  research hypothesis 1. Two sets of training were compiled: for the first set, we selected articles published from 2004 to 2010 as training data set 1. We automatically extracted key phrases from articles issued in 2011 based on the model built. For the second training set, we chose those published in 2005-2011 as training data set 2, and used articles in 2004 as test data. This was done because any error from training data can influence the results of key phrases extraction. Hence, we checked if any different occurrence exists when changing the training set. For research hypothesis 2 and 3, we kept using two sets of training data from the  <em>Journal of Information Science.</em> We additionally collected articles published in 2011, 2010 and 2004 each as test data. The number of articles, index terms, and keywords for each year is as follows in Table 4:</p> 
+ 
+ <table class="center">  
+ <caption><br />Table 4.The number of articles, index terms and keywords for test data<br />
+ </caption> 
+ <tbody>
+ <tr><th>Journal Title</th><th>No. of articles</th><th>No. of Index terms</th><th>No. of Keywords</th></tr>
+ <tr><td>Journal of Information Science (2011)</td><td style="text-align:center">44</td><td style="text-align:center">171</td><td style="text-align:center">225</td></tr>
+ <tr><td>Journal of Information Science (2004)</td><td style="text-align:center">38</td><td style="text-align:center">363</td><td style="text-align:center">308</td></tr>
+ <tr><td>Journal of Informetrics (2011)</td><td style="text-align:center">46</td><td style="text-align:center">161</td><td style="text-align:center">253</td></tr>
+ <tr><td>Journal of Informetrics (2010)</td><td style="text-align:center">30</td><td style="text-align:center">73</td><td style="text-align:center">146</td></tr>
+ <tr><td>Scientometrics (2011)</td><td style="text-align:center">46</td><td style="text-align:center">202</td><td style="text-align:center">236</td></tr>
+ <tr><td>Scientometrics (2010)</td><td style="text-align:center">45</td><td style="text-align:center">147</td><td style="text-align:center">227</td></tr>
+ <tr><td>American Educational Research Journal (2011)</td><td style="text-align:center">44</td><td style="text-align:center">655</td><td style="text-align:center">215</td></tr>
+ <tr><td>American Educational Research Journal (2004)</td><td style="text-align:center">42</td><td style="text-align:center">427</td><td style="text-align:center">171</td></tr>
+ <tr><td>Sociological Methods and Research (2011)</td><td style="text-align:center">42</td><td style="text-align:center">463</td><td style="text-align:center">187</td></tr>
+ <tr><td>Sociological Methods and Research (2004)</td><td style="text-align:center">42</td><td style="text-align:center">345</td><td style="text-align:center">182</td></tr>
+ </tbody>
+ </table>
+ 
+ <p>It should be noted that index terms are not available for <em>Journal of Informetrics</em> before 2010, and there are no keywords provided in articles before 2010 for <em>Scientometrics.</em> As a result, we collected articles published in 2010 for test data instead of those in 2004 in those journals. There are also several articles which do not contain keywords or are not retrieved in the index database. Thus, we excluded those articles from the test collection that did not meet these conditions.</p> 
+ 
+ <h3>Performance measure</h3>
+ 
+ <p>In the experiment, we compare key phrases extracted by the machine to those assigned by the humans. We consider that there is a match if the stem of the automatically extracted key phrase matches with the stem of either the author-assigned keywords or indexer-provided index terms. In cases of a match, we determine the match to be either 100% (exact) or 70% (fair). Stemming is carried out by <a href="http://www.webcitation.org/query?url=http%3A%2F%2Ftartarus.org%2Fmartin%2FPorterStemmer%2F&amp;date=2013-11-12">the  Porter stemmer</a> (<a href="paper594.html#por80">1980</a>). Stemming is a process for removing the common morphological and inflectional endings from words in English. Its main use is as part of a term normalisation process that is usually done when setting up an information retrieval system. Stemming helps minimise term variations. For instance, terms like <em>retrieval</em>, <em>retrieving</em>', and <em>retrieved</em> are stemmed to the stem <em>retriev</em>. However, the stemming technique alone cannot resolve the issue of mismatching due to term variation. In our experiment, any partial match is empirically set to 70%. To determine a partial match, we employed the Jaro-Winkler distance technique, which is a measure of similarity between two strings (<a href="paper594.html#win90">Winkler, 1990</a>). The higher the Jaro-Winkler distance for two strings, the more similar the strings are. The score is normalised such that 0 equates to no similarity and 1 is an exact match.</p> 
+ 
+ <p>For evaluation, inter-indexer consistency and agreement are commonly used in the context of human indexing, while precision and recall are used to evaluate automatic systems  (<a href="paper594.html#med08">Medelyan <em>et al.,</em> 2008</a>). We employed the inter-indexer consistency formula proposed by Rolling (<a href="paper594.html#rol81">1981</a>) to measure the number of matching words each group provided. Rolling's measure relies on simple formulaic representations of term sets assigned by each indexer as well as the common terms between the two sets. It defines the level of consistency between two indexers as the total number of terms in agreement divided by the total number of distinct terms used by both indexers  (<a href="paper594.html#wol07">Wolfram and Olson, 2007</a>). To calculate the inter-indexer consistency, let A and B be the size of the two indexer's term sets and C be the number of terms in common between the two sets. Then, Rolling's measure is R = 2C/(A+B). Assume that a certain article has <em>information retrieval</em>, <em>ranking model</em> and <em>query expansion</em> as author's keywords, and <em>information retrieval</em> and <em>relevance feedback</em> as indexer's terms. There are three terms in A and two terms in B, and the number of common terms between A and B is one Then, the inter-indexer consistency of this article is R = 2(1)/(3+2) = 0.4. This evaluation is usually used to compare the inter-indexer consistency among several indexers and to prove the validity of the low performance of a machine learning algorithm; the difference between indexers is similar to that between the human and the machine.</p>
+ 
+ <p>The reason for using this evaluation method in our study is to confirm the performance quality of automatic key phrase extraction by showing that different groups of people assign terms in a highly inconsistent manner.</p>
+ 
+ <p>Additionally, we used the average number of key phrases correctly extracted per document. We compared the extraction results of 5, 10, and 15 key phrases. The KEA package provides this evaluation metric to measure the effectiveness of automatic key phrase extraction systems with manually extracted ones, and we used them for our evaluation.</p>
+ 
+ <h2>Results</h2>
+ 
+ <h3>Measuring the inter-indexer consistency between authors and indexers</h3>
+ 
+ <p>In this section, we firstly measured the inter-indexer consistency between authors and indexers for the same articles using Rolling's measure. All the inter-indexer consistency between the two groups is quite low (0.11 – 0.21), except for articles in the Journal of Information Science in 2004, which is 0.49 (Table 5).</p> 
+ 
+  <table class="center" style="width:90%;">  
+ <caption><br />Table 5.The inter-indexer consistency between authors and indexers</caption> 
+ <tbody>
+ <tr><th>Journal Title</th><th>No. of index terms</th><th>No. of Keywords</th><th>No. of correctly extracted words</th><th>Inter-consistency</th></tr>
+ <tr><td>Journal of Information Science (2011)</td><td style="text-align:center">171</td><td style="text-align:center">225</td><td style="text-align:center">36</td><td style="text-align:center">0.18</td></tr>
+ <tr><td>Journal of Information Science (2010)</td><td style="text-align:center">149</td><td style="text-align:center">198</td><td style="text-align:center">27</td><td style="text-align:center">0.16</td></tr>
+ <tr><td>Journal of Information Science (2009)</td><td style="text-align:center">109</td><td style="text-align:center">173</td><td style="text-align:center">21</td><td style="text-align:center">0.15</td></tr>
+ <tr><td>Journal of Information Science (2008)</td><td style="text-align:center">142</td><td style="text-align:center">215</td><td style="text-align:center">37</td><td style="text-align:center">0.21</td></tr>
+ <tr><td>Journal of Information Science (2007)</td><td style="text-align:center">146</td><td style="text-align:center">241</td><td style="text-align:center">37</td><td style="text-align:center">0.19</td></tr>
+ <tr><td>Journal of Information Science (2006)</td><td style="text-align:center">284</td><td style="text-align:center">189</td><td style="text-align:center">43</td><td style="text-align:center">0.18</td></tr>
+ <tr><td>Journal of Information Science (2005)</td><td style="text-align:center">235</td><td style="text-align:center">180</td><td style="text-align:center">37</td><td style="text-align:center">0.18</td></tr>
+ <tr><td>Journal of Information Science (2004)</td><td style="text-align:center">363</td><td style="text-align:center">308</td><td style="text-align:center">166</td><td style="text-align:center">0.49</td></tr>
+ <tr><td>Journal of Informetrics (2011)</td><td style="text-align:center">161</td><td style="text-align:center">253</td><td style="text-align:center">23</td><td style="text-align:center">0.11</td></tr>
+ <tr><td>Journal of Informetrics (2004)</td><td style="text-align:center">73</td><td style="text-align:center">146</td><td style="text-align:center">12</td><td style="text-align:center">0.11</td></tr>
+ <tr><td>Scientometrics (2011)</td><td style="text-align:center">202</td><td style="text-align:center">236</td><td style="text-align:center">34</td><td style="text-align:center">0.16 </td></tr>
+ <tr><td>Scientometrics (2004)</td><td style="text-align:center">147</td><td style="text-align:center">227</td><td style="text-align:center">20</td><td style="text-align:center">0.11</td></tr>
+ <tr><td>American Educational Research Journal (2011)</td><td style="text-align:center">655</td><td style="text-align:center">215</td><td style="text-align:center">28</td><td style="text-align:center">0.06 </td></tr>
+ <tr><td>American Educational Research Journal (2004)</td><td style="text-align:center">427</td><td style="text-align:center">171</td><td style="text-align:center">30</td><td style="text-align:center">0.10</td></tr>
+ <tr><td>Sociological Methods and Research (2011)</td><td style="text-align:center">463</td><td style="text-align:center">187</td><td style="text-align:center">30</td><td style="text-align:center">0.09 </td></tr>
+ <tr><td>Sociological Methods and Research (2004)</td><td style="text-align:center">345</td><td style="text-align:center">182</td><td style="text-align:center">24</td><td style="text-align:center">0.09</td></tr>
+ </tbody>
+ </table>
+ 
+ <p>Except for the data in 2004, the average of the inter-indexer consistency of documents included in <em>Journal of Information science</em> from 2005 to 2011 is 0.18. Other journals maintain similar inter-indexer consistency without being influenced by the temporal variance. Most cases which have lower inter-indexer consistency do not have similar number of words between index terms and keywords; one is extremely higher than the other.</p> 
+ 
+ <p>In addition, we used na&iuml;ve Bayes and decision tree classifiers, and identified that the former performs better than the latter in every case. We, therefore, only reported the results with the na&iuml;ve Bayes classifier, which is also used as the default algorithm in the key phrase extraction algorithm.</p> 
+ 
+ <h3>Research hypothesis 1: evaluation for the same journal in the same field</h3>
+ 
+ <p>First, we computed the number of exact match (100%) key phrases, i.e. whether the machine learning finds the exact words a human intends to describe, based on each perspective. The results were near to zero but the number of matching words suddenly increased when we applied fair (70%) match key phrases. We found that key phrase extraction results with terms offered by indexers performed better than those from authors in most cases (Table 6).</p> 
+ 
+ <table class="center">  
+ <caption><br />Table 6. The performance of the key phrase extraction algorithm with the <em>Journal of Information Science</em></caption> 
+ <tbody>
+ <tr><th>Journal of Information Science<br />Fair Match (70%)*</th><th>5**</th><th>10**</th><th>15**</th></tr>
+ <tr><td>2011 keyword</td><td style="text-align:center">2.3 +/- 2.23</td><td style="text-align:center">3.91 +/- 3.33</td><td style="text-align:center">5.37 +/- 3.69</td></tr>
+ <tr><td>2011 index</td><td style="text-align:center">2.6 +/- 2.55</td><td style="text-align:center">4.24 +/- 3.73</td><td style="text-align:center">5.62 +/- 4.23</td></tr>
+ <tr><td>2004 keyword</td><td style="text-align:center">3.32 +/- 2.98</td><td style="text-align:center">5.92 +/- 4.67</td><td style="text-align:center">7.37 +/- 5.34</td></tr>
+ <tr><td>2004 index</td><td style="text-align:center">3.45 +/- 2.67</td><td style="text-align:center">5.71 +/- 5.31</td><td style="text-align:center">7.82 +/- 6.6</td></tr>
+ <tr><td colspan="4">* The results of fair matches show both the average number of key phrases extracted correctly and the standard deviation.<br/>** 5, 10, and 15 respectively indicate the number of automatically extracted key phrases.</td></tr>
+ </tbody>
+ </table>
+ 
+ <p>We graphed the average of correctly extracted key phrases divided by the total number of key phrases extracted in Figure 2 and confirmed that the efficiency of the indexers' perspective is higher than that of authors. 
+ We marked test data with keywords published in 2004 as 2004 <em>kyw</em> and those with index terms in 2004 as 2004 <em>idx</em> below. The greater the number of correctly extracted words those two different groups share, the higher the hit rate that machine-extracted phrases show.</p> 
+ 
+  <figure class="centre">
+   <img src="p594fig2.jpg" alt="" width="495" height="222" />
+   <figcaption>
+      Figure 2.The performance graph with the Journal of Information Science
+  </figcaption>
+</figure>
+ 
+ <p>To test the statistical significance of the two different perspectives, we conducted a t-test. The t-test had a value of 2.354 showing that there is a statistically significant difference of performance (a p-value of 0.046 (p&lt;0.05)) between the author's keyword and indexer's term  within the same journal published in 2011. That is, any case which employs an indexer's term  with a fair (70%) match reveals better performance for training data than an author's keyword  in the same journal published in 2011. However, we did not observe statistical significance for the 2004 data.</p>
+
+ <h3>Research hypothesis 2: evaluation for different journals in the same field</h3>
+ 
+ <p>We extracted key phrases from two other journals in the same field with the same training data used in research hypothesis 1. We also presented fair (70%) match key phrases only, as the performance in terms of exact (100%) match key phrases was near to zero.</p>  <p>The result with 2011 data reveals that the performance from the indexers' intellectual base is better than that from the authors' but the cases in 2010 turn out to be the opposite (Table 7). Automatic key phrase extraction based on keywords proved to be more precise in this case.</p>
+ 
+ <table class="center">  
+ <caption><br />Table 7. The performance of the key phrase extraction algorithm with journals in same field</caption> 
+ <tbody>
+ <tr><th>Journal of Informetrics<br />Fair Match (70%)*</th><th>5**</th><th>10**</th><th>15**</th></tr>
+ <tr><td>2011 keyword</td><td>3.17 +/- 3.56</td><td>5.17 +/- 4.37</td><td>6.61 +/- 4.75</td></tr>
+ <tr><td>2011 index</td><td>2.85 +/- 5.7</td><td>6.33 +/- 11.09</td><td>7.96 +/- 13.66</td></tr>
+ <tr><td>2010 keyword</td><td>2.6 +/- 3.7</td><td>5.23 +/- 6.45</td><td>7.2 +/- 9.33</td></tr>
+ <tr><td>2010 index</td><td>2.13 +/- 3.22</td><td>4.53 +/- 5.41</td><td>7 +/- 8.67</td></tr>
+ <tr><th>Scientometrics<br />Fair Match (70%)</th><th>5**</th><th>10**</th><th>15**</th></tr>
+ <tr><td>2011 keyword</td><td>2.78 +/- 2.17</td><td>4.43 +/- 3.05</td><td>6.57 +/- 4.38</td></tr>
+ <tr><td>2011 index</td><td>3.78 +/- 4.83</td><td>6.78 +/- 7.79</td><td>11.78 +/- 10.17</td></tr>
+ <tr><td>2010 keyword</td><td>4.09 +/- 3.99</td><td>6.38 +/- 5.14</td><td>7.56 +/- 5.85</td></tr>
+ <tr><td>2010 index</td><td>3.49 +/- 5.57</td><td>5.91 +/- 7.8</td><td>8.53 +/- 10.24</td></tr>
+ <tr><td colspan="4">* The results of fair matches show both the average number of key phrases extracted correctly and the standard deviation.<br />** 5, 10, and 15 respectively indicate the number of automatically extracted key phrases.</td></tr>
+ </tbody>
+ </table>
+ 
+ <p>We graphed the average of correctly extracted key phrases divided by the total number of key phrases extracted in Figures 3 and 4, and confirmed again that index term-based extraction mostly performs better than extraction based on author-provided keywords.</p>
+ 
+ <p>In addition, we identified that a gap of performance between the two perspectives exists. Specifically, the gap between extracted results from authors' and indexers' base in the <em>Journal of Informetrics</em> is small: however, <em>Scientometrics</em> shows a bigger discrepancy.</p> 
+ 
+  <figure class="centre">
+   <img src="p594fig3.jpg" alt="The performance graph with the Journal of Informetrics" width="495" height="222" />
+   <figcaption>Figure 3: The performance graph with the <em>Journal of Informetrics</em></figcaption>
+</figure>
+<br />
+ <figure class="centre">
+   <img src="p594fig4.jpg" alt="The performance graph with Scientometrics" width="495" height="222" />
+   <figcaption>Figure 4: The performance graph with <em>Scientometrics</em></figcaption>
+</figure>
+ 
+ <p>Meanwhile, there was no statistically significant difference in performance between author's keyword and indexer's term for different journals in the same field.</p> 
+ 
+ <h3>Research hypothesis 3: evaluation for different journals in different fields</h3>
+ 
+ <p>With training data in different domains, machine learning by index terms shows better results for finding appropriate key phrases (Table 8).</p>
+ 
+ <table class="center">  
+ <caption><br />Table 8. The performance of key phrase extraction algorithm with two journals in different fields</caption> 
+ <tbody>
+ <tr><th>American Educational Research Journal<br />Fair Match (70%)*</th><th>5**</th><th>10**</th><th>15**</th></tr>
+ <tr><td>2011 keyword</td><td style="text-align:center;">6.2 +/- 6.24</td><td style="text-align:center;">8.5 +/- 6.62</td><td style="text-align:center;">10.52 +/- 7.09</td></tr>
+ <tr><td>2011 index</td><td style="text-align:center;">9.7 +/- 10.73</td><td style="text-align:center;">14.09 +/- 13.51</td><td style="text-align:center;">17.75 +/- 14.45</td></tr>
+ <tr><td>2004 keyword</td><td style="text-align:center;">4.24 +/- 3.64</td><td style="text-align:center;">7.29 +/- 5.65</td><td style="text-align:center;">9.57 +/- 6.93</td></tr>
+ <tr><td>2004 index</td><td style="text-align:center;">5.12 +/- 5.64</td><td style="text-align:center;">8 +/- 7.02</td><td style="text-align:center;">11.6 +/- 8.52</td></tr>
+ <tr><th>Sociological Methods and Research<br />Fair Match (70%)*</th><th>5**</th><th>10**</th><th>15**</th></tr>
+ <tr><td>2011 keyword</td><td style="text-align:center;">2.76 +/- 2.28</td><td style="text-align:center;">3.98 +/- 2.67</td><td style="text-align:center;">5.56 +/- 3.78</td></tr>
+ <tr><td>2011 index</td><td style="text-align:center;">2.73 +/- 2.56</td><td style="text-align:center;">5.93 +/- 4.81</td><td style="text-align:center;">9.27 +/- 6.37</td></tr>
+ <tr><td>2004 keyword</td><td style="text-align:center;">1.88 +/- 1.74</td><td style="text-align:center;">3.14 +/- 2.72</td><td style="text-align:center;">4.48 +/- 3.22</td></tr>
+ <tr><td>2004 index</td><td style="text-align:center;">2.79 +/- 3.22</td><td style="text-align:center;">5.98 +/- 4.09</td><td style="text-align:center;">8.1 +/- 5.32</td></tr>
+ <tr><td colspan="4">* The results of fair matches show both the average number of key phrases extracted correctly and the standard deviation.<br/>** 5, 10, and 15 respectively indicate the number of automatically extracted key phrases.</td></tr>
+ </tbody>
+ </table>
+ 
+ <p>We also graphed the results in Figure 5 and 6. In the <em>American Educational Research Journal</em>, the performance rate in 2011 <em>idx</em> is even greater than 1.0. We also found that within the journals in different domains, there is a subtle distinction among performances. This is due to changes of the training data. 
+ To be specific, in the <em>American Educational Research Journal</em> which is regarded as publishing studies on very similar topics with the articles of the training journal, the gap between the  <em>kyw</em> and <em>idx</em> is not big. </p> 
+ 
+   <figure class="centre">
+   <img src="p594fig5.jpg" alt="The performance graph with the <em>American Educational Research Journa" width="495" height="222" />
+   <figcaption>
+      Figure 5: The performance graph with the <em>American Educational Research Journal</em>
+  </figcaption>
+</figure>
+
+<p>In <em>Sociological Methods and Research,</em> however, it is obvious that the matching rate with index terms shows the better performance. The distinction between the two aspects is quite clear. </P>
+
+ <figure class="centre">
+   <img src="p594fig6.jpg" alt="The performance graph with <em>Sociological Methods and Research</em>" width="495" height="222" />
+   <figcaption>
+      Figure 6: The performance graph with <em>Sociological Methods and Research</em>
+  </figcaption>
+</figure>
+ 
+ <p>To test the statistical significance of the two different perspectives, we conducted a t-test. Table 10 below shows a statistically significant difference of performance between author's keyword <em>(kyw)</em> and indexer's term <em>(idx)</em> exists. That is, any case which employs the indexer's term 
+ <em>(idx)</em> with a fair (70%) match reveals a better performance as training data than the author's keyword <em>(kyw)</em> from journals in different fields.</p> 
+ 
+ <table class="center" style="width:50%;">  
+ <caption><br />Table 9: T-test of performance between author's keywords and indexers' terms from journals in different fields</caption> 
+ <tbody>
+ <tr><th>Test Set</th><th>t-value</th><th>p-value</th></tr>
+ <tr><td>2011</td><td style="text-align:center;">-3.348</td><td style="text-align:center;">0.004 (p&lt;0.01)</td></tr>
+  <tr><td>2004</td><td style="text-align:center;">-4.298</td><td style="text-align:center;">0.000 (p&lt;0.001)</td></tr>
+ </tbody>
+ </table> 
+ 
+
+ <h2>Discussion</h2>
+ 
+ <p>Findings from the experiment are summarised as follows. First, we found that indexers assign index terms in a more varied form than the keywords authors offer. When we compared the exact (100%) and the fair (70%) matching number of key phrases based on the two intellectual bases, the difference between the two was noticeable when training was done with index terms. We graphed five key phrases extracted from documents issued in 2004 as an example in  Figures 7 and 8. As shown below, it is revealed that indexers would select the greater variety of terms for documents while authors choose more consistent words for representing main concepts of the documents. This is especially true when the discipline of the journal between training and test data is not similar.</p>
+ 
+  <figure class="centre">
+   <img src="p594fig7.jpg" alt="Five key phrase extraction with 2004 documents based on authors" width="495" height="222" />
+   <figcaption>
+      Figure 7: Five key phrase extraction with 2004 documents based on authors
+  </figcaption>
+</figure>
+<br />
+ <figure class="centre">
+   <img src="p594fig8.jpg" alt=" Five key phrase extraction with 2004 documents based on indexers" width="495" height="222" />
+   <figcaption>
+      Figure 8: Five key phrase extraction with 2004 documents based on indexers
+  </figcaption>
+</figure>
+
+ <p>We found that there is a noticeable discrepancy between author-provided terms and indexer-provided terms. This disparity could be attributed to the way authors view disciplines from the perspective of insiders, while indexers from that of outsiders, as suggested by Marion and McCain (<a href="paper594.html#mar01">2001</a>). Authors are those who understand their fields in depth and know important concepts in their domain; they are experts in their field and give keywords that have already been widely adopted. Indexers, however, consider words that will represent an article well and thoroughly examine an individual document; they sometimes select key phrases with greater variation when representing certain concepts, leaving the potential for a wrong decision. For example, in one of the articles used in this study, authors provide a keyword <em>sliding window</em>, but indexers give the index term <em>sliding window method</em> to indicate that keyword, which might be quite similar in some way but not exactly. Another presents two index terms for one keyword; <em>fuzzy logic</em> and <em>entropy theory</em>, representing <em>fuzzy entropy</em>. This implies that the retrieval results will be different between a keyword-based and an index-term-based search; information users might retrieve less relevant documents from the latter.</p>  
+ <p>We should also note that authors tend to list the exact words they use in their articles for keywords, so the exact matching rate from authors is higher than that from indexers. Although indexers keep an objective attitude while assigning index terms, the exact matching rate from indexers is near to zero, because they determine the access points for articles not from its content but from their indexing rules and judgment. </p> 
+ 
+ <p>It is a contradictory finding that even though automatic key phrase extraction with index terms performs better than with keywords, the consistency in giving representative words of the author group is higher than the indexer group. In other words, indexers have greater variance when assigning terms to articles than authors do because indexers use a larger number of terms. We suggest, therefore, with these results that index terms can be utilised efficiently as training data to extract key phrases automatically for a large number of documents. At the same time, it should be noted that information users might not prefer those results, which may bring them to irrelavant resources in the information retrieval process.</p>
+ 
+ <p>Secondly, we proved that the automatic key phrase extraction performance with indexer-assigned terms is more efficient than with those of authors. This result becomes more obvious when training and test data come from different domains. In this case, the supervised learning technique matches a greater number of human-offered words that refer to more general descriptors from the indexers' perspective. We assume that this disparity comes from motivational variance from each group; some authors may assign keywords for their article just because journals ask them to do so. It is also noticeable that key phrase extraction is hardly influenced by the journal from which the training data comes: within the same journal or in different journals in the same field. When it comes to journals in different scholarly areas, however, the characteristics of the training data have an impact on the key phrase extraction outcomes more significantly, resulting in quite a different gap in its performance. This is because the keywords usually come from their own fields, revealing their contextual meaning, so they fail to mirror core words in other domains; index terms might be more efficient, as they take a more general approach to scholarly areas. It also implies that when compiling training data for key phrase extraction, we should carefully look at the characteristics of both training and test data at the outset.</p> 
+ 
+ <h2>Conclusion and future work</h2>
+  
+ <p>In this study, we investigated whether the <em>indexer effect</em> exists in key phrase extraction. We also presented a new key phrase extraction approach based on indexers' terms as training data instead of keywords, which is built based on the key phrase extraction algorithm. For evaluation, we compared the key phrases extracted by the machine with those assigned by authors and by indexers respectively. We analysed extracted key phrases in exact (100%) and fair (70%) matching by the average number of key phrases extracted correctly per document. We extracted key phrases from three different data sources: 1) full-text articles from the same journal, 2) full-text articles from different journals in the same field, and 3) full-text articles from journals in different fields, with keywords and index terms as training data.</p>
+ <p>To verify the research hypotheses addressed, we selected a variety of journals in the same field and different fields. We were particularly interested in whether the characteristics of the journal affect the performance of key phrase extraction.</p> 
+ 
+ <p>The results showed that when articles that have fewer interrelated topics are included in the training data, the results are influenced more by index terms than by keywords. For example, in  research hypothesis 2, the  <em>Journal of Informetrics</em> publishes articles with very similar topics to the articles in <em>Journal of Information science,</em> which was used to create the training data, but those in  <em>Scientometrics</em> do not deal with related topics with those in the training data. Thus, the latter is influenced more strongly by the terms that indexers offer. This causes indexer-based extraction to perform more efficiently in the latter journal, which has more domain-independent characteristics. The same rule also applies to research hypothesis 3. Using a journal in the field of sociology, which is considered less connected to information science than education, has a greater effect on the extraction performance with index terms because of its more general characteristics.</p>
+ 
+ <p>With the experimental results, we conclude that the automatic key phrase extraction with index terms performs better in most cases but it also reveals that indexers tend to assign terms inconsistently. It implies that it is more appropriate to use index terms as training data in key phrase extraction but automatically extracted key phrases might lead users to less relevant documents in information retrieval.</p> 
+ 
+ <p>One of the limitations of our current work is that the training data are constructed with one journal. As a follow-up study, we will explore how training data with multiple journals performs compared to that with one journal. We are also interested in using other kinds of data sets for supervised learning to confirm the 
+ <em>indexer effect</em> in automatic key phrase extraction. In addition, future work will focus more on adding new features to the algorithm and conducting experiments with other training data.</p>
+ 
+ <h2>Acknowledgements</h2>
+ <p>This study was supported by a National Research Foundation of Korea Grant funded by the Korean Government (NRF-2012-2012S1A3A2033291).</p> 
+ 
+ <h2 id="author">About the authors</h2>
+ <p><strong>Jung Eun Hahm</strong> is a MA candidate of Library and Information Science at Yonsei University, Seoul, Korea. Her research interests are text mining, bibliometrics, and information retrieval. She can be contacted at <a href="mailto:jungeunhahm@yonsei.ac.kr">jungeunhahm@yonsei.ac.kr</a>. <br />
+ <strong>Su Yeon Kim</strong> is a Ph.D. candidate of Library and Information Science at Yonsei University, Seoul, Korea. Her research interests include text mining, bibliometrics, information retrieval and text categorisation. She can be contacted at <a href="mailto:suyeon@yonsei.ac.kr">suyeon@yonsei.ac.kr</a>.<br />
+<strong>Meen Chul Kim</strong> is an assistant researcher of Library and Information Science at Yonsei University, Seoul, Korea. His research interests include Information retrieval and Text Mining from the Web and Social Media, and Information System Evaluation. He can be contacted at <a href="mailto:andrewevans@yonsei.ac.kr">andrewevans@yonsei.ac.kr</a>.<br />
+ <strong>Min Song</strong> is an Associate Professor of Library and Information Science at Yonsei University, Seoul, Korea. He is the corresponding author for this paper. His research interests are text mining, social media mining, and bio-literature mining. He can be reached at <a href="mailto:min.song@yonsei.ac.kr">min.song@yonsei.ac.kr</a>.</p>
+ 
+</section>
+
+
+<section class="refs">
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">References</legend>  
+
+ <ul class="refs"> 
+  <li id="ahm04">Ahmed, S. Z., McKnight, C. &amp; Oppenheim, C. (2004). A study of users' performance and satisfaction with the Web of Science IR interface.
+ <em>Journal of Information Science</em>, <strong>30</strong>(5), 459-468</li>
+ 
+ <li id="bar00">Barker, K. &amp; Cornacchia, N. (2000). Using noun phrase heads to extract document key phrases. In: H. J. Hamilton, (Ed.),  <em>Advances in Artificial Intelligence. Proceedings of 13th Biennial Conference of the Canadian Society for Computational Studies of Intelligence, AI 2000. 14-17 May 2000, Montreal </em>. 
+ (pp. 40-52). Berlin: Springer.</li> 
+ 
+ <li id="cal86">Callon, M., Law, J. &amp; Rip, A. (1986). <em>Mapping the dynamics of science and technology: sociology of science in the real world.</em> London: Macmillan Press Ltd.</li>
+  
+ <li id="el09">El-Beltagy, S. R. &amp; Rafea, A. (2009). KP-Miner: a key phrase extraction system for English and Arabic documents.  <em>Information Systems</em>, <strong>34</strong>(1), 132-144 </li>
+ 
+ <li id="hea86">Healey, P., Rothman, H. &amp; Hoch, P. (1986). An experiment in science mapping for research planning.  <em>Research Policy</em>, <strong>15</strong>(5), 233-251 </li> 
+ 
+ <li id="Iiv98">Iivonen, M. &amp; Kivimaki, K. (1998). Common entities and missing properties: similarities and differences in the indexing of concepts. <em>Knowledge Organization</em>, <strong>25</strong>(3), 90-102 </li>
+ 
+ <li id="law88">Law, J., Bauin, S., Courial, J. P. &amp; Whittaker, J. (1988). Policy and the mapping of scientific chance: a co-word analysis of research into environmental acidification.  <em>Scientometrics</em>, <strong>14</strong>(3), 251-264 </li> 
+ 
+ <li id="mai01">Mai, J. E. (2001). Semiotics and indexing: an analysis of the subject indexing process. <em>Journal of Documentation</em>, <strong>57</strong>(5), 591-622 </li>
+ <li id="mar01">Marion, L. S. &amp; McCain, K. W. (2001). Contrasting views of software engineering journals: author co-citation choices and indexer vocabulary assignments.  <em>Journal of the American Society for Information Science</em>, <strong>52</strong>(4), 297-306 </li> 
+ 
+ <li id="med08">Medelyan, O. &amp; Witten, I. H. (2008). Domain-independent automatic key phrases indexing with small training sets.  <em>Journal of the American Society for Information Science and Technology</em>, <strong>59</strong>(7), 1026-1040 </li>
+ 
+ <li id="ngu07">Nguyen, T. D. &amp; Kan, M. Y. (2007). Keyphrase extraction in scientific publications. <em>Proceedings of the 10th International Conference on Asian Digital Libraries: Looking Back 10 Years and Forging New Frontiers</em>, (pp. 317-326). Berlin: Springer-Verlag. (Lecture Notes in Computer Science, Vol. 4822)</li> 
+ 
+ <li id="por80">Porter, M. F. (1980). An algorithm for suffix stripping. <em>program</em>, <strong>14</strong>(3), 130-137 </li>
+ 
+ <li id="rol81">Rolling, L. (1981). Indexing consistency, quality and efficiency.  <em>Information Processing &amp; Management</em>, <strong>17</strong>(2), 69-76 </li>
+ 
+ <li id="son">Song, M., Yu, H. J. &amp; Han, W. S. (forthcoming). A graph model-driven concept extraction technique for biomedical literatures. <em>International Journal of Data Mining and Bioinformatics </em>. </li> 
+ 
+ <li id="tur00">Turney, P. D. (2000). Learning algorithms for key phrase extraction.  <em>Information Retrieval</em>, <strong>2</strong>(3), 303-336 </li>
+ 
+ <li id="tur03">Turney, P. D. (2003). Coherent key phrase extraction via web mining.  In <em>Proceedings of the 18th international joint conference on Artificial intelligence</em>,  (pp. 434-442). San Francisco, CA: Morgan-Kaufmann. </li> 
+ 
+ <li id="wan06">Wang, H., Peng, H. &amp; Hu, J. S. (2006). Automatic keyphrase extraction from document using neural network.  In Daniel S. Yeung, Zhi-Qiang Liu, Xi-Zhao Wang and Hong Yan, (Eds.). In <em>Advances in Machine Learning and Cybernetics: 4th International Conference, ICMLC 2005, Guangzhou, China, August 2005. Revised Selected Papers</em>, (pp. 633-641).  Berlin: Springer-Verlag. (Lecture Notes in Artificial Intelligence, Volume 3930). </li>
+ 
+ <li id="whi89">Whittaker, J. (1989). Creativity and conformity in science: titles, keywords, and co-word analysis.  <em>Social Studies of Science</em>, <strong>19</strong>(3), 473-496 </li>
+ 
+ <li id="win90">Winkler,W. E. (1990). <a href="http://www.webcitation.org/6LFH2NSHO">String comparator metrics and enhanced decision rules in the Fellegi-Sunter model of record linkage</a>.  In <em>Proceedings of the Section on Survey Research Methods (American Statistical Association)</em>, (pp. 354-359).  Alexandria, VA: American Statistical Association. Retrieved 18 November, 2013 from http://www.amstat.org/sections/srms/Proceedings/papers/1990_056.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/6LFH2NSHO)</li> 
+ 
+ <li id="wit99">Witten, I. H., Paynter, G. W., Frank, E., Gutwin, C. &amp; Nevill-Manning, C. G. (1999). KEA: practical automatic key phrase extraction.  In 
+ <em>Proceedings of the Fourth ACM conference on Digital libraries</em>, (pp. 254-255). New York, NY: ACM Press.</li>
+ 
+ <li id="wol07">Wolfram, D. &amp;  Olson, H.A. (2007).<a href="http://www.webcitation.org/6HsEtqEFz">A method for comparing large scale inter-indexer consistency using IR modeling.</a>  In <em>Proceedings of the 35th Annual Conference of the Canadian Association for Information Science</em>,  Retrieved 4 June, 2012 from http://www.cais-acsi.ca/proceedings/2007/wolfram_2007.pdf. (Archived by WebCite&reg; at http://www.webcitation.org/6HsEtqEFz).</li>
+ 
+ <li id="wu08">Wu, Y. B. &amp; Li, Q. (2008). Document key phrases as subject metadata: incorporating document key concepts in search results.  <em>Information Retrieval</em>, <strong>11</strong>(3), 229-249 </li> 
+  </ul>  
+  </fieldset>  
+  </form> 
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+ How to cite this paper
+ </legend>  
+ <div><br />  Hahm, J.E., Kim, S.Y., Kim, M.C., Song, M. (2013).  Investigation into the existence of the indexer effect in key phrase extraction.  <em>Information Research</em>, <strong>18</strong>(4) paper 594. [Available at  http://InformationR.net/ir/18-4/paper594.html]</div>  
+ </fieldset>  
+ </form> 
+</section>
+</article>
+<br />
+<section>
+ 
+ <table class="footer" style="border-spacing:10;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">
+ Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"> 
+ <form method="get" action="http://scholar.google.com/scholar" target="_blank">  
+ <table class="footer">  
+  <tr>  
+  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="&quot;indexer effect&quot; &quot;key phrase extraction&quot;" /><br />  
+  <input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  </td>  </tr>  
+ </table> 
+  </form>  
+ </td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --> 
+ 
+ <form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr>  
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="&quot;indexer effect&quot; &quot;key phrase extraction&quot;" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+ <input type="hidden" name="client" value="pub-5081678983212084" />
+ <input type="hidden" name="forid" value="1" /> 
+  <input type="hidden" name="ie" value="ISO-8859-1" />  
+  <input type="hidden" name="oe" value="ISO-8859-1" />  
+  <input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" />  
+  <input type="hidden" name="hl" value="en" />
+  </td>  
+  </tr>  
+  </table>  
+  </form>
+ </td>  
+ <td style="vertical-align:top; text-align:center;">   
+ <form method="get" action="http://www.bing.com" target="_blank">  
+ <table class="footer">
+ <tr> 
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="&quot;indexer effect&quot; &quot;key phrase extraction&quot;" /> <br />  
+ <input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  
+ </td>  
+ </tr>  
+ </table>  
+ </form> 
+ </td> 
+ </tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/cholar?hl=en&amp;q=http://informationr.net/ir/18-4/paper594.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div> <br />  
+    <!-- AddThis Button BEGIN -->
+<div style="text-align:center;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script>
+<!-- AddThis Button END -->
+ 
+ <hr />  
+ <table class="footer" style="padding:10;">  
+ <tr>
+ <td style="text-align:center; vertical-align:top;">
+ <div>  <a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={55df3117-91d7-abb4-e52a-d3efc1f3ac88}&amp;template=simple" alt="Hit Counter by Digits"  /></a></div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the authors, 2013. <br />Last updated: 19 November, 2013 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+ </section>
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="infres184.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+</body>  
+ </html> 

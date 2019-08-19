@@ -1,0 +1,333 @@
+#### Information Research, Vol. 1 No. 2, December 1995
+
+* * *
+
+<a name="paper4"></a>
+
+# A selective review of knowledge-based approaches to database design
+
+#### Shahrul Azman Noah and Michael Lloyd-Williams  
+Department of Information Studies  
+University of Sheffield, Sheffield, UK  
+
+* * *
+
+## Introduction
+
+Database design is concerned with representing some aspect of a real world situation by means of a database system [[1]](#1). It can be thought of as four distinguishable stages: requirements specification; conceptual design; logical design; and physical design.
+
+Requirements specification involves identifying and extracting the information needs of various users. Conceptual design stage can be thought of as comprising two sub stages: view modelling, which transforms the user requirements into a number of individual user views; and view integration, which combines these views into a single global schema [[2]](#2). The objective of these two stages is to produce a high level representation, often called a conceptual schema which is independent of any particular database management system (DBMS). Logical database design is concerned with determining the contents of a database independently of exigencies that may be imposed by a particular physical implementation [[1]](#1). Thus, this stage involves translating the conceptual schema into the logical model of the target DBMS. Physical database design transforms the logical data model into a form that is suitable for the specific hardware/DBMS configuration that is being used [[3]](#3) .
+
+Database design is usually carried out on an ad-hoc basis [[4,5]](#4), whereby a database designer extracts information about the problem domain by interviewing end-users. According to Storey and Goldstein [[6]](#6) and Storey [[3]](#3) , two problems could arise with this approach. Firstly, the quality of the design is highly dependent upon the capabilities and skills of the database designer. Secondly, the database designer is usually unfamiliar with the problem domain, and therefore must learn about it from end-users (who may have difficulty in articulating their information needs). One approach to this problem is the use of artificial intelligence technology to develop intelligent design assistants. Sometimes referred to as knowledge-based, computer-aided systems engineering (KB-CASE) tools, they assist a designer by providing advice, suggesting alternative solutions, helping to investigate the consequences of design decisions, and maintaining the availability of the design knowledge by providing information should a design decision be questioned or require explanation in retrospect [[7]](#7).
+
+## Criteria of comparison
+
+The criteria used in this review are a combination of those used in previous surveys by Lloyd-Williams and Beynon-Davies [[1,8]](#1), Storey [[3]](#3) and Storey and Goldstein [[6]](#6), and are as follows:
+
+*   Design stage: Which of the database design stage(s) is covered.
+*   User interface: This criterion examines the user interface employed by the system.
+*   Users: The target user of the system, and any tasks that need to be completed before initiating the system.
+*   Design technique: The extent to which the various approaches make use of the opportunity to automate available database design techniques.
+*   Undo facilities: Whether the system provides a backtracking or undo facility where the user, if dissatisfied with certain design output, may reinitiate at any of the design stages and investigate new possibilities.
+*   Driving method: What sources are required to drive the design process, i.e., directly supplied by the user, other external sources such as a system analysis, or the set of forms used in the application [[9]](#9).
+*   Input: How information is entered into the system.
+*   Output: The form taken by the system output.
+*   Real world knowledge: Real world knowledge is "what people naively know about the real world" [[10]](#10). Here, we examine whether a system employs real world knowledge in its knowledge base.
+*   Specialised knowledge: Specialised knowledge or domain specific knowledge in the system knowledge base can enhance the appearance of intelligence of the system. Here we examine how the system exploits such knowledge (if available).
+*   Guidance and learning aids: Whether the system provides extensive guidance to the user in the design process.
+*   Implementation language: The language used to implement the system.
+*   Reasoning and explanation capabilities: Whether the system is capable of providing details of any reasoning it may make, and explanation of actions it may recommend.
+*   Knowledge-base updating facilities: Whether facilities are provided whereby the database design knowledge in the system may be updated/augmented.
+
+## Representative Approaches
+
+This is by no means the first review article of this kind, with previous papers on the subject being published by Storey and Goldstein [[6]](#6), Storey [[3]](#3), and Lloyd-Williams and Beynon-Davies [[1,8]](#1). However, this article reviews a set of recently developed tools that have not been covered in previous works, yet exhibit specific points of interest. The tools reviewed here are ODA [[7,11]](#7), ExpertDB [[12]](#12), EASIER-EUC [[13]](#13), and NITDT [[14]](#14).
+
+ODA was selected as this is the only tool that supports the design of object-oriented databases based upon an object-oriented modelling approach. ExpertDB provides a different input approach compared to other tools supporting relational database design, in using functional dependencies as the fundamental input. EASIER-EUC uses a decision tree in its on-line HELP system that is useful in guiding a user through the design process. NITDT was selected as it includes aspects of real world knowledge and specialised knowledge in its knowledge base.
+
+## The Object Design Assistant
+
+The Object Design Assistant (ODA) [[7,11]](#7) was designed to provide support for a systems analyst or database designer in the design of object-oriented databases (OODB). ODA employs aspects of the Object Modelling Technique (OMT) methodology advocated by Rumbaugh et al. [[15]](#15) to construct the design.
+
+The knowledge-base in ODA contains both facts and rules. Facts are used to represent the initial analysis model describing the application domain, and the derived object-oriented design. Rules dictate the order in which the various analysis and design tasks are performed and indicate what should be done, should a particular condition be detected during a design session. In terms of its user interface, ODA employs a combination of a menu-driven and natural-language interface (NLI), based upon interactive window systems.
+
+Initial user input is based upon the method of interactive schema specification first described by Baldiserra et al [16], and takes the form of a series of declarative statements describing the application domain. These declarative statements are used to construct a problem domain model, which is subsequently refined and augmented, resulting in the creation of an object-oriented analysis model. The analysis model is then used for the design stage. This transition requires the user to answer a series of questions in order for the system further to understand the application domain and results in the generation of the object-oriented design. At this stage, the user is presented with the proposed object classes, and is free to specify the explicit constraints that apply to these classes. Output from the system consists of a series of suggested object classes and a set of explicitly stated constraints associated with these classes. Designs produced by ODA satisfy the mandatory requirements of the Object-Oriented Database Manifesto [[17]](#17).
+
+The initial system does not contain any real world knowledge or specialised knowledge. This results in large number of questions being put to the user regarding the application domain. A subsequent version of ODA [7], makes use of generic models to provide domain specific knowledge for specific applications. This approach significantly reduces the amount of user questioning required during a design session, with the system appearing to have previous knowledge of the application domain.
+
+## ExpertDB
+
+ExpertDB [[12]](#13) was developed to synthesise a normalised entity-relationship (E-R) schema using functional dependencies as fundamental user input. ExpertDB features a menu driven user-interface. The knowledge base is composed of schema status base (SSB), schema knowledge base (SKB) and schema database (SDB). Facts that are assertions about attributes, entities and relationships are stored in the schema status base (SSB). Rules are composed of general rules such as simplification, normalisation and transformation rules, and are stored in the schema knowledge base (SKB). The inference engine carries out the deduction process, generating the E-R schema in normalised form, and transforming the E-R schema into the equivalent relational schema.
+
+During the design session, the database designer defines the real world attributes and functional dependencies (FDs) of the problem domain. Using the FDs as the fundamental input, the system synthesises the E-R schema representing the problem domain. Upon processing the set of FDs, the system presents other derived FDs and asks the designer for confirmation. The evolving E-R schema is stored in the SSB. The system's SKB that contains a set of rules then derive the normal form E-R schema. A set of transformation rules is also derived to map the E-R schema into an equivalent relational schema. The system may ask the database designer for more information, if necessary. The system does suggest solutions to certain tasks but the database designer is ultimately charged with making decisions. The system allows the database designer to investigate new possibilities if he is not satisfied with the result presented.
+
+ExpertDB does not contain any real world knowledge or specialised knowledge in its knowledge base. The system relies heavily on the database designer's capabilities in identifying the functional dependencies of the problem domain.
+
+## EASIER-EUC
+
+EASIER-EUC (End User Computing) [[13]](#13) was developed to provide support for the requirements specification stage of database design. EASIER-EUC embodies an expert consultant and a design assistant. System features include a knowledge-base of database design rules, a tutorial-like help system, the use of English as a data modelling language, and automatic generation of a conceptual schema diagram. The EASIER-EUC knowledge base consists of Requirement Elicitation Templates Sentences (RETS), Data Modelling Decision Rules (RULES) and Structured English Template Sentences (SETS) that control the end-user dialogue during the modelling process and are embodied in the help system. The system provides systematic guidance and decision rules by organising the method in a decision tree structure. The decision tree structure of EASIER-EUC contains all the steps and rules involved in identifying the user database requirements, from user specifying the database subject and until it automatically produce a conceptual diagram of the database.
+
+The system is menu driven with an extensive help-like tutorial, and systematic guidance incorporated in the SETS, RETS and Rules menu. Output consists of a conceptual diagram based upon an E-R model, which is then translated into a normalised relation.
+
+The system is intended for an end-user who is assumed to have some knowledge of database design. No real world knowledge or any specialised domain knowledge is used. The system produces a conceptual diagram as output which is useful in enabling the designer to observe the results. The system does not, however, feature any backtracking facilities which restricts the ability of the designer to redo any of the design stages where system results are not satisfactory.
+
+## NITDT
+
+NITDT [[14]](#14) is an expert database design tool supporting requirements specification and conceptual design of databases. The system embodies an inference engine, a knowledge base (Rule Base) and a fact base (Data Model Base).
+
+The user provides a requirements specification which is expressed in NITSL (a requirement specification language) as input. The system then produces an E-R model representing the database as output. The system provides two interactive user-interfaces which are meant for the designer and the knowledge engineer. The first interface provides a menu for the database designer. The second interface provides a knowledge engineer with access to the Rule Base in order that it may be initially constructed, or subsequently updated.
+
+The user describes the requirements specification through the first interface using natural language with help of flow charts and tables. The user's requirements specification is stored in the requirements specification library and the designer is free to retrieve or modify it. This requirements specification is expressed in NITSL, and is first transformed into a semantic network and stored in the Data Model Base. The inference engine uses the semantic network to construct the E-R model on the basis of rules in the Rule Base. The designer is also allowed to retrieve the semantic network and the E-R model from the Data Model Base. The system can provide explanations about the inference process if requested by the designer.
+
+The system's knowledge base does not only contain the knowledge about database design theory but also contains rules on application-specific, domain-specific and general knowledge; for example, the system contains application-specific rules that are useful for particular domains, such as banking and planning. This is the main feature exhibited by NITDT which is not evident in the majority of other systems. However, the literature does not discuss how the user may choose the application or domain specific knowledge in the design process. The system provides a specific interface to provide for updating of the contents of the knowledge-base. Backtracking facilities are not discussed explicitly in the literature; however, the user may effect an update the requirements specification by retrieving it from the Requirements Specification Library.
+
+## Discussion And Comparison Of Approaches
+
+In this section, the approaches are compared using the criteria described previously. The results are represented in Table 1\. It can be seen that most of the systems reviewed provide support for the conceptual design stage. The E-R model is a popular and widely accepted approach to database design, as reflected by the number of tools using this approach. However, the object-oriented approach is becoming increasingly popular, and is often described as being the next generation of database systems [[18]](#18). ODA was the only approach reviewed to provide support for the design of object-oriented database. The majority of the systems reviewed do not provide an interactive interface to facilitate updating of the knowledge bases, the exception being NITDT.
+
+<<td align="center">OMT
+
+<table border="1"><caption align="bottom">Table 1: Comparison of approaches</caption>
+
+<tbody>
+
+<tr>
+
+<td>**Tool**</td>
+
+<td>**ODA**</td>
+
+<td>**ExpertDB**</td>
+
+<td>**EASIER-EUC**</td>
+
+<td>**NITDT**</td>
+
+</tr>
+
+<tr>
+
+<td>Design stage</td>
+
+<td align="center">Conceptual</td>
+
+<td align="center">Conceptual, logical</td>
+
+<td align="center">Requirements specification, conceptual</td>
+
+<td align="center">Conceptual</td>
+
+</tr>
+
+<tr>
+
+<td>User interface</td>
+
+<td align="center">NLI & menu</td>
+
+<td align="center">Menu</td>
+
+<td align="center">NLI & menu</td>
+
+<td align="center">NLI & menu</td>
+
+</tr>
+
+<tr>
+
+<td>Users</td>
+
+<td align="center">Database designer</td>
+
+<td align="center">Database designer</td>
+
+<td align="center">End user & database designer</td>
+
+<td align="center">Database designer</td>
+
+</tr>
+
+<tr>
+
+<td>Design technique</td>
+
+<td align="center">E-R</td>
+
+<td align="center">E-R</td>
+
+<td align="center">E-R</td>
+
+</tr>
+
+<tr>
+
+<td>Undo facility</td>
+
+<td align="center">Yes</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+</tr>
+
+<tr>
+
+<td>Driving method</td>
+
+<td align="center">External</td>
+
+<td align="center">External</td>
+
+<td align="center">User</td>
+
+<td align="center">User</td>
+
+</tr>
+
+<tr>
+
+<td>Input</td>
+
+<td align="center">Declarative statement</td>
+
+<td align="center">Functional dependencies</td>
+
+<td align="center">Dialogue</td>
+
+<td align="center">Specification language</td>
+
+</tr>
+
+<tr>
+
+<td>Output</td>
+
+<td align="center">OO schema</td>
+
+<td align="center">Logical schema</td>
+
+<td align="center">Conceptual E-R diagram</td>
+
+<td align="center">Conceptual E-R schema</td>
+
+</tr>
+
+<tr>
+
+<td>Real world knowledge</td>
+
+<td align="center">Yes, thesaurus approach</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+</tr>
+
+<tr>
+
+<td>Specialised knowledge</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+<td align="center">Yes</td>
+
+</tr>
+
+<tr>
+
+<td>Guidance & learning aids</td>
+
+<td align="center">Yes</td>
+
+<td align="center">No</td>
+
+<td align="center">Yes</td>
+
+<td align="center">No</td>
+
+</tr>
+
+<tr>
+
+<td>Implementation language</td>
+
+<td align="center">LISP</td>
+
+<td align="center">Prolog</td>
+
+<td align="center">Prolog</td>
+
+<td align="center">C</td>
+
+</tr>
+
+<tr>
+
+<td>Reasoning & explanation capabilities</td>
+
+<td align="center">Yes</td>
+
+<td align="center">No</td>
+
+<td align="center">Yes</td>
+
+<td align="center">No</td>
+
+</tr>
+
+<tr>
+
+<td>Knowledge base updating facilities</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+<td align="center">No</td>
+
+<td align="center">Yes</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+The inclusion of real world knowledge or specialised knowledge has not been addressed by the majority of the systems reviewed. ODA has real world knowledge provided by using a thesaurus-type structure to represent generic models. Only NITDT includes the specialised knowledge in its knowledge base. NITDT classified its knowledge into application specific, domain specific and general knowledge. However the literature does not discuss in detail how this knowledge is applied during the design session.
+
+## Conclusions
+
+One of the key factors that distinguish computer-based expert systems from human experts is that the latter apply not only their specialised expertise to a problem but also their general knowledge of the world. NITDT is the only system reviewed here that holds any form of internal domain specific knowledge, which can be easily augmented, enriched and updated, as required. This knowledge allows the designer to be an active participant along with the user in the design process and significantly eases the user task. The inclusion of real world knowledge and specialised knowledge is an area that must be further addressed before intelligent tools are able to offer a realistic level of assistance to the human designers.
+
+## References
+
+1.  <a name="1"></a>Lloyd-Williams, M. & Beynon-Davies, P. Expert system for database design: a comparative review. Artificial Intelligence Review, 6, 1992, 263-283.
+2.  <a name="2"></a>Vossen, G. (1990) Data Models, Database Languages, and Database Management Systems. Wilkinson: Addison-Wesley, 1990.
+3.  <a name="3"></a>Storey, V.C. A selective survey of the use of artificial intelligence for database design systems. Data and Knowledge Engineering. 11, 1993, 61-102.
+4.  <a name="4"></a>Bouzeghoub, M., Gardarin, G. & Metais, E. Database design tools: an expert system approach. Proceeding of the 11th International Conference on Very Large Databases, Stockholm, Sweden, 1985, pp. 82-95.
+5.  <a name="5"></a>Goldstein, R.C. Database: Technology and Management. New York: John Wiley, 1985.
+6.  <a name="6"></a>Storey, V.C. & Goldstein, R. Knowledge-based approach to database design. MIS Quarterly. Volume 17, Issue 1, March 1993, 25-46.
+7.  <a name="7"></a>Lloyd-Williams, M. Knowledge-based CASE tools: improving performance using domain specific knowledge. Software Engineering Journal, Volume 9, Issue 4, 1994, 167-173.
+8.  <a name="8"></a>Lloyd-Williams, M. & Beynon-Davies, P. Knowledge based CASE tools for database design. In K. Spurr & P. Layzell (Eds.), CASE: Current Practise, Future Prospects. John Wiley, 1992, pp. 205-222.
+9.  <a name="9"></a>Choobineh, J., Konsynski, B.R., Mannino, M. V. & Nunamaker J. F. An expert database system based on analysis on forms. IEEE Transactions on Software Engineering, 15, 1989, 479-491.
+10.  <a name="10"></a>Storey, V.C. Real world knowledge for databases. Journal of Database Administration, 3, 1992, 1-19.
+11.  <a name="11"></a>Lloyd-Williams, M. Expert system support for object-oriented database design, International Journal of Applied Expert Systems, 1, 1993, 197-212.
+12.  <a name="12"></a>Concepcion, A.I. & Villafuete, R.M ExpertDB: An assistant database design system. In: Proceeding of the 3rd International Conference on Industrial and Engineering Applications of Artificial Intelligence and Expert Systems, New York, NY: ACM, 1990, pp. 333-340.
+13.  <a name="13"></a>Ahrens, H.D. A CASE tool knowledge base for semantic data modelling. In Khosrowpour, D.B.A. (Ed.) Challenges for Information Management in a World Economy. Proceedings of 1993 Information Resources Management Association International Conference. Harrisburg PA: Idea Group Publishing, 1993, pp. 81-95.
+14.  <a name="14"></a>Nengbin, W. & Haiqing, L. An intelligent tool to support requirements analysis and conceptual design of database design. Journal of Computer Science and Technology, 6, 1991, 153-160
+15.  <a name="15"></a>Rumbaugh, J., Blaha, M., Premerlani, W., Eddy, F. & Lorenson, W. Object-Oriented Modelling and Design. Englewood-Cliffs, NJ: Prentice-Hall, 1991.
+16.  <a name="16"></a>Baldiserra, C., Ceri, S., Pelagatti, G. & Bracchi, G. Interactive specification and formal verification of user's views in database design. In. Proceeding of the 5th International Conference on Very Large Databases, 1979, pp. 262-272.
+17.  <a name="17"></a>Atkinson, M., Dewitt, D., Maier, D., Altair, F.B., Dittrich, K. & Zdonik, S. The object-oriented database manifesto. In W. Kim, J.M. Nicholas & S. Nishio (Eds.) Deductive and Object-Oriented Databases. London: Elsevier Science, 1990, pp. 223-240
+18.  <a name="18"></a>Catell, R.G. Next generation database systems. Communications of the ACM, 34(10), 1991, 30-33.
+
+* * *

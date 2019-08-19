@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+    <meta name="dc.title" content="A comparative study of methods to explore searchers' affective perceptions of images">
+    <meta name="dc.creator" content="J. Yoon">
+    <meta name="dc.subject" content="Compares perception of emotional characteristics of images through different tasks">
+    <meta name="dc.description" content="Previous search query analysis studies demonstrated that emotional perceptions and needs tend not to be sufficiently reflected in image queries. To provide a better understanding of the emotional attributes of an image, this study explored and compared such attributes obtained from related tasks. This study analysed attributes of an image through sorting, describing and searching. A data-set was obtained from Flickr images tagged with one of six basic emotions (love, joy, surprise, anger, sadness and fear); fifty-nine students participated. The sorting and describing tasks revealed two categories of emotions, joy and sadness, which people perceive from images. They also revealed some emotional terms which were chosen frequently as labels for sorted images. Comparison of image perceptions obtained from the three tasks performed on an image demonstrated similar perceptions, but there are minor differences resulting from the unique characteristics of each task or research setting. The categories of joy and sadness, along with the identified frequently used emotional terms, should receive attention in designing image indexing and retrieval systems. Also, the features of each task and environment setting should be considered when developing a research design exploring emotional aspects of an image.">
+    <meta name="dc.subject.keywords" content="images, indexing, emotions, emotional qualities, searching, sorting, describing">
+    <meta name="robots" content="all">
+    <meta name="dc.publisher" content="Professor T.D. Wilson">
+    <meta name="dc.coverage.placename" content="global">
+    <meta name="dc.type" content="text">
+    <meta name="dc.identifier" scheme="ISSN" content="1368-1613">
+    <meta name="dc.identifier" scheme="URI" content="http://InformationR.net/ir/16-2/paper475.html">
+    <meta name="dc.relation.IsPartOf" content="http://InformationR.net/ir/16-2/infres162.html">
+    <meta name="dc.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dc.date.available" content="2010-06-15">
+</head>
+<body>
+<h4 id="vol-16-no-2-june-2011">vol. 16 no. 2, June, 2011</h4>
+<h1 id="a-comparative-study-of-methods-to-explore-searchers-affective-perceptions-of-images">A comparative study of methods to explore searchers' affective perceptions of images</h1>
+<h4 id="jung-won-yoon"><a href="#author">Jung Won Yoon</a></h4>
+<p>School of Information, University of South Florida, Tampa, Florida</p>
+<h4>Abstract</h4>
+<blockquote>
+<p><strong>Introduction.</strong> Previous search query analysis studies demonstrated that emotional perceptions and needs tend not to be sufficiently reflected in image queries. To provide a better understanding of the emotional attributes of an image, this study explored and compared such attributes obtained from related tasks.<br>
+<strong>Method.</strong> This study analysed attributes of an image through sorting, describing and searching. A data-set was obtained from Flickr images tagged with one of six basic emotions (love, joy, surprise, anger, sadness and fear); fifty-nine students participated.<br>
+<strong>Results</strong>. The sorting and describing tasks revealed two categories of emotions, joy and sadness, which people perceive from images. They also revealed some emotional terms which were chosen frequently as labels for sorted images. Comparison of image perceptions obtained from the three tasks performed on an image demonstrated similar perceptions, but there are minor differences resulting from the unique characteristics of each task or research setting.<br>
+<strong>Conclusions</strong>. The categories of joy and sadness, along with the identified frequently used emotional terms, should receive attention in designing image indexing and retrieval systems. Also, the features of each task and environment setting should be considered when developing a research design exploring emotional aspects of an image.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>The main purpose of information retrieval is to provide search results which can fulfill users' information needs. Therefore, it is critical to reflect users' information needs and their searching patterns in designing an information retrieval/indexing mechanism. Through search queries, users express their information needs and communicate with an information retrieval system. So, examining users' queries has been used as a way of understanding users' needs. In the image retrieval field, there have been several studies which analysed search queries under the same assumption (<a href="#arm97">Armitage and Enser 1997</a>; <a href="#che01">Chen 2001</a>; <a href="#cho03">Choi and Rasmussen</a> 2003; <a href="#col98">Collins 1998</a>; <a href="#ens92">Enser and McGregor 1992</a>; <a href="#goo01">Goodrum and Spink 2001</a>; <a href="#kei94">Keister 1994</a>). However, even with the benefits of studying query analysis, there are some issues that cannot be resolved by this method. For instance, search queries may not represent users' needs completely, because users often do not recognize their own needs or have difficulty converting visual needs into verbal expressions. Also, experienced users of an image retrieval system tend to create queries which seem to return their anticipated search results, even if the users know that the queries do not represent their visual needs precisely. Therefore, in addition to query analysis, for understanding image searchers' unexpressed needs and image perceptions, several image related tasks, such as describing, sorting, similarity judgment and others, have been employed in image user studies.</p>
+<p>Compared to query analysis study, studies exploring image related tasks consistently emphasized the significance of emotional attributes of an image. For instance, sorting task studies supported that people categorize images using abstract and emotional features of images (<a href="#jor95">Jørgensen 1995</a>; <a href="#ror94">Rorissa and Hastings 1994</a>; <a href="#lai06">Laine-Hernandez and Westman 2006</a>) and description task studies demonstrated that people tend to use more abstract and emotional terms in the describing tasks than in the search tasks (<a href="#jor95">Jørgensen 1995</a>; <a href="#oco99">O'Connor, <em>et al.</em> 1999</a>; <a href="#gre02">Greisdorf and O'Connor 2002</a>; <a href="#hol04">Hollink, <em>et al.</em> 2004</a>). A line of reasoning adopted by these studies explains that, because of the notion that emotional attributes are subject to an individual viewer's interpretation (<a href="#gre02">Greisdorf and O'Connor 2002</a>), current image retrieval/indexing mechanisms have limitations in supporting access to subjective emotional meanings; therefore, searchers experienced in image retrieval systems are inclined not to use emotional terms in their queries (<a href="#jor03">Jørgensen 2003</a>; <a href="#eak04">Eakins, <em>et al.</em> 2004</a>).</p>
+<p>In short, it has been demonstrated that emotional meanings offer significant messages, in which image users are interested. Therefore, in order to improve image retrieval effectiveness through emotional attributes, it would be necessary to examine those attributes of an image comprehensively. However, those previous studies explored emotional attributes only as a part of their studies; as a result, there was no overarching study comparing different research designs. We assume that by exploring and comparing emotional attributes obtained from different image related tasks, it will be possible to provide a better understanding of the emotional attributes of an image. Furthermore, comparing emotional features obtained from different tasks could affect how researchers design studies of emotional perceptions of images. As a more practical benefit, results of this study will suggest how emotional features can be integrated into image indexing and retrieval systems.</p>
+<p>This study has the following two specific research questions:</p>
+<ol>
+<li>How is an emotion-space (i.e., hierarical representation of emotions) represented through sorting and describing tasks? Are there differences in an emotion-spaces represented through sorting and describing tasks?</li>
+<li>Are there differences in emotional perception for an individual image (i.e. emotions apprehended from each individual image) between searching, describing and sorting tasks?</li>
+</ol>
+<h2 id="literature-review">Literature review</h2>
+<h3 id="image-related-tasks">Image related tasks</h3>
+<p>If we could observe how people perceive, recognize and interpret visual materials, how they represent their needs for visual materials and how they operate their search processes, we would have a solid foundation for designing an image retrieval system or image organization scheme. However, since direct observation is not possible, researchers have attempted to understand human visual perception and searching activities by using several image related tasks. In this section, studies that examined image related tasks with the purpose of improving image retrieval perforamce are reviewed by focusing on key findings as well as research design. One image related task which is often incorporated in studies is <em>describing</em>.This task asks participants to describe what they notice in an image. Studies adopting <em>describing</em> were conducted on the basis of a relatively simple assumption; that is, attributes that are described while viewing an image reveal perceived or pertinent attributes of the image (<a href="#jor95">Jørgensen 1995</a>). However, since verbal description, which is not an inherent element of visual materials, has limitations in representing perceived or pertinent attributes, different settings have been adopted for exploring image perception from different perspectives. For example, Jørgensen (<a href="#jor95">1995</a>) used different types of descriptive tasks; O'Connor, <em>et al.</em> (<a href="#oco99">1999</a>) emphasized reactive description; Greisdorf and O'Connor (<a href="#gre02">2002</a>) used pre-defined queries; Laine-Hernandez and Westman (<a href="#lai06">2006</a>) compared keyword and free description. Comparison and implications of different approaches will be discussed later.</p>
+<p>Another method to elicit perceived image attributes is sorting or categorization. Categorization has been a key topic in psychology, because it is how people process and make manageable an infinite number of different stimuli. In other words, people perceive the world and environment by categorization which treats non-identical stimuli as equivalent (<a href="#ros77">Rosch 1977</a>). Categorization is applied to information retrieval as a way to '<em>reduce search space and, thus, search time, because there are fewer categories than the total number of individual numbers</em>' (<a href="#">O'Connor, <em>et al.</em> 1999</a>: 681). Importantly, categorization can be used to facilitate browsing, which is useful when searchers have no idea what they are looking for or have difficulties in expressing their needs (<a href="#ror04">Rorissa and Hastings 2004</a>). Jørgensen (<a href="#jor95">1995</a>) assumed that categorization can reveal image attributes that are not extracted from describing tasks, because people sort non-identical images with a notion of similarity in which individual, cultural and contextual backgrounds are embedded. In addition, she suggested that the describing tasks in which participants focused on each individual image, closely mirrored known-item searching, whereas the sorting task in which participants looked at the whole set of images mirrored browsing. As will be discussed later, several studies demonstrated different distributions of image attributes between describing and sorting.</p>
+<p>Collocating similar information objects (or documents) is a fundamental function of information organization; therefore, a good indexing mechanism should be able to collocate similar documents and differentiate dissimilar documents. In the field of image retrieval, researchers have attempted to evaluate their indexing mechanism by comparing it with similarity judgment tasks conducted by people (<a href="#rog98">Rogowitz, <em>et al.</em> 1998</a>; <a href="#ror05">Rorissa 2005</a>). Since the sorting task is also based on a notion of similarity, sorting and similarity judgment tasks have common features. However, whereas a sorting task usually involves participants sorting a set of images, similarity judgment tasks ask participants to compare a pair of images. Rogowitz, <em>et al.</em> (<a href="#rog98">1998</a>) found these two tasks demonstrated consistent results.</p>
+<h3 id="related-studies">Related studies</h3>
+<p>Table 1 summarizes previous studies in terms of study purpose, image collection, participants, and procedure. There are a couple of studies which analysed different types of user descriptions. O'Connor, <em>et al.</em> (<a href="#oco99">1999</a>), who recognized the potential of users' reactions to images as access points, collected three types of users' reactions: caption, subject description and reactions (words or phrases describing how images makes users feel). The authors found the prevalent occurrences of narrative (conversational) and adjectival descriptors. Greisdorf and O'Connor (<a href="#gre02">2002</a>) investigated how users assign predetermined query terms to images and suggested the importance of affective and emotional query terms in image retrieval.</p>
+<p>Several studies compared <em>describing</em> tasks with other image related tasks, such as search, sorting and similarity judgment. With the purpose of identifying typical image attributes which are revealed in image related tasks, Jørgensen (<a href="#jor95">1995</a>) conducted a set of describing tasks including descriptive viewing, descriptive searching and descriptive memory tasks, a sorting task and a concept search task. Content analysis on the set of describing tasks showed forty-seven attribute categories and twelve broad classes which can be characterized as either <em>perceptual</em> or <em>interpretive</em> attributes. When analysed by twelve classes, four perceptual classes, <em>objects</em>, <em>people</em>, <em>colour</em> and <em>spatial location</em>, were generally identified across all describing tasks, whereas <em>emotion</em> and <em>abstract</em> attributes appeared in the top half of the viewing task, they dropped to the midpoint for the descriptive search task. Jørgensen interpreted this result as the tendency for people who are formulating their search statements to do so with the realization that it will be processed by an image retrieval system.</p>
+<p>Compared to describing tasks, the sorting task demonstrated a lower occurrence of the <em>object</em>, <em>colour</em>, <em>spatial location</em> and <em>visual element</em> classes and a higher occurrence of the <em>abstract</em> attribute. Also, a strong effect of sorting, based on whether or not a human was in a picture, was detected in the sorting task. The research concluded that compared to the describing tasks, the sorting task relied more on an <em>interpretative</em> attribute. Laine-Hernandez and Westman (<a href="#lai06">2006</a>) conducted a description (keywording and free description) and categorization study (hereafter, the categorization task is named sorting task, for consistent naming with other studies) to examine whether a particular image genre, journalistic photographs, influenced image indexing schemes. Location, people and descriptive terms were more often used in the free description task, whereas abstract concepts, themes, settings and emotions were more frequently used in the keywording tasks. Laine-Hernandez and Westman (<a href="#lai06">2006</a>) suggested that participants use more summarizing terms for the keywording tasks, because they had a limit of five terms. Overall, interpretational semantics were dominant in the describing tasks. In the sorting task, abstract and emotional themes and the presence of people were the main criteria in judging image similarity.</p>
+<p>Hollink, <em>et al.</em> (<a href="#hol04">2004</a>) proposed and tested a framework for the classification of image attributes which were developed, based on related literatures. Participants were asked to illustrate three given texts using free description and query. This setting was designed to investigate a '<em>category search behavior</em>' which was defined as '<em>the user has no specific image in mind but is able to specify requirements or conditions for the resulting image. The result will be the class of images that satisfy the conditions</em>'. (<a href="#">Hollink, <em>et al.</em> 2004</a>: 614). By comparing semantically richer, free descriptions and limited search queries, the authors found that terms in the general attribute were the most frequently used in both tasks; however, in the query tasks, more specific terms and less abstract and perceptual terms were found.</p>
+<p>Rorissa (<a href="#ror05">2005</a>) investigated the relationships between common and distinctive features of images and their similarity as perceived by human judges. Common and distinctive features of images, which were derived by analysing participants' description tasks, were compared with similarity judgment and confirmed the relationships between common and distinctive features and image similarity; particularly, common features had more weight than distinctive features.</p>
+<p>Studies have also employed a sorting task. Börner (<a href="#bor00">2000</a>) conducted a usability study comparing a latent semantic analysis algorithm applied to the information visualizer and human free-sorting task. Data analysis results showed a similarity between human sorting patterns and features derived from textual descriptions through the algorithm. Rorissa and Hastings posited that although categorization had been recognized as a way of facilitating browsing, there is no answer as to which attributes should be used to categorize images. By investigating human sorting tasks, the authors concluded that 'interpretive attributes are better candidates than perceptual attributes for indexing categories/groupings of images'. (<a href="#ror04">Rorissa and Hastings 2004</a>: 360).</p>
+<p>Rogowitz <em>et al.</em> (1998) conducted two experiments to investigate how humans judge image similarity, the table scale and the computer scale and image similarity results were compared with two algorithmic image similarity metrics: a colour-histogram and a multi-resolution framework of colour, contraction and orientation-selective attributes. Results demonstrated that different approaches used in the two experiments produced similar patterns. Also, the colour of the images was significantly related to human similarity judgment. Although the authors named table scale and computer scale as similarity tasks, the setting of the table scale task has been commonly used for the sorting task. Therefore, the study results can be interpreted to mean that sorting and similarity judgment tasks show similar results.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="95%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 1: Studies adopting image related tasks**</caption>
+<tbody>
+<tr>
+<th>Study</th>
+<th> </th>
+<th>Research design</th>
+</tr>
+<tr>
+<td rowspan="5">O'Connor, O'Connor & Abbas ([1999](#oco99))</td>
+<td>Task</td>
+<td>Describing</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To demonstrate potential of users' reactions as access points</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>a set of 300 images drawn from the collection of O'Connor</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>120 Master of Library Science students</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Participants were asked to generate three types of descriptions (caption, subject description and response) from any 100 images of their choosing.</td>
+</tr>
+<tr>
+<td rowspan="5">Greisdorf & O'Connor ([2002](#gre02))</td>
+<td>Task</td>
+<td>Describing</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To investigate post-retrieval processing of images</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Ten grayscale images selected from the National Oceanic and Atmospheric Administration</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Participants were given a list of twenty-six terms which correspond to one of seven image attributes (colour, shape, texture, object, action, location and affect) and assigned terms to the images if the term would be used as a query term for retrieving the image.</td>
+</tr>
+<tr>
+<td rowspan="5">Jørgensen ([1995](#jor95))</td>
+<td>Task</td>
+<td>Describing; Sorting; Searching</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>o demonstrate typical image attributes revealed in several image related tasks</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Images selected from the _Twenty-Fifth Illustrators Annual_</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>A total of 167 individual participants from all levels of an academic setting in a variety of disciplines</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Descriptive viewing task: participants described six images which were projected for two minutes;  
+Descriptive search task: participants described the six images to a librarian or an ideal image retrieval system accepting natural language;  
+Descriptive memory task: participants described the images five weeks later;  
+Sorting task: Participants sorted seventy-seven images into groups which would be used later for finding images;  
+Concept search task: participants selected images which expressed two given abstract concepts, 'mysterious' and 'transformation'.</td>
+</tr>
+<tr>
+<td rowspan="5">Laine-Hernandez & Westman ([2006](#lai06))</td>
+<td>Task</td>
+<td>Describing; Sorting</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To evaluate current image indexing framework for reportage photographs and to find the effect of different tasks on image description and image sorting</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Forty reportage-type photographs from two online image collections by image journalists and amateur photographers were selected based on several criteria, such as a variety of colourfulness, lightness, viewing distance and topical and emotional content.</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>Twenty native Finnish speakers (students of technology and university employees)</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Keywording task: participants wrote down five words for each photograph without time limitations.  
+Free description task: participants described each photograph as they would describe its contents to another person, without time limitations.  
+Categorization task: participants organized printed photographs.</td>
+</tr>
+<tr>
+<td rowspan="5">Hollink, Schreiber, Wielinga & Worring ([2004](#hol04))</td>
+<td>Task</td>
+<td>Describing; Search</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To understand how people perceive images and to develop a framework for the classification of image attributes</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>Thirty participants (students of the University of Amsterdam and their family and friends)</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Participants were given three texts providing different search contexts (a paragraph from a children's book, a few lines from a historical novel and a paragraph from a newspaper) and asked to form an image in their minds illustrating each text, to write down a free text description of the images and to search for the images using a maximum of five queries.</td>
+</tr>
+<tr>
+<td rowspan="5">Rorissa ([2005](#ror05))</td>
+<td>Task</td>
+<td>Describing; Similarity judgment</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To investigate the relationships between common and distinctive features of images and their similarity judged by human observers</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>A set of 30 colour images obtained from a book by O'Connor and Wyatt ([2004](#oco04))</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>150 students of the School of Library and Information Science (seventy-five participants were assigned to each of two tasks)</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Description task: participants describe features of each image for ninety seconds.  
+Similarity judgment task: using magnitude estimation, participants conducted the similarity judgment task twice with 435 pairs of the thirty images (the set used for the second time was obtained by reversing the order of image pairs used for the first time).</td>
+</tr>
+<tr>
+<td rowspan="5">Börner ([2000](#bor))</td>
+<td>Task</td>
+<td>Sorting</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To conduct a usability study of the data analysis algorithm applied in the Digital Library Visualizer. Sorting task results and the Latent Semantic Analysis results from the textual image descriptions were compared.</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Four image data sets obtained from the Dido image data bank (a digital library at the Indiana University Department of the History of Art) using the following four search queries, Bosch, African and two Chinese. The sets contained twelve, seventeen, thirty-one and thirty-two images, respectively.</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>Twenty graduate students</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Each participant sorted two image sets, labelled the groups and described the sorting criteria they used.</td>
+</tr>
+<tr>
+<td rowspan="5">Rorissa & Hastings ([2004](#ror04))</td>
+<td>Task</td>
+<td>Sorting</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To investigate how natural categorization behaviour can be applied to image indexing and classification systems</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>A set of fifty colour images selected from the _Hemera Photo Object Volume 1_.</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>Thirty graduate students at a major southwestern United States university</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Participants sorted a set of printed images without any constraints on the time or the number of categories.</td>
+</tr>
+<tr>
+<td rowspan="5">Rogowitz, Frese, Smith, Bouman, & Kalin ([1998](#rog98))</td>
+<td>Task</td>
+<td>Sorting; Similarity judgment</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To investigate how humans judge image similarity</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Ninety-seven photographs representing various semantic categories, viewing distances and colours</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>Fifteen volunteer observers from the T.J. Watson Research Center, Hawthorne Laboratory</td>
+</tr>
+<tr>
+<td>Procedure</td>
+<td>Table scaling: participants arranged a set of printed images based on their similarities - similar images would be close to each other.  
+Computer scaling: participants were presented with a reference image and eight randomly-chosen images on a computer screen and of the eight images they were asked to select the image most similar to the reference image.</td>
+</tr>
+</tbody>
+</table>
+<p>In addition to these studies, there are studies of the extraction of emotional features through low-level features of an image (see Wang and He's (<a href="#wan08">2008</a>) survey paper). Recently, Schmidt and Stock (<a href="#sch09">2009</a>) demonstrated that scroll bars adapted to collect users' basic emotional judgments on images can be used in emotion indexing of images.</p>
+<h2 id="research-design">Research design</h2>
+<p>This study explored emotional perception of an image through sorting, describing and searching, which were adopted for understanding general image perceptions. In order to explore emotional perception, an emotion-space should be defined. However, in addition to a variety of emotional terms, definitions and boundaries of emotional terms are fuzzy and vague; therefore, in this study <em>basic emotions</em> are used in selecting images. This idea is based on <em>basic theory</em>, which asserted and demonstrated that there are basic level categories which include most frequently and commonly used concepts or terms (<a href="#ros77">Rosch 1977</a>). Many theorists agree there is a set of basic emotions, but there is little consensus on the number of basic emotions and what basic emotions are (<a href="#ort90">Ortony and Turner 1990</a>). The current study adopted the emotional terms and their hierarchical structures which were proposed by Shaver, <em>et al.</em> (<a href="#sha87">1987</a>). Shaver <em>et al.</em> collected candidate emotional terms (nouns) from related literatures and asked participants to rate whether each term was an emotional term or not. Then, the final selected 135 emotional words were categorized by participants in order to reveal hierarchical clusters. The hierarchy included three levels of emotions: the first level consisted of two emotional categories, positive and negative emotions which were represented by Joy and Sadness, the second level consisted of six emotional categories and the third level consisted of twenty-five emotional categories (Table 2). They found that the second level was consistent with other studies which demonstrated features of basic level emotions. The six basic emotional terms employed by Shaver <em>et al.</em> were used in selecting images and analysing collected data. A set of images was selected from Flickr, in which ordinary users' casual photos are uploaded, rather than using a standard dataset (such as a data set from the International Affective Picture System), which includes strong stimuli for inducing intensive affective reactions. Thirty creative commons licensed Flickr images tagged with one of the six basic emotions were selected. Then, by conducting a pilot study with eleven graduate student participants, twelve photos (two photos for each basic emotion) were chosen. These photos were consistently given basic emotional terms in the pilot study.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="80%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 2: Three levels of emotional categories**</caption>
+<tbody>
+<tr>
+<th>Level 1</th>
+<th>Level 2</th>
+<th>Level 3</th>
+</tr>
+<tr>
+<td rowspan="3">Positive (joy)</td>
+<td>Love</td>
+<td>Affection, lust, longing</td>
+</tr>
+<tr>
+<td>Joy</td>
+<td>Cheerfulness, zest, contentment, pride, optimism, enthrallment, relief</td>
+</tr>
+<tr>
+<td>(Surprise)</td>
+<td>(Surprise)</td>
+</tr>
+<tr>
+<td rowspan="3">Negative (sadness)</td>
+<td>Anger</td>
+<td>Irritation, exasperation, rage, disgust, envy, torment</td>
+</tr>
+<tr>
+<td>Sadness</td>
+<td>Suffering, sadness, disappointment, shame, neglect, sympathy</td>
+</tr>
+<tr>
+<td>Fear</td>
+<td>Horror, nervousness</td>
+</tr>
+</tbody>
+</table>
+<p>Three image related tasks, sorting, describing and searching, were assigned to participants. Although this study used twelve images, for the sorting task participants were asked to sort the thirty images (4&quot; x 6&quot; photographs), which were used in the pilot study, into two to twenty-five groups according to emotional impressions and to give a label to each group using 135 emotional names. The sorting task used thirty images because twelve images might lead participants to generate a small number of groups. For the describing task, each of the twelve images was projected on to a large screen. Participants were asked to choose descriptors from the list of 135 emotional names for each image and then select one emotional name that described the image most appropriately. For the searching task, six searching situations were given to participants. For example, the researcher asked participants 'Let's assume that you send a query &quot;Love&quot; to the image search engine. Which photos are appropriate for this query?' Then, participants were asked to pick two appropriate photographs and then select the most appropriate from those two. The six basic emotions were used in the searching situations. The survey questionnaire was administered to fifty-nine students at the University of South Florida. The majority of participants were female (70.7%), undergraduate students (94.6%), between eighteen and twenty-five years old (77.6%). Their majors varied and included mass communication, world language, English, social work, criminology, biology, nursing, biomedical science and engineering.</p>
+<h2 id="findings">Findings</h2>
+<h3 id="representation-of-emotion-space-from-the-sorting-and-describing-tasks">Representation of emotion-space from the sorting and describing tasks</h3>
+<p>Of the three tasks explored in the current study, the searching task simulated a real searching situation, although it had limitations in revealing subtle and hidden information needs and their contexts, whereas the sorting and describing tasks did not directly reflect searching behaviour, although they attempted to examine an emotion-space and perceptions obtained from images. In this section, an emotion-space is examined and compared with reference to the sorting and describing tasks.</p>
+<h4 id="sorting-task">Sorting task</h4>
+<p>For the sorting task, the average number of groups generated by a participant was 6.88 and the maximum and minimum numbers of groups were 15 and 3, respectively. Approximately 40% of participants created 5 or 6 groups, and 30% of participants generated 8 or 10 groups (Table 3).</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="60%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 3: Number of categories generated in sorting**</caption>
+<tbody>
+<tr>
+<th>No. of categories</th>
+<th>Frequency</th>
+<th>Percent</th>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">5.3</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">7.0</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">13</td>
+<td align="center">22.8</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">17.5</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">5</td>
+<td align="center">8.8</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">8</td>
+<td align="center">14.0</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">3</td>
+<td align="center">5.3</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">9</td>
+<td align="center">15.8</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">1</td>
+<td align="center">1.8</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">1</td>
+<td align="center">1.8</td>
+</tr>
+<tr>
+<td align="center">Total</td>
+<td align="center">57</td>
+<td align="center">100.0</td>
+</tr>
+</tbody>
+</table>
+<p>A notable finding is that although the thirty images were grouped into six sets of five images, each tagged with one of six basic emotions, the six emotions were not evenly represented through the sorting tasks. For example, as shown in Table 4, in the case that three groups were made from thirty images, those groups were not from three different basic emotions but from two basic emotions: in other words, two groups belonged to one basic emotion (two groups belonged to <em>joy</em> and the other group belonged to <em>sadness</em>). When five groups were made, these five groups were from three or four different basic emotions rather than five different basic emotional groups. Overall, when six or fewer groups were made, three or four basic emotions were mainly adopted and when more than six groups were made, five basic emotions were primarily adopted.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="60%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 4: Relations between the number of groups and basic emotions**</caption>
+<tbody>
+<tr>
+<th rowspan="2">No. of groups</th>
+<th colspan="5">No. of basic emotions</th>
+</tr>
+<tr>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">1</td>
+<td align="center"> </td>
+<td align="center">3</td>
+<td align="center"> </td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center"> </td>
+<td align="center">4</td>
+<td align="center">7</td>
+<td align="center"> </td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center"> </td>
+<td align="center">1</td>
+<td align="center">5</td>
+<td align="center">3</td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">3</td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center"> </td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">3</td>
+<td align="center"> </td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center"> </td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">1</td>
+<td align="center"> </td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td align="center">Total</td>
+<td align="center">3</td>
+<td align="center">7</td>
+<td align="center">22</td>
+<td align="center">12</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Table 5 presents the categories of basic emotional terms that were frequently used in the sorting task. When two categories of basic emotions appeared, regardless of the number of groups, <em>joy</em> and <em>sadness</em> were the categories adopted during the sorting task. Then, as another basic emotional category is added, one additional basic emotion was obviously noticed, such as <em>love</em>, <em>joy</em> and <em>sadness</em> (four out of six occurrences of three basic emotional categories), <em>love</em>, <em>joy</em>, <em>sadness</em> and <em>fear</em> or <em>love</em>, <em>joy</em>, <em>sadness</em> and <em>anger</em> (ten and five out of twenty-one occurrences of four basic emotional categories) and <em>love</em>, <em>joy</em>, <em>sadness</em>, <em>anger</em> and <em>fear</em> (nine out of twelve occurrences of five emotional categories). As addressed above, when groups were made, the six basic emotions were not evenly adopted; some basic emotional categories rarely appear but other categories tend to be further divided. For instance, analysing the sorting tasks that generated six groups demonstrated that most participants created one group from the <em>love</em> category, two groups from <em>joy</em>, two from <em>sadness</em> and one from <em>fear</em>.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="80%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 5: Distribution of categories of basic emotional terms**</caption>
+<tbody>
+<tr>
+<th>No. of basic emotions</th>
+<th>Love</th>
+<th>Joy</th>
+<th>Surprise</th>
+<th>Anger</th>
+<th>Sadness</th>
+<th>Fear</th>
+<th>Frequency</th>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">9</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"> </td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"> </td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td colspan="8">**Frequency** refers to the number of persons choosing the indicated emotion set.</td>
+</tr>
+</tbody>
+</table>
+<p>The frequency of occurrence of emotional terms was analysed. Of 135 emotional terms from the list given by Shaver <em>et al.</em> (<a href="#sha87">1987</a>), 99 were used for labelling sorted categories. Of these 99 terms, 18 terms which occurred seven or more times accounted for 50 % of the total occurrences of labelling terms (Table 6). Further analysis is explained below by comparing with the describing task.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="80%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 6: Frequency of emotional terms used in the sorting task**</caption>
+<tbody>
+<tr>
+<th>Emotional term</th>
+<th>Frequency</th>
+<th>%</th>
+<th>Cumulative %</th>
+<th>Basic category</th>
+</tr>
+<tr>
+<td>Happiness</td>
+<td align="center">20</td>
+<td align="center">5.1</td>
+<td align="center">5.1</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Excitement</td>
+<td align="center">18</td>
+<td align="center">4.6</td>
+<td align="center">9.7</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Sadness</td>
+<td align="center">16</td>
+<td align="center">4.1</td>
+<td align="center">13.8</td>
+<td align="center">Sadness</td>
+</tr>
+<tr>
+<td>Loneliness</td>
+<td align="center">16</td>
+<td align="center">4.1</td>
+<td align="center">17.9</td>
+<td align="center">Sadness</td>
+</tr>
+<tr>
+<td>Love</td>
+<td align="center">15</td>
+<td align="center">3.8</td>
+<td align="center">21.7</td>
+<td align="center">Love</td>
+</tr>
+<tr>
+<td>Contentment</td>
+<td align="center">13</td>
+<td align="center">3.3</td>
+<td align="center">25.0</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Thrill</td>
+<td align="center">12</td>
+<td align="center">3.1</td>
+<td align="center">28.1</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Tenseness</td>
+<td align="center">10</td>
+<td align="center">2.6</td>
+<td align="center">30.7</td>
+<td align="center">Fear</td>
+</tr>
+<tr>
+<td>Affection</td>
+<td align="center">9</td>
+<td align="center">2.3</td>
+<td align="center">33.0</td>
+<td align="center">Love</td>
+</tr>
+<tr>
+<td>Enjoyment</td>
+<td align="center">8</td>
+<td align="center">2.0</td>
+<td align="center">35.0</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Exhilaration</td>
+<td align="center">8</td>
+<td align="center">2.0</td>
+<td align="center">37.0</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td align="center">8</td>
+<td align="center">2.0</td>
+<td align="center">39.0</td>
+<td align="center">Sadness</td>
+</tr>
+<tr>
+<td>Fear</td>
+<td align="center">8</td>
+<td align="center">2.0</td>
+<td align="center">41.0</td>
+<td align="center">Fear</td>
+</tr>
+<tr>
+<td>Caring</td>
+<td align="center">7</td>
+<td align="center">1.8</td>
+<td align="center">42.8</td>
+<td align="center">Love</td>
+</tr>
+<tr>
+<td>Amusement</td>
+<td align="center">7</td>
+<td align="center">1.8</td>
+<td align="center">44.6</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Bliss</td>
+<td align="center">7</td>
+<td align="center">1.8</td>
+<td align="center">46.4</td>
+<td align="center">Joy</td>
+</tr>
+<tr>
+<td>Amazement</td>
+<td align="center">7</td>
+<td align="center">1.8</td>
+<td align="center">48.2</td>
+<td align="center">Surprise</td>
+</tr>
+<tr>
+<td>Uneasiness</td>
+<td align="center">7</td>
+<td align="center">1.8</td>
+<td align="center">50.0</td>
+<td align="center">Fear</td>
+</tr>
+</tbody>
+</table>
+<h4 id="describing-task">Describing task</h4>
+<p>For the describing task, participants were asked to provide as many emotional terms from the list as they wanted to (task D1) and to select the most appropriate emotional term (task D2). When participants were allowed to assign as many terms as they wanted, on average they provided 3.52 terms per image and the maximum and minimum number of terms were 9 and 1, respectively. Although it is beyond the scope of the research objectives, factors related to research design were examined. First, to determine whether the order of descriptors in D1 is related to selecting the most appropriate emotional term. From 633 describing task results, 31.12% (197 describing tasks) selected the first descriptors for the D2 task, 32.39% (205 describing tasks) used any of descriptors in the middle and 26.07% (165 describing tasks) used the last descriptor. 4.90% of participants (31 describing tasks) provided only one descriptor during the D1 task and 5.53% (35 describing tasks) did not follow the instructions given and provided a new term in D2. This result shows that the order of descriptors given by users is not related to the significance of descriptors. Secondly, to determine whether the order of describing tasks affects the number of descriptors. As shown in Figure 1, except for the last image, which has remarkably few descriptors, the order of projected images seems to have no relation to the number of descriptors.</p>
+<div align="center">![Average number of descriptors in terms of the order of projected images](p475fig1.jpg)</div>
+<div align="center">  
+**Figure 1: Average number of descriptors in terms of the order of projected images**</div>
+<p>Tasks D1 and D2 were analysed to determine whether they produced different patterns of emotional descriptors. Of 135 emotional terms, 134 terms were used in D1 and 115 terms in D2. In the case of D1, of 135 terms, 27 terms accounted for approximately 50% of the total occurrences of descriptors. In the case of D2, of 115 terms, 23 terms accounted for 51% of the total occurrence of descriptors (Table 7). When comparing emotional terms between D1 and D2, those having high frequencies appear in both tasks. However, when comparing terms used in the sorting and describing tasks, frequently used descriptors, such as <em>surprise</em>, <em>tenseness</em>, <em>joy</em>, <em>delight</em>, and so on, were not used in the sorting task; whereas terms like Exhilaration, Isolation, Bliss and amazement, were frequently used as a label but not frequently used as descriptors.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="90%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 7: Frequency of emotional terms used in the describing task**</caption>
+<tbody>
+<tr>
+<th colspan="5">Task D1</th>
+<th colspan="5">Task D2</th>
+</tr>
+<tr>
+<th>Emotional term</th>
+<th>Frequency</th>
+<th>%</th>
+<th>Cumulative %</th>
+<th>Basic category</th>
+<th>Emotional term</th>
+<th>Frequency</th>
+<th>%</th>
+<th>Cumulative %</th>
+<th>Basic category</th>
+</tr>
+<tr>
+<td>Joy</td>
+<td align="center">76</td>
+<td align="center">3.4</td>
+<td align="center">3.4</td>
+<td>Joy</td>
+<td>Enjoyment</td>
+<td align="center">27</td>
+<td align="center">4.3</td>
+<td align="center">4.3</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Happiness</td>
+<td align="center">73</td>
+<td align="center">3.3</td>
+<td align="center">6.7</td>
+<td>Joy</td>
+<td>Happiness</td>
+<td align="center">27</td>
+<td align="center">4.3</td>
+<td align="center">8.6</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Enjoyment</td>
+<td align="center">68</td>
+<td align="center">3.1</td>
+<td align="center">9.7</td>
+<td>Joy</td>
+<td>Affection</td>
+<td align="center">26</td>
+<td align="center">4.1</td>
+<td align="center">12.7</td>
+<td>Love</td>
+</tr>
+<tr>
+<td>Amusement</td>
+<td align="center">59</td>
+<td align="center">2.6</td>
+<td align="center">12.4</td>
+<td>Joy</td>
+<td>Surprise</td>
+<td align="center">21</td>
+<td align="center">3.3</td>
+<td align="center">16.0</td>
+<td>Surprise</td>
+</tr>
+<tr>
+<td>Love</td>
+<td align="center">55</td>
+<td align="center">2.5</td>
+<td align="center">14.8</td>
+<td>Love</td>
+<td>Amusement</td>
+<td align="center">18</td>
+<td align="center">2.9</td>
+<td align="center">18.9</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Delight</td>
+<td align="center">52</td>
+<td align="center">2.3</td>
+<td align="center">17.2</td>
+<td>Joy</td>
+<td>Caring</td>
+<td align="center">16</td>
+<td align="center">2.5</td>
+<td align="center">21.4</td>
+<td>Love</td>
+</tr>
+<tr>
+<td>Caring</td>
+<td align="center">51</td>
+<td align="center">2.3</td>
+<td align="center">19.5</td>
+<td>Love</td>
+<td>Tenseness</td>
+<td align="center">15</td>
+<td align="center">2.4</td>
+<td align="center">23.8</td>
+<td>Fear</td>
+</tr>
+<tr>
+<td>Affection</td>
+<td align="center">50</td>
+<td align="center">2.2</td>
+<td align="center">21.7</td>
+<td>Love</td>
+<td>Joy</td>
+<td align="center">14</td>
+<td align="center">2.2</td>
+<td align="center">26.0</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Excitement</td>
+<td align="center">49</td>
+<td align="center">2.2</td>
+<td align="center">23.9</td>
+<td>Joy</td>
+<td>Fear</td>
+<td align="center">14</td>
+<td align="center">2.2</td>
+<td align="center">28.3</td>
+<td>Fear</td>
+</tr>
+<tr>
+<td>Thrill</td>
+<td align="center">41</td>
+<td align="center">1.8</td>
+<td align="center">25.8</td>
+<td>Joy</td>
+<td>Love</td>
+<td align="center">13</td>
+<td align="center">2.1</td>
+<td align="center">30.3</td>
+<td>Love</td>
+</tr>
+<tr>
+<td>Surprise</td>
+<td align="center">41</td>
+<td align="center">1.8</td>
+<td align="center">27.6</td>
+<td>Surprise</td>
+<td>Gloom</td>
+<td align="center">13</td>
+<td align="center">2.1</td>
+<td align="center">32.4</td>
+<td>Sadness</td>
+</tr>
+<tr>
+<td>Sadness</td>
+<td align="center">40</td>
+<td align="center">1.8</td>
+<td align="center">29.4</td>
+<td>Sadness</td>
+<td>Loneliness</td>
+<td align="center">13</td>
+<td align="center">2.1</td>
+<td align="center">34.4</td>
+<td>Sadness</td>
+</tr>
+<tr>
+<td>Loneliness</td>
+<td align="center">38</td>
+<td align="center">1.7</td>
+<td align="center">31.1</td>
+<td>Sadness</td>
+<td>Tenderness</td>
+<td align="center">11</td>
+<td align="center">1.7</td>
+<td align="center">36.2</td>
+<td>Love</td>
+</tr>
+<tr>
+<td>Cheerfulness</td>
+<td align="center">37</td>
+<td align="center">1.7</td>
+<td align="center">32.8</td>
+<td>Joy</td>
+<td>Delight</td>
+<td align="center">11</td>
+<td align="center">1.7</td>
+<td align="center">37.9</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Tenseness</td>
+<td align="center">35</td>
+<td align="center">1.6</td>
+<td align="center">34.3</td>
+<td>Fear</td>
+<td>Excitement</td>
+<td align="center">11</td>
+<td align="center">1.7</td>
+<td align="center">39.7</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Fear</td>
+<td align="center">34</td>
+<td align="center">1.5</td>
+<td align="center">35.8</td>
+<td>Fear</td>
+<td>Contentment</td>
+<td align="center">11</td>
+<td align="center">1.7</td>
+<td align="center">41.4</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Tenderness</td>
+<td align="center">32</td>
+<td align="center">1.4</td>
+<td align="center">37.3</td>
+<td>Love</td>
+<td>Cheerfulness</td>
+<td align="center">9</td>
+<td align="center">1.4</td>
+<td align="center">42.9</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Contentment</td>
+<td align="center">32</td>
+<td align="center">1.4</td>
+<td align="center">38.7</td>
+<td>Joy</td>
+<td>Thrill</td>
+<td align="center">9</td>
+<td align="center">1.4</td>
+<td align="center">44.3</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Worry*</td>
+<td align="center">32</td>
+<td align="center">1.4</td>
+<td align="center">40.2</td>
+<td>Fear</td>
+<td>Sadness</td>
+<td align="center">9</td>
+<td align="center">1.4</td>
+<td align="center">45.7</td>
+<td>Sadness</td>
+</tr>
+<tr>
+<td>Adoration*</td>
+<td align="center">29</td>
+<td align="center">1.3</td>
+<td align="center">41.5</td>
+<td>Love</td>
+<td>Uneasiness</td>
+<td align="center">9</td>
+<td align="center">1.4</td>
+<td align="center">47.1</td>
+<td>Fear</td>
+</tr>
+<tr>
+<td>Fondness*</td>
+<td align="center">29</td>
+<td align="center">1.3</td>
+<td align="center">42.8</td>
+<td>Love</td>
+<td>Glee</td>
+<td align="center">8</td>
+<td align="center">1.3</td>
+<td align="center">48.4</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Gloom</td>
+<td align="center">29</td>
+<td align="center">1.3</td>
+<td align="center">44.1</td>
+<td>Sadness</td>
+<td>Shame*</td>
+<td align="center">8</td>
+<td align="center">1.3</td>
+<td align="center">49.7</td>
+<td>Sadness</td>
+</tr>
+<tr>
+<td>Pleasure*</td>
+<td align="center">28</td>
+<td align="center">1.3</td>
+<td align="center">45.3</td>
+<td>Joy</td>
+<td>Panic*</td>
+<td align="center">8</td>
+<td align="center">1.3</td>
+<td align="center">51.0</td>
+<td>Fear</td>
+</tr>
+<tr>
+<td>Uneasiness</td>
+<td align="center">28</td>
+<td align="center">1.3</td>
+<td align="center">46.6</td>
+<td>Fear</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Glee</td>
+<td align="center">27</td>
+<td align="center">1.2</td>
+<td align="center">47.8</td>
+<td>Joy</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Shock*</td>
+<td align="center">27</td>
+<td align="center">1.2</td>
+<td align="center">49.0</td>
+<td>Fear</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>Anxiety*</td>
+<td align="center">27</td>
+<td align="center">1.2</td>
+<td align="center">50.2</td>
+<td>Fear</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td colspan="10">* Terms appear in D1 but not in D2 or vice versa.</td>
+</tr>
+</tbody>
+</table>
+<p>Distributions of basic emotional categories which appeared in the sorting and two describing tasks were compared. As shown in Table 8, overall distributions were similar over three tasks; emotional terms which belong to the <em>joy</em> category were most dominant followed by terms in the <em>sadness</em>, <em>love</em>, <em>fear</em>, <em>anger</em> and <em>surprise</em> categories.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="80%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 8: Categorical distribution of emotional terms used in the sorting and describing tasks**</caption>
+<tbody>
+<tr>
+<th rowspan="2"> </th>
+<th colspan="2">Sorting</th>
+<th colspan="2">D1</th>
+<th colspan="2">D2</th>
+</tr>
+<tr>
+<th>Freq.</th>
+<th>%</th>
+<th>Freq.</th>
+<th>%</th>
+<th>Freq.</th>
+<th>%</th>
+</tr>
+<tr>
+<td>Love</td>
+<td align="center">56</td>
+<td align="center">15.1</td>
+<td align="center">343</td>
+<td align="center">16.0</td>
+<td align="center">106</td>
+<td align="center">17.3</td>
+</tr>
+<tr>
+<td>Joy</td>
+<td align="center">143</td>
+<td align="center">38.4</td>
+<td align="center">763</td>
+<td align="center">35.7</td>
+<td align="center">202</td>
+<td align="center">33.1</td>
+</tr>
+<tr>
+<td>Surprise</td>
+<td align="center">13</td>
+<td align="center">3.5</td>
+<td align="center">63</td>
+<td align="center">2.9</td>
+<td align="center">30</td>
+<td align="center">4.9</td>
+</tr>
+<tr>
+<td>Anger</td>
+<td align="center">27</td>
+<td align="center">7.3</td>
+<td align="center">175</td>
+<td align="center">8.2</td>
+<td align="center">44</td>
+<td align="center">7.2</td>
+</tr>
+<tr>
+<td>Sadness</td>
+<td align="center">82</td>
+<td align="center">22.0</td>
+<td align="center">463</td>
+<td align="center">21.6</td>
+<td align="center">136</td>
+<td align="center">22.3</td>
+</tr>
+<tr>
+<td>Fear</td>
+<td align="center">51</td>
+<td align="center">13.7</td>
+<td align="center">332</td>
+<td align="center">15.5</td>
+<td align="center">93</td>
+<td align="center">15.2</td>
+</tr>
+<tr>
+<td>Total</td>
+<td align="center">372</td>
+<td align="center">100.0</td>
+<td align="center">2139</td>
+<td align="center">100.0</td>
+<td align="center">611</td>
+<td align="center">100.0</td>
+</tr>
+</tbody>
+</table>
+<p>The participants were instructed to select the terms from the given list of 135 emotional terms, but some participants used their own terms in the sorting and describing tasks. They said that they could not find appropriate terms from the list and they had a better term in mind. Terms that appeared twice or more were: relaxed (relaxing), beautiful, cold, fun, calm, wet, tired, scared, dull, boring, indifference and serenity. Since this study was designed to use 135 emotional terms, it was not the scope of this study to investigate these unlisted terms. However, they would demonstrate users' understanding of emotional scope, so further discussion is provided in the next section.</p>
+<h4 id="comparison-of-individual-image-perceptions-across-three-tasks">Comparison of individual image perceptions across three tasks</h4>
+<p>This section examines whether the three tasks (sorting, describing, and searching) represent emotional perception of an image differently. As presented in Table 9, of twelve images, six (L1, J1, J2, A2, Sa2 and F2) showed consistent distributions across three tasks and four (L2, Su1, Su2 and Sa1) were perceived differently in the searching task than the other two tasks. Two images (A1 and F1) were perceived differently in each of the three tasks. The first notable finding is that half of the twelve images demonstrated different distribution between the searching and sorting or describing tasks. A possible explanation is that the searching task adopted in this study forced participants to make relative judgments among images, whereas the other two tasks asked them to describe and sort images freely. For instance, although an image (L2) conveys an impression of love as well as joy, if the image is perceived as the most joyful among the other images, the image has a high rating for <em>joy</em> in the searching task. However, the same image can be sorted and described mainly as an image expressing <em>love</em>, because participants perceived that the image itself expressed <em>love</em> rather than <em>joy</em>. Also, the images (Su1 and Su2) which were tagged with <em>surprise</em> were rarely described or sorted as a surprise emotion, but when participants were asked to select images expressing surprise, these two images were chosen. Furthermore, ten out of twelve images demonstrated similar distributions between the sorting and describing tasks, in general. However, a closer observation revealed that task D2 tends to present a more dominant emotional perception of an image than the D1 or sorting tasks and the sorting task presented more diverse emotional perceptions related to an image.</p>
+<table style="border: medium solid rgb(153, 245, 251); font-size: smaller; font-style: normal; font-family: verdana,geneva,arial,helvetica,sans-serif; background-color: rgb(253, 255, 221);" width="80%" align="center" border="1" cellpadding="3" cellspacing="0"><caption align="bottom">  
+**Table 9: Overall differences across three tasks**</caption>
+<tbody>
+<tr>
+<th rowspan="2"> </th>
+<th colspan="4">L1*</th>
+<th colspan="4">L2</th>
+<th colspan="4">J1</th>
+<th colspan="4">J2</th>
+</tr>
+<tr>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+</tr>
+<tr>
+<td>Love</td>
+<td align="center">100.0</td>
+<td align="center">57.9</td>
+<td align="center">74.7</td>
+<td align="center">86.8</td>
+<td align="center">16.7</td>
+<td align="center">56.1</td>
+<td align="center">59.3</td>
+<td align="center">77.4</td>
+<td align="center">15.4</td>
+<td align="center">14.0</td>
+<td align="center">3.2</td>
+<td align="center">1.9</td>
+<td align="center">7.7</td>
+<td align="center">22.9</td>
+<td align="center">16.2</td>
+<td align="center">13.2</td>
+</tr>
+<tr>
+<td>Joy</td>
+<td align="center">0.0</td>
+<td align="center">33.4</td>
+<td align="center">20.7</td>
+<td align="center">13.2</td>
+<td align="center">50.0</td>
+<td align="center">35.2</td>
+<td align="center">34.3</td>
+<td align="center">22.7</td>
+<td align="center">84.6</td>
+<td align="center">80.7</td>
+<td align="center">90.9</td>
+<td align="center">90.6</td>
+<td align="center">92.3</td>
+<td align="center">70.3</td>
+<td align="center">80.3</td>
+<td align="center">84.9</td>
+</tr>
+<tr>
+<td>Surprise</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">16.7</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">2.0</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td>Anger</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.2</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">1.0</td>
+<td align="center">1.9</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">1.0</td>
+<td align="center">1.9</td>
+</tr>
+<tr>
+<td>Sadness</td>
+<td align="center">0.0</td>
+<td align="center">3.6</td>
+<td align="center">0.5</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">1.7</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.5</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td>Fear</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.0</td>
+<td align="center">0.0</td>
+<td align="center">16.7</td>
+<td align="center">1.8</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td colspan="17" style="line-height: 5px; background-color: #E7FC6D;"> </td>
+</tr>
+<tr>
+<th rowspan="2"> </th>
+<th colspan="4">Su1</th>
+<th colspan="4">Su2</th>
+<th colspan="4">A1</th>
+<th colspan="4">A2</th>
+</tr>
+<tr>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+</tr>
+<tr>
+<td>Love</td>
+<td align="center">0.0</td>
+<td align="center">5.3</td>
+<td align="center">2.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">7.1</td>
+<td align="center">3.8</td>
+<td align="center">3.8</td>
+<td align="center">0.0</td>
+<td align="center">3.5</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">4.0</td>
+<td align="center">1.8</td>
+<td align="center">0.9</td>
+<td align="center">2.1</td>
+</tr>
+<tr>
+<td>Joy</td>
+<td align="center">5.0</td>
+<td align="center">70.2</td>
+<td align="center">57.9</td>
+<td align="center">50.9</td>
+<td align="center">7.7</td>
+<td align="center">63.2</td>
+<td align="center">66.7</td>
+<td align="center">63.3</td>
+<td align="center">0.0</td>
+<td align="center">24.6</td>
+<td align="center">18.6</td>
+<td align="center">17.1</td>
+<td align="center">4.0</td>
+<td align="center">15.9</td>
+<td align="center">10.0</td>
+<td align="center">12.5</td>
+</tr>
+<tr>
+<td>Surprise</td>
+<td align="center">95.0</td>
+<td align="center">7.1</td>
+<td align="center">13.8</td>
+<td align="center">28.3</td>
+<td align="center">84.6</td>
+<td align="center">10.5</td>
+<td align="center">9.2</td>
+<td align="center">15.4</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">2.4</td>
+<td align="center">1.9</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">2.1</td>
+</tr>
+<tr>
+<td>Anger</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">5.1</td>
+<td align="center">3.8</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">2.5</td>
+<td align="center">5.7</td>
+<td align="center">8.3</td>
+<td align="center">22.9</td>
+<td align="center">51.5</td>
+<td align="center">41.6</td>
+<td align="center">8.0</td>
+<td align="center">19.6</td>
+<td align="center">21.0</td>
+<td align="center">12.6</td>
+</tr>
+<tr>
+<td>Sadness</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">2.0</td>
+<td align="center">3.8</td>
+<td align="center">0.0</td>
+<td align="center">3.6</td>
+<td align="center">4.6</td>
+<td align="center">3.8</td>
+<td align="center">91.7</td>
+<td align="center">19.4</td>
+<td align="center">10.0</td>
+<td align="center">13.3</td>
+<td align="center">68.0</td>
+<td align="center">24.6</td>
+<td align="center">40.1</td>
+<td align="center">42.0</td>
+</tr>
+<tr>
+<td>Fear</td>
+<td align="center">0.0</td>
+<td align="center">10.5</td>
+<td align="center">13.3</td>
+<td align="center">11.3</td>
+<td align="center">7.7</td>
+<td align="center">7.0</td>
+<td align="center">9.8</td>
+<td align="center">7.6</td>
+<td align="center">0.0</td>
+<td align="center">22.8</td>
+<td align="center">15.2</td>
+<td align="center">24.6</td>
+<td align="center">16.0</td>
+<td align="center">19.3</td>
+<td align="center">13.7</td>
+<td align="center">18.9</td>
+</tr>
+<tr>
+<td colspan="17" style="line-height: 5px; background-color: #E7FC6D;"> </td>
+</tr>
+<tr>
+<th rowspan="2"> </th>
+<th colspan="4">Sa1</th>
+<th colspan="4">Sa2</th>
+<th colspan="4">F1</th>
+<th colspan="4">F2</th>
+</tr>
+<tr>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+<th>F</th>
+<th>S</th>
+<th>D1</th>
+<th>D2</th>
+</tr>
+<tr>
+<td>Love</td>
+<td align="center">7.1</td>
+<td align="center">0.0</td>
+<td align="center">3.3</td>
+<td align="center">3.8</td>
+<td align="center">0.0</td>
+<td align="center">5.3</td>
+<td align="center">4.7</td>
+<td align="center">7.6</td>
+<td align="center">0.0</td>
+<td align="center">7.1</td>
+<td align="center">3.0</td>
+<td align="center">3.8</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">1.5</td>
+<td align="center">0.0</td>
+</tr>
+<tr>
+<td>Joy</td>
+<td align="center">0.0</td>
+<td align="center">1.8</td>
+<td align="center">2.5</td>
+<td align="center">1.9</td>
+<td align="center">0.0</td>
+<td align="center">3.6</td>
+<td align="center">2.6</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">31.6</td>
+<td align="center">13.7</td>
+<td align="center">19.0</td>
+<td align="center">0.0</td>
+<td align="center">22.8</td>
+<td align="center">7.2</td>
+<td align="center">7.6</td>
+</tr>
+<tr>
+<td>Surprise</td>
+<td align="center">2.4</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">0.5</td>
+<td align="center">1.9</td>
+<td align="center">0.0</td>
+<td align="center">7.0</td>
+<td align="center">1.2</td>
+<td align="center">1.9</td>
+<td align="center">7.0</td>
+<td align="center">5.3</td>
+<td align="center">2.7</td>
+<td align="center">5.7</td>
+</tr>
+<tr>
+<td>Anger</td>
+<td align="center">85.7</td>
+<td align="center">3.6</td>
+<td align="center">3.4</td>
+<td align="center">3.8</td>
+<td align="center">50.0</td>
+<td align="center">3.6</td>
+<td align="center">2.1</td>
+<td align="center">1.9</td>
+<td align="center">45.0</td>
+<td align="center">3.6</td>
+<td align="center">8.4</td>
+<td align="center">7.6</td>
+<td align="center">4.7</td>
+<td align="center">0.0</td>
+<td align="center">8.1</td>
+<td align="center">3.8</td>
+</tr>
+<tr>
+<td>Sadness</td>
+<td align="center">0.0</td>
+<td align="center">87.9</td>
+<td align="center">83.6</td>
+<td align="center">86.8</td>
+<td align="center">50.0</td>
+<td align="center">71.9</td>
+<td align="center">79.1</td>
+<td align="center">79.4</td>
+<td align="center">15.0</td>
+<td align="center">21.1</td>
+<td align="center">30.9</td>
+<td align="center">30.2</td>
+<td align="center">0.0</td>
+<td align="center">14.1</td>
+<td align="center">1.5</td>
+<td align="center">1.9</td>
+</tr>
+<tr>
+<td>Fear</td>
+<td align="center">4.8</td>
+<td align="center">5.3</td>
+<td align="center">4.4</td>
+<td align="center">1.9</td>
+<td align="center">0.0</td>
+<td align="center">10.5</td>
+<td align="center">6.8</td>
+<td align="center">3.8</td>
+<td align="center">40.0</td>
+<td align="center">24.6</td>
+<td align="center">34.5</td>
+<td align="center">28.4</td>
+<td align="center">88.4</td>
+<td align="center">52.6</td>
+<td align="center">76.5</td>
+<td align="center">81.1</td>
+</tr>
+<tr>
+<td colspan="17" style="line-height: 5px; background-color: #E7FC6D;"> </td>
+</tr>
+<tr>
+<td colspan="17">* Image IDs are based on the tag on the images; L (Love), J (Joy), Su (Surprise), A (Anger), Sa (Sadness), F (Fear)  
+The tasks are identified as: F for searching (finding the one most appropriate image for each basic emotion); S for sorting; and >D1 and D2 for describing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="discussion">Discussion</h2>
+<p>Based on previous studies which demonstrated that emotional perceptions of images are well presented through image related tasks rather than search queries (<a href="#">Jørgensen 1996</a>; <a href="#">O'Connor <em>et al.</em> 1999</a>; <a href="#">Greisdorf and O'Connor 2002</a>; <a href="#">Laine-Hernandez and Westman 2006</a>), the current study examined how emotional perceptions of images are represented through sorting, describing and searching tasks. First, it was found that joy and sadness were dominantly perceived through the sorting and describing tasks. During the sorting task, image viewers tended to distinguish images based on whether images are joyful or sad and then subdivide joyful or sad emotions rather than adopt other basic emotions. In contrast to joy and sadness, surprise was rarely recognized during these two tasks. These results are in accordance with the study by Shaver <em>et al</em>. (<a href="#sha87">1987</a>) which identified two fundamental emotions, positive and negative (or joyful and sad) and had reservations concerning the surprise emotion. Wild, Erb and Bartels (<a href="#wil01">2001</a>) also demonstrated that happiness, which belongs to the joy category in the study by Shaver <em>et al</em>. and sadness are significantly evoked by facial expression. This finding proposes a potential that an emotion-space, which other disciplines (such as psychology, cognitive science and so on) have explored within general environments or using other stimuli, may be applied to an image retrieval environment. Therefore, it would be worthwhile effort to revisit and apply those theories on emotions, with the purpose of improving image retrieval effectiveness.</p>
+<p>Although the current study provided participants with a list of comprehensive emotional terms, 20.75% of describing task participants and 17.54% of sorting task participants used terms not listed in the given list. As Ortony and Turner (1990) addressed, there is no entire agreement on the definition and scope of emotions. Therefore, some emotions which are included in one researcher's list are not included in others. For example, Averill (1975) included 558 words in his list, but Shaver <em>et al</em>. (1987) included only 135 terms, even though they considered Averill's list. Of the terms not included by Shaver <em>et al.</em> but which were selected twice or more by participants (relaxed (relaxing), beautiful, cold, fun, calm, wet, tired, scared, dull, boring, indifference and serenity), it is debatable whether some are emotions (for example, boring and serenity are in Davitz's (1969) list but not in Shaver's list). While terms describing cognitive status are arguable, terms describing objects' status or atmosphere (beautiful, cold and wet) are obviously non-emotional terms.</p>
+<p>However, even though theoretically the terms describing objects' status or atmosphere are not included in the list of emotions, if they can be used for providing emotional access they should be considered in image indexing and retrieval systems. Another finding which should be considered in image indexing is that 15% of emotional terms (approximately 20 out of 135) accounted for 50% of the total occurrences of descriptions and labels during the describing and sorting tasks. If it is practically impossible to index a number of subjective and versatile emotional terms during the representation process, terms which are frequently and popularly adopted by users should receive priority. Once images are indexed with popular emotional (and emotion-like) terms, browsing functions which guide users to navigate an emotion-space would help users find images satisfying more specialized and detailed emotional needs.</p>
+<p>Further research is needed to decide which emotional terms can be entry points and how those entry points can be expanded or explored while searching. For example, a controlled vocabulary system which includes keyemotional terms and their related emotional terms can be developed and evaluated in terms of image retrieval effectiveness.</p>
+<p>Finally, characteristics of the sorting, describing and searching tasks were analysed based on differences of individual image perceptions. Whereas the sorting and describing tasks demonstrated relatively high accordance in emotional perception of an image, the searching task showed different patterns. The author explained the result by the research setting: whereas the sorting and describing tasks asked participants to freely describe and sort images, the searching task forced participants to make relative judgments among images. Since the searching task depends on a relatively small number of data sets, this task may not represent major emotional perceptions of an individual image precisely, even when a participant perceived a strong joyful impression from an image, if the image was the most appropriate for love from twelve images, the participant had to select the image for the searching task looking for love.</p>
+<p>However, if a searching task employs an image retrieval system with a reasonably large number of images, the author assumes that the degree of relativity may decrease, which may result in more precise emotional perceptions of images. Based on this finding, it is suggested that when developing a research design it should be taken into account that perceptions of an image can be different depending on the research constraints and whether the image is viewed by itself or compared with other images.</p>
+<p>Another finding is that the sorting task demonstrated more diverse emotional perceptions of one image. Jørgensen (<a href="#jof96">1996</a>) explained the difference between the describing task, in which participants focus on individual images and the sorting task, in which participants see a whole set of images. This could be one explanation for that finding. Another reason that may be infered is that more personal background, preference and intellectual processing are included during the sorting task than in the describing task and this might result in a more diverse interpretation of an image. Therefore, the sorting task seems more appropriate than other tasks to explore the multi-faceted aspects of emotional meanings .</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This study explored emotional perceptions of image documents through three image related tasks: sorting, describing and searching. The sorting and describing tasks demonstrated that joy and sadness are two major categories of emotions which people perceive from images. It was also found there is only a relatively small number of emotional terms frequently chosen as descriptors or labels. It was suggested, therefore, that by assigning emotional index terms using a small number of popular emotional terms, image retrieval effectiveness can be improved with minimum indexing efforts. When comparing image perceptions of an individual image across three tasks, overall similar perceptions were discovered across the sorting, describing and searching tasks.</p>
+<p>However, it was noticed that minor differences are caused by the unique characteristics of each task. Therefore, features of each task should be considered in any research design which explores image perceptions. Since a limitation of this study is that image related tasks were conducted with the small number of images by undergraduate students, further research is needed to test these results with a large data set and a more diverse population. Differences of emotional perceptions in terms of demographic features, such as sex, age and ethnicity, might be a topic of future research. In addition, although the current study focused on affective perception of an image, a similar approach could be applied to overall semantic perceptions of images.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>This work was supported, in part, by University of South Florida Internal Awards Program under Grant No. R061581. The author thanks to Ms. Jyoti Deo, a master's student at the University of South Florida, for her assistance in data collection and analysis. The author also thanks to copy-editors of the journal and Ms. Vickie Toranzo Zacker, a master's student at the University of South Florida, for their assistance in enabling the author to satisfy the style requirements of the journal.</p>
+<h2 id="a-nameauthor-idauthorabout-the-authora"><a name="author" id="author">About the author</a></h2>
+<p>JungWon Yoon is an Assistant Professor in the School of Information, University of South Florida. She received her Bachelor's degree in Library and Information Science and Master of Library and Information Science from Ewha Womans University, Seoul, Korea and her PhD from the University of North Texas. She can be contacted at: jyoon@usf.edu.</p>
+<h4 id="references">References</h4>
+<ul>
+<li>Armitage, L.H. &amp; Enser, P.G.B. (1997). Analysis of user need in image archives. <em>Journal of Information Science</em>, <strong>23</strong>(4), 287-299.</li>
+<li>Averill, J. R. (1975). A semantic atlas of emotional concepts. <span style="font-style: italic;">JSAS: Catalog of Selected Documents in Psychology</span>, <strong>5</strong>, 330. (Ms. No. 421).</li>
+<li>Börner, K. (2000). Searching for the perfect match: a comparison of free sorting results for images by human subjects and by Latent Semantic Analysis techniques. <span style="font-style: italic;">Proceedings of Fourth International Conference on Information Visualization</span> (pp. 192-197). Washington, DC: IEEE Computer Society.</li>
+<li>Chen, H. (2001). An analysis of image retrieval tasks in the field of art history. <em>Information Processing &amp; Management</em>, <strong>37</strong>(5), 701-720.</li>
+<li>Choi, Y. &amp; Rasmussen, E. M. (2003). Searching for images: the analysis of users' queries for image retrieval in American history. <em>Journal of the American Society for Information Science and Technology</em>, <strong>54</strong>(6), 498-511.</li>
+<li>Collins, K. (1998). Providing subject access to images: a study of user queries. <em>The American Archivist</em>, <strong>61</strong>(1), 36-55.</li>
+<li>Davitz, J. (1969). <span style="font-style: italic;">The language of emotion</span>. New York, NY: Academic Press.</li>
+<li>Eakins, J. P., Briggs, P. &amp; Burford, B. (2004). Image retrieval interface: a user perspective. In P. Enser, Y. Kompatsiaris, N.E. O'Connor, A.F. Smeaton &amp; Smeulders, A.W.M. (Eds.), <span style="font-style: italic;">Proceedings, International Conference on Image and Video Retrieval (CIVR 2004)</span>, (pp. 628-637). Berlin: Springer-Verlag. (Lecture Notes on Computer Science: Vol 3115).</li>
+<li>Enser, P.G.B. &amp; McGregor, C. G. (1992). <em>Analysis of visual information retrieval queries.</em> London: The British Library. (British Library Research and Development Report, no. 6104).</li>
+<li>Goodrum, A. &amp; Spink, A. (2001). Image searching on the Excite Web search engine. <em>Information Processing and Management</em>, <strong>37</strong>(2), 295-311.</li>
+<li>Greisdorf, H. &amp; O'Connor, B. (2002). Modeling what users see when they look at images: a cognitive view point. <span style="font-style: italic;">Journal of Documentation</span>, <em>58</em>(1), 6-29.</li>
+<li>Hollink, L., Schreiber, A.T., Wielinga, B.J. &amp; Worring, M. (2004). Classification of user image descriptions. <span style="font-style: italic;">International Journal of Human-Computer Studies</span>, <em>61</em>(5), 601-626.</li>
+<li>Jørgensen, C. (1995). <span style="font-style: italic;">Image attributes: an investigation</span>. Unpublished dissertation, Syracuse University, Syracuse, New York, United States.</li>
+<li>Jørgensen, C. (2003). <span style="font-style: italic;">Image retrieval: theory and research</span>. Lanham, MD: Scarecrow Press.</li>
+<li>Keister, L. (1994). User types and queries: impact on image access systems. In R. Fidel (Ed.), <em>Challenges in indexing electronic text and images</em>, (pp. 7-19). Medford, NJ: Learned Information, Inc.</li>
+<li>Laine-Hernandez, M. &amp; Westman, S. (2006). Image semantics in the description and categorization of journalistic photographs. <span style="font-style: italic;">Proceedings of the 69th Annual Meeting of the American Society for Information Science and Technology</span>, <em>43</em>, 1-25.</li>
+<li>O'Connor, B., O'Connor, M. &amp; Abbas, J. (1999). User reactions as access mechanism: an exploration based on captions for images. <span style="font-style: italic;">Journal of the American Society for Information Science</span>, <strong>50</strong>(8), 681-697.</li>
+<li>Ortony, A. &amp; Turner, T. (1990). What's basic about basic emotions? <span style="font-style: italic;">Psychological Review</span>, <span style="font-weight: bold;">97</span>(3), 315-331.</li>
+<li>Rogowitz, B.E., Frese, T., Smith, J.R., Bouman, C.A. &amp; Kalin, E. (1998). Perceptual image similarity experiments. <span style="font-style: italic;">Proceedings of the SPIE conference on Human Vision and Electronic Imaging III</span> (pp. 576-590). Bellingham, WA: SPIE.</li>
+<li>Rorissa, A. (2005). <span style="font-style: italic;">Perceived features and similarity of images: an investigation into their relationships and a test of Tversky's contrast model.</span> Unpublished dissertation, University of North Texas, Denton, Texas, United States.</li>
+<li>Rorissa, A. &amp; Hastings, S. (2004). Free sorting of images: attributes used for categorization. <span style="font-style: italic;">Proceedings of the 67th Annual Meeting of the American Society for Information Science and Technology,</span> <strong>41</strong>, 360-366.</li>
+<li>Rosch, E. (1977). Human categorization. In Neil Warren (Ed.), <span style="font-style: italic;">Advances in cross cultural psychology</span>, <strong>1</strong>, 1-72. London: Academic Press.</li>
+<li>Schmidt, S. &amp; Stock, W. (2009). Collective indexing of emotions in images. <span style="font-style: italic;">Journal of the American Society for Information Science and Technology</span>, <span style="font-weight: bold;"><em>60</em></span>(5), 863-876.</li>
+<li>Shatford-Layne, S. (1994). Some issues in the indexing of images. <span style="font-style: italic;">Journal of the American Society for Information Science</span>, <em>45</em>(8), 583-588.</li>
+<li>Shaver, P., Schwartz, J., Kirson, D. &amp; O'Connor, D. (1987). Emotion knowledge: further exploration of a prototype approach. <span style="font-style: italic;">Journal of Personality and Social Psychology</span>, <strong>52</strong>(6), 1061-1086.</li>
+<li>Wang, W. &amp; He, Q. (2008). A survey on emotional semantic image retrieval. <span style="font-style: italic;">Proceedings of the 15th IEEEInternational Conference on Image Processing</span> (pp.117-120). Washington, DC: IEEE press.</li>
+<li>Wild, B., Erb, M. &amp; Bartels, M. (2001). Are emotions contagious? Evoked emotions while viewing emotionally expressive faces: quality, quantity, time course and gender differences. <span style="font-style: italic;">Psychiatry Research</span>, <strong>102</strong>(2), 109-124.</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<div align="center">![Appendix](p475fig2.jpg)</div>
+<p>Reproduced from Yoon, J. (2010). Utilizing quantitative users' reactions to represent affective meanings of an image. <em>Journal of the American Society for Information Science and Technology</em>, <strong>61</strong> (7), 1345-1359.</p>
+
+</body>
+</html>

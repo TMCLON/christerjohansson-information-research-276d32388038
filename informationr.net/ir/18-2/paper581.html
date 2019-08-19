@@ -1,0 +1,659 @@
+<!doctype html>  
+ <html>  
+ <head>  
+ <title>Texty, a visualization tool to aid selection of texts from search outputs.</title>  
+<meta charset=utf-8 />
+ <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif" />  
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="Texty, a visualization tool to aid selection of texts from search outputs" />  
+ <meta name="author" content="Jaume Nualart, Mario Perez-Montoro" />  
+ <meta name="dcterms.subject" content="A new approach that can help improve the search experience of users through colourfull icons representing the structure of each text." />  
+ <meta name="description" content="The presentation of the results page in a search system plays an important role in satisfying the information needs of a user. The usual performance management criteria and tools to organise results have limitations that may hinder the satisfaction of those needs. We present Texty as a new approach that can help improve the search experience of users. The corpus of texts to which we applied Texty were papers from <em>Information Research</em>. To filter the texts we have build five groups of words or vocabularies on concrete fields of knowledge: conceptual approach, experimental approach, qualitative methodology, quantitative methodology and computers and IT. We show how Texty, intrinsically, is capable of encoding or offer its users information about the text that other alternative classic representations (bar or lines charts, mainly) are not able to offer. Texty is a complementary tool that improves intellectual interaction with a lists of texts, allowing users to choose texts more effectively knowing their structure before reading them." />  
+ <meta name="keywords" content="data visualization, information retrieval, knowledge representation, software" />
+ 
+ 
+ <!--leave the following to be completed by the Editor-->  
+ <meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="Professor T.D. Wilson" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/18-2/paper581.html" />  
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/18-2/infres182.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2013-06-15" /> 
+  <meta name="geo.placename" content="global" />  
+
+ 
+ <script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+
+	</script> 
+
+</head> 
+  
+ <body> 
+
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" /><br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 18  no. 2, June 2013</span>
+<br /><br /> 
+<div class="button">
+ <ul> 
+ <li><a href="infres182.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../search.html">Search</a> |  </li> 
+ <li><a href="../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr />
+ </header>
+ <article>
+ <h1>Texty, a visualization tool to aid selection of texts from search outputs</h1>  <br />  
+ <div style="margin-left: 5%; margin-right:10%;"> 
+ <h4><a href="paper581.html#author">Jaume Nualart</a><br />
+Faculty of Arts and Design, Univerity of Canberra &amp; Machine Learning Research Group, NICTA. Australia<br />
+<a href="paper581.html#author">Mario P&eacute;rez-Montoro</a><br />
+ Department of Information Science, Faculty of Information Science. University of Barcelona, Spain </h4>  
+ </div>  
+ <br /> 
+ <section>
+ <form>  <fieldset>  <legend>Abstract </legend>
+ <blockquote><strong>Introduction.</strong> The presentation of the results page in a search system plays an important role in satisfying the information needs of a user. The usual performance management criteria and tools to organise results have limitations that may hinder the satisfaction of those needs. We present Texty as a new approach that can help improve the search experience of users.<br />
+<strong>Method.</strong> The corpus of texts to which we applied Texty were papers from <em>Information Research</em>. To filter the texts we have build five groups of words or vocabularies on concrete fields of knowledge: conceptual approach, experimental approach, qualitative methodology, quantitative methodology and computers/IT.<br />
+<strong>Results.</strong> We show how Texty, intrinsically, is capable of encoding or offer its users information about the text that other alternative classic representations (bar or lines charts, mainly) are not able to offer.<br />
+<strong>Conclusions.</strong> Texty is a complementary tool that improves intellectual interaction with a lists of texts, allowing users to choose texts more effectively knowing their structure before reading them.<br />
+</blockquote>  </fieldset>  </form> 
+  
+ <br />  <div style="text-align:center">  <input type="button" value="change font"
+ class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onClick="doChangeFont()"
+ /></div>  <br /> 
+
+
+ 
+ <h2>Introduction</h2> 
+ 
+<p>Information retrieval is a critical factor in an environment characterised by excess of information (<a href="paper581.html#bae2011-1">Baeza-Yates &amp; Ribeiro-Neto 2011</a>). When a user conducts a search, the information retrieval systems normally respond with a list of results. In many cases, the presentation of those results play an important role in satisfying user information needs. A bad or inadequate presentation can hinder the satisfaction of the information needs (<a href="paper581.html#shn1992-1">Shneiderman 1992</a>, <a href="paper581.html#bae2011-0">Baeza-Yates 2011</a>, <a href="paper581.html#hea2009">Hearts 2009</a>, <a href="paper581.html#bae2011-2">Baeza-Yates <em>et al.</em> 2011</a>).</p>
+
+<p>Typically, information retrieval systems present the results of a query in flat, one dimension lists. Usually, these lists are opaque in terms of order, i.e., the users do not know why the list has a particular order. To refine their search, the users have to interact again, normally by filtering the first output of results.</p>
+
+<p>The four main criteria used to organize a list of results are order, relevance, recommendation and clustering (<a href="paper581.html#mor2006">Morville &amp; Rosenfeld 2006</a>, <a href="paper581.html#per2010">P&eacute;rez-Montoro 2010</a>). The order organises the list of results by alphabetical or numerical order of some of the features (name of the author, date of creation) of the retrieved document. The relevance ranks the retrieved documents considering the relevance of the content of the document to the user's query. The recommendation can sort the results by using the number of recommendations suggested by other users who have previously used this result. The clustering presents the results grouped into a number of subsets formed by documents that deal with the same topic and/or addressing the topic with a similar approach (<a href="paper581.html#lar1991">Larson 1991</a>, <a href="paper581.html#try1939">Tryon 1939</a>).</p>
+
+<p>All these forms of organizing results, although used by most systems of information retrieval, have important limitations. The list of results organized by alphabetical or numerical order provides no extra information to help the users decide which of the listed documents can adequately meet their needs. When organising by relevance, the system places documents that could satisfy the information needs of the user at the top, but no extra information on the approach or on the internal structure of the document is provided. In the case of an organisation on the basis of recommendation, the top of the list provides documents recommended by other users and it does not provides extra information on the approach or the internal structure of the document. Finally, clustering provides extra information about the topic of the retrieved document, but it does not guide the user on the distribution and thematic structure of the document.</p>
+
+<h2>Visual presentation of search results</h2>
+
+<p>In recent years, apart from these more standard presentation of results and with the aim to overcome some of its limitations, a number of visual proposals have been developed to improve user interaction with search results. Most of these proposals can be articulated in three main groups: the clustering visualizations, the visualization of query terms and the visualzations using thumbnail images or miniaturized images of documents.</p>
+
+<p>Visualization of clusterings intends to represent the categories and relations between those categories of the retrieved documents The main trends in these representations are based on the use of, among others, treemaps, tag clouds or network graphs.</p>
+
+<p>The treemaps represent hierarchical relationships of a set of categories using nested rectangles and optimizing the space used for the visualization (<a href="paper581.html#shn1992-2">Shneiderman 1992</a>, <a href="paper581.html#shn2009">Shneiderman 2009</a>). Each rectangle’s size is proportional to the number of retrieved documents under that category. Normally the rectangles are coloured according to the category they belong to, for easy reading by users (see Figure 1).</p>
+ 
+ <figure class="centre">
+   <img src="p581fig1.png" alt="Figure 1: Treemap of a file system." width="595" height="322"/>
+   <figcaption>
+      Figure 1: Treemap of a file system.
+  </figcaption>
+ </figure>
+
+<p>The tag clouds represent the categories in a group of words, where the color and size of each word are proportional to the number of documents retrieved for each category (<a href="paper581.html#beg2006">Begelman <em>et al.</em> 2006</a>). The labels that appear in the cloud are usually hyperlinks that lead to the list of documents that have been retrieved under that label.</p>
+
+ <figure class="centre">
+   <img src="p581fig2.png" alt="Figure 2: World population tag cloud. Image by Seb951 under Creative Commons Attribution-Share Alike 3.0" width="595" height="322" />
+   <figcaption>
+      Figure 2: World population tag cloud. Image by Seb951 under Creative Commons Attribution-Share Alike 3.0.
+  </figcaption>
+ </figure>
+
+<p>The network graphs represent each category as objects or nodes and their relationships using lines or curves. According to the most common interaction,if the user clicks on an object or category s/he will get the list of retrieved documents classified under a category. There are many examples applying this type of visualization, see: Moya-Aneg&oacute;n <em>et al.</em> (<a href="paper581.html#moy2004">2004</a>), Granitzer <em>et al.</em> (<a href="paper581.html#gra2004">2004</a>), and Brandes <em>et al.</em> (<a href="paper581.html#bra2006">2006</a>).</p>
+
+<p>The visualization of query terms given by the user tend to follow two strategies: visualization of the terms within the document or in a page of results (<a href="paper581.html#hea2009">Hearst 2009</a>). In the first case, the system outputs the document highlighting those words that literally match the terms of the query (<a href="paper581.html#ega1989">Egan, <em>et al.</em> 1989</a>). Some studies indicate that users prefer to see this technique implemented by using colour in highlighted words that match the query terms (<a href="paper581.html#hor2001">Hornb&aelig;k and Fr&oslash;kj&aelig;r 2001</a>). In the second case, each document is represented on the results page as a horizontal bar proportional to extension of the document and small squares are added for eaxh query terms that appear in the text (<a href="paper581.html#hoe2006">Hoeber and Yang 2006></a>). As in the previous case, some studies indicate that this representation improves with the introduction of a colour scale proportional to the frequency of the query terms in the document (<a href="paper581.html#and2002">Anderson <em>et al.</em> 2002</a>).</p>
+
+<p>Another technique for visualising query terms in a results page is to add thumbnail images or miniaturized images of the retrieved documents on the page. This technique is based on the fact that the human visual system captures the essentials of an image in 110 milliseconds or even less, just what it takes to read a word or two (<a href="paper581.html#woo2001">Woodruff <em>et al.</em> 2001</a>). Some studies claim that adding these images in the search results allows the search to function as visual summaries of documents (<a href="paper581.html#jha2005">Jhaveri and  R&auml;ih&auml; 2005</a>).</p>
+
+<p>All these new proposals can improve the search experience of users, but they all have important limitations.</p>
+
+<p>Compared to visualizations of clustering, the treemaps provide extra information on the thematic focus of the retrieved documents and the semantic relationships among them. However, the treemaps do not provide information on the distribution and thematic structure of each document. Tag clouds also provide extra information on the thematic focus of the retrieved
+document but, they do not provide information on possible semantic relationships between documents, nor orientation on the distribution and thematic structure of each of these documents. Finally, the network graphs provide extra information on the thematic focus of the retrieved documents and possible semantic relationships between documents, but do not provide
+the distribution and thematic structure of each document. Network graph are also difficult to explore in a comfortable way when they include many nodes and edges. Then the use of a zoom to get a global and the partial views of the network is needed (<a href="paper581.html#vie2007">Vi&eacute;gas and Donath, 2004</a>). Some authors advocate for combined strategies centring the graph on the node that interests the user (<a href="paper581.html#yee2001">Yee <em>et al.</em> 2001</a>) or eliminating those nodes that are not selected by the user (<a href="paper581.html#fel2010">Fellbaum 2010</a>).</p>
+
+<p>Visualizations based on the query terms also have important limitations. On the one hand, they only provide documents in which the query terms appear. They do not provide extra information on the thematic focus of the retrieved documents, nor possible semantic relationships between retrieved documents.They do not give any orientation on the distribution and structure of those terms unrelated to each of these retrieved document either.</p>
+
+<p>Finally, the visualization strategy which involves completing the list with thumbnail images or miniaturized images of retrieved documents also has important limitations. These visualizations, though complementary, do not provide extra information on the thematic focus of the content of the retrieved documents or on semantic relationships between retrieved documents. They do not show to the user the distribution and thematic structure of each document either. Along these lines, studies show that the thumbnails images strategy does not significantly improve the search experience of users (<a href="paper581.html#cze1999">Czerwinski <em>et al.</em> 1999</a>, <a href="paper581.html#dzi2002">Dziadosz and Chandrasekar 2002</a>), although they can be helpful in part if the images are enlarged (<a href="paper581.html#kaa2002">Kaasten <em>et al.</em> 2002</a>)</p>
+
+<p>These limitations lead us to seek new forms of visualization that can help to improve the search experience of users in information retrieval systems and any other case where the user has to choose or select documents from one dimenssion lists of documents.</p>
+
+<p>The proposed tool presented in this paper aims to face these limitations when deployed as a complement to traditional one dimension list of documents or to a list of results of information retrieval systems, such as clustering or sorting by relevance. This tool shows the essential parts of the contents of each item on the retrieved list and it helps the users in identifying the structure of the content of text documents, without having to tackle each one of the results intellectually.</p>
+
+<figure class="centre">
+   <img src="p581fig3.png" alt="Figure 3: Use of texty as a complement in a list of results of a search query" width="595" height="600" />
+   <figcaption>
+      Figure 3: Use of texty as a complement in a list of results of a search query
+  </figcaption>
+ </figure>
+ 
+<p>We used graphic techniques that were very similar for those used forauthorship recognition by Keim and Oelke (<a href="paper581.html#kei2007">2007</a>) and for those used by Hearst (<a href="paper581.html#hea1995">1995</a>) in TileBars . Keim’s technique represents the length of the phrases in each text as little squares with colour grading. In this paper this technique is applied very differently. TileBars also show the distribution of terms along the text as Texty does, but the terms come from a search query and the colour intensity is prportional to the frequency of the queried term in each document. In Texty, colour dots show the density of concepts referring to a particular linguistic field, which we call in this paper vocabulary. In Texty, the human eye analyses visualizations as it would do in Keim and Hearst. Visual coincident factors are colour zones, density of dots and the position and distribution of dots on the plane.</p>
+
+<p>A third tool that graphically is similar to our work is Table Lens (<a href="paper581.html#rao1994">Rao and Card 1994</a>). In our case, we are not representing table structured data (columns, rows, data in each cell), like Table Lens does. Also Texty is not interactive as Table Lens is. Texty is simpler tool and it does not allow accurate data browsing neither.</p>
+
+<p>Technically, a Texty is an image, an icon that represents the physical distribution of keywords of a text as a flat image. These keywords are grouped in vocabularies, to each of which a colour is linked (see Figure 4). Texty reveals, the structure, conceptual density and subject matter of a text. Texty is a non-intrusive technique, in that an eventual implementation it does not necessarily interfere with the original information system that stores the documents. In this paper we show that this text representation tool enriches the one-dimensional lists that result from searches or from any other static list of documents.</p>
+ 
+ <figure class="centre">
+   <img src="p581fig4.png" alt="Figure 4: Texty: the process and the colour's legend" width="595" height="622" />
+   <figcaption>
+      Figure 4: Texty: the process and the colour's legend
+  </figcaption>
+ </figure>
+
+<p>It is important to note that the human brain is capable of detecting variations of dots’ density (Burguess and Barlow 1983) independently of the used colours (<a href="paper581.html#nel1979">Nelson and Halberg 1979</a>). Each array of dots of colour may represent a concrete linguistic field or vocabulary. The human vision can differentiate between colours quite well, especially when green and red are not present at once (<a href="paper581.html#few2008">Few 2008</a>).</p>
+
+<h2>Method</h2>
+
+<p>In 2008 and 2009 at the Ludwig Boltzman Institute, Linz, Austria, the challenge was laid down to make visualization tools with the data from the archive of <em>Ars Electronica</em>, a file of digital culture, media art and technology that had been collecting data since 1987. A lack of representation of collections of texts with the same linguistic register was identified. The research was to find the way of representing a text before reading it: a way to distinguish texts on a list and be able to compare them. Initially, as well as texts, there were five high-quality vocabularies on the history of media art: art work, person or institution, date, keyword and award. These were worked out by G. Dirmoser (<a href="paper581.html#off2009">Offenhuber and Dirmoser 2009</a>) who provided the basis for developing a tool that showed these five vocabularies by five different colours in a proportional, representative image of the actual text. This work gave the first intuitive representations with the Texty technique.</p>
+
+<p>In this paper we present a more elaborate study of this technique, analysing its featuresin comparison with classic techniques of representation. The aim of the study was to develop and improve this technique as a complement to information search and retrieval systems.</p>
+
+<p>The stages of the research were: data selection, choice of semantic categories, selecting and identifying the sources for the vocabulary corpus, the processing of terms for each vocabulary, the design of the corpus of texts for representation and the creation of Textys, for each text of the collection.</p>
+
+<h2>Data selection</h2>
+
+<p>For the study we looked for a controlled collection of texts with a similar register and a specific semantic field. In addition, to assist the study, the texts had to be freely accessible.</p>
+
+<p>For all these reasons we chose the papers published in <em>Information Research</em>. These papers belong to the same document collection, have unity, share the academic register, have a similar structure (introduction, method, analysis, results) and have standardized quality (peer-reviewed).</p>
+
+<p>The <em>Information Research</em> Website has a search system, by theme, by number or by author. It has a separate list of reviews, along with two retrieval systems: Atomzsite search and Google. The aim of this paper is to present Texty, a tool for information retrieval representation that goes further than the above resources for locating information.</p>
+
+<h2>Choice of semantic categories</h2>
+
+<p>Once the corpus of texts had been chosen, we identified the following subject categories that could help to classify their contents: conceptual approach, experimental approach, qualitative methodology, quantitative methodology and computers and information technology.</p>
+
+<p>We could have chosen other alternative categories, however, from our personal perspective, as researchers working mainly in IT related issues, the five categories we have chosen are the main criteria for selecting the literature we use to perform the state of the art of the discipline: approach, methodology and degree of technology employed.</p>
+
+<p>The election of the semantic categories, though related to the corpus of texts, is not unique and could be different without affecting the presentation of Texty as a possible helpful tool.</p>
+
+<h2>Sources for the corpora of the vocabularies</h2>
+
+<p>The next step was to identify the sources of information from which the vocabularies that would be developed subsequently could be extracted. The choice of these sources was based on two complementary criteria. One was the intellectual prestige of the source. This criterion led us to select the <a href="http://plato.stanford.edu">Stanford Encyclopedia of Philosophy</a>  and the <a href="http://www.britannica.com">Encyclopaedia Britannica</a>. A second criterion was the popularity of the source, which led us to choose <a href="http://www.wikipedia.org">Wikipedia</a>.  The distribution of sources by subject matter is given in Table 1.</p>
+
+<table class="center">  
+ <caption><br />Table 1: Concepts and sources of the concepts or the five vocabularies chosen</caption> 
+ <tbody>
+  <tr><td rowspan="2"></td><th colspan="5">Definitions</th></tr>   
+  <tr><th>Qualitative <br />Methodology </th><th>Conceptual<br />Approach</th><th>Computers &amp; information<br />technology</th><th>Quantitative<br />Methodology</th><th>Experimental<br />Approach</th></tr> 
+  <tr>
+ <th>Stanford<br />Encyclopedia<br />of philosophy</th>
+ <td>Aristotle's categories<br />Intrinsic vs. extrinsic<br />Properties</td>
+ <td>Concepts<br />Category<br />Theory</td>
+ <td></td>
+ <td>Mathematics<br />Statistics</td>
+ <td>Experiment in physics</td>
+ </tr> 
+  <tr>
+  <th>Britanica</th>
+ <td>Qualitative states<br />qualitative tests to distinguish alternative theories</td>
+  <td></td>
+  <td></td>
+  <td>Mathematics<br />statistics</td>
+  <td></td>
+  </tr> 
+  <tr>
+  <th>Wikipedia</th>
+ <td>Qualitative data<br />Quantitative property<br />Qualitative properties<br />Qualitative research<br />Quality (philosophy)</td>
+  <td>Terminology<br />Theory<br />Vocabulary<br />Concept</td>
+  <td>List of programing languages<br />List of popular computers<br />List of hardware componets, software glossary</td>
+  <td></td>
+  <td>Test method<br />Case study<br />Experiment</td>
+  </tr> 
+ </tbody>
+ </table> 
+
+<p>Importantly, although this has not been implemented in this study, it would be interesting to create, for each of the five vocabularies, a thesaurus (controlled vocabulary) which would spell out the different types of terms (preferred terms, variant terms, broader terms, narrow terms and related terms) and semantic dependencies (equivalence, hierarchy and association) between terms. This solution would solve the problems of silence and noise in indexingderivatives of synonymy and polysemy of terms.</p>
+
+<h2>Processing of the terms for each vocabulary</h2>
+
+<p>Then the five vocabularies, based on the five corpora of texts for the concepts chosen, were defined (see Table 1). First, a stopword filter was used, to take out the empty words. Then the words occurring fewer than four times were deleted, as they were considered of little significance for each subject. Then the words occurring in more than one vocabulary were deleted, i.e., we removed interference between vocabularies. Thus we obtained a number of terms for each vocabulary (Table 2).</p>
+
+<table class="center" style="width:70%;">  
+ <caption><br />Table 2: Words selected for each vocabulary before the intellectual review.</caption> 
+ <tbody>
+ 
+  <tr><th>Vocabulary</th><th>Number of terms</th><th>Terms /1,000 words</th></tr> 
+  <tr>
+ <td>Conceptual approach</td>
+ <td style="text-align:center">610</td>
+ <td style="text-align:center">21.16</td>
+ </tr> 
+  <tr>
+  <td>Experimental approach</td>
+ <td style="text-align:center">510</td>
+  <td style="text-align:center">23.29</td>
+  </tr> 
+  <tr>
+  <td>Qualitative methodology</td>
+ <td style="text-align:center">451</td>
+  <td style="text-align:center">19.71</td>
+  </tr> 
+  <tr>
+  <td>Quantitative methodology</td>
+ <td style="text-align:center">700</td>
+  <td style="text-align:center">22.24</td>
+  </tr> 
+    <tr>
+  <td>Computers &amp; information technology</td>
+ <td style="text-align:center">312</td>
+  <td style="text-align:center">18.91</td>
+  </tr> 
+ </tbody>
+ </table> 
+
+<p>Finally, there was an intellectual review to detect terms that were inconsistent with the subject matter, ambiguous terms and terms that were not coherent with each vocabulary. The experimental vocabularies were configured as in Table 3.</p>
+
+<p>It should be said that the objective of this paper was to introduce the potential of the Texty tool. It is not a goal of this paper to study the best strategies to define the words that best represent a concrete field of knowledge or, as we call it in this paper, a vocabulary. In machine learning there are very powerfull methods like building topic models. This is an interesting possibility for future research.</p>
+
+<table class="center" style="width:50%;">  
+ <caption><br />Table 3: Final number of terms for each vocabulary.</caption> 
+ <tbody>
+ 
+  <tr><th>Vocabulary</th><th>Number of terms</th></tr> 
+  <tr>
+ <td>Conceptual approach</td>
+ <td style="text-align:center">65</td>
+ </tr> 
+  <tr>
+  <td>Experimental approach</td>
+ <td style="text-align:center">53</td>
+  </tr> 
+  <tr>
+  <td>Qualitative methodology</td>
+ <td style="text-align:center">74</td>
+  </tr> 
+  <tr>
+  <td>Quantitative methodology</td>
+ <td style="text-align:center">86</td>
+  </tr> 
+    <tr>
+  <td>Computers &amp; information technology</td>
+ <td style="text-align:center">410</td>
+  </tr> 
+ </tbody>
+ </table> 
+
+<p>The computers and information technology vocabulary is descriptive, which is why we left a large number of terms, as they all clearly refer to computers and information technology. The final list of words in all the vocabularies<a href="TextyTerms.html"> can be found here</a>.</p>
+
+<p>Regarding the possible overlapping of colour dots we recommend to set a number of terms per vocabulary that avoids an excess of terms per line of the text.</p>
+
+<h2>Corpora of texts to represent</h2>
+
+<p>After choosing the papers from <em>Information Research</em> as corpora of texts to which the Texty tool can be applied, then a private replica of the journal <em>Information Research</em> was made to conduct the study in laboratory comfort and also to show clearly how Texty can be implemented in an existing system. <em>Information Research</em> is made out of static HTML pages and Texty has been introduced in each issue's index and in subject index (link in red on the left column). Texty representations of papers in <em>Information Research</em> papers <a href=<a>are to be found here</a>. [To access, use the user name 'texty' and the password 'texty'].</p>
+
+<h2>Creation of the Textys</h2>
+
+<p>There are a lot of ways to, technically, create Textys. The choice it will depend on the required level of production and concrete conditions of each case. Here we describe the simple automated method that has been used to create the almost 500 Textys required for this study.</p>
+
+<p>The initial format of the texts taken from the <em>Information Research</em> website was HTML. The HTML files were parsed and an specific class for each vocabulary was applied to all vocabulary's words found. Then a specific colour's style was defined using a Cascade Style Sheet (CSS), to the vocabulary's words; the rest of text was defined as white. Finally, a screenshot of the  HTML page was taken and the size was adjusted to 300x450px for each Texty.</p>
+
+<p>In this study we created Textys with five different colours, as shown in Figure 5. When choosing the colours, the main restrictions usually recommended for this kind of graphic attribute were taken into account. One restriction was the use of basic colours that most of humans can distinguish (<a href="paper581.html#kay2008">Kay and Maffi 2008</a>). A second restriction was that humans have very litle difficulty identifying three to five colours; and for seven to nine colours the identification becomes significantly more dificult (<a href="paper581.html#hea1996">Healey 1996</a>).</p>
+
+ <figure class="centre">
+   <img src="p581fig5.png" alt="Figure 5: Colours of the vocabularies of Texty" width="150" height="170" />
+   <figcaption>
+      Figure 5: Colours of the vocabularies of Texty
+  </figcaption>
+</figure>
+
+<p>At this point we should stop a moment to analyse the information contained in the white areas of a Texty. Since the Texty is a physical representation of data, i.e., the colour dots appear in positions that reflect the real positions of termsin the text, the absence of ink gives relevant information about the text represented. Bearing in mind the theory of Tufte on the ratio of ink and data (<a href="paper581.html#tuf1986">Tufte 1986</a>: 93), for Texty we would have to say that they are data without ink. The absence of colours means a lower density of terms of the proposed vocabularies along the text. If we view the white zones as zones with data, Tufte’s formula in the case of Texty would be as follows (see Figure 6), with the maximum proportion of ink devoted to representing data:</p>
+
+ <figure class="centre">
+   <img src="p581fig6.png" alt="Figure 6: Tufte's data-ink ratio equation (left and the application to Texty (right)" width="650" height="200" />
+   <figcaption>
+      Figure 6: Tufte's data-ink ratio equation (left and the application to Texty (right)
+  </figcaption>
+</figure>
+
+<h2>Results</h2>
+
+<p>We created Textys for all the papers in the <em>Information Research</em>, from Volume	1, No. 1 (1995/96) to Volume 15 No.4 (2010), with a total of 454 Textys.  Below, Figure 7 gives the Textys of the 17 papers in <a href="http://informationr.net/ir/15-4/infres154.html">volume 15, no. 4</a> (December 2010) of the journal.</p>
+
+ <figure class="centre">
+   <img src="p581fig7.png" alt="Figure 7: Textys for volume 15, No 4 (December 2010) of the <em>Information Research</em> and legend." width="700" height="984" />
+   <figcaption>
+      Figure 7: Textys for <em>Information Research</em>, volume 15, No 4 (December 2010) and legend.
+  </figcaption>
+</figure>
+
+<p>We presented Texty as a simple and complementary tool to enrich lists of texts. In this respect, a first glance at Figure 7 can help the reader to select papers to read as follows:</p>
+
+<ul>
+<li>The predominant tone in this issue is  experimental (green), though followed closely by the qualitative approach (yellow).</li>
+<li>Papers 3, 11 and 13 look clearly experimental (green), while paper 7 looks like one that requires the reader to have more knowledge of computers and information technology (violet).</li>
+<li>Five of the seventeen papers (38.5%) have a notable presence of omputers and information technology (violet).</li>
+<li>The paper with the biggest conceptual load is the 9th, though the 7th, 8th and 16th also have a conceptual content (orange).</li>
+<li>The more generalist paper seems to be the 15th.</li>
+<li>This issue does not involve quantitative methodologies much (blue).</li>
+</ul>
+
+<p>Here we can see how Texty can be used for the exploration and navigation of texts before they are read.</p>
+
+<p>Starting from this development we want to see what would happen if we try to represent the same data (terms and vocabularies from papers) using traditional techniques, like bar and lines charts. We are not proposing bar and line charts to be used in the same way as Texty, i.e., to enrich lists of texts, but we are comparing formally how the same data set would look under these techniques compared to Texty technique.</p>
+
+<h2>Texty and the bar charts:</h2>
+
+<p>To illustrate this comparison, we chose papers from Volume 15, No. 4 (December 2010).</p>
+
+<p>	Case one, paper 441: <a href="http://informationr.net/ir/15-4/paper441.html">A study of labour market information needs through employers' seeking behaviour</a>. Sonia Sanchez-Cuadrado, Jorge Morato, Yorgos Andreadakis and Jose Antonio Moreiro</p>
+
+ <figure class="centre">
+   <img src="p581fig8.png" alt="Figure 8: Texty and bar chart for paper 441 (Information Research)" width="400" height="235" />
+   <figcaption>
+      Figure 8: Texty and bar chart for paper 441 (Information Research).
+  </figcaption>
+</figure>
+
+<p>Both methods identify the most common vocabulary. In this case it is the conceptual one (orange). This paper describes knowledge representation techniques with computer support, which the two representations also show us. However, in the case of Texty, it can be seen that these techniques are discussed in the middle part of the paper (violet colour), whereas this was notseen with the bar chart.</p>
+
+<p>Case two, paper 445: <a href="http://informationr.net/ir/15-4/paper445.html">Information behaviour research and information systems development: the SHAMAN project, an example of collaboration</a>. Elena Maceviciute and T.D. Wilson</p>
+
+ <figure class="centre">
+   <img src="p581fig9.png" alt="Figure 9: Texty and bar chart for paper 445 (Information Research)" width="400" height="235" />
+   <figcaption>
+      Figure 9: Texty and bar chart for paper 445 (Information Research).
+  </figcaption>
+</figure>
+
+<p>This paper has a conceptual tone (orange). Initially, in the background on long-term digital preservation, we can say that techniques that require computers are being discussed (for example: e-mail, word-processed documents and spreadsheets, as well as e-books, sound recordings, films, scientific data sets, social science data archives, are terms used in this paper). In the middle of the paper we saw a concentration of green points belonging to the experimental vocabulary. This coincides with the explanation of the data used by the SHAMAN program on the basis of interviews with users. Not all this information can be deduced from the bar chart.</p>
+
+<p>Case three, paper 450: <a href="http://informationr.net/ir/15-4/paper450.html">Analysis of automatic translation of questions for question-answering systems</a>. Lola Garc&iacute;a-Santiago and Mar&iacute;a-Dolores Olvera-Lobo </p>
+
+ <figure class="centre">
+   <img src="p581fig10.png" alt="Figure 10: Texty and bar chart for paper 450 (Information Research)" width="400" height="235" />
+   <figcaption>
+      Figure 10: Texty and bar chart for paper 450 (Information Research).
+  </figcaption>
+</figure>
+
+<p>In this case we have a paper with a considerable presence of the five vocabularies. Here, the importance of being able to see the physical distribution of terms in the paper can be seen perhaps in greater clarity. Thus we can say that the paper starts with a conceptual tone, to then explain the method in an experimental tone. The paper does not require too much knowledge of data processing, although there are references to it in the first half. At the end there are references of a conceptual kind. In general, the paper has a qualitative approach, as yellow is distributed throughout. Again, none of this information can be extracted by the bar chart.</p>
+
+<h2>Texty and the line charts:</h2>
+
+<p>We used a line chart with the following coordinates: Y axis represents the position of the first character of the term. The X axis represents the number of terms for each vocabulary. Figure 11 gives an example of this representation.</p>
+
+<p>Case four, paper 438: <a href="http://informationr.net/ir/15-4/paper438.html">Dietary blogs as sites of informational and emotional support</a>, by Reijo Savolainen </p>
+
+ <figure class="centre">
+   <img src="p581fig11.png" alt="Figure 11: Texty and line charts for paper 438 (Information Research)" width="480" height="235" />
+   <figcaption>
+      Figure 11: Texty and line charts for paper 438 (Information Research).
+  </figcaption>
+</figure>
+
+<p>The reading of the line chart contributes more information on the structure and distribution of terms in the text than the bar chart does. Line chart shows very well the number of terms of each vocabulary. Been the Line chart more accurate in number of vocabularies than Texty. However, Texty is more suitable for everywhere use because it doesn't requite the use of axes and has a bigger range of readible sizes. For small sizes the line chart axes scales becomes unreadible.</p>
+
+<h2>Texty versus bar and line charts</h2>
+
+<p>The objective of our work is not to quantitatively study Texty's performance against other visualizations, taking this into account, both options, Texty and the charts, show the number of terms in each vocabulary, i.e., the general focus of a paper at a glance. The improvements introduced by Texty are:</p>
+
+<ol>
+<li>Texty shows the distribution of terms along the text.</li>
+<li>With Texty the conceptual structure of the paper can be seen: e.g. at the start there is a conceptual explanation; then the experimental part is developed; finally, the calculations in which there is intensive use of technology related and/or computer related operations.</li>
+<li>Texty doesn't need axes or coordinates and scales.</li>
+</ol>
+
+<h2>Conclusions</h2>
+
+<p>The development of this work allows us to point out a number of learned lessons about the complementary nature of Texty, its ability to encode information, and its non intrusive structure and technology.</p>
+
+<p>Because of its complementary nature, Texty enriches lists of texts adding an image that physically represents the distribution of five conceptual fields along the text. Texty is not a replacement for classic search systems, but is proposed as a complement.</p>
+
+<p>Texty's ability of encoding means that it is able to present distribution and structure of a text using only coloured dots that represent the ext itself.</p>
+
+<p>Another conclusion we can draw is that Texty is not an intrusive solution from the point of view of the architecture of information. In this sense, Texty can be implemented without affecting the organizational criteria (e.g. order, relevance, recommendation or clustering) used to produce the retrieved list of documents.</p>
+
+<p>Texty is a tool that can be implemented in an existing collection of texts and in is non-intrusive from a technological point of view. That means that it is not necessary to change or reprogram the storage system where the collection of texts lies. This easy implementation is presented as a critical advantage for future Texty implementations.</p>
+
+<p>Finally, strictly speaking, from the point of view of information retrieval, the use of Texty is not adding any advantage (not improved indexing and search algorithms, for example). What Texty aims to do is to improve is the presentation of results: it complements the traditional list of results (generally based on a title and a short summary) providing information on the content and structure of the retrieved document without having to interact directly with the document itself (see Figure 3).</p>
+
+<h2>Future developments</h2>
+
+<p>We want to round off these conclusions by mentioning some future lines of development derived from Texty.</p>
+
+<p>Texty can be exported to other backgrounds and other vocabularies, adapted to each case and it can be personalized to the extent that it shows us other vocabularies (colours) depending on the reader preferences or the texts represented. Representation can be expanded and texts sections separators added, which indicate, for example, the customary sections of an paper (intro, method, analysis, results, conclusions, in the case of the papers of <em>Information Research</em>).</p>
+
+<p>Dynamic, personalized and folk-vocabularies can increase the efficacy of Texty, as can the use of different layers to represent any vocabularies, as wanted. The use of interactive images (sensitive to clicks on the mouse) allows Texty to navegate through the text in question.</p>
+
+<p>As noted, the use of thesaurus would improve the representative capacity of the vocabularies used in texty.The adaptation of Texty for texts in a number of languages is another possible use: all you need are translations of the vocabularies.</p>
+ 
+ <h2>Acknowledgements</h2> 
+ 
+ <p>Our thanks to: Jordi K. Nualart, Amelia S. Nacimento, Mar Canet (Catalonia), Sandor Herramhof (Linz, Austria), Dietmar Offenhuber (MIT USA) ,  Joelle Vandermensbrugghe (University of Canberra), and the Department of Information Science, Faculty of Information Science. University of Barcelona.</p>
+ 
+ <h2 id="author">About the authors</h2> 
+ 
+ <p>Jaume Nualart is a PhD candidate in the Faculty of Arts and Design, University of Canberra and a research engineer at NICTA, Australia. MAS and MSc (Licenciatura) at University Autonomous of Barcelona  He can be contacted at <a href="mailto:Jaume.Nualart@canberra.edu.au">Jaume.Nualart@canberra.edu.au</a>.</p>
+ 
+ <p>Mario P&eacute;rez-Montoro is a Professor in the Department of Information Science, at University of Barcelona, Spain. He completed his Bachelor's degree in Philosophy and Education from the University of Barcelona (Spain), his Master of Information Science in Organizations from the Politechnical University of Catalonia (Spain), and his PhD from the University of Barcelona (Spain). He has been visiting scholar at the Center for the Study of Language and Information (CSLI) at Stanford University (California, USA) and at the School of Information at UC Berkeley (California, USA). He can be contacted at: <a href="mailto:perez-montoro@ub.edu">perez-montoro@ub.edu</a>.</p>
+ 
+</section>
+<section class="refs">
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">References</legend>   
+
+ <ul class="refs"> 
+ <li id="and2002">Anderson, T. J., Hussam, A., Plummer, B. &amp; Jacobs, N. (2002). Pie charts for visualizing query term frequency in search results. <em>Proceedings of the 5th International Conference on Asian Digital Libraries: Digital Libraries: People, Knowledge, and Technology</em> (pp. 440–451). London: Springer-Verlag.</li>
+
+ <li id="bae2011-0">Baeza-Yates, R. (2011). <a href="http://www.ub.edu/bid/27/baeza2.htm">Tendencias en recuperaci&oacute;n de informaci&oacute;n en la web.</a> [Trends in information retrieval on the Web.] <em>BiD: textos universitaris de biblioteconomia i documentaci&oacute;</em>, desembre, n&uacute;m. <strong>27</strong>. Retrieved from http://www.ub.edu/bid/27/baeza2.htm on 22-01-2013.</li>
+
+ <li id="bae2011-1">Baeza-Yates R. A. &amp; Ribeiro-Neto, B. (2011). <em>Modern information retrieval</em>. Boston, MA: Addison-Wesley Longman.</li>
+
+ <li id="bae2011-2">Baeza-Yates, R., Broder, A. &amp; Maarek, Y. (2011). The new frontier of Web search technology: seven challenges. In S. Ceri &amp; M. Brambilla (Eds.), <em>Search Computing</em> (Vol. <strong>6585</strong>, pp. 3–9).  Berlin &amp; Heidelberg: Springer Verlag.</li>
+
+ <li id="beg2006">Begelman, G., Keller, P., Smadja, F. &amp; others. (2006). <a href="http://www.webcitation.org/6H4xIzT55"></a> <em>Collaborative Web Tagging Workshop at WWW2006</em>, Edinburgh, Scotland (pp. 15–33). Retrieved 2 June, 2013 from http://www.ra.ethz.ch/cdstore/www2006/www.rawsugar.com/www2006/20.pdf  (Archived by WebCite&reg; at http://www.webcitation.org/6H4xIzT55)</li>
+
+ <li id="bra2006">Brandes, U., Hoefer, M. &amp; Lerner, J. (2006). <a href="http://www.mpi-inf.mpg.de/~mhoefer/05-07/Brandes06Wordspace.pdf">WordSpace: visual summary of text corpora.</a> In Robert F. Erbacher, Jonathan C. Roberts, Matti T. Gr&ouml;hn &amp; Katy B&ouml;rner (Eds.).  <em>Visualization and data analysis 2006</em> (pp. 212-223). Bellingham, WA: SPIE-the International Society for Optics and Photonics. (Proceedings of SPIE, Volume 6060).  Retrieved 2 June, 2013 from http://www.mpi-inf.mpg.de/~mhoefer/05-07/Brandes06Wordspace.pdf.</li>
+
+ <li id="bur1983">Burgess, A. &amp; Barlow, H. B. (1983). The precision of numerosity discrimination in arrays of random dots. <em>Vision Research</em>, <strong>23</strong>(8), 811–820.</li>
+
+ <li id="cze1999">Czerwinski, M., Van Dantzich, M., Robertson, G. &amp; Hoffman, H. (1999). <a href="http://research.microsoft.com/en-us/um/people/marycz/interact99.pdf">The contribution of thumbnail image, mouse-over text and spatial location memory to web page retrieval in 3D.</a>  In <em>Proceedings of the INTERACT'99 conference</em>, (pp. 163-170). Dordrecht, Kluwer. Retrieved 2 June, 2013 from http://research.microsoft.com/en-us/um/people/marycz/interact99.pdf</li>
+
+ <li id="dzi2002">Dziadosz, S. &amp; Chandrasekar, R. (2002, August). Do thumbnail previews help users make better relevance decisions about web search results?. In <em>Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval</em>, (pp. 365-366). New York, NY: ACM Press.</li>
+
+ <li id="ega1989">Egan, D.E., Remde, J. R., Gomez, L.M., Landauer, T.K., Eberhardt, J. &amp; Lochbaum, C.C. (1989). Formative design evaluation of superbook. <em>ACM Transactions on Information Systems (TOIS)</em>, <strong>7</strong>(1), 30–57.</li>
+ 
+ <li id="fel2010">Fellbaum, C. (2010). WordNet.  In Roberto Poli, Michael Healy &amp; Achilles Kameas, (Eds.). <em>Theory and applications of ontology: computer applications</em>, (pp. 231-243). Berlin &amp; Heidleberg: Springer</li>
+
+ <li id="few2008">Few, S. (2008, February). <a href="http://www.perceptualedge.com/library.php">Practical rules for using color in charts</a>. <em>Visual Business Intelligence Newsletter</em>, No. 11. Retrieved 2 June, 2013 from http://www.perceptualedge.com/library.php</li>
+
+ <li id="gra2004">Granitzer, M., Kienreich, W., Sabol, V., Andrews, K. &amp; Klieber, W. (2004). Evaluating a system for interactive exploration of large, hierarchically structured document repositories. In <em>IEEE Symposium on Information Visualization, 2004. INFOVIS 2004.</em> on (pp. 127-134). Los Alamitos, CA: IEEE Computer Society Press.</li>
+
+ <li id="hea1996">Healey, C. G. (1996). Choosing effective colours for data visualization. In <em>Proceedings of the 7th conference on Visualization ’96</em> (p. 263–ff.). Los Alamitos, CA, USA: IEEE Computer Society Press. </li>
+
+ <li id="hea1995">Hearst, M. (1995). TileBars: visualization of term distribution information in full text information access. In <em>CHI '95: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em>, (pp. 59-66).  New York, NY:ACM Press/Addison-Wesley Publishing Co. </li>
+
+ <li id="hea2009">Hearts, M. (2009). <em>Search user interfaces</em>. Cambridge: Cambridge University Press.</li>
+
+ <li id="hoe2006">Hoeber, O. &amp; Yang, X. D. (2006). A comparative user study of web search interfaces: HotMap, Concept Highlighter, and Google. In <em>WI '06: Proceedings of the 2006 IEEE/WIC/ACM International Conference on Web Intelligence</em>, (pp. 866-874).  Washington, DC: IEEE Computer Society.</li>
+
+ <li id="hor2001">Hornb&aelig;k, K. &amp; Fr&oslash;kjaer, E. (2001). Reading of electronic documents: the usability of linear, fisheye, and overview+ detail interfaces. In <em>CHI '01 Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em>, (pp. 293-300). New York, NY: ACM Press.</li>
+
+ <li id="jha2005">Jhaveri, N. &amp; R&auml;ih&auml; , K. J. (2005). The advantages of a cross-session web workspace.  In <em>CHI EA '05 CHI '05 Extended Abstracts on Human Factors in Computing Systems</em>, (pp. 1949-1952). New York, NY: ACM Press.</li>
+
+ <li id="kaa2002">Kaasten, S., Greenberg, S. &amp; Edwards, C. (2002). How people recognise previously seen Web pages from titles, URLs and thumbnails. In  Xristine Faulkner, Janet Finlay  &amp; Françoise D&eacute;tienne <em>People and Computers XVI - Memorable Yet Invisible: Proceedings of HCI 2002</em> (pp. 247–266). Berlin/Heidelberg: Springer.</li>
+
+ <li id="kay2008">Kay, P. &amp; Maffi, L., (2008). Number of basic colour categories. In Martin Haspelmath,  Matthew S.  Dryer, David Gil  &amp; Bernard Comrie, (Eds.). <em>The world atlas of language structures online</em>. (ch. 133). Munich, Germany: Max Planck Digital Library.</li>
+
+ <li id="kei2007">Keim D. A. &amp; Oelke D. (2007). Literature fingerprinting: a new method for visual literary analysis. In <em>VAST '07: Proceedings of the 2007 IEEE Symposium on Visual Analytics Science and Technology</em>,  (pp. 115-122). Washington, DC: IEEE Computer Society  </li>
+
+ <li id="lar1991">Larson, R. R. (1991). Classification clustering, probabilistic information retrieval, and the online catalog. <em>The Library Quarterly</em>, <strong>61</strong>(2), 133–173. </li>
+
+ <li id="moy2004">Moya-Aneg&oacute;n, F., Vargas-Quesada, B., Herrero-Solana, V., Chinchilla-Rodr&iacute;guez, Z., Corera-&Aacute;lvarez, E. &amp; Munoz-Fern&aacute;ndez, F. J. (2004). A new technique for building maps of large scientific domains based on the cocitation of classes and categories. <em>Scientometrics</em>, <strong>61</strong>(1), 129–145.</li>
+
+ <li id="mor2006">Morville, P. &amp; Rosenfeld, L. (2006). <em>Information architecture for the world wide web: designing large-scale web sites.</em> Sebastopol, CA: O’Reilly Media.</li>
+
+ <li id="nel1979">Nelson, M. &amp; Halberg, R. (1979). Visual contrast sensitivity functions obtained with colored and achromatic gratings. <em>Journal of the Human Factors and Ergonomics Society</em>, <strong>21</strong>(2), 225-228. </li>
+
+ <li id="off2009">Offenhuber D. &amp; Dirmoser G. (2009) <a href="http://www.webcitation.org/6DmoMu1n3">Semaspace: graph editor for large knowledge networks</a>. Retrieved 19 January, 2013 from http://residence.aec.at/didi/FLweb/.  (Archived by WebCite&reg; at http://www.webcitation.org/6DmoMu1n3)</li>
+ 
+  <li id="per2010">P&eacute;rez-Montoro, M. (2010). <em>Arquitectura de la informaci&oacute;n en entornos web</em>. El profesional de la informaci&oacute;n, <strong>19</strong>(4), 333-338.</li>
+
+ <li id="rao1994">Rao, R. &amp; Card, S. (1994). The table lens: merging graphical and symbolic representations in an interactive focus+ context visualization for tabular information. In <em>CHI '94 Conference Companion on Human Factors in Computing Systems</em>, (pp. 222). New York, NY: ACM Press. </li>
+
+ <li id="shn1992-1">Shneiderman, B. (1992). <em>Designing the user interface: strategies for effective human-computer interaction</em>.  (2nd ed.) Boston, MA: Addison-Wesley Longman Publishing Co., Inc.</li>
+
+ <li id="shn1992-2">Shneiderman, B. (1992). Tree visualization with tree-maps: 2-d space-filling approach. <em>ACM Transactions on Graphics</em>, <strong>11</strong>(1), 92–99.</li>
+
+ <li id="shn2009">Shneiderman, B. &amp; Plaisant, C. (2009). <em><a href="http://www.webcitation.org/6H6Mp735I">Treemaps for space-constrained visualization of hierarchies.</a></em> Retrieved 3 June, 2013 from http://www.cs.umd.edu/hcil/treemap-history/  (Archived by WebCite&reg; at http://www.webcitation.org/6H6Mp735I)</li>
+
+ <li id="tex2011"><em><a href="http://o.subvideo.tv/">Texty representations of <em>Information Research</em></a></em> papers (2011). Restricted access: user:'texty', password: 'texty'.</li>
+ 
+ <li id="try1939">Tryon, R. (1939). <em>Cluster analysis</em>. New York, NY: McGraw-Hill</li>
+
+ <li id="tuf1986">Tufte E. R. . 1986. <em>The visual display of quantitative information</em> (pp 93).  Cheshire, CT: Graphics Press </li>
+
+ <li id="vie2007">Vi&eacute; gas, F. B., Wattenberg, M., Van Ham, F., Kriss, J. &amp; McKeon, M. (2007). Manyeyes: a site for visualization at internet scale. <em>Visualization and Computer Graphics, IEEE Transactions</em>, <strong>13</strong>(6), 1121–1128.</li>
+
+ <li id="woo2001">Woodruff, A., Faulring, A., Rosenholtz, R., Morrsion, J. &amp; Pirolli, P. (2001). Using thumbnails to search the Web. In <em>Proceedings of the SIGCHI conference on Human factors in computing systems</em> (pp. 198–205). New York, NY: ACM Press.</li>
+
+ <li id="yee2001">Yee, K. P., Fisher, D., Dhamija, R. &amp; Hearst, M. (2001). Animated exploration of dynamic graphs with radial layout. In <em>INFOVIS '01 Proceedings of the IEEE Symposium on Information Visualization 2001</em>, (p. 43). Washington, DC: IEEE Computer Society.</li>  
+ </ul>  </fieldset>  </form> 
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+ How to cite this paper
+ </legend>  
+ <div><br />Nualart, J. P&eacute;rez-Montoro, M  (2013).  Texty, a visualization tool to aid selection of texts from search outputs. <em>Information Research</em>, <strong>18</strong>(2) paper 581. [Available at  http://InformationR.net/ir/18-2/paper581.html]</div>  
+ </fieldset>  
+ </form> 
+</section>
+</article>
+<br />
+<section>
+ 
+ <table class="footer" style="border-spacing:10;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">
+ Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"> 
+ <form method="get" action="http://scholar.google.com/scholar" target="_blank">  
+ <table class="footer">  
+  <tr>  
+  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="visualization (&quot;search output&quot;) selection" /><br />  
+  <input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  </td>  </tr>  
+ </table> 
+  </form>  
+ </td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --> 
+ 
+ <form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr>  
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="visualization (&quot;search output&quot;) selection" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+ <input type="hidden" name="client" value="pub-5081678983212084" />
+ <input type="hidden" name="forid" value="1" /> 
+  <input type="hidden" name="ie" value="ISO-8859-1" />  
+  <input type="hidden" name="oe" value="ISO-8859-1" />  
+  <input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" />  
+  <input type="hidden" name="hl" value="en" />
+  </td>  
+  </tr>  
+  </table>  
+  </form>
+ </td>  
+ <td style="vertical-align:top; text-align:center;">   
+ <form method="get" action="http://www.bing.com" target="_blank">  
+ <table class="footer">
+ <tr> 
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="visualization (&quot;search output&quot;) selection" /> <br />  
+ <input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  
+ </td>  
+ </tr>  
+ </table>  
+ </form> 
+ </td> 
+ </tr>  
+ </table> 
+ 
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/cholar?hl=en&amp;q=http://informationr.net/ir/18-2/paper581.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div> <br />  
+ <div style="text-align:center;">
+    <!-- AddThis Button BEGIN -->
+<div style="text-align:center;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script>
+<!-- AddThis Button END -->
+ </div>  
+ <hr /> 
+
+ <table class="footer" style="padding:10;">  
+ <tr>
+ <td style="text-align:center; vertical-align:top;">
+ <div><a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={652d91a2-eb56-1014-7981-cd250d62b61d}&amp;template=simple" alt="Hit Counter by Digits" border="0"  /></a></div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the authors, 2013. <br />Last updated: 3 June, 2013 </div></td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+ </section>
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="infres182.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index.html">Home</a></li>
+</ul> 
+</div></td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+ </body>  
+ </html> 

@@ -1,0 +1,414 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ 						body {
+	 						background-color: #ffffff;
+ 							margin-left: 15%; 
+							margin-right: 10%;
+						}
+						
+ 						section {
+							margin-left:10%;	
+							margin-right:10%;
+						}
+						
+						section.refs {
+							margin-right:12%;
+						}
+
+						header {
+							text-align:center;
+							margin-left:20%;	
+							margin-right:20%;
+						}
+						
+						footer {
+							text-align:center;
+							margin-left:20%;	
+							margin-right:20%;
+						}
+
+						h1  {
+							color: maroon;
+							font-family: serif;
+							font-size: x-large;
+							font-style: normal;
+							font-weight: bold;
+							text-align: center;
+						}
+
+							h2  {
+								margin-left: -5%;
+								color: navy;
+								font-family: Optima, Geneva, Arial, Helvetica, sans-serif;
+								font-size: large;
+								font-style: normal;
+								font-weight: bold;
+						}
+						
+						h2.author {
+							margin-left: -5%;
+							color: black;
+							font-family: Optima, Geneva, Arial, Helvetica, sans-serif;
+							font-size: large;
+							font-style: normal;
+							font-weight: bold;
+							text-align:center;
+						}
+						
+						h2.author a:link {
+							background-color: white; 
+							color: black; 
+							width: auto; 
+						}
+						
+						h2.author a:hover {
+							background-color: white; 
+							color:#4F81F2;
+							width: auto; 
+						}
+						
+						h2.revtitle  {
+							margin-left:10px;
+							color: navy;
+							font-family: Optima, Geneva, Arial, Helvetica, sans-serif;
+							font-size: large;
+							font-style: normal;
+							font-weight: bold;
+							text-align:center;
+						}
+						
+						h2.revtitle a:link{
+							text-decoration:none;
+						}
+						
+						h2.revauth {
+							font-size:medium;
+							margin-left:20px;
+						}
+						
+						h2.revtitle a:hover {
+							color:#4F81F2;
+						}
+						
+						h3 {
+							color:#36F;
+							font-family: Optima, Verdana, Geneva, Arial, Helvetica, sans-serif; 
+							font-size: large; 
+							font-style: normal; 
+							font-weight: bold; 
+							text-align: left;
+							}
+
+						h4 {
+							margin-left: 5%;
+							color: #CC6600; 
+							font-family: Optima, Geneva, Verdana, Arial, Helvetica, sans-serif;
+							font-size: large; 
+							font-style:italic;
+							text-align: left; 
+							line-height : 1.35em; 
+						}
+
+						h5 {
+							margin-left: 8%;
+							color: #3E9F43;
+							font-family: Optima, Verdana, Geneva, Arial, Helvetica, sans-serif;
+							font-size: large;
+							text-align: left;
+							line-height : 1.35em;
+						}
+						
+						h6 {
+							margin-left: 12%;
+							color: #000000;
+							font-family: Optima, Verdana, Geneva, Arial, Helvetica, sans-serif;
+							font-size: large;
+							text-align: left;
+							line-height : 1.35em;
+						}
+						
+						li {
+							line-height:normal;
+							margin-bottom:5px;
+							font-family: Georgia, serif;
+							font-size: 10pt;	
+						
+						}
+						
+						p {
+							color: black;
+							font-family: Georgia, serif;
+							font-size: 10pt;
+							font-style: normal;
+							font-weight: normal;
+							text-align: left;
+							line-height : 1.4em;
+						}
+						
+						p.revfoot {
+							text-align:center;
+							color:#B20E02;
+							font-family: Georgia, serif;
+							font-size: 12pt;
+							font-style: normal;
+							font-weight: normal;
+							line-height : 1.4em;
+						}
+							
+					hr {
+							text-align:center;
+							color: navy;
+							size:3;
+					}
+					
+					table.center {
+							margin-left:auto;
+							margin-right:auto;
+							width:80%; 
+							padding:10; 
+							font-style: normal; 
+							font-family: optima, helvetica, sans-serif; 
+							background-color: #fdffdd;
+							font-size:10pt; 
+							border-collapse:collapse;
+							border-width:1px; 
+ 							border-style:solid; 
+ 							border-color:black;
+							word-wrap: break-word;
+						}
+						
+					table.center td {
+							border-width:1px;
+							border-style:solid; 
+ 							border-color:black;
+							padding-left:5px;
+						}
+						
+																
+					table.center th {
+							background-color:#797979;
+							color:#fff;
+							border:solid;
+							border-width:1px;
+							border-color:#FFFFFF;
+							}
+						
+					table.center tr:nth-of-type (even) {
+							background-color:#FFFFA8;
+						}
+						
+					table.center tr:nth-of-type (odd) {
+							background-color:#FFF;
+						}
+						
+					table.footer, th, td {
+							border-width:0px;
+							margin-left:auto;
+							margin-right:auto;
+							background-color: #FFF
+						}
+						
+					blockquote {
+						border-left: 10px #ccc solid;
+						padding: 0.5em 10px;
+						color: black;
+						font-family: Georgia, serif;
+						font-size: 10pt;
+						font-style: italic;
+						margin-left: 50px;
+						margin-right: 50px;
+						text-align: left;
+						line-height : 1.3em;
+						}
+					
+					blockquote.abstract {
+						background-color: #FFFFCE;
+						color: black;
+						font-family: Georgia, serif;
+						font-size: 11pt;
+						font-style: italic;
+						margin-left: 80px;
+						margin-right: 80px;
+						text-align: left;
+						line-height : 1.3em;
+						border-left: 1px #1A20D1 solid; 
+						border-right: 1px #1A20D1 solid; 
+						border-top:  1px #1A20D1 solid; 
+						border-bottom: 1px #1A20D1 solid; 
+						padding:10px;
+					}
+					.example {
+						color: black;
+						background-color:#FFF;
+						font-size: 12pt;
+						font-variant:normal;
+						margin-left: 50px;
+						margin-right: 50px;
+						text-align: left;
+						line-height : 1.3em;
+						}
+
+					 ul.refs {
+	 					list-style:none;
+						padding-left: 35px;
+						text-indent: -35px;
+						}
+						
+					caption {
+						caption-side: bottom;
+						color: black;
+						font-family: optima, geneva, arial, helvetica, sans-serif;
+						font-size:  small;
+						font-style: normal;
+						font-weight: bold;
+						text-align: center;
+						line-height : 1.4em;
+					}
+					
+					figcaption {
+						color: black;
+						font-family: verdana, geneva, arial, helvetica, sans-serif;
+						font-size:small;
+						font-style:normal;
+						font-weight:bold;
+						text-align: center;
+						line-height : 1.4em;
+						}
+						
+				figcaption .centre {
+					color: black;
+						font-family: verdana, geneva, arial, helvetica, sans-serif;
+						font-size:small;
+						font-style:normal;
+						font-weight:bold;
+						text-align: center;
+						line-height : 1.4em;
+				}
+						
+				figure.centre {
+						text-align:center;
+					}
+					
+					 details {
+						font-size:small;
+	 					font-weight:normal;
+ 					}
+					
+				div {
+						text-align:center;
+					}
+					
+				div.citing {
+						text-align:left;
+						border-left: 1px  #1A20D1 solid; 
+						border-right: 1px  #1A20D1  solid; 
+						border-top:  1px  #1A20D1  solid; 
+						border-bottom: 1px  #1A20D1  solid; 
+						padding:5px;
+						padding-left: 35px;
+						text-indent: -25px;
+					}
+					
+				div.revcite {
+						text-align:left;
+						padding-left: 35px;
+						text-indent: -25px;
+					}
+				 .button { 
+					 	width: 45em; 
+						padding: 0 0 0 0;
+						font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif; 
+						font-size: x-small;
+						font-weight: bold;   
+						background-color: #ffffff; 
+						color:#7986B7;
+						display: inline; 
+						text-align: center; 
+					}
+		
+  					.button ul { 
+					text-align: center;
+					list-style: none; 
+					margin: 0; 
+					padding: 0; 
+					border: none; 
+					display: inline; 
+				}
+		
+ 					.button li { 
+					margin: 0; 
+					font-family: Verdana, Lucida, Geneva, Helvetica,	Arial, sans-serif; 
+					font-size: small; 
+					font-weight: bold;   
+					background-color: #ffffff;
+					color: #000000; 
+					text-decoration: none; 
+					display: inline; 
+					text-align: center;
+				}
+ 
+ 					.button li a:link { 
+					background-color: white; 
+					color: grey; 
+					width: auto; 
+				}
+				
+					.button li a:hover { 
+					background-color: white; 
+					color: blue; 
+					width: auto; 
+		
+ 					fieldset { 
+					padding: .5em; 
+					background: white; 
+					border: 1px dotted #5E96FD;
+					margin-left: 15px; 
+					margin-right: 15px; 
+					margin-top: .5em; 
+					}
+ 
+ 					legend { color: white; 
+					background-color: #5E96FD; 
+					font-size: medium; 
+					padding: .1ex .5ex; 
+					border-right: 1px solid navy; 
+					border-bottom: 1px solid navy;
+ 					font-weight: bold; 
+					}
+					
+					.normal {
+					margin-left:10%;
+					margin-right:10%;
+					font-family:Verdana, Geneva, sans-serif;
+					font-size:16px;
+					font-style:normal;
+					background-color:white;
+					}
+	
+					.example {
+					margin-left:10%;
+					margin-right:10%;
+					font-style:normal;
+					background-color:white;
+					}
+	
+					.code {
+					margin-left:10%;
+					margin-right:10%;
+					font-family:"Courier New", Courier, monospace;
+					font-style:normal;
+					background-color:white;
+					}
+	
+					.text_rotate {
+					-webkit-transform: rotate(270deg);
+					-moz-transform: rotate(270deg);
+					-o-transform: rotate(270deg);
+					transform: rotate(270deg);
+					writing-mode: lr-tb;
+					}
+	
+					
+					
+ 					

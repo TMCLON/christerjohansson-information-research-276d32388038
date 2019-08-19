@@ -1,0 +1,626 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title>
+      Big-data in cloud computing: a taxonomy of risks
+    </title>
+    <meta charset="utf-8">
+    <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif">
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css"><!--Enter appropriate data in the content fields-->
+    <meta name="dcterms.title" content="Big-data in cloud computing: A taxonomy of risks">
+    <meta name="author" content="Holmes E. Miller">
+    <meta name="dcterms.subject" content="This paper provides a taxonomy for classifying risks in big-data and cloud computing environments">
+    <meta name="description" content="Technological advances have enabled storing, processing, analysing, retrieving and reporting large amounts of data residing on servers accessible by the Internet, referred to here as big-data in cloud computing. As with many technological advances, this new environment creates new risks. A grid, coupling the uses of information with various levels of aggregation of information, informs a scenario-based analysis of risks that are discussed in three categories: Data sources, cloud computing and big-data. Data source risks are analysed in four categories: Data quality, data privacy, data security and data integration. Cloud computing risks are analysed in these four categories plus vendor risk. Finally big-data risks are analysed. Given the above structure, over forty separate risks are articulated and discussed. These risks can inform risk analyses performed by organizations that have migrated or are migrating to big-data and cloud computing environments. Given these risks, a sample five-step process for risk management is proposed. The overall conclusion is that risks in big-data and cloud computing environments may be managed in ways beneficial for all affected parties, including those generating the data, those using the data and all others profiting from it.">
+    <meta name="keywords" content="big-data, cloud computing, risk behaviour, information management, data mining, databases"><!--leave the following to be completed by the Editor-->
+    <meta name="robots" content="all">
+    <meta name="dcterms.publisher" content="Professor T.D. Wilson">
+    <meta name="dcterms.type" content="text">
+    <meta name="dcterms.identifier" content="ISSN-1368-1613">
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/18-1/paper571.html">
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/18-1/infres181.html">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
+    <meta name="dcterms.issued" content="2013-03-15">
+    <meta name="geo.placename" content="global">
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 18 no. 1, March, 2013
+      </h4>
+    </header>
+    <article>
+      <h1>
+        Big-data in cloud computing: a taxonomy of risks
+      </h1><br>
+      <div style="margin-left: 20%; margin-right: 10%;">
+        <h4>
+          <a href="#author">Holmes E. Miller</a><br>
+          Department of Accounting, Business and Economics, Muhlenberg College, Allentown, Pennsylvania USA 18104
+        </h4>
+      </div><br>
+      <form>
+        <fieldset>
+          <legend><strong>Abstract</strong></legend>
+          <blockquote>
+            <strong>Introduction.</strong> Technological advances have enabled storing, processing, analysing, retrieving and reporting large amounts of data residing on servers accessible by the Internet, referred to here as big-data in cloud computing. As with many technological advances, this new environment creates new risks.<br>
+            <strong>Method.</strong> A grid, coupling the uses of information with various levels of aggregation of information, informs a scenario-based analysis of risks that are discussed in three categories: Data sources, cloud computing and big-data.<br>
+            <strong>Analysis.</strong> Data source risks are analysed in four categories: Data quality, data privacy, data security and data integration. Cloud computing risks are analysed in these four categories plus vendor risk. Finally big-data risks are analysed.<br>
+            <strong>Results.</strong> Given the above structure, over forty separate risks are articulated and discussed. These risks can inform risk analyses performed by organizations that have migrated or are migrating to big-data and cloud computing environments.<br>
+            <strong>Conclusions.</strong> Given these risks, a sample five-step process for risk management is proposed. The overall conclusion is that risks in big-data and cloud computing environments may be managed in ways beneficial for all affected parties, including those generating the data, those using the data and all others profiting from it.
+          </blockquote>
+        </fieldset>
+      </form><br>
+      <br>
+      <section>
+        <h2>
+          Introduction
+        </h2>
+        <p>
+          Cloud computing and big-data are complementary approaches to storing, processing, analysing, accessing and reporting information. Cloud computing provides services (e.g., infrastructure, platforms, applications and data) that run on servers accessible through the Internet rather than residing on the desktop. Cloud computing allows data to be uploaded and accessed from the desktop, from mobile devices such as tablet computers and cell phones and from appliances such as vending machines and automobiles. Although perhaps conceptually nothing new vis-á-vis timesharing (<a href="#ell08">Ellison 2008</a>), cloud computing attributes including scale, accessibility, cost and timeliness have created new capabilities that previously did not exist. These capabilities include company-centric uses of information where customer data can be aggregated to support company needs (<a href="#pra00">Prabhaker 2000</a>) and in the near future, customer-centric uses where smart products and data aggregation may be used to empower individuals to tailor purchases to their specific needs without resorting to intermediaries (<a href="#sea12">Searls 2012</a>). Whereas prior marketing approaches involved pushing advertisements onto customers, big-data and cloud computing approaches facilitate customers pulling information from vendors to better satisfy the customer's individually defined and articulated needs.
+        </p>
+        <p>
+          The term big-data refers to analytical technologies that have existed for years but can now be applied faster, on a greater scale and are accessible to more users. <a href="#kus10">Kusnetsky (2010, para. 3)</a> defines big-data as, 'the tools, processes and procedures allowing an organization to create, manipulate and manage very large data sets and storage facilities.' While big-data operations can be processed locally, as organizations migrate to the cloud, so will their corporate data. Moreover cloud-based architectures will become more important as individual entities (i.e., both appliances and people) generate continuous data streams that can be collected, stored, processed, analysed and reported.
+        </p>
+        <p>
+          In this paper we will present and discuss risks and opportunities of big-data applications in cloud computing environments (big-data in cloud computing) and present some ideas for managing these risks.
+        </p>
+        <h3>
+          Big-data and cloud computing overview
+        </h3>
+        <p>
+          To inform the discussion below, Table 1 presents a grid (using a health care example) that indicates how data can be classified, aggregated and used:
+        </p>
+        <table class="center" style="width:95%">
+          <caption>
+            <br>
+            Table 1: Uses of data
+          </caption>
+          <tbody>
+            <tr>
+              <th rowspan="2" colspan="2">
+                &nbsp;
+              </th>
+              <th colspan="3">
+                Uses of data
+              </th>
+            </tr>
+            <tr>
+              <th>
+                Describe
+              </th>
+              <th>
+                Analyse
+              </th>
+              <th>
+                Act
+              </th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="width:10%;">
+                <strong>Types of data</strong>
+              </td>
+              <td>
+                <strong>Data elements</strong>
+              </td>
+              <td>
+                PatientA's blood pressure at 9 a.m. on Wednesday
+              </td>
+              <td>
+                Time series of Patient A's blood pressure
+              </td>
+              <td>
+                Prescribe medication and dosage level to treat hypertension
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Aggregates</strong>
+              </td>
+              <td>
+                Histogram of current blood pressure readings for 45-54 year old females
+              </td>
+              <td>
+                Correlation between 45-54 year old female blood pressure readings and daily calories consumed
+              </td>
+              <td>
+                Change budget for proper eating habits information campaign
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Clusters</strong>
+              </td>
+              <td>
+                Plot of average blood pressure readings by age group for males and females in the country
+              </td>
+              <td>
+                Regression analysis of group health status vs. caloric consumption with sex and age as 'dummy' variables
+              </td>
+              <td>
+                Run simulation model to predict change in group health status using various budgets as health intervention scenarios
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The three columns present three processes associated with information: describing the information; analysing the information to draw meaning from it; and using the analysis to change the underlying environment. For example, when a patient has back pain descriptive attributes are collected. Some of these attributes might include the patient's identity, age, weight and blood pressure; a description of the back pain; the patient's description of events that might have caused the back pain; and medications currently taken.
+        </p>
+        <p>
+          Analysis questions use this descriptive and other historical information, coupled with the physician's knowledge of back pain and the patient, to arrive at a diagnosis and a proscribed treatment. Further methods of analysis might include using correlation and extrapolation methods to explore the relationship between the medicine and exercise prescribed and changes in health status. Furthermore, these methods can be used to support cost benefit analysis or to forecast improvements in the state of a patient's health using different combinations of medicine and exercise regimes.
+        </p>
+        <p>
+          Data generated from <em>actions</em> might include a record of minutes spent each day performing exercises to combat back pain, a record of taking the prescribed medications and perhaps in conjunction with future descriptive data, changes in health status. The above elements concern one patient. Similar examples would apply to hierarchical groups of patients that then can form aggregates of individuals and clusters of those aggregates, as defined by a subset of the attributes.
+        </p>
+        <p>
+          The data environment for this example existed well before the era of cloud computing and big-data and arguably, even before the era of electronic computing. Patient X's data was stored in the physician's office, most likely in paper-based files. Although access to the data was immediate, the data was meaningful only after the files were properly updated. Not immediately available, or most likely ever available, was information about patients in other physician's offices at other geographic locations that could be analysed in concert with patient X. These analytical operations were limited by the available computing capabilities of the hardware and software and how data was processed to meet volume, timeliness, cost and data requirements. The inability to access, analyse, report and act on this information constituted lost opportunity in terms of data management and decision-making.
+        </p>
+        <p>
+          Cloud computing environments allow users to employ many disparate data sets to ask and answer questions regarding data generated in many different geographic locations and temporal states. This allows users to ask and answer many questions that can lead to insights heretofore unknown. Before cloud computing only questions about patient X's back pain might be addressed. Cloud computing technologies and big-data can use information about back pain for all patients throughout a country or even between countries to examine the effectiveness of policies and treatment regimes across wider patient cohorts. Data storage in the cloud not only creates the ability to answer the same questions faster and with more veracity, but also opens up the possibility to review and analyse information that was previously inaccessible. The results from the data analysis are constrained only by the ingenuity in applying analytical methods and cloud computing technologies.
+        </p>
+        <h3>
+          Discussion of big-data in cloud computing environments
+        </h3>
+        <p>
+          In discussing big-data pathologies <a href="#jac09">Jacobs (2009)</a> states that '<em>it is easier to get data in than out</em>' (para. 19) and that the '<em>pathologies of big-data are primarily those of analysis</em>'. (para. 10) In the subsequent discussion he indicated that what makes big-data big is the repeated observation over time and/or space, an attribute that favours cloud computing. Data may be generated in a network of millions or even billions of nodes. Data stored in the cloud can be analysed and reported in the aggregate, or can be distributed back to the individual nodes themselves in a granular format. Regarding the latter option, <a href="#mck10">McKendrick (2010)</a> indicates that the centre of gravity in data management will continue to shift to end users, facilitated by downloadable apps, more intuitive search techniques and video game-like interfaces. This creates a scenario of end users both generating data to the cloud and processing data retrieved from the cloud. This creates many analytical possibilities and as we will see, risks.
+        </p>
+        <p>
+          Some factors facilitating the uses of big-data in cloud environments include:
+        </p>
+        <ol>
+          <li>
+            <i>No upper limit on the amount of information stored</i>. Big-data storage amounts now are in the petabytes (10<sup>15</sup> bytes) rather than terabytes or gigabytes. Indeed, given historical growth, one can surmise in the future terms such as exabytes (10<sup>18</sup> bytes), zettabytes (10<sup>21</sup> bytes) and yottabytes (10<sup>24</sup> bytes) eventually will enter the conversation. Rather than being restricted by the size of a single storage media, cloud users have the ability to increase scale by adding and connecting servers and other storage media through networking and telecommunications technologies.
+          </li>
+          <li>
+            <i>Ability to access, integrate and analyse data from multiple sources and databases whose owners are geographically and even temporally disbursed</i>. Scalability potential creates the capability to collect and analyse more granulated data. Examples of this include: individual Google searches; scientific data generated in experiments in particle physics and genomics; changes in location using connected smart phones and other GPS enabled devices; ongoing status of equipment and other devices such as cars, home appliances and medical equipment; and aggregating in real time opinions such as those enunciated using social media like Twitter and Facebook. This capability creates new worlds of potential applications and also creates new risks.
+          </li>
+          <li>
+            <i>The elimination of intermediaries, where owners and users of the data can be individuals, not only large organizations</i>. Until recently, intermediaries in data use were required on two fronts. First, large data centres stored data and staff served as gatekeepers regarding how data was collected, analysed and disseminated. This led to an organization-centric view of information. Second, models and software used to analyse and report data often required a level of sophistication and cost that inhibited democratization of information. big-data in cloud computing environments, while not intermediary free, provide more freedom for an individual user to generate, store, access, analyse and use information.
+          </li>
+          <li>
+            <i>Immediate access to personalized results using distributed input and output mechanisms</i>. Eliminating intermediaries through standard evolutionary processes leads to more creative applications and new insights. Because of the granular capabilities inherent in big-data, many of these applications and insights are personalized, which allows individuals to receive specific information tailored to specific needs. Tailored information in turn, leads to users asking more questions and demanding even faster and more granular answers. And so the cycle continues.
+          </li>
+          <li>
+            <i>The capability to change the paradigm from 'model and analysis' to 'correlation and extrapolation'</i>. Chris Anderson, editor of Wired magazine, hypothesizes the end of hypotheses. He argues that (<a href="#and08">Anderson 2008; para 10</a>) '<em>faced with massive data, this approach to science (hypothesize, model, test) is becoming obsolete</em>'. Instead, Anderson posits that correlation is enough. '<em>We can stop looking for models. We can analyse the data without hypotheses about what it might show. We can throw the numbers into the biggest computing clusters the world has ever seen and let statistical algorithms find patterns where science cannot</em>'. (para. 13)
+          </li>
+        </ol>
+        <p>
+          While Anderson's views are not without detractors (<a href="#con08">Conway 2008</a>, <a href="#mor08">Morton 2008</a>) large datasets when coupled with more powerful and accessible analytical methods can lead to democratization of information and also to new ways of creating and discovering information. One key new capability is that using correlation methods on large datasets, while recognizing that correlation does not imply causality, creates the capability to discover new, previously hidden insights.
+        </p>
+        <h3>
+          Opportunities for using big-data in cloud computing
+        </h3>
+        <p>
+          We will discuss opportunities for big-data in cloud computing environments in three categories that correspond to types of data given in Table 1, data elements; data aggregates; and clusters of data aggregates.
+        </p>
+        <h3>
+          Data elements
+        </h3>
+        <p>
+          Being able to capture and link existing data elements on larger, timelier and more accessible scales creates new opportunities. On example of this is data captured by remote sensors. <a href="#bol10">Bollier (2010: 3)</a> points out regarding remote sensors, that '<em>remote sensors are generating new streams of digital data from telescopes, video cameras, traffic monitors, magnetic resonance imaging machines and biological and chemical sensors monitoring the environment</em>'. Personal data streams also may be generated by mobile phones, laptops, Websites and mobile phone enabled GPS devices. A good example of aggregating data is discussed by <a href="#bry08">Bryant <em>et al.</em> (2008)</a> with regard to how Wal-Mart contracted with Hewlett Packard to store four petabytes of data in a data warehouse that encompass 267,000,000 daily transactions made at 6,000 stores, worldwide. Machine learning was then applied to this data to help Wal-Mart exercise various pricing and advertising strategies to better manage its inventories and supply chain. This example illustrates how one may not only describe the underlying entities of data sets but may also apply various analytical tools to analyse, correlate and extrapolate information to instigate future actions.
+        </p>
+        <h3>
+          Aggregates
+        </h3>
+        <p>
+          Big-data in cloud environments can help organizations describe, analyse and act on data aggregates. Whereas an individual product (e.g., shampoo) might be analysed by evaluating the effectiveness of an advertising campaign, so might aggregates of all beauty products be analysed regarding how pricing differences and store placement affects sales. The promise of big-data and cloud computing is to create new aggregates that provide new information that may yield newer and richer insights.
+        </p>
+        <p>
+          <a href="#bol10">Bollier (2010)</a> reports several interesting examples of how aggregation, combined with analysis and visualization techniques, yields surprising new insights. Google Earth maps sampled 8,510 cows in 308 herds around the world and discovered two thirds of them aligned their bodies with magnetic north in the Earth's magnetic field. A second big-data Google example is the Google Flu Trends service, where by tracking flu-related search terms, the service identified possible flu outbreaks in Atlanta a week or two before actual flu cases are reported by the Center for Disease Control.
+        </p>
+        <p>
+          These examples involve data elements that existed but either were unreported or if reported, neither aggregated nor analysed. As Bollier points out, one of the benefits of big-data in cloud environments is <em>right now data</em>. Hal Varian of Google has used the term <em>now casting</em>, using right now data coupled with analytical methods to create various innovative uses <a href="#bol10">(Bollier 2010: 20)</a>. Google has many real time information streams but real time information also is available through monitoring of appliances, cell phones, cameras and any other device that can report its attributes on an ongoing basis.
+        </p>
+        <h3>
+          Clusters
+        </h3>
+        <p>
+          Clusters of aggregated information can be used to analyse and predict conditions for the clusters or their components. Several examples of how big-data in cloud environments might be used for clusters appear with Chris Anderson's Wired article (<a href="#and08">Anderson 2008</a>) where clusters of worldwide agricultural information are analysed and used to forecast cluster conditions once this is disaggregated back to the individual field level.
+        </p>
+        <p>
+          Predicting airfare prices is a second example. <a href="#and08">Anderson (2008)</a> discusses how Farecast (now incorporated in Bing) uses a prediction model to track information on 175 billion fares originating at seventy-nine US airports. The database is used to forecast when airline prices are going to change and can be used to develop ticket-buying strategies such as the day of the week to purchase, the length of stay, etc.
+        </p>
+        <h3>
+          Risks of using big-data in cloud computing
+        </h3>
+        <p>
+          As we come to depend more on data, lack of access to that data becomes more costly; as we offload more decisions to analytical methods, improper use of these methods or inherent weaknesses in the methods may yield decisions that are wrong and costly. As more data can be integrated to help society, data can also be integrated in more harmful ways. Three obvious domains for big-data in cloud computing are data sources, the cloud and big-data. These will be used to frame the discussion of big-data in cloud computing risks.
+        </p>
+        <h3>
+          Data sources
+        </h3>
+        <p>
+          Data source risks include data quality risks and risks relating to how the data is defined, stored and generated prior to transmission to the cloud. These will be discussed in terms of data quality, data security, data privacy and data integration.
+        </p>
+        <p>
+          Data quality may be defined in many dimensions and is tied to often evolving user requirements. Acceptable quality for one user might be unacceptable for another; acceptable quality in 2010 might be unacceptable in 2013. A corollary to poor data quality is the risk that arises from using these same poor data to draw conclusions and make decisions. Information used for stated purposes might also create unintended consequences that result in real losses.
+        </p>
+        <p>
+          Dimensions of data quality include: (<a href="#mil96">Miller 1996</a>)
+        </p>
+        <ol>
+          <li>Relevance: Do the data address their user's needs?
+          </li>
+          <li>Accuracy: Do the data reflect the underlying reality? Is the level of precision consistent with the user's demands?
+          </li>
+          <li>Timeliness: Are the data current, relative to user demands?
+          </li>
+          <li>Completeness: Does the level of completeness correspond with user demands? Data can be incomplete or even too complete!
+          </li>
+          <li>Coherence: How well do the data hang together? Do irrelevant details, confusing measures or ambiguous format make them incoherent?
+          </li>
+          <li>Format: How are the data presented to the user? Is the context appropriate?
+          </li>
+          <li>Accessibility: Can the data be obtained when needed?
+          </li>
+          <li>Compatibility: Are the data compatible in format and definition with other data with which they are being used?
+          </li>
+          <li>Security: Are the data physically and logically secure?
+          </li>
+          <li>Validity: Do the data satisfy appropriate standards related to other dimensions such as accuracy, timeliness, completeness and security?
+          </li>
+        </ol>
+        <p>
+          Errors along one or more quality dimensions create problems for downstream users leading to risks similar to those encountered in current information technology environments. In big-data in cloud computing environments several new data quality related risks appear. Data that are transferred to the cloud to be analysed later may violate accuracy, timeliness, completeness, format and accessibility quality dimensions. Some examples include real time status information about assets such as appliances and vehicles (Bughin (<a href="#bug10">2010</a>) refers to this as the '<em>internet of things</em>'). Poor data quality casts a shadow on conclusions drawn from analysis, precludes analysis in the first place and creates an environment with unintended consequences for users.
+        </p>
+        <p>
+          The Economist (<a href="#ano08">The big-data dump 2008</a>) discusses such an environment concerning the U. S. legal system regarding the Completeness quality dimension. In a lawsuit concerning Horizon Blue Cross a client sued the insurance company over a claim for their anorexic daughter. The company asked to see all online postings, messages, etc. from the daughter's Facebook and MySpace pages. Beyond privacy issues (the daughter's lawyer objected on those grounds and lost), this example of e-discovery illustrates a new normal, i.e., the ability to review the equivalent of millions of paper pages. This increases the costs of the legal system and places certain populations (the less-wealthy) at a disadvantage. In the Economist article cited above, Justice Stephen Breyer of the U.S. Supreme Court is quoted as saying, '<em>you're going to drive out of the litigation system a lot of people who ought to be there</em>,' indicating that '<em>justice is determined by wealth, not be the merits of the case</em>'. (para. 9)
+        </p>
+        <p>
+          <i>Data security</i> risks become magnified when data sources become ubiquitous. When data origination is distributed across personal devices such mobile phones, tablets and appliances, data can be modified or stolen by direct access or apps containing computer viruses. Mobile device security often is less robust than in more controlled environments, which themselves have weaknesses.
+        </p>
+        <p>
+          Even in cloud computing environments, some data (including passwords) still reside on remote devices before being uploaded. Systems relying on this information can be compromised by denial of service attacks on the devices themselves. Such acts could become particularly costly in health care or transportation, where actions could physically affect users and cause financial losses or even deaths. Cell (mobile) phone companies are aware of the threat and are taking action to protect information currently stored on phones. <a href="#ant10">Ante (2010)</a> discusses an application for Android-based devices that facilitates physical security and blocks malicious apps. One area of concern is mobile banking operations where phones are used to access personal information located in the cloud for transactions. The immediate risk of intercepting data, e.g., unencrypted or poorly encrypted passwords or content, is obvious, as are risks from subsequent analysis of changed data resulting in compromised decisions.
+        </p>
+        <p>
+          <i>Data privacy</i> issues involve interlopers intercepting and disclosing data either stored on mobile devices or appliances, or while being uploaded to or from the cloud. Although privacy breaches are more severe when an entire cloud-based database is compromised, aggregates of individual and seemingly insignificant data elements also may lead to significant privacy disclosures. <a href="#wei06">Weitzner <em>et al.</em> (2006)</a> recognized this problem and proposed a technology infrastructure to increase accountability and transparency for information use on the Web. As an example of how data elements might be integrated, consider mobile phones equipped with GPS location tracking devices. Currently user location information from mobile phones can be used to facilitate location-based marketing efforts (<a href="#hop12">Hopkins and Turner 2012</a>). This same information also could be used to facilitate criminal activity. Using GPS-enabled location-based technologies, intercepted transmissions or a rogue app (e.g., an application that is placed on a device that purports to do one thing while surreptitiously doing another) could collect and transmit information to a third party which, beyond violating privacy standards, could alert criminals that individuals are away from home (<a href="#eur11">Europol 2011</a>). One can conjure many scenarios where location information can be used for nefarious ends, for example, disclosing the location of investment banker working on a merger to support insider trading; aiding a criminal bent on kidnapping a business leader; or a enabling a terrorist plotting an assassination (see <a href="#bra12">Brandon 2012</a> for a Website that can pinpoint a mobile phone user's location by entering a mobile phone number). Sensing devices are another example of how mobile phones and appliances can generate data to be used by big-data in cloud computing applications. <a href="#shi09">Shilton (2009)</a> discusses the potential for abuse of privacy in this setting. One suggestion is that software developers implement data-protection standards for collecting personal information from sensing technology. Such standards may be necessary because it will be harder for users to voluntarily adhere to good data security practices as computing power and data generation becomes distributed among a mass audience.
+        </p>
+        <p>
+          <i>Data integration</i> is the final risk involving data sources. Compatibility is a dimension of the quality of individual data elements and incompatibility among the data elements may preclude otherwise promising analysis opportunities, or lead to spurious results. <a href="#caf11">Cafarella <em>et al.</em> (2011)</a> discusses integrating data across multiple databases on the Web and the ensuing challenges. When data that does not conform to any standardized data design this poses significant problems for traditional data management techniques. As with the above discussion regarding privacy, data elements generated from user-controlled devices adds more complexity to this problem. Table 2 summarizes data source risks.
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 2: Data source risks
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Data quality
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Fail to meet user requirements along specific data quality dimensions<br>
+                Cast shadow re: conclusions from subsequent data analysis<br>
+                Foster unintended consequences<br>
+                Data overload responding to information requests
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Data security
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Allow direct access to devices containing data<br>
+                Facilitate access via apps or downloaded viruses<br>
+                Denial of service on devices (e.g., health care applications)<br>
+                Accessing online payment systems
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Data privacy
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Releasing copied or stolen data on mobile devices or appliances<br>
+                Creating data aggregates that compromise privacy<br>
+                Using confidential information for financial gain<br>
+                Eavesdropping on sensing or mobile devices
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Data integration
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Lost opportunities caused by incompatible data elements<br>
+                Spurious results caused by incompatible data elements<br>
+                Data management problems
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>
+          The cloud
+        </h3>
+        <p>
+          Many <i>data quality</i> risks in the cloud are similar to those discussed above. The difference is now the data reside in the cloud rather than on user equipment. Changes in data may occur through transmission from user to cloud, from cloud to user, or while in storage. Examples might affect quality dimensions such as accuracy, completeness, format, validity, timeliness and accessibility. Intercepted data may be changed, erased, or copied. Modifying data in the cloud database could facilitate monetary crimes (e.g., using a mobile payment system); erased data could impact infrastructure control systems; and data that have been disclosed could compromise user privacy. Modified data would be particularly important for big-data applications where large amounts of data from appliances are transferred up to the cloud, analysed and decisions for action are then sent back to the user appliances, such as traffic controls, or individuals administering medications.
+        </p>
+        <p>
+          <i>Data obsolescence</i> risk occurs when data in the cloud become stale. Applications such as mobile phone location systems that seek to pitch advertising messages to groups of customers based on their location and past purchase histories would be affected. Data redefinition occurs when data are redefined in a way that unintentionally affects data quality. Mullich (<a href="#mul11">2011</a>) quotes a Verizon executive as saying that enterprise level platforms that manage and synchronize data transmitted from the cloud to mobile devices will enable workers to access data when and where they want. This creates challenges, especially when data once synchroniaed becomes unsynchronized and creates a false picture of reality that distorts future actions.
+        </p>
+        <p>
+          <i>Data security</i> risks in the cloud appear in many media stories. In some cases the cloud arguably increases security. Cloud computing has enabled more robust solutions to the challenges of disaster recovery planning, with cost and accessibility advantages (<a href="#lin10">Linthicum 2010</a>). Backing up cloud data is more economical than replicating individual systems; when data from many firms are aggregated cloud architectures clearly provide security advantages. Centralization of information, however, creates two risks. First, either through a failure of the cloud servers or through the telecommunications systems linking cloud to customer, data may become unavailable bringing down a user organization. An example of this occurred when services provided by Amazon, a leading cloud vendor, were interrupted for two days affecting thousands of corporate customers (<a href="#loh11">Lohr 2011</a>). Events like this should motivate companies to rethink what applications are put on the cloud, especially those that are mission-critical. As big-data in cloud computing applications become more prevalent and as companies have few alternatives other than migrating to the cloud, putting mission-critical applications on the cloud may no longer be a choice but a necessity, thus resulting in increased risk exposure.
+        </p>
+        <p>
+          A second risk stems from the ability to access cloud data, either by hacking into databases, intercepting telecommunications messages (as discussed above), or by sloppy vendor controls enabling one company to access a competitor's data in a cloud environment. Dodge (<a href="#dod11">2011</a>) maintains that the <em>hacking in the cloud</em> risk is overblown. He is more concerned with denial of service risks, either intentional or unintentional. These risks are increasingly important as mission critical applications migrate to the cloud. Clayton (<a href="#cla11">2011</a>) discusses solutions that involve mixed applications, e.g., storing some locally and others on the cloud. Quoting one executive, Clayton says, '<em>Where the cloud becomes really interesting is with new things where you have the option of doing it on your own server in-house or going with the cloud. Then you're much more likely to move those to the cloud than traditional IT</em>'. (para. 13) New things describe evolving big-data applications and the challenges to control risk. Another risk is failure to properly coordinate cloud and locally stored applications.
+        </p>
+        <p>
+          <i>Data privacy</i> issues in the cloud result from information that is transmitted to the cloud from mobile devices or from other input channels, being hacked, stolen, or intercepted after being uploaded to the cloud. One concern for big-data applications is privacy breaches for medical information. Big-data applications can take many disparate data elements stored in the cloud and analyse them in ways that could present previously hidden individual profiles. These could affect employment, insurance and psychological wellbeing. <a href="#ost10">Osterhaus (2010)</a> discusses these risks and concludes that the need for privacy trumps the need for access and that cloud vendors will need to ensure that the U.S. Health Insurance Portability and Accountability Act regulations are met. This conclusion could apply to all cloud privacy risks; there is no reason why privacy in the cloud need be less secure than privacy in traditional environments. Indeed, the cloud environment as compared to storage in paper files in physicians' offices arguably is inherently more secure. The new risk to be controlled is the big-data related risk stemming from integration and processing of large amounts of medical data and personal data. These are challenges, not barriers, to cloud security.
+        </p>
+        <p>
+          <i>Data integration</i> in cloud environments includes customer information regarding health profiles, financial profiles, location information, information from social networking databases and integrating data from infrastructure appliances. With regard to big-data and integration leading to personalization Bollier (<a href="#bol10">2010</a>: 23), quoting Kim Taipale, points out that, 'the benefits of personalization tend to accrue to businesses but the harms are inflicted on disbursed and unorganized individuals'. A second risk is integrating data in ways that seek to achieve an objective but because of poor data quality or incompatible databases, miss opportunities. Examples of this occur when the data elements one is seeking to integrate exist in different formats, adhere to different standards, or have different timeliness or accuracy attributes.
+        </p>
+        <p>
+          <i>Vendor risk</i> is the final cloud risk. Since vendors control the cloud environment, all of the risks discussed above relate to vendor operations. Two other specific vendor risks involve how the vendor conducts business and if the vendor is able to conduct business. How the vendor conducts business includes the vendor's policies for data security, disaster recovery planning, transaction authentication and many other details. Often vendor policies exceed those and are more secure than policies in non-cloud environments. There are cases, however, where vendor policies and procedures are less robust than a client's. Currently, if the client is aware of vendor deficiencies, the client can process the application locally. This may be impossible for big-data in cloud computing applications. If a client uses a private cloud for critical applications and a public cloud for others, another risk surfaces: blending public and private clouds. One solution is developing security infrastructures spanning both environments (<a href="#sch09">Scheier 2009</a>). Clayton (<a href="#cla11">2011</a>) discusses these along with the importance of vendor's understanding corporate and industry policies and regulatory requirements. The cloud environment is inherently harder to customize to each organization and regulatory policy violations may be more likely, especially when processing big-data.
+        </p>
+        <p>
+          A final and more immediate vendor risk is the possibility that the vendor goes out of business. While this is less likely for vendors such as Amazon, Apple and Google, smaller cloud vendors are now in the marketplace and may be more likely to exit the market. Organizations are vulnerable when they entrust their business operations to such a vendor. Managing this risk is not unlike vendor risk management procedures for entrusting mission-critical software development and operations to smaller vendors, or outsourcing mission critical operations. If customers view this form of vendor risk as unacceptable, larger vendors may crowd smaller cloud vendors out of the marketplace.
+        </p>
+        <p>
+          Table 3 summarizes cloud computing risks.
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 3: Cloud computing risks
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Data quality
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Transmission and storage breaches reducing data quality<br>
+                Modifying data used for actions (financial, traffic signals, medication doses)<br>
+                Lost marketing opportunities<br>
+                Challenges in synchronizing data
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Data security
+              </th>
+            </tr>
+            <tr>
+              <td>
+                More robust disaster recovery plans reduce risk<br>
+                Inaccessibility to the cloud<br>
+                Increased access risk for mission critical systems<br>
+                Hackers gaining cloud access<br>
+                Denial or service attacks<br>
+                Failure to coordinate cloud and local applications
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Data privacy
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Releasing copied/stolen data (financial, medical)<br>
+                Violating government or industry privacy regulations<br>
+                Increased legal exposure
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Data integration
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Lost opportunities caused by incompatible databases in cloud<br>
+                Spurious results caused by incompatible databases in cloud<br>
+                Data management problems
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Vendor risk
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Poor vendor management of information-based risk<br>
+                Lax vendor policies and procedures re data<br>
+                Problems blending vendor and client applications<br>
+                Vendors who are unaware of regulatory requirements or industry policies<br>
+                Vendors going out of business
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>
+          Big-data
+        </h3>
+        <p>
+          How information is collected, processed, reported and acted on in a way that it adds value to its customer and does not adversely affect other interested parties is a big-data in cloud computing risk (for more on who owns customer information, see <a href="#hag94">Hagel <em>et al.</em> 1994</a>; <a href="#har10">Harison 2010</a> and <a href="#pra00">Prabhaker 2000</a>). For well-defined problems risks of big-data involve dimensions that can be categorized under data quality, security, privacy and integration, as discussed above. For example, a power company using big-data to collect data from sensors on electrical devices to turn some of the devices off to optimize its electrical grid, is using big-data to do something new but not something different in kind from using mathematical methods to optimize operational networks, something done for decades. In these situations the unique big-data risk is being able to work faster and work on a larger scale. Using a sports analogy, the risk is similar to that faced by an amateur who, when promoted to play against professionals, realizes that the game now is faster, more complex and more challenging.
+        </p>
+        <p>
+          When analytical methods are used in new ways the challenges and risks increase. One example is using big-data to make inferences in situations where in the past, making data-based inferences was impractical (such as using correlations to extrapolate). While correlation analysis is a standard analytical technique, using it for new applications on a large scale may become problematic. <a href="#bol10">Bollier (2010)</a> quotes a classic Wall Street Journal article, '<em>My TIVO thinks I'm gay</em>' where, based on the author's viewing habits, the system kept recommending gay-themed films. To remedy this, the customer began viewing war movies and the system responded by recommending documentaries about the Third Reich! While these examples may be comical, one sees the risk of using big-data in cloud computing for categorizing tastes or other personal attributes. There is certainly a risk for privacy and if actions are taken, even in non-human environments, may create liabilities and risks of doing the wrong thing.
+        </p>
+        <p>
+          This leads to perhaps the most fundamental big-data risk, which is exacerbated in cloud environments. The risk is not 'Are the results accurate?' but is 'Has big-data addressed the right problem and if so, addressed it in the right way?' Big-data in cloud computing relies heavily on integrating and analysing massive amounts of data and human intervention often is absent. The methodology reports what the data analysis indicates rather than is a methodology based on an underlying theory that informs data collection, analysis and reporting. This risk is reflected in the Anderson (<a href="#and08">2008</a>) article discussed above.
+        </p>
+        <p>
+          Big-data applications often analyse information in a near domain, i.e., one in which the data are readily available. For example, when Google uses searches for flu symptoms to predict flu outbreaks (<a href="#gut08">Guth 2008)</a> the results are timelier than health reports from the U.S. Center for Disease Control (<a href="#bol10">Bollier 2010)</a>. However, using Internet searches rather than a scientific model focuses on a related attribute (victim searches for information) rather than a root cause. A risk of rampant use of big-data to develop inferential relationships in cloud environments, while appealing because the nexus of the availability of large amounts of data and processing power to generate seemingly useful results, is that users may think something is true based on past history even though future data may indicate otherwise. Over-reliance on history creates the potential for mischaracterization of data, violations of privacy, poor decisions and solving the wrong problems in a way failed generals fight the last war. Over-reliance on history also risks repeating the classic error of treating correlation as causation.
+        </p>
+        <p>
+          When human links, characterized by grounding analysis in theories are severed, technologies may run amok (<a href="#pos93">Postman 1993</a>). Moreover, modelling assumptions that disenfranchise certain groups, e.g., using credit-scoring models (<a href="#ano11">Anonymous 2011</a>), may be embedded in those technologies. W. Edwards Deming, a pioneer in the quality movement, held that (<a href="#dem94">Deming 1994: 103</a>), '<em>Without theory, experience has no meaning and without theory, one has no questions to ask. Hence, without theory, there is no learning. Theory is a window into the world. Theory leads to prediction and without theory, experience and examples teach nothing</em>'. Rampant use of correlations and other inferences obtained only from processing massive amounts of data without human intervention and removed from any underlying theory, may lead to a data cycle of collect-analyse-act which may appear valid, but which in fact is seriously flawed.
+        </p>
+        <p>
+          Table 4 summarizes big-data risks:
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 4: Big data risks
+          </caption>
+          <tbody>
+            <tr>
+              <th>
+                Big data risks
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Fail to meet user requirements due to inability to process data<br>
+                Inappropriate use of analytical methods<br>
+                Applications that adversely affect interested parties<br>
+                Uncertainty regarding who owns customer information<br>
+                Addressing the wrong problem<br>
+                Focusing on the <em>near domain</em> and ignoring the real problem<br>
+                Mischaracterizing data resulting in privacy violations<br>
+                Mischaracterizing data resulting poor decisions<br>
+                Disenfranchising groups by ignoring theory and over-relying on data
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>
+          Conclusion
+        </h2>
+        <p>
+          Big-data in cloud computing represents the confluence of two technologies that promise to create new capabilities for creating more value for customers and businesses at reduced costs. Its promise is hard to dismiss. Indeed, as big-data in cloud computing environments become commonplace, more and more success stories will lead to more and more applications. These applications will create a plethora of new products and marketing opportunities, which may fundamentally change the relationship between organizations and their customers.
+        </p>
+        <p>
+          Five steps, informed by Reinhold <em>et al.</em> (<a href="#rei11">2011</a>) may be used to manage big-data risks in cloud computing environments. They are:
+        </p>
+        <ol>
+          <li>Implement a process to continually review, assess and understand big-data in cloud computing risks in an organization's local and global environments;
+          </li>
+          <li>View the big-data in cloud computing risk management process and technology improvements strategically rather than tactically and act accordingly;
+          </li>
+          <li>Ensure all underlying data is consistent, well-defined and understood by managers and other stakeholders;
+          </li>
+          <li>Ensure data is of high quality along all relevant quality dimensions and that data governance responsibilities are well-defined;
+          </li>
+          <li>Continually invest in improvements in both cloud computing infrastructure and analytical big-data capabilities and ensure these capabilities are congruent with the strategic needs of point 1.
+          </li>
+        </ol>
+        <p>
+          A key tenet of risk management is that risk can never be eliminated but once understood, can be managed. What is required is ongoing understanding of the evolving customer and technical environments, understanding of the evolving risk environment and the commitment to categorize quantify and ensure that the risk exposure is consistent with the organization's underlying objectives. A final challenge for big-data is while it is possible for organizations to manage their risk, who will manage the risk exposure of the individuals generating and using the data? Incentives should be created to make investing in risk management mutually beneficial both for those generating the data, those using the data and all others profiting from it.
+        </p>
+        <h2>
+          Acknowledgements
+        </h2>
+        <p>
+          I wish to thank the editor and the anonymous referees for their useful suggestions on the first version of this paper. Thanks also to copy-editors of the journal.
+        </p>
+        <h2 id="author">
+          About the author
+        </h2>
+        <p>
+          <strong>Holmes E. Miller</strong> is Professor of Business in the Department of Accounting, Business and Economics at Muhlenberg College in Allentown, Pennsylvania (USA). He has a Ph.D. in Management Science from Northwestern University in Evanston, Illinois. Prior to coming to Muhlenberg he taught at Rensselaer Polytechnic Institute in Troy, New York and worked in the chemical and financial services industries. He can be contacted at: <a href="mailto:homiller@muhlenberg.edu">homiller@muhlenberg.edu</a>.
+        </p>
+      </section>
+      <section class="refs">
+        <form>
+          <fieldset>
+            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+            <ul class="refs">
+              <li id="and08">Anderson, C. (2008, June 27). <a href="http://www.webcitation.org/6DkSrqVNq">The end of theory: the data deluge makes the scientific method obsolete</a>. <em>Wired</em> Retrieved 1 November 2012 from http://www.wired.com/science/discoveries/magazine/16-07/pb_theory (Archived by WebCite® at http://www.webcitation.org/6DkSrqVNq)
+              </li>
+              <li id="ant10">Ante, S. (2010, December 23). <a href="http://www.webcitation.org/6DZq65p9Z">Fortifying phones from attackers. AT&amp;T hires PhDs for security lab; Verizon Wireless teams with start-up on data-security app</a>. <em>Wall Street Journal</em>. Retrieved 1 November, 2012 from http://online.wsj.com/article/SB10001424052748704774604576035960449272404.html (Archived by WebCite® at http://www.webcitation.org/6DZq65p9Z)
+              </li>
+              <li id="ano08">
+                <a href="http://www.webcitation.org/6DZpcXkga">The big-data dump. A deluge of electronic information may overwhelm American civil justice.</a> (2008, August 28). <em>The Economist</em>, Retrieved 26 November 2012 from http://www.economist.com/node/12010377 (Archived by WebCite® at http://www.webcitation.org/6DZpcXkga)
+              </li>
+              <li id="bol10">Bollier, D. (2010). <em>The promise and peril of big-data</em>. Washington, DC: The Aspen Institute.
+              </li>
+              <li id="bra12">Brandon, J. (2012, February 5). <a href="http://www.webcitation.org/6DZqHYe3a">Website can find your exact location with your phone number</a>. [Web log post.] Retrieved 8 November 2012 from http://www.foxnews.com/tech/2012/02/05/website-can-find-with-your-phone-number/#ixzz2AplRtG00 (Archived by WebCite® at http://www.webcitation.org/6DZqHYe3a)
+              </li>
+              <li id="bry08">Bryant, R., Katz, R. &amp; Lazowska, E. (2008). <a href="http://www.webcitation.org/6Ezl4Eh91">Big-data computing: creating revolutionary breakthroughs in commerce, science and society</a>. <em>Computing Community Consortium</em>. Retrieved 9 March, 2013 from http://www.cra.org/ccc/docs/init/Big_Data.pdf. (Archived by WebCite® at http://www.webcitation.org/6Ezl4Eh91)
+              </li>
+              <li id="bug10">Bughin, J., Chui, M. &amp; Manyika, J. (2010). Clouds, big-data and smart assets: ten tech-enabled business trends to watch. <em>McKinsey Quarterly</em>, <strong>4</strong>(1), 26-43.
+              </li>
+              <li id="caf11">Cafarella, M., Halevy, A. &amp; Madhavan, J. (2011). Structured data on the web. <em>Communications of the ACM</em>, <strong>54</strong>(2), 72-79.
+              </li>
+              <li id="cla11">Clayton, N. (2011, February 15). <a href="http://www.webcitation.org/6DZqj7GxZ">Get of my cloud.</a> <em>Wall Street Journal</em>. Retrieved 8 November 2012 from http://online.wsj.com/article/SB10001424052748704739504576067823202021708.html. (Archived by WebCite® at http://www.webcitation.org/6DZqj7GxZ)
+              </li>
+              <li id="con08">Conway, D. (2008, June 25), <a href="http://www.webcitation.org/6DZqujLuN">The hubris of 'The end of theory'</a>. [Web log post] Retrieved 17 June 2012 from http://www.drewconway.com/zia/?p=209. (Archived by WebCite® at http://www.webcitation.org/6DZqujLuN)
+              </li>
+              <li id="ano11">
+                <a href="http://www.webcitation.org/6DZpzs5pz">Credit scoring</a>. (2011). <em>Electronic Privacy Information Centre</em>. Retrieved 17 June 2012 from http://epic.org/privacy/creditscoring/ (Archived by WebCite® at http://www.webcitation.org/6DZpzs5pz)
+              </li>
+              <li id="dem94">Deming, W.E. (1994). <em>The new economics for industry, government, education</em>. (2nd ed.). Cambridge, MA: Massachusetts Institute of Technology, Centre for Advanced Educational Services.
+              </li>
+              <li id="dod11">Dodge, J. (2011, October 6). <a href="http://www.webcitation.org/6DZr95Q1G">Is credit card hack damage to cloud reputation overblown?</a> [Web log post] Retrieved 17 June 2012 from http://www.enterprisecioforum.com/en/blogs/jdodge/credit-card-hack-damage-cloud-reputation-overblown. (Archived by WebCite® at http://www.webcitation.org/6DZr95Q1G)
+              </li>
+              <li id="ell08">Ellison, L. (2008, September 27). <a href="http://www.webcitation.org/6DZrG1jWX">What the hell is cloud computing.</a> [Video podcast.] Retrieved 5 June 2012 from http://www.youtube.com/watch?v=0FacYAI6DY0. (Archived by WebCite® at http://www.webcitation.org/6DZrG1jWX)
+              </li>
+              <li id="eur11">Europol, (2011). <a href="http://www.webcitation.org/6EzlfRfCG">Threat assessment (abridged): Internet facilitated organized crime iOCTA - Europol</a>. Retrieved 8 November 2012 from https://www.europol.europa.eu/sites/default/files/publications/iocta_0.pdf (Archived by WebCite® at http://www.webcitation.org/6EzlfRfCG)
+              </li>
+              <li id="gut08">Guth, R. (2008, November 12). Sniffly surfing: Google unveils flu-bug tracker. <em>Wall Street Journal - Eastern Edition</em>, <strong>252</strong>(114) D1, D16
+              </li>
+              <li id="hag94">Hagel, J. &amp; Lansing, J. (1994). Who owns the customer? <em>McKinsey Quarterly</em>, <strong>4</strong>(1), 63-75.
+              </li>
+              <li id="har10">Harison, E. (2010). Who owns enterprise information? Data ownership rights in Europe and the U.S.. <em>Information &amp; Management</em>, <strong>47</strong> (2), 102-108.
+              </li>
+              <li id="hop12">Hopkins, J. &amp;Turner, J. (2012). <em>Go mobile: location-based marketing, apps, mobile optimized ad campaigns, 2D codes and other mobile strategies to grow your business.</em> Hoboken, NJ: John Wiley &amp; Sons.
+              </li>
+              <li id="jac09">Jacobs, A. (2009). <a href="http://www.webcitation.org/6DkRvWg7q">The pathologies of big-data</a>. <em>Communications of the ACM</em>, <strong>52</strong>(8), 36-44. Retrieved 8 November 2012 from http://cacm.acm.org/magazines/2009/8/34493-the-pathologies- of-big-data/fulltext (Archived by WebCite® at http://www.webcitation.org/6DkRvWg7q)
+              </li>
+              <li id="kus10">Kusnetsky, D. (2010, February 16). <a href="http://www.webcitation.org/6DkS9jaPP">What is big-data?</a>. <em>ZDNet</em>. [Web log post] Retrieved 16 February 2012 from http://www.zdnet.com/blog/virtualization/what-is-big-data/1708 (Archived by WebCite® at http://www.webcitation.org/6DkS9jaPP)
+              </li>
+              <li id="lin10">Linthicum, D. (2010). Leveraging cloud computing for business continuity. <em>Disaster Recovery Journal</em>, <strong>23</strong> (3), 29-30.
+              </li>
+              <li id="loh11">Lohr, S. (2011, April 23). Amazon’s trouble raises cloud computing doubts. <em>New York Times</em>, B1.
+              </li>
+              <li id="mck10">McKendrick, J. (2010, December 7). <a href="http://www.webcitation.org/6DkSEnS1b">Big-data for the year ahead: 10 predictions</a>. [Web log post] Retrieved 17 December 2012 from http://www.zdnet.com/blog/service-oriented/big-data-for-the-year-ahead-10-predictions/6258 (Archived by WebCite® at http://www.webcitation.org/6DkSEnS1b)
+              </li>
+              <li id="mil96">Miller, H. (1996). The multiple dimensions of information quality, <em>Information Systems Management</em>, <strong>13</strong> (2), 79-82.
+              </li>
+              <li id="mor08">Morton, O. (2008, June 30).<a href="http://www.webcitation.org/6DkSKIL0F">On Chris Anderson's The end of theory</a>. <em>Edge</em>, Retrieved 1 November 2012 from http://www.edge.org/discourse/the_end_of_theory.html (Archived by WebCite® at http://www.webcitation.org/6DkSKIL0F)
+              </li>
+              <li id="mul11">Mullich, J. (2011). Mid-year IT trends: reassessing your IT game plan. <em>Wall Street Journal (Special Advertising Section)</em>, (June 22); B4.
+              </li>
+              <li id="ost10">Osterhaus, L. (2010). <a href="http://www.webcitation.org/6Ezog4CGG"><em>Cloud computing and health information</em></a>. Iowa City, IA: University of Iowa. Retrieved 22 June 2012 from http://ir.uiowa.edu/cgi/viewcontent.cgi?article=1014&amp;context=bsides/ (Archived by WebCite® at http://www.webcitation.org/6Ezog4CGG)
+              </li>
+              <li id="pos93">Postman, N. (1993). <em>Technopoly: the surrender of culture of technology</em>. New York, NY: Vintage Books.
+              </li>
+              <li id="pra00">Prabhaker, P. (2000). Who owns the online consumer? <em>Journal of Consumer Marketing</em>, <strong>17</strong>(2/3), 158-169.
+              </li>
+              <li id="rei11">Reinhold, B., Goherty, J. &amp; Higgins, D. (2011). Rethink risk, rethink technology. <em>ABA Banking Journal</em>. <strong>103</strong>(4), 26-30.
+              </li>
+              <li id="sch09">Scheier, R. (2009, June 22). <a href="http://www.webcitation.org/6DkSY9uTM">Busting the nine myths of cloud computing</a>. [Web log post.] Retrieved 20 November 2012 from http://www.infoworld.com/d/cloud-computing/busting-nine-myths-cloud-computing-260 (Archived by WebCite® at http://www.webcitation.org/6DkSY9uTM)
+              </li>
+              <li id="sea12">Searls, D. (2012, July 20). <a href="http://www.webcitation.org/6DkSclD3P">The customer as a god</a>. Retrieved 20 November, 2012 from http://online.wsj.com/article/SB10000872396390444873204577535352521092154.html (Archived by WebCite® at http://www.webcitation.org/6DkSclD3P)
+              </li>
+              <li id="shi09">Shilton, K. (2009). Four billion little brothers? Privacy, mobile phones and ubiquitous data collection. <em>Communications of the ACM</em>. <strong>52</strong> (11), 48-53.
+              </li>
+              <li id="wei06">Weitzner, D. J., Abelson, H., Berners-Lee, T., Hanson, C., Hendler, J., Kagal, L. <em>et al.</em> (2006). <a href="http://www.webcitation.org/6EzpK2bA0">Transparent accountable data mining: new strategies for privacy protection</a>. Cambridge, MA: Massachusetts Institute of Technology, Computer Science and Artificial Intelligence Laboratory. Retrieved 8 November 2012 from http://dspace.mit.edu/bitstream/handle/1721.1/30972/MIT-CSAIL-TR-2006-007.pdf?sequence=2. (Archived by WebCite® at http://www.webcitation.org/6EzpK2bA0)
+              </li>
+            </ul>
+          </fieldset>
+        </form><br>
+      </section>
+    </article><br>
+    <section>
+      
+      <br>
+      
+      
+      <hr>
+      
+    </section>
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer>
+  </body>
+</html>

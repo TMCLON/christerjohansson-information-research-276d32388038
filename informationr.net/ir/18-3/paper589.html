@@ -1,0 +1,992 @@
+﻿<!doctype html>  
+ <html>  
+ <head>  
+ <title>Incorporating nonparametric statistics into Delphi studies in library and information science</title>  
+<meta charset=utf-8 />
+ <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif" />  
+<link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="http://www.informationr.net/ir//IRstylesans.css" />  
+ 
+ <!--Enter appropriate data in the content fields-->  
+ <meta name="dcterms.title" content="Incorporating nonparametric statistics into Delphi studies in library and information science" />  
+ <meta name="author" content="Boryung Ju, Tao Jin" />  
+ <meta name="dcterms.subject" content="To explore how nonparametric statistical techniques could be incorporated into Delphi studies in library and information science" />  
+ <meta name="description" content="The Delphi technique is widely used in library and information science research. However, many researchers in the field fail to employ standard statistical tests when using this technique. This makes the technique vulnerable to criticisms of its reliability and validity. The general goal of this article is to explore how nonparametric statistical techniques could mitigate this drawback and be incorporated into Delphi studies in library and information science. To reach that goal we provide an example study which used a Delphi method for data collection and nonparametric statistics for data analysis. The example study investigated the barriers and challenges encountered by scientists when using various information and communication technologies for their distributed collaboration activities. Twenty-four participants were recruited into two domain groups (social and behavioural sciences vs. science and engineering). After three rounds of data collection and analysis systematically using nonparametric statistical measurements, fourteen items were identified as the most important. Different rankings of the items were observed between the groups involved, including Kendall's Ws. From our experience conducting this study we conclude that the incorporation of the nonparametric statistics into the Delphi technique may enhance its rigorousness as a research method and provide evidence for its reliability and validity.
+" />  
+ <meta name="keywords" content="Delphi method, nonparametric statistics, qualitative research methods, research methods, knowledge management" />
+ 
+ <meta name="robots" content="all" />  
+ 
+<meta name="dcterms.publisher" content="Professor T.D. Wilson" />
+ 
+<meta name="dcterms.type" content="text" />  
+
+<meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ 
+<meta name="dcterms.identifier" content="http://InformationR.net/ir/18-3/paper589" />  
+<meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/18-3/infres183.html" />  
+ 
+<meta name="dcterms.format" content="text/html" />  
+<meta name="dc.language" content="en" />  
+ 
+<meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ 
+<meta  name="dcterms.issued" content="2013-09-15" /> 
+  
+<meta name="geo.placename" content="global" />  
+
+ 
+ 
+
+
+<script type="text/javascript"> 
+		var flag;
+		flag = true;
+		function doChangeFont()
+		{
+			if (flag)
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../sans.css');
+			htmlDoc.appendChild(css);
+			flag = false;
+			} 
+			else
+			{
+			var htmlDoc = document.getElementsByTagName('head').item(0);
+			var css = document.createElement('link');
+			css.setAttribute('rel', 'stylesheet');
+			css.setAttribute('type', 'text/css');
+			css.setAttribute('href', '../IRstyle2.css');
+			htmlDoc.appendChild(css);
+			flag = true;
+			}	
+		}
+
+	</script> 
+
+
+
+ 
+</head> 
+  
+ <body> 
+
+<header>
+ <img height="45" alt="header" src="http://www.informationr.net/ir//mini_logo2.gif"  width="336" />
+<br />
+<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">vol. 18  no. 3, September, 2013</span>
+<br /><br /> 
+
+
+<div class="button">
+ <ul> 
+ <li><a href="infres183.html">Contents</a> |  </li> 
+ <li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> |  </li> 
+ <li><a href="../irsindex.html">Subject index</a> |  </li> 
+ <li><a href="../search.html">Search</a> |  </li> 
+ <li><a href="../index.html">Home</a> </li> 
+ </ul>
+ </div>
+ <hr />
+ </header>
+ 
+
+
+ <article>
+ <h1>Incorporating nonparametric statistics into Delphi studies in library and information science</h1>  <br />  
+ <div style="margin-left: 5%; margin-right: 10%;">  
+ <h4><a href="paper589.html#author">Boryung Ju</a> and <a href="paper589.html#author">Tao Jin</a><br />
+School of Library and Information Science, Louisiana State University, 267 Coates Hall, Baton Rouge, LA 70803, USA</h4>  
+ </div>  
+ <br /> 
+
+<section>
+ <form>  <fieldset>  <legend>Abstract </legend>
+ <blockquote>
+
+ <strong>Introduction.</strong> The Delphi technique is widely used in library and information science research. However, many researchers in the field fail to employ standard statistical tests when using this technique. This makes the technique vulnerable to criticisms of its reliability and validity. The general goal of this article is to explore how nonparametric statistical techniques could mitigate this drawback and be incorporated into Delphi studies in library and information science.<br />
+ <strong>Method.</strong> To reach that goal we provide an example study which used a Delphi method for data collection and nonparametric statistics for data analysis. The example study investigated the barriers and challenges encountered by scientists when using various information and communication technologies for their distributed collaboration activities. Twenty-four participants were recruited into two domain groups (social and behavioural sciences vs. science and engineering). <br />
+ <strong>Results.</strong> After three rounds of data collection and analysis systematically using nonparametric statistical measurements, fourteen items were identified as the most important. Different rankings of the items were observed between the groups involved, including Kendall's <i>W</i>s. <br />
+ <strong>Conclusions.</strong> The incorporation of the nonparametric statistics into the Delphi technique may enhance its rigour as a research method and provide evidence for its reliability and validity. 
+ </blockquote>  </fieldset>  </form> 
+ 
+ <br />  
+
+<div style="text-align:center">  <input type="button" value="change font"
+ class="btn" style="font-variant: small-caps; font-weight: bold; font-family:
+ Verdana; color: white; background-color: #5E96FD;" onClick="doChangeFont()"
+ /></div>   <br /> 
+
+ 
+ 
+ <h2>Introduction</h2> 
+ 
+ <p>The Delphi method is one of the best known and most frequently used qualitative research methods throughout library and information science (LIS) and other social science disciplines. As a way to forecast, identify, or prioritize issues in a given field, it is commonly used to gather opinions from a panel of experts via iterative rounds of elicitation sessions to eventually produce a collective agreement among the experts. This method enables researchers to observe how experts discuss a complex problem through a structured communication process, as well as collate divergent responses into a convergent overview (<a href="paper589.html#lin75">Linstone and Turoff 1975</a>; <a href="paper589.html#mul10">M&uuml;ller <i>et al.</i> 2010</a>). One drawback of the Delphi technique, however, is the lack of standard statistical tests, which may potentially entail issues of reliability and validity (<a href="paper589.html#fis78">Fischer 1978</a>; <a href="paper589.html#wei89">Weingand 1989</a>). </p>
+ 
+ <p>The general goal of this article is to explore how nonparametric statistical techniques could diminish this drawback and be incorporated into LIS Delphi studies. To achieve that goal, this article contains three parts: first, a synopsis of the Delphi method and its applications in librarianship and information science; second, some of the critical issues found when employing this methodology, specifically with the integration of the nonparametric statistical approach as a remedy to the aforementioned drawback; and finally, an example study illustrating how some nonparametric statistical techniques can be incorporated into the Delphi method. We argue that such incorporation may potentially enhance the rigour of the Delphi technique and add a new tool in the arsenal of researchers. </p> 
+ 
+ <h2>Characteristics of the Delphi method</h2> 
+ 
+ <p>The Delphi method was developed in 1953 at Rand Corporation by Dalkey and Helmer (<a href="paper589.html#wei89">Weingand 1989</a>). It was initially devised to '<em>obtain the most reliable opinion consensus of a group of experts by subjecting them to a series of questionnaires in depth interspersed with controlled opinion feedback</em>' (<a href="paper589.html#dah63">Dalkey and Helmer 1963</a>: 458). Since then, the method has been extensively used in innumerable areas; therefore, many variants exist (<a href="paper589.html#lin75">Linstone and Turoff 1975</a>; <a href="paper589.html#sch97">Schmidt 1997</a>). Nonetheless, they all reduce to the administration of questionnaires either in-person, by mail, by phone, or in an electronic format. Most Delphi studies also share a few distinct characteristics, such as:  </p>
+ 
+     <ul>
+     <li><strong>Expert input.</strong> Delphi researchers traditionally use experts as the source of information, instead of a random sample of a specified population. Experts are defined as individuals with special skills or knowledge representing mastery of a particular subject. Hence, this approach often leads to a small sample size.      </li>
+     <li><strong>Anonymity.</strong> The Delphi technique emphasizes the gathering and generating of collective intelligence by an indirect mode of communication. The participating experts would respond to a series of questionnaires individually. While they might be known to one another, their specific responses in the process would be treated anonymously.</li>
+     <li><strong>Iteration with controlled feedback.</strong> The Delphi technique usually requires several rounds of systematic solicitation of expert opinions until a group census is achieved (<a href="paper589.html#agh92">Agha and Akhta 1992</a>; <a href="paper589.html#eld09">Eldredge <i>et al.</i> 2009</a>; <a href="paper589.html#fis78">Fischer 1978</a>; <a href="paper589.html#goo87">Goodman 1987</a>; <a href="paper589.html#wei89">Weingand 1989</a>). Between rounds, participating experts receive feedback regarding the outcome of each round. Orchestrating a Delphi process requires a modest commitment by all participating experts, but a more significant obligation falls to the researchers (<a href="paper589.html#yar2009">Yarnal <i>et al</i>. 2009</a>).</li>
+     <li><strong>Statistical group response.</strong> Many Delphi questionnaires ask respondents to rate or rank items on Likert-type scales. Thus, the research data are mostly ordinal by nature. After each round of data collection a few basic statistics for each item, such as the median and percentage scores, can be calculated as a statistical group response. This allows respondents to see where their opinions fall in the context of the group (<a href="paper589.html#goo87">Goodman 1987</a>; <a href="paper589.html#rei70">Reilly 1970</a>).
+     </li></ul>
+
+ <h2>Previous Delphi studies in library and information science research</h2> 
+ 
+ <p>In the library and informaton research field, the earliest published Delphi study can be traced back to Borko (<a href="paper589.html#bor70">1970</a>) and since then the use of this technique has drastically increased. Using <i>Library, Information Science &amp;Technology Abstracts</i>, we identified eighty-seven empirical Delphi research papers published between 1971 and 2011. As shown in Table 1, nearly half (49.4%) of the papers dealt with the general topic of libraries and/or librarianship. This general cluster includes subjects such as books and reading (<a href="paper589.html#Duy09">Du 2009</a>), cataloguing (<a href="paper589.html#smi10">Smiraglia 2010</a>), electronic information resources (<a href="paper589.html#koc99">Kochtanek and Hein 1999</a>; <a href="paper589.html#nic03">Nicholson 2003</a>), information literacy (<a href="paper589.html#sau09">Saunders 2009</a>), library administration (<a href="paper589.html#mac09">Maceviciute and Wilson 2009</a>), and reference services (<a href="paper589.html#pom03">Pomerantaz <i>et al</i>. 2003</a>). These studies involve almost all types of libraries and archives, from academic (<a href="paper589.html#har05">Harer and Cole 2005</a>) and public (<a href="paper589.html#luk09">Lukenbill and Immroth 2009</a>) to medical (<a href="paper589.html#eld09">Eldredge <i>et al</i>. 2009</a>) and law (<a href="paper589.html#mis11">Missingham 2011</a>). </p>
+ 		 
+ <p>Following libraries and/or librarianship, the second largest cluster was management information systems, which includes business intelligence (<a href="paper589.html#mul10">M&uuml;ller <i>et al.</i> 2010</a>), supply chains (<a href="paper589.html#dan05">Daniel and White 2005</a>), information resources (<a href="paper589.html#mcf11">McFadzean <i>et al.</i> 2011</a>), system security (<a href="paper589.html#gon06">Gonzales <i>et al.</i> 2006</a>), electronic commerce (<a href="paper589.html#add03">Addison 2003</a>) and computer software development (<a href="paper589.html#dha00">Dhaliwal and Tung 2000</a>). The third biggest cluster is medical informatics, where the Delphi method has been used to explore health behaviour (<a href="paper589.html#bro08">Brouwer <i>et al</i>. 2008</a>), to appraise certain medical systems (<a href="paper589.html#amb99">Ambrosiadou and Goulis 1999</a>), and to establish a controlled vocabulary for nursing practice and research (<a href="paper589.html#sar03">Saranto and Tallberg 2003</a>). It should be noted that most of the authors of the papers mentioned above are from the fields of management and business, medicine and nursing, or computing and engineering. Additionally, the Delphi method has been used extensively in studies on information science (<a href="paper589.html#zin07">Zins 2007</a>), knowledge management (<a href="paper589.html#hol00">Holsapple and Joshi 2000</a>), information policy (<a href="paper589.html#mei02">Meijer 2002</a>), and library education and professionalism (<a href="paper589.html#bar02">Baruchson-Arbib and Brostein 2002</a>; <a href="paper589.html#wei89">Weingand 1989</a>). </p> 
+ 
+ <p>Through previous Delphi literature, we also attempted to examine the motivations behind the researchers who selected the Delphi approach as their research method. The broad purposes identified in previous research suggest that this technique can be applied in a variety of research situations. After we examined the abstracts of all these papers and extracted their purpose statements, an analysis about these statements was conducted. Five broad purposes emerged, though they are not mutually exclusive: identification; prediction; evaluation; plan or policy development and refinement; and system conceptualization, development, and implementation (Table 1). We found over one third (37%) of the papers stated that the Delphi technique was used to identify something. The objects identified could be risks, factors, attributes, indicators, needs, challenges, opportunities, limitations, uncertainties, vagueness, or any issues relevant to the research problem. The second most common purpose specified was prediction. Almost 20% of the papers aimed to forecast some kind of trend in a given domain, which echoes the tradition of the method. Baruchson-Arbib and Bronstein (<a href="paper589.html#bar02">2002</a>) remarked that the method is particularly suited to research areas '<em>for which hard data are either insufficient or inconclusive</em>' (<a href="paper589.html#bar02">Baruchson-Arbib and Brostein 2002</a>: 399). The third major identified application of the Delphi method in the eighty-seven studies was evaluation. About 18% of the studies intended to assess certain toolkits, standards, impacts, systems, frameworks, performances, or models. The word <em>criteria</em> was one of the most frequently seen terms in such papers. In addition, we found the Delphi method was often adopted in various system development projects, policy analyses and planning activities. </p> 
+ 
+ <table class="center" style="width:90%">  
+ <caption><br />Table 1: Some statistics on 87 Delphi studies in library and information science (1971-2011)</caption>
+  <tbody>
+  <tr>
+  <th rowspan="1" colspan="3">Publication date</th><th colspan="3">Main subjects involved</th><th colspan="3">Main purposes of the studies</th></tr>  
+  <tr><th>Date</th><th>Freq.</th><th>%</th><th>Subject term</th><th>Freq.</th><th>%</th><th>Purpose</th><th>Freq.</th><th>%</th></tr> 
+  <tr>
+ <td>1970s</td>
+ <td style="text-align:center">1</td>
+ <td style="text-align:center">1.15%</td>
+ <td style="text-align:left">Libraries and/or librarianship</td>
+ <td style="text-align:center">43</td>
+  <td style="text-align:center">49.43%</td>
+ <td style="text-align:left">Identification</td>
+ <td style="text-align:center">32</td>
+ <td style="text-align:center">36.78%</td>
+ </tr>
+   <tr>
+ <td>1980s</td>
+ <td style="text-align:center">3</td>
+ <td style="text-align:center">3.45%</td>
+ <td style="text-align:left">Management information systems</td>
+ <td style="text-align:center">15</td>
+  <td style="text-align:center">17.24%</td>
+ <td style="text-align:left">Prediction</td>
+ <td style="text-align:center">17</td>
+ <td style="text-align:center">19.54%</td>
+ </tr>
+   <tr>
+ <td>1990s</td>
+ <td style="text-align:center">8</td>
+ <td style="text-align:center">9.20%</td>
+ <td style="text-align:left">Medical informatics</td>
+ <td style="text-align:center">9</td>
+  <td style="text-align:center">10.34%</td>
+ <td style="text-align:left">Evaluation</td>
+ <td style="text-align:center">16</td>
+ <td style="text-align:center">18.39%</td>
+ </tr>
+   <tr>
+ <td>2000s</td>
+ <td style="text-align:center">57</td>
+ <td style="text-align:center">65.52%</td>
+ <td style="text-align:left">Information science </td>
+ <td style="text-align:center">6</td>
+  <td style="text-align:center">6.90%</td>
+ <td style="text-align:left">Plan or policy development and refinement</td>
+ <td style="text-align:center">13</td>
+ <td style="text-align:center">14.94%</td>
+ </tr>
+   <tr>
+ <td>2010s</td>
+ <td style="text-align:center">18</td>
+ <td style="text-align:center">20.69%</td>
+ <td style="text-align:left">Information policy</td>
+ <td style="text-align:center">4</td>
+  <td style="text-align:center">4.60%</td>
+ <td style="text-align:left">System conceptualization, development, and implementation</td>
+ <td style="text-align:center">11</td>
+ <td style="text-align:center">12.64%</td>
+ </tr>
+   <tr>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:left">Library education and professionalism</td>
+ <td style="text-align:center">4</td>
+  <td style="text-align:center">4.60%</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ </tr>
+   <tr>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:left">Knowledge management</td>
+ <td style="text-align:center">2</td>
+  <td style="text-align:center">2.30%</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ </tr>
+   <tr>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:left">Others</td>
+ <td style="text-align:center">4</td>
+  <td style="text-align:center">4.60%</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ <td style="text-align:center">&nbsp;</td>
+ </tr>  
+ </tbody>
+ </table> 
+ 
+ 
+ <p>If we examine the methods used to conduct these Delphi studies more closely, several salient observations can be summarized. To begin, most of the studies only used a small sample of experts for the survey. Depending on the research questions, the total number of invited panellists or opinion leaders (N) ranged between 10 and 50, although a few studies initially distributed their questionnaires on a larger scale (e.g., <a href="paper589.html#eld09">Eldredge <i>et al.</i> 2009</a>, N=1,064; <a href="paper589.html#mac09">Maceviciute and Wilson 2009</a>, N=125; <a href="paper589.html#bar02">Baruchson-Arbib and Bronstein 2002</a>, N=120). Second, most of the studies used only two or three rounds of iteration to obtain useful information. Only a few studies conducted the iteration process to four or more rounds (e.g., <a href="paper589.html#wei89">Weingand 1989</a>). However, the studies' methodology rarely provides any descriptions or justifications for determining when to move to the next round and/or stop polling. Third, very few studies systematically used statistical techniques to present and explain how the group consensus was reached. Focusing on those works written by authors affiliated with libraries or informaton schools reveals that many of studies solely employed a qualitative approach to report their results related to the consensus mechanism and did not include any standard statistical analyses (e.g., <a href="paper589.html#agh92">Agha and Akhtar 1992</a>; <a href="paper589.html#koc99">Kochtanek and Hein 1999</a>; <a href="paper589.html#sau09">Saunders 2009</a>; <a href="paper589.html#smi10">Smiraglia 2010</a>; <a href="paper589.html#wei89">Weingand 1989</a>; <a href="paper589.html#wes97">Westbrook 1997</a>; <a href="paper589.html#zin07">Zins 2007</a>). Even those few studies which provided statistical analyses were, quite often, limited to group means, medians, standard deviations, or simply percentages of distribution (e.g., <a href="paper589.html#bar02">Baruchson-Arbib and Bronstein 2002</a>; <a href="paper589.html#Duy09">Du 2009</a>; <a href="paper589.html#fer99">Feret and Marcinek 1999</a>; <a href="paper589.html#har05">Harer and Cole 2005</a>; <a href="paper589.html#zha09">Zhang and Salaba 2009</a>). This huge gap has left nonparametric statistical techniques a crucial issue to cover. It merits mentioning that Maceviciute and Wilson (<a href="paper589.html#mac09">2009</a>) employed the Spearman rank correlation test in their data analysis; which may suggest that some researchers have recognized this problem, and attempted to address it. </p> 
+ 
+ <h2>Limitations of Delphi</h2>
+ 
+ <p>There are two core limitations of the Delphi method: the vagueness of the concepts of expert and expertise; and the lack of elementary statistical analyses of data (<a href="paper589.html#bar02">Baruchson-Arbib and Bronstein 2002</a>; <a href="paper589.html#fis78">Fischer 1978</a>; <a href="paper589.html#goo87">Goodman 1987</a>). The first limitation is directly related to the sampling procedures. Because the method relies heavily on the use of experts in gathering information, the qualifications of the experts and the quality of their input are essential in validating a given study. The researchers must develop a set of objective criteria to select experts and assess their expertise. Nevertheless, the actual selection process must still be somewhat arbitrary. The researchers are responsible for proving and justifying that the selected experts are competent and knowledgeable enough to 'yield significantly better and substantially different responses from non-experts' (<a href="paper589.html#goo87">Goodman 1987</a>: 731). </p> 
+ 
+ <p>The second limitation is the lack of standard statistical analyses, which arguably makes the method vulnerable to criticisms of its reliability and validity. Quite often some standard tests for statistical significance, such as standard errors of estimate and systematic correlations of items, are intentionally, or unintentionally, ignored by some Delphi researchers (<a href="paper589.html#fis78">Fischer 1978</a>). Furthermore, due to its extensive applications, the Delphi method has evolved over time to include many variants. Some researchers, who justified their method as a Delphi variant, actually failed to make a sufficiently rigorous analysis, resulting in a more dramatic convergence than a strict statistical employment of the method (<a href="paper589.html#goo87">Goodman 1987</a>). However, Fischer (<a href="paper589.html#fis78">1978</a>) argued that '<em>[if] Delphi is to be considered seriously as a reliable and valid method, then it must be evaluated by the same standards as other social science methodology</em>' (<a href="paper589.html#fis78">Fischer 1978</a>: 68). </p> 
+ 
+ <h2>Critical issues in Delphi procedures</h2>
+
+ <p>Despite these limitations, the Delphi method is still a popular tool. Those interested in using this method in the future should consider incorporating techniques that can specifically compensate for the limitations. Moreover, these limitations raise some critical issues to consider. Correspondingly, we propose three critical aspects that need particular attention from the researchers: recruitment of experts; iteration of rounds for experts' input, and the range of identified issues and prioritization of those issues. Along with a series of techniques that researchers can use, we will elaborate each of the aspects below. </p> 
+ 
+ <h3>Recruitment of experts</h3>
+ 
+ <p>One of the most important steps for conducting a Delphi study is to identify and solicit qualified individuals for valuable input. In their study, Okoli and Pawlowski (<a href="paper589.html#oko04">2004</a>) detailed a procedure for selecting experts as follows: </p>
+ 
+ <ul>
+     <li><strong>Step 1:</strong> prepare a worksheet that defines categories and knowledge levels of relevant disciplines, skills, individuals/organizations </li>
+     <li><strong>Step 2:</strong> populate the worksheet with names</li>
+     <li><strong>Step 3:</strong> contact experts and/or ask them to nominate other experts</li>
+     <li><strong>Step 4:</strong> rank and categorize experts based on their availability and qualification</li>
+     <li><strong>Step 5:</strong> invite experts according to the target panel size</li>
+  </ul>
+		 
+ <p>The size and number of expert groups (or panels) are totally dependent on the nature of the study.  Like other qualitative approaches, the Delphi method does not need to ensure the representativeness of statistic samples because this is a group decision mechanism for reaching a group consensus (<a href="paper589.html#oko04">Okoli and Pawlowski 2004</a>; <a href="paper589.html#Jub11">Ju and Pawlowski 2011</a>). For this reason a relatively small sample size, twenty to forty-five participants per study, is justifiable, as has been shown in many previous studies (e.g., <a href="paper589.html#kel01">Keller 2001</a>; <a href="paper589.html#lud05">Ludwig and Starr 2005</a>; <a href="paper589.html#neu95">Neuman 1995</a>; <a href="paper589.html#wes97">Westbrook 1997</a>). </p>
+ 
+ <h3>Iteration of rounds for experts' input</h3>
+ 
+ <p>As mentioned earlier, iteration with controlled feedback is the most distinguished feature of the Delphi method. But how many rounds of solicitations would be sufficient? As Schmidt (<a href="paper589.html#sch97">1997</a>) pointed out, one of the possible challenges faced by the researchers is the question of when to stop polling.  Too few rounds may lead to an immature outcome, while too many rounds would require a burdensome commitment from the participating experts and the researchers conducting a Delphi study. Although no rules dictate how many rounds should be undertaken, it seems that most of the previous Delphi studies ran through two to three rounds of solicitations without additional justifications. The main issue for researchers is obtaining the most rigorous data while being considerate of the participating experts' time and efforts. </p>
+ 
+ <h3>Range of identified issues and prioritization </h3>
+ 
+ <p>Given the natural tendency of the Delphi to centralize opinions, an important question is how to prioritize those identified issues appropriately in each round, and, likewise, 'how many items to carry over to the subsequent rounds' (<a href="paper589.html#sch97">Schmidt 1997</a>: 764). To address these questions, researchers must make many decisions. The first set of decisions should include: the number of items study participants should respond to in the initial round; if the initial questionnaire has too many items, how many of them should be carried over to the next rounds; and how can the researchers eliminate less meaningful items from the list? </p>
+
+ <p>As suggested previously, the primary role of iteration in the Delphi process is to achieve a high degree of consensus. This leads to yet another important decision: how to operationally define the concept of 'degree of consensus'. Few studies provided a clear definition of this notion and, in most cases, the boundaries between <em>high</em> and <em>adequate</em> agreements among the study participants were vague; different researchers used different statistical elements to represent the boundaries. Some studies used rankings and percentages of agreement or disagreement (<a href="paper589.html#lud05">Ludwig and Starr 2005</a>), while others used mean ratings and standard deviations (<a href="paper589.html#neu95">Neuman 1995</a>; <a href="paper589.html#zha09">Zhang and Salaba 2009</a>; <a href="paper589.html#wes97">Westbrook 1997</a>). Notably, the rated or ranked items in these studies represent the ordinal scale data, measurement of order (rank order), not a relative size of data.  Hence, the application of standard deviation to ordinal level data does not produce a valid interpretation (<a href="paper589.html#sch97">Schmidt 1997</a>; <a href="paper589.html#ste46">Stevens 1946</a>). Instead, the rates of agreement using statistics such as Kendall's coefficient of concordance (<i>W</i>) or the standard Pearson correlation coefficient (<i>r</i>) could be considered to ensure the most rigorous assessment of ratings. Since most of the Delphi studies employ a small sample size, with no assumptions regarding the nature of probability distribution, using a nonparametric statistic such as Kendall's <i>W</i>, is a preferred method for result interpretation at each round of a Delphi study. </p>
+ 
+ <p>In order to demonstrate how the above three aspects can be addressed, a study using the ranking-type Delphi method is presented in the following section. This example will illustrate how data were collected and analysed by using nonparametric statistics, as well as the general design of the study. We hope it will provide some insights for the future application of this method. </p>
+
+ <h2>An example study</h2>
+ 
+ <p>The aim of the example study is to investigate the barriers and challenges encountered by scientists when they use information and communication technologies (information and communication technologies) (e.g. collaboration software, video conferencing, and instant messaging tools) for their distributed research collaboration activities (<a href="paper589.html#Jub11">Ju and Pawlowski 2011</a>). A step-by-step procedure is demonstrated. </p>
+ 
+ <p>This study addresses two research questions:</p>
+ 
+ <ul>
+     <li>What are the types of barriers and challenges to the use of information and communication technologies by scientists in the distributed environment of collaboration over the cyber infrastructure? </li>
+     <li>Are there any major differences or commonalities in the barriers and challenges to the use of information and communication technologies by research domain (science and engineering vs. social and behavioural sciences)?</li>
+  </ul>
+
+	<h3>Selection of panel members</h3>
+	
+	<p>The identification and selection of qualified individuals is one of the most fundamental processes when conducting a Delphi study.  For this study, the concept of 'expert panellists is defined as researchers who have extensive experience in communicating and collaborating with colleagues at other universities (geographically distributed) for research. Each panellist also uses at least one communication technology, such as email, telephone/Skype, Wikis, video conferencing, Listservs, instant messaging, blogs, or collaboration software suites such as SharePoint (see <a href="paper589.html#app">Appendix</a>).</p>
+	
+	<p>Initial panel members were identified by the investigators' personal contacts, as well as by recommendations from the investigators' colleagues in other departments at a national, research-oriented university in the United States. In order to solicit initial panel members to participate for the study, investigators explained the purpose of the study, eligibility of participants, time frame for each round, and the basic structure of the Delphi survey (Figure 1).  Once experts agreed to participate, invitations went out to their collaborators at other universities or research centres. Twenty-four researchers from five research-oriented universities in four states (Florida, Georgia, Louisiana, and Ohio) were invited to participate in the Delphi survey. This was a purposeful sample using a snowball sampling method due to the availability of eligible participants. </p>
+</section>
+	
+	<figure class="centre">
+   <img src="p589fig1.jpg" alt="Figure 1. Basic structure of the example study" width="961" height="474" />
+   <figcaption>
+      Figure 1: Basic structure of the example study<br /> <span style="font-size:small; font-weight:normal"> (Variation for the current study: Rounds 1 and 2 - Combined science and engioneering/social and behavioural sciences panel; Round 3 - Separate ranking by the science and engioneering panel and the social and behavioural sciences panel)</span>
+  </figcaption>
+	</figure>
+
+<section>
+
+	<p>To address the research question of whether or not major differences exist in barriers and challenges experienced by scientists using information and communication technologies, two panels were structured and members were recruited.  The science and engineering panel consisted of researchers from the fields of mathematics, computer science, engineering and medicine, while the  social and behavioural sciences panel consisted of researchers from psychology, political science, business and geography. In total, twenty-four panellists participated in the study.  All of them hold PhD degrees or higher (post-doctoral) and have experience in conducting one or more multi-site research projects by using at least one of the information and communication technologies listed above. </p>
+	
+  <h3>Data collection and analysis for each round </h3>
+
+  <p>The online survey (e-Delphi) was administered to elicit opinions from the expert panellists throughout three rounds: Round 1 was the identification of issues by brainstorming among the panellists; Round 2 was ranking identified issues and assessing consensus among all panel members; and Round 3 was re-ranking the shortlisted issues by two different panels. The data analysis was done by following the step-wise method developed by Schmidt (<a href="paper589.html#sch97">1997</a>) for the attempt to mitigate the weaknesses seen in other ranking-type Delphi approaches. </p>
+ 
+  <h4>Round 1</h4>
+	
+  <p><strong>Goal</strong> The goal of Round 1 was to identify and elicit the key issues regarding the use of information and communication technologies from the panel members.</p>
+	
+	<p><strong>Data collection</strong> The survey was delivered using online survey software to all twenty-four panel members.  The survey asked the panellists to list as many major issues (e.g., challenges, constraints or conflicts, barriers) as possible in the use of information and communication technologies for distributed research collaboration. The issues could be of any type, such as technical, social, procedural, financial, organizational or cultural.  Panellists were allowed to list issues in a bullet format or list with elaborate explanations and/or examples in order to help the investigators' understanding.  Other questions in the survey included the kind of information and communication technologies they used, the size of collaboration (number of collaborators), the multi-disciplinary aspects of the research projects they engaged in, the panellists' research domain, and their name and email address for the following surveys.  Additional comments were also allowed.  After gathering the participation agreements from the twenty-four panellists (twelve from the science and engioneering panel and twelve from the social and behavioural sciences panel), the online survey was delivered and participants were given two weeks to return their answers.  The expected time for any given respondent to complete the form was fifteen minutes.  E-mail reminders were distributed once in order to boost the response rate. </p>
+	
+	<p><strong>Analysing responses</strong> The goal of Round 1 was to identify and elicit the key issues regarding the use of information and communication technologies from the panel members.</p>
+ 
+ <table class="center" style="width:95%;">  
+ <caption><br />Table 2: Example issues and example input items collected in Round 1</caption>
+ <tbody>
+  <tr>
+  <th>&nbsp;</th><th>Issues identified</th><th>Example input</th></tr>  
+  <tr>
+ <td>1</td>
+ <td style="text-align:left">Annoyances caused by some features of tools or tool use</td>
+ <td style="text-align:left">Annoying aspects of Skype, for example, one cannot turn off the notification that appears on the screen every time a contact comes online</td>
+ </tr> 
+  <tr>
+  <td>2</td>
+  <td style="text-align:left">Confidentiality concerns</td>
+  <td style="text-align:left">Potential break of confidentiality</td>
+  </tr> 
+  <tr>
+  <td>3</td>
+  <td style="text-align:left">Cost of software, equipment or services</td>
+  <td style="text-align:left">Financial or who will foot the bill</td>
+  </tr> 
+  <tr>
+  <td>4</td>
+  <td style="text-align:left">Data management issues - lack of centralized control</td>
+  <td style="text-align:left">Version control for collaborators outside university or department</td>
+  </tr> 
+  <tr>
+  <td>5</td>
+  <td style="text-align:left">Differences in participants' preferences and choices of collaboration tools</td>
+  <td style="text-align:left">Using the same type of collaboration technologies (e.g. some use Skype, WebEx, Yahoo)</td>
+  </tr> 
+  <tr>
+  <td>6</td>
+  <td style="text-align:left">Differential levels of competence or experience with technologies</td>
+  <td style="text-align:left">Varying levels of technological savvy among collaborators</td>
+  </tr> 
+  <tr>
+  <td>7</td>
+  <td style="text-align:left">Difficulty capturing and maintaining online meeting proceedings and other data about collaborative activities</td>
+  <td style="text-align:left">Ability to record, playback or summarize</td>
+  </tr> 
+  <tr>
+  <td>8</td>
+  <td style="text-align:left">Difficulties facilitating and making contributions to online group discussion</td>
+  <td style="text-align:left">Facilitating the raising and expression of questions by remote audiences remains tough</td>
+  </tr>
+	<tr>
+  <td>9</td>
+  <td style="text-align:left">Discomfort of some individuals related to mediated communication (affective states, styles of work, etc.)</td>
+  <td style="text-align:left">'<em>I don't think everyone is comfortable with viewing people or having people view oneself on screen (e.g. videoconferencing, Skype)...creating an unbalanced group from the standpoint of affective state.</em>'</td>
+  </tr>
+	<tr>
+  <td>10</td>
+  <td style="text-align:left">Technology-mediated communication is less effective or productive (vs. in-person, face-to-face communication)</td>
+  <td style="text-align:left">'Very few information and communication technologies can replace face-to-face communication, even if we see each other. I don't believe we behave the same way when communicating through information and communication technologies as we would face-to-face.'</td>
+  </tr>  
+ </tbody>
+ </table> 
+
+  <h4>Round 2</h4>
+	
+  <p><strong>Goal</strong> The goal of Round 2 was to rank issues and assess consensus from all panel members.</p>
+	
+	<p><strong>Data collection</strong> The survey questionnaire presented to the panel members consisted of the twenty-seven-issue list with a short definition or explanation of each item, a glossary of terminologies used in the study, and a copy of their responses to the first round questionnaire. According to Schmidt (<a href="paper589.html#sch97">1997</a>), ranking around twenty items is considered reasonable at an early stage of Delphi. In this round, each panellist was asked to rank the listed items by importance, where one equalled the most important and twenty-seven the least.  No two items were allowed the same ranking.  A time frame of two weeks was given, and fourteen out of twenty-four panellists returned their responses. </p>
+	
+	<p><strong>Analysing responses</strong> The rankings provided by the fourteen panellists were recorded, and the mean ranks were calculated for each item. Table 3 shows the list of items with mean rank, variance of rank (<i>D</i><sup>2</sup>), Kendall's <i>W</i>, and chi-squared (&chi;<sup>2</sup>). From this table, items on the top in the mean rank column are rated <em>important</em> by panellists.  As seen in the table, there is no obvious top group of items in terms of mean ranking, and the investigators had a difficult time setting a cut-off point. To assess the group consensus, Kendall's <i>W</i> was calculated and a low level of agreement (<i>W</i> = 0.103) was found. In the nonparametric statistical approach, a strong agreement or consensus exists for <i>W</i>&gt;= 0.7; a moderate agreement for <i>W</i>= 0.5; and a weak agreement for <i>W</i>&lt; 0.3 (<a href="paper589.html#gar10">Garcia-Crespo <i>et al.</i> 2010</a>). This was somewhat expected considering that individual panellists come from a variety of research domains, and used different tasks and tools. This assumption prompted the investigators to consider the association, if any, between the two research domains (science and engioneering vs. social and behavioural sciences). As indicated in the previous studies (<a href="paper589.html#ken90">Kendall and Gibbons, 1990</a>; <a href="paper589.html#sch97">Schmidt 1997</a>) Kendall's <i>T</i> (rank order correlation coefficient) can be used to find the agreement between two groups. In this case, our calculation for <i>T</i> resulted in -0.009 (approximately zero), which means that there was no association between the two groups' rankings. Consequently, the investigators decided to separate the full panel into two independent groups for the next round of data collection.  By calculating the differences between the mean rank and the grand means, variance of rank was measured to assess how each item was dispersed. Chi-squared values were also calculated to demonstrate the level of association between the issues and ranks; this relationship was found statistically significant. </p>
+ 
+  <table class="center">  
+ <caption><br />Table 3. Example of ranking of issues by expert panellists</caption>
+ <tbody>
+  <tr>
+  <th rowspan="1">Issue number</th><th>Mean rank</th><th><i>D</i><sup>2</sup></th></tr>  
+  <tr>
+ <td style="text-align:center">26</td>
+ <td style="text-align:center">7.64</td>
+ <td style="text-align:center">40.45</td>
+ </tr> 
+  <tr>
+  <td style="text-align:center">25</td>
+  <td style="text-align:center">10.57</td>
+  <td style="text-align:center">11.76</td>
+  </tr> 
+  <tr>
+  <td style="text-align:center">10</td>
+  <td style="text-align:center">11.18</td>
+  <td style="text-align:center">7.95</td>
+  </tr> 
+  <tr>
+  <td style="text-align:center">27</td>
+  <td style="text-align:center">11.64</td>
+  <td style="text-align:center">5.57</td>
+  </tr> 
+  <tr>
+  <td style="text-align:center">20</td>
+  <td style="text-align:center">11.71</td>
+  <td style="text-align:center">5.24</td>
+  </tr> 
+  <tr>
+  <td style="text-align:center">3</td>
+  <td style="text-align:center">11.93</td>
+  <td style="text-align:center">4.28</td>
+  </tr> 
+  <tr>
+  <td style="text-align:center">23</td>
+  <td style="text-align:center">12.14</td>
+  <td style="text-align:center">3.46</td>
+  </tr> 
+  <tr>
+  <td style="text-align:center">8</td>
+  <td style="text-align:center">12.36</td>
+  <td style="text-align:center">2.69</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">1</td>
+  <td style="text-align:center">12.71</td>
+  <td style="text-align:center">1.66</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">6</td>
+  <td style="text-align:center">12.86</td>
+  <td style="text-align:center">1.3</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">24</td>
+  <td style="text-align:center">12.89</td>
+  <td style="text-align:center">1.23</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">13</td>
+  <td style="text-align:center">13.25</td>
+  <td style="text-align:center">0.56</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">9</td>
+  <td style="text-align:center">13.36</td>
+  <td style="text-align:center">0.41</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">5</td>
+  <td style="text-align:center">13.57</td>
+  <td style="text-align:center">0.18</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">11</td>
+  <td style="text-align:center">13.86</td>
+  <td style="text-align:center">0.02</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">14</td>
+  <td style="text-align:center">14.82</td>
+  <td style="text-align:center">0.67</td>
+  </tr>
+	  <tr>
+  <td style="text-align:center">21</td>
+  <td style="text-align:center">15.57</td>
+  <td style="text-align:center">2.46</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">19</td>
+  <td style="text-align:center">15.64</td>
+  <td style="text-align:center">2.69</td>
+  </tr> 
+		  <tr>
+  <td style="text-align:center">12</td>
+  <td style="text-align:center">15.68</td>
+  <td style="text-align:center">2.82</td>
+  </tr> 
+		  <tr>
+  <td style="text-align:center">18</td>
+  <td style="text-align:center">15.89</td>
+  <td style="text-align:center">3.57</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">17</td>
+  <td style="text-align:center">15.93</td>
+  <td style="text-align:center">3.72</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">22</td>
+  <td style="text-align:center">15.93</td>
+  <td style="text-align:center">3.72</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">16</td>
+  <td style="text-align:center">16.04</td>
+  <td style="text-align:center">4.16</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">15</td>
+  <td style="text-align:center">16.5</td>
+  <td style="text-align:center">6.25</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">7</td>
+  <td style="text-align:center">16.96</td>
+  <td style="text-align:center">8.76</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">4</td>
+  <td style="text-align:center">18.5</td>
+  <td style="text-align:center">20.25</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">2</td>
+  <td style="text-align:center">18.86</td>
+  <td style="text-align:center">23.62</td>
+  </tr>
+		  <tr>
+  <td style="text-alignleft"><strong>Totals</strong></td>
+  <td style="text-align:center">377.99</td>
+  <td style="text-align:center">169.5</td>
+  </tr>
+		  <tr>
+  <td style="text-align:left"><strong>Grand means</strong></td>
+  <td style="text-align:left"><strong>14.00</strong></td>
+  <td style="text-align:center">&nbsp;</td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">&nbsp;</td>
+  <td style="text-align:center"><i><strong>W</strong></i></td>
+  <td style="text-align:center"><i><strong>&chi;<sup>2</sup></strong></i></td>
+  </tr>
+		  <tr>
+  <td style="text-align:center">&nbsp;</td>
+  <td style="text-align:center"><strong>0.103</strong></td>
+  <td style="text-align:center"><strong>37.657</strong></td>
+  </tr>
+ </tbody>
+ </table> 
+
+ <h4>Round 3</h4>
+	
+  <p><strong>[Goal]</strong> The goal of Round 3 was to re-rank issues and examine the differences by research domains. </p>
+	
+	<p><strong>[Data collection]</strong> In this round, the investigators decided to reduce the number of items to be ranked from twenty-seven to fourteen. Based on the mean ranks for each item we produced a list of fourteen items with mean ranks for each and item descriptions in the order of importance, rather than a random or alphabetical order.  As a result, two different lists of items were sent to the two groups/panels (science and engioneering and social and behavioural sciences groups) separately. The panellists were again asked to rank these issues by importance.  Seventeen panellists (nine from the science and engioneering panel and eight from social and behavioural sciences panel) returned their responses.</p>
+	
+	<p><strong>[Analysing responses]</strong> The most important fourteen items were decided based on the mean ranks (mean rank &lt;13.5).  The decision of the cut-off point was made by the investigators considering the wide gaps in mean ranking. This was a natural 'breaking point' which halved the original number of twenty-seven. Then Kendall's <i>W</i> was calculated separately for each panel. As a result, Kendall's <i>W</i> for the science and engioneering panel was 0.207, and 0.120 for the social and behavioural sciences panel. They were slightly higher than the previous round but still in the lower range. </p>
+ 
+ <h3>Presentation of findings </h3>
+
+ <p>The findings of a Delphi study can be presented in any format: list of items, categories or tables with related statistics or narratives. Table 4 lists the final findings of the example study, which includes fourteen top issues that were identified by the science and engioneering and social and behavioural sciences panels respectively. The items are ranked in descending order by their final mean ranks. </p>
+ 
+ <table class="center">  
+ <caption><br />Table 4. Top fourteen issues ranked by panels for each research domain, categorized by issue type (Ju and Pawlowski 2011)<br />
+ (Note: *=Top 14 issue for both groups)</caption> 
+ <tbody>
+  <tr>
+  <th rowspan="1" colspan="3"><strong>science and engioneering GROUP</strong></th><th colspan="3"><strong>social and behavioural sciences GROUP</strong></th></tr>  
+  <tr><th>Issue #</th><th>Issue</th><th>Issue Type</th><th>Issue #</th><th>Issue</th><th>Issue Type</th></tr> 
+  <tr>
+ <td style="text-align:center">20</td>
+ <td style="text-align:center">Quality issues (audio/video)</td>
+ <td style="text-align:center">Tool or technology</td>
+ <td style="text-align:center">24</td>
+ <td style="text-align:center">Time or effort to learn</td>
+ <td style="text-align:center">Individual</td>
+ </tr> 
+  <tr>
+ <td style="text-align:center">25*</td>
+ <td style="text-align:center">Unreliability of technology</td>
+ <td style="text-align:center">Tool or technology</td>
+ <td style="text-align:center">6*</td>
+ <td style="text-align:center">Differential competence or experience</td>
+ <td style="text-align:center">Individual</td>
+ </tr>
+ <tr>
+ <td style="text-align:center">26*</td>
+ <td style="text-align:center">Usability issues</td>
+ <td style="text-align:center">Tool or technology</td>
+ <td style="text-align:center">27*</td>
+ <td style="text-align:center">Variance in tool availability</td>
+ <td style="text-align:center">Resources</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">23</td>
+ <td style="text-align:center">Technology infrastructure limitations</td>
+ <td style="text-align:center">Tool or technology</td>
+ <td style="text-align:center">25*</td>
+ <td style="text-align:center">Unreliability of technology</td>
+ <td style="text-align:center">Tool or technology</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">16</td>
+ <td style="text-align:center">Limitations of collaboration tools</td>
+ <td style="text-align:center">Tool or technology</td>
+ <td style="text-align:center">8</td>
+ <td style="text-align:center">Difficulties facilitating or contributing</td>
+ <td style="text-align:center">Collaboration process</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">11</td>
+ <td style="text-align:center">Incompatibility of technologies</td>
+ <td style="text-align:center">Tool or echnology</td>
+ <td style="text-align:center">26*</td>
+ <td style="text-align:center">Usability issues</td>
+ <td style="text-align:center">Tool or technology</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">6*</td>
+ <td style="text-align:center">Differential competence or experience</td>
+ <td style="text-align:center">Individual</td>
+ <td style="text-align:center">10*</td>
+ <td style="text-align:center">Information technology-mediated communication less effective</td>
+ <td style="text-align:center">Collaboration process</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">1</td>
+ <td style="text-align:center">Annoyances - tools</td>
+ <td style="text-align:center">Tool or technology</td>
+ <td style="text-align:center">3*</td>
+ <td style="text-align:center">Cost</td>
+ <td style="text-align:center">Resources</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">27*</td>
+ <td style="text-align:center">Variance in tool availability</td>
+ <td style="text-align:center">Resources</td>
+ <td style="text-align:center">19</td>
+ <td style="text-align:center">Negative impact on motivation</td>
+ <td style="text-align:center">Collaboration process</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">10*</td>
+ <td style="text-align:center">Information technology-mediated communication less effective</td>
+ <td style="text-align:center">Collaboration process</td>
+ <td style="text-align:center">21</td>
+ <td style="text-align:center">Scheduling or time zone issues</td>
+ <td style="text-align:center">Logistics</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">12</td>
+ <td style="text-align:center">Information overload</td>
+ <td style="text-align:center">Collaboration process</td>
+ <td style="text-align:center">14</td>
+ <td style="text-align:center">Lack of willingness to adopt or learn</td>
+ <td style="text-align:center">Individual</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">3*</td>
+ <td style="text-align:center">Cost</td>
+ <td style="text-align:center">Resources</td>
+ <td style="text-align:center">5</td>
+ <td style="text-align:center">Differences in tool preferences or choices</td>
+ <td style="text-align:center">Individual</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">22</td>
+ <td style="text-align:center">Security and security policy</td>
+ <td style="text-align:center">Tool or technology</td>
+ <td style="text-align:center">9</td>
+ <td style="text-align:center">Discomfort with mediated communication</td>
+ <td style="text-align:center">Individual</td>
+ </tr> 
+<tr>
+ <td style="text-align:center">13</td>
+ <td style="text-align:center">Insufficient technical support</td>
+ <td style="text-align:center">Resources</td>
+ <td style="text-align:center">17</td>
+ <td style="text-align:center">More misunderstandings</td>
+ <td style="text-align:center">Collaboration process</td>
+ </tr> 
+ </tbody>
+ </table> 
+ 
+
+ <p>As mentioned previously, the Delphi technique is highly conducive to producing a consensus among group members through several rounds of opinion solicitations. Hence, the presentation of Delphi results should reflect this convergence process. As illustrated in the above example study, Tables 2, 3 and 4 profile how the group consensus for this given topic was eventually achieved. </p>
+ 
+ <p>It is also recommended that the demographics of experts be provided so that the readers have a glance of the panel members' qualification and skill levels, which supports the relevance and reliability of respondents to a specific topic (<a href="paper589.html#bra87">Brancheau and Wetherbe 1987</a>; <a href="paper589.html#sch97">Schmidt 1997</a>). </p>
+ 
+ <h2>Discussion: concerns and limitations</h2>
+ 
+ <p>While the strengths of the Delphi method are evident, its challenges are also well perceived. A couple of concerns and limitations encountered in the course of conducting this study drew our attention.</p>
+ 
+ <p><i>Number and range of identified issues and homogeneity of panel members:</i> Twenty-four study participants were recruited into two different domain groups (social and behavioural sciences vs. science and engioneering) in order to examine whether or not differences exist in the barriers/challenges perceived by them using information and communication technologies. Each panellist was asked to generate at least ten major issues. The collected inputs were then collated and categorized by the investigators into a list of identified issues. It turned out that the spectrum and numbers of the identified issues were as broad as the diversity of the participants' domain areas in this study. The types of identified issues ranged from tool/technology, collaboration process, logistics and resources to individual experience or perception (see Table 4 for the identified issues in detail). The wide-ranging of the issues might have led to the lower agreement among the participants. </p>
+ 
+ <p><i>Agreement rate among experts (panel members) for reliability:</i>Given the characteristics of the Delphi method, applying nonparametric techniques is considered to be preferred for several reasons. First, in practice, we may often encounter data that comes from a non-normal distribution which skewed, highly peaked, highly flat, etc., and is not covered by parametric methods. In such situations, nonparametric techniques should be used, because they do not assume a particular population probability distribution. In contrast, parametric statistical approaches, 'hypothesis testing and the confidence interval rely on the assumption that the population distribution function is known, or a few unknown parameters' (<a href="paper589.html#con99">Conover 1999</a>: 115). Most parametric methods are based on the normality assumption, in which data are normally distributed and the 'parameters,' such as means, standard deviations and proportions, provide important clues to understanding the shape or spread of the probability distribution. Secondly, thanks to their distribution-free nature, nonparametric techniques 'are valid for data from any population with any probability distribution' (<a href="paper589.html#con99">Conover 1999</a>: 116). Therefore, the data from a biased, non-random sample, like the Delphi's sample of experts, would still be valid using nonparametric methods with a good statistical power to data analysis. Third and most important, nonparametric techniques are equipped to handle ordinal data. They are 'often the only [methods] available for data that simply specify order (ranks)' (<a href="paper589.html#spr00">Sprent and Smeeton 2000</a>: 5). As described previously, the Delphi methods depend heavily on iterative elicitations from respondents who are repeatedly asked to identify and rank items. Nonparametric methods include a family of statistical procedures used to analyse the ranked data, such as the Friedman test and Kendall's <i>W</i>; these can be used to test for evidence of consistency between the respondents who assign the ranking. Delphi researchers could consider these procedures useful to track consensus in a rigorous, statistical manner.  Finally, when the study sample size is very small (<a href="paper589.html#sie88">Siegel and Castellan 1988</a>) nonparametric statistics are more appropriate, in order to retain the same statistical power to test null hypotheses. </p>
+ 
+ <p>With all above-mentioned characteristics of nonparametric statistics, some specific methods were considered for application in our example study.  One of the focal points of using the Delphi method is to elicit and shape a group consensus.  The degree of agreement achieved among raters (experts/panel members) must be substantial for researchers to make their decisions regarding the optimal number of iterations.  Ensuring a certain degree of agreement is directly related to the reliability and validity of the data collected and consequently analysed from each round of inquiries.  Moreover, as mentioned earlier, few of the previous Delphi studies specified their adequate level of agreement.  The majority of Delphi studies used descriptive statistics, such as average, percentile or standard deviation, with ill-defined cut-off points for the agreement rates.  To remedy this, our sample study sought a more sound and consistent way to demonstrate degree of agreement rates by calculating Kendall's W. An analysis of participant rankings indicated that the mean ranks are relatively flat and widely dispersed among the identified issues. This could be due to the different issues (challenges and conflicts) emphasized by the individual panellists, and could be considered for future endeavour. </p>
+
+ 
+ <h2>Conclusions</h2>
+ 
+ <p>The Delphi method is a popular method used by researchers to investigate a variety of research questions in the field of library and information science.  Often the Delphi method is not considered as rigorous as other research methods. This is primarily due to a lack of standard statistical tests which would ensure the validity and reliability of the research. Without such statistical tests, it would then be hard to accurately define the optimal number of iterative rounds for data collection. It also would be not statistically rigorous to designate consistent cut-off points for the level of agreement among the panel members. In order to address these critical issues, the authors attempted to explore the applicability of nonparametric statistics as one of the possible solutions, via an illustrative study. More specifically, in our sample study, research attempts were made to identify the source of the challenges encountered by collaborative researchers, and to understand the interrelations among the identified issues. </p>
+ 
+ <p>There are two advantages to our nonparametric statistics approach. One is that, when using a small sample size, our approach provides rigorous and reliable statistics regarding the degree of consensus among the panellists. Another advantage is the justification for setting the cut-off point for each iteration. In most of the previously conducted LIS Delphi studies, explanations about the levels of consensus (or agreement) among panellists at each round are under-emphasized, creating a lack of support for the underlying logic. For example, using percentages or the standard deviation of agreement among panellists, or collecting only the descriptive characteristics of data from each round, does not ensure a level of consensus has been achieved, and results are less predictable. Using our approach could respond to the criticism of this method being 'not a statistically rigorous methodology for predicting the future' (<a href="paper589.html#lud05">Ludwig and Starr 2005</a>: 316). </p>
+ 
+ <p>We propose our approach with one proviso. As discussed, when the homogeneity of the panel of experts is not guaranteed and Delphi researchers have to deal with a variety of broad and complex topics, which need to be identified in their study, then the approach presented in our example study would not be well served.  Therefore, the choice of the method should be made carefully with consideration for the many tenets that define good, basic research. That having been said, the Delphi method with our nonparametric statistical approach can, potentially, be an excellent tool for LIS researchers. </p>
+ 
+ 
+ 
+	
+
+ <h2>Acknowledgements</h2> 
+ 
+ <p>Authors would like to thank referees, the editor (North American editor), and the copyeditor for valuable feedback and constructive suggestions to improve this manuscript. We also appreciate Rachel Gifford for her time and effort to read and edit our manuscript. </p> 
+ 
+ <h2>About the author</h2> 
+ 
+ <p>Boryung Ju is an Associate Professor in the School of Library and Information Science, Louisiana State University, USA.  She received her Master's degree in Library and Information Science from Indiana University and her PhD in Information Studies from the Florida State University, USA. She can be reached at: <a href="mailto:bju1@lsu.edu">bju1@lsu.edu</a>. <br />
+Tao Jin is an Assistant Professor in the School of Library and Information Science, Louisiana State University, USA. He received his Master's degree in Library and Information Science, and PhD in Information Studies from McGill University, Canada. He can be reached at: <a href="mailto:taojin@lsu.edu">taojin@lsu.edu</a>.</p>
+
+</section>
+<section class="refs">
+ 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy;
+ border-bottom: 1px solid navy; font-weight: bold;">References</legend>  
+  
+ <ul class="refs"> 
+ 
+    <li id="add03">Addison, T. (2003). E-commerce project development risks: evidence from a Delphi survey. <i>International Journal of Information Management</i>, <b>23</b>(1),25-40.</li>
+
+   <li id="agh92">Agha, S. S., &amp; Akhtar, S. (1992). The responsibility and the response: sustaining information systems in developing countries. <i>Journal of Information Science</i>, <b>18</b>(4),283-292.</li>
+   
+	 <li id="amb99">Ambrosiadou, B. V., &amp; Goulis, D. G. (1999). The Delphi method as a consensus and knowledge acquisition tool for the evaluation of the diabetes system for insulin administration. <i>Medical Informatics and the Internet in Medicine</i>, <b>24</b>(4), 257-268.</li>
+	 
+   <li id="bar02">Baruchson-Arbib, S., &amp; Bronstein, J. (2002). A view to the future of the library and information science profession: a Delphi study. <i>Journal of the American Society for Information Science and Technology</i>, <b>53</b>(5), 397-408.</li>
+
+	 <li id="bor70">Borko, H. (1970). <i>A study of the needs for research in library and information science education</i>. Washington, D.C.: U.S. Office of Education, Bureau of Research. 
+	 
+   </li><li id="bra87">Brancheau, C., &amp; Wetherbe, C. (1987). Key issues in information systems management. <i>MIS Quarterly</i>, <b>11</b>(1),23-45.</li>
+
+   <li id="bro08">Brouwer, W., Oenema, A., Crutzen, R., de Nooijer, J., de Vries, N. K. &amp; Brug, J. (2008). <a href="http://www.webcitation.org/6ITddU8Fw">An exploration of factors related to internet-delivered behavior change interventions aimed at adults: a Delphi study approach.</a> <i>Journal of Medical Internet Research</i><b>10</b>(2), Retrieved 10 July, 2012 from http://www.jmir.org/2008/2/e10/ (Archived by WebCite®athttp://www.webcitation.org/6ITddU8Fw)</li>
+	 
+	 <li id="con99">Conover, W.J. (1999). <i>Practicalnonparametric statistics</i>. (3rd. ed.). New York: John Wiley &amp; Sons.</li>
+	 
+   <li id="Dal63">Dalkey, N.(1968) <i>Predicting the future</i>. Santa Monica, CA: Rand Corporation</li>
+	 
+   <li id="dah63">Dalkey, N. &amp; Helmer, O. (1963). An experimental application of the Delphi method to the use of experts. <i>Management Science</i>, <b>9</b>, 458-467.</li>
+	 
+   <li id="dan05">Daniel, E. M. &amp; White, A. (2005). The future of inter-organisational system linkages: findings of an international Delphi study. <i>European Journal of Information Systems</i>, <b>14</b>(2),188-203.</li>
+
+   <li id="dha00">Dhaliwal, J. S. &amp; Tung, L. (2000). Using group support systems for developing a knowledge-based explanation facility. <i>International Journal of Information Management</i>, <b>20</b>(2), 131.</li>
+	 
+	 <li id="Duy09">Du, Y. (2009). Librarians' responses to 'reading at risk': a Delphi study. <i>Library and Information Science Research</i>, <b>31</b>(1), 46-53.</li>
+	 
+	 <li id="eld09">Eldredge, J. D., Harris, M. R., &amp; Ascher, M. T. (2009). Defining the Medical Library Association research agenda: methodology and final results from a consensus process. <i>Journal of the Medical Library Association</i>, <b>97</b>(3), 178-185.</li>
+
+   <li id="fer99">Feret, B., &amp; Marcinek, M. (1999). The future of the academic library and the academic librarian: a Delphi study. <i>Librarian Career Development</i>, <b>7</b>(10), 91-107.</li>
+	 
+   <li id="fis78">Fischer, R. G. (1978). The Delphi method: a description, review and criticism. <i>The Journal of Academic Librarianship</i>, <b>4</b>(2), 67-70.</li>
+	 
+	 <li id="gar10">Garcia-Crespo, A., Colomo-Palacios, R., Soto-Acosta, P., &amp; Ruano-Mayoral, M. (2010). A qualitative study of hard decision making in managing global software development teams. <i>Information Systems Management</i>,?<b>27</b>(3), 247-252. 
+	 
+   </li><li id="gon06">Gonzalez, R., Gasco, J., &amp; Liopis, J. (2006). Information systems managers' view about outsourcing in Spain. <i>Information Management and Computer Security</i>, <b>14</b>(4), 312-326.</li>
+
+	 <li id="goo87">Goodman, C. M. (1987). The Delphi technique: a critique. <i>Journal of Advanced Nursing</i>, <b>12</b>, 729-734</li>
+	 
+   <li id="har05">Harer, J. B., &amp; Cole, B. R. (2005). The importance of the stakeholder in performance measurement: critical processes and performance measures for assessing and improving academic library services and programs. <i>College and Research Libraries</i>, <b>66</b>(2), 149-170.</li>
+
+   <li id="hol00">Holsapple, C., &amp; Joshi, K. (2000). An investigation of factors that influence the management of knowledge in organizations. <i>Journal of Strategic Information Systems</i>, <b>9</b>(2/3), 235-261.</li>
+
+   <li id="Jub11">Ju, B., &amp; Pawlowski, S. (2011). Exploring barriers and challenges of information and communication technology use in distributed research today: a ranking-type Delphi study. <i>Proceedings of the American Society for Information Science and Technology</i>, <b>48</b>, 1-9.</li>
+	 
+	 <li id="kel01">Keller, A. (2001). Future development of electronic journals: a Delphi study. <i>The Electronic Library</i>, <b>19</b>(6), 383-396.</li>
+	 
+   <li id="ken90">Kendall, G., &amp; Gibbons, D. (1990). <i>Rank correlation methods</i>. London: Edward Arnold.</li>
+	 
+	 <li id="koc99">Kochtanek, T. R., &amp; Hein, K. K. (1999). Delphi study of digital libraries. <i>Information Processing and Management</i>, <b>35</b>(3), 245.</li>
+	 
+	 <li id="lin75">Linstone, H., &amp; Turoff, M. (1975). <i>The Delphi method: techniques and applications</i>. London: Addison-Wesley Publishing Company, Inc.</li>
+	 
+	 <li id="lud05">Ludwig, L., &amp; Starr, S. (2005). Library as place: results of a Delphi study. <i>Journal of Medical Library Association</i>, <b>93</b>(3), 315-326.</li>
+	 
+   <li id="luk09">Lukenbill, B., &amp; Immroth, B. (2009). School and public youth librarians as health information gatekeepers: research from the Lower Rio Grande Valley of Texas. <i>School Library Media Research</i>, <b>12.</b></li>
+	 
+   <li id="mac09"> Maceviciute, E., &amp; Wilson, T.D. (2009). <a href="http://informationr.net/ir/14-4/paper419.html">A Delphi investigation into the research needs in Swedish librarianship</a>. <i>Information Research</i>, <b>14</b>(4), paper 419. Retrieved 20 May, 2012 from http://InformationR.net/ir/14-4/paper419.html (Archived by WebCite® at http://informationr.net/ir/14-4/paper419.html)</li>
+	 
+   <li id="mcf11">McFadzean, E., Ezingeard, J., &amp; Birchall, D. (2011). Information assurance and corporate strategy: a Delphi study of choices, challenges, and developments for the future. <i>Information Systems Management</i>, <b>28</b>(2), 102-129.</li>
+	 
+   <li id="mei02">Meijer, A. A. (2002). Geographical information systems and public accountability. <i>Information Polity: The International Journal of Government and Democracy in the Information Age</i>, <b>7</b>(1), 39-47.</li>
+	 
+   <li id="mis11">Missingham, R. (2011). Parliamentary library and research services in the 21st century: a Delphi study.<i>IFLA Journal</i>, <b>37</b>(1), 52-61.</li>
+
+   <li id="mul10">M&uuml;ller, R. M., Linders, S., &amp; Pires, L.F. (2010). Business intelligence and service-oriented architecture: a Delphi study. <i>Information Systems Management</i>, <b>27</b>, 168-187.</li>
+	 
+	 <li id="neu95">Neuman, D. (1995). High school students’ use of databases: results of a national Delphi study. <i>Journal of the American Society for Information Science</i>, <b>46</b>(4), 284-298.</li>
+	 
+   <li id="nic03">Nicholson, S. (2003). Bibliomining for automated collection development in a digital library setting: using data mining to discover web-based scholarly research works. <i>Journal of the American Society for Information Science and Technology</i>, <b>54</b>(12), 1081-1090.</li>
+
+   <li id="oko04">Okoli, C., &amp; Pawlowski, S. (2004). The Delphi method as a research tool: an example, design considerations and applications. <i>Information and Management</i>, <b>42</b>, 15-29.</li>
+	 
+   <li id="pom03">Pomerantz, J., Nicholson, S. &amp; Lankes, R. (2003). Digital reference triage: factors influencing question routing and assignment. <i>Library Quarterly</i>, <b>73</b>(2), 103.</li>
+	 
+   <li id="rei70">Reilly, K. (1970). The Delphi technique: fundamentals and applications. In H. Borko (Ed.), <i> A study of the needs for research in library and information science education</i> Washington, D.C.: U.S. Office of Education, Bureau of Research. 252-267.</li>
+
+   <li id="sar03">Saranto, K., &amp; Tallberg, M. (2003). Enhancing evidence-based practice — a controlled vocabulary for nursing practice and research. <i>International Journal of Medical Informatics</i>, <b>70</b>(2/3), 249-253.</li>
+	 
+	 <li id="sau09">Saunders, L. (2009). The future of information literacy in academic libraries: a Delphi study. <i>Portal: Libraries and the Academy</i>, <b>9</b>(1), 99-114.</li>
+	 
+   <li id="sie88">Siegel, S. &amp; Castellan, N. (1988). <i>Nonparametric statistics for the behavioral sciences</i>. (2nd. ed.). New York: McGraw-Hill.</li>
+	 
+	 <li id="sch97">Schmidt, R. (1997). Managing Delphi surveys using nonparametric statistical techniques. <i>Decision Sciences</i>, <b>28</b>(3), 763-774.</li>
+	 
+   <li id="smi10">Smiraglia, R. P. (2010). A research agenda for cataloging: the CCQ editorial board responds to the year of cataloging research. <i>Cataloging and Classification Quarterly</i>, <b>48</b>(8), 645-651.</li>
+	 
+   <li id="spr00">Sprent, P., &amp; Smeeton, N.C. (2000). <i>Applied nonparametric statistical methods</i>. (3rd. ed.). Boca Raton, FL: Chapman and Hall/CRC.</li>
+	 
+	 <li id="ste46">Stevens,S. (1946). On the theory of scales of measurement. <i>Science,</i>, <b>103</b>(2684), 677–680.</li>
+	 
+   <li id="wes97">Westbrook, L. (1997). Information access issued for interdisciplinary scholars: results of a Delphi study on women’s studies research. <i>The Journal of Academic Librarianship</i>, <b>23</b>(3), 211-216.</li>
+	 
+   <li id="wei89">Weingand, D. (1989). Wisconsin continuing education profile: a Delphi projection of needs, 1986. <i>Journal of Education for Library and Information Science</i>, <b>30</b>(1), 39-50.</li>
+	 
+   <li id="yar2009">Yarnal, B., Harrington, J., Comrie, A., Polsky, C., &amp; Ahlqvist, O. (2009). Lessons learned from the HERO project. In B. Yarnal, C. Polsky, &amp; J. O'Brien (Eds.), <i>Sustainable Communities on a Sustainable Planet: The Human-Environment Regional Observatory Project.</i> Cambridge, UK: Cambridge University Press. 317-338.</li>
+	 
+   <li id="zha09">Zhang, Y., &amp; Salaba, A. (2009). What is next for functional requirements for bibliographic records? A Delphi study. <i>Library Quarterly</i>, <b>79</b>(2), 233-255.</li>
+	 
+	 <li id="zin07">Zins, C. (2007). Conceptions of information science. <i>Journal of the American Society for Information Science and Technology</i>, <b>58</b>(3), 335-350.</li>
+ 
+   </ul>
+   </fieldset>
+   </form>
+	 
+ 
+ <form>  
+ <fieldset>  
+ <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">
+ How to cite this paper
+ </legend>  
+ 
+<div><br />  Ju, B., &amp; Jin, T.   (2013). &quot; Incorporating nonparametric statistics into Delphi studies in library and information science &quot; <em>Information Research</em>, <strong>18</strong>(3) paper xxx. [Available at  http://InformationR.net/ir/18-3/paperxxx.html]</div>  
+ </fieldset>  
+ </form> 
+</section>
+</article>
+<br />
+<section>
+  
+ <table class="footer" style="border-spacing:10;">  
+ <tr>  
+ <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">
+ Find other papers on this subject</td></tr>  
+ <tr><td style="text-align:center; vertical-align:top;"> 
+ <form method="get" action="http://scholar.google.com/scholar" target="_blank">  
+ <table class="footer">  
+  <tr>  
+  <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="&quot;health information&quot; (&quot;information seeking&quot; or &quot;information searching&quot; or &quot;information use&quot;) Canada" /><br />  
+  <input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  </td>  </tr>  
+ </table> 
+  </form>  
+ </td>  
+ <td style="vertical-align:top; text-align:center;">  <!-- Search Google --> 
+ 
+ <form method="get" action="http://www.google.com/custom" target="_blank">
+ <table class="footer">
+ <tr>  
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="&quot;health information&quot; (&quot;information seeking&quot; or  &quot;information searching&quot; or &quot;information use&quot;) Canada" /><br />  
+ <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" />
+ <input type="hidden" name="client" value="pub-5081678983212084" />
+ <input type="hidden" name="forid" value="1" /> 
+  <input type="hidden" name="ie" value="ISO-8859-1" />  
+  <input type="hidden" name="oe" value="ISO-8859-1" />  
+  <input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" />  
+  <input type="hidden" name="hl" value="en" />
+  </td>  
+  </tr>  
+  </table>  
+  </form>
+ </td>  
+ <td style="vertical-align:top; text-align:center;">   
+ <form method="get" action="http://www.bing.com" target="_blank">  
+ <table class="footer">
+ <tr> 
+ <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+ <input type="hidden" name="q" value="&quot;health information&quot; (&quot;information seeking&quot; or &quot;information searching&quot; or &quot;information use&quot;) Canada" /> <br />  
+ <input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" />  
+ <input type="hidden" name="num" value="100" />  
+ </td>  
+ </tr>  
+ </table>  
+ </form> 
+ </td> 
+ </tr>  
+ </table> 
+ 
+
+
+
+ <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/18-3/paperxxx.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+ <br />
+ <div style="text-align:center;"> 
+     <!-- AddThis Button BEGIN -->
+<div style="text-align:center;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5046158704890f2e"></script>
+
+
+<!-- AddThis Button END -->  
+</div>
+<hr />
+
+<h2>Appendices</h2>  
+
+
+
+ <h2>Appendix: Sample instrument</h2>
+ 
+ <figure class="centre">
+   <img src="p589fig2.jpg" alt="" width="623" height="411" />
+   <figcaption>
+  </figcaption>
+	</figure>
+
+	<figure class="centre">
+   <img src="p589fig3.jpg" alt="" width="623" height="750" />
+   <figcaption>
+  </figcaption>
+	</figure>
+
+	<figure class="centre">
+   <img src="p589fig4.jpg" alt="" width="623" height="544" />
+   <figcaption>
+  </figcaption>
+	</figure>
+
+
+<hr />
+ 
+
+
+
+<table class="footer" style="padding:10;"><tr><td style="text-align:center; vertical-align:top;">  
+<br />
+<div>
+    <a href="http://www.digits.net" target="_blank">
+    <img src="http://counter.digits.net/?counter={cac0316a-20fa-c2a4-4d61-e5cda5512410}&amp;template=simple" 
+     alt="Hit Counter by Digits"  />
+  </a></div>
+ </td> 
+<td class="footer" style="text-align:center; vertical-align:middle;">
+  <div>  &copy; the author, 2013. <br />Last updated: xxxxx, 2013 </div>&nbsp;</td> 
+ 
+ <td style="text-align:center; vertical-align:middle;">&nbsp; 
+ 
+  </td></tr>  </table>  
+ </section>
+ <footer>
+
+<hr /> 
+ <table class="footer"><tr><td>
+<div class="button"> 
+ <ul style="text-align: center;">
+	<li><a href="infres183.html">Contents</a> | </li>
+	<li><a href="http://www.informationr.net/ir//iraindex.html">Author index</a> | </li>
+	<li><a href="../irsindex.html">Subject index</a> | </li>
+	<li><a href="../search.html">Search</a> | </li>
+	<li><a href="../index.html">Home</a></li>
+</ul> 
+</div>&nbsp;</td></tr></table>
+ <hr />
+</footer>
+ <script src="http://www.google-analytics.com/urchin.js"
+ type="text/javascript">  </script>  <script type="text/javascript">  _uacct =
+ "UA-672528-1"; urchinTracker(); 
+ </script>  
+ </body>  
+ </html> 

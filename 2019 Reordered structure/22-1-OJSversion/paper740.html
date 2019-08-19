@@ -1,0 +1,745 @@
+<!doctype html>  
+ <html lang="es">  
+ <head> 
+ <meta charset=utf-8 /> 
+  <link href="../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
+
+    <title>Análisis de metadatos de noticias para la extracción de información del código fuente. El software METADATOSHTML</title>
+    <!--Enter appropriate data in the content fields-->
+    <meta content="Análisis de metadatos de noticias para la extracción de información del código fuente. El software METADATOSHTML" name="dcterms.title" />
+    
+<meta name="author" />
+	<meta name="firstname" content="María-José" />
+    <meta name="lastname" content="Baños-Moreno" />
+<meta name="author" />
+	<meta name="firstname" content="Eduardo R." />
+    <meta name="lastname" content="Felipe" />
+ <meta name="author" />
+	<meta name="firstname" content="Juan-Antonio" />
+    <meta name="lastname" content="Pastor-Sánchez" />
+ <meta name="author" />
+	<meta name="firstname" content="Gercina" />
+    <meta name="lastname" content="Lima" />
+ <meta name="author" />
+	<meta name="firstname" content="Rodrígo" />
+    <meta name="lastname" content="Martínez-Bejar" />
+
+    <meta content="Los objetivos de este trabajo son determinar qué esquemas se utilizan para título, resumen, palabras clave, autoría y periódico en prensa; conocer qué pautas siguen los periódicos en la implementación de dichos esquemas; y averiguar cómo esto afecta a la extracción de información." name="dcterms.subject" />
+    <meta content="Los objetivos de este trabajo son determinar qué esquemas se utilizan para título, resumen, palabras clave, autoría y periódico en prensa; conocer qué pautas siguen los periódicos en la implementación de dichos esquemas; y averiguar cómo esto afecta a la extracción de información. Para ello, se define una muestra de diarios y se analiza su código fuente, identificando esquemas utilizados y patrones de uso. Esto permite extraer valores de dato utilizando la aplicación MetadadosHTML. Se han detectado esquemas estándar, ad hoc y propios de los periódicos. Se han hallado diversas prácticas, como valores agrupados en una misma línea de código o por separado; ruido en un valor y errores al referir los nombres de los atributos de esquemas estándar. Estos problemas afectan a la extracción de datos basada en esquemas de metadatos y metadatos en MetadadosHTML. Es necesario avanzar en el uso de esquemas estándar, como Dublin Core o schema.org, favoreciendo la implantación de estos (u otros) en los códigos fuente de noticias. También resulta imprescindible la adopción de buenas prácticas al explicitar datos y valores de datos. Sólo así es posible evolucionar en la interoperabilidad entre sistemas y en la recuperación y reutilización de información." name="description" />
+    <meta content="information technology, newspapers, semantic web, metadata," name="keywords" />
+    <!--leave the following to be completed by the Editor-->
+    <meta content="all" name="robots" />
+    <meta content="Professor T.D. Wilson" name="dcterms.publisher" />
+    <meta content="text" name="dcterms.type" />
+    <meta content="ISSN-1368-1613" name="dcterms.identifier" />
+    <meta content="http://InformationR.net/ir/22-1/paper740.html" name="dcterms.identifier" />
+    <meta content="http://InformationR.net/ir/22-1/infres221.html" name="dcterms.IsPartOf" />
+    <meta content="text/html" name="dcterms.format" />
+    <meta content="es" name="dc.language" />
+    <meta content="http://creativecommons.org/licenses/by-nd-nc/1.0/" name="dcterms.rights" />
+    <meta content="2017-03-15" name="dcterms.issued" />
+    <meta content="global" name="geo.placename" />
+  </head>
+  <body>
+  
+    <article>
+      <h1>Análisis de metadatos de noticias para la extracción de información del código fuente. El software METADATOSHTML</h1>
+<h2 class="author"><a href="#author">María-José Baños-Moreno, Eduardo R. Felipe, Juan-Antonio Pastor-Sánchez, Gercina Lima</a>,  y <a href="#author">Rodrígo Martínez-Bejar</a>.</h2>
+<br />
+
+
+          <blockquote> <strong>Introducción.</strong> Los objetivos de este trabajo son determinar qué esquemas se utilizan para título,  resumen, palabras clave, autoría y periódico en prensa; conocer qué pautas siguen los periódicos en la implementación de dichos esquemas; y averiguar cómo esto afecta a la extracción de información.<br />
+<strong>Metodología.</strong> Para ello, se define una muestra de diarios y se analiza su código fuente, identificando esquemas utilizados y patrones de uso. Esto permite extraer valores de dato utilizando la aplicación MetadadosHTML.<br />
+<strong>Resultados.</strong> Se han detectado esquemas estándar, ad hoc y propios de los periódicos. Se han hallado diversas prácticas, como valores agrupados en una misma línea de código o por separado; ruido en un valor y errores al referir los nombres de los atributos de esquemas estándar. Estos problemas afectan a la extracción de datos basada en esquemas de metadatos y metadatos en MetadadosHTML<br />
+<strong>Conclusiones.</strong> Es necesario avanzar en el uso de esquemas estándar, como Dublin Core o schema.org, favoreciendo la implantación de estos (u otros) en los códigos fuente de noticias. También resulta imprescindible la adopción de buenas prácticas al explicitar datos y valores de datos. Sólo así es posible evolucionar en la interoperabilidad entre sistemas y en la recuperación y reutilización de información. </blockquote>
+
+<p style="text-align:center;"><a href="#abs">Abstract in English</a></p>
+<br />
+		<section>
+<h2>Introducción</h2>
+<p>Los metadatos son el conjunto de atributos y valores de dato que representan un recurso, facilitando su identificación (<a href="#felipe2016">Felipe, 2016</a>; <a href="#abbud2010">Abbud Grácio and Fadel, 2010, pp. 10–11</a>; <a href="#aenor2012">AENOR, 2012</a>; <a href="#hillman2005">Hillman, 2005</a>; <a href="#kallipolitis2012">Kallipolitis, Karpis, and Karali, 2012</a>; <a href="#yaginuma2003a">Yaginuma, Pereira, and Baptista, 2003a</a>). Más específicamente: <em>‘son descripciones estructuradas y codificadas que describen características y propiedades de objetos y recursos para facilitar su localización, recuperación, valoración, administración, persistencia e interoperabilidad’</em> (<a href="#pastor2011">Pastor-Sánchez, 2011, p. 22</a>). Los metadatos tienen como funciones facilitar el descubrimiento de recursos, así como su evaluación y consumo (<a href="#diaz2008">Díaz, Granell, Beltrán Fonollosa, Llaves, and Gould, 2008</a>).</p>
+
+<p>Cuando esos metadatos se organizan en una estructura de elementos comunes (<a href="#pereira2004">Pereira and Baptista, 2004</a>; <a href="#yaginuma2003b">Yaginuma, Pereira, and Baptista, 2003b</a>) se habla de esquemas de metadatos.Estas estructuras, como DC (Dublin Core), están orientadas a la descripción (normalizada) de documentos mediante conjuntos de atributos similares a los contemplados por las normas ISBD, entre otras, para la descripción bibliográfica en catálogos de bibliotecas (<a href="#ortiz1999">Ortiz-Repiso Jiménez, 1999</a>). Es decir, pueden aplicarse para el análisis documental de documentos (<a href="#abadal2009">Abadal and Codina, 2009</a>; <a href="#baptista2001">Baptista and Barbosa Machado, 2001</a>; <a href="#kallipolitis2012">Kallipolitis <em>et al.</em>, 2012</a>; <a href="#yaginuma2003a">Yaginuma <em>et al.</em>, 2003a</a>, <a href="#yaginuma2003b">2003b</a>). Un enfoque, complementario a los anteriores, se centra en el descubrimiento de información a partir de metadatos descriptivos (<a href="#vallez2010">Vallez, Rovira, Codina, and Pedraza-Jiménez, 2010</a>; <a href="#rovira2006">Rovira and Marcos, 2006</a>; <a href="#vasquez2008">Vásquez Paulus, 2008</a>; <a href="#ortiz1999">Ortiz-Repiso Jiménez, 1999</a>). Así, (<a href="#guallar2016">Guallar, Abadal, and Codina, 2016</a>, <a href="#guallar2012">2012</a>), entre otros, ofrecen indicadores para el análisis de los sistemas de consulta de hemerotecas de periódicos, teniendo en cuenta, entre otros, las opciones de acotación temporal, uso de índices (de autores, de personajes, etc.) y búsqueda por palabrasclave. Estos elementos no son más que metadatos asignados a artículos de prensa, que pueden ser recuperados gracias al uso de esquemas de metadatos en los sistemas de recuperación de información, aumentando su efectividad (<a href="#garshol2004">Garshol, 2004</a>; <a href="#vasquez2008">Vásquez Paulus, 2008</a>).</p>
+
+<p>Ahora bien, una recuperación de información exhaustiva, sólo es posible cuando los metadatos son computables, es decir, tratables por máquinas (<a href="#diaz2008">Díaz <em>et al.</em>, 2008</a>), estandarizados y de uso generalizado, especialmente si se pretende la interoperabilidad entre sistemas. Esto aún no se ha producido, principalmente con las etiquetas meta de los encabezados HTML, cuya información muchas veces no describe el contenido real del documento web (<a href="#burgues2009">Burgués, 2009, pp. 3–4</a>). El trabajo actual pone el foco, precisamente, en cinco metadatos de descripción de artículos de prensa escrita: título, resumen, palabras clave, autor/a y medio, recogidos bien como etiquetas meta bien como atributos en otras etiquetas. Continúa así la investigación iniciada en (<a href="#banos2015">Baños-Moreno, Felipe, Pastor-Sánchez, Martínez-Béjar, Rodrigo, and Lima, 2015</a>), donde se expone qué esquemas de metadatos existen en el ámbito periodístico desde dos perspectivas: bibliografía especializada y códigos fuente de una selección de periódicos. En esta publicación se destacan, entre otras: 1) Que existen diversos esquemas, generales y especializados, con distintos grados de implantación; 2) Que los especializados en prensa apenas son utilizados en los códigos analizados; 3) Que en la bibliografía apenas se referencia los esquemas visibles en los códigos fuente; 4) Todo ello dificulta la descripción unificada de recursos y, con ello, la recuperación y reutilización de información disponible en web.</p>
+            
+<p>Partiendo de estas cuestiones, y con vistas a la reutilización de información de actualidad para el modelado de una ontología de dominio (<a href="banos2013">Baños-Moreno, Pastor-Sánchez, and Martínez-Béjar, 2013</a>), se plantean tres objetivos: 1) determinar qué esquemas se utilizan para asignar los atributos indicados; 2) conocer qué pautas se siguen en el uso de dichos esquemas en etiquetas meta y atributos de etiquetas HTML; y 3) averiguar cómo la elección de esquemas y pautas de uso afectan a la extracción de valores de datos (<em>data values</em>). Para ello, se analizan los códigos fuente de una muestra de noticias, identificando tanto esquemas de metadatos como patrones de uso en los elementos de estudio. Para la extracción se emplea una aplicación desarrollada ad hoc que, basándose en los datos de las etapas previas, obtiene automáticamente valores de dato.</p>
+
+<h2>Metodos</h2>
+
+<p>Se definió una muestra de periódicos (<a href="#tabla1">Tabla 1</a>) para la cual se dividió el mundo en 9 zonas, de acuerdo a características geopolíticas, históricas y socioeconómicas. En cada área se seleccionaron aquellos países con mayor Producto Interior Bruto (PIB). Después, se escogió el diario generalista más leído en cada país, de acuerdo a datos de accesos Web y compra de edición en papel de 4International Media and Newspaper (4IMN).</p>
+
+<table class="center" id="tabla1">
+	<caption><br /><strong>Tabla 1. Periódicos utilizados a los que se ha accedido en este trabajo</strong></caption>
+	<thead>
+<tr>
+	<th>Zona del mundo</th>
+	<th>País</th>
+	<th>Periódico</th>
+	<th>Código</th>
+</tr>
+	</thead>
+	<tbody>
+<tr>
+	<td rowspan="5">Europa</td>
+	<td>Alemania</td>
+	<td>Süddeutsche Zeitung</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>Francia</td>
+	<td>Le Monde</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td rowspan="3">Reino Unido</td>
+	<td>The Daily Telegraph</td>
+	<td>121</td>
+</tr>
+<tr>
+	<td>Financial Times</td>
+	<td>122</td>
+</tr>
+<tr>
+	<td>The Economist</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td rowspan="2">Norteamérica</td>
+	<td rowspan="2">Estados Unidos</td>
+	<td>The New York Times</td>
+	<td>201</td>
+</tr>
+<tr>
+	<td>The Wall Street Journal</td>
+	<td>202</td>
+</tr>
+<tr>
+	<td rowspan="2">Latinoamérica</td>
+	<td>Brasil</td>
+	<td>O Globo</td>
+	<td>301</td>
+</tr>
+<tr>
+	<td>México</td>
+	<td>El Universal</td>
+	<td>311</td>
+</tr>
+<tr>
+	<td>Ex-Repúblicas rusas</td>
+	<td>Rusia</td>
+	<td>Pravda</td>
+	<td>401</td>
+</tr>
+<tr>
+	<td colspan="1" rowspan="2">África Subsahariana</td>
+	<td>Nigeria</td>
+	<td>Nigerian Tribune</td>
+	<td>501</td>
+</tr>
+<tr>
+	<td>Sudáfrica</td>
+	<td>Independent Tribune</td>
+	<td>511</td>
+</tr>
+<tr>
+	<td rowspan="3">Asia</td>
+	<td>China</td>
+	<td>China Daily</td>
+	<td>601</td>
+</tr>
+<tr>
+	<td>India</td>
+	<td>The Times of India</td>
+	<td>611</td>
+</tr>
+<tr>
+	<td>Japón</td>
+	<td>Asahi Shimbun</td>
+	<td>621</td>
+</tr>
+<tr>
+	<td rowspan="4">Oriente</td>
+	<td>Arabia Saudí</td>
+	<td>Arab News</td>
+	<td>701</td>
+</tr>
+<tr>
+	<td>Emiratos Árabes Unidos</td>
+	<td>Gulf News</td>
+	<td>711</td>
+</tr>
+<tr>
+	<td>Israel</td>
+	<td>Yedioth Aharonot</td>
+	<td>721</td>
+</tr>
+<tr>
+	<td>Turquía</td>
+	<td>Today's Zaman</td>
+	<td>731</td>
+</tr>
+<tr>
+	<td>Oceanía</td>
+	<td>Australia</td>
+	<td>The Australian Financial Review</td>
+	<td>801</td>
+</tr>
+<tr>
+	<td>Norte de África</td>
+	<td>Egipto</td>
+	<td>The Daily News Egypt</td>
+	<td>901</td>
+</tr>
+	</tbody>
+</table>
+
+<p>Los códigos de la columna <em>Código</em> de la <a href="#tabla1">Tabla 1</a> identifican los periódicos por: zona del mundo (primera cifra), país (segunda cifra) y periódico (tercera cifra). Estos códigos son utilizados a lo largo de este documento para simplificar el texto.</p>
+            
+<p>Para el análisis, se accedió a tres noticias por periódico en días diferentes durante enero y<br />
+febrero de 2016. Para la identificación de metadatos, se revisó el código fuente de los diarios, tanto de forma manual como utilizando el servicio de validación de marcado de contenidos web del W3C (<em>Markup Validation Service</em>).</p>
+            
+<figure class="centre" id="figura1"><img alt="Figura 1: Datos y valores de datos para noticia redactada por (Parker, 2016)" src="p740fig1.png" width="700" /><figcaption><br /><strong>Figura 1: Datos y valores de datos para noticia redactada por (<a href="#parker2016">Parker, 2016</a>)</strong></figcaption></figure>
+                
+<p>Se tuvo en cuenta para ello tanto las etiquetas meta como los atributos que aparecen en el cuerpo de la página web (&lt;body&gt;), en función de las diferentes formas que pueden adoptar. En este sentido, un metadato está compuesto por pares de datos y valores de datos, de la forma en que se muestra en la <a href="#figura1">Figura 1</a>. No se tiene en cuenta en esta categorización aquellos atributos que tienen como único fin la separación en secciones de una página web. Por ejemplo, <em>&lt;div id="Title_e"&gt;</em> ó <em>&lt;div id="article_head"&gt;</em>, utilizados por China Daily y Asahi Shimbun, respectivamente. Tampoco la información en scripts, aunque algunos medios aplican algunos de los esquemas nombrados anteriormente, como schema.org (The Wall Street Journal o Pravda.ru, entre otros).</p>
+            
+<p>A partir del análisis, se hallaron tres tipos de esquemas: estándares, ad hoc y propietarios, descritos en el apartado Resultados. Además, se identificaron una serie de características e incidencias para título, resumen, palabras clave, autor/a y nombre del medio.</p>
+            
+<p>Teniendo en cuenta estos aspectos se diseñó un algoritmo para la extracción de&nbsp; información. Implementado en MetadadosHTML, el algoritmo accede, extrae y almacena las descripciones de noticias de una muestra de más de 5500 noticias obtenidas de los diarios indicados en la <a href="#tabla1">Tabla 1</a>. La idea es similar a (<a href="#burgues2009">Burgués, 2009</a>) que, en ausencia de un estándar de uso común, extrae la información de las etiquetas HTML, para luego generar un XML con el que indexar los documentos y reconoce problemas similares a los hallados en este trabajo, que se detallan a continuación. Otras aproximaciones, como (<a href="#bohannon2012">Bohannon <em>et al.</em>, 2012</a>) diseñan algoritmos que, entre otros elementos del código fuente, también emplean las meta-etiquetas para identificar el contenido de los documentos y sus atributos. Sin embargo, no se tienen en cuenta los estándares de metadatos, y asumen la presencia de ruido en la información extraída, contrarrestándola con reglas de aprendizaje automático para eliminarlo.</p>
+            
+<h2>Resultados</h2>
+            
+<p>El análisis de los esquemas identificados en los códigos fuente llevó a su clasificación en tres categorías, que se describen brevemente a continuación:</p>
+            
+<h3>1. Esquemas externos y reconocidos internacionalmente (esquemas estándar)</h3>
+            
+<p>Dentro de esta categoría están Open Graph Protocol (en adelante OG), Dublin Core (DC), Twitter Cards (TC), hAtom o schema.org (SC). También se incluyen algunas etiquetas meta de HTML, donde el atributo name indica el atributo, o tipo de dato y content el valor del dato. Estas etiquetas meta se refieren al contenido del documento y pueden considerarse ‘nombres de metadatos estándar’ (Hickson <em>et al.</em>, 2014): <em>&lt;meta name="author" content=”...”&gt;</em>, <em>&lt;meta name="description" content=”...”&gt;</em> y <em>&lt;meta name=”keywords” content=”...”&gt;</em>. No incluye <em>&lt;meta name="title" content=”...”&gt;</em>.</p>
+            
+<p>En el caso de utilizar XHTML, uno de los usos de los atributos de metadatos, como property, es representar ‘el contenido del documento, ya que la misma cadena literal puede utilizarse para especificar tanto el contenido del documento como los metadatos’ (<a href="#axelsson2006">Axelsson <em>et al.</em>, 2006</a>). Así, <em>&lt;span property="dc:title" content="..."&gt;</em>, de Nigerian Tribune (501), utiliza el esquema DC para referirse al título de una noticia.</p>
+            
+<p>En cuanto a schema.org (SC), usa microdatos para, mediante el atributo itemprop, referirse a una meta-información (Baños-Moreno <em>et al.</em>, 2015). Este atributo se inserta habitualmente en las etiquetas del cuerpo (&lt;body&gt;), aunque también puede insertarse en las etiquetasmeta (Leithead, Pfeiffer, Navara, and O’Connor, 2012) (véase la Figura 2). Algo similar ocurre con el microformato hAtom 0.1., utilizado por The Daily News Egypt (901), que&nbsp; inserta meta información en &lt;body&gt; tal y como puede verse en la <a href="#figura2">figura 2</a>.</p>
+            
+<figure class="centre" id="figura2"><img alt="Figura 2. Etiquetas meta de The New York Times (201) con el atributo itemprop, sin valores de dato." src="p740fig2.png" width="700" />
+	<figcaption><br /><strong>Figura 2. Etiquetas meta de The New York Times (201) con el atributo itemprop, sin valores de dato.</strong>
+	</figcaption>
+</figure>
+            
+<p>La <a href="#figura3">figura 3</a> resume los esquemas estándar utilizados para título, resumen, palabras clave, autor y nombre del medio.</p>
+            
+<figure class="centre" id="figura3"><img alt="Figura 3: Frecuencia de esquemas estándar en la muestra de periódicos por tipos de metadatogure1: The conceptual framework" src="p740fig3.png" width="700" />
+	<figcaption><br /><strong>Figura 3: Frecuencia de esquemas estándar en la muestra de periódicos por tipos de metadatogure1: the conceptual framework</strong></figcaption>
+</figure>
+            
+<p>Para los atributos analizados, los estándares más utilizados, con diferencia son HTML (100%), OG (90%), TC (71%) y SC (52%), con distintos grados de implementación, especialmente en cuanto a título, resumen y palabras clave. La cifra más elevada (22 diarios) para el nombre del medio, en OG, se debe al uso de dos atributos: <em>site_name</em> y <em>article:publisher</em>, también ocurre con schema.org (SC).</p>
+            
+<p>Para algunos de estos esquemas estándar se han desarrollado validadores que analizan la corrección de las etiquetas y el uso de atributos, como Markup Validation Service, de la W3C, Card validator, de Twitter Cards, ó Structured Data Testing Tool, de Google.</p>
+
+	<h3>2. Esquemas externos para un propósito concreto (esquemas ad hoc).</h3>
+                
+<p>Se han identificado cuatro tipos (Sailthru, Bi3d, Parse.ly y dcsext). La <a href="#figura4">figura 4</a> muestra algunos ejemplos de código, para tres de estos esquemas propietarios.</p>
+	
+<figure class="centre" id="figura4"><img alt="Figura 4. Etiquetas ad hoc de los esquemas de metadatos de Sailthru, Bi3d y Parse.ly" src="p740fig4.png" width="700" /><figcaption><br /><strong>Figura 4. Etiquetas ad hoc de los esquemas de metadatos de Sailthru, Bi3d y Parse.ly</strong></figcaption></figure>
+                    
+<p><strong>Sailthru</strong>, y su tecnología propietaria Horizon ‘realiza un seguimiento del comportamiento en el sitio, móvil y del correo electrónico para desarrollar un perfil de interés único para cada usuario final’ (<a
+href="#sailthru2013">Sailthru, 2013</a>).</p>
+
+<p>El esquema desarrollado por <strong>Bi3d</strong> (Believe in 3D) ‘desarrolla la próxima generación de interfaces humano-ordenador interactivos para la industria del marketing y el entretenimiento’ (<a
+href="#bi3d2013">BI3D, 2013</a>). Parece que, en este momento, no está operativa.</p>
+
+<p><strong>Parse.ly</strong> es otra plataforma de análisis diseñada específicamente para los editores en línea y ofrece tres formas de incorporar estos datos a la página web: JSON-LD; repeated metadata; parsely-page. Parse.ly sigue el esquema NewsArticle de schema.org. The Daily Telegraph (121) utiliza la opción parsely-page, ya obsoleta y reemplazada por JSON-LD pero que aún puede ser rastreada (<a href="#parsesf">Parse.ly, s.f.</a>).</p>
+                    
+<p>Webtrends, otra empresa de análisis web, escanea el código fuente buscando parámetros de consulta Webtrends para añadir a los datos. En la muestra, The Daily Telegraph recurre a su espacio de nombre, <strong>DCSext</strong> para coleccionar datos.</p>
+                    
+<p>En este grupo podría incluirse la etiqueta de <strong>Google</strong>, <em>&lt;meta name="news_keywords" content="..."&gt;</em> creada para que los periódicos indiquen las palabras más relevantes de una noticia (<a
+href="#google2016">Google Inc., 2016</a>).</p>
+
+<p>El siguiente gráfico muestra los esquemas ad hoc utilizados para los datos analizados: título, resumen, palabras clave, autor y nombre del medio.</p>
+                    
+<figure class="centre" id="figura5"><img alt="Figura 5. Frecuencia de esquemas estándar en la muestra de periódicos por tipos de metadato." src="p740fig5.png" width="700" /><figcaption><br /><strong>Figura 5. Frecuencia de esquemas estándar en la muestra de periódicos por tipos de metadato.</strong></figcaption></figure>
+
+<p>Tanto los esquemas externos de propósito específico como los propietarios son utilizados<br />
+de forma residual, por un sólo medio en cada caso (5%), a excepción de la etiqueta meta de Google, <em>news_keywords</em> (30% de la muestra).</p>
+                    
+<h3>3. Esquemas propios, desarrollados por el periódico (esquemas propietarios).</h3>
+                    
+<p>Se utilizan para la estructuración y categorización de sus artículos. Este tipo de esquema es el menosfrecuente, con presencia solamente en dos medios, The New York Times (201) y The Wall Street Journal (202), con dos esquemas propios por cada medio. La <a href="#tabla2">tabla 2</a> muestra algunos elementos del esquema de The New York Times.</p>
+
+<table class="center" id="tabla2">
+	<caption><br /><strong>Tabla 2. Algunos elementos del esquema utilizado por The New York Times. Fuente: (<a
+href="#harris2007">Harris, 2007</a>)</strong></caption>
+	<thead>
+		<tr><th>Campo</th><th>Significado</th><th>Correspondiencia</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>hdl</td><td>Headline</td><td>Titular</td></tr>
+		<tr><td>byl</td><td>Byline</td><td>Autor del artículo</td></tr>
+		<tr><td>lp</td><td>Lead Paragraph</td><td>Resumen</td>		</tr>
+		<tr><td>des</td><td>Subjects / Descriptive Terms</td><td>Palabras clave</td></tr>
+		<tr><td>per</td><td>People</td><td>Identificador para personas</td>	</tr>
+		<tr><td>org</td><td>Organizations</td><td>Identificador para organizaciones</td></tr>
+		<tr><td>geo</td><td>Geographic Locations</td><td>Identificador para lugares geográficos</td>		</tr>
+	</tbody>
+</table>
+
+<p>En ocasiones, también se pueden incrustar datos no visibles y personalizados (<em>embedded custom non-visible data</em>) gracias a HTML5. Tal y como puede verse en la <a href="#figura6">figura 6</a> son atributos sin espacio de nombre cuyo name comienza con la cadena data- y tienen, al menos un carácter después del guión (<a href="#hickson2014">Hickson <em>et al.</em>, 2014</a>) (ver Figura 4). Puesto que son elementos personalizables, se clasifican como esquemas propietarios.</p>
+
+<figure class="centre" id="figura6"><img alt="Figura 6. Atributos data- para artículos en The New York Times y The Wall Street Journal, respectivamente" src="p740fig6.png" width="700" /><figcaption><br /><strong>Figura 6. Atributos data- para artículos en The New York Times y The Wall Street Journal, respectivamente</strong></figcaption></figure>
+
+<p>En relación al tipo de dato, los más asentados son título y resumen. Estos aparecen, mediante etiquetas meta o atributos, en todos los diarios de la muestra. Destaca la ausencia de metadatos, en cualquiera de las formas identificadas, en palabras clave (16%), nombre del medio (19%) y autoría (33%), pues todos son elementos básicos del análisis de contenido (palabras clave) y formal (autor y publicación) de un documento. En el ámbito específico de medios de comunicación impresa, (<a
+href="#yaginuma2003b">Yaginuma <em>et al.</em>, 2003b</a>), en el marco del proyecto Omnipaper, los califica de imprescindibles para la correcta representación de una noticia.</p>
+
+<p>A continuación, se muestran las particularidades de las líneas de código para cada uno de los atributos objeto de este análisis.</p>
+
+<h3>Titular de la noticia</h3>
+
+<p>Para el titular, se utiliza, en todos los casos, la etiqueta <em>&lt;title&gt;</em>, que se refiere al título de una página web cualquiera y, en este caso, para titulares de noticias. Por el contrario, <em>&lt;meta name="title" content="..." /&gt;</em> está menos extendida. Además, se han identificado esquemas de los tres tipos indicados, aunque con un marcado incorrecto. Por ejemplo, en: &lt;h1 itemprop="headline name"&gt;, de The Economist, aparece el atributo <em>headline name</em>, que no reconoce schema.org . También se han hallado atributos con diferente denominación para referirse a este elemento, como <em>hdl</em>, <em>headline</em> o <em>article.origheadline</em> (ver <a
+href="#tabla3">Tabla 3</a>).</p>
+
+<table class="center" id="tabla3">
+	<caption><br /><strong>Tabla 3. Formas de identificar el titular en los medios de la muestra. Fuente: Elaboración propia a partir de los códigos fuente de los diarios de la muestra</strong></caption>
+	<thead>
+		<tr>
+<th>Línea de código</th>
+<th>Tipo de esquema</th>
+<th>N</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>&lt;<strong>title</strong>&gt;...&lt;/title&gt;</td>
+<td>Estándar (HTML)</td>
+<td>21</td></tr><tr><td>&lt;meta property="<strong>og:title</strong>" content="..."&gt;</td><td>Estándar (OG)</td><td>19</td></tr><tr><td>&lt;meta name="<strong>twitter:title</strong>" content="..."&gt;</td><td>Estándar (TC)</td><td>10</td></tr><tr><td>&lt;h1 itemprop="<strong>headline</strong>"&gt;...&lt;/h1&gt;<br />&lt;h1 itemprop="<strong>headline name</strong>"&gt;...&lt;/h1&gt;<br />&lt;h3 itemprop="<strong>headline</strong>" class="headline"&gt;...&lt;/h3&gt;<br />&lt;meta itemprop="<strong>name</strong>" content="..."/&gt;</td><td>Estándar (SC)</td><td>6</td></tr><tr><td>&lt;h1 class="<strong>entry-title</strong>"&gt;...&lt;/h1&gt;</td><td>Estándar (hAtom 0.1)</td><td>1</td></tr><tr><td>&lt;span property="<strong>dc:title</strong>" content="" class="..."&gt;</td><td>Estándar (DC)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>sailthru.flytitle</strong>" content="..." /&gt;</td><td>Ad hoc (Sailthru)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>bi3dArtTitle</strong>" content=" " /&gt;</td><td>Ad hoc (Bi3D)</td><td>1</td></tr><tr><td>&lt;meta name="parsely-page" content='{"<strong>title</strong>": "..." .../&gt;</td><td>Ad hoc (Parse.ly)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>hdl</strong>" content="..." /&gt;</td><td>Propietario (201)</td><td>1</td></tr><tr><td>&lt;div id="..." aria-label="..." role="..." class="..." <strong>data-title</strong>="..."...&gt;...&lt;/div&gt;</td><td>Propietario (201)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>article.origheadline</strong>" content="..." /&gt;<br />&lt;meta name="<strong>article.headline</strong>" content="..." /&gt;</td><td>Propietario (202)</td><td>1</td></tr><tr><td>&lt;li class="..." ... <strong>data-headline</strong>="..."&gt;...&lt;/li&gt;</td><td>Propietario (202)</td><td>1</td></tr></tbody></table>
+
+<p>En ocasiones, además, el texto incluye ruido, información que no es propiamente el titular. Por ejemplo: <em>&lt;title&gt;Jeremy Corbyn tries to force public schools to open up music, arts, sport facilities to state schoolchildren - Telegraph&lt;/title&gt;</em>.</p><h3>Resumen o descripción.</h3><p>Este elemento cuando es una noticia, suele tratarse de un subtítulo o bien la entradilla, ‘<em>un resumen lo suficientemente completo y autónomo como para que el lector conozca lo fundamental de la noticia sólo con leerlo</em>’ (<a href="#lajusticia2000">Lajusticia, 2000</a>).</p><p>Se han identificado esquemas de los tres tipos indicados (<a href="#tabla4">tabla 4</a>) pero, como con el titular, con un marcado incorrecto. Así, en &lt;p class="article entry-summary&gt;, de Süddeutsche Zeitung (101), el atributo class="article entry-summary" no se corresponde con el definido por el esquema de hAtom, en el que parece estar basado, siendo class="entry-summary" el correcto.</p>
+
+<table class="center" id="tabla4">
+	<caption><br /><strong>Tabla 4. Formas de identificar el resumen en los medios de la muestra. Fuente: Elaboración propia a partir de los códigos fuente de los diarios de la muestra</strong></caption>
+	<thead>
+		<tr>
+<th>Línea de código</th>
+<th>Tipo de esquema</th>
+<th>N</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>&lt;meta name="<strong>description</strong>" content="..."&gt;</td>
+<td>Estándar (HTML)</td>
+<td>18</td></tr><tr><td>&lt;meta property="<strong>og:description</strong>" content="..." /&gt;</td><td>Estándar (OG)</td><td>17</td></tr><tr><td>&lt;meta name="<strong>twitter:description</strong>" content="..."&gt;</td><td>Estándar (TC)</td><td>9</td></tr><tr><td>&lt;h2 class="..." itemprop="<strong>description</strong>"&gt;...&lt;/h2&gt;<br />&lt;meta itemprop="<strong>description</strong>" name="..." content="..." /&gt;</td><td>Estándar (SC)</td><td>5</td></tr><tr><td>&lt;p class="<strong>article entry-summary</strong>"&gt;...&lt;/p&gt;</td><td>Estándar (hAtom 0.1)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>lp</strong>" content="..." /&gt;</td><td>Propietario (201)</td><td>1</td></tr><tr><td>&lt;div id="..." aria-label="..." role="..." class="..." <strong>data-description</strong>="..." ...&gt;...&lt;/div&gt;</td><td>Propietario (201)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>article.summary</strong>" content="..." /&gt;</td><td>Propietario (202)</td><td>1</td></tr><tr><td>&lt;li class="..." ... <strong>data-summary</strong>="..."&gt;...&lt;/li&gt;</td><td>Propietario (202)</td><td>1</td></tr></tbody></table>
+
+<p>A veces, también el texto incluye ruido. Por ejemplo, El Universal comienza el texto con su perfil de Twitter: <em>&lt;meta name="description" content="metropoli@eluniversal.com.mx ..." /&gt;</em>.</p><h3>Palabras clave.</h3><p>Las palabras clave son términos que, en su conjunto, representan el contenido de un documento. En general, se utilizan dos formas para referirse a este elemento: <em>keywords y tag</em>. En la <a href="#tabla5">tabla 5</a><br />muestra el código a extraer, de qué esquema y en qué periódicos aparece.</p>
+
+<table class="center" id="tabla5">
+	<caption>Tabla 5. Formas de identificar las palabras clave en los medios de la muestra. Fuente: Elaboración propia a partir de los códigos fuente de los diarios de la muestra</caption>
+	<thead>
+		<tr>
+<th>Línea de código</th>
+<th>Tipo de esquema</th>
+<th>N</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>&lt;meta name="<strong>keywords</strong>" content="..."&gt;</td>
+<td>Estándar (HTML)</td>
+<td>14</td></tr><tr><td>&lt;meta property="<strong>article:tag</strong>" content="..." /&gt;</td><td>Estándar (OG)</td><td>4</td></tr><tr><td>&lt;meta itemprop="<strong>keywords</strong>" content="..." /&gt;</td><td>Estándar (SC)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>sailthru.tags</strong>" content="..." /&gt;</td><td>Ad hoc (Sailthru)</td><td>1</td></tr><tr><td>&lt;meta name="parsely-page" content='{...,"<strong>tags</strong>": ["..."]}'/&gt;</td><td>Ad hoc (Parse.ly)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>news_keywords</strong>" content="..."&gt;</td><td>Ad hoc (Google)</td><td>7</td></tr><tr><td>&lt;meta name="<strong>DCSext.cmsSect</strong>" content="... " /&gt;</td><td>Ad hoc (DCSext)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>org</strong>" content="..." /&gt;<br />&lt;meta name="<strong>des</strong>" content="..." /&gt;<br />&lt;meta name="<strong>geo</strong>" content="..." /&gt;<br />&lt;meta name="<strong>per</strong>" content="..." /&gt;</td><td>Propietario (201)</td><td>1</td></tr></tbody></table>
+
+<p>Para este dato, destacan algunos aspectos que influyen en la extracción de información a partir<br />del código fuente:</p>
+
+<ol>
+<li><strong>Campos repetibles:</strong> Casi todos los medios incluyen en una misma línea el conjunto de<br />palabras clave que representa el contenido de un artículo. Algunos periódicos, sin<br />embargo, repiten la meta etiqueta con valores diferentes, tantas veces como palabras<br />clave refiera, como se muestra en las tablas <a
+href="#tabla6">6</a> y <a href="#tabla7">7</a>.</li>
+</ol>
+
+<table class="center" id="tabla6">
+	<caption><br /><strong>Tabla 6. Periódicos que repiten las etiquetas meta para las palabras clave</strong></caption>
+	<thead>
+		<tr>
+<th>Línea de código</th>
+<th>Repiten etiqueta</th>
+<th>No la repiten</th>
+    <th>Total</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>&lt;<strong>meta name</strong>="keywords" <strong>content</strong>="..."&gt;<br />
+</td><td>1</td>
+<td>13</td><td>14</td></tr>
+  <tr>
+    <td><strong>&lt;meta property="</strong>article:tag<strong>" content="..." /&gt;</strong></td>
+    <td>3</td>
+    <td>1</td><td>4</td>
+  </tr>
+  <tr>
+    <td><strong>&lt;meta name="</strong>org<strong>" content="..." /&gt;<br />&lt;meta name="</strong>des<strong>" content="..." /&gt;<br />&lt;meta name="</strong>geo<strong>" content="..." /&gt;<br />&lt;meta name="</strong>per<strong>" content="..." /&gt;</strong></td>
+    <td>203</td>
+    <td>---</td><td>1</td>
+  </tr>
+  </tbody>
+  </table>
+  
+<ol start="2"><li><strong>Mismo propósito, información diferente:</strong> The New York Times (201) muestra las<br />palabras clave en distintas etiquetas meta y rompe el patrón de otros esquemas, pues no<br />recoge la misma información, aunque el fin del esquema es el mismo.</li><li><strong>Escasa categorización:</strong> The New York Times es el único diario que en un esquema<br />propio, el tipo de palabras clave (<a
+href="#tabla7">tabla 7</a>): des → descriptores; org&nbsp;→ organización;<br />per → persona; geo → lugar.</li></ol>
+
+<table class="center" id="tabla7">
+	<caption>Tabla 7. Etiquetas meta de The New York Times (201) para mostrar las palabras clave</caption>
+	<thead>
+		<tr>
+<th>Tipo de esquema</th>
+<th>Línea de código fuente</th>
+
+    
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>Estándar (OG)</td><td>&lt;meta property="article:tag" content="Presidential Election of 2016" /&gt;<br />&lt;meta property="article:tag" content="Republican Party" /&gt;<br />&lt;meta property="article:tag" content="Cruz, Ted" /&gt;<br />&lt;meta property="article:tag" content="Primaries and Caucuses" /&gt;<br />&lt;meta property="article:tag" content="Iowa" /&gt;</td>
+</tr>
+  <tr>
+    <td>Propietario</td>
+    <td>&lt;meta name="des" content="Presidential Election of 2016" /&gt;<br />&lt;meta name="org" content="Republican Party" /&gt;<br />&lt;meta name="per" content="Cruz, Ted" /&gt;<br />&lt;meta name="des" content="Primaries and Caucuses" /&gt;<br />&lt;meta name="geo" content="Iowa" /&gt;</td>
+    
+  </tr>
+  <tr>
+    <td>Estándar (HTML)</td>
+    <td>&lt;meta name="keywords" content="Presidential Election of 2016,Republican Party,Cruz Ted,Primaries and Caucuses,Iowa" /&gt;</td>
+    
+  </tr><tr><td>Ad hoc (Google)</td><td>&lt;meta name="news_keywords" content="Iowa" /&gt;</td></tr>
+    
+    
+  </tbody></table>
+  
+  <ol start="4">
+  <li><strong>Ruido en el valor de dato:</strong> Como en los casos de titular y resumen, a veces se incluye en esta etiqueta información que no corresponde a este espacio. Por ejemplo:
+  
+    <ol style="list-style-type: lower-alpha;">
+  		<li>En <em>&lt;meta name="news_keywords" content="VW, Matthias M&amp;uuml;ller, Volkswagen, Wirtschaft"&gt;</em>, Süddeutsche Zeitung (101) incluye el nombre del autor del artículo. También lo hace The Daily Telegraph (121).</li>
+  <li>En <em>&lt;meta name="keywords" content="israel, news, yedioth, ahronoth, english, ..., breaking news, jew, jews, www.ynetnews.com"&gt;</em> Yedioth Aharonot (721) incluye el nombre del medio, la sección de la noticia y la URL del medio.</li>
+  <li>Arab News (701) repite la etiqueta <em>&lt;meta name="keywords" content="..."/&gt;</em>: la primera vez hace referencia a la sección en la que se ha clasificado la noticia; la segunda recoge las palabras clave (<a href="#figura7">figura 7</a>).</li>
+</ol>
+</li>
+</ol>
+
+<figure class="centre" id="figura7">
+	<img alt=" Figura 7. Etiquetas meta estándar (HTML) usadas por Arab News (7011) para sección y las palabras clave"
+src="p740fig7.png" width="700" />
+	<figcaption><br /><strong>Figura 7. Etiquetas meta estándar (HTML) usadas por Arab News (7011) para sección y las palabras clave</strong></figcaption>
+</figure>
+
+<ol start="5">
+<li><strong>Código fuente con fines publicitarios:</strong> Finalmente, se puede destacar la orientación a cuestiones publicitarias de algunos elementos de descripción de noticias, habitualmente mediante Javascripts. Este aspecto no se ha tenido en cuenta en este trabajo.</li>
+</ol>
+
+<p>Todos los periódicos recogen en su código fuente líneas para palabras clave, con tres excepciones: Le Monde (111), Nigerian Tribune (501) e Independent Online (502).</p><h3>Autor de la noticia.</h3><p>Autor/a es la persona o personas que han escrito una noticia y en los códigos fuente suele aparecer con dos denominaciones: <em>author</em> ó <em>creator</em> (<a href="#tabla8">tabla 8</a>).</p>
+
+<p>Para este dato, destacan estos aspectos:</p>
+
+<ol>
+<li><strong>Mismo propósito, información diferente:</strong> el valor de dato de la etiqueta meta no siempre se corresponde con el nombre de quien ha redactado el artículo. Por ejemplo, <em>&lt;meta name="author" content="..."&gt;</em>, de Süddeutsche Zeitung (101), muestra el nombre del medio. Algo similar sucede con <em>&lt;meta name="twitter:creator"&gt;</em>, de The Economist (122), que indica como valor la sección en que se publica la noticia. Otros utilizan esta misma línea para hacer referencia al perfil de Twitter del medio</li>
+<li><strong>Errores de marcado:</strong> The Daily Telegraph (121) marca incorrectamente el atributo de OG para el objeto article en <em>&lt;meta property="article:authorName" content="..." /&gt;</em>, en lugar de <em>article:author</em>.</li>
+<li><strong>Dos atributos, mismo valor:</strong> The New York Times (201) hace referencia a autor y creador en la misma línea, con el mismo valor ([Web Hypertext Application Technology Working Group (WHATWG)], 2016a): <em>&lt;span ... itemprop="author creator" ...&gt;</em>.</li>
+<li><strong>Campos repetibles:</strong> Cuando una noticia ha sido escrita por varios autores, habitualmente se repiten las líneas de código.</li><li>Otros medios recogen este dato como una palabra clave de la noticia o bien lo que aparece es un enlace al conjunto de noticias redactadas por la misma persona.</li>
+</ol>
+
+<table class="center" id="tabla8">
+	<caption><br /><strong>Tabla 8. Formas de identificar autor/a en los medios de la muestra</strong></caption>
+	<thead>
+		<tr>
+<th>Línea de código</th>
+<th>Tipo de esquema</th>
+<th>N</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>&lt;meta name="<strong>author</strong>" content="..."&gt;</td>
+<td>Estándar (HTML)</td>
+<td>4</td></tr><tr><td>&lt;meta property="article:authorName" content="..." /&gt;<br />&lt;meta property="article:<strong>author</strong>" content="..." /&gt;</td><td>Estándar (OG)</td><td>2</td></tr><tr><td>&lt;span itemprop="<strong>author</strong>" class="..."&gt;...&lt;/span&gt;<br />&lt;div class="..." itemprop="<strong>author</strong>" ...&gt;...&lt;/div&gt;<br />&lt;b itemprop="<strong>author</strong>" ...&gt;...&lt;/b&gt;<br />&lt;span class="byline" itemprop="<strong>author creator</strong>" itemscope itemtype="http://schema.org/Person" itemid="..."&gt;...&lt;/span&gt;</td><td>Estándar (SC)</td><td>4</td></tr><tr><td>&lt;meta name="twitter:<strong>creator</strong>" content="... " /&gt;</td><td>Estándar (TC)</td><td>6</td></tr><tr><td>&lt;meta name="parsely-page" content='{...,"<strong>authors</strong>": ["..."]}'/&gt;</td><td>Ad hoc (Parse.ly)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>DCSext.author</strong>" content="..." /&gt;</td><td>Ad hoc (DCSext)</td><td>1</td></tr><tr><td>&lt;meta name="<strong>byl</strong>" content="..." /&gt;</td><td>Propietario (201)</td><td>1</td></tr><tr><td>&lt;div id="..." aria-label="..." role="..." class="..." data-shares="..." ... <strong>data-author</strong>="..." ...&gt;...&lt;/div&gt;</td><td>Propietario (201)</td><td>1</td></tr><tr><td>&lt;li class="..."... <strong>data-authors</strong>="..."&gt;...&lt;/li&gt;</td><td>Propietario (202)</td><td>1</td></tr>
+</tbody>
+</table>
+
+<p>Para este dato no se identificó ningún metadato en Pravda (401), Nigerian Tribune (501), China Daily (601), The Times of India (602), Asahi Shimbun (603), Arab News (701) ni en Yedioth Aharonot (721).</p>
+
+<p>HTML5 permite expresar la autoría mediante la etiqueta <em>rel=”author”</em>, Este atributo, escaso en la muestra, no se ha tenido en cuenta en este trabajo, ya que HTML5 aún no se ha asentado.</p>
+
+<h3>Nombre del periódico</h3>
+
+<p>El medio es el que canaliza y publica los artículos de sus periodistas, agencias e invitado/as. Esta información es susceptible de ser expresada en diversos campos, pues el periódico es, normalmente, el propietario del sitio web que recoge los artículos, dueño del copyright de la información que publica, tiene uno o varios perfiles en redes sociales, etc.</p>
+
+<p>Para este dato, destacan estos aspectos:</p>
+
+<ol>
+<li><strong>Diferentes atributos para un mismo tipo de información.</strong> Existen varios atributos que, aunque en principio están destinados a fines diferentes, suelen mostrar el nombre del medio: publicador (<em>publisher</em>), copyright, nombre del sitio web (<em>site name</em>), etc.</li>
+<li><strong>Mismo atributo, diferentes valores de dato.</strong> Un aspecto a destacar es el uso de códigos para identificar el medio, como hacen O Globo (301) o The Daily Telegraph (121), de quien es esta etiqueta meta: <em>&lt;meta property="article:publisher" content="143666524748" /&gt;</em>; Otros, como The Economist (122), The Wall Street Journal (202), The Australian Financial Review (801) o Daily News Egypt (901), lo completar con la URL de su perfil en Facebook.</li>
+<li><strong>Otros datos como ruido en la etiqueta meta o atributo correspondiente.</strong> En ocasiones, este metadato es declarado en las etiquetas donde debería aparecer como valor de dato el nombre del autor de un artículo, aún cuando en la noticia aparece una persona con nombre y apellidos.</li>
+<li><strong>Nombre del medio como ruido en otros datos.</strong> Es frecuente encontrar el nombre del medio entre las etiquetas &lt;Title&gt; y &lt;/Title&gt;, complementando al título, e incluso entre las palabras clave de la noticia. No se han tenido en cuenta en la Tabla 9. Por otro lado, como se ha indicado en el bloque anterior, Süddeutsche Zeitung (101) recoge este dato en la etiqueta meta de autor, contabilizándose en la Tabla 10, por lo que no se tiene en cuenta en este punto. Lo mismo sucede con <em>&lt;meta name="twitter:creator" content="..." /&gt;</em>, usada por O Globo (301).</li>
+<li><strong>Etiquetas que no son estándar o han dejado de ser utilizadas.</strong> Entre las etiquetas meta, las cuatro vistas anteriormente son consideradas estándar (<a href="#hickson2014">Hickson <em>et al.</em>, 2014</a>; <a href="#whatwg2016b">WHATWG, 2016b</a>). No ocurre así con <em>&lt;meta name="copyright" content="..."&gt;</em>, que podría ser sustituida por dcterms.rights, entre otras posibilidades. Sólo es utilizada por Süddeutsche Zeitung (101) y no se recoge en la Tabla que sigue. También se ha encontrado un caso de uso de la etiqueta <em>&lt;acronym title="..."&gt;...&lt;/acronym&gt;</em>, por The Financial Times (123), dónde el valor del atributo “title” es el nombre del medio. Esta etiqueta ya no es soportada en HTML5 y ha sido reemplazada por &lt;abbr&gt;, sin uso en la muestra.</li>
+<li>Finalmente, The New York Times (201), como con el autor de la noticia, usa una misma línea para hacer referencia a tres atributos, poseedor del copyright de la noticia, proveedor de la noticia y organización fuente, con el mismo valor (<a
+href="#whatwg2016a">WHATWG, 2016a</a>): <em>&lt;span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="http://schema.org/Organization" itemid="..."&gt;</em>.</li>
+</ol>
+
+<p>La <a href="#tabla9">tabla 9</a> resume los esquemas identificados para el nombre del medio.</p>
+
+<table class="center" id="tabla9">
+	<caption><br /><strong>Tabla 9. Formas de identificar autor/a en los medios de la muestra</strong></caption>
+	<thead>
+		<tr>
+<th>Línea de código</th>
+<th>Tipo de esquema</th>
+<th colspan="2" rowspan="1">N</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>&lt;acronym title="..."&gt;...&lt;/acronym&gt;</td>
+<td>Estándar (HTML)</td>
+<td colspan="2" rowspan="1">1</td></tr>
+  <tr>
+    <td>&lt;meta property="og:<strong>site_name</strong>" content="..."&gt;</td>
+    <td colspan="1" rowspan="2">Estándar (OG)</td>
+    <td>16</td><td colspan="1" rowspan="2">22</td>
+  </tr>
+  <tr>
+    <td>&lt;meta property="article:<strong>publisher</strong>" content="..." /&gt;</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>&lt;span id="publisher" itemprop="<strong>Publisher</strong>" ...&gt;...&lt;/span&gt;<br />&lt;meta itemprop="<strong>publisher</strong>" content="..."&gt;<br />&lt;div class="logo" itemscope itemprop="<strong>publisher</strong>" itemtype="http://schema.org/Organization"&gt;...&lt;/div&gt;</td>
+    <td colspan="1" rowspan="2">Estándar (SC)</td>
+    <td>4</td><td colspan="1" rowspan="2">6</td>
+  </tr>
+  <tr>
+    <td>&lt;span itemprop="<strong>copyrightHolder provider sourceOrganization</strong>" itemscope itemtype="http://schema.org/Organization" itemid="..."&gt;...&lt;/span&gt;<br /><br />&lt;div itemscope itemprop="<strong>copyrightHolder</strong>" itemtype="http://schema.org/Organization"&gt;...&lt;/div&gt;<br />&lt;meta itemprop="name" content="..."&gt;</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>&lt;meta name="twitter:<strong>site</strong>" content="..." /&gt;<br />&lt;meta name="twitter:<strong>site</strong>" value="..." /&gt;</td>
+    <td>Estándar (TC)</td>
+    <td colspan="2" rowspan="1">10</td>
+  </tr>
+  <tr>
+    <td>&lt;meta name="<strong>DC.publisher</strong>" content="..."&gt;</td>
+    <td>Estándar (DC)</td>
+    <td colspan="2" rowspan="1">1</td>
+  </tr>
+  <tr>
+    <td>&lt;meta name="<strong>cre</strong>" content="..." /&gt;</td>
+    <td>Propietario (201)</td>
+    <td colspan="2" rowspan="1">1</td>
+  </tr>
+  <tr>
+    <td>&lt;meta name="<strong>page.site</strong>" content="wsj" /&gt;</td>
+    <td>Propietario (201)</td>
+    <td colspan="2" rowspan="1">1</td>
+  </tr>
+</tbody>
+</table>
+
+<p>Igual que ocurre con el autor, existe un atributo <em>rel=”publisher”</em>, que indica que el dato que aparece en la etiqueta, habitualmente una página web o el perfil de alguna red social del medio, se refiere a un publicador. Véase, por ejemplo, <em>&lt;a href="https://plus.google.com/+arabnews" rel="publisher" ...&gt;</em>, de Arab News (701). No se ha tenido en cuenta en la tabla anterior.</p><p>Para este metadato no se identificó ningún metadato en Nigerian Tribune (501), China Daily (601), Arab News (701) ni en Gulf News (711).</p>
+
+<h2>El software MetadadosHTML.</h2>
+
+<p>Dada la diversidad de notaciones identificadas para los distintos datos, se desarrolló un software para la extracción de información de la muestra de noticias en HTML, almacenadas inicialmente en una hoja de cálculo. Para la base de datos se utilizó Microsoft Access. De esta forma, esposible mantener disponible en el tiempo la información extraída para su consulta. Para la construcción del algoritmo se utilizó el lenguaje Object Pascal. La primera etapa consistió en la construcción de una base de datos, compuesta por tres Tablas (<a href="#tabla10">tabla 10</a>), que facilitara la relación entre sus elementos. En esta etapa también se importaron los datos de la hoja de cálculo a la Tabla URL.</p>
+
+<table class="center" id="tabla10">
+	<caption><br /><strong>Tabla 10. Tablas que componen la base de datos de MetadadosHTML</strong></caption>
+	<thead>
+		<tr>
+<th>Nombre de la tabla</th>
+<th>Objetivo</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>URL<br />
+</td><td>Almacenar las direcciones (URLs) de las noticias</td>
+</tr><tr><td>Tags</td><td>Almacenar las etiquetas meta y atributos que se desean extraer</td></tr><tr><td>Metadados</td><td>Almacena el contenido de las etiquetas meta y atributos de la Tabla Tags</td></tr>  
+  </tbody>
+  </table>
+  
+<p>Posteriormente, a partir del análisis previo, se registraron etiquetas meta y atributos en la tabla Tags. Este proceso conlleva un importante esfuerzo pues, como ya se ha indicado, los periódicos optaron por notaciones diferentes, sin seguir un patrón, a veces, en formato propietario. Con esta infraestructura, se inició el desarrollo propiamente dicho del software.</p>
+
+<p>MetadadosHTML tiene tres funcionalidades:</p>
+
+<ol>
+<li>Acceso al código fuente de las URLs contenidas en la hoja de cálculo inicial. Debido al gran número de URLs, se descargaron todos los códigos HTML de las noticias en local, de forma que su análisis fuera realizado sin necesidad de acceder de nuevo a las páginas web. De esta forma se favorece la independencia de la conexión de datos y mayor velocidad de procesamiento posterior.</li>
+<li>Definición de las etiquetas meta y atributos de cada medio, teniendo en cuenta sus particularidades y formatos. Esta realiza el análisis del documento para la extracción de los valores de dato deseados. Debido a la ausencia de patrones de notación en parte del corpus seleccionado, hubo una dificultad adicional para la extracción de información. La estrategia adoptada para resolver este problema fue, junto a las etiquetas meta y atributos de la Tabla Tags, la inclusión de los marcadores de inicio y fin de cada elemento. El objetivo es relacionarlos en el algoritmo por el nombre. Esto sería suficiente para documentos bien formados y válidos según la notación W3C.</li>
+<li>Extracción del contenido de los códigos fuente, exportación a una hoja de cálculo y almacenamiento para su consulta y análisis posterior.</li>
+</ol>
+
+<p>La <a href="#figura8">figura 8</a> muestra una captura de pantalla de la aplicación MetadadosHTML.</p>
+
+<figure class="centre" id="figura8"><img alt=" Figura 8. Captura de pantalla de MetadadosHTML" src="p740fig8.png"
+width="700" />&nbsp;<figcaption> Figura 8. Captura de pantalla de MetadadosHTML</figcaption>
+</figure>
+
+<p>Los datos extraídos reflejan la variabilidad de la problemática descrita anteriormente, con campos vacíos, porque no son utilizados por un periódico, o ruido informativo por la inclusión de datos que no corresponden al metadato que se analiza.</p>
+
+<table class="center" id="tabla11">
+	<caption><br /><strong>Tabla 11. Información sobre el metadato "palabras clave" para su extracción con MetadadosHTML</strong></caption>
+	<thead>
+		<tr>
+<th>Orden</th>
+<th>Línea de código</th>
+<th>Medios de dónde extraer</th>
+    <th>Nota</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+<td>1</td><td>&lt;meta name="<strong>keywords</strong>" content=""&gt;</td>
+<td>101; 121; 123; 202; 311; 401; 601; 602; 603; 701; 711; 721</td><td>Para 201 se utiliza 4, 5, 6 y 7 Campo repetible en 701</td></tr>
+  <tr>
+    <td>2</td>
+    <td>&lt;meta name="<strong>news_keywords</strong>" content=""&gt;</td>
+    <td>122; 731; 801</td><td>Para 201 se utiliza 4, 5, 6 y 7</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>&lt;meta property="article:<strong>tag</strong>" content="" /&gt;</td>
+    <td>301; 901</td><td>Campo repetible</td>
+  </tr><tr><td>4</td><td>&lt;meta name="<strong>des</strong>" content=”" /&gt;</td><td>201</td><td>Palabras clave</td></tr><tr><td>5</td><td>&lt;meta name="<strong>org</strong>" content=”" /&gt;</td><td>201</td><td>Organizaciones</td></tr><tr><td>6</td><td>&lt;meta name="<strong>per</strong>" content=”" /&gt;</td><td>201</td><td>Personas</td></tr><tr><td>7</td><td>&lt;meta name="<strong>geo</strong>" content=”" /&gt;</td><td>201</td><td>Lugares</td></tr>
+  </tbody></table>
+  
+  <p>Una posible solución pasa por establecer un orden de extracción, en el que se defina, en cada periódico, qué esquema utilizar y con qué condiciones (repetición del proceso, por ejemplo). La <a href="#tabla11">tabla 11</a> indicaría el orden de extracción para las palabras clave.</p><h2>Conclusiones.</h2><p>La literatura sobre estructuras para la descripción de documentos y sobre cómo aplicarlos en sistemas de información es abundante (véanse las numerosas referencias sobre ISBD, MARC, FRBR, EAD y DC, por ejemplo (<a href="#chen2013">Chen and Ke, 2013</a>; <a href="#hillman2005">Hillman, 2005</a>). Sin embargo, son pocos los trabajos que, como (<a href="#rovira2006">Rovira and Marcos, 2006</a>), analizan el uso de estos esquemas, menos en los códigos fuente de documentos web. Tampoco abundan las aportaciones que ahondan en las prácticas de aplicación de estos esquemas, como el ya citado (<a href="#rovira2006">Rovira and Marcos, 2006</a>), ó (<a href="#chuttur2014">Chuttur, 2014</a>), que destaca la reducción del número de errores cuando, en la asignación de metadatos se usan códigos de buenas prácticas. Ya en el área de medios de comunicación impresa, (<a href="#valdes2016">Valdés Pérez, Alemán Jiménez, and García Rivas, 2016</a>), entre otras cuestiones, analizan la descripción de sitios de prensa cubana con metadatos y subrayan que, menos de un tercio de los portales analizados utilizan meta-etiquetas correctamente. Este trabajo aporta nuevas evidencias sobre el estado actual de la descripción de noticias web mediante metadatos. Asimismo, puede resultar útil para mejorar la precisión en la recuperación de noticias web en sistemas de información y su detección por web crawlers, programas de rastreo de páginas web a través de sus enlaces que actúan sobre el código fuente de las páginas web (<a href="#blazquez2013">Blázquez Ochando, 2013</a>).</p>
+  
+  <p>La variedad de esquemas de metadatos hallados en los códigos fuente puede considerarse ligada a los distintos propósitos por los que se desarrollan y utilizan: 1) Facilitar la interoperabilidad entre sistemas mediante elementos puestos en común, como schema.org (SC) o Dublin Core (DC); 2) Optimizar la búsqueda y recuperación de información en motores, como las etiquetas meta keywords, news_keywords o los esquemas de The New York Times, The Wall Street Journal; 3) Mejorar la visualización de la información a través de redes sociales (esencialmente Facebook y Twitter); 4) Realizar acciones de seguimiento y analítica web, como Sailthru o Webtrends. Esta variedad de esquemas, con distintos grados de aplicación, muestra que ningún estándar ha logrado la aceptación global. Por tanto, sigue siendo necesario avanzar hacia ‘estándares para que los datos estén disponibles en distintos formatos, que hagan más versátil su reutilización’ (<a href="#pastor2016">Pastor Sánchez, 2016</a>). La evolución en la implantación de esquemas de metadatos o, mejor aún, su uso generalizado, es una de las cuestiones que marcará el camino hacia el intercambio y recuperación de información en y entre sistemas, sin importar el cambio <br />de tecnología. Para ello, se debe trabajar en que los metadatos sean: únicos, estables, seguros, de acceso público y persistentes (Vásquez Paulus, 2008). En este sentido, (<a href="#garcia2013">García-Marco, 2013</a>) destaca dos esquemas fundamentales como candidatos: a) schema.org, cuyo uso va extendiéndose en la descripción física y semántica de documentos web; b) Dublin Core (DC), bien asentado en la comunidad científica, ya utilizado para diversos tipos de documentos, como revistas científicas (<a href="#felipe2016">Felipe, 2016</a>), el más estable y extendido, y aspirante preferente para la descripción de recursos digitales (<a href="#piedra2015">Piedra <em>et al.</em>, 2015</a>; <a href="#vasquez2008">Vásquez Paulus, 2008</a>).</p>
+  
+  <p>Una segunda conclusión tiene que ver con la calidad de los metadatos, esto es, con la forma de expresar los valores de datos. Se han encontrado prácticas divergentes como el uso de una o varias líneas de código, la inclusión de un valor en un dato que no corresponde (nombre del medio entre las palabras clave, por ejemplo). Esto, de nuevo, dificulta la extracción de información, por cuanto es necesario no sólo conocer esquemas y atributos para cada tipo de información y periódico, también qué prácticas sigue cada medio. Además, se ha observado que algunos periódicos cometen errores al referir los nombres de los atributos de esquemas estandarizados, lo que impediría la extracción de información siguiendo los esquemas. Resulta, por tanto, imprescindible la adopción de buenas prácticas en el marcado de las noticias, en la forma en que los estándares lo indican. Una buen comienzo sería explicitar qué esquemas de metadatos utilizan los periódicos, documentando qué se utiliza y cómo, con textos explicativos y espacios de nombre. En definitiva, se trata de crear una cultura de metadatos (<a href="#vasquez2008">Vásquez Paulus, 2008</a>).</p>
+  
+  <p>En cuanto a MetadadosHTML, en su estado actual, está limitado por posibles cambios en los códigos fuente de los medios. Si un periódico redefine alguna de sus etiquetas meta o comienza a utilizar un nuevo esquema, el software no puede aprovecharlas, lo que obliga a una continua revisión. Por otro lado y, en relación con las conclusiones antes indicadas, ejemplifica la dificultad de recoger todos los metadatos de códigos fuente, pues no siempre están disponibles, no se (re)conocen los esquemas utilizados o no siguen pautas comunes en la adición de los valores de dato. De acuerdo con esto, se debería definir una política de indización común entre los periódicos, que esté alineada con los principales estándares de metadatos. Es evidente que la simple adopción de metadatos no es suficiente para el descubrimiento y accesibilidad de los documentos. En muchos sistemas de recuperación de información dichos documentos no serán objeto de análisis ni de indización. Los resultados iniciales llevan al establecimiento de un orden de preferencia en la extracción de valores de datos de unos esquemas frente a otros. Ello modificaría el software teniendo en cuenta frecuencia de uso de los esquemas y el grado de normalización de las prácticas de cada medio. El propósito es asegurar la correcta extracción y mayor cantidad de valores de datos con el menor número de procesos.</p>
+
+<h2 id="author">Sobre los autores</h2>
+<p><strong>María-José Baños-Moreno</strong>, becaria predoctoral en el Doctorado en Gestión de la Información y de la Comunicación en las Organizaciones, Departamento de Ingeniería de la Información y las Comunicaciones, Facultad de Informática de la Universidad de Murcia, Campus de Espinardo, C.P. 30100, Murcia, + 34 868888787, <a
+href="mbm41963@um.es">mbm41963@um.es</a>. ORCID No. <a href="http://orcid.org/0000-0001-9137-1330">orcid.org/0000-0001-9137-1330</a><br />
+
+<strong>Eduardo R. Felipe</strong>, mestrado em Ciências da Informação, Escola de Ciência da Informação, Universidade Federal de Minas Gerais, da UFMG, Avenida Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901, Brasil, +55 31 3409-5249, <a
+href="http://orcid.org/0000-0003-0735-3856">erfelipe@hotmail.com</a><br />
+
+<strong>Gercina Lima</strong>, professor adjunto da Universidade Federal de Minas Gerais e Coordenadora do Programa de Pós Graduação em Ciência da Informação da ECI/UFMG, Escola de Ciência da Informação, Universidade Federal de Minas Gerais, da UFMG, Avenida Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901, Brasil, +55 31 34095232, <a
+href="mailto:glima@eci.ufmg.br">glima@eci.ufmg.br</a>. ORCID No. <a href="http://orcid.org/0000-0003-0735-3856">orcid.org/0000-0003-0735-3856</a>
+
+<br /><strong>Juan Antonio Pastor-Sánchez</strong>, profesor contratado doctor del Departamento de Información y Documentación de la Universidad de Murcia, Facultad de Comunicación y Documentación de la Universidad de Murcia, Campus de Espinardo, C.P. 30100, Murcia, <a
+href="mailto:pastor@um.es">pastor@um.es</a>, +34 868 887252. ORCID No. <a href="http://orcid.org/0000-0002-1677-1059">orcid.org/0000-0002-1677-1059</a><br />
+
+<strong>Rodrigo Martínez-Béjar</strong>, Catedrático, Departamento de Ingeniería de la Información y las Comunicaciones, Facultad de Informática de la Universidad de Murcia, Campus de Espinardo, C.P. 30100, Murcia, + 34 868888787, <a
+href="mailto:rodrigo@um.es">rodrigo@um.es</a>. ORCID No. <a href="http://orcid.org/0000-0002-9677-7396">orcid.org/0000-0002-9677-7396</a></p>
+	<br />
+    <p id="abs" style="text-align:center;"><a href="#abs">Abstract in English</a></p>
+    
+    <div style="margin-left:80px; margin-right:80px;">
+
+          <blockquote> <strong>Introduction.</strong>The objectives of this work are to determine which schemes are used for title, abstract, keywords, authorship and newspaper in press; to know what guidelines newspapers follow in the implementation of these schemes; and to find out how this affects the extraction of information.<br />
+<strong>Methodology</strong>. For this purpose, a newspaper sample is defined and its source code is analysed, identifying the schemas used and usage patterns. This allows us to extract data values using the MetadadosHTML application.<br />
+<strong>Results</strong>. Standard, <em>ad hoc</em> and newspaper schemes have been detected. Various practices have been found, such as values grouped in the same line of code or separately; noise in a value; and errors when referring to the names of the attributes of standard schemas. These issues affect data extraction based on metadata and metadata schemas in MetadadosHTML<br />
+<strong>Conclusions</strong>. It is necessary to make progress in the use of standard schemas such as Dublin Core or schema.org, favouring the implementation of these (or others) in the news source codes. It is also imperative to adopt good practices in making explicit data and data values. Only in this way is it possible to evolve interoperability between systems and the retrieval and reuse of information.</blockquote></div>
+    
+
+		</section>
+		<section class="refs">
+	
+    <h2>References</h2>
+<ul class="refs">
+	<li id="abadal2009">Abadal, E., &amp; Codina, L. (2009). Bases de datos documentales. Características, funciones y método. Madrid: Síntesis.</li>
+    
+	<li id="abbud2010">Abbud Grácio, J. C., &amp; Fadel, B. (2010). <a href="http://www.webcitation.org/6mIsBSOPu">Estratégias de preservação digital</a>. In <em>Gestão, mediação e uso da informação</em> (pp. 58–83). São Paulo: Editora UNESP; Cultura Acadêmica. Retrieved from http://books.scielo.org/id/j4gkh/pdf/valentim-9788579831171-04.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6mIsBSOPu)	</li>
+    
+	<li id="aenor2012">AENOR. (2012). <em>Información y documentación. Metadatos para la gestión de documentos. Parte 3: Método de auto-evaluación.</em> UNE-ISO/TR 23081-3. AENOR.</li>
+    
+	<li id="axelsson2006">Axelsson, J., Birbeck, M., Dubinko, M., Epperson, B., Ishikawa, M., McCarron, S.,&nbsp; Pemberton, S. (Eds.). (2006). <a href="http://www.webcitation.org/6mItkzTcv">XHTML 2.0 (W3C Working Draft 26 July 2006)</a>. W3C. Retrieved from http://www.w3.org/TR/2006/WD-xhtml2-20060726. (Archived by WebCite&reg; at http://www.webcitation.org/6mItkzTcv)</li>
+    
+	<li id="banos2015">Baños-Moreno, María-José, Felipe, E. R., Pastor-Sánchez, J. A., Martínez-Béjar, Rodrigo, &amp; Lima, G. (2015). <a href="http://www.webcitation.org/6mItul0Zm">Metadatos en noticias: un análisis internacional para la representación de&nbsp; contenidos&nbsp; en periódicos</a>. Presented at the II Congreso ISKO España y Portugal / XII Congreso ISKO, Facultad de Comunicación y Documentación, Universidad de Murcia, Murcia (España). Retrieved from http://www.iskoiberico.org/wp-content/uploads/2015/11/43_Ba%C3%B1os.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6mItul0Zm)</li>
+    
+	<li id="banos2013">Baños-Moreno, M. J., Pastor-Sánchez, J. A., &amp; Martínez-Béjar, R. (2013). <a
+href="http://www.webcitation.org/6mIu20sMG">Propuesta de actualización de macro-tesauros a partir de noticias de divulgación científico-tecnológica</a>. In <em>Informação e/ou Conhecimento: as duas faces de Jano</em> (pp. 99–112). Porto (Portugal): Faculdade de Letras da Universidade do Porto / CETAC.MEDIA. Retrieved from http://hdl.handle.net/10760/20684 (Archived by WebCite&reg; at http://www.webcitation.org/6mIu20sMG)</li>
+
+	<li id="baptista2001">Baptista, A. A., &amp; Barbosa Machado, A. (2001). <a href="http://www.webcitation.org/6mIu9aivT">Metadata usage in an online journal - an application profile</a>. In A. Hübler, P. Linde, &amp; J. W. . Smith (Eds.), <em>Electronic Publishing ’01 - 2001 in the Digital Publishing Odyssey</em> (pp. 59–64). Kenterbury, UK: University of Kent. Retrieved from http://elpub.scix.net/cgi-bin/works/Show?200106 (Archived by WebCite&reg; at http://www.webcitation.org/6mIu9aivT)</li>
+    
+	<li id="bi3d2013">BI3D. (2013). <a href="http://www.webcitation.org/6nnp1tX1b">Believe in 3D!</a> [Video de Youtube]. Retrieved from https://www.youtube.com/user/BelieveIn3D (Archived by WebCite&reg; at <a
+href="http://www.webcitation.org/6nnp1tX1b">http://www.webcitation.org/6nnp1tX1b</a>)</li>
+    
+	<li id="blazquez2013">Blázquez Ochando, M. (2013). <a href="http://www.webcitation.org/6mKsd4M3a">Nuevos retos de la tecnología web crawler para la recuperación de información</a>. <em>MÉI: Métodos de Información, 4</em>(7), 115–128. Retrieved from https://dialnet.unirioja.es/servlet/articulo?codigo=4767039 (Archived by WebCite&reg; at http://www.webcitation.org/6mKsd4M3a)	</li>
+    
+	<li id="bohannon2012">Bohannon, P., Dalvi, N., Filmus, Y., Jacoby, N., Keerthi, S., &amp; Kirpal, A. (2012). Automatic Web-scale Information Extraction. In <em>Proceedings of the 2012 ACM SIGMOD International Conference on Management of Data</em> (pp. 609–612). New York, NY, USA: ACM.</li>
+    
+	<li id="burgues2009">Burgués, M. (2009, February 20). <a href="http://www.webcitation.org/6mKssmHLz">Obtención automática de metadatos de páginas Web para mejorar la ordenación de los resultados de una búsqueda</a>. Rosario (Argentina). Retrieved from http://rephip.unr.edu.ar/xmlui/handle/2133/3252 (Archived by WebCite&reg; at http://www.webcitation.org/6mKssmHLz)	</li>
+    
+	<li id="chen2013">Chen, Y. N., &amp; Ke, H. R. (2013). FRBRoo-based approach to heterogeneous metadata integration. <em>Journal of Documentation, 69</em>(5), 623–637.</li>
+    
+	<li id="chuttur2014">Chuttur, M. Y. (2014). <a href="http://www.webcitation.org/6mKt4u6W5">Investigating the effect of definitions and best practice guidelines on errors in Dublin Core metadata records</a>. <em>Journal of Information Science, 40</em>(1), 28–37. </li>
+    
+	<li id="diaz2008">Díaz, L., Granell, C., Beltrán Fonollosa, A., Llaves, A., &amp; Gould, M. (2008). <a
+href="http://www.webcitation.org/6mKt8U3Ax">Extracción semiautomática de metadatos: hacia los metadatos implícitos</a>. In <em>Actas de las II Jornadas de SIG Libre</em>. Girona, Spain: Mar. Retrieved from http://hdl.handle.net/10256/1160 (Archived by WebCite&reg; at http://www.webcitation.org/6mKt8U3Ax)</li>
+
+	<li id="felipe2016">Felipe, E. R. (2016). A importância dos metadados em bibliotecas digitais da organização à recuperação da informação. In <em>Biblioteca digital hipertextual. Caminhos para a Navegação em Contexto</em> (pp. 159–180). Rio de Janeiro: Interciência.</li>
+    
+	<li id="garcia2013">García-Marco, F. J. (2013). Schema.org: la catalogación revisitada. <em>Anuario ThinkEPI, 7</em>(0), 169–172.</li>
+    
+	<li id="garshol2004">Garshol, L. M. (2004). <a href="http://www.webcitation.org/6mKtJ83cT">Metadata? Thesauri? Taxonomies? Topic Maps! Making sense of it all</a>. <em>Journal of Information Science, 30</em>(4), 378–391.</li>
+    
+	<li id="google2016">Google Inc. (2016). <a href="http://www.webcitation.org/6mKtPjoPL">Ayuda para editores: Palabras clave y consultas de búsqueda</a>. Retrieved from https://support.google.com/news/publisher/answer/68297?hl=es&nbsp; (Archived by WebCite&reg; at http://www.webcitation.org/6mKtPjoPL)	</li>
+    
+	<li id="guallar2012">Guallar, J., Abadal, E., &amp; Codina, L. (2012). <a
+href="http://www.webcitation.org/6mKtVH1I9">Hemerotecas de prensa digital. Evolución y tendencias</a>. <em>El Profesional de La Información, 21</em>(6), 595–605. Retrieved from http://hdl.handle.net/10760/18199 (Archived by WebCite&reg; at http://www.webcitation.org/6mKtVH1I9)	</li>
+    
+	<li id="guallar2016">Guallar, J., Abadal, E., &amp; Codina, L. (2016). Hemerotecas digitales de prensa. In <em>Calidad en sitios web. Método de análisis general, e-Commerce, imágenes, hemerotecas y turismo</em> (pp. 129–152). Barcelona: UOC.</li>
+    
+	<li id="harris2007">Harris, J. (2007, October 23). <a href="http://www.webcitation.org/6mKtbX12J">Messing around with metadata</a>. [Web log entry]. <em>New York Times</em>. Retrieved from http://open.blogs.nytimes.com/2007/10/23/messing-around-with-metadata/ (Archived by WebCite&reg; at http://www.webcitation.org/6mKtbX12J)</li>
+    
+	<li id="hickson2014">Hickson, I., Berjon, R., Faulkner, S., Leithead, T., Navara, E. D., O’Connor, E., &amp; Pfeiffer, S. (Eds.). (2014, October 28). <a href="http://www.webcitation.org/6mKtfYne4"><em>HTML5. A vocabulary and associated APIs for HTML and XHTML</em></a> (W3C Recommendation 28 October 2014). W3C. Retrieved from https://www.w3.org/TR/html5/document-metadata.html#the-meta-element (Archived by WebCite&reg; at http://www.webcitation.org/6mKtfYne4)	</li>
+    
+	<li id="hillman2005">Hillman, D. (2005, November 7). <a href="http://www.webcitation.org/6mKtmZzXl">Using Dublin Core (DCMI Recommended Resource)</a>. Retrieved from http://dublincore.org/documents/usageguide/ (Archived by WebCite&reg; at http://www.webcitation.org/6mKtmZzXl)</li>
+    
+	<li id="james2013">Janes, D. (2013, August). <a href="http://www.webcitation.org/6mKtpzT0k">hAtom 0.1 [Draft Specification]</a>. Retrieved from http://microformats.org/wiki/hatom (Archived by WebCite&reg; at http://www.webcitation.org/6mKtpzT0k)</li>
+    
+	<li id="kallipolitis2012">Kallipolitis, L., Karpis, V., &amp; Karali, I. (2012). Semantic search in the World News domain using automatically extracted metadata files. <em>Knowledge-Based Systems, 27</em>(1), 38–50.</li>
+    
+	<li id="lajusticia2000">Lajusticia, M. R. B. (2000). <a href="http://www.webcitation.org/6mKu5H6vL">Estructura textual, macroestructura semántica y superestructura formal de la noticia</a>. <em>Estudios sobre el mensaje periodístico</em>, (6), 239–258. Retrieved from http://dialnet.unirioja.es/servlet/articulo?codigo=184782 (Archived by WebCite&reg; at http://www.webcitation.org/6mKu5H6vL)	</li>
+    
+	<li id="leitlhead2012">Leitlhead, T., Pfeiffer, S., Navara, &amp; O’Connor, E. (Eds.). (2012, August 22). <a
+href="http://www.webcitation.org/6mKuAh69j">HTML5. A vocabulary and associated APIs for HTML and XHTML</a> (Editor’s Draft 22 August 2012). W3C. Retrieved from http://dev.w3.org/html5/spec-preview/Overview.html#contents<br />(Archived by WebCite&reg; at http://www.webcitation.org/6mKuAh69j) </li>
+
+	<li id="ortiz1999">Ortiz-Repiso Jiménez, V. (1999). <a href="http://www.webcitation.org/6oFpBAdwG">Nuevas perspectivas para la catalogación: Metadatos Versus Marc</a>. <em>Revista española de Documentación Científica, 22</em>(2), 198–219. Retrieved from http://redc.revistas.csic.es/index.php/redc/article/view/338/546 (Archived by WebCite&reg; at http://www.webcitation.org/6oFpBAdwG)</li>
+    
+	<li id="parker2016">Parker, A. (2016, February 14). <a href="http://www.webcitation.org/6mKuKYdDY">Jeb Bush adds a weapon (his brother) despite worries it could misfire</a>. <em>New York Times</em>.  Retrieved from http://www.nytimes.com/2016/02/15/us/politics/jeb-bush-uses-secret-weapon-his-brother-despite-worries-it-could-misfire.html (Archived by WebCite&reg; at http://www.webcitation.org/6mKuKYdDY)</li>
+    
+	<li id="parsesf">Parse.ly. (s.f.). <a href="http://www.webcitation.org/6mKuP2ZJI">Technical documentation. The metadata tag</a>. Retrieved from https://www.parsely.com/docs/integration/metadata/jsonld.html (Archived by WebCite&reg; at http://www.webcitation.org/6mKuP2ZJI)	</li>
+    
+	<li id="pastor2016">Pastor Sánchez, J. A. (2016, January 29). <a href="http://www.webcitation.org/6mKuU29rd">Quince años de web semántica: de las tecnologías a las buenas prácticas</a>. IWETEL. Retrieved from https://listserv.rediris.es/cgi-bin/wa?A2=IWETEL;4919cf48.1601E (Archived by WebCite&reg; at http://www.webcitation.org/6mKuU29rd)	</li>
+    
+	<li id="pastor2011">Pastor-Sánchez, J. A. (2011). <em>Tecnologías de la web semántica</em> (Edición: 1). Barcelona: Editorial UOC, S.L.</li>
+    
+	<li id="pereira2004">Pereira, T., &amp; Baptista, A. A. (2004). <a href="http://www.webcitation.org/6mKuZsoDv">Incorporating a semantically enriched navigation layer onto an RDF metadatabase</a>. In J. Engelen, S. M. S. Costa, &amp; A. C. S. Moreira (Eds.), <em>Building digital bridges: linking cultures, commerce and science.</em> Brasília. Retrieved from http://repositorium.sdum.uminho.pt/handle/1822/604 (Archived by WebCite&reg; at http://www.webcitation.org/6mKuZsoDv)</li>
+    
+	<li id="piedra2015">Piedra, N., Chicaiza, J., Quichimbo, P., Saquicela, V., Cadme, E., López, J., … Tovar, E. (2015). Marco de Trabajo para la Integración de Recursos Digitales Basado en un Enfoque de Web Semántica. <em>RISTI - Revista Ibérica de Sistemas e Tecnologias de Informação,</em> (spe3), 55–70.</li>
+    
+	<li id="rovira2006">Rovira, C., &amp; Marcos, M. C. (2006). <a href="http://www.webcitation.org/6mKujdb0h">Metadatos en revistas-e de Documentación de libre acceso</a>. Retrieved from http://eprints.rclis.org/9343/ (Archived by WebCite&reg; at http://www.webcitation.org/6mKujdb0h)</li>
+    
+	<li id="sailthru2013">Sailthru. (2013, October 1). <a href="http://www.webcitation.org/6mKumGv3m">Custom Horizon Tags</a>. Retrieved from http://getstarted.sailthru.com/site/horizon-overview/custom-horizon-tags/ (Archived by WebCite&reg; at http://www.webcitation.org/6mKumGv3m)</li>
+    
+	<li id="valdes2016">Valdés Pérez, H. L., Alemán Jiménez, Y., &amp; García Rivas, D. (2016). <a
+href="http://www.webcitation.org/6mKwNpd00">Evaluación de la prensa digital cubana respecto a la optimización de motores de búsqueda</a>. Serie científica, 9(5), 58–60. Retrieved from http://publicaciones.uci.cu/index.php/SC/article/view/1766 (Archived by WebCite&reg; at http://www.webcitation.org/6mKwNpd00)</li>
+
+	<li id="vallez2010">Vallez, M., Rovira, C., Codina, L., &amp; Pedraza-Jiménez, R. (2010). <a
+href="http://www.webcitation.org/6mKuy6oWw">Procedimientos para la extracción de palabras clave de páginas web basados en criterios de posicionamiento en buscadores</a>. Hipertext.net, 8. Retrieved from http://www.upf.edu/hipertextnet/numero-8/extraccion_keywords.html (Archived by WebCite&reg; at http://www.webcitation.org/6mKuy6oWw)
+</li>
+    
+<li id="vasquez2008">Vásquez Paulus, C. (2008). <a href="http://www.webcitation.org/6mKv1WyKU">METADATOS: Introducción e historia</a>. Retrieved from https://users.dcc.uchile.cl/~cvasquez/introehistoria.pdf (Archived by WebCite&reg; at http://www.webcitation.org/6mKv1WyKU)	</li>
+    
+<li id="whatwg2016a">Web Hypertext Application Technology Working Group (WHATWG). (2016a, February 4). <a
+href="http://www.webcitation.org/6mKv6eQSe">Microdata</a>. Retrieved from https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute (Archived by WebCite&reg; at http://www.webcitation.org/6mKv6eQSe)</li>
+
+<li id="whatwg2016b">Web Hypertext Application Technology Working Group (WHATWG). (2016b, February 4). <a
+href="http://www.webcitation.org/6mKvAG02K">Standard metadata names</a>. Retrieved from https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names (Archived by WebCite&reg; at http://www.webcitation.org/6mKvAG02K)	</li>
+
+	<li id="yaginuma2003a">Yaginuma, T., Pereira, T., &amp; Baptista, A. A. (2003a). <a
+href="http://www.webcitation.org/6mKvFExb7">Design of metadata elements for digital news articles in the omnipaper project</a>. In S. M. de Souza Costa, J. A. Carvalho, A. A. Baptista, &amp; A. C. Santos Moreira (Eds.), <em>From information to knowledge: 7th ICCC/IFIP International Conference on Electronic Publishing</em> (pp. 132–139). Minho, Portugal: Universidade do Minho. Retrieved from http://repositorium.sdum.uminho.pt/handle/1822/170 (Archived by WebCite&reg; at http://www.webcitation.org/6mKvFExb7)</li>
+    
+	<li id="yaginuma2003b">Yaginuma, T., Pereira, T., &amp; Baptista, A. A. (2003b). <a
+href="http://www.webcitation.org/6mKvJVT2w">Metadata elements for digital news resource description</a>. In <em>Proceedings CLME’2003 - 3o Congresso Luso-Moçambicano de Engenharia</em> (pp. 1317–1326). Maputo. Retrieved from http://repositorium.sdum.uminho.pt/handle/1822/279 (Archived by WebCite&reg; at http://www.webcitation.org/6mKvJVT2w)</li>
+</ul>
+	</section>
+</article>
+</body>  
+ </html> 
