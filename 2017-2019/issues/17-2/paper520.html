@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="stylesheet" href="style.css">
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0" />
+    <title>
+      Report on the Second Workshop on Collaborative Information Seeking: New Orleans, 12 October, 2011
+    </title>
+    <meta charset="utf-8" />
+    <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif" />
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /><!--Enter appropriate data in the content fields-->
     <meta name="dcterms.title" content="Report on the Second Workshop on Collaborative Information Seeking: New Orleans, 12 October, 2011" />
     <meta name="author" content="Chirag Shah, Preben Hansen, Rob Capra" />
     <meta name="dcterms.subject" content="collaborative information seeking" />
     <meta name="description" content="Report on the Second Workshop on Collaborative Information Seeking" />
-    <meta name="keywords" content="collaborative information seeking" />
+    <meta name="keywords" content="collaborative information seeking" /><!--leave the following to be completed by the Editor-->
     <meta name="robots" content="all" />
     <meta name="dcterms.publisher" content="Professor T.D. Wilson" />
     <meta name="dcterms.type" content="text" />
@@ -19,113 +23,365 @@
     <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
     <meta name="dcterms.issued" content="2012-06-15" />
     <meta name="geo.placename" content="global" />
-</head>
-<body>
-<h4 id="vol-17-no-2-june-2012">vol. 17 no. 2, June 2012</h4>
-<h1 id="report-on-the-second-workshop-on-collaborative-information-seeking-new-orleans-12-october-2011">Report on the Second Workshop on Collaborative Information Seeking: New Orleans, 12 October, 2011</h1>
-<h4 id="chirag-shah"><a href="#authors">Chirag Shah</a></h4>
-<p>School of Communication &amp; Information, Rutgers University, New Brunswick, NJ 08901-1071, USA<br>
-<a href="#authors">Preben Hansen</a><br>
-Swedish Institute of Computer Science, Isafjordsgatan 22, Box 1263, SE-164 29 Kista, Sweden<br>
-<a href="#authors">Rob Capra</a>, University of North Carolina at Chapel Hill, School of Information and Library Science, 100 Manning Hall, Chapel Hill, NC 27599-3360, USA</p>
-<h2 id="introduction">Introduction</h2>
-<p>People working together for information seeking activities is not new, nor is researchers' and practitioners' interest in studying such situations of collaborative information seeking and creating solutions for supporting and enhancing them. In the 1990s, Grudin (<a href="#grudin94">1994</a>) outlined factors that developers need to consider when creating collaboration solutions (groupware systems), and Twidale (<a href="#twidale96">Twidale and Nichols 1996)</a> studied collaborative episodes in the context of virtual reference interactions in a library using his Ariadne interface. Other researchers have looked at aspects of the subject, but the majority of them remained limited to specific domains or situations. It was not until recently that researchers and practitioners from different disciplines started coming together for conversations and collaborations about collaborative information seeking and related topics. This is evident from a stream of recent publications at venues such as SIGIR, CSCW, Group, CHI, and ASIST conferences, as well as numerous workshops on this subject.</p>
-<p>This technical report is culmination of the works presented and discussed at the 2nd workshop on collaborative information seeking, organized at the 74th annual conference of ASIST on October 12, 2011 in New Orleans. The workshop brought together participants from a wide range of domains and views, and this is reflected in their position papers available from the <a href="http://collab.infoseeking.org/events/asist2011workshop">workshop website</a>. The workshop brought together researchers and practitioners from different domains and organizations, allowing us to engage in discussing variety of important questions that relate to bridging the gap between theory and practice. Some examples are listed below.</p>
-<ol>
-<li>How does collaboration fit into existing solitary information seeking activities?</li>
-<li>How do we move from single-user information seeking models to those for multi-users (collaborative)?</li>
-<li>The concepts of collaborative information handling and sharing are used in an unclear way. What is the distinction between them?</li>
-<li>How to integrate collaborative seeking into everyday life and professional environments?</li>
-<li>What should be required and desired characteristics of a collaborative information seeking system?</li>
-</ol>
-<h2 id="position-papers">Position papers</h2>
-<p>Workshop participant Joseph Meloche from North Carolina Central University discussed collaborative information seekings role in teaching and research and argued that in five years, collaborative information seeking will be in all forms of activities. Nasser Saleh from McHill University described a study involving collaborative information seeking in education, using the concept of sense-making, and demonstrated how a learning task could impact students' information seeking behaviour in collaboration. Rob Capra from the University of North Carolina at Chapel Hill, on the topic of tasks in collaborative information seeking, presented results from a study where the subjects carried out various types of tasks and were found to be more engaged in exploratory collaborative search tasks than in fact-finding or transactional ones. Gene Golovchinsky from FX Palo Alto Laboratory, Inc. argued for the need for algorithmic mediation in collaborative information seeking and showcased his <a href="http://www.fxpal.com/?p=SessionSearch">Querium</a> system. Miles Efron from the University of Illinois at Urbana-Champaign presented a collaborative search game incorporating fun and competition as two important aspects in collaborative information seeking. Preben Hansen from Swedish Institute of Computer Science presented his work with the <a href="http://www.clef-initiative.eu//">CLEF evaluation campaign</a> in order to show how one could extract requirements for collaborative information seeking situations. Roberto Gonzalez-Ibanez and Chirag Shah from Rutgers University argued for a need to have a comprehensive framework for evaluation in collaborative information seeking and showed how a number of aspects pertaining to user-driven processes could be measured.</p>
-<h2 id="working-group-discussions">Working group discussions</h2>
-<p>As part of the workshop, we had an afternoon work session to brainstorm and discuss topics important for future research on collaborative information seeking. In a plenary session, the following high-level categories were selected as being important: 1-system issues; 2-privacy, security and trust; 3-groups and roles; 4-future directions; 5-theory; 6-evaluation; and 7-data collection. Each of these categories was written on a blank poster sheet taped to the wall. Then, workshop participants were invited to individually brainstorm ideas for each category, write them on post-it notes, and stick them to corresponding poster sheets. After ideas had been collected, we broke into two groups to discuss the ideas in detail. The first group covered the categories 1-4, and the second group covered 4-7.</p>
-<h3 id="report-on-discussion-topics">Report on discussion topics</h3>
-<h4 id="system-issues">System issues</h4>
-<p>This part of our discussion focused on how systems and tools impact collaborative information seeking.</p>
-<ul>
-<li>How can systems make collaboration more effective?<br>
-The group is greater than the sum of individuals. We discussed a goal that a collaborative information seeking system should, by some measure, be more than the sum of the individuals collaborating. Possible quantities include the amount of information, the time spent, the diversity of information, and level of social interaction.</li>
-<li>What are important approaches and solutions to explore for collaborative information seeking systems?<br>
-System-centered: these approaches could include techniques such as algorithmic mediation and using the system as a bridge (e.g., for catching up on collaborators' prior actions or findings, linking collaborators, and moving information from personal spaces to group spaces and back).<br>
-User-centred: here, we discussed how a system could help with selecting collaborators for a given task.</li>
-<li>How can a system help with division of labour?<br>
-Division of labour is commonly employed by groups engaging in collaborative information seeking. We discussed three ideas for how systems can help support this practice (if desired by the collaborators): providing a communication channel as part of the system, allowing users to do a '<em>smart split</em>' of the results, as available in the SearchTogether system (<a href="#mor07">Morris and Horvitz 2007</a>), where the search results are divided among the collaborators according different aspects (e.g., source, content or author), and support for managing policies about how the sub-tasks are divided, assigned, or taken on by the individual collaborators.</li>
-</ul>
-<h4 id="privacy-security-and-trust">Privacy, security and trust</h4>
-<p>In this part of our discussion, we focused on how the related issues of privacy, security, and trust influence collaborative information seeking.</p>
-<ul>
-<li>Mapping trust to privacy awareness. How a system makes users aware of privacy issues can affect users' trust in the system and willingness to share information.</li>
-<li>Masking and unmasking information. Systems could support methods for selective sharing of information among collaborators.</li>
-<li>Inconsistency of relevance judgments. Document relevance is known to depend highly among individuals, even trained judges. Collaborators may <em>trust</em> the judgments made by some collaborators more than others. Designers of collaborative information seeking systems should be aware of these issues and look for ways that it may have an impact on system design.</li>
-<li>Conflict management. In collaborative information seeking, conflicts may arise among collaborators and/or policies for privacy and sharing.</li>
-</ul>
-<h4 id="groups-and-roles">Groups and roles</h4>
-<p>We discussed how groups may conduct collaborative information seeking and what individual roles may be taken in the process. Based on the suggested ideas and our discussions, we list several areas for exploration.</p>
-<ul>
-<li>Symmetric vs. asymmetric roles: what implications are there for system design and evaluation?</li>
-<li>Situations with user-defined versus system-defined roles.</li>
-<li>&quot;Learned roles&quot;;in some situations, there may be roles that are <em>learned</em>, either by the collaborators, or, a system might try to learn roles based on the collaborators' interactions and inputs</li>
-<li>How can systems support various types of roles, and what should role-specific interfaces do?</li>
-</ul>
-<h4 id="future-directions">Future directions</h4>
-<p>In this part of our discussion, we examined several future directions for collaborative information seeking research.</p>
-<ul>
-<li>Smarter systems: features that provide facilitate collaborative information seeking through specific features</li>
-<li>Privacy and security: this is an area that needs more research to examine how these issues impact collaborative information seeking and system design</li>
-<li>Promoting and supporting asymmetric roles and diversity to encourage the whole activity being more than the sum of the parts-more work needs to be done to help understand how roles and diversity contribute in collaborative information seeking activities. Research in computer-supported collaborative work has examined many relevant dimensions, and more connections are needed between collaborative information seeking and such research.</li>
-<li>Integration of collaborative information seeking tools into existing systems and practices-more situations where collaborative information seeking occurs should be studied. There are connections here to research from the collaborative work and organizational knowledge communities.</li>
-<li>Transition from single-user situations and systems to collaborative information seeking and back-how can systems support the need for individuals to have personal information spaces in which they conduct searches and then share (perhaps selectively) their results with their collaborators, and then re-integrate group results into their personal space if desired.</li>
-</ul>
-<p>The second part of the workshop included a work session in which the participants were divided into two groups. The second group debated theory, evaluation and data collection. These topics were selected as important in a plenary session before splitting up in groups. Based on the notes related to each of the topics, a discussion took place and the following issues were pointed out as important.</p>
-<h4 id="theory">Theory</h4>
-<p>The following list of theoretical issues emerged, reflecting important issues we need to take into account in collaborative information seeking research.</p>
-<ul>
-<li><em>Growth of theory.</em> Currently there are many different models and theoretical frameworks within human information behaviour, information seeking and information retrieval. The idea with theory growth is to expand existing theories with theoretical insights from the collaborative information seeking research. In such a way, the established models and frameworks could be expanded and enriched.</li>
-<li><em>Theoretical framework for collaborative information seeking.</em> All participants agreed that it was very important to make a contribution towards developing a theoretical framework for collaborative information behaviour. In doing so, involving theories and frameworks from other disciplines and previous theories would intensify studies in collaborative information seeking.</li>
-<li><em>Differences between individuals and teams.</em> We discussed the importance of investigating what the differences are between group behaviour and individual behaviour when performing collaborative information seeking activities in different domains and situations. What and how can we identify differences and how could these be supported?</li>
-<li><em>Activity theory.</em> It was suggested that activity theory would be an interesting framework for research on collaborative information handling. The group reasoned that activity theory could be useful for more ethnographic research and that the theory is good for understanding and analysing phenomena such as finding patterns.</li>
-<li><em>Computer-supported collaborative work and computer-mediated commucation.</em> Furthermore, it was recognized that these research areas are interesting as platforms for research and methods. Influences from these areas may contribute to research in the collaborative information seeking field.</li>
-<li><em>Play theory, social and positivistic psychology</em> were also mentioned as possible contributors to the collaborative information seeking research area.</li>
-</ul>
-<h4 id="evaluation">Evaluation</h4>
-<p>The second issue that emerged reflecting important issues we need to take into account concerned aspects of evaluation of related systems. What is needed is to re-visit the existing methods and measures for evaluating information systems. The methods and measures need to reflect issues from both a user's point of view as well as from a system point of view. From the user point of view, we may perform evaluation that is designed for naturalistic settings. At this level we have less control over the experimentation but, on the other hand, we the more real situation may include collection of a large amount of data. This level may include contextual aspects difficult to handle but it may reveal interesting aspects of the flow of interaction. On the other hand, at the laboratory level, we have more control over the experiment and the variables to be measures.</p>
-<ul>
-<li>Methods and methodologies</li>
-<li>Measures</li>
-<li>User Side
-<ul>
-<li>Naturalistic settings</li>
-<li>Semi-controlled settings</li>
-<li>Laboratory studies</li>
-</ul>
-</li>
-<li>System side
-<ul>
-<li>Evaluation in the style of the Text Retrieval Conference (TREC)</li>
-</ul>
-</li>
-<li>Lessons learned</li>
-</ul>
-<p>The working group discussed a way to collect and display results from different experiments and studies to be able to share knowledge on research in this area.</p>
-<h4 id="data-collection">Data collection</h4>
-<p>Finally, the group talked about aspects of data collection. During the discussion two things were considered interesting: different tools for collecting data on collaborative information seeking and that a document is more than just keywords. Based on the latter, the group developed a visualization of different aspects (or features) of a document. Document features that could be shared and that could be investigated from a collaborative information handling perspective. Features of interest and mentioned during the workshop were (see figure 1 below): time stamps of different kinds related to the document (created, changed etc); the document space the document resides in (in one or more collections); annotations; contextual features for each manifestation of the document; access and control of the document; who actually viewed the document; sharing the query and query sessions; and sharing the transaction logs for gaining knowledge.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>The workshop was quite successful by several measures. First, it brought researchers and practitioners, students and teachers from several domains, which is essential for an interdisciplinary domain of collaborative information seeking. Second, the presentations and discussions were more focused than those done in some of the other such events the authors have attended, indicating focus and maturity that this field has achieved in the recent years. And finally, the lessons derived and the questions raised through these discussions (which are reported here) should provide pointers to further research and developmental works to those interested in this domain.</p>
-<h2 id="acknowledgements">Acknowledgements</h2>
-<p>We are thankful to ASIST for helping us organize this workshop at their annual meeting in 2011. We are also very grateful to all the workshop participants who actively engaged and contributed to the workshop, making it highly successful.</p>
-<h2 id="about-the-authors">About the authors</h2>
-<p><strong>Dr. Chirag Shah</strong> is an assistant professor in the School of Communication &amp; Information at Rutgers University. He received his PhD from the University of North Caroliona at Chapel Hill. He can be contacted at: <a href="mailto:chirags@rutgers.edu">chirags@rutgers.edu</a>.<br>
-<strong>Dr. Preben Hansen</strong> is a senior researcher at the Swedish Institute of Computer Science. He recieved his Ph. D in Information Science from the University of Tampere, Finland in 2011. His contact address is <a href="preben@sics.se">preben@sics.se</a><br>
-<strong>Dr. Robert Capra</strong> is an Assistant Professor in the School of Information and Library Science at the University of North Carolina at Chapel Hill. He received his Ph.D. in Computer Science from Virginia Tech. (Virginia Polytechnic Institute and State University) He can be reached at: <a href="rcapra@unc.edu">rcapra@unc.edu</a></p>
-<h4 id="references">References</h4>
-<ul>
-<li>Grudin, J. (1994). Groupware and social dynamics: eight challenges for developers. <em>Communications of the ACM</em>, <strong>37</strong>(1), 92-105. Retrieved 23 May, 2012 from http://research.microsoft.com/en-us/um/people/jgrudin/past/papers/cacm94/cacm94.html (Archived by WebCite<sup>Â®</sup> at http://www.webcitation.org/67smc7l6T)</li>
-<li>Morris, M. R. &amp; Horvitz, E. (2007). <a href="http://www.webcitation.org/67smDErg0">SearchTogether: an interface for collaborative Web search</a>. In <em>Proceedings of the 20th annual ACM symposium on User Interface Software and Technology</em> (pp. 3-12). New York, NY: ACM Press. Retrieved 23 May, 2012 from http://research.microsoft.com/en-us/um/people/horvitz/searchtogether_uist2007.pdf (Archived by WebCite<sup>Â®</sup> at http://www.webcitation.org/67smDErg0)</li>
-<li>Twidale, M.B. and Nichols, D.M. (1996). Collaborative browsing and visualisation of the search process. <em>Aslib Proceedings</em>, <strong>48</strong>(7/8), 177-182. Retrieved 23 May, 2012 from http://www.comp.lancs.ac.uk/computing/research/cseg/projects/ariadne/docs/elvira96.html (Archived by WebCite<sup>Â®</sup> at http://www.webcitation.org/67smUTxab)</li>
-</ul>
-
-</body>
+  </head>
+  <body>
+    <header>
+      <h4>
+        vol. 17 no. 2, June 2012
+      </h4>
+    </header><br />
+    <hr />
+    <br />
+    <article>
+      <h1>
+        Report on the Second Workshop on Collaborative Information Seeking: New Orleans, 12 October, 2011
+      </h1><br />
+      <div style="margin-left: 10%; margin-right: 10%;">
+        <h4>
+          <a href="#authors">Chirag Shah</a><br />
+          School of Communication &amp; Information, Rutgers University, New Brunswick, NJ 08901-1071, USA<br />
+          <a href="#authors">Preben Hansen</a><br />
+          Swedish Institute of Computer Science, Isafjordsgatan 22, Box 1263, SE-164 29 Kista, Sweden<br />
+          <a href="#authors">Rob Capra</a>, University of North Carolina at Chapel Hill, School of Information and Library Science, 100 Manning Hall, Chapel Hill, NC 27599-3360, USA
+        </h4>
+      </div><br />
+      <br />
+      <section>
+        <h2>
+          Introduction
+        </h2>
+        <p>
+          People working together for information seeking activities is not new, nor is researchers’ and practitioners’ interest in studying such situations of collaborative information seeking and creating solutions for supporting and enhancing them. In the 1990s, Grudin (<a href="#grudin94">1994</a>) outlined factors that developers need to consider when creating collaboration solutions (groupware systems), and Twidale (<a href="#twidale96">Twidale and Nichols 1996)</a> studied collaborative episodes in the context of virtual reference interactions in a library using his Ariadne interface. Other researchers have looked at aspects of the subject, but the majority of them remained limited to specific domains or situations. It was not until recently that researchers and practitioners from different disciplines started coming together for conversations and collaborations about collaborative information seeking and related topics. This is evident from a stream of recent publications at venues such as SIGIR, CSCW, Group, CHI, and ASIST conferences, as well as numerous workshops on this subject.
+        </p>
+        <p>
+          This technical report is culmination of the works presented and discussed at the 2nd workshop on collaborative information seeking, organized at the 74th annual conference of ASIST on October 12, 2011 in New Orleans. The workshop brought together participants from a wide range of domains and views, and this is reflected in their position papers available from the <a href="http://collab.infoseeking.org/events/asist2011workshop">workshop website</a>. The workshop brought together researchers and practitioners from different domains and organizations, allowing us to engage in discussing variety of important questions that relate to bridging the gap between theory and practice. Some examples are listed below.
+        </p>
+        <ol>
+          <li>How does collaboration fit into existing solitary information seeking activities?
+          </li>
+          <li>How do we move from single-user information seeking models to those for multi-users (collaborative)?
+          </li>
+          <li>The concepts of collaborative information handling and sharing are used in an unclear way. What is the distinction between them?
+          </li>
+          <li>How to integrate collaborative seeking into everyday life and professional environments?
+          </li>
+          <li>What should be required and desired characteristics of a collaborative information seeking system?
+          </li>
+        </ol>
+        <h2>
+          Position papers
+        </h2>
+        <p>
+          Workshop participant Joseph Meloche from North Carolina Central University discussed collaborative information seeking’s role in teaching and research and argued that in five years, collaborative information seeking will be in all forms of activities. Nasser Saleh from McHill University described a study involving collaborative information seeking in education, using the concept of sense-making, and demonstrated how a learning task could impact students’ information seeking behaviour in collaboration. Rob Capra from the University of North Carolina at Chapel Hill, on the topic of tasks in collaborative information seeking, presented results from a study where the subjects carried out various types of tasks and were found to be more engaged in exploratory collaborative search tasks than in fact-finding or transactional ones. Gene Golovchinsky from FX Palo Alto Laboratory, Inc. argued for the need for algorithmic mediation in collaborative information seeking and showcased his <a href="http://www.fxpal.com/?p=SessionSearch">Querium</a> system. Miles Efron from the University of Illinois at Urbana-Champaign presented a collaborative search game incorporating fun and competition as two important aspects in collaborative information seeking. Preben Hansen from Swedish Institute of Computer Science presented his work with the <a href="http://www.clef-initiative.eu//">CLEF evaluation campaign</a> in order to show how one could extract requirements for collaborative information seeking situations. Roberto González-Ibáñez and Chirag Shah from Rutgers University argued for a need to have a comprehensive framework for evaluation in collaborative information seeking and showed how a number of aspects pertaining to user-driven processes could be measured.
+        </p>
+        <h2>
+          Working group discussions
+        </h2>
+        <p>
+          As part of the workshop, we had an afternoon work session to brainstorm and discuss topics important for future research on collaborative information seeking. In a plenary session, the following high-level categories were selected as being important: 1-system issues; 2-privacy, security and trust; 3-groups and roles; 4-future directions; 5-theory; 6-evaluation; and 7-data collection. Each of these categories was written on a blank poster sheet taped to the wall. Then, workshop participants were invited to individually brainstorm ideas for each category, write them on post-it notes, and stick them to corresponding poster sheets. After ideas had been collected, we broke into two groups to discuss the ideas in detail. The first group covered the categories 1-4, and the second group covered 4-7.
+        </p>
+        <h3>
+          Report on discussion topics
+        </h3>
+        <h4>
+          System issues
+        </h4>
+        <p>
+          This part of our discussion focused on how systems and tools impact collaborative information seeking.
+        </p>
+        <ul>
+          <li>How can systems make collaboration more effective?<br />
+            The group is greater than the sum of individuals. We discussed a goal that a collaborative information seeking system should, by some measure, be more than the sum of the individuals collaborating. Possible quantities include the amount of information, the time spent, the diversity of information, and level of social interaction.
+          </li>
+          <li>What are important approaches and solutions to explore for collaborative information seeking systems?<br />
+            System-centered: these approaches could include techniques such as algorithmic mediation and using the system as a bridge (e.g., for catching up on collaborators’ prior actions or findings, linking collaborators, and moving information from personal spaces to group spaces and back).<br />
+            User-centred: here, we discussed how a system could help with selecting collaborators for a given task.
+          </li>
+          <li>How can a system help with division of labour?<br />
+            Division of labour is commonly employed by groups engaging in collaborative information seeking. We discussed three ideas for how systems can help support this practice (if desired by the collaborators): providing a communication channel as part of the system, allowing users to do a '<em>smart split</em>' of the results, as available in the SearchTogether system (<a href="#mor07">Morris and Horvitz 2007</a>), where the search results are divided among the collaborators according different aspects (e.g., source, content or author), and support for managing policies about how the sub-tasks are divided, assigned, or taken on by the individual collaborators.
+          </li>
+        </ul>
+        <h4>
+          Privacy, security and trust
+        </h4>
+        <p>
+          In this part of our discussion, we focused on how the related issues of privacy, security, and trust influence collaborative information seeking.
+        </p>
+        <ul>
+          <li>Mapping trust to privacy awareness. How a system makes users aware of privacy issues can affect users’ trust in the system and willingness to share information.
+          </li>
+          <li>Masking and unmasking information. Systems could support methods for selective sharing of information among collaborators.
+          </li>
+          <li>Inconsistency of relevance judgments. Document relevance is known to depend highly among individuals, even trained judges. Collaborators may <em>trust</em> the judgments made by some collaborators more than others. Designers of collaborative information seeking systems should be aware of these issues and look for ways that it may have an impact on system design.
+          </li>
+          <li>Conflict management. In collaborative information seeking, conflicts may arise among collaborators and/or policies for privacy and sharing.
+          </li>
+        </ul>
+        <h4>
+          Groups and roles
+        </h4>
+        <p>
+          We discussed how groups may conduct collaborative information seeking and what individual roles may be taken in the process. Based on the suggested ideas and our discussions, we list several areas for exploration.
+        </p>
+        <ul>
+          <li>Symmetric vs. asymmetric roles—what implications are there for system design and evaluation?
+          </li>
+          <li>Situations with user-defined versus system-defined roles.
+          </li>
+          <li>"Learned roles"—in some situations, there may be roles that are <em>learned</em>, either by the collaborators, or, a system might try to learn roles based on the collaborators’ interactions and inputs
+          </li>
+          <li>How can systems support various types of roles, and what should role-specific interfaces do?
+          </li>
+        </ul>
+        <h4>
+          Future directions
+        </h4>
+        <p>
+          In this part of our discussion, we examined several future directions for collaborative information seeking research.
+        </p>
+        <ul>
+          <li>Smarter systems: features that provide facilitate collaborative information seeking through specific features
+          </li>
+          <li>Privacy and security: this is an area that needs more research to examine how these issues impact collaborative information seeking and system design
+          </li>
+          <li>Promoting and supporting asymmetric roles and diversity to encourage the whole activity being more than the sum of the parts—more work needs to be done to help understand how roles and diversity contribute in collaborative information seeking activities. Research in computer-supported collaborative work has examined many relevant dimensions, and more connections are needed between collaborative information seeking and such research.
+          </li>
+          <li>Integration of collaborative information seeking tools into existing systems and practices—more situations where collaborative information seeking occurs should be studied. There are connections here to research from the collaborative work and organizational knowledge communities.
+          </li>
+          <li>Transition from single-user situations and systems to collaborative information seeking and back—how can systems support the need for individuals to have personal information spaces in which they conduct searches and then share (perhaps selectively) their results with their collaborators, and then re-integrate group results into their personal space if desired.
+          </li>
+        </ul>
+        <p>
+          The second part of the workshop included a work session in which the participants were divided into two groups. The second group debated theory, evaluation and data collection. These topics were selected as important in a plenary session before splitting up in groups. Based on the notes related to each of the topics, a discussion took place and the following issues were pointed out as important.
+        </p>
+        <h4>
+          Theory
+        </h4>
+        <p>
+          The following list of theoretical issues emerged, reflecting important issues we need to take into account in collaborative information seeking research.
+        </p>
+        <ul>
+          <li>
+            <em>Growth of theory.</em> Currently there are many different models and theoretical frameworks within human information behaviour, information seeking and information retrieval. The idea with theory growth is to expand existing theories with theoretical insights from the collaborative information seeking research. In such a way, the established models and frameworks could be expanded and enriched.
+          </li>
+          <li>
+            <em>Theoretical framework for collaborative information seeking.</em> All participants agreed that it was very important to make a contribution towards developing a theoretical framework for collaborative information behaviour. In doing so, involving theories and frameworks from other disciplines and previous theories would intensify studies in collaborative information seeking.
+          </li>
+          <li>
+            <em>Differences between individuals and teams.</em> We discussed the importance of investigating what the differences are between group behaviour and individual behaviour when performing collaborative information seeking activities in different domains and situations. What and how can we identify differences and how could these be supported?
+          </li>
+          <li>
+            <em>Activity theory.</em> It was suggested that activity theory would be an interesting framework for research on collaborative information handling. The group reasoned that activity theory could be useful for more ethnographic research and that the theory is good for understanding and analysing phenomena such as finding patterns.
+          </li>
+          <li>
+            <em>Computer-supported collaborative work and computer-mediated commucation.</em> Furthermore, it was recognized that these research areas are interesting as platforms for research and methods. Influences from these areas may contribute to research in the collaborative information seeking field.
+          </li>
+          <li>
+            <em>Play theory, social and positivistic psychology</em> were also mentioned as possible contributors to the collaborative information seeking research area.
+          </li>
+        </ul>
+        <h4>
+          Evaluation
+        </h4>
+        <p>
+          The second issue that emerged reflecting important issues we need to take into account concerned aspects of evaluation of related systems. What is needed is to re-visit the existing methods and measures for evaluating information systems. The methods and measures need to reflect issues from both a user's point of view as well as from a system point of view. From the user point of view, we may perform evaluation that is designed for naturalistic settings. At this level we have less control over the experimentation but, on the other hand, we the more real situation may include collection of a large amount of data. This level may include contextual aspects difficult to handle but it may reveal interesting aspects of the flow of interaction. On the other hand, at the laboratory level, we have more control over the experiment and the variables to be measures.
+        </p>
+        <ul>
+          <li>Methods and methodologies
+          </li>
+          <li>Measures
+          </li>
+          <li>User Side
+            <ul>
+              <li>Naturalistic settings
+              </li>
+              <li>Semi-controlled settings
+              </li>
+              <li>Laboratory studies
+              </li>
+            </ul>
+          </li>
+          <li>System side
+            <ul>
+              <li>Evaluation in the style of the Text Retrieval Conference (TREC)
+              </li>
+            </ul>
+          </li>
+          <li>Lessons learned
+          </li>
+        </ul>
+        <p>
+          The working group discussed a way to collect and display results from different experiments and studies to be able to share knowledge on research in this area.
+        </p>
+        <h4>
+          Data collection
+        </h4>
+        <p>
+          Finally, the group talked about aspects of data collection. During the discussion two things were considered interesting: different tools for collecting data on collaborative information seeking and that a document is more than just keywords. Based on the latter, the group developed a visualization of different aspects (or features) of a document. Document features that could be shared and that could be investigated from a collaborative information handling perspective. Features of interest and mentioned during the workshop were (see figure 1 below): time stamps of different kinds related to the document (created, changed etc); the document space the document resides in (in one or more collections); annotations; contextual features for each manifestation of the document; access and control of the document; who actually viewed the document; sharing the query and query sessions; and sharing the transaction logs for gaining knowledge.
+        </p>
+        <h2>
+          Conclusion
+        </h2>
+        <p>
+          The workshop was quite successful by several measures. First, it brought researchers and practitioners, students and teachers from several domains, which is essential for an interdisciplinary domain of collaborative information seeking. Second, the presentations and discussions were more focused than those done in some of the other such events the authors have attended, indicating focus and maturity that this field has achieved in the recent years. And finally, the lessons derived and the questions raised through these discussions (which are reported here) should provide pointers to further research and developmental works to those interested in this domain.
+        </p>
+        <h2>
+          Acknowledgements
+        </h2>
+        <p>
+          We are thankful to ASIST for helping us organize this workshop at their annual meeting in 2011. We are also very grateful to all the workshop participants who actively engaged and contributed to the workshop, making it highly successful.
+        </p>
+        <h2>
+          About the authors
+        </h2>
+        <p>
+          <strong>Dr. Chirag Shah</strong> is an assistant professor in the School of Communication &amp; Information at Rutgers University. He received his PhD from the University of North Caroliona at Chapel Hill. He can be contacted at: <a href="mailto:chirags@rutgers.edu">chirags@rutgers.edu</a>.<br />
+          <strong>Dr. Preben Hansen</strong> is a senior researcher at the Swedish Institute of Computer Science. He recieved his Ph. D in Information Science from the University of Tampere, Finland in 2011. His contact address is <a href="preben@sics.se">preben@sics.se</a><br />
+          <strong>Dr. Robert Capra</strong> is an Assistant Professor in the School of Information and Library Science at the University of North Carolina at Chapel Hill. He received his Ph.D. in Computer Science from Virginia Tech. (Virginia Polytechnic Institute and State University) He can be reached at: <a href="rcapra@unc.edu">rcapra@unc.edu</a>
+        </p>
+      </section>
+      <section class="refs">
+        <form>
+          <fieldset>
+            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+            <ul class="refs">
+              <li id="grudin94">Grudin, J. (1994). Groupware and social dynamics: eight challenges for developers. <em>Communications of the ACM</em>, <strong>37</strong>(1), 92-105. Retrieved 23 May, 2012 from http://research.microsoft.com/en-us/um/people/jgrudin/past/papers/cacm94/cacm94.html (Archived by WebCite® at http://www.webcitation.org/67smc7l6T)
+              </li>
+              <li id="mor07">Morris, M. R. &amp; Horvitz, E. (2007). <a href="http://www.webcitation.org/67smDErg0">SearchTogether: an interface for collaborative Web search</a>. In <em>Proceedings of the 20th annual ACM symposium on User Interface Software and Technology</em> (pp. 3-12). New York, NY: ACM Press. Retrieved 23 May, 2012 from http://research.microsoft.com/en-us/um/people/horvitz/searchtogether_uist2007.pdf (Archived by WebCite® at http://www.webcitation.org/67smDErg0)
+              </li>
+              <li id="twidale96">Twidale, M.B. and Nichols, D.M. (1996). Collaborative browsing and visualisation of the search process. <em>Aslib Proceedings</em>, <strong>48</strong>(7/8), 177–182. Retrieved 23 May, 2012 from http://www.comp.lancs.ac.uk/computing/research/cseg/projects/ariadne/docs/elvira96.html (Archived by WebCite® at http://www.webcitation.org/67smUTxab)
+              </li>
+            </ul>
+          </fieldset>
+        </form><br />
+        <br />
+      </section>
+    </article><br />
+    <br />
+    <table class="footer">
+      <tr>
+        <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">
+          Find other papers on this subject
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:center; vertical-align:top;">
+          <form method="get" action="http://scholar.google.com/scholar" target="_blank">
+            <table class="footer">
+              <tr>
+                <td style="white-space: nowrap; vertical-align:top; text-align:center; height:32;">
+                  <input name="q" value="&quot;collaborative information seeking&quot;" type="hidden" /><br />
+                  <input name="sa" value="Scholar Search" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit" /> <input name="num" value="100" type="hidden" />
+                </td>
+              </tr>
+            </table>
+          </form>
+        </td>
+        <td style="vertical-align:top; text-align:center;">
+          <!-- Search Google -->
+          <form method="get" action="http://www.google.com/custom" target="_blank">
+            <table class="footer">
+              <tbody>
+                <tr>
+                  <td style="vertical-align:top; text-align:center; height:32; white-space:nowrap;">
+                    <input name="q" value="&quot;collaborative information seeking&quot;" type="hidden" /><br />
+                    <input name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" type="submit" /> <input name="client" value="pub-5081678983212084" type="hidden" /> <input name="forid" value="1" type="hidden" /> <input name="ie" value="ISO-8859-1" type="hidden" /> <input name="oe" value="ISO-8859-1" type="hidden" /> <input name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LBGC:FF9900;ALC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" type="hidden" /> <input name="hl" value="en" type="hidden" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </td>
+        <td style="text-align:center; vertical-align:top;">
+          <form method="get" action="http://www.bing.com" target="_blank">
+            <table class="footer">
+              <tbody>
+                <tr>
+                  <td style="vertical-align:top; text-align:center; height:32; white-space:nowrap;">
+                    <input name="q" value="&quot;collaborative information seeking&quot;" type="hidden" /><br />
+                    <input name="sa" value="Bing" style="font-size: small; font-family: Verdana; font-weight: bold;" type="submit" /> <input name="num" value="100" type="hidden" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <div>
+      Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/17-2/paper520.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a>
+    </div><br />
+    <div>
+      <strong><img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="logo" /><a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious', 'toolbar=no,width=700,height=400'); return false;">Bookmark This Page</a></strong>
+    </div>
+    <hr />
+    <table class="footer">
+      <tbody>
+        <tr>
+          <td style="vertical-align:top; text-align:center:">
+            <div>
+              <a href="http://www.digits.net" target="_blank"><img src="http://counter.digits.net/?counter={c88e135d-ba05-57c4-4568-9ca3069516e6}&amp;template=simple" alt="Hit Counter by Digits" border="0" /></a>
+            </div>
+          </td>
+          <td style="vertical-align:top; text-align:center:">
+            <div>
+              © the authors, 2012.<br />
+              Last updated: 20 March, 2012
+            </div>
+          </td>
+          <td style="vertical-align:middle; text-align:center:">
+            <!--ONESTAT SCRIPTCODE START--><!--
+// Modification of this code is not allowed and will permanently disable your account!
+// Account ID : 281971
+// Website URL: http://InformationR.net/ir/
+// Copyright (C) 2002-2006 OneStat.com All Rights Reserved
+-->
+            <div id="OneStatTag">
+              <table class="center">
+                <tr>
+                  <td>
+                    <noscript><a href="http://www.onestatfree.com"><img src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=281971&amp;js=No&amp;" alt="online web site analytics" /></a></noscript>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;">
+                    <div style="color:black; display:none; font-family:'Verdana';">
+                      <a href="http://www.onestat.com" style="text-decoration:none;">online web site analytics</a><br />
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div><!--ONESTAT SCRIPTCODE END-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <table class="footer">
+      <tr>
+        <td>
+          <div class="button">
+            <ul style="text-align: center;">
+              <li>
+                <a href="infres172.html">Contents</a> |
+              </li>
+              <li>
+                <a href="../iraindex.html">Author index</a> |
+              </li>
+              <li>
+                <a href="../irsindex.html">Subject index</a> |
+              </li>
+              <li>
+                <a href="../search.html">Search</a> |
+              </li>
+              <li>
+                <a href="../index.html">Home</a>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <hr />
+  </body>
 </html>

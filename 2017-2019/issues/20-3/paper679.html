@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="stylesheet" href="style.css">
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0">
+    <title>
+      Applying the user meta model to the analysis of scientific knowledge production and transfer. insights from exploring scientific, small-scale, fishery management in Chile
+    </title>
+    <meta charset="utf-8">
+    <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif">
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css"><!--Enter appropriate data in the content fields-->
     <meta name="dcterms.title" content="Applying the user meta model to the analysis of scientific knowledge production and transfer. insights from exploring scientific, small-scale, fishery management in Chile">
     <meta name="author" content="Carlos Hidalgo, Francisco Ther, Asunción Diaz">
     <meta name="dcterms.subject" content="Our goal is to provide insights that improve the relationship among scientific knowledge production and fisheries' sustainability by examining the scientific endeavour of a Chilean small-scale fisheries administration regime: the ‘Management and Exploitation Areas for Benthic Resources’.">
     <meta name="description" content="Our goal is to provide insights that improve the relationship among scientific knowledge production and fisheries' sustainability by examining the scientific endeavour of a Chilean small-scale fisheries administration regime: the ‘Management and Exploitation Areas for Benthic Resources’. Given the importance of this reflexive exercise the user meta model is employed as a methodological framework, and a relational analysis that combines classic social network analysis of co-authorship and citation with a qualitative approach based on categorical classifications of the expert choice technique is employed. Analysis combines the calculation of centrality measurements in both co-authorship and citation networks, and the use of nodes’ attributes in a temporal axis to identify trends in scientific production and transfer. The results reveal: a) the existence of two clusters or scientific schools that include biological and social scientists and b) the isolation of economic science. The results also reveal the existence of scientific threshold articles that have significantly modified processes of scientific production. Scientific threshold articles do not exclusively belong to a single scientific school, suggesting the absence of a single hegemonic scientific cluster at the level of innovative practices. Conclusions highlight the implications of this dynamics to the sustainability of fisheries management.">
-    <meta name="keywords" content="users meta models; social network analysis; co-authorship network; citation network; Chile."> 
+    <meta name="keywords" content="users meta models; social network analysis; co-authorship network; citation network; Chile."><!--leave the following to be completed by the Editor-->
     <meta name="robots" content="all">
     <meta name="dcterms.publisher" content="Professor T.D. Wilson">
     <meta name="dcterms.type" content="text">
@@ -16,302 +20,659 @@
     <meta name="dcterms.identifier" content="http://InformationR.net/ir/20-3/paper679.html">
     <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/20-3/infres203.html">
     <meta name="dcterms.format" content="text/html">
+    <meta name="dc.language" content="en">
     <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
     <meta name="dcterms.issued" content="2015-19-15">
     <meta name="geo.placename" content="global">
   </head>
-<body>
-<h4 id="vol-20-no-3-september-2015">vol. 20 no. 3, September, 2015</h4>
-<h1 id="applying-the-user-meta-model-to-the-analysis-of-scientific-knowledge-production-and-transfer-insights-from-exploring-scientific-small-scale-fishery-management-in-chile">Applying the user meta model to the analysis of scientific knowledge production and transfer. insights from exploring scientific, small-scale, fishery management in Chile</h1>
-<h4 id="carlos-hidalgo-francisco-ther-and-asunci%C3%B3n-diaz"><a href="#author">Carlos Hidalgo</a>, <a href="#author">Francisco Ther</a> and <a href="#author">Asunción Diaz</a></h4>
-<p>Universidad de los Lagos, Pobl lomas de Puyehue, Osorno, Los Ríos Region, Chile</p>
-<h4 id="abstract">Abstract</h4>
-<blockquote>
-<p><strong>Introduction</strong>. Our goal is to provide insights that improve the relationship among scientific knowledge production and fisheries' sustainability by examining the scientific endeavour of a Chilean small-scale fisheries administration regime: the ‘Management and Exploitation Areas for Benthic Resources’.<br>
-<strong>Method</strong>. Given the importance of this reflexive exercise the user meta model is employed as a methodological framework, and a relational analysis that combines classic social network analysis of co-authorship and citation with a qualitative approach based on categorical classifications of the expert choice technique is employed.<br>
-<strong>Analysis</strong>. Analysis combines the calculation of centrality measurements in both co-authorship and citation networks, and the use of nodes’ attributes in a temporal axis to identify trends in scientific production and transfer.<br>
-<strong>Results</strong>. The results reveal: a) the existence of two clusters or scientific schools that include biological and social scientists and b) the isolation of economic science. The results also reveal the existence of scientific threshold articles that have significantly modified processes of scientific production.<br>
-<strong>Conclusion</strong>. Scientific threshold articles do not exclusively belong to a single scientific school, suggesting the absence of a single hegemonic scientific cluster at the level of innovative practices. Conclusions highlight the implications of this dynamics to the sustainability of fisheries management.</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<p>On occasion, scientific fields develop innovative reflexive tools through which science is re-defined (<a href="#kuh62">Kuhn, 1962</a>). This natural tendency is often shaped by historical trends. Numerous studies have examined this phenomenon as researchers have grown more aware of reflexive exercises. This trend can be attributed to several factors: epistemological changes, a gradual awareness of historical authenticity, and the effects of various constructions of reality (<a href="#esc99">Escobar, 1999</a>). Some of these approaches are crucial because they highlight the need to devalue previously unquestioned truths when conducting scientific investigations. Following Latour (<a href="#lat93">1993</a>), these reflexive exercises disassemble the false truth that modernity (and its knowledge strategy, <em>normal</em> science and technology) has created the distinction between nature and society and, consequently, between science and research problems. An objective of this article is to expose areas in which this distinction is not recognized.</p>
-<p>This paper examines problems that result from the production and transfer of scientific knowledge on a specific topic, assuming that multiple disciplines are affected by these topics. Knowledge of a co-management mechanism used in small-scale Chilean fisheries is examined as a case study. Recognizing the complexity of scientific practices and knowledge, scientists are now interested in characterizing transformations of scientific production and transfer to address the ‘Management and Exploitation Areas for Benthic Resources’ (MEABRs). Although a description of MEABRs is given below, they can be briefly defined as an administrative figure for the co-management of small-scale Chilean fishery resources that has legally existed since enacting the Fisheries and Aquaculture Law (<a href="#chi91">1991</a>). It is essential to examine scientific knowledge production in this research area because scientific production can be used to refine co-management arrangements that have already been initiated in the international arena (<a href="#eva11">Evans, Cherrett and Pemsl, 2011</a>; <a href="#eva11">Salas, Chuenpagdee, Seijo and Charles, 2007</a>).</p>
-<p>Our final goal is provide insights that improve the relationship among scientific knowledge production and fisheries' sustainability by using classical research tools to the social studies of science and technology. Using the ‘user meta model’ as a methodological frame, we conduct a social network analysis of co-authorship and citation networks with qualitative features. We argue that this approach can be used in studies of citation and co-authorship when applying social network analysis to small samples as in our case. We modify previously selected and weighted attributes when applying the <em>expert choice</em> technique. These attributes are utilized to strengthen our analysis of social network analysis centrality measures and to link citation and co-authorship networks through ‘threshold paper’ processes and through collaboration between authors. Thus we unveil expert production and knowledge transfer trends that can be useful to understand limitations of scientific assessments regarding fisheries' public policies and their economic institutions.</p>
-<h2 id="reflexivity-and-the-social-study-of-science-and-technology">Reflexivity and the social study of science and technology</h2>
-<p>Despite the existence of numerous approaches that may be useful for our purposes, we focus on theoretical aspects that allow us to compare features of the bibliometric social studies of science and technology and social science reflexivity. This approach may contribute to the interpretation of certain scientific tasks, revealing the current state of scientific fields dedicated to MEARB research.</p>
-<p>Although scientific studies of reflexivity and second-order observation are not new, these studies have been refined over the last four decades, particularly in response to scepticism of the relationship between science, technology and social welfare. Reflexivity and self-observation exercises have grown more prevalent because of scepticism surrounding the linear predictive model of conventional science and because of Thomas Kuhn’s (<a href="#kuh62">1962</a>) work, which highlights the relevance of socio-historical contexts to scientific production and transfer. Only since the post war period have Western modernization and development models been severely challenged. Following this trend, the development of social studies of science and technology recaptured the interest of the scientific community, primarily owing to its critique of essentialist approaches to scientific knowledge and practices.</p>
-<p>Social studies of science and technology objectives are concerned with social contexts of scientific and technological production and with the consequences of scientific advancement in the social world (<a href="#bar96">Barnes, Bloor and Henry, 1996</a>; <a href="#kno83">Knorr-Cetina and Mulkay, 1983</a>; <a href="#thi92">Thirunarayanan, 1992</a>). The geographical expansion of social studies of science and technology began during the mid-twentieth century, expanding concerns surrounding the epistemological and methodological functioning of sciences worldwide and taking various forms, such as Frankfurt's critical school, the Mertonian approach, Edinburgh’s <em>strong programme</em>, and the ethnography of science, among others (<a href="#bug88">Bugliarello, 1988</a>; <a href="#lew90">Lewis, 1990</a>; <a href="#woo81">Woolgar, 1981</a>). Of these approaches, we are particularly interested in the European tradition of social studies of science and technology, which focuses on the conditions of scientific production and transfer rather than on the social consequences and axiological assessments of scientific knowledge, that are addressed in the American tradition (<a href="#gar01">García, <em>et al</em>., 2001</a>; <a href="#mar04">Martínez, 2004</a>). Through this approach, a focus on social contexts allows for the emergence of knowledge. Sociological theories have stressed that modern society has generated various reflexivity mechanisms that vary based on ontological approaches. From economics and politics to education and the sciences, methodologies and theories have been developed to observe, explain or interpret phenomena, establishing self-observation mechanisms of a second order.</p>
-<p>The theory of knowledge can also be understood as a self-observation tool that allows for auto-regulation of the scientific system (<a href="#luh96">Luhmann, 1996</a>), enabling the questioning of object and subject distinctions and the evaluation of scientific model performance. According to the biology of knowledge (<a href="#var05">Varela, 2005</a>), such reflexivity practices can be understood as autonomous processes that appear in nature in varying forms as regulation mechanisms of system boundary settings. The biological self-referential model can be used to observe scientific systems if we assume that a community of scientists applies structural limits to distinctions and scientific observations, thus applying theoretical development to various research fields. Maturana (<a href="#mat95">1995</a>) proposes that all human activity is generated through differentiated cognitive domains, such as science, which are defined through actions framed by criteria of scientific explanation acceptability or validation. This point demonstrates the importance of investigating transformations that occur in research fields and our motivation for depicting the relational conditions that allow for MEABR-based scientific knowledge production. Although we examine a small sample, this study is not a single-case inquiry. Hence, Bruno Latour's ‘actants’ (<a href="#lat87">Latour, 1987</a>, <a href="#lat87">2005</a>; <a href="#lat79">Latour and Woolgar, 1979</a>) are not identified or tracked. Instead, this investigation examines how relationships between research fields and researchers have transformed scientific knowledge production and transfer.</p>
-<p>However there is still a long distance to link in a proper way the more abstract ideas cited about biological self-referential model with the methodological frame employed here; whilst the first is built over a philosophical debate and qualitative arguments, the latter deploys mathematics and structural properties. Here we only venture to propose a possible pathway to relate them, particularly by complementing participatory and qualitative designed properties for researchers and papers, and threshold papers will enable interpreting some self-organizing properties of co-authorship networks, citation networks and their interface.</p>
-<h2 id="a-brief-history-of-the-management-and-exploitation-areas-for-benthic-resources">A brief history of the <em>Management and Exploitation Areas for Benthic Resources</em></h2>
-<p>Chile is a country with a unique geographical configuration. Located in the Southern Cone of America, its length (between parallels 17° 30' and 56° 30' S latitude, almost 4,300 km long) and narrowness (average 177 km) form an elongated shape that is confined within the Andes mountains to the east and by the Pacific Ocean to the west. The country is also characterized by a relationship between its national history and coastal culture: coastal populations have used marine ecosystems for subsistence since pre-Columbian times (<a href="#huc10">Hucke-Gaete <em>et al.</em>, 2010</a>; <a href="#sta04">Standen, Santoro and Arriaza, 2004</a>). However, during the second half of the last century, political-administrative transformations, technological changes, government credits, high demand and an increased commercial value of certain species have led to the over-exploitation of marine resources, particularly during the 1980s (<a href="#cas94">Castilla, 1994</a>; <a href="#cas05">Castilla and Fernández, 2005</a>; <a href="#mel02">Meltzoff, Lichtensztajn and Stotz, 2002</a>). Over-exploitation has especially affected the Loco shellfish (<em>Concholepas concholepas</em>), known as Chilean abalone, whose catch rate quadrupled between the 1970s and 1980s, forcing the closure of Chilean abalone fisheries in the late 1980s (<a href="#sto97">Stotz, 1997</a>).</p>
-<p>With a dramatic increase in marine landing fees and in response to a lack of central regulation at the time, several experimental ecology studies were performed during the late 1980s (<a href="#cas86">Castilla, 1986</a>, <a href="#cas00">2000</a>), leading to the subsequent enactment of the Fisheries and Aquaculture Law (,a href=&quot;#chi91&quot;&gt;1991). This law, along with Area Management Regulations No. 355 (<a href="#chi95">1995</a> and No. 314 (<a href="#chi04b">2004</a> and decrees of modifications supreme decree No. 572 (<a href="#chi00">2000</a>, No. 320 (<a href="#chi01">2001</a> and No. 253 (<a href="#chi04a">2004</a>), introduced the Management and Exploitation Areas for Benthic Resources (MEABRs) implemented through fishery organizations. MEABRs are administrative structures that promote the rational use of benthic resources by small-scale fishermen and are defined (by the state) as co-management initiatives based on territorial users' rights for fishery (<a href="#gel09">Gelcich, Godoy and Castilla, 2009</a>).</p>
-<p>Although over fifty benthic species are managed, Loco is considered the most critical species because of its importance to the small-scale fishery economy (<a href="#gon06">González <em>et al.</em>, 2006</a>). MEABRs serve as administrative bodies that manage marine space ceded to small-scale fishing organizations (unions, federations, trade associations) through the SUBPESCA Undersecretary of Fisheries together with other interested parties, including the scientific community. Although the scientific literature originally referred to MEABRs as triumvirate initiatives managed by a State-Community-Scientist axis (<a href="#sch07">Schumann, 2007</a>), new research has indicated that they represent dynamic instances of collaborative and conflictive interaction between stakeholder groups (e.g., <a href="#mar10">Marín and Berkes, 2010</a>) identified seven stakeholder groups involved in Chilean central coast research). Formal requests for MEARBs and scientific assessments established by the Fisheries and Aquaculture Law began in 1997. Although scientific publications produced by MEABRs have not grown numerous, recent trends suggest that they are increasing. This specialized literature identifies three dimensions: environment, economy and social organization (<a href="#cas01">Castilla and Defeo, 2001</a>; Gelcich, <a href="#gel05a">2005a</a>, <a href="#gel05b">2005b</a>, <a href="#gel08">2008</a>, <a href="#gel09">2009</a>; <a href="#zun08">Zúñiga, Ramírez and Valdebenito, 2008</a>, <a href="#zun10">2010</a>), and our inquiry addresses the current absence of reflexive articles examining the scientific deployment of MEARBs.</p>
-<h2 id="materials-and-methods">Materials and methods</h2>
-<p>Given the nature of our theoretical-conceptual approach, the materials and methods used have been slightly altered (by the authors) from traditional bibliometric and statistical tools of the social studies of science and technology. This modification was made mainly due to trends of limited MEABR scientific production. The small sample that we collected allowed us to explore a more qualitative and profound version of the social studies of science and technology.</p>
-<p>A bibliographic review of data recollection and analysis in the social studies of science and technology suggests that the user meta model proposed by Börner, Chen, and Boyack (<a href="#bor03">2003</a>) and applied by Janssen, Schoon, Ke, and Börner (<a href="#jan06">2006</a>) and Janssen (<a href="#jan07">2007</a>) is suitable for our purposes. This methodological framework consists of a sequence of techniques that have been refined over time and that rely on researcher criteria for sample construction and meta-information inclusion (authors, depicting terms, and keywords, among others). The user meta model applies the following steps:</p>
-<ol>
-<li>Information extraction</li>
-<li>Analysis unit definition</li>
-<li>Measurement selection</li>
-<li>Calculation of similarity or unit proximity</li>
-<li>Ordering</li>
-<li>Visualization for analysis and interpretation</li>
-</ol>
-<p>This methodological framework was selected because it accommodates relational analyses (according to certain social network analysis procedures) that apply a more qualitative approach through the use of various measures, such as consensual article attributes and article authors. These steps were performed through our investigation as follows.</p>
-<p>First, research was conducted through the Thomson Reuters’ Web of Science databases and SCIELO (Scientific Electronic Library Online). This approach is justified through our definition of step 2.</p>
-<p>Regarding analysis units, we applied a social network analysis of co-authorship and citation based on our objective to study forms of scientific production and knowledge transfer. Our analysis units include researchers (authors), research articles (scientific papers published in journals indexed in Web of Sciene or SCIELO; we considered articles and papers as synonyms), and their relationships. Once these analysis units were established, samples of articles and authors were collected through an online search using keywords (e.g., MEABR, Chilean fisheries co-management, and small-scale Chilean fisheries, among others) and through a crosscheck of authors and articles in all bibliographic references; results yielded N=30 published scientific papers with N=33 scientific authors. The time period covers from the earliest scientific publication of experimental biology which set the ground for a Fisheries and Aquaculture Law (i.e., 1986), to the last publication identified at the beginning of this research (i.e. 2012).</p>
-<p>For step 3, a deeper review was conducted to establish the foundations of our methodological modifications to classic analyses of co-authorship and citation. Following user meta model principles, a categorization strategy was designed for both authors and articles, and the <em>expert choice</em> technique was applied to assess multiple variables. During this phase, categories and subcategories were employed to qualitatively characterize authors and articles based on the establishment of an interdisciplinary panel of seven experts (geographers, anthropologists and biologists). As shown in Table 1, a statistical distribution of authors and papers was created based on these categories, and sample attributes were classified and defined based on these categories and subcategories. We also conducted a bibliometric for co-authorship and citation networks’ analysis. According to Derek de Solla Price's foundational article (<a href="#pri70">1970</a>), an article is cited when it is listed the bibliographic references of another article, and citation analysis therefore involves the study of citation practices in scientific literature. Citation studies require the application of complex methods. In 1998, Leydesdorff (<a href="#ley98">1998</a>) questioned whether citations should be treated as <em>explanans</em> (as a means of explaining something) or as <em>explanandums</em> (as a subject to be explained). If we focus on the explanandum dimension, Leydesdorff argued that a citation involves the existence of a binomium quoted article:quoting article and, therefore, encompasses a dynamic and relational operation that occupies a position within the multidimensional space formed by other citations. Citations are highly complex as a form of author communication, allowing the possibility to address the social and cognitive contexts of their production (although it is not sufficient to simply provide an account of scientific knowledge production, as the currently unresolved debate demonstrates).</p>
-<p>White, Wellman, and Nazer (<a href="#whi04">2004</a>) identified three citation analysis hypotheses: i) the social network hypothesis, which explains the citation of a group or of an invisible college through interpersonal relationships between publication authors; ii) the intellectual network hypothesis,’ which proposes that citations are better defined as belonging to disciplines and related research topics rather than to interpersonal ties; iii) and the socio-cognitive network hypothesis (employed in this paper), which relies on the interdependency of both dimensions (social relationships and disciplinary and thematic affinities) and thus assumes the necessity of techniques that address them together.</p>
-<p>As for the definition and treatment of data, debates have focused on differences that, according to authors such as Cronin (1984), have formed a dichotomy between a ‘microsociological’ approach that advocates not concentrating exclusively on citations but also on their contexts of production and a ‘scientometric’ approach, which develops instruments for measuring citations. In our case, a citation analysis was conducted based on changes in the distribution of attributes over time using categories and subcategories. We thus attempted to uphold part of Moravcsik and Murugesan’s (<a href="#mor75">1975</a>) proposal, although in our case, attributes are intended to reflect the contexts in which the citations are made. Finally, we employed Finney's classificatory strategy (<a href="#fin79">1979</a>) for our social network analysis. The data collection procedure was carried out through a review of literature references for each paper identified, classifying references through a paper-by-paper asymmetric square matrix of binary values in which 1 represented a citation and 0 represented no citation (an X matrix where xij &gt; 0 if article <em>i</em> cited article <em>j</em> and xij = 0 if <em>i</em> did not cite <em>j</em>). In turn, by reading the matrix vertically, it is possible to identify the articles cited in each item. Co-authorship analyses offer insight into the structures of research communities by (partially) revealing trends of collaboration between various actors.</p>
-<p>According to De Stefano and collaborators,</p>
-<blockquote>
-<p>Scientific collaboration is a mix of informal mechanisms (e.g., advice, face-to-face contacts, exchange of personal knowledge), and formal activities (e.g., writing papers, participating in research projects) among scientists involved in producing knowledge… (<a href="#des13">De Stefano, Fuccella, Vitale and Zaccarin, 2013</a>: p. 371).</p>
-</blockquote>
-<p>We thus did not propose conducting a traditional co-authorship analysis, i.e., exploring the ‘preferential attachment hypothesis' and the presence of free-scale networks through scientific collaboration (<a href="#bar02">Barabási <em>et al.</em>, 2002</a>), examining <em>small-world</em> network configurations (<a href="#wat98">Watts and Strogatz, 1998</a>) or applying the G-index (<a href="#abb11">Abbasi, Altmann and Hossain, 2011</a>; <a href="#egg06">Egghe, 2006</a>). Instead, we supplement the collaboration network with attributive analyses via classification strategy and with the citation network through the ‘threshold paper’ concept, which is defined below. For data collection purposes, we examined articles directly. Co-authoring information was extracted directly from the articles and then displayed using a symmetrical author-by-author matrix of numeral values in which 0 denotes no collaboration and <em>i</em>=1, 2, 3…m for m collaborations (an X matrix where xab &gt; 0 if author <em>a</em> published im times with author <em>b</em> and where xab = 0 if the authors did not publish together). This matrix design is based on author intentions to precisely visualize collaborations for each pair of investigators. This information was combined with attributes selected by the authors (rank and nationality of the researcher), illustrating the formation of sub-groups within the scientific collaboration network via relational and attributive analyses. Given the small sample examined, co-authorship issues associated with name homonyms were negligible (<a href="#kan09">Kang <em>et al.</em>, 2009</a>).</p>
-<table class="center"><caption>  
-Table 1: Categories and subcategories of paper’s classification.</caption>
-<tbody>
-<tr>
-<th>Categories</th>
-<th>Sub-categories</th>
-<th>No. of papers</th>
-</tr>
-<tr>
-<th colspan="3">By papers</th>
-</tr>
-<tr>
-<td rowspan="3">Knowledge production</td>
-<td>Monodisciplinary</td>
-<td>16</td>
-</tr>
-<tr>
-<td>Multidisciplinary</td>
-<td>11</td>
-</tr>
-<tr>
-<td>Interdisciplinary</td>
-<td>3</td>
-</tr>
-<tr>
-<td rowspan="3">Methodological approach</td>
-<td>Qualitative</td>
-<td>6</td>
-</tr>
-<tr>
-<td>Quantitative</td>
-<td>9</td>
-</tr>
-<tr>
-<td>Mixed</td>
-<td>15</td>
-</tr>
-<tr>
-<td rowspan="2">Target group</td>
-<td>Academic</td>
-<td>11</td>
-</tr>
-<tr>
-<td>Public Policy</td>
-<td>19</td>
-</tr>
-<tr>
-<td rowspan="2">Local authors</td>
-<td>No foreign presence</td>
-<td>18</td>
-</tr>
-<tr>
-<td>With foreign presence</td>
-<td>12</td>
-</tr>
-<tr>
-<th colspan="3">By authors</th>
-</tr>
-<tr>
-<td rowspan="3">Degree of specialization</td>
-<td>Social science</td>
-<td>4</td>
-</tr>
-<tr>
-<td>Natural science</td>
-<td>22</td>
-</tr>
-<tr>
-<td>Economic science</td>
-<td>7</td>
-</tr>
-<tr>
-<td rowspan="2">Nationality of the researcher</td>
-<td>Chilean</td>
-<td>23</td>
-</tr>
-<tr>
-<td>Foreign</td>
-<td>10</td>
-</tr>
-</tbody>
-</table>
-<p>In step 4, centrality measures of social network analysis were calculated. These included degree (in-degree and out-degree for the asymmetrical citation network), betweenness and density (<a href="#fre77">Freeman, 1977</a>, <a href="#fre78">1978</a>; <a href="#mar02">Marsden, 2002</a>; <a href="#sco00">Scott, 2000</a>). In social network analysis, degree centrality corresponds to the number of ties of a node and ‘<em>reflects the node’s position and role in terms of popularity and activity of the node...</em>’ (<a href="#abb12">Abbasi <em>et al,</em> 2012</a>, p. 406). Thus, in our co-authorship network a node’s degree represents the number of collaborations of an author (scholar), and in a citation network represents the number of times an article has been cited by others. Adapting Abbasi, Hossain and Leydesdorff’s equations for this measure (<a href="#abb12">Abbasi <em>et al.,</em> 2012</a>, p. 406) degree (CD) of a node k is defined by:</p>
-<figure class="centre">![equation 1](p679eqA1.png)</figure>
-<p>Where n is the number of nodes of the network and a(p<sub>i</sub>, p<sub>k</sub>)=1 only if I and k are linked. Otherwise a(p<sub>i</sub>, p<sub>k</sub>) =0.</p>
-<p>Another centrality measure is <em>betweenness</em>, which can be understood as,</p>
-<blockquote>
-<p>the portion of the number of shortest paths (between all pairs of nodes) that pass through the given node divided by the number of shortest path between any pair of nodes (regardless of passing through the given node... (<a href="#abb12">Abbasi <em>et al.</em>, 2012</a>, p. 407)</p>
-</blockquote>
-<p>and represents a node’s function as broker or gatekeeper to connect other nodes and sub-groups. In our co-authorship network betweenness represents an author’s capacity of connecting other authors and sub-groups of authors, and in the citation network represent the capability of a paper to connect via citation two different papers. Betweenness CB of node k can be synthesised as:</p>
-<figure class="centre">![equation 2](p679eqA2.png)</figure>
-<p>Where g<sub>ij</sub> are the shortest paths connecting p<sub>i</sub> and p<sub>j</sub>, and g<sub>ij</sub>(p<sub>k</sub>) is the shortest path connecting p<sub>i</sub> and p<sub>j</sub> that contains p<sub>k</sub> (<a href="#abb12">Abbasi <em>et al.</em>, 2012</a>, p. 407).</p>
-<p>In step 5, data are presented as sociograms expressed using UCINET and NETDRAW software. For data interpretation purposes, we used the following guiding questions:</p>
-<p><strong>For co-authorship</strong>: Considering the author attributes and relational data, which collaboration structures can be identified in MEABR scientific production? Do collaboration structures respond to specialty grades and/or researcher nationalities?</p>
-<p><strong>For citation</strong>: Based on the defined categories, how have relationships between scientific articles changed? Which articles have transformed MEABR scientific production and knowledge transfer and how? These questions raise the ‘threshold article’ concept, which defines a publication as including three main characteristics: i) significance by introducing modifications to scientific production (e.g., a transformation in knowledge production or methodology); ii) significance through relational features that exhibit a high degree of citation; iii) the inclusion of a node with a significant betweenness measure. By merging these three characteristics, it may be possible to identify the transformation of scientific works through MEABRs, revealing substantial temporal trends and transformations.</p>
-<p><strong>For co-authorship and citation</strong>: How are threshold articles and collaboration structures linked? Does a subgroup of collaboration dominate scientific production or do transformations originate from various subsets of collaboration?</p>
-<h2 id="results-forms-of-scientific-production-and-transfer-using-mearb">Results: forms of scientific production and transfer using MEARB</h2>
-<p>We now present the results of the co-authorship and citation analysis. Both analyses were conducted based on attributes selected for each case.</p>
-<h3 id="co-authorship-network">Co-authorship network</h3>
-<figure class="centre">![](p679fig1.png)
-<figcaption>Figure 1: Co-authorship network. Attributes: specialty degree (circle: biological science; square: social science; triangle: economic science) and nationality of the researcher (white: Chilean; black: foreign).</figcaption>
-</figure>
-<table class="center" style="width:50%;"><caption>  
-Table 2: Author clusters.</caption>
-<tbody>
-<tr>
-<th>Frequency</th>
-<th>Members</th>
-</tr>
-<tr>
-<td style="text-align:center;">13</td>
-<td>Castilla; Geaghan; Payne; Fernandez; Defeo; Gelcich; Edward-Jones; Kaiser; Watson; Godoy; Prado; Marin; Berkes</td>
-</tr>
-<tr>
-<td style="text-align:center;">10</td>
-<td>Stotz; Perez; Meeltzoft; Gibran; Gonzalez; Garrido; Orensanz; Parma; Tapia; Zulueta</td>
-</tr>
-<tr>
-<td style="text-align:center;">2</td>
-<td>Arias; Iglesias</td>
-</tr>
-<tr>
-<td style="text-align:center;">2</td>
-<td>Sobenes; Chavez</td>
-</tr>
-<tr>
-<td style="text-align:center;">3</td>
-<td>Zuniga; Ramirez; Valdebenito</td>
-</tr>
-<tr>
-<td style="text-align:center;">1</td>
-<td>Schumman</td>
-</tr>
-<tr>
-<td style="text-align:center;">1</td>
-<td>Gonzalez, E.</td>
-</tr>
-<tr>
-<td style="text-align:center;">1</td>
-<td>Galvez</td>
-</tr>
-</tbody>
-</table>
-<p>Figure 1 reveals certain dynamics of co-authorship and collaboration. First, a clustering tendency into two central <em>scientific schools</em> is shown below. These scientific clusters are mainly composed of biological science researchers, with social scientists represented to a lesser degree. Collaboration trends also reveal a focus on dominant figures or authors who exhibit high degrees of centrality (Castilla: 18; Stotz: 9. See Table 3) and betweenness (Castilla: Betweenness 45 and nBetweenness 8.871; Stotz: Betweenness 23 and nBetweenness 4.536. See Table 3). A lack of collaboration between these schools and economic scientists is also found, revealing the isolation of this discipline within MEABR scientific production and constraints to knowledge transfer. A disconnect is also identified within the field of economic scientific production, dividing this field into varies subfields. Hence, while the social sciences remain peripheral, they are at least integrated within scientific collaborations. The economic sciences are instead excluded from interdisciplinary collaborative efforts.</p>
-<h3 id="citation-networks">Citation networks</h3>
-<p>To examine the citation network and its co-authorship patterns, we employed the <em>threshold article</em> concept. As noted above, threshold articles are special publications that i) exhibit high centrality; ii) present significant betweenness centrality; and iii) have introduced changes in attribute tendencies. Starting with social network analysis measures, articles that combine high degree and betweenness measures are deemed <em>d, h, j, l</em> and <em>v</em>. The following sections describe the attribute tendencies of the sampled papers with a focus on articles that exhibit changes or transformations. The following sociograms are arranged based on X-axis time criteria (starting from the left with articles <em>a</em> and <em>b</em> published in 1986 and ending with <em>ad</em> articles published in 2012).</p>
-<figure class="centre">![citation network](p679fig2.png)
-<figcaption>Figure 2: Citation network. Attributes: knowledge production (circle: mono-disciplinary; square: multidisciplinary; triangle: interdisciplinary) and author nationality (white: includes foreign authors; black: only Chilean authors).</figcaption>
-</figure>
-<p>Figure 2 reveals a tendency towards disciplinary composition transformation, beginning with a period dominated by monodisciplinary practice that slowly changes with the publication of article <em>l</em>. Although <em>e</em> was the first multidisciplinary article, it does not feature high degree or betweenness measures. Thus, <em>e</em> does not appear to be important in this case. Within the last decade, article <em>k</em> constitutes the first interdisciplinary research effort. However, <em>k</em> shows a low degree of centrality (inDegree: 0. See Table 3) and is therefore not a threshold article. Other articles with threshold potentiality do not show signs of significance or knowledge production attribute changes. An examination of <em>knowledge production</em> and <em>hometown authors</em> suggests the presence of other relevant information, as the mono-disciplinary articles evaluated have not involved foreign researchers (with the exception of <em>s</em> and <em>aa</em>). Rather, we can assume that until the publication of article <em>l</em>, Chilean scientific production was not able to generate multidisciplinary research, a trend that shifted with the valuable contributions of foreign scientists.</p>
-<figure class="centre">![citation networks](p679fig3.png)
-<figcaption>Figure 3: Citation network. Attributes: knowledge production (circle: monodisciplinary; square: multidisciplinary; triangle: interdisciplinary)  
-and methodological approach (white: qualitative; blue: quantitative; black: mixed).</figcaption>
-</figure>
-<p>Article <em>d</em> was the first to employ a mixed methodology and features a high degree of centrality. Article <em>j</em> also exhibits a high degree of centrality and strengthens qualitative methodologies. Again, this article is distinct from the other threshold papers.</p>
-<figure class="centre">![Citation network](p679fig4.png)
-<figcaption>Figure 4: Citation network. Attributes: knowledge production (circle: mono-disciplinary; square: multidisciplinary; triangle: interdisciplinary) and target group (white: academy; black: public policy).</figcaption>
-</figure>
-<p>Figure 4 shows that articles <em>d</em> and <em>h</em> both feature a high degree of centrality and mono-disciplinary knowledge production (with <em>academy</em> and <em>public policy</em> as the target populations, respectively). Moreover, since the publication of article <em>l</em>, multi- and inter-disciplinary research has grown more prominent. Multi- and inter-disciplinary articles published since the publication of article <em>l</em> have mostly focused on public policy issues. Hence, multidisciplinary knowledge production may be directly related to public policy.</p>
-<figure class="centre">![citation network](p679fig5.png)
-<figcaption>Figure 5: Citation network. Attributes: methodological approach (circle: qualitative; square: quantitative; triangle: mixed)  
-and target group (white: academy; black: public policy).</figcaption>
-</figure>
-<p>Figure 5 lists articles that employ qualitative methodologies with the exception of article <em>j</em>, which is academically oriented. Therefore, <em>j</em>, is of relevance because it represents the only qualitative article oriented towards public policy.</p>
-<h2 id="discussion">Discussion</h2>
-<p>The figures shown highlight several MEABR scientific production and knowledge transfer trends. Referring back to our initial research questions, what would happen if we were to combine threshold articles with scientific schools? According to our definition, a threshold article features the three conditions listed above, and only three articles fulfil these conditions: <em>l</em>, , which belongs to what we can call the <em>Stotz’s school</em>, and <em>d</em> and <em>j</em>, which belong to the <em>Castilla school</em>. However, the transformation of MEABR science may have involved disciplinary and methodological shifts: a movement away from a mono-disciplinary and quantitative model to a multidisciplinary science that is strengthened by mixed methodologies and that allows for the emergence of a qualitative methodological model. This trend highlights a main characteristic of scientific production: the division of MEABR science into two differentiated periods. The first period (from article <em>a</em>, to article <em>j</em>, or from 1986 to 2000) was primarily mono-disciplinary, was dominated by biological science and involved both public policy and academic target groups. This period ended with the publication of article <em>j</em>, after which qualitative methodologies started to appear, inaugurating the second period. By 2001, with the publication of articles <em>k</em> and <em>l</em> this second period was in full operation, introducing multi- and interdisciplinary approaches. During this second period, scientific production was oriented mainly toward public policy and was marked by foreign contributions. These trends suggest that with the exception of <em>j</em> every article employed qualitative methodologies and was intended for academic rather than public policy audiences, providing data to hypothesize a weak relationship between public policy and qualitative methods, albeit this topic require intense inquiry efforts that exceed the limitations of the current work.</p>
-<p>Our examination of threshold articles and scientific schools demonstrates that both scientific clusters caused transformations in scientific production. This finding, however, does not imply that each school is an exclusive owner of the attributes that were introduced, as both have exhibited the ability to adopt other contributions. Clear examples include the Stotz transformations introduced in <em>l</em> that were later adopted by Castilla’s group of collaborators (Figures 2, 3, 4 and 5). A key question arises here: how then are threshold papers able to refer to structural properties and also provide insights for a self-organizing model to interpret scientific knowledge production and transfer? The answer lies precisely in its capability to enable identification of trends in both co-authorship networks and citation networks by detecting holes or breaks in trends of both networks. In other words, in its capability of intertwine two ways of self-organizing networks that determine scientific information production and transfer, and doing it by using structural properties of nodes but also revealing data of how different domains of scientific information are formed and interact. Here domain can be interpreted (or read in the sociograms) as the multidimensional spaces of similar papers over the years, i.e., the existence of researches with common properties and combination of these properties, mainly <em>knowledge production</em> and <em>methodological approach</em>.</p>
-<h2 id="final-considerations">Final considerations</h2>
-<p>In closing, we wish to highlight the two main ideas presented here. The first corresponds to the research problem that we address: MEABR scientific production. We identified a mono-disciplinary bias in scientific deployment during initial stages. This bias helped to establish further questioning on scientific deployment given that interdisciplinary practices remain novel and experimental and have not yet been institutionalized to address complex problems. Employing notions of Maturana regarding the structural limits of scientific knowledge, we demonstrated that knowledge fields are restricted to specific topics. In this case, MEABR scientific production involves a modus operandi that is not yet consistent with development in other areas of knowledge production. The hypothesis that an interdisciplinary approach currently addresses social and environmental issues faced by Chilean MEABRs can be questioned by taking into account the continuity of mono-disciplinary practices and quantitative methodologies throughout the time period, despite an apparent shift begun at 2001. To state it simpler, an interdisciplinary approach is still a path to walk through rather than an institutionalized scientific practice, although some incipient trajectory cannot be denied.</p>
-<p>The second idea is related to methodological strategies. We believe that the value of the presented methodological model lies in the possibility of combining social network analyses of small samples with qualitative techniques applied to science and technology studies. This model highlights the benefits of combined qualitative and quantitative techniques for addressing complex scientific problems. We hope that this case study illustrates possible pathways for their articulation while also highlighting inconsistencies that emerge from their application.</p>
-<h2 id="acknowledgements">Acknowledgements</h2>
-<p>This work was supported through the MEL-CONICYT Project N° 81100002: ‘Environmental-Economic Value of Small-Scale Fishing Activities. Strategies for Productive Diversification in Southern Chilean Coastal Societies’. We thank the Chilean National Commission of Scientific Research and Technology (CONICYT) for its support.</p>
-<h2 id="about-the-authors">About the authors</h2>
-<p><strong>Carlos Hidalgo</strong> is an Associate Researcher of the ATLAS research programme, Department of Social Sciences, Universidad de los Lagos, Chile. He received his Bachelor’s degree in anthropology from Universidad Católica de Temuco and his Master’s degree in social sciences by Universidad de los Lagos. He can be contacted at <a href="mailto:chidalgarrido@gmail.com">chidalgarrido@gmail.com</a><br>
-<strong>Francisco Ther</strong> is a Titular Professor of Universidad de Los Lagos, Osorno, Chile. He received his Bachelor’s degree of anthropology from Universidad Austral de Chile, his Master’s degree in social anthropology and PhD. in anthropology from the Universidad Nacional Autónoma de México. He can be contacted at <a href="mailto:fther@ulagos.cl">fther@ulagos.cl</a><br>
-<strong>Asunción Díaz</strong> is an Associate Researcher of the ATLAS research programme, Department of Social Sciences, Universidad de los Lagos, Chile. She received her Bachelor’s degree of anthropology and Master’s Degree in systemic analysis applied to society from Universidad de Chile, and she is currently finishing her PhD. in human sciences in Universidad Austral de Chile. She can be contacted at <a href="mailto:asudiaz@gmail.com">asudiaz@gmail.com</a></p>
-<h4 id="references">References</h4>
-<ul>
-<li>Abbasi, A., Altmann, J. &amp; Hossain, L. (2011). Identifying the effects of co-authorship networks on the performance of scholars: a correlation and regression analysis of performance measures and social network analysis measures. <em>Journal of Informetrics, 5</em>, 594–607.</li>
-<li>Abbasi, A., Hossain, L., Leydesdorff, L. (2012). Betweenness centrality as a driver of preferential attachment in the evolution of research collaboration network. <em>Journal of Informetrics, 6</em>(3), 403-412.</li>
-<li>Barabási, A. L., Jeong, H., Néda, Z., Ravasz, E., Schubert, A. &amp; Vicsek, T. (2002). Evolution of the social network of scientific collaborations. <em>Physica A: Statistical Mechanics and Its Applications, 311</em>, 590-614.</li>
-<li>Barnes, B., Bloor, D. &amp; Henry, J. (1996). <em>Scientific knowledge: a sociological analysis.</em> London: A &amp; C Black..</li>
-<li>Börner, K., Chen, C. &amp; Boyack, K. (2003). Visualizing knowledge domains. <em>Annual Review of Information Science &amp; Technology, 37</em>, 179–255.</li>
-<li>Bugliarello, G. (1988). STS perspectives: The science-technology-society matrix. <em>Bulletin of Science, Technology &amp; Society, 8</em>(2), 125-126.</li>
-<li>Castilla, J. C. (1986). ¿Sigue existiendo la necesidad de establecer parques y reservas marinas en Chile? [Is it still necessary to establish parks and marine reserves in Chile?] <em>Ambiente y Desarrollo, 2</em>, 53-63.</li>
-<li>Castilla, J. C. (1994). The Chilean small scale benthic shellfisheries and the institutionalization of new management practices. <em>Ecological International Bulletin, 21</em>, 47–63.</li>
-<li>Castilla, J. C. (2000). Roles of experimental marine ecology in coastal management and conservation. <em>Journal of Experimental Marine Biology and Ecology, 250</em>(1), 3-21.</li>
-<li>Castilla, J. C. &amp; Defeo, O. (2001). Latin American benthic shellfisheries: Emphasis on co-management and experimental practices. <em>Reviews in Fish Biology and Fisheries, 11</em>, 1-30.</li>
-<li>Castilla, J. C. &amp; Fernández, M. (2005). Marine conservation in Chile: historical perspective, lessons, and challenges. <em>Conservation Biology, 19</em>(6), 1681–2065.</li>
-<li>Chile. <em>Supreme decrees</em>. (2004). <em><a href="http://www.leychile.cl/Navegar?idNorma=223524">Modifica decreto supremo No. 247 de 2000</a>.</em> [Exempt Decree N°253, amending Decree N°247/200]. (Decreto supremo 2004 No. 253) Retrieved from http://www.leychile.cl/Navegar?idNorma=223524</li>
-<li>Chile. <em>Supreme decrees</em>. (2004). <a href="http://www.subpesca.cl/normativa/605/w3-article-7779.html">Reglamento de actividades de acuicultura en áreas de manejo</a> [Regulation of aquaculture operations in management areas.] (Decreto supremo 2004 No. 314). Retrieved from http://www.subpesca.cl/normativa/605/w3-article-7779.html</li>
-<li>Chile. <em>Supreme decrees</em>. (2001). <em><a href="http://www.subpesca.cl/normativa/605/w3-article-4632.html">Reglamento ambiental para la acuicultura</a></em>. [Environmental Regulations for Aquaculture]. (Decreto supremo 2001 No. 329) Retrieved from http://www.subpesca.cl/normativa/605/w3-article-4632.html</li>
-<li>Chile. <em>Supreme decrees</em> (1995). <em><a href="http://www.leychile.cl/Navegar?idNorma=12627&amp;buscar=Decreto+Supremo+355">Reglamento sobre áreas de manejo y explotación de recursos bentonicos</a></em>. [Regulation on the areas of management and exploitation of benthic resources.] Retrieved from http://www.leychile.cl/Navegar?idNorma=12627&amp;buscar=Decreto+Supremo+355</li>
-<li>Chile. <em>Statutes</em> (1991). <a href="http://www.leychile.cl/Navegar?idNorma=30265&amp;idVersion=1991-09-06"><em>Ley general de pesca y acuicultura</em></a>. [General law of fisheries and aquaculture]. Retrieved from http://www.leychile.cl/Navegar?idNorma=30265&amp;idVersion=1991-09-06</li>
-<li>Cronin, B. (1984). <em>The citation process. The role and significance of citations in scientific communication.</em> London: Taylor Graham.</li>
-<li>De Stefano, D., Fuccella, V., Vitale, M. P. &amp; Zaccarin, S. (2013). The use of different data sources in the analysis of co-authorship networks and scientific performance. <em>Social Networks, 35</em>, 370-381.</li>
-<li>Egghe, L. (2006). Theory and practise of the g-index. <em>Scientometrics, 69</em>(1), 131–152.</li>
-<li>Escobar, A. (1999). <em>El final del salvaje: naturaleza, cultura y política en la antropología contemporánea</em>. [The end of the savage: nature, culture and politics in contemporary anthropology]. Bogotá: Instituto Colombiano de Antropología.</li>
-<li>Evans, L., Cherrett, N. &amp; Pemsl, D. (2011). Assessing the impact of fisheries co-management interventions in developing countries: a meta-analysis. <em>Journal of Environmental Management, 92</em>(8), 1938-1949.</li>
-<li>Finney, B. (1979). <em>The reference characteristics of scientific texts</em>. Unpublished doctoral dissertation, City University, London, UK</li>
-<li>Freeman, L. C. (1977). A set of measures of centrality based on betweenness. <em>Sociometry, 40</em>(1), 35-41.</li>
-<li>Freeman, L. C. (1978). Centrality in social networks: conceptual clarification. <em>Social Networks, 1</em>(3), 215-239.</li>
-<li>García, E., González, J., López, J., Luján, J., Gordillo, M., Osorio, C. &amp; Valdés, C. (2001). <em>Ciencia, tecnología y sociedad: una aproximación conceptual</em>. [Science, technology and society: a conceptual approximation]. Madrid: Organización de Estados Iberoamericanos para la Educación, la Ciencia y la Cultura.</li>
-<li>Gelcich, S., Edward-Jones, E., Kaiser, M. &amp; Watson, E. (2005a). Using discourses for policy evaluation: the case of marine common property rights in Chile, society &amp; natural resources. <em>Anais: An International Journal, 18</em>(4), 377-391.</li>
-<li>Gelcich, S., Edwards-Jones, G. &amp; Kaiser, M. J. (2005b). Importance of attitudinal differences among artisanal fishers toward co-management and conservation of marine resources. <em>Conservation Biology, 19</em>(3), 865-875.</li>
-<li>Gelcich, S., Godoy, N. &amp; Castilla, J. C. (2009). Artisanal fishers’ perceptions regarding coastal co-management policies in Chile and their potentials to scale-up marine biodiversity conservation. <em>Ocean &amp; Coastal Management, 52</em>(8), 424–432.</li>
-<li>Gelcich, S., Kaiser, M. J., Castilla, J. C. &amp; Edwards-Jones, G. (2008). Engagement in co-management of marine benthic resources influences environmental perceptions of artisanal fishers. <em>Environmental Conservation, 35</em>(1), 36–45.</li>
-<li>González, J., Stotz, W., Garrido, J., Orensanz, J., Parma, A., Tapia, C. &amp; Zulueta, A. (2006). The Chilean TURF system: How is it performing in the case of the loco fishery? <em>Bulletin of Marine Science, 78</em>(3), 499-527.</li>
-<li>Hanneman, R. &amp; Riddle, M. (2005). <em>Introduction to social network methods</em>. Riverside, CA: University of California, Riverside.</li>
-<li>Hucke-Gaete, R. Álvarez, R., Navarro, M., Ruiz, J., Lo Moro, J. &amp; Farías, A. (2010). <em>Investigación para desarrollo de área marina costera protegida Chiloé-Palena-Guaitecas</em>. [Research for the development of the marine protected area of Chiloé-Palena-Guaitecas]. Valdivia, Chile: Universidad Austral de Chile.</li>
-<li>Janssen, M. A. (2007). <a href="http://www.webcitation.org/6adLLHB1F">An update on the scholarly networks on resilience, vulnerability, and adaptation within the human dimensions of global environmental change.</a> <em>Ecology and Society, 12</em>(2), 9 Retrieved from http://www.ecologyandsociety.org/vol12/iss2/art9/. (Archived by WebCite® at http://www.webcitation.org/6adLLHB1F)</li>
-<li>Janssen, M. A., Schoon, M. L., Ke, W. &amp; Börner, K. (2006). Scholarly networks on resilience, vulnerability and adaptation within the human dimensions of global environmental change. <em>Global Environmental Change, 16</em>(3), 240-252.</li>
-<li>Kang, I. S., Na, S. H., Lee, S., Jung, H., Kim, P., Sung, W. K. &amp; Lee, J. H. (2009). On co-authorship for author disambiguation. <em>Information Processing &amp; Management, 45</em>(1), 84–97.</li>
-<li>Knorr-cetina, K. &amp; Mulkay, M. (1983). Introduction. In K. Knorr-Cetina &amp; M. Mulkay (Eds.), <em>Science observed: perspectives on the social study of science</em> (pp. 1-18). London: Sage Publications.</li>
-<li>Kuhn, T. (1962). <em>The structure of scientific revolutions</em>. Chicago, IL: University of Chicago Press.</li>
-<li>Latour, B. (1987). <em>Science in action: how to follow scientists and engineers through society</em>. Cambridge, MA: Harvard University Press.</li>
-<li>Latour, B. (1993). <em>We have never been modern</em>. Cambridge, MA: Harvard University Press.</li>
-<li>Latour, B. (2005). <em>Reassembling the social: an introduction to actor-network-theory</em>. Oxford, UK: Oxford University Press.</li>
-<li>Latour, B. &amp; Woolgar, S. (1979). <em>Laboratory life: the social construction of scientific facts</em>. Los Angeles, CA: Sage Publications.</li>
-<li>Lewis, A. O. (1990). STS historical perspectives. <em>Bulletin of Science, Technology, and Society, 10</em>(5-6), 254-258.</li>
-<li>Leydesdorff, L. (1998). Theories of citation? <em>Scientometrics, 43</em>(1), 5-25.</li>
-<li>Luhmann, N. (1996). <em>La Ciencia de la sociedad</em>. [The science of society.] México: Universidad Iberoamericana, Anthropos ITESO.</li>
-<li>Marín, A. &amp; Berkes, F. (2010). Network approach for understanding small-scale fisheries governance: the case of the Chilean coastal co-management system. <em>Marine Policy, 34</em>(5), 851–858.</li>
-<li>Marsden, P. V. (2002). Egocentric and sociocentric measures of network centrality. <em>Social Networks, 24</em>(4), 407-422.</li>
-<li>Martínez, F. (2004). <a href="http://scielo.sld.cu/scielo.php?pid=S1727-81202004000100002&amp;script=sci_arttext">El movimiento de estudios ciencia- tecnología- sociedad: su origen y tradiciones fundamentales.</a> [The society-technology-science studies movement: its origin and fundamental traditions.] <em>Revista de Humanidades Médicas, 4</em>(1). Retrieved from http://scielo.sld.cu/scielo.php?pid=S1727-81202004000100002&amp;script=sci_arttext.</li>
-<li>Maturana, H. (1995). <em>La realidad objetiva o construida.</em> [Objective or constructed reality.] México: Universidad Iberoamericana.</li>
-<li>Meltzoff, S. K., Lichtensztajn, Y. G. &amp; Stotz, W. (2002). Competing visions for marine tenure and co-management: genesis of a marine management area system in Chile. <em>Coastal Management, 30</em>(1), 85-99.</li>
-<li>Moravcsik, M.J. &amp; Murugesan, P. (1975). Some results on the function and quality of citations. <em>Social Studies of Science, 5</em>(1), 86-92</li>
-<li>Otte, E. &amp; Rousseau, R. (2002). Social network analysis: A powerful strategy, also for the information sciences. <em>Journal of Information Science, 18</em>(6), 441-453.</li>
-<li>Price, D. de S. (1970). Citation measures of hard science, soft science, technology, and nonscience. In C. E. Nelson &amp; D. K. Pollack (Eds.), <em>Communication among scientists and engineers</em> (pp. 3-22). Lexington, MA: Heath.</li>
-<li>Salas, S., Chuenpagdee, R., Seijo, J. C. &amp; Charles, A. (2007). Challenges in the assessment and management of small-scale fisheries in Latin America and the Caribbean. <em>Fisheries Research, 87</em>(1), 5–16.</li>
-<li>Schumann, S. (2007). Co-management and &quot;consciousness&quot;: fishers’ assimilation of management principles in Chile. <em>Marine Policy, 31</em>(2), 101–111.</li>
-<li>Scott, J. (2000). <em>Social network analysis: a handbook</em> (2nd ed.). London, UK: Sage Publications.</li>
-<li>Standen, V., Santoro, C. &amp; Arriaza, B. (2004). Síntesis y propuestas para el periodo arcaico en la Costa del extremo norte de Chile. [Synthesis and proposals for the archaic period in the Chilean northern coast.] <em>Chungará</em>, No. 36, 201-212.</li>
-<li>Stotz, W. (1997). Las áreas de manejo en la ley de pesca y acuicultura: primeras experiencias de evaluación de la utilidad de esta herramienta para el recurso loco. [Management areas in the law on fisheries and aquaculture: first experiences of evaluation about its usefulness for loco (Chilean abalone) resources.] <em>Estudios Oceanológicos</em>, No. 16, 67-86.</li>
-<li>Thirunarayanan, M. O. (Ed.). (1992). <em>Handbook of science, technology and society. Volume 1: A theoretical and conceptual overview of science, technology and society education.</em> Tempe, AZ: Arizona State University.</li>
-<li>Varela, F. (2005). El círculo creativo. Esbozo histórico natural de la reflexividad. [Natural historical sketch of reflexivity] In Paul Watzlawick, P. (Eds.), La realidad inventada (pp. 251-263). Barcelona, Spain: Editorial Gedisa.</li>
-<li>Watts, D. J. &amp; Strogatz, S. H. (1998). Collective dynamics of ‘small-world’ networks. <em>Nature, 393</em>(6684), 440-442.</li>
-<li>White, H. D., Wellman, B. &amp; Nazer, N. (2004). Does citation reflect social structure? Longitudinal evidence from the “Globenet” Interdisciplinary Research Group. <em>Journal of the American Society of Information Science and Technology, 55</em>(2), 111-126.</li>
-<li>Woolgar, S. (1981). Interests and explanation in the social study of science. <em>Social Studies of Science, 11</em>(3), 365-394.</li>
-<li>Zúñiga, S., Ramírez, P. &amp; Valdebenito, M. (2008). Situación socioeconómica de las áreas de manejo en la región de Coquimbo, Chile. [Socioeconomic situation of management areas in the region of Coquimbo, Chile.] <em>Latin American Journal of Aquatic Research, 36</em>(1), 63-81.</li>
-<li>Zúñiga, S., Ramírez, P. &amp; Valdebenito, M. (2010). Medición de los impactos socio económicos de las Áreas de Manejo en las comunidades de Pescadores del norte de Chile. [Measurement ofthe socio-economic impact of management areas in the fishing communities of northern Chile.] <em>Latin American Journal of Aquatic Research, 38</em>(1), 15-26.</li>
-</ul>
-
-</body>
+  <body>
+    <header>
+      <h4>
+        vol. 20 no. 3, September, 2015
+      </h4>
+    </header>
+    <article>
+      <h1>
+        Applying the user meta model to the analysis of scientific knowledge production and transfer. insights from exploring scientific, small-scale, fishery management in Chile
+      </h1><br>
+      <div style="margin-left: 5%; margin-right:10%;">
+        <h4>
+          <a href="#author">Carlos Hidalgo</a>, <a href="#author">Francisco Ther</a> and <a href="#author">Asunción Diaz</a><br>
+          Universidad de los Lagos, Pobl lomas de Puyehue, Osorno, Los Ríos Region, Chile
+        </h4>
+      </div><br>
+      <form>
+        <fieldset>
+          <legend>Abstract</legend>
+          <blockquote>
+            <strong>Introduction</strong>. Our goal is to provide insights that improve the relationship among scientific knowledge production and fisheries' sustainability by examining the scientific endeavour of a Chilean small-scale fisheries administration regime: the ‘Management and Exploitation Areas for Benthic Resources’.<br>
+            <strong>Method</strong>. Given the importance of this reflexive exercise the user meta model is employed as a methodological framework, and a relational analysis that combines classic social network analysis of co-authorship and citation with a qualitative approach based on categorical classifications of the expert choice technique is employed.<br>
+            <strong>Analysis</strong>. Analysis combines the calculation of centrality measurements in both co-authorship and citation networks, and the use of nodes’ attributes in a temporal axis to identify trends in scientific production and transfer.<br>
+            <strong>Results</strong>. The results reveal: a) the existence of two clusters or scientific schools that include biological and social scientists and b) the isolation of economic science. The results also reveal the existence of scientific threshold articles that have significantly modified processes of scientific production.<br>
+            <strong>Conclusion</strong>. Scientific threshold articles do not exclusively belong to a single scientific school, suggesting the absence of a single hegemonic scientific cluster at the level of innovative practices. Conclusions highlight the implications of this dynamics to the sustainability of fisheries management.
+          </blockquote>
+        </fieldset>
+      </form><br>
+      <br>
+      <section>
+        <h2>
+          Introduction
+        </h2>
+        <p>
+          On occasion, scientific fields develop innovative reflexive tools through which science is re-defined (<a href="#kuh62">Kuhn, 1962</a>). This natural tendency is often shaped by historical trends. Numerous studies have examined this phenomenon as researchers have grown more aware of reflexive exercises. This trend can be attributed to several factors: epistemological changes, a gradual awareness of historical authenticity, and the effects of various constructions of reality (<a href="#esc99">Escobar, 1999</a>). Some of these approaches are crucial because they highlight the need to devalue previously unquestioned truths when conducting scientific investigations. Following Latour (<a href="#lat93">1993</a>), these reflexive exercises disassemble the false truth that modernity (and its knowledge strategy, <em>normal</em> science and technology) has created the distinction between nature and society and, consequently, between science and research problems. An objective of this article is to expose areas in which this distinction is not recognized.
+        </p>
+        <p>
+          This paper examines problems that result from the production and transfer of scientific knowledge on a specific topic, assuming that multiple disciplines are affected by these topics. Knowledge of a co-management mechanism used in small-scale Chilean fisheries is examined as a case study. Recognizing the complexity of scientific practices and knowledge, scientists are now interested in characterizing transformations of scientific production and transfer to address the ‘Management and Exploitation Areas for Benthic Resources’ (MEABRs). Although a description of MEABRs is given below, they can be briefly defined as an administrative figure for the co-management of small-scale Chilean fishery resources that has legally existed since enacting the Fisheries and Aquaculture Law (<a href="#chi91">1991</a>). It is essential to examine scientific knowledge production in this research area because scientific production can be used to refine co-management arrangements that have already been initiated in the international arena (<a href="#eva11">Evans, Cherrett and Pemsl, 2011</a>; <a href="#eva11">Salas, Chuenpagdee, Seijo and Charles, 2007</a>).
+        </p>
+        <p>
+          Our final goal is provide insights that improve the relationship among scientific knowledge production and fisheries' sustainability by using classical research tools to the social studies of science and technology. Using the ‘user meta model’ as a methodological frame, we conduct a social network analysis of co-authorship and citation networks with qualitative features. We argue that this approach can be used in studies of citation and co-authorship when applying social network analysis to small samples as in our case. We modify previously selected and weighted attributes when applying the <em>expert choice</em> technique. These attributes are utilized to strengthen our analysis of social network analysis centrality measures and to link citation and co-authorship networks through ‘threshold paper’ processes and through collaboration between authors. Thus we unveil expert production and knowledge transfer trends that can be useful to understand limitations of scientific assessments regarding fisheries' public policies and their economic institutions.
+        </p>
+        <h2>
+          Reflexivity and the social study of science and technology
+        </h2>
+        <p>
+          Despite the existence of numerous approaches that may be useful for our purposes, we focus on theoretical aspects that allow us to compare features of the bibliometric social studies of science and technology and social science reflexivity. This approach may contribute to the interpretation of certain scientific tasks, revealing the current state of scientific fields dedicated to MEARB research.
+        </p>
+        <p>
+          Although scientific studies of reflexivity and second-order observation are not new, these studies have been refined over the last four decades, particularly in response to scepticism of the relationship between science, technology and social welfare. Reflexivity and self-observation exercises have grown more prevalent because of scepticism surrounding the linear predictive model of conventional science and because of Thomas Kuhn’s (<a href="#kuh62">1962</a>) work, which highlights the relevance of socio-historical contexts to scientific production and transfer. Only since the post war period have Western modernization and development models been severely challenged. Following this trend, the development of social studies of science and technology recaptured the interest of the scientific community, primarily owing to its critique of essentialist approaches to scientific knowledge and practices.
+        </p>
+        <p>
+          Social studies of science and technology objectives are concerned with social contexts of scientific and technological production and with the consequences of scientific advancement in the social world (<a href="#bar96">Barnes, Bloor and Henry, 1996</a>; <a href="#kno83">Knorr-Cetina and Mulkay, 1983</a>; <a href="#thi92">Thirunarayanan, 1992</a>). The geographical expansion of social studies of science and technology began during the mid-twentieth century, expanding concerns surrounding the epistemological and methodological functioning of sciences worldwide and taking various forms, such as Frankfurt's critical school, the Mertonian approach, Edinburgh’s <em>strong programme</em>, and the ethnography of science, among others (<a href="#bug88">Bugliarello, 1988</a>; <a href="#lew90">Lewis, 1990</a>; <a href="#woo81">Woolgar, 1981</a>). Of these approaches, we are particularly interested in the European tradition of social studies of science and technology, which focuses on the conditions of scientific production and transfer rather than on the social consequences and axiological assessments of scientific knowledge, that are addressed in the American tradition (<a href="#gar01">García, <em>et al</em>., 2001</a>; <a href="#mar04">Martínez, 2004</a>). Through this approach, a focus on social contexts allows for the emergence of knowledge. Sociological theories have stressed that modern society has generated various reflexivity mechanisms that vary based on ontological approaches. From economics and politics to education and the sciences, methodologies and theories have been developed to observe, explain or interpret phenomena, establishing self-observation mechanisms of a second order.
+        </p>
+        <p>
+          The theory of knowledge can also be understood as a self-observation tool that allows for auto-regulation of the scientific system (<a href="#luh96">Luhmann, 1996</a>), enabling the questioning of object and subject distinctions and the evaluation of scientific model performance. According to the biology of knowledge (<a href="#var05">Varela, 2005</a>), such reflexivity practices can be understood as autonomous processes that appear in nature in varying forms as regulation mechanisms of system boundary settings. The biological self-referential model can be used to observe scientific systems if we assume that a community of scientists applies structural limits to distinctions and scientific observations, thus applying theoretical development to various research fields. Maturana (<a href="#mat95">1995</a>) proposes that all human activity is generated through differentiated cognitive domains, such as science, which are defined through actions framed by criteria of scientific explanation acceptability or validation. This point demonstrates the importance of investigating transformations that occur in research fields and our motivation for depicting the relational conditions that allow for MEABR-based scientific knowledge production. Although we examine a small sample, this study is not a single-case inquiry. Hence, Bruno Latour's ‘actants’ (<a href="#lat87">Latour, 1987</a>, <a href="#lat87">2005</a>; <a href="#lat79">Latour and Woolgar, 1979</a>) are not identified or tracked. Instead, this investigation examines how relationships between research fields and researchers have transformed scientific knowledge production and transfer.
+        </p>
+        <p>
+          However there is still a long distance to link in a proper way the more abstract ideas cited about biological self-referential model with the methodological frame employed here; whilst the first is built over a philosophical debate and qualitative arguments, the latter deploys mathematics and structural properties. Here we only venture to propose a possible pathway to relate them, particularly by complementing participatory and qualitative designed properties for researchers and papers, and threshold papers will enable interpreting some self-organizing properties of co-authorship networks, citation networks and their interface.
+        </p>
+        <h2>
+          A brief history of the <em>Management and Exploitation Areas for Benthic Resources</em>
+        </h2>
+        <p>
+          Chile is a country with a unique geographical configuration. Located in the Southern Cone of America, its length (between parallels 17° 30' and 56° 30' S latitude, almost 4,300 km long) and narrowness (average 177 km) form an elongated shape that is confined within the Andes mountains to the east and by the Pacific Ocean to the west. The country is also characterized by a relationship between its national history and coastal culture: coastal populations have used marine ecosystems for subsistence since pre-Columbian times (<a href="#huc10">Hucke-Gaete <em>et al.</em>, 2010</a>; <a href="#sta04">Standen, Santoro and Arriaza, 2004</a>). However, during the second half of the last century, political-administrative transformations, technological changes, government credits, high demand and an increased commercial value of certain species have led to the over-exploitation of marine resources, particularly during the 1980s (<a href="#cas94">Castilla, 1994</a>; <a href="#cas05">Castilla and Fernández, 2005</a>; <a href="#mel02">Meltzoff, Lichtensztajn and Stotz, 2002</a>). Over-exploitation has especially affected the Loco shellfish (<em>Concholepas concholepas</em>), known as Chilean abalone, whose catch rate quadrupled between the 1970s and 1980s, forcing the closure of Chilean abalone fisheries in the late 1980s (<a href="#sto97">Stotz, 1997</a>).
+        </p>
+        <p>
+          With a dramatic increase in marine landing fees and in response to a lack of central regulation at the time, several experimental ecology studies were performed during the late 1980s (<a href="#cas86">Castilla, 1986</a>, <a href="#cas00">2000</a>), leading to the subsequent enactment of the Fisheries and Aquaculture Law (,a href="#chi91"&gt;1991). This law, along with Area Management Regulations No. 355 (<a href="#chi95">1995</a> and No. 314 (<a href="#chi04b">2004</a> and decrees of modifications supreme decree No. 572 (<a href="#chi00">2000</a>, No. 320 (<a href="#chi01">2001</a> and No. 253 (<a href="#chi04a">2004</a>), introduced the Management and Exploitation Areas for Benthic Resources (MEABRs) implemented through fishery organizations. MEABRs are administrative structures that promote the rational use of benthic resources by small-scale fishermen and are defined (by the state) as co-management initiatives based on territorial users' rights for fishery (<a href="#gel09">Gelcich, Godoy and Castilla, 2009</a>).
+        </p>
+        <p>
+          Although over fifty benthic species are managed, Loco is considered the most critical species because of its importance to the small-scale fishery economy (<a href="#gon06">González <em>et al.</em>, 2006</a>). MEABRs serve as administrative bodies that manage marine space ceded to small-scale fishing organizations (unions, federations, trade associations) through the SUBPESCA Undersecretary of Fisheries together with other interested parties, including the scientific community. Although the scientific literature originally referred to MEABRs as triumvirate initiatives managed by a State-Community-Scientist axis (<a href="#sch07">Schumann, 2007</a>), new research has indicated that they represent dynamic instances of collaborative and conflictive interaction between stakeholder groups (e.g., <a href="#mar10">Marín and Berkes, 2010</a>) identified seven stakeholder groups involved in Chilean central coast research). Formal requests for MEARBs and scientific assessments established by the Fisheries and Aquaculture Law began in 1997. Although scientific publications produced by MEABRs have not grown numerous, recent trends suggest that they are increasing. This specialized literature identifies three dimensions: environment, economy and social organization (<a href="#cas01">Castilla and Defeo, 2001</a>; Gelcich, <a href="#gel05a">2005a</a>, <a href="#gel05b">2005b</a>, <a href="#gel08">2008</a>, <a href="#gel09">2009</a>; <a href="#zun08">Zúñiga, Ramírez and Valdebenito, 2008</a>, <a href="#zun10">2010</a>), and our inquiry addresses the current absence of reflexive articles examining the scientific deployment of MEARBs.
+        </p>
+        <h2>
+          Materials and methods
+        </h2>
+        <p>
+          Given the nature of our theoretical-conceptual approach, the materials and methods used have been slightly altered (by the authors) from traditional bibliometric and statistical tools of the social studies of science and technology. This modification was made mainly due to trends of limited MEABR scientific production. The small sample that we collected allowed us to explore a more qualitative and profound version of the social studies of science and technology.
+        </p>
+        <p>
+          A bibliographic review of data recollection and analysis in the social studies of science and technology suggests that the user meta model proposed by Börner, Chen, and Boyack (<a href="#bor03">2003</a>) and applied by Janssen, Schoon, Ke, and Börner (<a href="#jan06">2006</a>) and Janssen (<a href="#jan07">2007</a>) is suitable for our purposes. This methodological framework consists of a sequence of techniques that have been refined over time and that rely on researcher criteria for sample construction and meta-information inclusion (authors, depicting terms, and keywords, among others). The user meta model applies the following steps:
+        </p>
+        <ol>
+          <li>Information extraction
+          </li>
+          <li>Analysis unit definition
+          </li>
+          <li>Measurement selection
+          </li>
+          <li>Calculation of similarity or unit proximity
+          </li>
+          <li>Ordering
+          </li>
+          <li>Visualization for analysis and interpretation
+          </li>
+        </ol>
+        <p>
+          This methodological framework was selected because it accommodates relational analyses (according to certain social network analysis procedures) that apply a more qualitative approach through the use of various measures, such as consensual article attributes and article authors. These steps were performed through our investigation as follows.
+        </p>
+        <p>
+          First, research was conducted through the Thomson Reuters’ Web of Science databases and SCIELO (Scientific Electronic Library Online). This approach is justified through our definition of step 2.
+        </p>
+        <p>
+          Regarding analysis units, we applied a social network analysis of co-authorship and citation based on our objective to study forms of scientific production and knowledge transfer. Our analysis units include researchers (authors), research articles (scientific papers published in journals indexed in Web of Sciene or SCIELO; we considered articles and papers as synonyms), and their relationships. Once these analysis units were established, samples of articles and authors were collected through an online search using keywords (e.g., MEABR, Chilean fisheries co-management, and small-scale Chilean fisheries, among others) and through a crosscheck of authors and articles in all bibliographic references; results yielded N=30 published scientific papers with N=33 scientific authors. The time period covers from the earliest scientific publication of experimental biology which set the ground for a Fisheries and Aquaculture Law (i.e., 1986), to the last publication identified at the beginning of this research (i.e. 2012).
+        </p>
+        <p>
+          For step 3, a deeper review was conducted to establish the foundations of our methodological modifications to classic analyses of co-authorship and citation. Following user meta model principles, a categorization strategy was designed for both authors and articles, and the <em>expert choice</em> technique was applied to assess multiple variables. During this phase, categories and subcategories were employed to qualitatively characterize authors and articles based on the establishment of an interdisciplinary panel of seven experts (geographers, anthropologists and biologists). As shown in Table 1, a statistical distribution of authors and papers was created based on these categories, and sample attributes were classified and defined based on these categories and subcategories. We also conducted a bibliometric for co-authorship and citation networks’ analysis. According to Derek de Solla Price's foundational article (<a href="#pri70">1970</a>), an article is cited when it is listed the bibliographic references of another article, and citation analysis therefore involves the study of citation practices in scientific literature. Citation studies require the application of complex methods. In 1998, Leydesdorff (<a href="#ley98">1998</a>) questioned whether citations should be treated as <em>explanans</em> (as a means of explaining something) or as <em>explanandums</em> (as a subject to be explained). If we focus on the explanandum dimension, Leydesdorff argued that a citation involves the existence of a binomium quoted article:quoting article and, therefore, encompasses a dynamic and relational operation that occupies a position within the multidimensional space formed by other citations. Citations are highly complex as a form of author communication, allowing the possibility to address the social and cognitive contexts of their production (although it is not sufficient to simply provide an account of scientific knowledge production, as the currently unresolved debate demonstrates).
+        </p>
+        <p>
+          White, Wellman, and Nazer (<a href="#whi04">2004</a>) identified three citation analysis hypotheses: i) the social network hypothesis, which explains the citation of a group or of an invisible college through interpersonal relationships between publication authors; ii) the intellectual network hypothesis,’ which proposes that citations are better defined as belonging to disciplines and related research topics rather than to interpersonal ties; iii) and the socio-cognitive network hypothesis (employed in this paper), which relies on the interdependency of both dimensions (social relationships and disciplinary and thematic affinities) and thus assumes the necessity of techniques that address them together.
+        </p>
+        <p>
+          As for the definition and treatment of data, debates have focused on differences that, according to authors such as Cronin (1984), have formed a dichotomy between a ‘microsociological’ approach that advocates not concentrating exclusively on citations but also on their contexts of production and a ‘scientometric’ approach, which develops instruments for measuring citations. In our case, a citation analysis was conducted based on changes in the distribution of attributes over time using categories and subcategories. We thus attempted to uphold part of Moravcsik and Murugesan’s (<a href="#mor75">1975</a>) proposal, although in our case, attributes are intended to reflect the contexts in which the citations are made. Finally, we employed Finney's classificatory strategy (<a href="#fin79">1979</a>) for our social network analysis. The data collection procedure was carried out through a review of literature references for each paper identified, classifying references through a paper-by-paper asymmetric square matrix of binary values in which 1 represented a citation and 0 represented no citation (an X matrix where xij &gt; 0 if article <em>i</em> cited article <em>j</em> and xij = 0 if <em>i</em> did not cite <em>j</em>). In turn, by reading the matrix vertically, it is possible to identify the articles cited in each item. Co-authorship analyses offer insight into the structures of research communities by (partially) revealing trends of collaboration between various actors.
+        </p>
+        <p>
+          According to De Stefano and collaborators,
+        </p>
+        <blockquote>
+          Scientific collaboration is a mix of informal mechanisms (e.g., advice, face-to-face contacts, exchange of personal knowledge), and formal activities (e.g., writing papers, participating in research projects) among scientists involved in producing knowledge… (<a href="#des13">De Stefano, Fuccella, Vitale and Zaccarin, 2013</a>: p. 371).
+        </blockquote>
+        <p>
+          We thus did not propose conducting a traditional co-authorship analysis, i.e., exploring the ‘preferential attachment hypothesis' and the presence of free-scale networks through scientific collaboration (<a href="#bar02">Barabási <em>et al.</em>, 2002</a>), examining <em>small-world</em> network configurations (<a href="#wat98">Watts and Strogatz, 1998</a>) or applying the G-index (<a href="#abb11">Abbasi, Altmann and Hossain, 2011</a>; <a href="#egg06">Egghe, 2006</a>). Instead, we supplement the collaboration network with attributive analyses via classification strategy and with the citation network through the ‘threshold paper’ concept, which is defined below. For data collection purposes, we examined articles directly. Co-authoring information was extracted directly from the articles and then displayed using a symmetrical author-by-author matrix of numeral values in which 0 denotes no collaboration and <em>i</em>=1, 2, 3…m for m collaborations (an X matrix where xab &gt; 0 if author <em>a</em> published im times with author <em>b</em> and where xab = 0 if the authors did not publish together). This matrix design is based on author intentions to precisely visualize collaborations for each pair of investigators. This information was combined with attributes selected by the authors (rank and nationality of the researcher), illustrating the formation of sub-groups within the scientific collaboration network via relational and attributive analyses. Given the small sample examined, co-authorship issues associated with name homonyms were negligible (<a href="#kan09">Kang <em>et al.</em>, 2009</a>).
+        </p>
+        <table class="center">
+          <caption>
+            <br>
+            Table 1: Categories and subcategories of paper’s classification.
+          </caption>
+          <tr>
+            <th>
+              Categories
+            </th>
+            <th>
+              Sub-categories
+            </th>
+            <th>
+              No. of papers
+            </th>
+          </tr>
+          <tr>
+            <th colspan="3">
+              By papers
+            </th>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              Knowledge production
+            </td>
+            <td>
+              Monodisciplinary
+            </td>
+            <td>
+              16
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Multidisciplinary
+            </td>
+            <td>
+              11
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Interdisciplinary
+            </td>
+            <td>
+              3
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              Methodological approach
+            </td>
+            <td>
+              Qualitative
+            </td>
+            <td>
+              6
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Quantitative
+            </td>
+            <td>
+              9
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Mixed
+            </td>
+            <td>
+              15
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              Target group
+            </td>
+            <td>
+              Academic
+            </td>
+            <td>
+              11
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Public Policy
+            </td>
+            <td>
+              19
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              Local authors
+            </td>
+            <td>
+              No foreign presence
+            </td>
+            <td>
+              18
+            </td>
+          </tr>
+          <tr>
+            <td>
+              With foreign presence
+            </td>
+            <td>
+              12
+            </td>
+          </tr>
+          <tr>
+            <th colspan="3">
+              By authors
+            </th>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              Degree of specialization
+            </td>
+            <td>
+              Social science
+            </td>
+            <td>
+              4
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Natural science
+            </td>
+            <td>
+              22
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Economic science
+            </td>
+            <td>
+              7
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              Nationality of the researcher
+            </td>
+            <td>
+              Chilean
+            </td>
+            <td>
+              23
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Foreign
+            </td>
+            <td>
+              10
+            </td>
+          </tr>
+        </table>
+        <p>
+          In step 4, centrality measures of social network analysis were calculated. These included degree (in-degree and out-degree for the asymmetrical citation network), betweenness and density (<a href="#fre77">Freeman, 1977</a>, <a href="#fre78">1978</a>; <a href="#mar02">Marsden, 2002</a>; <a href="#sco00">Scott, 2000</a>). In social network analysis, degree centrality corresponds to the number of ties of a node and ‘<em>reflects the node’s position and role in terms of popularity and activity of the node...</em>’ (<a href="#abb12">Abbasi <em>et al,</em> 2012</a>, p. 406). Thus, in our co-authorship network a node’s degree represents the number of collaborations of an author (scholar), and in a citation network represents the number of times an article has been cited by others. Adapting Abbasi, Hossain and Leydesdorff’s equations for this measure (<a href="#abb12">Abbasi <em>et al.,</em> 2012</a>, p. 406) degree (CD) of a node k is defined by:
+        </p>
+        <figure class="centre">
+          <img src="p679eqA1.png" width="425" height="74" alt="equation 1">
+        </figure>
+        <p>
+          Where n is the number of nodes of the network and a(p<sub>i</sub>, p<sub>k</sub>)=1 only if I and k are linked. Otherwise a(p<sub>i</sub>, p<sub>k</sub>) =0.
+        </p>
+        <p>
+          Another centrality measure is <em>betweenness</em>, which can be understood as,
+        </p>
+        <blockquote>
+          the portion of the number of shortest paths (between all pairs of nodes) that pass through the given node divided by the number of shortest path between any pair of nodes (regardless of passing through the given node... (<a href="#abb12">Abbasi <em>et al.</em>, 2012</a>, p. 407)
+        </blockquote>
+        <p>
+          and represents a node’s function as broker or gatekeeper to connect other nodes and sub-groups. In our co-authorship network betweenness represents an author’s capacity of connecting other authors and sub-groups of authors, and in the citation network represent the capability of a paper to connect via citation two different papers. Betweenness CB of node k can be synthesised as:
+        </p>
+        <figure class="centre">
+          <img src="p679eqA2.png" width="426" height="69" alt="equation 2">
+        </figure>
+        <p>
+          Where g<sub>ij</sub> are the shortest paths connecting p<sub>i</sub> and p<sub>j</sub>, and g<sub>ij</sub>(p<sub>k</sub>) is the shortest path connecting p<sub>i</sub> and p<sub>j</sub> that contains p<sub>k</sub> (<a href="#abb12">Abbasi <em>et al.</em>, 2012</a>, p. 407).
+        </p>
+        <p>
+          In step 5, data are presented as sociograms expressed using UCINET and NETDRAW software. For data interpretation purposes, we used the following guiding questions:
+        </p>
+        <p>
+          <strong>For co-authorship</strong>: Considering the author attributes and relational data, which collaboration structures can be identified in MEABR scientific production? Do collaboration structures respond to specialty grades and/or researcher nationalities?
+        </p>
+        <p>
+          <strong>For citation</strong>: Based on the defined categories, how have relationships between scientific articles changed? Which articles have transformed MEABR scientific production and knowledge transfer and how? These questions raise the ‘threshold article’ concept, which defines a publication as including three main characteristics: i) significance by introducing modifications to scientific production (e.g., a transformation in knowledge production or methodology); ii) significance through relational features that exhibit a high degree of citation; iii) the inclusion of a node with a significant betweenness measure. By merging these three characteristics, it may be possible to identify the transformation of scientific works through MEABRs, revealing substantial temporal trends and transformations.
+        </p>
+        <p>
+          <strong>For co-authorship and citation</strong>: How are threshold articles and collaboration structures linked? Does a subgroup of collaboration dominate scientific production or do transformations originate from various subsets of collaboration?
+        </p>
+        <h2>
+          Results: forms of scientific production and transfer using MEARB
+        </h2>
+        <p>
+          We now present the results of the co-authorship and citation analysis. Both analyses were conducted based on attributes selected for each case.
+        </p>
+        <h3>
+          Co-authorship network
+        </h3>
+        <figure class="centre">
+          <img src="p679fig1.png" width="1000" height="579">
+          <figcaption>
+            Figure 1: Co-authorship network. Attributes: specialty degree (circle: biological science; square: social science; triangle: economic science) and nationality of the researcher (white: Chilean; black: foreign).
+          </figcaption>
+        </figure><br>
+        <table class="center" style="width:50%;">
+          <caption>
+            <br>
+            Table 2: Author clusters.
+          </caption>
+          <tr>
+            <th>
+              Frequency
+            </th>
+            <th>
+              Members
+            </th>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              13
+            </td>
+            <td>
+              Castilla; Geaghan; Payne; Fernandez; Defeo; Gelcich; Edward-Jones; Kaiser; Watson; Godoy; Prado; Marin; Berkes
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              10
+            </td>
+            <td>
+              Stotz; Perez; Meeltzoft; Gibran; Gonzalez; Garrido; Orensanz; Parma; Tapia; Zulueta
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              2
+            </td>
+            <td>
+              Arias; Iglesias
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              2
+            </td>
+            <td>
+              Sobenes; Chavez
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              3
+            </td>
+            <td>
+              Zuniga; Ramirez; Valdebenito
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              1
+            </td>
+            <td>
+              Schumman
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              1
+            </td>
+            <td>
+              Gonzalez, E.
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">
+              1
+            </td>
+            <td>
+              Galvez
+            </td>
+          </tr>
+        </table>
+        <p>
+          Figure 1 reveals certain dynamics of co-authorship and collaboration. First, a clustering tendency into two central <em>scientific schools</em> is shown below. These scientific clusters are mainly composed of biological science researchers, with social scientists represented to a lesser degree. Collaboration trends also reveal a focus on dominant figures or authors who exhibit high degrees of centrality (Castilla: 18; Stotz: 9. See Table 3) and betweenness (Castilla: Betweenness 45 and nBetweenness 8.871; Stotz: Betweenness 23 and nBetweenness 4.536. See Table 3). A lack of collaboration between these schools and economic scientists is also found, revealing the isolation of this discipline within MEABR scientific production and constraints to knowledge transfer. A disconnect is also identified within the field of economic scientific production, dividing this field into varies subfields. Hence, while the social sciences remain peripheral, they are at least integrated within scientific collaborations. The economic sciences are instead excluded from interdisciplinary collaborative efforts.
+        </p>
+        <h3>
+          Citation networks
+        </h3>
+        <p>
+          To examine the citation network and its co-authorship patterns, we employed the <em>threshold article</em> concept. As noted above, threshold articles are special publications that i) exhibit high centrality; ii) present significant betweenness centrality; and iii) have introduced changes in attribute tendencies. Starting with social network analysis measures, articles that combine high degree and betweenness measures are deemed <em>d, h, j, l</em> and <em>v</em>. The following sections describe the attribute tendencies of the sampled papers with a focus on articles that exhibit changes or transformations. The following sociograms are arranged based on X-axis time criteria (starting from the left with articles <em>a</em> and <em>b</em> published in 1986 and ending with <em>ad</em> articles published in 2012).
+        </p>
+        <figure class="centre">
+          <img src="p679fig2.png" width="948" height="544" alt="citation network">
+          <figcaption>
+            Figure 2: Citation network. Attributes: knowledge production (circle: mono-disciplinary; square: multidisciplinary; triangle: interdisciplinary) and author nationality (white: includes foreign authors; black: only Chilean authors).
+          </figcaption>
+        </figure>
+        <p>
+          Figure 2 reveals a tendency towards disciplinary composition transformation, beginning with a period dominated by monodisciplinary practice that slowly changes with the publication of article <em>l</em>. Although <em>e</em> was the first multidisciplinary article, it does not feature high degree or betweenness measures. Thus, <em>e</em> does not appear to be important in this case. Within the last decade, article <em>k</em> constitutes the first interdisciplinary research effort. However, <em>k</em> shows a low degree of centrality (inDegree: 0. See Table 3) and is therefore not a threshold article. Other articles with threshold potentiality do not show signs of significance or knowledge production attribute changes. An examination of <em>knowledge production</em> and <em>hometown authors</em> suggests the presence of other relevant information, as the mono-disciplinary articles evaluated have not involved foreign researchers (with the exception of <em>s</em> and <em>aa</em>). Rather, we can assume that until the publication of article <em>l</em>, Chilean scientific production was not able to generate multidisciplinary research, a trend that shifted with the valuable contributions of foreign scientists.
+        </p>
+        <figure class="centre">
+          <img src="p679fig3.png" width="979" height="590" alt="citation networks">
+          <figcaption>
+            Figure 3: Citation network. Attributes: knowledge production (circle: monodisciplinary; square: multidisciplinary; triangle: interdisciplinary)<br>
+            and methodological approach (white: qualitative; blue: quantitative; black: mixed).
+          </figcaption>
+        </figure>
+        <p>
+          Article <em>d</em> was the first to employ a mixed methodology and features a high degree of centrality. Article <em>j</em> also exhibits a high degree of centrality and strengthens qualitative methodologies. Again, this article is distinct from the other threshold papers.
+        </p>
+        <figure class="centre">
+          <img src="p679fig4.png" width="979" height="590" alt="Citation network">
+          <figcaption>
+            Figure 4: Citation network. Attributes: knowledge production (circle: mono-disciplinary; square: multidisciplinary; triangle: interdisciplinary) and target group (white: academy; black: public policy).
+          </figcaption>
+        </figure>
+        <p>
+          Figure 4 shows that articles <em>d</em> and <em>h</em> both feature a high degree of centrality and mono-disciplinary knowledge production (with <em>academy</em> and <em>public policy</em> as the target populations, respectively). Moreover, since the publication of article <em>l</em>, multi- and inter-disciplinary research has grown more prominent. Multi- and inter-disciplinary articles published since the publication of article <em>l</em> have mostly focused on public policy issues. Hence, multidisciplinary knowledge production may be directly related to public policy.
+        </p>
+        <figure class="centre">
+          <img src="p679fig5.png" width="979" height="605" alt="citation network">
+          <figcaption>
+            Figure 5: Citation network. Attributes: methodological approach (circle: qualitative; square: quantitative; triangle: mixed)<br>
+            and target group (white: academy; black: public policy).
+          </figcaption>
+        </figure>
+        <p>
+          Figure 5 lists articles that employ qualitative methodologies with the exception of article <em>j</em>, which is academically oriented. Therefore, <em>j</em>, is of relevance because it represents the only qualitative article oriented towards public policy.
+        </p>
+        <h2>
+          Discussion
+        </h2>
+        <p>
+          The figures shown highlight several MEABR scientific production and knowledge transfer trends. Referring back to our initial research questions, what would happen if we were to combine threshold articles with scientific schools? According to our definition, a threshold article features the three conditions listed above, and only three articles fulfil these conditions: <em>l</em>, , which belongs to what we can call the <em>Stotz’s school</em>, and <em>d</em> and <em>j</em>, which belong to the <em>Castilla school</em>. However, the transformation of MEABR science may have involved disciplinary and methodological shifts: a movement away from a mono-disciplinary and quantitative model to a multidisciplinary science that is strengthened by mixed methodologies and that allows for the emergence of a qualitative methodological model. This trend highlights a main characteristic of scientific production: the division of MEABR science into two differentiated periods. The first period (from article <em>a</em>, to article <em>j</em>, or from 1986 to 2000) was primarily mono-disciplinary, was dominated by biological science and involved both public policy and academic target groups. This period ended with the publication of article <em>j</em>, after which qualitative methodologies started to appear, inaugurating the second period. By 2001, with the publication of articles <em>k</em> and <em>l</em> this second period was in full operation, introducing multi- and interdisciplinary approaches. During this second period, scientific production was oriented mainly toward public policy and was marked by foreign contributions. These trends suggest that with the exception of <em>j</em> every article employed qualitative methodologies and was intended for academic rather than public policy audiences, providing data to hypothesize a weak relationship between public policy and qualitative methods, albeit this topic require intense inquiry efforts that exceed the limitations of the current work.
+        </p>
+        <p>
+          Our examination of threshold articles and scientific schools demonstrates that both scientific clusters caused transformations in scientific production. This finding, however, does not imply that each school is an exclusive owner of the attributes that were introduced, as both have exhibited the ability to adopt other contributions. Clear examples include the Stotz transformations introduced in <em>l</em> that were later adopted by Castilla’s group of collaborators (Figures 2, 3, 4 and 5). A key question arises here: how then are threshold papers able to refer to structural properties and also provide insights for a self-organizing model to interpret scientific knowledge production and transfer? The answer lies precisely in its capability to enable identification of trends in both co-authorship networks and citation networks by detecting holes or breaks in trends of both networks. In other words, in its capability of intertwine two ways of self-organizing networks that determine scientific information production and transfer, and doing it by using structural properties of nodes but also revealing data of how different domains of scientific information are formed and interact. Here domain can be interpreted (or read in the sociograms) as the multidimensional spaces of similar papers over the years, i.e., the existence of researches with common properties and combination of these properties, mainly <em>knowledge production</em> and <em>methodological approach</em>.
+        </p>
+        <h2>
+          Final considerations
+        </h2>
+        <p>
+          In closing, we wish to highlight the two main ideas presented here. The first corresponds to the research problem that we address: MEABR scientific production. We identified a mono-disciplinary bias in scientific deployment during initial stages. This bias helped to establish further questioning on scientific deployment given that interdisciplinary practices remain novel and experimental and have not yet been institutionalized to address complex problems. Employing notions of Maturana regarding the structural limits of scientific knowledge, we demonstrated that knowledge fields are restricted to specific topics. In this case, MEABR scientific production involves a modus operandi that is not yet consistent with development in other areas of knowledge production. The hypothesis that an interdisciplinary approach currently addresses social and environmental issues faced by Chilean MEABRs can be questioned by taking into account the continuity of mono-disciplinary practices and quantitative methodologies throughout the time period, despite an apparent shift begun at 2001. To state it simpler, an interdisciplinary approach is still a path to walk through rather than an institutionalized scientific practice, although some incipient trajectory cannot be denied.
+        </p>
+        <p>
+          The second idea is related to methodological strategies. We believe that the value of the presented methodological model lies in the possibility of combining social network analyses of small samples with qualitative techniques applied to science and technology studies. This model highlights the benefits of combined qualitative and quantitative techniques for addressing complex scientific problems. We hope that this case study illustrates possible pathways for their articulation while also highlighting inconsistencies that emerge from their application.
+        </p>
+        <h2>
+          Acknowledgements
+        </h2>
+        <p>
+          This work was supported through the MEL-CONICYT Project N° 81100002: ‘Environmental-Economic Value of Small-Scale Fishing Activities. Strategies for Productive Diversification in Southern Chilean Coastal Societies’. We thank the Chilean National Commission of Scientific Research and Technology (CONICYT) for its support.
+        </p>
+        <h2 id="author">
+          About the authors
+        </h2>
+        <p>
+          <strong>Carlos Hidalgo</strong> is an Associate Researcher of the ATLAS research programme, Department of Social Sciences, Universidad de los Lagos, Chile. He received his Bachelor’s degree in anthropology from Universidad Católica de Temuco and his Master’s degree in social sciences by Universidad de los Lagos. He can be contacted at <a href="mailto:chidalgarrido@gmail.com">chidalgarrido@gmail.com</a><br>
+          <strong>Francisco Ther</strong> is a Titular Professor of Universidad de Los Lagos, Osorno, Chile. He received his Bachelor’s degree of anthropology from Universidad Austral de Chile, his Master’s degree in social anthropology and PhD. in anthropology from the Universidad Nacional Autónoma de México. He can be contacted at <a href="mailto:fther@ulagos.cl">fther@ulagos.cl</a><br>
+          <strong>Asunción Díaz</strong> is an Associate Researcher of the ATLAS research programme, Department of Social Sciences, Universidad de los Lagos, Chile. She received her Bachelor’s degree of anthropology and Master’s Degree in systemic analysis applied to society from Universidad de Chile, and she is currently finishing her PhD. in human sciences in Universidad Austral de Chile. She can be contacted at <a href="mailto:asudiaz@gmail.com">asudiaz@gmail.com</a>
+        </p>
+      </section>
+      <section class="refs">
+        <form>
+          <fieldset>
+            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+            <ul class="refs">
+              <li id="abb11">Abbasi, A., Altmann, J. &amp; Hossain, L. (2011). Identifying the effects of co-authorship networks on the performance of scholars: a correlation and regression analysis of performance measures and social network analysis measures. <em>Journal of Informetrics, 5</em>, 594–607.
+              </li>
+              <li id="abb12">Abbasi, A., Hossain, L., Leydesdorff, L. (2012). Betweenness centrality as a driver of preferential attachment in the evolution of research collaboration network. <em>Journal of Informetrics, 6</em>(3), 403-412.
+              </li>
+              <li id="bar02">Barabási, A. L., Jeong, H., Néda, Z., Ravasz, E., Schubert, A. &amp; Vicsek, T. (2002). Evolution of the social network of scientific collaborations. <em>Physica A: Statistical Mechanics and Its Applications, 311</em>, 590-614.
+              </li>
+              <li id="bar96">Barnes, B., Bloor, D. &amp; Henry, J. (1996). <em>Scientific knowledge: a sociological analysis.</em> London: A &amp; C Black..
+              </li>
+              <li id="bor03">Börner, K., Chen, C. &amp; Boyack, K. (2003). Visualizing knowledge domains. <em>Annual Review of Information Science &amp; Technology, 37</em>, 179–255.
+              </li>
+              <li id="bug88">Bugliarello, G. (1988). STS perspectives: The science-technology-society matrix. <em>Bulletin of Science, Technology &amp; Society, 8</em>(2), 125-126.
+              </li>
+              <li id="cas86">Castilla, J. C. (1986). ¿Sigue existiendo la necesidad de establecer parques y reservas marinas en Chile? [Is it still necessary to establish parks and marine reserves in Chile?] <em>Ambiente y Desarrollo, 2</em>, 53-63.
+              </li>
+              <li id="cas94">Castilla, J. C. (1994). The Chilean small scale benthic shellfisheries and the institutionalization of new management practices. <em>Ecological International Bulletin, 21</em>, 47–63.
+              </li>
+              <li id="cas00">Castilla, J. C. (2000). Roles of experimental marine ecology in coastal management and conservation. <em>Journal of Experimental Marine Biology and Ecology, 250</em>(1), 3-21.
+              </li>
+              <li id="cas01">Castilla, J. C. &amp; Defeo, O. (2001). Latin American benthic shellfisheries: Emphasis on co-management and experimental practices. <em>Reviews in Fish Biology and Fisheries, 11</em>, 1-30.
+              </li>
+              <li id="cas05">Castilla, J. C. &amp; Fernández, M. (2005). Marine conservation in Chile: historical perspective, lessons, and challenges. <em>Conservation Biology, 19</em>(6), 1681–2065.
+              </li>
+              <li id="chi04a">Chile. <em>Supreme decrees</em>. (2004). <em><a href="http://www.leychile.cl/Navegar?idNorma=223524">Modifica decreto supremo No. 247 de 2000</a>.</em> [Exempt Decree N°253, amending Decree N°247/200]. (Decreto supremo 2004 No. 253) Retrieved from http://www.leychile.cl/Navegar?idNorma=223524
+              </li>
+              <li id="chi04b">Chile. <em>Supreme decrees</em>. (2004). <a href="http://www.subpesca.cl/normativa/605/w3-article-7779.html">Reglamento de actividades de acuicultura en áreas de manejo</a> [Regulation of aquaculture operations in management areas.] (Decreto supremo 2004 No. 314). Retrieved from http://www.subpesca.cl/normativa/605/w3-article-7779.html
+              </li>
+              <li id="chi01">Chile. <em>Supreme decrees</em>. (2001). <em><a href="http://www.subpesca.cl/normativa/605/w3-article-4632.html">Reglamento ambiental para la acuicultura</a></em>. [Environmental Regulations for Aquaculture]. (Decreto supremo 2001 No. 329) Retrieved from http://www.subpesca.cl/normativa/605/w3-article-4632.html
+              </li>
+              <li id="chi91">Chile. <em>Supreme decrees</em> (1995). <em><a href="http://www.leychile.cl/Navegar?idNorma=12627&amp;buscar=Decreto+Supremo+355">Reglamento sobre áreas de manejo y explotación de recursos bentonicos</a></em>. [Regulation on the areas of management and exploitation of benthic resources.] Retrieved from http://www.leychile.cl/Navegar?idNorma=12627&amp;buscar=Decreto+Supremo+355
+              </li>
+              <li id="chi91">Chile. <em>Statutes</em> (1991). <a href="http://www.leychile.cl/Navegar?idNorma=30265&amp;idVersion=1991-09-06"><em>Ley general de pesca y acuicultura</em></a>. [General law of fisheries and aquaculture]. Retrieved from http://www.leychile.cl/Navegar?idNorma=30265&amp;idVersion=1991-09-06
+              </li>
+              <li id="cro84">Cronin, B. (1984). <em>The citation process. The role and significance of citations in scientific communication.</em> London: Taylor Graham.
+              </li>
+              <li id="des13">De Stefano, D., Fuccella, V., Vitale, M. P. &amp; Zaccarin, S. (2013). The use of different data sources in the analysis of co-authorship networks and scientific performance. <em>Social Networks, 35</em>, 370-381.
+              </li>
+              <li id="egg06">Egghe, L. (2006). Theory and practise of the g-index. <em>Scientometrics, 69</em>(1), 131–152.
+              </li>
+              <li id="esc99">Escobar, A. (1999). <em>El final del salvaje: naturaleza, cultura y política en la antropología contemporánea</em>. [The end of the savage: nature, culture and politics in contemporary anthropology]. Bogotá: Instituto Colombiano de Antropología.
+              </li>
+              <li id="eva11">Evans, L., Cherrett, N. &amp; Pemsl, D. (2011). Assessing the impact of fisheries co-management interventions in developing countries: a meta-analysis. <em>Journal of Environmental Management, 92</em>(8), 1938-1949.
+              </li>
+              <li id="fin79">Finney, B. (1979). <em>The reference characteristics of scientific texts</em>. Unpublished doctoral dissertation, City University, London, UK
+              </li>
+              <li id="fre77">Freeman, L. C. (1977). A set of measures of centrality based on betweenness. <em>Sociometry, 40</em>(1), 35-41.
+              </li>
+              <li id="fre78">Freeman, L. C. (1978). Centrality in social networks: conceptual clarification. <em>Social Networks, 1</em>(3), 215-239.
+              </li>
+              <li id="gar01">García, E., González, J., López, J., Luján, J., Gordillo, M., Osorio, C. &amp; Valdés, C. (2001). <em>Ciencia, tecnología y sociedad: una aproximación conceptual</em>. [Science, technology and society: a conceptual approximation]. Madrid: Organización de Estados Iberoamericanos para la Educación, la Ciencia y la Cultura.
+              </li>
+              <li id="gel05a">Gelcich, S., Edward-Jones, E., Kaiser, M. &amp; Watson, E. (2005a). Using discourses for policy evaluation: the case of marine common property rights in Chile, society &amp; natural resources. <em>Anais: An International Journal, 18</em>(4), 377-391.
+              </li>
+              <li id="gel05b">Gelcich, S., Edwards-Jones, G. &amp; Kaiser, M. J. (2005b). Importance of attitudinal differences among artisanal fishers toward co-management and conservation of marine resources. <em>Conservation Biology, 19</em>(3), 865-875.
+              </li>
+              <li id="gel09">Gelcich, S., Godoy, N. &amp; Castilla, J. C. (2009). Artisanal fishers’ perceptions regarding coastal co-management policies in Chile and their potentials to scale-up marine biodiversity conservation. <em>Ocean &amp; Coastal Management, 52</em>(8), 424–432.
+              </li>
+              <li id="gel08">Gelcich, S., Kaiser, M. J., Castilla, J. C. &amp; Edwards-Jones, G. (2008). Engagement in co-management of marine benthic resources influences environmental perceptions of artisanal fishers. <em>Environmental Conservation, 35</em>(1), 36–45.
+              </li>
+              <li id="gon06">González, J., Stotz, W., Garrido, J., Orensanz, J., Parma, A., Tapia, C. &amp; Zulueta, A. (2006). The Chilean TURF system: How is it performing in the case of the loco fishery? <em>Bulletin of Marine Science, 78</em>(3), 499-527.
+              </li>
+              <li id="han05">Hanneman, R. &amp; Riddle, M. (2005). <em>Introduction to social network methods</em>. Riverside, CA: University of California, Riverside.
+              </li>
+              <li id="huc10">Hucke-Gaete, R. Álvarez, R., Navarro, M., Ruiz, J., Lo Moro, J. &amp; Farías, A. (2010). <em>Investigación para desarrollo de área marina costera protegida Chiloé-Palena-Guaitecas</em>. [Research for the development of the marine protected area of Chiloé-Palena-Guaitecas]. Valdivia, Chile: Universidad Austral de Chile.
+              </li>
+              <li id="jan07">Janssen, M. A. (2007). <a href="http://www.webcitation.org/6adLLHB1F">An update on the scholarly networks on resilience, vulnerability, and adaptation within the human dimensions of global environmental change.</a> <em>Ecology and Society, 12</em>(2), 9 Retrieved from http://www.ecologyandsociety.org/vol12/iss2/art9/. (Archived by WebCite® at http://www.webcitation.org/6adLLHB1F)
+              </li>
+              <li id="jan06">Janssen, M. A., Schoon, M. L., Ke, W. &amp; Börner, K. (2006). Scholarly networks on resilience, vulnerability and adaptation within the human dimensions of global environmental change. <em>Global Environmental Change, 16</em>(3), 240-252.
+              </li>
+              <li id="kan09">Kang, I. S., Na, S. H., Lee, S., Jung, H., Kim, P., Sung, W. K. &amp; Lee, J. H. (2009). On co-authorship for author disambiguation. <em>Information Processing &amp; Management, 45</em>(1), 84–97.
+              </li>
+              <li id="kno83">Knorr-cetina, K. &amp; Mulkay, M. (1983). Introduction. In K. Knorr-Cetina &amp; M. Mulkay (Eds.), <em>Science observed: perspectives on the social study of science</em> (pp. 1-18). London: Sage Publications.
+              </li>
+              <li id="kuh62">Kuhn, T. (1962). <em>The structure of scientific revolutions</em>. Chicago, IL: University of Chicago Press.
+              </li>
+              <li id="lat87">Latour, B. (1987). <em>Science in action: how to follow scientists and engineers through society</em>. Cambridge, MA: Harvard University Press.
+              </li>
+              <li id="lat93">Latour, B. (1993). <em>We have never been modern</em>. Cambridge, MA: Harvard University Press.
+              </li>
+              <li id="lat05">Latour, B. (2005). <em>Reassembling the social: an introduction to actor-network-theory</em>. Oxford, UK: Oxford University Press.
+              </li>
+              <li id="lat79">Latour, B. &amp; Woolgar, S. (1979). <em>Laboratory life: the social construction of scientific facts</em>. Los Angeles, CA: Sage Publications.
+              </li>
+              <li id="lew90">Lewis, A. O. (1990). STS historical perspectives. <em>Bulletin of Science, Technology, and Society, 10</em>(5-6), 254-258.
+              </li>
+              <li id="ley98">Leydesdorff, L. (1998). Theories of citation? <em>Scientometrics, 43</em>(1), 5-25.
+              </li>
+              <li id="luh96">Luhmann, N. (1996). <em>La Ciencia de la sociedad</em>. [The science of society.] México: Universidad Iberoamericana, Anthropos ITESO.
+              </li>
+              <li id="mar10">Marín, A. &amp; Berkes, F. (2010). Network approach for understanding small-scale fisheries governance: the case of the Chilean coastal co-management system. <em>Marine Policy, 34</em>(5), 851–858.
+              </li>
+              <li id="mar02">Marsden, P. V. (2002). Egocentric and sociocentric measures of network centrality. <em>Social Networks, 24</em>(4), 407-422.
+              </li>
+              <li id="mar04">Martínez, F. (2004). <a href="http://scielo.sld.cu/scielo.php?pid=S1727-81202004000100002&amp;script=sci_arttext">El movimiento de estudios ciencia- tecnología- sociedad: su origen y tradiciones fundamentales.</a> [The society-technology-science studies movement: its origin and fundamental traditions.] <em>Revista de Humanidades Médicas, 4</em>(1). Retrieved from http://scielo.sld.cu/scielo.php?pid=S1727-81202004000100002&amp;script=sci_arttext.
+              </li>
+              <li id="mat95">Maturana, H. (1995). <em>La realidad objetiva o construida.</em> [Objective or constructed reality.] México: Universidad Iberoamericana.
+              </li>
+              <li id="mel02">Meltzoff, S. K., Lichtensztajn, Y. G. &amp; Stotz, W. (2002). Competing visions for marine tenure and co-management: genesis of a marine management area system in Chile. <em>Coastal Management, 30</em>(1), 85-99.
+              </li>
+              <li id="mor75">Moravcsik, M.J. &amp; Murugesan, P. (1975). Some results on the function and quality of citations. <em>Social Studies of Science, 5</em>(1), 86-92
+              </li>
+              <li id="ott02">Otte, E. &amp; Rousseau, R. (2002). Social network analysis: A powerful strategy, also for the information sciences. <em>Journal of Information Science, 18</em>(6), 441-453.
+              </li>
+              <li id="pri70">Price, D. de S. (1970). Citation measures of hard science, soft science, technology, and nonscience. In C. E. Nelson &amp; D. K. Pollack (Eds.), <em>Communication among scientists and engineers</em> (pp. 3-22). Lexington, MA: Heath.
+              </li>
+              <li id="sal07">Salas, S., Chuenpagdee, R., Seijo, J. C. &amp; Charles, A. (2007). Challenges in the assessment and management of small-scale fisheries in Latin America and the Caribbean. <em>Fisheries Research, 87</em>(1), 5–16.
+              </li>
+              <li id="sch07">Schumann, S. (2007). Co-management and "consciousness": fishers’ assimilation of management principles in Chile. <em>Marine Policy, 31</em>(2), 101–111.
+              </li>
+              <li id="sco00">Scott, J. (2000). <em>Social network analysis: a handbook</em> (2nd ed.). London, UK: Sage Publications.
+              </li>
+              <li id="sta04">Standen, V., Santoro, C. &amp; Arriaza, B. (2004). Síntesis y propuestas para el periodo arcaico en la Costa del extremo norte de Chile. [Synthesis and proposals for the archaic period in the Chilean northern coast.] <em>Chungará</em>, No. 36, 201-212.
+              </li>
+              <li id="sto97">Stotz, W. (1997). Las áreas de manejo en la ley de pesca y acuicultura: primeras experiencias de evaluación de la utilidad de esta herramienta para el recurso loco. [Management areas in the law on fisheries and aquaculture: first experiences of evaluation about its usefulness for loco (Chilean abalone) resources.] <em>Estudios Oceanológicos</em>, No. 16, 67-86.
+              </li>
+              <li id="thi92">Thirunarayanan, M. O. (Ed.). (1992). <em>Handbook of science, technology and society. Volume 1: A theoretical and conceptual overview of science, technology and society education.</em> Tempe, AZ: Arizona State University.
+              </li>
+              <li id="var05">Varela, F. (2005). El círculo creativo. Esbozo histórico natural de la reflexividad. [Natural historical sketch of reflexivity] In Paul Watzlawick, P. (Eds.), La realidad inventada (pp. 251-263). Barcelona, Spain: Editorial Gedisa.
+              </li>
+              <li id="wat98">Watts, D. J. &amp; Strogatz, S. H. (1998). Collective dynamics of ‘small-world’ networks. <em>Nature, 393</em>(6684), 440-442.
+              </li>
+              <li id="whi04">White, H. D., Wellman, B. &amp; Nazer, N. (2004). Does citation reflect social structure? Longitudinal evidence from the “Globenet” Interdisciplinary Research Group. <em>Journal of the American Society of Information Science and Technology, 55</em>(2), 111-126.
+              </li>
+              <li id="woo81">Woolgar, S. (1981). Interests and explanation in the social study of science. <em>Social Studies of Science, 11</em>(3), 365-394.
+              </li>
+              <li id="zun08">Zúñiga, S., Ramírez, P. &amp; Valdebenito, M. (2008). Situación socioeconómica de las áreas de manejo en la región de Coquimbo, Chile. [Socioeconomic situation of management areas in the region of Coquimbo, Chile.] <em>Latin American Journal of Aquatic Research, 36</em>(1), 63-81.
+              </li>
+              <li id="zun10">Zúñiga, S., Ramírez, P. &amp; Valdebenito, M. (2010). Medición de los impactos socio económicos de las Áreas de Manejo en las comunidades de Pescadores del norte de Chile. [Measurement ofthe socio-economic impact of management areas in the fishing communities of northern Chile.] <em>Latin American Journal of Aquatic Research, 38</em>(1), 15-26.
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+    </article><br>
+    <section>
+      
+      <br>
+      <div style="text-align:center;">
+        
+        
+      </div>
+      <hr>
+      
+    </section>
+    <footer>
+      <hr>
+      
+      <hr>
+    </footer>
+  </body>
 </html>
