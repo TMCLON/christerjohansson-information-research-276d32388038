@@ -1,0 +1,89 @@
+#### vol. 21 no. 1, March, 2016
+
+# Resúmenes en Español / Abstracts in Spanish
+
+#### [Actividades de informacion y apropiacion de maestros en formacion en el aprendizaje digital basado en grupos](paper700.html)  
+Fredrik Hanell
+
+> **Introduccion**. Este arti­culo presenta los resultados de un estudio etnografico de las actividades de informacion de maestros en formacion en el aprendizaje digital, basado en el grupo, y su relacion con la interaccion entre el uso y la apropiacion de las herramientas digitales y el entorno de aprendizaje.  
+> **Metodo**. Los participantes en el presente estudio son 249 maestros en formacion de preescolar en Suecia. Se realizo el seguimiento de tres informantes principales y sus equipos durante un modulo del curso mediante la observacion en li­nea y fuera de linea del participante. El material producido incluye entrevistas transcritas con nueve estudiantes, interacciones digitales grabadas de Facebook, Google Drive y Prezi, notas de campo y un diario de campo.  
+> **Analisis**. El material fue lei­do repetidamente, codificado y analizado comparativamente bajo la lente de la alfabetizacion informacional y el concepto de apropiacion. El analisis genero temas recurrentes. Estos temas emergieron como las fases del proceso de aprendizaje basado en grupo.  
+> **Resultados**. Los resultados ilustran como las actividades de informacion en el aprendizaje digital, basado en grupos, de maestros en formacion se desarrollan durante cuatro fases: preparacion del marco, negociacion del tema, recopilacion de materiales y presentacion de la tarea.  
+> **Conclusiones**. Se identifican aspectos cruciales de la alfabetizacion en informacion en el aprendizaje digital basado en grupos en la formacion docente. El ambiente de aprendizaje de la formacion docente limita y permite el uso y apropiacion de herramientas digitales en terminos de flexibilidad, falta de participacion y transparencia.
+
+#### [Comunicacion empatica entre los participantes en el discurso en comunidades virtuales de personas que sufren de enfermedades mentales](paper701.html)  
+Nava Rothschild and Noa Aharony
+
+ **Introduccion.** El presente estudio intenta explorar la contribucion de la participacion en comunidades cerradas de Internet para las personas con enfermedades mentales como un canal para la formacion de relaciones sociales.  
+ **Metodo.** Se adopto un enfoque de estudio de caso: la poblacion investigada consistio en debates que tuvieron lugar en dos comunidades virtuales para las personas con enfermedades mentales en Israel.  
+ **Analisis.** Se realizo analisis de contenido para revelar los tipos de apoyo que se intercambian los participantes en el discurso en las comunidades.  
+ **Resultados.** No hay una respuesta definitiva a la cuestion de si los va­nculos sociales que existen en los canales de comunicacion mediante ordenador pueden llenar las diversas necesidades sociales de las personas. Los resultados mostraron que muchas personas tratan de formar relaciones sociales por medio de la participacion en comunidades de apoyo a traves del ordenador. Sin embargo, la gran mayori­a de los participantes en este discurso lo hacen solo en el contexto de las crisis que experimentan debido a la enfermedad mental. Se encontraron varios tipos de expresiones de apoyo social y procesos empaticos en el discurso virtual y su naturaleza es diferente de los procesos empaticos que existen en la comunicacion cara a cara.  
+> **Conclusiones.** Se necesita investigacion adicional para adaptar los canales de comunicacion virtual a las necesidades sociales de la poblacion socialmente excluida.
+
+#### [Tecnicas eficaces para la promocion de los servicios y recursos de la biblioteca](paper702.html)  
+Zhixian Yi
+
+> **Introduccion**. En este estudio se examina la forma en la que los bibliotecarios universitarios australianos perciben las tecnicas de promocion de servicios y recursos, y los factores que afectan a estas percepciones con respecto a la eficacia de las tecnicas utilizadas.  
+> **Metodo**. Los datos se obtuvieron de una encuesta en li­nea que se envio a 400 bibliotecarios universitarios en treinta y siete universidades australianas. La tasa de respuesta fue del 57,5%.  
+> **Analisis**. Los datos cualitativos fueron analizados mediante analisis de contenido. Los datos cuantitativos y cualitativos obtenidos fueron analizados utilizando estadi­stica descriptiva e inferencial (regresiones ordinales).  
+> **Resultados**. Los bibliotecarios utilizan una variedad de tecnicas para promover los servicios y recursos. Las variables demograficas, las variables de capital humano y las variables de biblioteca fueron predictores significativos de la percepcion de las tecnicas de promocion eficaces utilizadas. Sin embargo, este estudio indica que otras variables independientes tales como el numero de puestos diferentes de profesionales de la biblioteca y los años que participan en todos los servicios de la biblioteca no producen diferencias.  
+> **Conclusiones**. Este estudio proporciona una mejor comprension de las actitudes y puntos de vista de los bibliotecarios universitarios hacia las tecnicas para la promocion de los servicios y recursos. Los bibliotecarios pueden utilizar los resultados para reflexionar sobre la eficacia de estas tecnicas, para equilibrar el peso de los factores de influencia y para comprender mejor las diversas tecnicas de promocion. Esto les permitira promover los servicios y recursos de la biblioteca de manera mas eficaz en el futuro.
+
+#### [La relacion dominante de la practica basada en la evidencia: el caso de la gestion documental en un servicio de bienestar social.](paper703.html)  
+Ola Pilerot
+
+> **Introduccion.** La practica basada en la evidencia se ha ampliado y extendido a nuevas areas, incluyendo la bibliotecologi­a. Esta reorientacion se ha traducido en un aumento de la incertidumbre con respecto a lo que cuenta como evidencia, causando una tension entre procedimientos formalizados y juicio profesional. Este arti­culo teorico pretende ampliar el conocimiento sobre como la practica basada en la evidencia puede contribuir a regular el trabajo y las practicas de informacion.  
+> **Metodo**. Fueron teorizados los datos de un estudio empi­rico a pequeña escala de trabajadores sociales bajo la lente de la etnografi­a institucional.  
+> **Analisis**. El analisis se gui­a principalmente por los siguientes conceptos clave: gobernanza documental, mecanismo disciplinario y movilizacion de conocimientos.  
+> **Resultados**. Los estatutos, decretos, directrices, planes de accion e informes producidos nacionalmente constituyen importantes recursos de informacion. El conocimiento se moviliza cuando estos son lei­dos, interpretados, hablados y representados. La practica basada en la evidencia surge al mismo tiempo como una actividad concreta y material, y como un fenomeno colocado en una perspectiva mas amplia que puede ser rastreado a traves de una dimension social.  
+> **Conclusiones**. La practica basada en la evidencia puede ser vista como un medio para lograr la eficacia, pero emerge en este estudio como un mecanismo disciplinario a traves del cual se ejerce el poder. El marco teorico ha hecho posible dilucidar como los documentos y textos contribuyen no solo a la estructura sino tambien a hacer que las cosas sucedan en la practica bajo estudio.
+
+#### [Contenido personalizado e impacto en los modelos de evaluacion de sitios web: el caso de los festivales internacionales de cine](paper704.html)  
+Monica Antoli­-Calleja, Enrique Orduna-Malea y Jose-Antonio Ontalba-Ruiperez
+
+> **Introduccion.** El objetivo principal de este estudio es diseñar una metodologi­a para evaluar los sitios web de festivales de cine internacionales considerando el contenido personalizado y los resultados de contenido.  
+> **Metodo**. Este modelo consta de indicadores formales (contenido personalizado y funcionalidades Web) e indicadores de impacto (resultados del contenido en los motores de busqueda).  
+> **Analisis**. La muestra elegida para validar el modelo se compone de catorce festivales de cine de la categori­a de festivales de cine competitivos, de acuerdo con los criterios de 2011 de la Federacion Internacional de Asociaciones de Productores Cinematograficos. Para cada URL de festival, se calculan manualmente todos los indicadores del modelo propuesto.  
+> **Resultados**. Solo el 28,57% de los festivales analizados tienen un contenido de calidad adecuado (es decir, obtuvieron al menos 50 de los 100 puntos posibles). Esto significa que la calidad del contenido del sitio web no se corresponde con la del evento asociado.  
+> **Conclusion**. El modelo propuesto se considera una herramienta valida y complementaria para la evaluacion de la calidad del contenido de los sitios web en festivales internacionales de cine y adecuado para su inclusion en los modelos generales de evaluacion de sitios web; tambien podri­a contribuir a la mejora de las directrices de diseño y construccion de sitios web similares.
+
+#### [Clasificacion y gestion de la informacion para colecciones de patentes: una revision de la bibliografi­a y algunas cuestiones de investigacion](paper705.html)  
+Magali Rezende Gouviªa Meireles, Gabriela Ferraro y Shlomo Geva
+
+> **Introduccion.** Con el crecimiento de las colecciones de patentes digitales, y el aumento de la accesibilidad en abierto, la capacidad de organizar automaticamente estas colecciones se habi­a convertido en deseable. Aparte de los esfuerzos especi­ficos de las oficinas responsables de la actividad de patentes, se pueden encontrar en la bibliografi­a muchas discusiones relevantes que presentan formas alternativas de organizar colecciones de patentes y de explorar el conocimiento incluido en las bases de datos de patentes.  
+> **Metodo**. Este trabajo identifica y discute cuatro problemas relacionados con el proceso de clasificacion de patentes, revisa la bibliografi­a relevante para los problemas identificados y formula preguntas para la investigacion futura.  
+> **Resultados**. La revision concluye que existe un esfuerzo continuo de armonizacion de los sistemas de clasificacion de patentes existentes y de mejora de los sistemas actuales, tratando de desarrollar tecnicas especi­ficas para recuperar la informacion incluida en las patentes y para transformarla en un formato mas facil de usar por los usuarios.  
+> **Conclusiones**. Este estudio contribuye al desarrollo del campo de la gestion de patentes mediante la discusion de temas de actualidad, problemas de investigacion abiertos y posibles caminos para resolver los problemas relacionados.
+
+#### [Pacientes leyendo sus historiales medicos: diferencias en las experiencias y actitudes entre los lectores habituales y sin experiencia](paper706.html)  
+Isto Huvila, Mats Daniels, i…sa Cajander y Rose-Mharie i…hlfeldt
+
+> **Introduccion.** Presentamos los resultados de un estudio sobre como la solicitud y lectura de las copias impresas de los historiales medicos de lectores habituales y sin experiencia se relaciona con la forma en que se utilizan los historiales, a las practicas de informacion sobre salud de los pacientes, asi­ como a sus expectativas sobre la utilidad de los nuevos e-servicios de salud y el acceso en li­nea a los historiales medicos.  
+> **Metodo**. El estudio se basa en una combinacion de encuesta postal y web a una muestra aleatoria simple de 1000 pacientes que solicitaron una copia impresa de sus historiales medicos al Consejo del Condado de Uppsala (Suecia) con una muestra final analizada de 354 cuestionarios devueltos.  
+> **Analisis**. Los datos fueron analizados con el programa SPSS 21.0 usando estadi­stica descriptiva, analisis unidireccional de la varianza (ANOVA) utilizando el test T2 de Tamhane, pruebas de chi-cuadrado y analisis de regresion logi­stica.  
+> **Resultados**. El analisis muestra que los individuos que habi­an solicitado una copia de sus historiales medicos en el pasado perciben su utilidad en terminos mas amplios que los novatos. Los lectores habituales estan tambien mas preocupados por su salud y la calidad de los cuidados.  
+> **Conclusiones**. Parece que, ademas de ciertos factores demograficos, muchas de las variaciones en los datos pueden explicarse en terminos de la teori­a de la estructuracion adaptativa. Este es el resultado de una estructuracion paralela de los pacientes, historiales medicos y las tecnologi­as de acceso basadas en papel y en li­nea, y consecuentemente de como los pacientes perciben los historiales y los diferentes metodos de acceso y uso de ellos.
+
+#### [Percepcion de la enfermedad y el comportamiento con la informacion de los pacientes con enfermedades cronicas raras](paper707html)  
+Snježana Stanarevic Katavić, Sanjica Faletar Tanacković y Boris Badurina
+
+#### [Uso de imagenes en la comunicacion en redes sociales: un estudio de caso de tweets sobre la bomba en el maraton de Boston](paper708html)  
+
+JungWon Yoon y EunKyung Chung
+
+> **Introduccion.** Este estudio tuvo como objetivo comprender como se utilizan las imagenes en las practicas de comunicacion en el entorno de Twitter.  
+> **Metodo**. Se recogieron 1.428 mensajes de Twitter con imagenes incrustadas relacionados con la bomba del maraton de Boston bombardeo, y se realizo analisis de contenido.  
+> **Analisis**. Se han examinado y analizado las caracteri­sticas de utilizacion de imagen por tipo de mensajes de Twitter.  
+> **Resultados**. Las personas utilizan diversos tipos de imagenes en mensajes de Twitter: fotos, imagenes capturadas, infografi­as y mapas. Dependiendo del contenido de los mensajes de Twitter, los usos de las imagenes se clasificaron en cuatro tipos: 1) ilustrar noticias, informacion y anecdotas, 2) difundir la informacion visual que no puede ser proporcionada a traves de palabras, 3) expresar emociones y/u opiniones, o para llamar a la accion por parte del publico, y 4) agregar componentes visuales para enfatizar los mensajes de texto. El 45% de las imagenes contienen texto. En algunas imagenes, el texto y los efectos visuales son igualmente importantes en la transmision de mensajes, y mostraron relaciones de complementariedad; mientras que en otras imagenes, el texto se utilizo para los dirigir a lectores sobre como debi­a ser lei­da la imagen. Tambien habi­a imagenes en las que el texto era la principal informacion y los componentes visuales proporcionaban un contexto complementario.  
+> **Conclusiones**. La investigacion sobre recuperacion de imagenes debe incluir diversos tipos de imagenes. Ademas, una mayor comprension de las relaciones entre los componentes visuales y textuales podri­a mejorar la recuperacion de imagenes.
+
+#### [Descargas de software academico desde Google Code: ¿indicadores utiles de uso?](paper709html)  
+Mike Thelwall y Kayvan Kousha
+
+> **Introduccion.** Los cienti­ficos en computacion y otros investigadores a menudo hacen sus programas disponibles libremente en li­nea. Para saber si este software hace una contribucion valiosa dentro o fuera de la academia, sus creadores pueden querer demostrarlo con un indicador adecuado, como el numero de descargas.  
+> **Metodos**. Numero de descargas, numero de citas, etiquetas y licencias, se extrajeron de los programas alojados tanto en el repositorio de software de Google Code como citados en Scopus.  
+> **Analisis**. El numero de descargas se correlaciono con las citas de Web of Science, las distribuciones de ambas fueron comparadas y se identificaron las etiquetas de software comunes y los acuerdos de licencia.  
+> **Resultados**. A pesar de que las descargas se correlacionan positiva y significativamente con las citas en Scopus, la correlacion es debil (0,3) debido a que algun tipo de software tiene una gran audiencia natural fuera de la academia. Hay desacuerdo sobre la mejor licencia de uso de software compartido, sin licencia elegida por mas de una quinta parte de los proyectos. La etiqueta de lenguaje mas comun fue la de Java (20%) y, excluyendo los terminos genericos de computacion, las etiquetas de tema mas comunes fueron Google (5%), seguridad (3%) y bioinformatica (3%).  
+> **Conclusiones**. El numero de descargas pueden dar evidencia de amplios usos no academicos de software. Sin embargo, el software que aparentemente no esta diseñado principalmente para la investigacion, pero no obstante, ha sido citado por los academicos tambien puede atraer muchas descargas. En general, el numero de descargas se puede utilizar como un indicador de valor academico, pero solo si es contextualizado con el proposito del programa.
+
+#### Traducciones realizadas por [José Vicente Rodríguez](mailto:jovi@um.es) y [Pedro Díaz](mailto:diazor@um.es), Universidad de Murcia, España.

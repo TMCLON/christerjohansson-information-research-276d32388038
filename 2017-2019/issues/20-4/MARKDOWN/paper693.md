@@ -1,0 +1,5798 @@
+#### vol. 20 no. 4, December, 2015
+
+# The focus factor: a dynamic measure of journal specialisation
+
+#### [Jeppe Nicolaisen](#author)  
+University of Copenhagen, Birketinget 6, DK-2300 Copenhagen S., Denmark  
+[Tove Faber Frandsen](#author)  
+Odense University Hospital, Søndre Boulevard 29, DK-5000 Odense, Denmark
+
+#### Abstract
+
+> **Introduction.** We present a new bibliometric indicator to measure journal specialisation over time, named the focus factor. This new indicator is based on bibliographic coupling and counts the percentage of re-citations given in subsequent years.  
+> **Method.** The applicability of the new indicator is demonstrated on a selection of general science journals and on a selection of medical journals. The reference lists of each journal are compared year by year, and the percentage of re-citations is calculated by dividing the number of re-citations with the total number of citations each year.  
+> **Analysis.** To validate re-citations as caused by specialisation, other possible causes were measured and correlated (obsolescence, journal self-citations and number of references).  
+> **Results.** The results indicate that the focus factor is capable of distinguishing between general and specialised journals and thus effectively measures the intended phenomenon (i.e., journal specialisation). Only weak correlations were found between journal re-citations and obsolescence, journal self-citations, and number of references.  
+> **Conclusions.** The focus factor successfully measures journal specialisation over time. Measures based on either simple citation analysis or bibliographic coupling are found to be close relatives. Measures based on journal self-citation are found to be only weakly correlated with the focus factor. Measures based on co-citation analysis remain to be studied and compared.
+
+## Introduction
+
+_The Philosophical Transactions of the Royal Society of London_ is commonly referred to as the first scientific journal. It was published for the first time in 1665, three months later than the French _Journal des Scavans_. Both journals published scientific information, but _Journal des Scavans_ focused more on reviewing books than on communicating new research in article form ([Meadows, 1974](#mead74)). These two journals, and the journals that subsequently followed, originated as the public record of the activities and interests of learned societies. Journals unrelated to scientific societies began to emerge during the eighteenth and nineteenth centuries ([Meadows, 1974](#mead74)). As a response to the rapid increase in new research results during the nineteenth century, scientists began to specialise in sub-disciplines. Scientists were no longer able to follow the development in their own discipline as a whole, but focused instead on smaller disciplinary fractions. This development also led to the increasing specialisation of many scientific journals ([Meadows, 1974](#mead74)).
+
+Thus, for a long time the scientific journal has been the most important media for communicating new ideas and knowledge in science, in most of the social sciences, and to a lesser, but growing, extent in the arts and humanities. Perhaps because of this status as the most important media for scientific communication, the scientific journal as a research communication media has caught interest from a number of fields (e.g., history of science, sociology of science, linguistics, library and information science, and others). Yet, the field that has studied the scientific journal the most is undoubtedly bibliometrics. One study immediately springs to mind: Derek J. de Solla Price’s seminal discovery of the exponential growth of science that was based on studies of the oldest scientific journal (_Philosophical Transactions_) and other journals ([Price, 1963](#price63)). Countless other bibliometric studies focusing on the scientific journal have followed (too many to mention here). Some of these studies have sought to establish adequate citation-based measures for various aspects of the scientific journal. Among the most prominent of these are Burton and Kebler’s ([1960](#burt60)) study, in which they developed a measure of the obsolescence of scientific literature (the half-life), later used for measuring the obsolescence of scientific journals (e.g., The Journal Citation Reports); and Garfield and Sher’s ([1963](#gar63)) study, in which they developed the journal impact factor. Many alternative measures of journal obsolescence and journal impact have been developed since the 1960s, but a vital aspect of the scientific journal has thus far been largely overlooked or ignored by this line of bibliometric indicator research: journal specialisation. It is actually a bit curious since bibliometricians have long known about the important factor of specialisation for the outcome of bibliometric studies. Almost forty years ago, Henry Small pointed to the principal finding of experiments conducted one to two years before by leading bibliometricians including, amongst others, Eugene Garfield, Belver C. Griffith and himself, and concluded that _the primary structural unit in science is the scientific specialty_ ([Small, 1976, p. 67](#small76)). A common critique of the journal impact factor is that the impact factor of a journal is partly determined by its level of specialisation (e.g., [Seglen, 1997](#seg97)). Thus, to improve our interpretation of bibliometric journal indicators (e.g., the journal impact factor), we need a simple yet effective measure of journal specialisation. One that could be readily incorporated into products like, for example, The Journal Citation Reports.
+
+Nicolaisen and Frandsen ([2013](#frand13)) developed a simple yet effective measure for measuring the specialisation of scientific journals. They presented the idea for this new citation-based measure at the CoLIS8-conference in Copenhagen in 2013 ([Nicolaisen and Frandsen, 2013](#frand13)) and as a brief communication published in the Journal of the Association for Information Science and Technology ([Nicolaisen and Frandsen, 2015](#frand15)). Having tested the measure on a larger sample, we present a more detailed investigation of the new measure. Specialisation equals narrowing one’s focus and we have therefore chosen to name the new citation-based journal measure _the focus factor_.
+
+The next section provides a detailed description of the focus factor including the basic theoretical assumptions it rests upon, related measures and how it is calculated. In subsequent sections we then demonstrate the application of the new indicator on a selection of scientific journals and test its validity as a measure of journal specialisation.
+
+## Related literature and measures
+
+The new citation-based measure that we are about to present is a measure of journal specialisation. It is based on the common definition of scientific specialities and specialisation that may be found in many texts on the sociology of science and science studies (including bibliometrics). Before we present the focus factor in more detail, we will briefly outline this common understanding and definition, and briefly touch upon related bibliometric measures.
+
+### Specialities and specialisation
+
+In his book _Communicating research_, Meadows ([1998](#mead98)) discusses, among other things, the rapid growth of scientific research and how the research community has developed a mechanism for coping with the excessive information output. This mechanism is, according to Meadows ([1998, p. 20](#mead98)), specialisation. To understand exactly what he means by specialisation, one has to examine his argument somewhat further. Meadows ([1998, p. 19](#mead98)) asks the reader to listen to Faraday’s complaint from 1826:
+
+> It is certainly impossible for any person who wishes to devote a portion of his time to chemical experiment, to read all the books and papers that are published in connection with his pursuit; their number is immense, and the labour of winnowing out the few experimental and theoretical truths which in many of them are embarrassed by a very large proportion of uninteresting matter, of imagination, and error, is such, that most persons who try the experiments are quickly induced to make a selection in their reading, and thus inadvertently, at times, pass by what is really good.
+
+Today there is much more information to cope with than in the days of Faraday. Therefore, one could consequently be led to believe that the problem which Faraday described is much worse in our time. However, according to Meadows ([1998](#mead98)), it is not. The reason is that modern chemists no longer try to command what Meadows ([1998, p. 20](#mead98)) terms _the same broad sweep of their subject_ as chemists did in Faraday’s time. Modern chemists concentrate instead on much more restricted topics ([Meadows, 1998, p. 20](#mead98)). Researchers have become much more _specialised_ ([Meadows, 1998, p. 20](#mead98)). As research has expanded, researchers have confined their attention to selected parts of it ([Meadows, 1998, p. 20](#mead98)). Members of a discipline are therefore typically interested in only part of the field ([Meadows, 1998, p. 21](#mead98)).
+
+This definition of specialities resembles the idea of a social division of labour in society. In all known societies the production of goods and services is divided into different work tasks, in such a way that none of the members of a society conduct all tasks. On the contrary, the types of work tasks which an individual may conduct are often regulated by rules and individuals are often obliged to conduct certain tasks. Adam Smith (1723-1790) was the first to formulate how the social division of labour leads to increased productivity. In his book, _On the wealth of nations_, published in 1776, he even maintains that division of labour is the most important cause of economic growth. A famous example from the book illustrates his point. The example concerns a pin factory. According to Smith, a pin factory that adopts a division of labour may produce tens of thousands of pins a day, whereas a pin factory in which each worker attempt to produce pins from start to finish, by performing all the tasks associated with pin production will produce very few pins. What Meadows ([1998](#mead98)) seems to have in mind when describing the strategy adopted by modern chemists is thus the strategy of a successful pin factory. Like the workers of a successful pin factory, modern chemists have divided their work tasks between them and are consequently working on different, but related, tasks. Today, there are several specialities in chemistry, including organic chemistry, inorganic chemistry, chemical engineering and many more. The same holds true for all other scientific fields. Sociologists, for instance, usually work within one of the specialities described in Smelser’s ([1988](#smel88)) _Handbook of sociology_. These include, among others, the sociology of education, the sociology of religion, the sociology of science, medical sociology, mass media sociology, sociology of age and sociology of gender and sex.
+
+Meadows ([1998, p. 44](#mead98)) mentions that disciplines and specialities also can be produced by fusion. The combination of part of biology with part of chemistry to produce biochemistry is just one example.
+
+Consequently, what characterises a speciality is the phenomenon or phenomena which members of the speciality study. Organic and inorganic chemistry, for instance, are different specialities because the researchers in these specialities study different phenomena. Organic chemists study materials that are carbon based, such as oil or coal, while inorganic chemists work with materials that contain no carbon or carbon-based synthetics. Sociologists of science study scientific societies while sociologists of religion study religious societies. Though most of the members of these two groups have been trained in the discipline of sociology, they belong to different sociological specialities because they study different sociological phenomena.
+
+As noted above, Meadows’ definition of specialities corresponds to the definition usually employed in science studies. Crane and Small ([1992, p. 198](#crane92)), for instance, explain the concept of specialities by arguing that:
+
+> clusters of related research areas constitute specialties whose members are linked by a common interest in a particular type of phenomenon or method (such as crime, the family, population, etc.). Disciplines, in turn, are composed of clusters of specialties
+
+Small and Griffith ([1974, p. 17](#small74)) maintain that _'science is a mosaic of specialties, and not a unified whole'_, and note that specialities are the _building blocks_ of science. Gieryn ([1978](#gie78)), Whitley ([1974](#whit74)) and Zuckerman ([1978](#zuc78)) claim that a problem area is made up of a number of related though discrete problems, that a cluster of related problem areas comprise a speciality, and that a scientific discipline covers a set of related specialities.
+
+### Measuring specialisation
+
+Hagstrom ([1970, p. 91-92](#hag70)) argues that _'it is reasonable to believe that scientists will communicate most often and intensively with others in their specialties, exchanging preprints with them, citing their work, and exchanging reprints'_. Ziman ([2000, p. 190](#zim00)) notes that _'scientific specialties often seem to be shut off from one another by walls of mutual ignorance'_. These assumptions have been explored and confirmed empirically by bibliometricians.
+
+Using simple citation analysis, Earle and Vickery ([1969](#ear69)) investigated to what extent a variety of subject areas drew on the literature of their own area (subject self-citation) and other subject areas. They found considerable variations among the subject areas under study, which seem to fit with the assumptions regarding specialisation. Among their findings was that considerable dependence on other subject areas was found in the general science and general technology areas, whereas mathematics was found to depend little on literature from other subject areas.
+
+Author self-citations have also been found to reflect specialisation tendencies. Often, author self-citations are frowned upon by critics of citation analysis (e.g., Seglen, [1992](#seg92); MacRoberts and MacRoberts, [1989](#mac89); [1996](#mac96)). The critics speculate or even claim (see [Seglen, 1992, p. 636](#seg92)) that author self-citations are equal to self-advertising and, thus, that author self-citations should be eliminated from evaluative bibliometrics. Yet a study of fifty-one self-citing authors conducted by Bonzi and Snyder ([1991](#bon91)) revealed essentially no differences between the reasons that authors cite their own work and the reasons they cite the work of others. The self-citations predominantly identified related work or earlier work that later works were built upon. Thus, author self-citations seem to indicate an author’s specialised focus on a narrow scientific problem. Early studies by Parker, Paisley and Garrett ([1967](#par67)) and Meadows and O’Conner ([1971](#mead71)) also documented similar relations between specialisation and author self-citations.
+
+Marshakova ([1973](#mar73)) and Small’s ([1973](#small73)) co-citation technique provides a quantitative technique for grouping or clustering cited documents or cited authors. By measuring the strength of co-citation in a large enough sample of units (e.g., documents or authors) it is possible to detect clusters of units, which are highly co-cited. The information scientists, who became interested in this technique during the 1970s and onward, have repeatedly found that such clusters adequately represent scientific specialities (e.g., [Small and Griffith, 1974](#small74); [White and Griffith, 1981](#whi81); [White and McCain, 1998](#whi98); [Zhao and Strotmann, 2014](#zha14)).
+
+Bibliographic coupling ([Kessler, 1963](#kes63)) is a related method for clustering related entities. Documents (or other units of analysis) are said to be bibliographically coupled if they share bibliographic references. Bibliometricians began to take an interest in this technique during the 1990s, using it for identifying and mapping clusters of subject-related documents (e.g., [Glänzel and Czerwon, 1996](#gla96); [Jarneving, 2007](#jar07); [Ahlgren and Jarneving, 2008](#ahl08)). As shown by Nicolaisen and Frandsen ([2012](#frand12)), bibliographic coupling has another promising potential as a measure of the level of consensus and specialisation in science. Using a modified form of bibliographic coupling (aggregated bibliographic coupling), they were able to measure the level of consensus in two different disciplines at a given time.
+
+### The focus factor
+
+Specialisation is a process. The level of specialisation within a discipline probably increases or decreases over time. To measure this by bibliometric methods such as self-citations, co-citation analysis or bibliographic coupling, a time dimension needs to be included. The focus factor is created with this purpose in mind. Using the scientific journal as sample unit, it measures the level of specialisation by calculating overlaps in bibliographic references year by year. For example: a journal produces 1,536 references in year zero and 1,622 references in year one, 219 of which are found in the reference lists of the journal in both years. Thus, 219 out of 1,622 references in year one are similar to references found in the same journal the preceding year. This equals 13.5%, and is taken as an indicator of the level of specialisation in that particular journal in year one. The level of specialisation in year two is calculated by comparing the overlap in bibliographic references used by the same journal in year one and year two, and so on.
+
+The method was tested by Nicolaisen and Frandsen ([2013](#frand13); [2015](#frand15)) on a selection of core journals in library and information science. The results showed that the focus factor distinguishes satisfactorily between general journals and speciality journals, and, moreover, effectively measures the level of specialisation among the selected journals.
+
+## Method
+
+To examine the applicability of the focus factor on a wider variety of subjects and journals we have tested the measure on a selection of general science journals, general medical journals and specialised medical journals (see table 1). The general science journals include journals such as _Science_, _Nature_ and _PNAS_ (see, e.g., [Fanelli, 2010](#fan10)), of which the two first mentioned are selected for the present study. The general medical journals selected for this study are among the most prestigious medical journals (see, e.g., [Choi, Nakatomi and Wu, 2014](#cho14)) also known as the big five (e.g., [Wager, 2005](#wag05)). The specialised medical journals are selected as examples from a wide range of specialist journals available on the basis of advice from two medical information specialists (MD and MSC).
+
+<table class="center"><caption>Table 1\. List of included journals</caption>
+
+<tbody>
+
+<tr>
+
+<th>General science journals</th>
+
+</tr>
+
+<tr>
+
+<td>Science</td>
+
+</tr>
+
+<tr>
+
+<td>Nature</td>
+
+</tr>
+
+<tr>
+
+<th>General medical journals</th>
+
+</tr>
+
+<tr>
+
+<td>British Medical Journal</td>
+
+</tr>
+
+<tr>
+
+<td>The Journal of the American Medical Association</td>
+
+</tr>
+
+<tr>
+
+<td>Annals of Internal Medicine</td>
+
+</tr>
+
+<tr>
+
+<td>Lancet</td>
+
+</tr>
+
+<tr>
+
+<td>New England Journal of Medicine</td>
+
+</tr>
+
+<tr>
+
+<th>Specialised medical journals</th>
+
+</tr>
+
+<tr>
+
+<td>Ophthalmology</td>
+
+</tr>
+
+<tr>
+
+<td>Archives of Ophthalmology</td>
+
+</tr>
+
+<tr>
+
+<td>American Journal of Ophthalmology</td>
+
+</tr>
+
+<tr>
+
+<td>British Journal of Ophthalmology</td>
+
+</tr>
+
+<tr>
+
+<td>Experimental Eye Research</td>
+
+</tr>
+
+<tr>
+
+<td>Investigative Ophthalmology</td>
+
+</tr>
+
+<tr>
+
+<td>Journal of Clinical Oncology</td>
+
+</tr>
+
+<tr>
+
+<td>JNCI: Journal of the National Cancer Institute</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+In order to determine the share of re-citations, the references in a specific year of each of the included journals were compared to the references in the journal in the previous year. A re-citation is defined as a 100%match between a cited reference in one year to a cited reference the previous year. This means that spelling errors, typing errors, variations of spelling and similar irregularities are potential sources of bias, but as they are expected to be evenly distributed across the data set, bias is unlikely. Data registered is name of journal, publication year, cited references in the journal and the number of instances for every reference. Some of the references appear more than once and consequently the number of re-citations depends on the total number of instances and not just the number of unique references. Information on journal, publication year and cited references in the journal was collected using Web of Science. Information on the number of instances for every reference was gathered using software developed for this specific purpose. The share of re-citations in journal j in year y is calculated as follows:
+
+Share of re-citations = number of re-citations (j,y) / total number of references (j,y)
+
+The following is an example of how share of re-citations is calculated: in 2011 Nature contained 32,069 references of which 4,971 were re-citations, resulting in a share of re-citations of 4,971 / 32,069 = 0.155.
+
+In total this study analysed 4,788,579 references in 15 journals from 1991 to 2012 and calculated the re-citation share. Only articles, notes, reviews and letters were included. Letters are included as recommended by Christensen et al. ([1997](#chr97)).
+
+## Results
+
+The journals included in the analyses are specialised to a varying degree. The share of re-citations varies from 0.05 to more than 0.2, i.e. about 20%of the references in any given year appeared in that specific journal the previous year. Figures 1 and 2 are illustrations of the development in levels of specialisation from 1991 to 2012\. For specific counts, see appendix.
+
+Figure 1 presents the results of the analyses of the general science journals and the general medical journals.
+
+<figure class="centre">![Figure 1: Level of specialisation (general science journals and general medical journals)](p693fig1.png)
+
+<figcaption>  
+Figure 1: Level of specialisation (general science journals and general medical journals)</figcaption>
+
+</figure>
+
+One journal stands out in this figure as it is characterised by a greater extent of specialisation, particularly in the last five to six years. Nature appears to be more highly specialised than the other journals depicted in figure 1\. This tendency seems to decrease during the first decade of analysis, but increases during the last. The other general journal, Science, on the other hand also starts out highly specialised but moves towards less specialisation during the entire period.
+
+Figure 2 provides an overview of the results of the analyses of the specialised medical journals. To be able to compare the results, the units on the horizontal axes of figures 1 and 2 are the same.
+
+<figure class="centre">![Figure 2: Level of specialisation (specialised medical journals)](p693fig2.png)
+
+<figcaption>  
+Figure 2: Level of specialisation (specialised medical journals)</figcaption>
+
+</figure>
+
+The specialised medical journals show great variation with a share of re-citations ranging from 0.10 to 0.37\. Some are specialised at a level resembling more general journals, whereas for other journals 30% of the references in some years appeared in that specific journal the previous year.
+
+Nicolaisen and Frandsen ([2013](#frand13)) analysed whether the levels of re-citations can be explained by obsolescence. They tested the hypothesis by examining the age distribution of the references in the journal, measured by the half-life or median citation age. A discrete analysis method was applied as publication years were treated as discrete units not a continuum of dates in terms of intervals. The correlation was positive, i.e. journals including a relatively large share of older references are characterised by a greater level of specialisation – all other things equal. Journals with relatively recent references have fewer re-citations simply because there are more references in those journals that could not have been cited the year before. The hypothesis is also tested on this data, yielding a similar result. Figure 3 provides an illustration of the correlation and, parallel to the previous analysis, the r-squared indicates that median citation age alone does not explain the different levels of re-citation. For specific counts, see appendix.
+
+<figure class="centre">![Figure 3: The median citation age and share of re-citations](p693fig3.png)
+
+<figcaption>  
+Figure 3: The median citation age and share of re-citations</figcaption>
+
+</figure>
+
+Turning to another commonly used measure for specialisation that could potentially explain the differences in levels of re-citation, we will now analyse the correlation between share of re-citations and journal self-citations. Share of self-citations is measured for each journal in the entire time period and correlated with share of re-citations. Figure 4 depicts some correlation, although definitely not a very strong one. For specific counts, see appendix.
+
+<figure class="centre">![Figure 4: Journal self-citations and share of re-citations](p693fig4.png)
+
+<figcaption>  
+Figure 4: Journal self-citations and share of re-citations</figcaption>
+
+</figure>
+
+The r-squared value of 0.19 confirms that journal self-citations and share of re-citations are not to be considered similar measures.
+
+Finally, we examine whether the differences in levels of re-citation are caused by differences in number of references. Some might argue that larger journals have more references that may be re-cited. However, the measure is not absolute and consequently larger journals should not be exhibiting higher levels of re-citation. Share of self-citations is measured for each journal in the entire time period and correlated with the total number of references during that year.
+
+<figure class="centre">![Figure 5: Number of references and share of re-citations](p693fig5.png)
+
+<figcaption>  
+Figure 5: Number of references and share of re-citations</figcaption>
+
+</figure>
+
+Figure 5 depicts very weak correlation between the number of references and share of re-citations. For specific counts, see appendix.
+
+## Discussion and conclusion
+
+Scientific journals serve several purposes. Among the most important of these are credit, dissemination and archiving of research results. Although scientific journals may be said to share vital characteristics, the way they serve their purposes, the means by which they seek to serve them, and their success in serving them, are at best diverse. Thus, seeking to develop a single and unique measure of scientific journals is impossible. As noted by Rousseau ([2002](#rou02)), the quality of a journal is a multifaceted notion necessitating a whole battery of indicators. The focus factor is a new contribution to this battery of indicators.
+
+Measuring the level of specialisation is a novelty in bibliometric indicator research. We believe that the level of specialisation is an important aspect of scientific journals. Yet, like other indicators, the focus factor measures only one aspect of scientific journals and only becomes interesting when other aspects are taken into account as well. Moreover, like other indicators, a single meter reading cannot be taken as definite proof. The measure should be applied over time, resulting in several meter readings that should be compared with readings from other journal indicators. Only by this approach may we get an adequate picture of a scientific journal.
+
+When measuring the overall level of specialisation in the two groups of journals, the focus factor is quite capable of distinguishing between general and specialised groups of journals. The general journals presented in figure 1 show figures in the range of 0.05 to around 0.2\. The specialised journals presented in figure 2 show figures in the range of 0.1 to 0.35\. Yet we find overlapping meter readings in the two groups of journals (between 0.1 and 0.2). Focusing specifically on _Nature_, we find what appears to be a somewhat more specialised journal. Yet, _Nature_ is normally said to be a general science journal. Logically, either the focus factor is failing or the assessment of _Nature_ as being a general science journal _per se_ is wrong. We believe the latter is the case. When applying the focus factor to a selection of library and information science journals, Nicolaisen and Frandsen ([2013](#frand13)) found a similar deviant: _Journal of the Association for Information Science and Technology_ (JASIST). When measuring the level of specialisation using the focus factor, they found that _JASIST_ generally had higher scores than most of the specialised journals in the field. _JASIST_ is a journal that seeks to cover the field at large and would therefore normally be said to be a general journal. Looking a bit deeper into this apparent anomaly, Nicolaisen and Frandsen ([2015](#frand15)) found that the high scores of _JASIST_ were mainly caused by a large corpus of bibliometric papers published in _JASIST_. Thus, they found that it was not a failure of the focus factor, but instead that _JASIST_ over time has shifted its focus more toward bibliometrics, thus becoming gradually more and more specialised. The same is probably the case with _Nature_. A deeper study will probably reveal a couple of favourite topics of the journal (e.g., cell biology, nuclear physics, astrophysics or even anthropology) leading to a corpus of specialised papers with higher degrees of re-citations. An important consequence of these findings is that the binary notion of general and specialised journals is probably too limiting. In reality, a much richer scale exists.
+
+Previously, specialisation has been measured using other measures:
+
+1.  Simple citation analysis ([Earle and Vickery, 1969](#ear69))
+2.  Author self-citations ([Parker, Paisley and Garrett, 1967](#par67); [Meadows and O’Conner, 1971](#mead71))
+3.  Co-citation (e.g., [Small and Griffith, 1974](#small74); [White and Griffith, 1981](#whi81); [White and McCain, 1998](#whi98); [Zhao and Strotmann, 2014)](#zha14)
+4.  Bibliographic coupling (e.g., [Glänzel and Czerwon, 1996](#gla96); [Jarneving, 2007](#jar07); [Ahlgren and Jarneving, 2008](#ahl08); [Nicolaisen and Frandsen, 2012](#frand12))
+
+To some extent, the focus factor may be seen as a further development of 1 and 4\. Instead of focusing on subject areas and the extent to which they rely on own literature (as Earle and Vickery (1969) did), the focus factor focuses on scientific journals and the extent to which they rely on own literature (defined as literature used and cited the year before). Clearly, such a relation is equal to a bibliographic coupling. Thus, the finding that the focus factor is an adequate measure of scientific specialisation was expected. Likewise, measuring the level of specialisation by journal self-citation was also expected to perform well. However, although we are able to document some correlation between journal re-citation and share of journal self-citation, these measures should not be considered the same.
+
+Finally, it is worth noticing that the scientific communication system is continually changing. New media of communication are constantly surfacing (e.g., mega-journals like PLOS ONE) and readers are provided with new tools for finding and keeping up to date with the developments in their fields of interest (e.g., RSS feeds, searching Google Scholar, etc.), making the context of the journal less visible (e.g., Lozano, Larivière and Gingras, 2012). Journal indicators like the focus factor are of course only relevant indicators as long as the scientific journal remains the preferred medium for scientific communication.
+
+## Acknowledgements
+
+The authors would like to thank David Hammer and Anne Poulsen for their competent assistance with data collection, and the two anonymous referees for their valuable suggestions for improvements.
+
+## About the authors
+
+**Jeppe Nicolaisen** is associate professor at University of Copenhagen. He received his PhD in library and information science from the Royal School of Library and Information Science, Copenhagen, Denmark. He can be contacted at: [Jep.nic@hum.ku.dk](mailto:Jep.nic@hum.ku.dk)  
+**Tove Faber Frandsen** is head of _Videncentret_ at Odense University Hospital, Denmark. She received her PhD in library and information science from the Royal School of Library and Information Science, Copenhagen, Denmark. She can be contacted at: [t.faber@videncentret.sdu.dk](mailto:t.faber@videncentret.sdu.dk)
+
+<h4>References</h4>
+
+*   Ahlgren, P. & Jarneving, B. (2008). Bibliographic coupling, common abstract stems and clustering: a comparison of two document-document similarity approaches in the context of science mapping. _Scientometrics, 76_(2), 273-290.
+*   Bonzi, S. & Snyder, H.W. (1991). Motivations for citation: a comparison of self citation and citations to others. _Scientometrics, 21_, 245-254.
+*   Burton, R.E. & Kebler, R.W. (1960). The half-life of some scientific and technical literatures. _American Documentation, 11_(1), 18-22.
+*   Choi, Y.M., Nakatomi, D. & Wu, J.J. (2014). [Citation classics and top-cited authors of psoriasis in five high-impact general medical journals, 1970-2012](http://www.webcitation.org/6bBqgz8lr). _Dermatology Online Journal, 20_(5). Retrieved from http://escholarship.org/uc/item/69n5m3v6#page-1 (Archived by WebCite® at http://www.webcitation.org/6bBqgz8lr)
+*   Christensen, F.H., Ingwersen, P. & Wormell, I. (1997). Online determination of the journal impact factor and its international properties. _Scientometrics, 40_(3), 529-540.
+*   Crane, D. & Small, H. (1992). American sociology since the seventies: the emerging identity crisis in the discipline. In T.C. Halliday & M. Janowitz (Eds.). _Sociology and its publics: the forms and fates of disciplinary organization_ (pp. 197-234). Chicago, IL: University of Chicago Press.
+*   de Solla Price, D.J. (1963). _Little science, big science_. New York, NY: Columbia University Press.
+*   Earle, P. & Vickery, B. (1969). Subject relations in science/technology literature. _Aslib Proceedings, 21_(6), 237-243.
+*   Fanelli, D. (2010). ["Positive" results increase down the hierarchy of the sciences](http://www.webcitation.org/6bBqIKtHl). _PLOS One, 5_(4). Retrieved from http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0010068 (Archived by WebCite® at http://www.webcitation.org/6bBqIKtHl)
+*   Garfield, E. & Sher, I.H. (1963). New factors in the evaluation of scientific literature through citation indexing. _American Documentation, 14_(3), 195-201.
+*   Gieryn, T.F. (1978). Problem retention and problem change in science. _Sociological Inquiry, 48_(3-4), 96-115.
+*   Glänzel, W. & Czerwon, H.J. (1996). A new methodological approach to bibliographic coupling and its application to the national, regional and institutional level. _Scientometrics, 37_(2), 195-221.
+*   Hagstrom, W.O. (1970). Factors related to the use of different modes of publishing research in four scientific fields. In C.E. Nelsen & D.K. Pollock (Eds.), _Communication among scientists and engineers_ (pp. 85-124). Lexington, MA: Lexington Books.
+*   Jarneving, B. (2007). Bibliographic coupling and its application to research-front and other core documents. _Journal of Informetrics, 1_(4), 287-307.
+*   Kessler, M.M. (1963). Bibliographic coupling between scientific papers. _American Documentation, 14_(1), 10-25.
+*   Lozano, G.A., Lariviére, V. & Gingras, Y. (2012). The weakening relationship between the impact factor and papers’ citations in the digital age. _Journal of the American Society for Information Science and Technology, 63_(11), 2140-2145.
+*   MacRoberts, M.H. & MacRoberts, B.R. (1989). Problems of citation analysis: a critical review. _Journal of the American Society for Information Science, 40_(5), 342-349.
+*   MacRoberts, M.H. & MacRoberts, B.R. (1996). Problems of citation analysis. _Scientometrics, 36_(3), 435-444.
+*   Marshakova, I.V. (1973). A system of document connection based on references. _Scientific and Technical Information Serial of VINITI, 6_(2), 3-8.
+*   Meadows, A.J. (1998). _Communicating research_. San Diego, CA: Academic Press.
+*   Meadows, A.J. (1974). _Communication in science_. London: Butterworth.
+*   Meadows, A.J. & O’Connor, J.G. (1971). Bibliographical statistics as a guide to growth points in science. _Social Studies of Science, 1_(1), 95-99
+*   Nicolaisen, J. & Frandsen, T.F. (2013). [Core journals in library and information science: Measuring the level of specialisation over time](http://www.webcitation.org/6ahaxXJzO). _Information Research, 18_(3), paper S05\. Retrieved from http://InformationR.net/ir/18-3/colis/paperS05.html (Archived by WebCite® at http://www.webcitation.org/6ahaxXJzO)
+*   Nicolaisen, J. & Frandsen, T.F. (2015). Bibliometric evolution: is the Journal of the Association for Information Science and Technology transforming into a specialty journal? _Journal of the Association for Information Science and Technology, 66_(5), 1082-1085.
+*   Nicolaisen, J. & Frandsen, T.F. (2012). Consensus formation is science modeled by aggregated bibliographic coupling. _Journal of Informetrics, 6_(2), 276-284.
+*   Parker, E.B., Paisley, W.J. & Garrett, R. (1967). _Bibliographic citations as unobtrusive measures of scientific communication._ San Francisco, CA: Stanford University.
+*   Rousseau, R. (2002). Journal evaluation: technical and practical issues. _Library Trends, 50_(3), 418-439.
+*   Seglen, P.O. (1992). The skewness of science. _Journal of the American Society for Information Science, 43_(9), 628-638.
+*   Seglen, P.O. (1997). Why the impact factor of journals should not be used for evaluating research. _British Medical Journal, 314_(7079), 498-502.
+*   Small, H. (1973). Co-citation in the scientific literature: a new measurement of the relationship between two documents. _Journal of the American Society of Information Science, 24_(4), 265-269.
+*   Small, H. & Griffith, B.C. (1974). The structure of scientific literatures 1: identifying and graphing specialties. _Science Studies, 4_(1), 17-40.
+*   Small, H.G. (1976). Structural dynamics of scientific literature. _International Classification, 3_(2), 67-74.
+*   Smelser, N.J. (Ed.). (1988). _Handbook of sociology_. Newbury Park, CA: Sage Publications.
+*   Wager, E. (2005). _Getting research published: an A-Z of publication strategy_. Oxford: Radcliffe.
+*   White, H.D. & Griffith, B.C. (1981). Author cocitation: a literature measure of intellectual structure. _Journal of the American Society for Information Science, 32_(3), 163-171.
+*   White, H.D. & McCain, K.W. (1998). Visualizing a discipline: an author co-citation analysis of information science, 1972-1995\. _Journal of the American Society for Information Science, 49_(4), 327-355.
+*   Whitley, R. (1974). Cognitive and social institutionalisation of scientific specialties and research areas. In R. Whitley (Ed.), _Social processes of scientific development_ (pp. 69-95). London: Routledge and Kegan Paul.
+*   Zhao, D.Z. & Strotmann, A. (2014). The knowledge base and research front of information science 2006-2010: an author cocitation and bibliographic coupling analysis. _Journal of the Association for Information Science and Technology, 65_(5), 995-1006.
+*   Ziman, J.M. (2000). _Real science: what it is, and what it means_. Cambridge: Cambridge University Press.
+*   Zuckerman, H. (1978). Theory choice and problem choice in science. _Sociological Inquiry, 48_(1), 65-95.
+
+</fieldset>
+
+</form>
+
+</section>
+
+<section>  
+
+* * *
+
+## Appendix
+
+### American Journal of Ophthalmology
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1991</td>
+
+<td style="text-align: center;">4361</td>
+
+<td style="text-align: center;">667</td>
+
+<td style="text-align: center;">443</td>
+
+<td style="text-align: center;">0.102</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">4122</td>
+
+<td style="text-align: center;">622</td>
+
+<td style="text-align: center;">626</td>
+
+<td style="text-align: center;">0.152</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">4511</td>
+
+<td style="text-align: center;">669</td>
+
+<td style="text-align: center;">582</td>
+
+<td style="text-align: center;">0.129</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">4482</td>
+
+<td style="text-align: center;">619</td>
+
+<td style="text-align: center;">572</td>
+
+<td style="text-align: center;">0.128</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">4386</td>
+
+<td style="text-align: center;">545</td>
+
+<td style="text-align: center;">621</td>
+
+<td style="text-align: center;">0.142</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">4186</td>
+
+<td style="text-align: center;">558</td>
+
+<td style="text-align: center;">653</td>
+
+<td style="text-align: center;">0.156</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">4574</td>
+
+<td style="text-align: center;">562</td>
+
+<td style="text-align: center;">581</td>
+
+<td style="text-align: center;">0.127</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">4480</td>
+
+<td style="text-align: center;">613</td>
+
+<td style="text-align: center;">700</td>
+
+<td style="text-align: center;">0.156</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">4801</td>
+
+<td style="text-align: center;">575</td>
+
+<td style="text-align: center;">610</td>
+
+<td style="text-align: center;">0.127</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">5268</td>
+
+<td style="text-align: center;">717</td>
+
+<td style="text-align: center;">849</td>
+
+<td style="text-align: center;">0.161</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">5380</td>
+
+<td style="text-align: center;">744</td>
+
+<td style="text-align: center;">957</td>
+
+<td style="text-align: center;">0.178</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">5592</td>
+
+<td style="text-align: center;">761</td>
+
+<td style="text-align: center;">929</td>
+
+<td style="text-align: center;">0.166</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">6748</td>
+
+<td style="text-align: center;">924</td>
+
+<td style="text-align: center;">1244</td>
+
+<td style="text-align: center;">0.184</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">7921</td>
+
+<td style="text-align: center;">1019</td>
+
+<td style="text-align: center;">1518</td>
+
+<td style="text-align: center;">0.192</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">7062</td>
+
+<td style="text-align: center;">973</td>
+
+<td style="text-align: center;">1621</td>
+
+<td style="text-align: center;">0.230</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">7593</td>
+
+<td style="text-align: center;">980</td>
+
+<td style="text-align: center;">1503</td>
+
+<td style="text-align: center;">0.198</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">7041</td>
+
+<td style="text-align: center;">883</td>
+
+<td style="text-align: center;">1427</td>
+
+<td style="text-align: center;">0.203</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">7551</td>
+
+<td style="text-align: center;">925</td>
+
+<td style="text-align: center;">1525</td>
+
+<td style="text-align: center;">0.202</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">7276</td>
+
+<td style="text-align: center;">963</td>
+
+<td style="text-align: center;">1660</td>
+
+<td style="text-align: center;">0.228</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">6697</td>
+
+<td style="text-align: center;">852</td>
+
+<td style="text-align: center;">1412</td>
+
+<td style="text-align: center;">0.211</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">8070</td>
+
+<td style="text-align: center;">1028</td>
+
+<td style="text-align: center;">1478</td>
+
+<td style="text-align: center;">0.183</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">8477</td>
+
+<td style="text-align: center;">1069</td>
+
+<td style="text-align: center;">1822</td>
+
+<td style="text-align: center;">0.215</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Annals of Internal Medicine
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1991</td>
+
+<td style="text-align: center;">9382</td>
+
+<td style="text-align: center;">768</td>
+
+<td style="text-align: center;">991</td>
+
+<td style="text-align: center;">0.106</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">10945</td>
+
+<td style="text-align: center;">839</td>
+
+<td style="text-align: center;">1031</td>
+
+<td style="text-align: center;">0.094</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">11877</td>
+
+<td style="text-align: center;">833</td>
+
+<td style="text-align: center;">960</td>
+
+<td style="text-align: center;">0.081</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">11735</td>
+
+<td style="text-align: center;">830</td>
+
+<td style="text-align: center;">964</td>
+
+<td style="text-align: center;">0.082</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">10396</td>
+
+<td style="text-align: center;">733</td>
+
+<td style="text-align: center;">1062</td>
+
+<td style="text-align: center;">0.102</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">9907</td>
+
+<td style="text-align: center;">725</td>
+
+<td style="text-align: center;">861</td>
+
+<td style="text-align: center;">0.087</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">10055</td>
+
+<td style="text-align: center;">745</td>
+
+<td style="text-align: center;">902</td>
+
+<td style="text-align: center;">0.090</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">9518</td>
+
+<td style="text-align: center;">707</td>
+
+<td style="text-align: center;">961</td>
+
+<td style="text-align: center;">0.101</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">9189</td>
+
+<td style="text-align: center;">644</td>
+
+<td style="text-align: center;">838</td>
+
+<td style="text-align: center;">0.091</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">8310</td>
+
+<td style="text-align: center;">575</td>
+
+<td style="text-align: center;">755</td>
+
+<td style="text-align: center;">0.091</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">10333</td>
+
+<td style="text-align: center;">612</td>
+
+<td style="text-align: center;">914</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">9533</td>
+
+<td style="text-align: center;">553</td>
+
+<td style="text-align: center;">807</td>
+
+<td style="text-align: center;">0.085</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">10742</td>
+
+<td style="text-align: center;">584</td>
+
+<td style="text-align: center;">958</td>
+
+<td style="text-align: center;">0.089</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">9036</td>
+
+<td style="text-align: center;">601</td>
+
+<td style="text-align: center;">1142</td>
+
+<td style="text-align: center;">0.126</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">9998</td>
+
+<td style="text-align: center;">586</td>
+
+<td style="text-align: center;">918</td>
+
+<td style="text-align: center;">0.092</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">7984</td>
+
+<td style="text-align: center;">426</td>
+
+<td style="text-align: center;">737</td>
+
+<td style="text-align: center;">0.092</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">8310</td>
+
+<td style="text-align: center;">478</td>
+
+<td style="text-align: center;">612</td>
+
+<td style="text-align: center;">0.074</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">8952</td>
+
+<td style="text-align: center;">516</td>
+
+<td style="text-align: center;">845</td>
+
+<td style="text-align: center;">0.094</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">8625</td>
+
+<td style="text-align: center;">464</td>
+
+<td style="text-align: center;">794</td>
+
+<td style="text-align: center;">0.092</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">8634</td>
+
+<td style="text-align: center;">480</td>
+
+<td style="text-align: center;">628</td>
+
+<td style="text-align: center;">0.073</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">7892</td>
+
+<td style="text-align: center;">444</td>
+
+<td style="text-align: center;">641</td>
+
+<td style="text-align: center;">0.081</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">9579</td>
+
+<td style="text-align: center;">502</td>
+
+<td style="text-align: center;">842</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Archives of Ophthalmology
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">5304</td>
+
+<td style="text-align: center;">836</td>
+
+<td style="text-align: center;">766</td>
+
+<td style="text-align: center;">0.144</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">4911</td>
+
+<td style="text-align: center;">799</td>
+
+<td style="text-align: center;">743</td>
+
+<td style="text-align: center;">0.151</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">4581</td>
+
+<td style="text-align: center;">728</td>
+
+<td style="text-align: center;">743</td>
+
+<td style="text-align: center;">0.162</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">4814</td>
+
+<td style="text-align: center;">802</td>
+
+<td style="text-align: center;">765</td>
+
+<td style="text-align: center;">0.159</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">5281</td>
+
+<td style="text-align: center;">730</td>
+
+<td style="text-align: center;">810</td>
+
+<td style="text-align: center;">0.153</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">5265</td>
+
+<td style="text-align: center;">803</td>
+
+<td style="text-align: center;">743</td>
+
+<td style="text-align: center;">0.141</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">5226</td>
+
+<td style="text-align: center;">719</td>
+
+<td style="text-align: center;">708</td>
+
+<td style="text-align: center;">0.135</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">5025</td>
+
+<td style="text-align: center;">663</td>
+
+<td style="text-align: center;">654</td>
+
+<td style="text-align: center;">0.130</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">5074</td>
+
+<td style="text-align: center;">702</td>
+
+<td style="text-align: center;">748</td>
+
+<td style="text-align: center;">0.147</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">5688</td>
+
+<td style="text-align: center;">798</td>
+
+<td style="text-align: center;">837</td>
+
+<td style="text-align: center;">0.147</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">5561</td>
+
+<td style="text-align: center;">718</td>
+
+<td style="text-align: center;">832</td>
+
+<td style="text-align: center;">0.150</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">6218</td>
+
+<td style="text-align: center;">813</td>
+
+<td style="text-align: center;">944</td>
+
+<td style="text-align: center;">0.152</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">6498</td>
+
+<td style="text-align: center;">885</td>
+
+<td style="text-align: center;">1046</td>
+
+<td style="text-align: center;">0.161</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">5716</td>
+
+<td style="text-align: center;">794</td>
+
+<td style="text-align: center;">983</td>
+
+<td style="text-align: center;">0.172</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">6024</td>
+
+<td style="text-align: center;">721</td>
+
+<td style="text-align: center;">895</td>
+
+<td style="text-align: center;">0.149</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">6154</td>
+
+<td style="text-align: center;">662</td>
+
+<td style="text-align: center;">1023</td>
+
+<td style="text-align: center;">0.166</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">6806</td>
+
+<td style="text-align: center;">715</td>
+
+<td style="text-align: center;">1015</td>
+
+<td style="text-align: center;">0.149</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">6736</td>
+
+<td style="text-align: center;">759</td>
+
+<td style="text-align: center;">1111</td>
+
+<td style="text-align: center;">0.165</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">6467</td>
+
+<td style="text-align: center;">733</td>
+
+<td style="text-align: center;">950</td>
+
+<td style="text-align: center;">0.147</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">5914</td>
+
+<td style="text-align: center;">709</td>
+
+<td style="text-align: center;">844</td>
+
+<td style="text-align: center;">0.143</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">5662</td>
+
+<td style="text-align: center;">585</td>
+
+<td style="text-align: center;">755</td>
+
+<td style="text-align: center;">0.133</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### British Journal of Ophthalmology
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">4084</td>
+
+<td style="text-align: center;">346</td>
+
+<td style="text-align: center;">415</td>
+
+<td style="text-align: center;">0.102</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">4315</td>
+
+<td style="text-align: center;">330</td>
+
+<td style="text-align: center;">431</td>
+
+<td style="text-align: center;">0.100</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">4546</td>
+
+<td style="text-align: center;">348</td>
+
+<td style="text-align: center;">464</td>
+
+<td style="text-align: center;">0.102</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">5687</td>
+
+<td style="text-align: center;">420</td>
+
+<td style="text-align: center;">693</td>
+
+<td style="text-align: center;">0.122</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">5852</td>
+
+<td style="text-align: center;">379</td>
+
+<td style="text-align: center;">647</td>
+
+<td style="text-align: center;">0.111</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">6255</td>
+
+<td style="text-align: center;">432</td>
+
+<td style="text-align: center;">653</td>
+
+<td style="text-align: center;">0.104</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">7168</td>
+
+<td style="text-align: center;">498</td>
+
+<td style="text-align: center;">1020</td>
+
+<td style="text-align: center;">0.142</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">6613</td>
+
+<td style="text-align: center;">432</td>
+
+<td style="text-align: center;">1098</td>
+
+<td style="text-align: center;">0.166</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">7283</td>
+
+<td style="text-align: center;">524</td>
+
+<td style="text-align: center;">1007</td>
+
+<td style="text-align: center;">0.138</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">7861</td>
+
+<td style="text-align: center;">540</td>
+
+<td style="text-align: center;">1094</td>
+
+<td style="text-align: center;">0.139</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">7696</td>
+
+<td style="text-align: center;">572</td>
+
+<td style="text-align: center;">1208</td>
+
+<td style="text-align: center;">0.157</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">8968</td>
+
+<td style="text-align: center;">680</td>
+
+<td style="text-align: center;">1311</td>
+
+<td style="text-align: center;">0.146</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">8733</td>
+
+<td style="text-align: center;">655</td>
+
+<td style="text-align: center;">1419</td>
+
+<td style="text-align: center;">0.162</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">8760</td>
+
+<td style="text-align: center;">636</td>
+
+<td style="text-align: center;">1382</td>
+
+<td style="text-align: center;">0.158</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">8277</td>
+
+<td style="text-align: center;">658</td>
+
+<td style="text-align: center;">1407</td>
+
+<td style="text-align: center;">0.170</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">8244</td>
+
+<td style="text-align: center;">675</td>
+
+<td style="text-align: center;">1365</td>
+
+<td style="text-align: center;">0.166</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">8646</td>
+
+<td style="text-align: center;">630</td>
+
+<td style="text-align: center;">1485</td>
+
+<td style="text-align: center;">0.172</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">7873</td>
+
+<td style="text-align: center;">583</td>
+
+<td style="text-align: center;">1415</td>
+
+<td style="text-align: center;">0.180</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">8394</td>
+
+<td style="text-align: center;">621</td>
+
+<td style="text-align: center;">1244</td>
+
+<td style="text-align: center;">0.148</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">9594</td>
+
+<td style="text-align: center;">729</td>
+
+<td style="text-align: center;">1367</td>
+
+<td style="text-align: center;">0.142</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">7133</td>
+
+<td style="text-align: center;">540</td>
+
+<td style="text-align: center;">1015</td>
+
+<td style="text-align: center;">0.142</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### British Medical Journal
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">14323</td>
+
+<td style="text-align: center;">2900</td>
+
+<td style="text-align: center;">1718</td>
+
+<td style="text-align: center;">0.120</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">11621</td>
+
+<td style="text-align: center;">2473</td>
+
+<td style="text-align: center;">1238</td>
+
+<td style="text-align: center;">0.107</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">15556</td>
+
+<td style="text-align: center;">3501</td>
+
+<td style="text-align: center;">1572</td>
+
+<td style="text-align: center;">0.101</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">13888</td>
+
+<td style="text-align: center;">3094</td>
+
+<td style="text-align: center;">1759</td>
+
+<td style="text-align: center;">0.127</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">14636</td>
+
+<td style="text-align: center;">2972</td>
+
+<td style="text-align: center;">1661</td>
+
+<td style="text-align: center;">0.113</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">15562</td>
+
+<td style="text-align: center;">2942</td>
+
+<td style="text-align: center;">1828</td>
+
+<td style="text-align: center;">0.117</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">15719</td>
+
+<td style="text-align: center;">2801</td>
+
+<td style="text-align: center;">1973</td>
+
+<td style="text-align: center;">0.126</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">14533</td>
+
+<td style="text-align: center;">2465</td>
+
+<td style="text-align: center;">1722</td>
+
+<td style="text-align: center;">0.118</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">13650</td>
+
+<td style="text-align: center;">2331</td>
+
+<td style="text-align: center;">1536</td>
+
+<td style="text-align: center;">0.113</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">12999</td>
+
+<td style="text-align: center;">2344</td>
+
+<td style="text-align: center;">1487</td>
+
+<td style="text-align: center;">0.114</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">13440</td>
+
+<td style="text-align: center;">1985</td>
+
+<td style="text-align: center;">1184</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">11495</td>
+
+<td style="text-align: center;">1729</td>
+
+<td style="text-align: center;">1121</td>
+
+<td style="text-align: center;">0.098</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">12710</td>
+
+<td style="text-align: center;">1624</td>
+
+<td style="text-align: center;">1001</td>
+
+<td style="text-align: center;">0.079</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">11117</td>
+
+<td style="text-align: center;">1511</td>
+
+<td style="text-align: center;">922</td>
+
+<td style="text-align: center;">0.083</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">9424</td>
+
+<td style="text-align: center;">1186</td>
+
+<td style="text-align: center;">549</td>
+
+<td style="text-align: center;">0.058</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">7127</td>
+
+<td style="text-align: center;">803</td>
+
+<td style="text-align: center;">364</td>
+
+<td style="text-align: center;">0.051</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">9546</td>
+
+<td style="text-align: center;">1026</td>
+
+<td style="text-align: center;">450</td>
+
+<td style="text-align: center;">0.047</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">12912</td>
+
+<td style="text-align: center;">1426</td>
+
+<td style="text-align: center;">885</td>
+
+<td style="text-align: center;">0.069</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">13139</td>
+
+<td style="text-align: center;">1460</td>
+
+<td style="text-align: center;">1189</td>
+
+<td style="text-align: center;">0.090</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">11880</td>
+
+<td style="text-align: center;">1339</td>
+
+<td style="text-align: center;">1004</td>
+
+<td style="text-align: center;">0.085</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">14456</td>
+
+<td style="text-align: center;">1600</td>
+
+<td style="text-align: center;">1136</td>
+
+<td style="text-align: center;">0.079</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Experimental Eye Research
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">6773</td>
+
+<td style="text-align: center;">854</td>
+
+<td style="text-align: center;">1514</td>
+
+<td style="text-align: center;">0.224</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">5561</td>
+
+<td style="text-align: center;">571</td>
+
+<td style="text-align: center;">1083</td>
+
+<td style="text-align: center;">0.195</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">5741</td>
+
+<td style="text-align: center;">605</td>
+
+<td style="text-align: center;">972</td>
+
+<td style="text-align: center;">0.169</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">5721</td>
+
+<td style="text-align: center;">548</td>
+
+<td style="text-align: center;">969</td>
+
+<td style="text-align: center;">0.169</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">5650</td>
+
+<td style="text-align: center;">542</td>
+
+<td style="text-align: center;">873</td>
+
+<td style="text-align: center;">0.155</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">7565</td>
+
+<td style="text-align: center;">658</td>
+
+<td style="text-align: center;">1246</td>
+
+<td style="text-align: center;">0.165</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">5896</td>
+
+<td style="text-align: center;">561</td>
+
+<td style="text-align: center;">1048</td>
+
+<td style="text-align: center;">0.178</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">5844</td>
+
+<td style="text-align: center;">478</td>
+
+<td style="text-align: center;">805</td>
+
+<td style="text-align: center;">0.138</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">5569</td>
+
+<td style="text-align: center;">424</td>
+
+<td style="text-align: center;">833</td>
+
+<td style="text-align: center;">0.150</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">6392</td>
+
+<td style="text-align: center;">457</td>
+
+<td style="text-align: center;">790</td>
+
+<td style="text-align: center;">0.124</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">6188</td>
+
+<td style="text-align: center;">417</td>
+
+<td style="text-align: center;">880</td>
+
+<td style="text-align: center;">0.142</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">6660</td>
+
+<td style="text-align: center;">512</td>
+
+<td style="text-align: center;">956</td>
+
+<td style="text-align: center;">0.144</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">9746</td>
+
+<td style="text-align: center;">751</td>
+
+<td style="text-align: center;">1518</td>
+
+<td style="text-align: center;">0.156</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">8022</td>
+
+<td style="text-align: center;">490</td>
+
+<td style="text-align: center;">1328</td>
+
+<td style="text-align: center;">0.166</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">12497</td>
+
+<td style="text-align: center;">669</td>
+
+<td style="text-align: center;">1762</td>
+
+<td style="text-align: center;">0.141</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">9490</td>
+
+<td style="text-align: center;">551</td>
+
+<td style="text-align: center;">1818</td>
+
+<td style="text-align: center;">0.192</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">8245</td>
+
+<td style="text-align: center;">523</td>
+
+<td style="text-align: center;">1353</td>
+
+<td style="text-align: center;">0.164</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">13675</td>
+
+<td style="text-align: center;">941</td>
+
+<td style="text-align: center;">2319</td>
+
+<td style="text-align: center;">0.170</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">9344</td>
+
+<td style="text-align: center;">555</td>
+
+<td style="text-align: center;">1881</td>
+
+<td style="text-align: center;">0.201</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">8770</td>
+
+<td style="text-align: center;">584</td>
+
+<td style="text-align: center;">1712</td>
+
+<td style="text-align: center;">0.195</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">7858</td>
+
+<td style="text-align: center;">509</td>
+
+<td style="text-align: center;">998</td>
+
+<td style="text-align: center;">0.127</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Investigative Ophthalmology
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">10035</td>
+
+<td style="text-align: center;">1397</td>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">0.200</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">10181</td>
+
+<td style="text-align: center;">1353</td>
+
+<td style="text-align: center;">2134</td>
+
+<td style="text-align: center;">0.210</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">12631</td>
+
+<td style="text-align: center;">1674</td>
+
+<td style="text-align: center;">2582</td>
+
+<td style="text-align: center;">0.204</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">10389</td>
+
+<td style="text-align: center;">1460</td>
+
+<td style="text-align: center;">2234</td>
+
+<td style="text-align: center;">0.215</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">10885</td>
+
+<td style="text-align: center;">1591</td>
+
+<td style="text-align: center;">2227</td>
+
+<td style="text-align: center;">0.205</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">11367</td>
+
+<td style="text-align: center;">1426</td>
+
+<td style="text-align: center;">2251</td>
+
+<td style="text-align: center;">0.198</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">12094</td>
+
+<td style="text-align: center;">1605</td>
+
+<td style="text-align: center;">2450</td>
+
+<td style="text-align: center;">0.203</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">15136</td>
+
+<td style="text-align: center;">1959</td>
+
+<td style="text-align: center;">3171</td>
+
+<td style="text-align: center;">0.210</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">20404</td>
+
+<td style="text-align: center;">2647</td>
+
+<td style="text-align: center;">4947</td>
+
+<td style="text-align: center;">0.242</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">18220</td>
+
+<td style="text-align: center;">2526</td>
+
+<td style="text-align: center;">4888</td>
+
+<td style="text-align: center;">0.268</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">20017</td>
+
+<td style="text-align: center;">2705</td>
+
+<td style="text-align: center;">5106</td>
+
+<td style="text-align: center;">0.255</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">28026</td>
+
+<td style="text-align: center;">3693</td>
+
+<td style="text-align: center;">6887</td>
+
+<td style="text-align: center;">0.246</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">25145</td>
+
+<td style="text-align: center;">3359</td>
+
+<td style="text-align: center;">7910</td>
+
+<td style="text-align: center;">0.315</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">26284</td>
+
+<td style="text-align: center;">3276</td>
+
+<td style="text-align: center;">7250</td>
+
+<td style="text-align: center;">0.276</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">29810</td>
+
+<td style="text-align: center;">3914</td>
+
+<td style="text-align: center;">8527</td>
+
+<td style="text-align: center;">0.286</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">30342</td>
+
+<td style="text-align: center;">4062</td>
+
+<td style="text-align: center;">9202</td>
+
+<td style="text-align: center;">0.303</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">29703</td>
+
+<td style="text-align: center;">3958</td>
+
+<td style="text-align: center;">8974</td>
+
+<td style="text-align: center;">0.302</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">32114</td>
+
+<td style="text-align: center;">4383</td>
+
+<td style="text-align: center;">9320</td>
+
+<td style="text-align: center;">0.290</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">38252</td>
+
+<td style="text-align: center;">5091</td>
+
+<td style="text-align: center;">10979</td>
+
+<td style="text-align: center;">0.287</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">52556</td>
+
+<td style="text-align: center;">7582</td>
+
+<td style="text-align: center;">16855</td>
+
+<td style="text-align: center;">0.321</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">42132</td>
+
+<td style="text-align: center;">6379</td>
+
+<td style="text-align: center;">15560</td>
+
+<td style="text-align: center;">0.369</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Journal of Clinical Oncology
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">8251</td>
+
+<td style="text-align: center;">947</td>
+
+<td style="text-align: center;">2079</td>
+
+<td style="text-align: center;">0.252</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">10615</td>
+
+<td style="text-align: center;">1343</td>
+
+<td style="text-align: center;">2606</td>
+
+<td style="text-align: center;">0.246</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">11970</td>
+
+<td style="text-align: center;">1528</td>
+
+<td style="text-align: center;">3080</td>
+
+<td style="text-align: center;">0.257</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">13082</td>
+
+<td style="text-align: center;">1639</td>
+
+<td style="text-align: center;">3479</td>
+
+<td style="text-align: center;">0.266</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">13508</td>
+
+<td style="text-align: center;">1831</td>
+
+<td style="text-align: center;">3653</td>
+
+<td style="text-align: center;">0.270</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">14480</td>
+
+<td style="text-align: center;">1973</td>
+
+<td style="text-align: center;">3868</td>
+
+<td style="text-align: center;">0.267</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">18144</td>
+
+<td style="text-align: center;">2527</td>
+
+<td style="text-align: center;">4549</td>
+
+<td style="text-align: center;">0.251</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">17824</td>
+
+<td style="text-align: center;">2326</td>
+
+<td style="text-align: center;">4698</td>
+
+<td style="text-align: center;">0.264</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">18828</td>
+
+<td style="text-align: center;">2538</td>
+
+<td style="text-align: center;">4914</td>
+
+<td style="text-align: center;">0.261</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">18888</td>
+
+<td style="text-align: center;">2544</td>
+
+<td style="text-align: center;">4685</td>
+
+<td style="text-align: center;">0.248</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">20896</td>
+
+<td style="text-align: center;">2585</td>
+
+<td style="text-align: center;">5149</td>
+
+<td style="text-align: center;">0.246</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">21816</td>
+
+<td style="text-align: center;">2850</td>
+
+<td style="text-align: center;">5509</td>
+
+<td style="text-align: center;">0.253</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">21055</td>
+
+<td style="text-align: center;">2762</td>
+
+<td style="text-align: center;">5344</td>
+
+<td style="text-align: center;">0.254</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">42562</td>
+
+<td style="text-align: center;">5466</td>
+
+<td style="text-align: center;">9488</td>
+
+<td style="text-align: center;">0.223</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">29376</td>
+
+<td style="text-align: center;">4265</td>
+
+<td style="text-align: center;">8870</td>
+
+<td style="text-align: center;">0.302</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">29974</td>
+
+<td style="text-align: center;">4815</td>
+
+<td style="text-align: center;">7957</td>
+
+<td style="text-align: center;">0.265</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">28331</td>
+
+<td style="text-align: center;">4533</td>
+
+<td style="text-align: center;">7554</td>
+
+<td style="text-align: center;">0.267</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">30885</td>
+
+<td style="text-align: center;">5252</td>
+
+<td style="text-align: center;">8119</td>
+
+<td style="text-align: center;">0.263</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">29775</td>
+
+<td style="text-align: center;">5189</td>
+
+<td style="text-align: center;">8590</td>
+
+<td style="text-align: center;">0.288</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">25727</td>
+
+<td style="text-align: center;">4226</td>
+
+<td style="text-align: center;">6870</td>
+
+<td style="text-align: center;">0.267</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">23360</td>
+
+<td style="text-align: center;">3977</td>
+
+<td style="text-align: center;">5617</td>
+
+<td style="text-align: center;">0.240</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Journal of the National Cancer Institute
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">5976</td>
+
+<td style="text-align: center;">386</td>
+
+<td style="text-align: center;">866</td>
+
+<td style="text-align: center;">0.145</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">7679</td>
+
+<td style="text-align: center;">466</td>
+
+<td style="text-align: center;">1161</td>
+
+<td style="text-align: center;">0.151</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">6945</td>
+
+<td style="text-align: center;">541</td>
+
+<td style="text-align: center;">1172</td>
+
+<td style="text-align: center;">0.169</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">6483</td>
+
+<td style="text-align: center;">476</td>
+
+<td style="text-align: center;">1007</td>
+
+<td style="text-align: center;">0.155</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">6986</td>
+
+<td style="text-align: center;">438</td>
+
+<td style="text-align: center;">1065</td>
+
+<td style="text-align: center;">0.152</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">7781</td>
+
+<td style="text-align: center;">617</td>
+
+<td style="text-align: center;">1026</td>
+
+<td style="text-align: center;">0.132</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">7451</td>
+
+<td style="text-align: center;">436</td>
+
+<td style="text-align: center;">1021</td>
+
+<td style="text-align: center;">0.137</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">9424</td>
+
+<td style="text-align: center;">661</td>
+
+<td style="text-align: center;">1313</td>
+
+<td style="text-align: center;">0.139</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">8730</td>
+
+<td style="text-align: center;">578</td>
+
+<td style="text-align: center;">1439</td>
+
+<td style="text-align: center;">0.165</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">7888</td>
+
+<td style="text-align: center;">580</td>
+
+<td style="text-align: center;">1020</td>
+
+<td style="text-align: center;">0.129</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">7558</td>
+
+<td style="text-align: center;">502</td>
+
+<td style="text-align: center;">842</td>
+
+<td style="text-align: center;">0.111</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">7678</td>
+
+<td style="text-align: center;">529</td>
+
+<td style="text-align: center;">877</td>
+
+<td style="text-align: center;">0.114</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">7459</td>
+
+<td style="text-align: center;">555</td>
+
+<td style="text-align: center;">1054</td>
+
+<td style="text-align: center;">0.141</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">7069</td>
+
+<td style="text-align: center;">527</td>
+
+<td style="text-align: center;">903</td>
+
+<td style="text-align: center;">0.128</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">7171</td>
+
+<td style="text-align: center;">396</td>
+
+<td style="text-align: center;">879</td>
+
+<td style="text-align: center;">0.123</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">6239</td>
+
+<td style="text-align: center;">464</td>
+
+<td style="text-align: center;">786</td>
+
+<td style="text-align: center;">0.126</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">6346</td>
+
+<td style="text-align: center;">400</td>
+
+<td style="text-align: center;">636</td>
+
+<td style="text-align: center;">0.100</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">5995</td>
+
+<td style="text-align: center;">359</td>
+
+<td style="text-align: center;">542</td>
+
+<td style="text-align: center;">0.090</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">6287</td>
+
+<td style="text-align: center;">372</td>
+
+<td style="text-align: center;">672</td>
+
+<td style="text-align: center;">0.107</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">6520</td>
+
+<td style="text-align: center;">310</td>
+
+<td style="text-align: center;">692</td>
+
+<td style="text-align: center;">0.106</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">4741</td>
+
+<td style="text-align: center;">228</td>
+
+<td style="text-align: center;">462</td>
+
+<td style="text-align: center;">0.097</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Lancet
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">17735</td>
+
+<td style="text-align: center;">2614</td>
+
+<td style="text-align: center;">1673</td>
+
+<td style="text-align: center;">0.094</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">16980</td>
+
+<td style="text-align: center;">2437</td>
+
+<td style="text-align: center;">1750</td>
+
+<td style="text-align: center;">0.103</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">16924</td>
+
+<td style="text-align: center;">2392</td>
+
+<td style="text-align: center;">1525</td>
+
+<td style="text-align: center;">0.090</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">15848</td>
+
+<td style="text-align: center;">2110</td>
+
+<td style="text-align: center;">1365</td>
+
+<td style="text-align: center;">0.086</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">16238</td>
+
+<td style="text-align: center;">2558</td>
+
+<td style="text-align: center;">1238</td>
+
+<td style="text-align: center;">0.076</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">19403</td>
+
+<td style="text-align: center;">2549</td>
+
+<td style="text-align: center;">1565</td>
+
+<td style="text-align: center;">0.081</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">19294</td>
+
+<td style="text-align: center;">2593</td>
+
+<td style="text-align: center;">1646</td>
+
+<td style="text-align: center;">0.085</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">20352</td>
+
+<td style="text-align: center;">2639</td>
+
+<td style="text-align: center;">1797</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">17515</td>
+
+<td style="text-align: center;">2210</td>
+
+<td style="text-align: center;">1612</td>
+
+<td style="text-align: center;">0.092</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">17046</td>
+
+<td style="text-align: center;">2212</td>
+
+<td style="text-align: center;">1482</td>
+
+<td style="text-align: center;">0.087</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">19134</td>
+
+<td style="text-align: center;">2149</td>
+
+<td style="text-align: center;">1623</td>
+
+<td style="text-align: center;">0.085</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">22174</td>
+
+<td style="text-align: center;">2111</td>
+
+<td style="text-align: center;">1583</td>
+
+<td style="text-align: center;">0.071</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">21153</td>
+
+<td style="text-align: center;">1785</td>
+
+<td style="text-align: center;">1422</td>
+
+<td style="text-align: center;">0.067</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">20026</td>
+
+<td style="text-align: center;">1651</td>
+
+<td style="text-align: center;">1422</td>
+
+<td style="text-align: center;">0.071</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">20725</td>
+
+<td style="text-align: center;">1730</td>
+
+<td style="text-align: center;">1110</td>
+
+<td style="text-align: center;">0.054</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">23483</td>
+
+<td style="text-align: center;">1852</td>
+
+<td style="text-align: center;">1537</td>
+
+<td style="text-align: center;">0.065</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">19404</td>
+
+<td style="text-align: center;">1719</td>
+
+<td style="text-align: center;">1630</td>
+
+<td style="text-align: center;">0.084</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">19173</td>
+
+<td style="text-align: center;">1497</td>
+
+<td style="text-align: center;">1344</td>
+
+<td style="text-align: center;">0.070</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">18130</td>
+
+<td style="text-align: center;">1689</td>
+
+<td style="text-align: center;">1476</td>
+
+<td style="text-align: center;">0.081</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">18866</td>
+
+<td style="text-align: center;">1783</td>
+
+<td style="text-align: center;">1449</td>
+
+<td style="text-align: center;">0.077</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">22419</td>
+
+<td style="text-align: center;">1793</td>
+
+<td style="text-align: center;">1661</td>
+
+<td style="text-align: center;">0.074</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Nature
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">30289</td>
+
+<td style="text-align: center;">4110</td>
+
+<td style="text-align: center;">5783</td>
+
+<td style="text-align: center;">0.191</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">29756</td>
+
+<td style="text-align: center;">3603</td>
+
+<td style="text-align: center;">5510</td>
+
+<td style="text-align: center;">0.185</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">27149</td>
+
+<td style="text-align: center;">3414</td>
+
+<td style="text-align: center;">5046</td>
+
+<td style="text-align: center;">0.186</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">28094</td>
+
+<td style="text-align: center;">3379</td>
+
+<td style="text-align: center;">4429</td>
+
+<td style="text-align: center;">0.158</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">27319</td>
+
+<td style="text-align: center;">3148</td>
+
+<td style="text-align: center;">4198</td>
+
+<td style="text-align: center;">0.154</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">27920</td>
+
+<td style="text-align: center;">3168</td>
+
+<td style="text-align: center;">4408</td>
+
+<td style="text-align: center;">0.158</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">28768</td>
+
+<td style="text-align: center;">3112</td>
+
+<td style="text-align: center;">4382</td>
+
+<td style="text-align: center;">0.152</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">27159</td>
+
+<td style="text-align: center;">2855</td>
+
+<td style="text-align: center;">3857</td>
+
+<td style="text-align: center;">0.142</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">32966</td>
+
+<td style="text-align: center;">3321</td>
+
+<td style="text-align: center;">4328</td>
+
+<td style="text-align: center;">0.131</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">32088</td>
+
+<td style="text-align: center;">3089</td>
+
+<td style="text-align: center;">4473</td>
+
+<td style="text-align: center;">0.139</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">30279</td>
+
+<td style="text-align: center;">3019</td>
+
+<td style="text-align: center;">4160</td>
+
+<td style="text-align: center;">0.137</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">28049</td>
+
+<td style="text-align: center;">2838</td>
+
+<td style="text-align: center;">3686</td>
+
+<td style="text-align: center;">0.131</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">28292</td>
+
+<td style="text-align: center;">2917</td>
+
+<td style="text-align: center;">3652</td>
+
+<td style="text-align: center;">0.129</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">31893</td>
+
+<td style="text-align: center;">3155</td>
+
+<td style="text-align: center;">3916</td>
+
+<td style="text-align: center;">0.123</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">31105</td>
+
+<td style="text-align: center;">3355</td>
+
+<td style="text-align: center;">4321</td>
+
+<td style="text-align: center;">0.139</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">30179</td>
+
+<td style="text-align: center;">2990</td>
+
+<td style="text-align: center;">4047</td>
+
+<td style="text-align: center;">0.134</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">31998</td>
+
+<td style="text-align: center;">3159</td>
+
+<td style="text-align: center;">4391</td>
+
+<td style="text-align: center;">0.137</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">32416</td>
+
+<td style="text-align: center;">3309</td>
+
+<td style="text-align: center;">5001</td>
+
+<td style="text-align: center;">0.154</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">32133</td>
+
+<td style="text-align: center;">3124</td>
+
+<td style="text-align: center;">4940</td>
+
+<td style="text-align: center;">0.154</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">32069</td>
+
+<td style="text-align: center;">3096</td>
+
+<td style="text-align: center;">4971</td>
+
+<td style="text-align: center;">0.155</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">32787</td>
+
+<td style="text-align: center;">3194</td>
+
+<td style="text-align: center;">5156</td>
+
+<td style="text-align: center;">0.157</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### New England Journal of Medicine
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">17138</td>
+
+<td style="text-align: center;">1767</td>
+
+<td style="text-align: center;">1881</td>
+
+<td style="text-align: center;">0.110</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">18572</td>
+
+<td style="text-align: center;">1785</td>
+
+<td style="text-align: center;">1977</td>
+
+<td style="text-align: center;">0.106</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">17487</td>
+
+<td style="text-align: center;">1735</td>
+
+<td style="text-align: center;">1694</td>
+
+<td style="text-align: center;">0.097</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">17118</td>
+
+<td style="text-align: center;">1625</td>
+
+<td style="text-align: center;">1801</td>
+
+<td style="text-align: center;">0.105</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">16245</td>
+
+<td style="text-align: center;">1639</td>
+
+<td style="text-align: center;">1699</td>
+
+<td style="text-align: center;">0.105</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">15770</td>
+
+<td style="text-align: center;">1617</td>
+
+<td style="text-align: center;">1654</td>
+
+<td style="text-align: center;">0.105</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">15719</td>
+
+<td style="text-align: center;">1478</td>
+
+<td style="text-align: center;">1336</td>
+
+<td style="text-align: center;">0.085</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">16487</td>
+
+<td style="text-align: center;">1565</td>
+
+<td style="text-align: center;">1417</td>
+
+<td style="text-align: center;">0.086</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">15488</td>
+
+<td style="text-align: center;">1502</td>
+
+<td style="text-align: center;">1476</td>
+
+<td style="text-align: center;">0.095</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">16184</td>
+
+<td style="text-align: center;">1511</td>
+
+<td style="text-align: center;">1467</td>
+
+<td style="text-align: center;">0.091</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">15026</td>
+
+<td style="text-align: center;">1506</td>
+
+<td style="text-align: center;">1437</td>
+
+<td style="text-align: center;">0.096</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">17181</td>
+
+<td style="text-align: center;">1734</td>
+
+<td style="text-align: center;">1481</td>
+
+<td style="text-align: center;">0.086</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">16318</td>
+
+<td style="text-align: center;">1674</td>
+
+<td style="text-align: center;">1444</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">15508</td>
+
+<td style="text-align: center;">1534</td>
+
+<td style="text-align: center;">1435</td>
+
+<td style="text-align: center;">0.093</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">14332</td>
+
+<td style="text-align: center;">1488</td>
+
+<td style="text-align: center;">1257</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">15873</td>
+
+<td style="text-align: center;">1616</td>
+
+<td style="text-align: center;">1434</td>
+
+<td style="text-align: center;">0.090</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">16550</td>
+
+<td style="text-align: center;">1530</td>
+
+<td style="text-align: center;">1493</td>
+
+<td style="text-align: center;">0.090</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">15823</td>
+
+<td style="text-align: center;">1438</td>
+
+<td style="text-align: center;">1359</td>
+
+<td style="text-align: center;">0.086</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">14992</td>
+
+<td style="text-align: center;">1473</td>
+
+<td style="text-align: center;">1227</td>
+
+<td style="text-align: center;">0.082</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">15602</td>
+
+<td style="text-align: center;">1550</td>
+
+<td style="text-align: center;">1307</td>
+
+<td style="text-align: center;">0.084</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">14801</td>
+
+<td style="text-align: center;">1663</td>
+
+<td style="text-align: center;">1258</td>
+
+<td style="text-align: center;">0.085</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Ophthalmology
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">5950</td>
+
+<td style="text-align: center;">782</td>
+
+<td style="text-align: center;">1015</td>
+
+<td style="text-align: center;">0.171</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">7178</td>
+
+<td style="text-align: center;">994</td>
+
+<td style="text-align: center;">1311</td>
+
+<td style="text-align: center;">0.183</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">6331</td>
+
+<td style="text-align: center;">858</td>
+
+<td style="text-align: center;">1297</td>
+
+<td style="text-align: center;">0.205</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">6683</td>
+
+<td style="text-align: center;">1026</td>
+
+<td style="text-align: center;">1467</td>
+
+<td style="text-align: center;">0.220</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">9179</td>
+
+<td style="text-align: center;">1503</td>
+
+<td style="text-align: center;">1733</td>
+
+<td style="text-align: center;">0.189</td>
+
+<td style="text-align: center;">9</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">7861</td>
+
+<td style="text-align: center;">1277</td>
+
+<td style="text-align: center;">1852</td>
+
+<td style="text-align: center;">0.236</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">8863</td>
+
+<td style="text-align: center;">1432</td>
+
+<td style="text-align: center;">1914</td>
+
+<td style="text-align: center;">0.216</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">9234</td>
+
+<td style="text-align: center;">1395</td>
+
+<td style="text-align: center;">2267</td>
+
+<td style="text-align: center;">0.246</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">8719</td>
+
+<td style="text-align: center;">1361</td>
+
+<td style="text-align: center;">1883</td>
+
+<td style="text-align: center;">0.216</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">8851</td>
+
+<td style="text-align: center;">1467</td>
+
+<td style="text-align: center;">1966</td>
+
+<td style="text-align: center;">0.222</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">9210</td>
+
+<td style="text-align: center;">1443</td>
+
+<td style="text-align: center;">2052</td>
+
+<td style="text-align: center;">0.223</td>
+
+<td style="text-align: center;">8</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">9534</td>
+
+<td style="text-align: center;">1550</td>
+
+<td style="text-align: center;">2241</td>
+
+<td style="text-align: center;">0.235</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">9312</td>
+
+<td style="text-align: center;">1433</td>
+
+<td style="text-align: center;">2131</td>
+
+<td style="text-align: center;">0.229</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">9367</td>
+
+<td style="text-align: center;">1402</td>
+
+<td style="text-align: center;">2197</td>
+
+<td style="text-align: center;">0.235</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">9890</td>
+
+<td style="text-align: center;">1621</td>
+
+<td style="text-align: center;">2481</td>
+
+<td style="text-align: center;">0.251</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">9829</td>
+
+<td style="text-align: center;">1562</td>
+
+<td style="text-align: center;">2592</td>
+
+<td style="text-align: center;">0.264</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">10416</td>
+
+<td style="text-align: center;">1584</td>
+
+<td style="text-align: center;">2594</td>
+
+<td style="text-align: center;">0.249</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">10382</td>
+
+<td style="text-align: center;">1617</td>
+
+<td style="text-align: center;">2543</td>
+
+<td style="text-align: center;">0.245</td>
+
+<td style="text-align: center;">6</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">10545</td>
+
+<td style="text-align: center;">1602</td>
+
+<td style="text-align: center;">2602</td>
+
+<td style="text-align: center;">0.247</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">10970</td>
+
+<td style="text-align: center;">1866</td>
+
+<td style="text-align: center;">2852</td>
+
+<td style="text-align: center;">0.260</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">11186</td>
+
+<td style="text-align: center;">1756</td>
+
+<td style="text-align: center;">2551</td>
+
+<td style="text-align: center;">0.228</td>
+
+<td style="text-align: center;">7</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### Science
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">33424</td>
+
+<td style="text-align: center;">2455</td>
+
+<td style="text-align: center;">5135</td>
+
+<td style="text-align: center;">0.154</td>
+
+<td style="text-align: center;">3</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">35525</td>
+
+<td style="text-align: center;">2822</td>
+
+<td style="text-align: center;">5709</td>
+
+<td style="text-align: center;">0.161</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">34692</td>
+
+<td style="text-align: center;">2670</td>
+
+<td style="text-align: center;">5343</td>
+
+<td style="text-align: center;">0.154</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">35433</td>
+
+<td style="text-align: center;">2880</td>
+
+<td style="text-align: center;">5439</td>
+
+<td style="text-align: center;">0.154</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">37300</td>
+
+<td style="text-align: center;">2921</td>
+
+<td style="text-align: center;">5587</td>
+
+<td style="text-align: center;">0.150</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">35692</td>
+
+<td style="text-align: center;">2731</td>
+
+<td style="text-align: center;">5171</td>
+
+<td style="text-align: center;">0.145</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">33961</td>
+
+<td style="text-align: center;">2768</td>
+
+<td style="text-align: center;">4709</td>
+
+<td style="text-align: center;">0.139</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">33434</td>
+
+<td style="text-align: center;">2602</td>
+
+<td style="text-align: center;">4546</td>
+
+<td style="text-align: center;">0.136</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">29436</td>
+
+<td style="text-align: center;">2350</td>
+
+<td style="text-align: center;">3842</td>
+
+<td style="text-align: center;">0.131</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">27901</td>
+
+<td style="text-align: center;">2344</td>
+
+<td style="text-align: center;">3435</td>
+
+<td style="text-align: center;">0.123</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">30331</td>
+
+<td style="text-align: center;">2459</td>
+
+<td style="text-align: center;">3464</td>
+
+<td style="text-align: center;">0.114</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">25921</td>
+
+<td style="text-align: center;">2240</td>
+
+<td style="text-align: center;">3024</td>
+
+<td style="text-align: center;">0.117</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">25827</td>
+
+<td style="text-align: center;">2308</td>
+
+<td style="text-align: center;">2492</td>
+
+<td style="text-align: center;">0.096</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">26377</td>
+
+<td style="text-align: center;">2354</td>
+
+<td style="text-align: center;">2553</td>
+
+<td style="text-align: center;">0.097</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">24885</td>
+
+<td style="text-align: center;">2199</td>
+
+<td style="text-align: center;">2502</td>
+
+<td style="text-align: center;">0.101</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">24439</td>
+
+<td style="text-align: center;">2223</td>
+
+<td style="text-align: center;">2339</td>
+
+<td style="text-align: center;">0.096</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">24003</td>
+
+<td style="text-align: center;">2191</td>
+
+<td style="text-align: center;">2461</td>
+
+<td style="text-align: center;">0.103</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">25245</td>
+
+<td style="text-align: center;">2346</td>
+
+<td style="text-align: center;">2249</td>
+
+<td style="text-align: center;">0.089</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">25401</td>
+
+<td style="text-align: center;">2143</td>
+
+<td style="text-align: center;">2234</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">25966</td>
+
+<td style="text-align: center;">2159</td>
+
+<td style="text-align: center;">2108</td>
+
+<td style="text-align: center;">0.081</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">25793</td>
+
+<td style="text-align: center;">2173</td>
+
+<td style="text-align: center;">2226</td>
+
+<td style="text-align: center;">0.086</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+### The Journal of the American Medical Association
+
+<table class="center">
+
+<tbody>
+
+<tr>
+
+<th>Year</th>
+
+<th>References</th>
+
+<th>Self-citations</th>
+
+<th>Re-citations</th>
+
+<th>TFF</th>
+
+<th>Median cited halflife</th>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1992</td>
+
+<td style="text-align: center;">16383</td>
+
+<td style="text-align: center;">1672</td>
+
+<td style="text-align: center;">1889</td>
+
+<td style="text-align: center;">0.115</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1993</td>
+
+<td style="text-align: center;">15229</td>
+
+<td style="text-align: center;">1679</td>
+
+<td style="text-align: center;">1785</td>
+
+<td style="text-align: center;">0.117</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1994</td>
+
+<td style="text-align: center;">14988</td>
+
+<td style="text-align: center;">1746</td>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">0.134</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1995</td>
+
+<td style="text-align: center;">15464</td>
+
+<td style="text-align: center;">1777</td>
+
+<td style="text-align: center;">1943</td>
+
+<td style="text-align: center;">0.126</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1996</td>
+
+<td style="text-align: center;">15290</td>
+
+<td style="text-align: center;">1557</td>
+
+<td style="text-align: center;">1766</td>
+
+<td style="text-align: center;">0.116</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1997</td>
+
+<td style="text-align: center;">17411</td>
+
+<td style="text-align: center;">1748</td>
+
+<td style="text-align: center;">1772</td>
+
+<td style="text-align: center;">0.102</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1998</td>
+
+<td style="text-align: center;">15720</td>
+
+<td style="text-align: center;">1725</td>
+
+<td style="text-align: center;">1863</td>
+
+<td style="text-align: center;">0.119</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">1999</td>
+
+<td style="text-align: center;">14951</td>
+
+<td style="text-align: center;">1553</td>
+
+<td style="text-align: center;">1817</td>
+
+<td style="text-align: center;">0.122</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2000</td>
+
+<td style="text-align: center;">14770</td>
+
+<td style="text-align: center;">1485</td>
+
+<td style="text-align: center;">1855</td>
+
+<td style="text-align: center;">0.126</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2001</td>
+
+<td style="text-align: center;">16079</td>
+
+<td style="text-align: center;">1388</td>
+
+<td style="text-align: center;">1691</td>
+
+<td style="text-align: center;">0.105</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2002</td>
+
+<td style="text-align: center;">18069</td>
+
+<td style="text-align: center;">1669</td>
+
+<td style="text-align: center;">2108</td>
+
+<td style="text-align: center;">0.117</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2003</td>
+
+<td style="text-align: center;">17338</td>
+
+<td style="text-align: center;">1698</td>
+
+<td style="text-align: center;">2314</td>
+
+<td style="text-align: center;">0.133</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2004</td>
+
+<td style="text-align: center;">14948</td>
+
+<td style="text-align: center;">1346</td>
+
+<td style="text-align: center;">1871</td>
+
+<td style="text-align: center;">0.125</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2005</td>
+
+<td style="text-align: center;">15857</td>
+
+<td style="text-align: center;">1255</td>
+
+<td style="text-align: center;">1660</td>
+
+<td style="text-align: center;">0.105</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2006</td>
+
+<td style="text-align: center;">13982</td>
+
+<td style="text-align: center;">1241</td>
+
+<td style="text-align: center;">1648</td>
+
+<td style="text-align: center;">0.118</td>
+
+<td style="text-align: center;">4</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2007</td>
+
+<td style="text-align: center;">13190</td>
+
+<td style="text-align: center;">1035</td>
+
+<td style="text-align: center;">1440</td>
+
+<td style="text-align: center;">0.109</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2008</td>
+
+<td style="text-align: center;">12960</td>
+
+<td style="text-align: center;">908</td>
+
+<td style="text-align: center;">1089</td>
+
+<td style="text-align: center;">0.084</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2009</td>
+
+<td style="text-align: center;">12215</td>
+
+<td style="text-align: center;">1049</td>
+
+<td style="text-align: center;">1112</td>
+
+<td style="text-align: center;">0.091</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2010</td>
+
+<td style="text-align: center;">10600</td>
+
+<td style="text-align: center;">913</td>
+
+<td style="text-align: center;">1097</td>
+
+<td style="text-align: center;">0.103</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2011</td>
+
+<td style="text-align: center;">10321</td>
+
+<td style="text-align: center;">791</td>
+
+<td style="text-align: center;">992</td>
+
+<td style="text-align: center;">0.096</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: center;">2012</td>
+
+<td style="text-align: center;">11298</td>
+
+<td style="text-align: center;">845</td>
+
+<td style="text-align: center;">991</td>
+
+<td style="text-align: center;">0.088</td>
+
+<td style="text-align: center;">5</td>
+
+</tr>
+
+</tbody>
+
+</table>
