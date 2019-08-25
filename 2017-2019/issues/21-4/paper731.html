@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head>
-    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.2.0" />
-    <meta charset="utf-8" />
-    <title>
-      Supporting better treatments for meeting health consumers' needs: extracting semantics in social data for representing a consumer health ontology
-    </title>
-    <link href="../IRstyle3.css" rel="stylesheet" media="screen" title="serif" />
-    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css" /><!--Enter appropriate data in the content fields-->
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
     <meta name="dcterms.title" content="Supporting better treatments for meeting health consumers' needs: extracting semantics in social data for representing a consumer health ontology" />
     <meta name="author" content="Yunseon Choi" />
     <meta name="dcterms.subject" content="The purpose of this paper is to provide a framework for building a consumer health ontology using social tags. This would assist health users when they are accessing health information and increase the number of documents relevant to their needs." />
     <meta name="description" content="The purpose of this paper is to provide a framework for building a consumer health ontology using social tags. This would assist health users when they are accessing health information and increase the number of documents relevant to their needs. In order to extract concepts from social tags, this study conducted an empirical study on terms collected from a social networking site. The semantics of tags were analyzed and a concept list was developed by using the middle-out strategy. This study analysed the semantic values of tags by employing Latent Semantic Analysis (LSA). This is a method for extracting and representing the contextual-usage meaning of words by analyzing relationships between documents and the terms they contain and word semantics. The process of building an ontology using social tags shows how using this consumer health ontology could improve user access and retrieval. It demonstrates how terms extracted from tags are related to each other with similarity and relationships within hierarches in the ontology. The study has implications for better design of ontology applications that support the search for health-related resources. This will enhance the communication between health consumers and professionals." />
-    <meta name="keywords" content="health information, ontologies, semantics, information retrieval" /><!--leave the following to be completed by the Editor-->
+    <meta name="keywords" content="health information, ontologies, semantics, information retrieval" />
     <meta name="robots" content="all" />
     <meta name="dcterms.publisher" content="Professor T.D. Wilson" />
     <meta name="dcterms.type" content="text" />
@@ -20,27 +16,24 @@
     <meta name="dcterms.identifier" content="http://InformationR.net/ir/21-4/paper731.html" />
     <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/21-4/infres214.html" />
     <meta name="dcterms.format" content="text/html" />
-    <meta name="dc.language" content="en" />
     <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
     <meta name="dcterms.issued" content="2016-12-15" />
     <meta name="geo.placename" content="global" />
   </head>
   <body>
-    <header>
+    
       <h4>
         vol. 21 no. 4, December, 2016
       </h4>
-    </header>
-    <article>
+    
       <h1>
         Supporting better treatments for meeting health consumers' needs: extracting semantics in social data for representing a consumer health ontology
-      </h1><br />
-      <h2 style="text-align:center;">
+      </h1>
+      <h2>
         <a href="#author">Yunseon Choi</a>
-      </h2><br />
-      <form>
-        <fieldset>
-          <legend>Abstract</legend>
+      </h2>
+      
+          <h4>Abstract</h4>
           <blockquote>
             <strong>Introduction</strong>. The purpose of this paper is to provide a framework for building a consumer health ontology using social tags. This would assist health users when they are accessing health information and increase the number of documents relevant to their needs.<br />
             <strong>Methods</strong>. In order to extract concepts from social tags, this study conducted an empirical study on terms collected from a social networking site. The semantics of tags were analyzed and a concept list was developed by using the middle-out strategy.<br />
@@ -48,14 +41,12 @@
             <strong>Results</strong>. The process of building an ontology using social tags shows how using this consumer health ontology could improve user access and retrieval. It demonstrates how terms extracted from tags are related to each other with similarity and relationships within hierarches in the ontology.<br />
             <strong>Conclusion</strong>. The study has implications for better design of ontology applications that support the search for health-related resources. This will enhance the communication between health consumers and professionals.
           </blockquote>
-        </fieldset>
-      </form>
-      <section>
+       
         <h2>
           Introduction
         </h2>
         <p>
-          As a large number of online health resources have become available, there has been a great increase of the number of health consumers replying on online health resources available on the World Wide Web (<a href="#and07">Andreassen, Bujnowska-Fedak, Chronaki, Dumitru, and Pudule, 2007</a>; <a href="#fox11">Fox, 2011</a>; <a href="#ric06">Rice, 2006</a>; <a href="#and07">MacLean and Heer, 2013</a>). It has been reported that health consumers should be able to have effective access and utilise relevant health information to meet their needs (<a href="#nut08">Nutbeam, 2008</a>; <a href="#who11">World Health Organisation, 2011</a>). A Pew Research Center survey indicates that 72% of U.S. adult Internet users have looked for health information online (<a href="#fox13">Fox and Duggan, 2013</a>). Studies also show that most consumers lack the skills to access and use effectively online health resources (<a href="#fri15">Friel, Bond, and Lahoz, 2015</a>; <a href="#gra05">Gray, 2005</a>; <a href="#jai14">Jain and Bickham, 2014</a>; <a href="#rat00">Ratzan and Parker, 2000</a>; Rowlands <em>et al.</em>, 2013). There have been efforts to provide access to reliable health information on the World Wide Web, and <a href="http://www.nlm.nih.gov/medlineplus/">MedlinePlus</a> and <a href="http://www.informedhealthonline.org">InformedHealthOnline</a> are such examples. MedlinePlus is maintained by the National Library of Medicine and it is a Web-based consumer health information service (<a href="#mil00">Miller, Lacroix, and Joyce, 2000</a>). InformedHealthOnline is published by the German Institut für Qualität und Wirtschaftlichkeit im Gesundheitswesen (or IQWiG) and is the English-language version of <a href="https://www.gesundheitsinformation.de">the German website</a> which provides health information to the public and patients.
+          As a large number of online health resources have become available, there has been a great increase of the number of health consumers replying on online health resources available on the World Wide Web (<a href="#and07">Andreassen, Bujnowska-Fedak, Chronaki, Dumitru, and Pudule, 2007</a>; <a href="#fox11">Fox, 2011</a>; <a href="#ric06">Rice, 2006</a>; <a href="#and07">MacLean and Heer, 2013</a>). It has been reported that health consumers should be able to have effective access and utilise relevant health information to meet their needs (<a href="#nut08">Nutbeam, 2008</a>; <a href="#who11">World Health Organisation, 2011</a>). A Pew Research Center survey indicates that 72% of U.S. adult Internet users have looked for health information online (<a href="#fox13">Fox and Duggan, 2013</a>). Studies also show that most consumers lack the skills to access and use effectively online health resources (<a href="#fri15">Friel, Bond, and Lahoz, 2015</a>; <a href="#gra05">Gray, 2005</a>; <a href="#jai14">Jain and Bickham, 2014</a>; <a href="#rat00">Ratzan and Parker, 2000</a>; Rowlands <em>et al.</em>, 2013). There have been efforts to provide access to reliable health information on the World Wide Web, and <a href="http://www.nlm.nih.gov/medlineplus/">MedlinePlus</a> and <a href="http://www.informedhealthonline.org">InformedHealthOnline</a> are such examples. MedlinePlus is maintained by the National Library of Medicine and it is a Web-based consumer health information service (<a href="#mil00">Miller, Lacroix, and Joyce, 2000</a>). InformedHealthOnline is published by the German Institut fï¿½r Qualitï¿½t und Wirtschaftlichkeit im Gesundheitswesen (or IQWiG) and is the English-language version of <a href="https://www.gesundheitsinformation.de">the German website</a> which provides health information to the public and patients.
         </p>
         <p>
           Information in health or medical domains is critical and should be provided to health consumers without difficulty. However, the growing amount of health information on the web has increased concern about effective access to quality health information because terminology, currently used for organising health or medical information, is generated by professionals and may not be familiar to users. The terminology gap between users' and professionals' vocabulary in describing medical-related web documents was also uncovered by a study on indexing consistency of social tagging in comparison with professional indexing (<a href="#cho14">Choi, 2014</a>). Health consumers and healthcare professionals tend to use different terms to describe health-related concepts, for example, <em>dry mouth</em> vs. <em>xerostomia</em> and <em>flu</em> vs. <em>influenza</em> (<a href="#vyd14">Vydiswaran, Vinod, Hanauer, and Zheng, 2014</a>). This terminology gap in the health domain prevents health consumers from accessing health information relevant to their information needs. For example, when a health consumer tries to find information related to nosebleed symptoms, she/he may not find the resources including only the term <em>epistaxis</em> in the meta tags, title and text (<a href="#zie03">Zielstorff, 2003</a>). In large medical health consumer websites, it has been reported that when a consumer's terms are different from physician-defined terms, the search returned no results, for example, <em>heart attack</em> vs. <em>myocardial infarction</em> (<a href="#zen01">Zeng, Kogan, Ash, and Greenes, 2001</a>) and <em>shakes</em> vs. <em>tremor</em> (<a href="#zie03">Zielstorff, 2003</a>).
@@ -138,7 +129,7 @@
           <li>
             <a href="http://geneontology.org/">Gene Ontology</a> providing a common language to describe aspects of a gene product's biology. (<a href="#ash00">Ashburne <em>et al.</em>, 2000</a>)
           </li>
-          <li>SNOMED CT (<em>Systematised nomenclature of medicine—clinical terms</em>) is a comprehensive clinical terminology, originally created by the College of American Pathologists (CAP). (<a href="#nlm16">U.S. <em>National Library of Medicine</em>, 2016</a>)
+          <li>SNOMED CT (<em>Systematised nomenclature of medicineï¿½clinical terms</em>) is a comprehensive clinical terminology, originally created by the College of American Pathologists (CAP). (<a href="#nlm16">U.S. <em>National Library of Medicine</em>, 2016</a>)
           </li>
           <li>RxNorm provides normalised names for clinical drugs and links its names to many of the drug vocabularies commonly used in pharmacy management and drug interaction software. (<a href="#nlm16">U.S. <em>National Library of Medicine</em>, 2014</a>)
           </li>
@@ -539,7 +530,7 @@
           </tbody>
         </table>
         <p>
-          In order to implement the ontology, the study uses <a href="http://protege.stanford.edu">Protégé-OWL</a>, which supports Web Ontology Language. The Protégé-OWL ontology modeller was used to present the diagrammatic notation (Figure 5) which is based on concepts and relations from Table 3. Since the graph in Figure 5 is mainly diagrammed for addressing the document <em>Temporomandibular joint and muscle disorders</em>, only applied relations or properties are indicated in the graph.
+          In order to implement the ontology, the study uses <a href="http://protege.stanford.edu">Protï¿½gï¿½-OWL</a>, which supports Web Ontology Language. The Protï¿½gï¿½-OWL ontology modeller was used to present the diagrammatic notation (Figure 5) which is based on concepts and relations from Table 3. Since the graph in Figure 5 is mainly diagrammed for addressing the document <em>Temporomandibular joint and muscle disorders</em>, only applied relations or properties are indicated in the graph.
         </p>
         <figure class="centre">
           <img src="p731fig5.png" width="449" height="395" alt="Diagrammatic notation of consumer health ontology" />
@@ -558,13 +549,13 @@
           The following example indicates the importance of our study. It demonstrates that social tags reflect terms and concepts that are more familiar to users and plays a role of communicating difficult concepts. These terms also provide additional access points which are not found in controlled vocabulary. In Table 2, regarding a Web document <a href="http://www.nidcr.nih.gov/OralHealth/Topics/TMJ/">Temporomandibular joint and muscle disorders</a>, terms assigned by professionals are <em>temporo-mandibular joint disorders</em> and <em>patient education</em>. The assigned social tags to the same document included several terms such as <em>jaw</em>, <em>dental-problems</em>, <em>odontologia</em>, and <em>temporo-mandibular-joint-disorders</em> (Table 2). The temporo-mandibular joint is the joint of the jaw and is frequently referred to as 'TMJ'. The temporo-mandibular joint is connected from jaw to ear.
         </p>
         <p>
-          The consumer health ontology was partially implemented by using Protégé ontology modular (Figure 5) to show the framework of the ontology. Figure 5 shows how terms are related with similarity and relationships in hierarches, and helps understand how the consumer health ontology would improve user access and retrieval.
+          The consumer health ontology was partially implemented by using Protï¿½gï¿½ ontology modular (Figure 5) to show the framework of the ontology. Figure 5 shows how terms are related with similarity and relationships in hierarches, and helps understand how the consumer health ontology would improve user access and retrieval.
         </p>
         <p>
           There are inverse relations linking two classes, <em>body structure</em> and <em>body function</em>, i.e., <em>body structure</em> '<strong>affects</strong>' <em>body function</em> and <em>body function</em> '<strong>is_affected_by</strong>' <em>body structure</em>. The temporo-mandibular joint has a symmetric relation of '<strong>is_ connected_ to</strong>' with two classes, <em>ear</em> and <em>jaw</em>. That is, the relation '<strong>is_ connected_ to</strong>' relates class <em>temporo-mandibular joint</em> to class <em>ear</em> and also relates class <em>ear</em> to class <em>temporo-mandibular joint</em> . There are also super- and sub-hierarchical relations among classes, for example, between class <em>body</em> and class <em>body structure</em> and between class <em>body structure</em> and class <em>skeleton</em>, etc. The '<em>has subclass</em>' relation is transitive, so when <em>joint</em> has subclass <em>temporo-mandibular joint</em> , <em>temporo-mandibular joint</em> is also subclass of <em>body structure</em>. Class <em>mouth</em> has several subclasses such as <em>gums</em>, <em>teeth</em>, <em>lips</em>, and <em>tongue</em>, and then these subclasses are also linked to class <em>mouth</em> through '<strong>is_located_in</strong>' relation. In addition, the relation '<strong>is_concerned_with</strong>' is symmetric, that is, the relation '<strong>is_concerned_with</strong>' relates class <em>mouth</em> to class <em>dental problem</em> and also relates class <em>dental problem</em> to class <em>mouth</em>. As discussed, it is illustrated that in the ontology, semantics and relations between concepts are explicitly represented, which allows for analysing the context and semantics of the query. Furthermore, since social tags provide additional access points as user-generated terms, it would improve information access and promote effective reasoning for retrieval. The scope of the consumer health ontology represented in this paper is limited to a specific category of medical condition, for example, oral health.
         </p>
         <p>
-          For further development of domain-specific ontology in the health domain, other specific categories of medical conditions, such as pregnancy and childbirth, can be represented by expanding concepts in the ontology with domain-specific properties. There have been very few studies conducted on building health vocabularies which features concepts and vocabularies familiar to health consumers (<a href="#see13">Seedorff <em>et al.</em>, 2013</a>). Previous work in consumer health vocabulary such as the <em>Open-access and collaborative consumer health vocabulary</em> (<a href="#nlm12">U.S. <em>National Library of Medicine</em>, 2012</a>) was not implemented using a knowledge representation language, but our proposed consumer health ontology using Protégé-OWL supporting the Web Ontology Language improves accessibility to related documents, because it allows for semantic search by exploiting semantic characteristics of consumers' search queries and documents. Therefore, our preliminary results indicate the feasibility of developing health consumer-preferred information systems using ontology.
+          For further development of domain-specific ontology in the health domain, other specific categories of medical conditions, such as pregnancy and childbirth, can be represented by expanding concepts in the ontology with domain-specific properties. There have been very few studies conducted on building health vocabularies which features concepts and vocabularies familiar to health consumers (<a href="#see13">Seedorff <em>et al.</em>, 2013</a>). Previous work in consumer health vocabulary such as the <em>Open-access and collaborative consumer health vocabulary</em> (<a href="#nlm12">U.S. <em>National Library of Medicine</em>, 2012</a>) was not implemented using a knowledge representation language, but our proposed consumer health ontology using Protï¿½gï¿½-OWL supporting the Web Ontology Language improves accessibility to related documents, because it allows for semantic search by exploiting semantic characteristics of consumers' search queries and documents. Therefore, our preliminary results indicate the feasibility of developing health consumer-preferred information systems using ontology.
         </p>
         <h2>
           Conclusions and future research
@@ -596,129 +587,125 @@
         <p>
           <strong>Dr. Yunseon Choi</strong> is a Visiting Scholar at the School of Library and Information Studies, University of Wisconsin-Madison. She teaches a course on social media for information agency. She received her Ph.D. in Library and Information Science from the University of Illinois at Urbana-Champaign. She can be contacted at <a href="mailto:ychoi249@wisc.edu">ychoi249@wisc.edu</a> or <a href="mailto:dr.yunseon.choi@gmail.com">dr.yunseon.choi@gmail.com</a>
         </p>
-      </section>
-      <section class="refs">
-        <form>
-          <fieldset>
-            <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
+<h4>References</h4>
             <ul class="refs">
               <li id="and07">Andreassen, H.K., Bujnowska-Fedak, M., Chronaki, C.E., Dumitru, R.C., &amp; Pudule, I. (2007). European citizens' use of E-health services: a study of seven countries. <em>BMC Public Health, 7</em>(53), 1-7
               </li>
-              <li id="ash00">Ashburne, M., Ball, C.A., Blake, J.A., Bostein, D., Butler, H., Cherry, J.M.,...Sherlock, G. (2000). Gene ontology: tool for the unification of biology. <em>Nature Genetics, 25</em>(1), 25–29.
+              <li id="ash00">Ashburne, M., Ball, C.A., Blake, J.A., Bostein, D., Butler, H., Cherry, J.M.,...Sherlock, G. (2000). Gene ontology: tool for the unification of biology. <em>Nature Genetics, 25</em>(1), 25ï¿½29.
               </li>
               <li id="bae99">Baeza-Yates, R. &amp; Ribeiro-Neto, B. (1999). <em>Modern information retrieval</em>. New York, NY: Addison-Wesley.
               </li>
-              <li id="bao07">Bao, S., Wu, X., Fei, B., Xue, G., Su, Z., &amp;Yu, Y. (2007). <a href="http://www.webcitation.org/6mAEc7LS3">Optimising Web search using social annotations</a>. In <em>Proceedings of the Sixteenth International World Wide Web Conference (WWW2007), May 8-12, 2007, Banff, Alberta, Canada</em> (pp. 501-510). Retrieved from http://www2007.org/papers/paper397.pdf (Archived by WebCite® at http://www.webcitation.org/6mAEc7LS3)
+              <li id="bao07">Bao, S., Wu, X., Fei, B., Xue, G., Su, Z., &amp;Yu, Y. (2007). <a href="http://www.webcitation.org/6mAEc7LS3">Optimising Web search using social annotations</a>. In <em>Proceedings of the Sixteenth International World Wide Web Conference (WWW2007), May 8-12, 2007, Banff, Alberta, Canada</em> (pp. 501-510). Retrieved from http://www2007.org/papers/paper397.pdf (Archived by WebCiteï¿½ at http://www.webcitation.org/6mAEc7LS3)
               </li>
-              <li id="bod04">Bodenreider, O. (2004). <a href="http://www.webcitation.org/6m3Cz0ewM">The unified medical language system (UMLS): integrating biomedical terminology</a>. <em>Nucleic Acids Research, 32</em>(Database issue), D267–D270. Retrieved from http://nar.oxfordjournals.org/content/32/suppl_1/D267.full.pdf+html (Archived by WebCite® at http://www.webcitation.org/6m3Cz0ewM).
+              <li id="bod04">Bodenreider, O. (2004). <a href="http://www.webcitation.org/6m3Cz0ewM">The unified medical language system (UMLS): integrating biomedical terminology</a>. <em>Nucleic Acids Research, 32</em>(Database issue), D267ï¿½D270. Retrieved from http://nar.oxfordjournals.org/content/32/suppl_1/D267.full.pdf+html (Archived by WebCiteï¿½ at http://www.webcitation.org/6m3Cz0ewM).
               </li>
-              <li id="bra83">Brachman, R. (1983). What IS-A is and isn't: an analysis of taxonomic links in semantic networks. <em>Computer, 16</em>(10), 30–36.
+              <li id="bra83">Brachman, R. (1983). What IS-A is and isn't: an analysis of taxonomic links in semantic networks. <em>Computer, 16</em>(10), 30ï¿½36.
               </li>
-              <li id="bre99">Bresolin, L. (1999). Health literacy. <em>Journal of the American Medical Association, 281</em>(6), 552–557.
+              <li id="bre99">Bresolin, L. (1999). Health literacy. <em>Journal of the American Medical Association, 281</em>(6), 552ï¿½557.
               </li>
-              <li id="cav04">Cavanagh, C., Arnold, D., Pauly, R., Hagen, M. &amp; Rathe, R. (2004). <em><a href="http://www.webcitation.org/6m2ZR2hKi">Online physical exam teaching assistant</a></em>. Retrieved from http://depmedicina.med.up.pt/opeta/ Gainesville, FL: University of Florida, College of Medicine. (Archived by WebCite® at http://www.webcitation.org/6m2ZR2hKi)
+              <li id="cav04">Cavanagh, C., Arnold, D., Pauly, R., Hagen, M. &amp; Rathe, R. (2004). <em><a href="http://www.webcitation.org/6m2ZR2hKi">Online physical exam teaching assistant</a></em>. Retrieved from http://depmedicina.med.up.pt/opeta/ Gainesville, FL: University of Florida, College of Medicine. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2ZR2hKi)
               </li>
-              <li id="cho14">Choi, Y. (2014). A complete assessment of tagging quality: a consolidated methodology. <em>Journal of the American Society for Information Science and Technology, 66</em>(4),798–817.
+              <li id="cho14">Choi, Y. (2014). A complete assessment of tagging quality: a consolidated methodology. <em>Journal of the American Society for Information Science and Technology, 66</em>(4),798ï¿½817.
               </li>
-              <li id="cho09">Choi, Y. (2009). <a href="http://www.webcitation.org/6m2mDWc8R">Bringing a more accurate user's perspective into Web navigation: facet analysis of folksonomy tags.</a> In <em>iConference 2009 Posters</em>. Urbana, IL: University of Illinois. Retrieved from http://hdl.handle.net/2142/15291 (Archived by WebCite® at http://www.webcitation.org/6m2mDWc8R).
+              <li id="cho09">Choi, Y. (2009). <a href="http://www.webcitation.org/6m2mDWc8R">Bringing a more accurate user's perspective into Web navigation: facet analysis of folksonomy tags.</a> In <em>iConference 2009 Posters</em>. Urbana, IL: University of Illinois. Retrieved from http://hdl.handle.net/2142/15291 (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2mDWc8R).
               </li>
               <li id="cho06">Choy, S. &amp; Lui, A. K. (2006). Web information retrieval in collaborative tagging systems. In <em>Proceedings of the IEEE/WIC/ACM International Conference on Web Intelligence.</em> Washington, DC: IEEE Computer Society.
               </li>
-              <li id="col02">Colomb, R. M. (2002). <a href="http://www.webcitation.org/6m3D5Q5xt">Use of upper ontologies for interoperation of information systems: a tutorial.</a> Padua, Italy: National Research Council. (Technical Report 20/02 ISIB-CNR). Retrieved from http://www.loa.istc.cnr.it/old/Papers/ISIB-CNR-TR-20-02.pdf (Archived by WebCite® at http://www.webcitation.org/6m3D5Q5xt).
+              <li id="col02">Colomb, R. M. (2002). <a href="http://www.webcitation.org/6m3D5Q5xt">Use of upper ontologies for interoperation of information systems: a tutorial.</a> Padua, Italy: National Research Council. (Technical Report 20/02 ISIB-CNR). Retrieved from http://www.loa.istc.cnr.it/old/Papers/ISIB-CNR-TR-20-02.pdf (Archived by WebCiteï¿½ at http://www.webcitation.org/6m3D5Q5xt).
               </li>
               <li id="cri99">Crimando, J. (1999). <em><a href="http://www.gwc.maricopa.edu/class/bio202/cyberheart/ekgqzr0.htm">EKG arrythmia review</a></em>. Phoenix, AZ: GateWay Community College. Retrieved from http://www.gwc.maricopa.edu/class/bio202/cyberheart/ekgqzr0.htm [Unable to archive].
               </li>
-              <li id="cut09">Cutilli, C. C. &amp; Bennett, I. M. (2009). Understanding the health literacy of America: results of the National Assessment of Adult Literacy. <em>Orthopaedic Nursing, 28</em>(1), 27–32.
+              <li id="cut09">Cutilli, C. C. &amp; Bennett, I. M. (2009). Understanding the health literacy of America: results of the National Assessment of Adult Literacy. <em>Orthopaedic Nursing, 28</em>(1), 27ï¿½32.
               </li>
-              <li id="dee90">Deerwester, S., Dumais, S. T., Furnas, G., Landauer, W, Thomas, K. &amp; Harshman, R. (1990). Indexing by latent semantic analysis. <em>Journal of the American Society for Information Science, 41</em>(6), 391–407.
+              <li id="dee90">Deerwester, S., Dumais, S. T., Furnas, G., Landauer, W, Thomas, K. &amp; Harshman, R. (1990). Indexing by latent semantic analysis. <em>Journal of the American Society for Information Science, 41</em>(6), 391ï¿½407.
               </li>
-              <li id="din01">Ding, Y. (2001). A review of ontologies with the Semantic Web in view. <em>Journal of Information Science. 27</em>(6), 377–388.
+              <li id="din01">Ding, Y. (2001). A review of ontologies with the Semantic Web in view. <em>Journal of Information Science. 27</em>(6), 377ï¿½388.
               </li>
-              <li id="doe01">Doerr, M. (2001). <em><a href="http://www.webcitation.org/6m3E47Bvh">Ontologies and thesauri - tools for effective information access.</a></em> Paper presented at the Workshop of the Human Network for Cultural Informatics. Heraklion, Crete, 2001. Retrieved from https://www.ics.forth.gr/isl/CULTUREnet/members/documents/thesont_2001.ppt (Archived by WebCite® http://www.webcitation.org/6m3E47Bvh).
+              <li id="doe01">Doerr, M. (2001). <em><a href="http://www.webcitation.org/6m3E47Bvh">Ontologies and thesauri - tools for effective information access.</a></em> Paper presented at the Workshop of the Human Network for Cultural Informatics. Heraklion, Crete, 2001. Retrieved from https://www.ics.forth.gr/isl/CULTUREnet/members/documents/thesont_2001.ppt (Archived by WebCiteï¿½ http://www.webcitation.org/6m3E47Bvh).
               </li>
-              <li id="don11">Dong, H. &amp; Hussain, F. K. (2011). Semantic service matchmaking for digital health ecosystems. <em>Knowledge-Based Systems, 24</em>(6), 761–774.
+              <li id="don11">Dong, H. &amp; Hussain, F. K. (2011). Semantic service matchmaking for digital health ecosystems. <em>Knowledge-Based Systems, 24</em>(6), 761ï¿½774.
               </li>
-              <li id="fer01">Ferguson, L.A., Pawlak, R. (2001). Health literacy: the road to improved health outcomes. <em>International Journal of Nursing Practice, 7</em>(2), 123–129.
+              <li id="fer01">Ferguson, L.A., Pawlak, R. (2001). Health literacy: the road to improved health outcomes. <em>International Journal of Nursing Practice, 7</em>(2), 123ï¿½129.
               </li>
-              <li id="fox11">Fox, S. (2011, February 1). <em>Health topics.</em> Washington, DC: Pew Research Center. Retrieved from http://www.pewinternet.org/~/media//Files/Reports/2011/PIP_Health_Topics.pdf (Archived by WebCite® at http://www.webcitation.org/6m3Dx5Bxp).
+              <li id="fox11">Fox, S. (2011, February 1). <em>Health topics.</em> Washington, DC: Pew Research Center. Retrieved from http://www.pewinternet.org/~/media//Files/Reports/2011/PIP_Health_Topics.pdf (Archived by WebCiteï¿½ at http://www.webcitation.org/6m3Dx5Bxp).
               </li>
-              <li id="fox13">Fox, S. &amp; Duggan, M. (2013, January 15). <em><a href="http://www.webcitation.org/6m3DsGaAl">Health online 2013</a></em>. Washington, DC: Pew Research Center. Retrieved from http://www.pewinternet.org/files/old-media/Files/Reports/PIP_HealthOnline.pdf. (Archived by WebCite® at http://www.webcitation.org/6m3DsGaAl).
+              <li id="fox13">Fox, S. &amp; Duggan, M. (2013, January 15). <em><a href="http://www.webcitation.org/6m3DsGaAl">Health online 2013</a></em>. Washington, DC: Pew Research Center. Retrieved from http://www.pewinternet.org/files/old-media/Files/Reports/PIP_HealthOnline.pdf. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m3DsGaAl).
               </li>
-              <li id="fri15">Friel, C.J., Bond, I., &amp; Lahoz, M.R. (2015). Improving health information literacy of early adolescents using a lead poisoning curriculum. <em>Journal of Consumer Health on the Internet, 19</em>(3-4),149–160.
+              <li id="fri15">Friel, C.J., Bond, I., &amp; Lahoz, M.R. (2015). Improving health information literacy of early adolescents using a lead poisoning curriculum. <em>Journal of Consumer Health on the Internet, 19</em>(3-4),149ï¿½160.
               </li>
-              <li id="gar04">Garshol, L. M. (2004). Metadata? Thesauri? Taxonomies? Topic Maps! <em>Journal of Information Science, 30</em>(4), 378–391.
+              <li id="gar04">Garshol, L. M. (2004). Metadata? Thesauri? Taxonomies? Topic Maps! <em>Journal of Information Science, 30</em>(4), 378ï¿½391.
               </li>
-              <li id="golhub06">Golder, S.A. &amp; Huberman, B.A. (2006). Usage patterns of collaborative tagging systems. <em>Journal of Information Science, 32</em>(2), 198–208.
+              <li id="golhub06">Golder, S.A. &amp; Huberman, B.A. (2006). Usage patterns of collaborative tagging systems. <em>Journal of Information Science, 32</em>(2), 198ï¿½208.
               </li>
-              <li id="gol06">Golub, K. (2006). <a href="http://www.webcitation.org/6m2p0Pe52">Using controlled vocabularies in automated subject classification of textual Web pages, in the context of browsing.</a> <em>TCDL Bulletin, 2</em>(2), 1–11. Retrieved from http://www.ieee-tcdl.org/Bulletin/v2n2/golub/golub.html. (Archived by WebCite® at http://www.webcitation.org/6m2p0Pe52)
+              <li id="gol06">Golub, K. (2006). <a href="http://www.webcitation.org/6m2p0Pe52">Using controlled vocabularies in automated subject classification of textual Web pages, in the context of browsing.</a> <em>TCDL Bulletin, 2</em>(2), 1ï¿½11. Retrieved from http://www.ieee-tcdl.org/Bulletin/v2n2/golub/golub.html. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2p0Pe52)
               </li>
               <li id="gra05">Gray, N. J., Klein, J. D., Noyce, P. R., Sesselberg, T.S., &amp; Cantrill, J. A. (2005). The Internet: a window on adolescent health literacy. <em>Journal of Adolescent Health, 37</em>(3), 243.
               </li>
-              <li id="gru93">Gruber, T. R. (1993). A translation approach to portable ontology specification. <em>Knowledge Acquisition, 5</em>(2), 199–220.
+              <li id="gru93">Gruber, T. R. (1993). A translation approach to portable ontology specification. <em>Knowledge Acquisition, 5</em>(2), 199ï¿½220.
               </li>
-              <li id="hey08">Heymann, P., Koutrika, G., &amp; Garcia-Molina, H. (2008). Can social bookmarking improve Web search? In <em>Proceedings of the 1st International Conference on Web Search and Data Mining, Palo Alto, California, USA — February 11-12, 2008</em> (pp. 195-205). New York, NY: ACM.
+              <li id="hey08">Heymann, P., Koutrika, G., &amp; Garcia-Molina, H. (2008). Can social bookmarking improve Web search? In <em>Proceedings of the 1st International Conference on Web Search and Data Mining, Palo Alto, California, USA ï¿½ February 11-12, 2008</em> (pp. 195-205). New York, NY: ACM.
               </li>
-              <li id="jai14">Jain, A.V., &amp; Bickham D. (2014). Adolescent health literacy and the Internet: challenges and opportunities. <em>Current Opinion in Pediatrics. 26</em>(4),435–439.
+              <li id="jai14">Jain, A.V., &amp; Bickham D. (2014). Adolescent health literacy and the Internet: challenges and opportunities. <em>Current Opinion in Pediatrics. 26</em>(4),435ï¿½439.
               </li>
-              <li id="mac06">Macgregor, G. &amp; McCulloch, E. (2006). Collaborative tagging as a knowledge organization and resource discovery tool. <em>Library Review, 55</em>(5), 291–300.
+              <li id="mac06">Macgregor, G. &amp; McCulloch, E. (2006). Collaborative tagging as a knowledge organization and resource discovery tool. <em>Library Review, 55</em>(5), 291ï¿½300.
               </li>
-              <li id="mad06">Madden, M, &amp; Fox, S. (2006). <em><a href="http://www.webcitation.org/6m34CyTWq">Finding answers online in sickness and in health</a></em>. Washington, DC: Pew Research Center. Retrieved from http://www.pewinternet.org/pdfs/PIP_Health_Decisions_2006.pdf. (Archived by WebCite® at http://www.webcitation.org/6m34CyTWq).
+              <li id="mad06">Madden, M, &amp; Fox, S. (2006). <em><a href="http://www.webcitation.org/6m34CyTWq">Finding answers online in sickness and in health</a></em>. Washington, DC: Pew Research Center. Retrieved from http://www.pewinternet.org/pdfs/PIP_Health_Decisions_2006.pdf. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m34CyTWq).
               </li>
-              <li id="mil00">Miller, N., Lacroix E.M., &amp; Joyce, E.B. (2000). MEDLINEplus: building and maintaining the National Library of Medicine's consumer health Web service. <em>Bulletin of the Medical Library Association, 88</em>(1), 11–17.
+              <li id="mil00">Miller, N., Lacroix E.M., &amp; Joyce, E.B. (2000). MEDLINEplus: building and maintaining the National Library of Medicine's consumer health Web service. <em>Bulletin of the Medical Library Association, 88</em>(1), 11ï¿½17.
               </li>
-              <li id="nat14">National Institute of Dental and Craniofacial Research. (2014). <em><a href="http://www.webcitation.org/6m2gQtbfn">TMJ (Temporomandibular joint and muscle disorders)</a></em> Bethesda, MD: National Institute of Dental and Craniofacial Research. Retrieved from http://www.nidcr.nih.gov/OralHealth/Topics/TMJ/ (Archived by WebCite® at http://www.webcitation.org/6m2gQtbfn).
+              <li id="nat14">National Institute of Dental and Craniofacial Research. (2014). <em><a href="http://www.webcitation.org/6m2gQtbfn">TMJ (Temporomandibular joint and muscle disorders)</a></em> Bethesda, MD: National Institute of Dental and Craniofacial Research. Retrieved from http://www.nidcr.nih.gov/OralHealth/Topics/TMJ/ (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2gQtbfn).
               </li>
-              <li id="nil01">Niles, I. &amp; Pease, A. (2001). <a href="http://www.webcitation.org/6m2rB0HSm">Origins of the IEEE standard upper ontology.</a> In <em>Working Notes of the IJCAI-2001 Workshop on the IEEE Standard Upper Ontology</em> (pp. 37-42). Menlo Park, CA: AAAI Press. Retrieved from http://www.adampease.org/OP/pubs/IJCAI2001.pdf. (Archived by WebCite® at http://www.webcitation.org/6m2rB0HSm).
+              <li id="nil01">Niles, I. &amp; Pease, A. (2001). <a href="http://www.webcitation.org/6m2rB0HSm">Origins of the IEEE standard upper ontology.</a> In <em>Working Notes of the IJCAI-2001 Workshop on the IEEE Standard Upper Ontology</em> (pp. 37-42). Menlo Park, CA: AAAI Press. Retrieved from http://www.adampease.org/OP/pubs/IJCAI2001.pdf. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2rB0HSm).
               </li>
               <li id="nor02">Norman, C.D., Chirrey, S. &amp; Skinner, H. (2002). Consumer perspectives on e-Health. In H. Skinner, <em>Promoting health through organisational change</em> (pp. 315-334). San Francisco, CA: Benjamin Cummings.
               </li>
               <li id="now03">Nowick, E. A. &amp; Mering, M. (2003). Comparisons between Internet users' free-text queries and controlled vocabularies: a case study in water quality. <em>Technical Services Quarterly, 21</em>(2), 15-32.
               </li>
-              <li id="nut08">Nutbeam, D. (2008). The evolving concept of health literacy. (2008). <em>Social Science &amp; Medicine, 67</em>(12), 2072–2078.
+              <li id="nut08">Nutbeam, D. (2008). The evolving concept of health literacy. (2008). <em>Social Science &amp; Medicine, 67</em>(12), 2072ï¿½2078.
               </li>
-              <li id="puu11">Puustjarvi, J. &amp; Puustjarvi, L. (2011). Personal health ontology: towards the interoperation of e-health tools. <em>International Journal of Electronic Healthcare, 6</em>(1), 62–75.
+              <li id="puu11">Puustjarvi, J. &amp; Puustjarvi, L. (2011). Personal health ontology: towards the interoperation of e-health tools. <em>International Journal of Electronic Healthcare, 6</em>(1), 62ï¿½75.
               </li>
               <li id="rat00">Ratzan, S.C. &amp; Parker, R.M. (2000). Introduction. In C.R. Seldon, M. Zorn, S.C. Ratzan and R.M. Parker, (Eds). <em>National Library of Medicine current bibliographies in medicine: health literacy</em> (pp. v-vii). Washington, DC: National Institutes of Health. (NLM Pub. No. CBM 2000-1 ed.)
               </li>
-              <li id="ric06">Rice, R.E. (2006). Influences, usage, and outcomes of Internet health information searching: multivariate results from the Pew surveys. <em>International Journal of Medical Informatics, 75</em>(1), 8–28.
+              <li id="ric06">Rice, R.E. (2006). Influences, usage, and outcomes of Internet health information searching: multivariate results from the Pew surveys. <em>International Journal of Medical Informatics, 75</em>(1), 8ï¿½28.
               </li>
-              <li id="rie06">Riedl, J. (2006). Tagging, communities, vocabulary, evolution. In <em>Proceedings of the 2006 20th Anniversary Conference on Computer Supported Cooperative Work, Banff, Alberta, Canada — November 04-08, 2006</em> (pp. 181-190). New York, NY: ACM. Retrieved from http://www.grouplens.org/papers/pdf/sen-cscw2006.pdf. (Archived by WebCite® at http://www.webcitation.org/6m2rp6VyY).
+              <li id="rie06">Riedl, J. (2006). Tagging, communities, vocabulary, evolution. In <em>Proceedings of the 2006 20th Anniversary Conference on Computer Supported Cooperative Work, Banff, Alberta, Canada ï¿½ November 04-08, 2006</em> (pp. 181-190). New York, NY: ACM. Retrieved from http://www.grouplens.org/papers/pdf/sen-cscw2006.pdf. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2rp6VyY).
               </li>
-              <li id="row13">Rowlands, G.P., Mehay, A., Hampshire, S., Phillips, R., Williams, P., Mann, A.,...Tylee, A.T. (2013). <a href="http://www.webcitation.org/6m2s4ERvI">Characteristics of people with low health literacy on coronary heart disease GP registers in South London: a cross-sectional study</a>. <em>BMJ Open, 3</em>(1), 1-5. Retrieved from http://bmjopen.bmj.com/content/3/1/e001503.full.pdf+html (Archived by WebCite® at http://www.webcitation.org/6m2s4ERvI).
+              <li id="row13">Rowlands, G.P., Mehay, A., Hampshire, S., Phillips, R., Williams, P., Mann, A.,...Tylee, A.T. (2013). <a href="http://www.webcitation.org/6m2s4ERvI">Characteristics of people with low health literacy on coronary heart disease GP registers in South London: a cross-sectional study</a>. <em>BMJ Open, 3</em>(1), 1-5. Retrieved from http://bmjopen.bmj.com/content/3/1/e001503.full.pdf+html (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2s4ERvI).
               </li>
-              <li id="see13">Seedorff, M, Peterson, K.J., Nelsen, L.A., Cocos, C, McCormick, J.B., Chute, C.G. and Pathank, J. (2013). <a href="http://www.webcitation.org/6m3EAFS4c">Incorporating expert terminology and disease risk factors into consumer health vocabularies.</a> In Russ B. Altman, A. Keith Dunker, Larence Hunter, Tiffany Murray and Teri E. Klein, (Eds.). <em>Pacific Symposium on Biocomputing, 2013</em> (pp. 421-432). Singapore: World Scientific Publishing Co. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3587774/pdf/nihms441968.pdf (Archived by WebCite® http://www.webcitation.org/6m3EAFS4c).
+              <li id="see13">Seedorff, M, Peterson, K.J., Nelsen, L.A., Cocos, C, McCormick, J.B., Chute, C.G. and Pathank, J. (2013). <a href="http://www.webcitation.org/6m3EAFS4c">Incorporating expert terminology and disease risk factors into consumer health vocabularies.</a> In Russ B. Altman, A. Keith Dunker, Larence Hunter, Tiffany Murray and Teri E. Klein, (Eds.). <em>Pacific Symposium on Biocomputing, 2013</em> (pp. 421-432). Singapore: World Scientific Publishing Co. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3587774/pdf/nihms441968.pdf (Archived by WebCiteï¿½ http://www.webcitation.org/6m3EAFS4c).
               </li>
               <li id="sem04">Semy, S. K., Pulvermacher, M. K., &amp; Obrst, L. J. (2004). <em>Toward the use of an upper ontology for U.S. government and U.S. military domains: an evaluation.</em> Bedford, MA: The MITRE Corporation. (Technical Report MTR 04B0000063)
               </li>
               <li id="sen13">Sen, S., Lam, S., Rashid, A.M., Cosley, D., Frankowski, D., Osterhouse, J.,...Heer, J. (2013). Identifying medical terms in patient-authored text: a crowdsourcing-based approach. <em>Journal of the American Medical Informatics Association, 20</em>(6),1120-1127.
               </li>
-              <li id="sin14">Singh, R. K. &amp; Singh, R. (2014). <a href="http://www.webcitation.org/6m2tklnFZ">Semantic Web development through ontology evolution.</a> <em>International Journal of Emerging Technology and Advanced Engineering, 4</em>(9), 280-290. Retrieved from http://www.ijetae.com/files/Volume4Issue9/IJETAE_0914_38.pdf. (Archived by WebCite® at http://www.webcitation.org/6m2tklnFZ).
+              <li id="sin14">Singh, R. K. &amp; Singh, R. (2014). <a href="http://www.webcitation.org/6m2tklnFZ">Semantic Web development through ontology evolution.</a> <em>International Journal of Emerging Technology and Advanced Engineering, 4</em>(9), 280-290. Retrieved from http://www.ijetae.com/files/Volume4Issue9/IJETAE_0914_38.pdf. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2tklnFZ).
               </li>
               <li id="smi97">Smith, B. (1997). An essay in mereotopology. In L. Hahn, (Ed.)., <em>The philosophy of Roderick Chisholm</em>. Chicago, LaSalle, IL: Open Court. (Library of Living Philosophers)
               </li>
               <li id="stu98">Studer, R., Benjamins, R. &amp; Fensel, D. (1998). Knowledge engineering: principles and methods. <em>Data and Knowledge Engineering, 25</em>(1-2), 161-197.
               </li>
-              <li id="tra09">Trant, J. (2009). <a href="http://www.webcitation.org/6m2vOskRj">Studying social tagging and folksonomy: a review and framework</a>. <em>Journal of Digital Information, 10</em>(1). Retrieved from http://journals.tdl.org/jodi/article/viewDownloadInterstitial/269/278 (Archived by WebCite® at http://www.webcitation.org/6m2vOskRj).
+              <li id="tra09">Trant, J. (2009). <a href="http://www.webcitation.org/6m2vOskRj">Studying social tagging and folksonomy: a review and framework</a>. <em>Journal of Digital Information, 10</em>(1). Retrieved from http://journals.tdl.org/jodi/article/viewDownloadInterstitial/269/278 (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2vOskRj).
               </li>
-              <li id="tur03">Turney, P. D. &amp; Littman, M. L. (2003). Measuring praise and criticism: inference of semantic orientation from association. <em>ACM Transactions on Information Systems, 21</em>(4), 315–346.
+              <li id="tur03">Turney, P. D. &amp; Littman, M. L. (2003). Measuring praise and criticism: inference of semantic orientation from association. <em>ACM Transactions on Information Systems, 21</em>(4), 315ï¿½346.
               </li>
-              <li id="nih97">U.S. <em>National Institutes of Health</em>, (1997) <em><a href="http://www.webcitation.org/6m2q1Wj0K">Acupuncture</a></em>. Bethesda, MD: National Library Medicine. Retrieved from https://consensus.nih.gov/1997/1997Acupuncture107html.htm (Archived by WebCite® at http://www.webcitation.org/6m2q1Wj0K).
+              <li id="nih97">U.S. <em>National Institutes of Health</em>, (1997) <em><a href="http://www.webcitation.org/6m2q1Wj0K">Acupuncture</a></em>. Bethesda, MD: National Library Medicine. Retrieved from https://consensus.nih.gov/1997/1997Acupuncture107html.htm (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2q1Wj0K).
               </li>
-              <li id="nlm16">U.S. <em>National Library of Medicine.</em> (2016). <em>SNOMED CT® in the UMLS®.</em> Bethesda, MD: National Library Medicine. Retrieved from https://www.nlm.nih.gov/healthit/snomedct/faq.html (Archived by WebCite® at http://www.webcitation.org/6m2rPJiEr).
+              <li id="nlm16">U.S. <em>National Library of Medicine.</em> (2016). <em>SNOMED CTï¿½ in the UMLSï¿½.</em> Bethesda, MD: National Library Medicine. Retrieved from https://www.nlm.nih.gov/healthit/snomedct/faq.html (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2rPJiEr).
               </li>
               <li id="nlm14">U.S. <em>National Library of Medicine.</em> (2014). <em>RxNorm</em>. Bethesda, MD: National Library Medicine. Retrieved from https://consensus.nih.gov/1997/1997Acupuncture107html.htmhttp://www.nlm.nih.gov/research/umls/rxnorm/.
               </li>
-              <li id="nlm12">U.S. <em>National Library of Medicine.</em> (2012). <em>2012AA consumer health vocabulary source information.</em> Bethesda, MD: National Library Medicine. Retrieved from https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CHV/ (Archived by WebCite® at http://www.webcitation.org/6m2qL5R03).
+              <li id="nlm12">U.S. <em>National Library of Medicine.</em> (2012). <em>2012AA consumer health vocabulary source information.</em> Bethesda, MD: National Library Medicine. Retrieved from https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CHV/ (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2qL5R03).
               </li>
               <li id="nlm99">U.S. <em>National Library Medicine.</em> (1999). <em>Medical subject headings (MeSH)</em>. Bethesda, MD: National Library Medicine.
               </li>
-              <li id="usc96">Uschold, M. &amp; Gruninger M. (1996). <a href="http://www.webcitation.org/6m2vhFzKM">Ontologies: principles, methods and applications.</a> <em>Knowledge Engineering Review, 11</em>(2),93–155. Retrieved from http://www.aiai.ed.ac.uk/publications/documents/1996/96-ker-intro-ontologies.pdf (Archived by WebCite® at http://www.webcitation.org/6m2vhFzKM).
+              <li id="usc96">Uschold, M. &amp; Gruninger M. (1996). <a href="http://www.webcitation.org/6m2vhFzKM">Ontologies: principles, methods and applications.</a> <em>Knowledge Engineering Review, 11</em>(2),93ï¿½155. Retrieved from http://www.aiai.ed.ac.uk/publications/documents/1996/96-ker-intro-ontologies.pdf (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2vhFzKM).
               </li>
-              <li id="vic97">Vickery, B. (1997). Ontologies. <em>Journal of Information Science, 23</em>(4), 277–288.
+              <li id="vic97">Vickery, B. (1997). Ontologies. <em>Journal of Information Science, 23</em>(4), 277ï¿½288.
               </li>
-              <li id="vyd14">Vydiswaran, V.G., Vinod, Mei, Q., Hanauer, D., Zheng, K. (2014). <a href="http://www.webcitation.org/6m2oC9RiL">Mining consumer health vocabulary from community-generated text.</a> In <em>Proceedings of the American Medical Informatics Association Annual Symposium (AMIA)</em> (pp. 1150-1159). Bethesda, MD: National Library of Medicine. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419967/ (Archived by WebCite® at http://www.webcitation.org/6m2oC9RiL).
+              <li id="vyd14">Vydiswaran, V.G., Vinod, Mei, Q., Hanauer, D., Zheng, K. (2014). <a href="http://www.webcitation.org/6m2oC9RiL">Mining consumer health vocabulary from community-generated text.</a> In <em>Proceedings of the American Medical Informatics Association Annual Symposium (AMIA)</em> (pp. 1150-1159). Bethesda, MD: National Library of Medicine. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419967/ (Archived by WebCiteï¿½ at http://www.webcitation.org/6m2oC9RiL).
               </li>
-              <li id="who11">World Health Organization. (2011). <em><a href="http://www.webcitation.org/6m33sFdK8">Health literacy and health behavior.</a></em> Geneva: World Health Organization. Retrieved from http://www.who.int/healthpromotion/conferences/7gchp/track2/en/. (Archived by WebCite® at http://www.webcitation.org/6m33sFdK8).
+              <li id="who11">World Health Organization. (2011). <em><a href="http://www.webcitation.org/6m33sFdK8">Health literacy and health behavior.</a></em> Geneva: World Health Organization. Retrieved from http://www.who.int/healthpromotion/conferences/7gchp/track2/en/. (Archived by WebCiteï¿½ at http://www.webcitation.org/6m33sFdK8).
               </li>
               <li id="who01">World Health Organization. (2001). <em>International classification of functioning, disability and health (ICF)</em>. Geneva: World Health Organization.
               </li>
@@ -726,17 +713,11 @@
               </li>
               <li id="yan06">Yanbe, Y., Jatowt, A., Nakamura, S., &amp; Tanaka, K. (2006). Can social bookmarking enhance search in the Web? In <em>Proceedings of the 7th ACM/IEEE-CS Joint Conference on Digital Libraries</em> (pp. 107-116). New York, NY: ACM.
               </li>
-              <li id="zen01">Zeng Q, Kogan S, Ash N, Greenes R. (2001). Patient and clinician vocabulary: how different are they? <em>Studies in Health Technology and Informatics, 84</em>(1), 399–403.
+              <li id="zen01">Zeng Q, Kogan S, Ash N, Greenes R. (2001). Patient and clinician vocabulary: how different are they? <em>Studies in Health Technology and Informatics, 84</em>(1), 399ï¿½403.
               </li>
-              <li id="zie03">Zielstorff, R.D. (2003). Controlled vocabularies for consumer health. <em>Journal of Biomedical Informatics. 36</em>(4–5), 326–333.
+              <li id="zie03">Zielstorff, R.D. (2003). Controlled vocabularies for consumer health. <em>Journal of Biomedical Informatics. 36</em>(4ï¿½5), 326ï¿½333.
               </li>
             </ul>
-          </fieldset>
-        </form>
-      </section>
-    </article>
-    <footer>     
-      <hr />
-    </footer>
+      
   </body>
 </html>

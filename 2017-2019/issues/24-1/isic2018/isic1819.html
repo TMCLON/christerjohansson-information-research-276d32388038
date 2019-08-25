@@ -1,0 +1,463 @@
+<!doctype html>  
+<html lang="en">  
+  <head>  
+    <title>An investigation into Scottish teenagers’ information literacy and search skills</title>  
+    <meta charset="utf-8" />
+    <link href="../../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
+
+    <!--Enter appropriate data in the content fields-->  
+    <meta name="dcterms.title" content="An investigation into Scottish teenagers’ information literacy and search skills" />  
+ 
+<meta name="citation_author" content="Brazier, David" />
+<meta name="citation_author" content="Walton, Geoff" />
+<meta name="citation_author" content="Harvey, Morgan" />
+
+
+    <meta name="dcterms.subject" content="This paper presents the results of a study investigating the information literacy and search skills of young people in Scotland. " />  
+    <meta name="description" content="This paper presents the results of a study investigating the information literacy and search skills of young people in Scotland. The participants, secondary school pupils between the ages of 13 and 14 (n=57), completed two out of four different search tasks from the TREC HARD collection, for which the correct answers (i.e. relevant documents) were known. Their interactions with the search system were logged and information about their own perceptions of the task were collected through pre- and post-task questionnaires. The log data from the search system was analysed using the R statistical software package to understand the performance and behaviour of the participants when conducting the search tasks. While we identified some evidence that information literacy and search skills were being employed, overall performance was low with participants often unable to produce successful queries and/or unable to identify relevant documents, even when some were present in the results. Despite assessing their own performance as being good, the pupils struggled to formulate good quality queries to assess documents for relevance, frequently selecting non-relevant sources. Search performance and ability to identify relevant information was generally poor, a fact that participants themselves were frequently unable to recognise. The results also suggest a reliance on complex search assistance tools (such as spell checking and query suggestions), which are common features of major search engines, but not of smaller systems, which pupils are also likely to have to use. Despite the pupils having been giving some information literacy training in the previous year, the results suggest that more needs to be done to help school pupils in searching for and assessing relevant source documents." />  
+    <meta name="keywords" content="information behaviour, information literacy, user studies, youth" />
+
+    <!--leave the following to be completed by the Editor-->  
+    <meta name="robots" content="all" />  
+    <meta name="dcterms.publisher" content="University of Borås" />
+    <meta name="dcterms.type" content="text" />  
+    <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+    <meta name="dcterms.identifier" content="http://InformationR.net/ir/24-1/isic2018/isic1819.html" />  
+    <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/24-1/infres241.html" />  
+    <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+    <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+    <meta  name="dcterms.issued" content="2019-03-15" /> 
+    <meta name="geo.placename" content="global" />  
+  </head> 
+
+  <body> 
+    <header>
+      <img height="45" alt="header" src="../../mini_logo2.gif"  width="336" /><br />
+      <span style="font-size: medium; font-variant: small-caps; font-weight: bold;">published quarterly by the University of Bor&aring;s, Sweden<br /><br />vol. 24  no. 1, March, 2019</span>
+      <br /><br />
+      <div class="button">
+      <ul>
+      <li><a href="isic2018.html">Contents</a> |  </li>
+      <li><a href="../../iraindex.html">Author index</a> |  </li>
+      <li><a href="../../irsindex.html">Subject index</a> |  </li>
+      <li><a href="../../search.html">Search</a> |  </li>
+      <li><a href="../../index.html">Home</a> </li>
+      </ul>
+      </div>
+      <hr />
+      Proceedings of ISIC: The Information Behaviour Conference, Krakow, Poland, 9-11 October, 2018: Part 2.
+      <hr />
+    </header>
+
+    <article>
+      <h1>An investigation into Scottish teenagers’ information literacy and search skills</h1>  <br />  
+      <h2 class="author">
+        <a href="#author">David Brazier</a>, <a href="#author">Geoff Walton</a> and <a href="#author">Morgan Harvey</a>
+      </h2>  
+
+      <br /> 
+
+      <blockquote>
+        <strong>Introduction</strong>.  This paper presents the results of a study investigating the information literacy and search skills of young people in Scotland. <br />
+        <strong>Method</strong>.  The participants, secondary school pupils between the ages of 13 and 14 (n=57), completed two out of four different search tasks from the TREC HARD collection, for which the correct answers (i.e. relevant documents) were known. Their interactions with the search system were logged and information about their own perceptions of the task were collected through pre- and post-task questionnaires. <br />
+        <strong>Analysis</strong>. The log data from the search system was analysed using the R statistical software package to understand the performance and behaviour of the participants when conducting the search tasks. <br />
+        <strong>Findings</strong>. While we identified some evidence that information literacy and search skills were being employed, overall performance was low with participants often unable to produce successful queries and/or unable to identify relevant documents, even when some were present in the results. Despite assessing their own performance as being good, the pupils struggled to formulate good quality queries to assess documents for relevance, frequently selecting non-relevant sources. <br />
+        <strong>Conclusion</strong>. Search performance and ability to identify relevant information was generally poor, a fact that participants themselves were frequently unable to recognise. The results also suggest a reliance on complex search assistance tools (such as spell checking and query suggestions), which are common features of major search engines, but not of smaller systems, which pupils are also likely to have to use. Despite the pupils having been giving some information literacy training in the previous year, the results suggest that more needs to be done to help school pupils in searching for and assessing relevant source documents.
+      </blockquote>    
+
+      <br /> 
+
+      <section>
+
+        <h2>Introduction</h2> 
+
+        <p>The use of web search is now ubiquitous in daily life, whether from a work, study or social perspective, it is a constant aid in the quest for everyday information seeking. Many governments and local authorities increasingly offer their services, sometimes exclusively, through online means (<a href="#hel09">Helbig, Gil-Garc&iacute;a and Ferro, 2009</a>). While this may lead to several benefits, there is concern about the expectation this places on people's information literacy and search skills. Is the use and reliance on assistive functionality luring users into a false sense of security and lessening the likelihood of the user employing information literacy skills to build good queries and assess the documents returned? And do information providers assume too much ability on the part of their end-users to search for, understand, evaluate and synthesise the information provided. Information literacy is a lifelong learning process that provides the skills, knowledge and understanding required to ensure informed decision making and effective problem-solving (<a href="#she14">Shenton and Pickard, 2014</a>). These abilities are so crucial that many governmental organisations and politicians assert that they are essential to be able to participate effectively in our modern information society (<a href="#stu10">Sturges and Gastinger, 2010</a>). Within education, such skills are perhaps even more crucial, as pupils are often given tasks that necessitate these abilities and are first introduced to these concepts in school. To write a report one must identify the information required, use effective search strategies to locate relevant documents, evaluate the quality and veracity of these and, finally, synthesise the information by converting it into a coherent narrative (<a href="#eis90">Eisenberg and Berkowitz, 1990</a>).</p>
+
+        <p>Unfortunately, evidence suggests that <em>millennials, </em>who will soon form the majority of the workforce, are not as information literate as one might expect and that the steps taken in education systems are not ensuring school leavers are equipped with these valuable skills (<a href="#pic13">Pickard, Shenton and Furness, 2013</a>;<a href="#pic14"> Pickard, Shenton and Johnson, 2014</a>). Research shows that pre-university students are unable to construct effective search queries (<a href="#har12">Harrop and Seddon, 2012</a>), rarely employ effective search strategies (<a href="#coi07">Coiro and Dobler, 2007</a>) and are easily discouraged when a search engine does not immediately return useful results. They feel swamped by non-relevant and poor-quality material, leading them to often simply cite/copy top-ranked resources without assessing their quality (<a href="#smi07">Smith and Hepworth, 2007</a>; <a href="#bar11">Bartlett and Miller, 2011</a>). While this is certainly not an issue that pertains only to millennials/young people, school presents an excellent opportunity to help people to develop such crucial skills before they enter the world of work and before they have adult responsibilities. This is a problem that needs to be countered early on in a child's development as some research questions whether student information behaviours can be changed once they enter higher education (<a href="#row08a">Rowlands and Nicholas, 2008</a>). Therefore, it is crucial that pupils be taught these skills early in their educational lives and be encouraged to apply them throughout. Miller and Barlett (<a href="#mil12">2012</a>, p. 50), in their survey of 509 teachers found &lsquo;overwhelming support from the teaching community itself for the more prominent teaching of the ability to &lsquo;critically assess and understand different sources of online information&rsquo;.</p>
+
+        <p>In this work we investigate the information literacy and search skills of young people at an important stage in their education &ndash; shortly before they embark on their first set of major examinations. Unlike previous work, we evaluate this primarily based on quantitative data obtained from a large-scale user study (n=57) with participants from a large secondary school in greater Edinburgh, Scotland. We follow a well-tested methodology from the field of Information Retrieval to ensure that the studies are repeatable, representative and, crucially, in-context.</p>
+
+        <h3>Related work</h3>
+
+        <p>There has been considerable research into the search behaviours of children over the past twenty years, with studies focusing on children&rsquo;s search behaviours whilst using the web directory Yahooligans! (<a href="#bil00">Bilal, 2000</a>; <a href="#bil02">2002</a>), adoption of search roles during the search process (<a href="#dru09">Druin <em>et al.</em>, 2009</a>), behaviours extracted from large scale query logs (<a href="#dua10">Duarte Torres, Hiemstra and Serdyukov, 2010</a>; <a href="#dua11">Duarte Torres and Weber, 2011</a>), Internet searching on complex problems (<a href="#sch98">Schacter, Chung and Dorr, 1998</a>), and adolescent search roles (<a href="#fos13">Foss <em>et al</em>., 2013</a>).</p>
+
+        <p>Bilal&rsquo;s contribution to the investigation into children&rsquo;s search behaviours has been extensive, with several works focused on children&rsquo;s interactions with Yahooligans when conducting various task types (<a href="#bil00">2000</a>; <a href="#bil02">2002</a>). In these studies, a mixed methods approach collected quantitative data on the interactions with and traversal of the search interface while post study interviews were used to collect qualitative data on student&rsquo;s task generation, task preference and search interface opinion. These studies found that they preferred completing their own self- generated tasks, were more successful when browsing then when using keyword search and that the search interface design was confusing to most, and were a factor in the search breakdown experienced by the children. Although seminal in their contribution, the study data were collected in 1998, a limitation noted by the author in these papers a few years later.</p>
+
+        <p>More recently, Bilal investigated the reading level of Google&rsquo;s search results (<a href="#bil13">2013</a>) by comparing them to the Flesch readability formulae, finding that a high number of results retrieved by Google were difficult or confusing to children attending middle school in the US. This paper compliments Bilal&rsquo;s findings by describing the effects that reading snippets, a short description of the documents content, has on the number of documents bookmarked and its effects on performance.</p>
+
+        <p>Duarte Torres and colleagues have observed large scale query logs to extract children&rsquo;s search behaviours and tested for rational sentiment in their search queries through the presence or absence of sentiment in the terms utilised (<a href="#dua10">2010</a>; <a href="#dua11">2011</a>). Owing to the large scale of the studies and the numbers of participants, this approach is useful in providing generalizable results, however, it lacks specific context and makes some (well-reasoned) assumptions as a result of eliciting sentiment. Although understandable given the nature of the data collection, this paper builds on this work by focusing on more specific contextual effects on query formulation and semantic notion towards the tasks performed.</p>
+
+        <p>Children are able to identify information overload as a potential problem of Internet search and have the ability to self-identify their skills shortage when it comes to refining search terms, which in turn leads to frustration, despite receiving information skills training, albeit <em>in isolation and not related to topic work </em>(<a href="#smi07">Smith and Hepworth, 2007</a>, p. 9). This paper seeks to further investigate these areas, through participant responses reflecting on these points as part of the pre and post questionnaire.</p>
+
+        <p>Coiro and Doblers&rsquo; paper on reading comprehension of online texts identified that when given a typical school-based task that is, <em>to locate, evaluate and synthesize content area information within informational websites and search engines </em>(<a href="#coi07">2007</a>, p. 221), prior knowledge, inferential reasoning strategies and self-regulated reading processes were required by students to ensure successful online reading. Rowlands <em>et al</em>. (<a href="#row08b">2008</a>) identified that children under thirteen are <em>unable to construct effective searches and evaluate the results </em>(p.22), largely attributable to knowledge deficiency of domain specific information, a lack of understanding of how search engines work, difficulties in switching between the use of natural language and search queries, and a limited command of vocabulary to utilise synonyms for query reformulation. Also mentioning that young people have difficulty in selecting sufficient search terms, fail to evaluate information from an electronic source, and declined to undertake additional searches if information was already found, (<a href="#row08b">Rowlands <em>et al</em>., 2008</a>). Rowlands goes on to state the need for more research around young people&rsquo;s research information behaviours. This paper builds on these foundations by investigating the information literacy skills of Scottish secondary school students.</p>
+
+      </section>
+      <section>
+
+        <h2>Methodology and data collection</h2>
+
+        <p>The study employs quantitative analysis of secondary school-aged (ages 13-14) children&rsquo;s search behaviour through analysis of logs from a series of 30-minute information retrieval tasks, triangulated with qualitative assessments of the participants&rsquo; own behaviour. This methodology is common in the field of information retrieval as it provides an unbiased and repeatable environment in which performance and behaviour can be exhaustively logged and evaluated. Furthermore, rather than simply asking students to abstractly comment on their information literacy skills, this study gives participants an in-context work task to perform, allowing us to evaluate their responses to this in a more naturalistic fashion.</p>
+
+        <p>We obtained permission to run our studies with pupils in year 3 (ages 13-14) at a large mixed- intake secondary school in the city of Edinburgh, Scotland. More details about the participants and recruitment are given later in this paper. Each pupil was given a desktop computer and asked to complete two information retrieval tasks (or <em>topics</em>) randomly selected from a set of four. The tasks were taken from the 2005 TREC HARD collection, which provides a complete set of 100 topics, each of which is presented as a title and short description of the information need. The school&rsquo;s librarian and a selection of teachers were asked to reduce these to four topics based on topic suitability and perceived interest for the target demographic. The final four topics selected were:</p>
+
+        <ul>
+        <li>347 - wildlife extinction;</li>
+        <li>353 - Antarctica exploration;</li>
+        <li>367 &ndash; piracy;</li>
+        <li>408 - tropical storms.</li>
+        </ul>
+
+        <p>Pupils used a bespoke search system to collect a small set of relevant documents for each of their two tasks over a time-constrained period of between fifteen minutes and half an hour. The search system was designed to be similar in design to those the pupils are likely to be familiar with (e.g. Google search) and is therefore composed of the standard search bar and button with results presented as a list of 10 blue links with associated <em>snippets </em>of text (see <em>Figure 1</em>). The entire user study was conducted using the search system, which logged all of the pupils&rsquo; interactions, including queries entered, documents read and documents selected (<em>bookmarked</em>).</p>
+
+        <figure class="centre">
+        <img src="../../figs/isic1819fig1.png" width="410" height="339" alt="Figure 1: The zing search interface
+        " />
+        <figcaption><br />Figure 1: The <em>zing </em>search interface</figcaption>
+        </figure>
+
+
+        <p>The documents were taken from the TREC AQUAINT collection, a set of over a million documents from three large news agencies collected between 1996 and 2000. This is a complete information retrieval evaluation collection, meaning that there are pre-defined search topics associated with it together with relevance judgements for each of these topics. Relevance judgements are per-topic evaluations indicating which documents in the collection are relevant, and which aren't. Such a collection can be used to evaluate the performance of a new retrieval system or, crucially in this case, the search performance of users.</p>
+
+        <p>Participants filled in pre- and post-task questionnaires in which they self-assessed various elements related to search. Pre-task questions included those related to familiarity with and interest in the topics and expected difficulty in completing the tasks. Post-task questions focused on perceived learning and search success and trust in the retrieved documents. For each topic, the participants were asked to imagine that they would be writing a report about it soon and needed to collect some relevant documents to help them in doing so. Documents in search results could be <em>bookmarked </em>(i.e. indicated as relevant) by means of checkboxes.</p>
+
+        <p>To obtain additional qualitative data from participants about their search behaviour and strategies, at the end of each session four participants, who all had one topic in common, were chosen at random by the system and were each asked by the research a question about their earlier search behaviour. Participants were shown either: their own search queries for one of the topics they had been given and asked how they came up with the search terms; or a document they had bookmarked and asked what made them choose that specific document. The assignment of questions to participants and a recording of the comments they each made was done by a bespoke web application, which ran on an iPad device.</p>
+
+        <p>The user study was piloted in October 2017 by a small number of participants (n=12) before proceeding with the full experiments in November and December 2017. Studies were performed with groups of up to fifteen students at a time over five separate sessions in one of the school&rsquo;s dedicated IT rooms.</p>
+        <h3>Measures and metrics</h3>
+
+        <p>Performance can be determined in a number of ways:</p>
+        <p>The quality of the participants&rsquo; queries can be assessed by means of the total number of <em>hits</em>, which is the number of relevant documents appearing within the 10 search results, and the average precision of the search results. Precision is defined as simply the number of relevant documents returned divided by the count of all documents returned (i.e. both relevant and non-relevant).</p>
+        <p>This is calculated for all of the positions in the search ranking (positions 1 through 10) and averaged to produce the <em>average precision</em>.</p>
+
+        <p>The ability of the participants to identify relevant documents can be determined by the number of relevant documents they managed to bookmark (select) per topic and, like the precision above, the ratio of relevant documents bookmarked over the total number bookmarked for each topic.</p>
+        <p>All pre- and post-task questionnaire responses are based on a 5-point Likert scale in ascending order of agreement from 1 (disagree) to 5 (agree).</p>
+
+        <h3>Analysis</h3>
+
+        <p>Quantitative data analysis consisted of descriptive statistics, Wilcoxon signed rank testing and linear model regression to examine the relationships between the research variables using the statistical software package R.</p>
+
+      </section>
+
+      <section>
+        <h2>Findings</h2>
+
+        <h3>Study participants</h3>
+
+        <p>This purposive sample of participants was recruited by the secondary school&rsquo;s librarian who asked all of the pupils in year 3 (total=204; aged between 13 and 14) to participate. This year group was primarily chosen as they had all completed a short course on information literacy, taught by the librarian, around one year prior to these studies taking place. This course was delivered in 1-hour sessions over the period of around a month and focussed on how to generate effective search queries. The pupils&rsquo; performance in this study gives some indication of how effective that training was and how well they have remembered the skills they learned. A consent form was given to each pupil to take home to be signed by their legal guardian before any involvement in the study could take place. In total, 60 pupils were able to take part in the experiments, however, some data loss occurred during the transition process from data collection to data cleaning, three users&rsquo; search data were either unavailable or incomplete resulting in a final study population of fifty-seven (n=57), representing 28% of the entire year group.</p>
+
+        <p>The only demographic data recorded for each participant was their Scottish Index of Multiple Deprivation (SIMD) vigintile ranking. The SIMD is a &lsquo;<em>tool for identifying areas of poverty and inequality across Scotland</em>&rsquo; (<a href="#sco16">Scottish Government, 2016</a>, p. 2) and considers multiple indicators of deprivation (Income; Employment; Education; Health; Access to Services; Crime and Housing) which are grouped together. Areas of Scotland are split into data zones with roughly 760 people per zone. The data zones were then split into 20 groups (vigintiles), each containing 5% of Scotland&rsquo;s data zones. Vigintile 1 contains the 5% most deprived data zones, vigintile 2 the second most deprived 5% and so on, until vigintile 20 contains the least deprived 5%. This facilitates the identification of deprived areas, although it must be noted that &lsquo;<em>not all deprived people live in deprived areas&rsquo; </em>and &lsquo;<em>not everyone within a deprived area is deprived&rsquo; </em>(<a href="#sco16">Scottish Government, 2016</a>, p. 7).</p>
+
+        <p>The average SIMD ranking for the study participants was 17.5, with a range of 18, putting this group within the 87.5 percentile of Scotland on average or within the range of 10% of the most deprived and 5% of the least deprived areas. The participants were divided into groups based on the SIMD ranking by quartiles, with those in the first quartile scoring a SIMD ranking of nine or less, and those in the third quartile scoring nineteen or above. The aim of this grouping being to facilitate comparison across deprivation areas by performance and behavioural metrics.</p>
+        <h3>Pre-task knowledge, interest and perceptions of task</h3>
+
+        <p>Participants generally reported a low level of pre-study understanding of the topics - 2.35 on average. Interest in most of the topics was reasonably high at 2.94, suggesting that the topics selected were appropriate for the age group and of at least some interest. This is important as a lack of interest tends to result in a lack of engagement, therefore we can expect the relatively high levels of interest here to translate into a greater likelihood that pupils will engage fully with the search tasks. The level of clarity on how to complete the task was high at 3.85, indicating that most participants understood what they were being asked to do. Perceptions of how difficult it would be to find relevant documents and the overall task difficulty were 2.71 and 2.88 respectively, while the difficulty in knowing when to decide enough information had been found was reasonably high at 3.14.</p>
+
+        <p>The highest prior knowledge was for topic 347 (wildlife extinction; mean=2.88) and least for topic 353 (Antarctica exploration; mean=1.96). Interest was also reasonably high for three out of the four tasks, ranging from 3 to 3.38, although there was considerably less interest in topic 367 (piracy; mean=2.41). Participants noted it was quite clear what was required to complete the task for each topic with 353 the highest at 4.000 and 347 the least at 3.625. Judging whether they thought the task would be difficult, participants noted that topic 367 would be reasonably difficult at 3.2 with the other three topics approximately moderate in difficulty. Finding relevant documents was expected to be moderately difficult for all topics with topic 367 at 2.862 and 353 a close second at 2.833.</p>
+
+        <h3>Querying performance</h3>
+
+        <p>Overall performance was low with a median average precision of just 0.008 and a mean of 0.05. In terms of number of hits, the median number was only 1 and, out of a total of 600 queries, more than a third (227) returned not a single relevant result.</p>
+        <p>By topic (see Table 1), performance was low across all tasks, but particularly for topic 353 for which the median number of hits was 0. The reasons for this are discussed later.</p>
+
+
+        <table class="center" style="width:60%;">
+        <caption><br />Table 1: Average precision by topic</caption>
+        <tbody>
+        <tr><th rowspan="2">Topic</th><th colspan="3">Average Precision</th><th colspan="3">Hits</th>
+        </tr><tr><td style='text-align:left;'>Median</td><td style='text-align:left;'>Mean</td><td style='text-align:left;'>SD</td><td style='text-align:left;'>Median</td><td style='text-align:left;'>Mean</td><td style='text-align:left;'>SD</td>
+        </tr><tr><td>347 – Wildlife extinction</td><td style='text-align:left;'>0.05</td><td style='text-align:left;'>0.08</td><td style='text-align:left;'>0.69</td><td style='text-align:left;'>3</td><td style='text-align:left;'>2.54</td><td style='text-align:left;'>1.87</td>
+        </tr><tr><td>353 – Antarctica exploration</td><td style='text-align:left;'>0.00</td><td style='text-align:left;'>0.009</td><td style='text-align:left;'>0.02</td><td style='text-align:left;'>0</td><td style='text-align:left;'>0.38</td><td style='text-align:left;'>0.73</td>
+        </tr><tr><td>367 – Piracy</td><td style='text-align:left;'>0.02</td><td style='text-align:left;'>0.07</td><td style='text-align:left;'>0.1</td><td style='text-align:left;'>1</td><td style='text-align:left;'>2</td><td style='text-align:left;'>2.36</td>
+        </tr><tr><td>408 – Tropical storms</td><td style='text-align:left;'>0.02</td><td style='text-align:left;'>0.06</td><td style='text-align:left;'>0.07</td><td style='text-align:left;'>1</td><td style='text-align:left;'>2.12</td><td style='text-align:left;'>1.92</td>
+        </tr></tbody>
+        </table>
+
+
+
+        <p>Previous research has suggested that young people tend to over-estimate their information seeking and literacy skills (<a href="#pic14">Pickard <em>et al</em>., 2014</a>). As Bilal writes: &lsquo;<em>Although all children admitted an understanding of the search task&hellip;most of them were still unclear as to the type of information sought</em>&rsquo; (<a href="#bil00">Bilal, 2000</a>). It is clear from the pre-task questionnaire results that our participants were also quite confident in their ability to complete the tasks, however, this confidence is not really warranted, given their poor querying performance.</p>
+
+        <p>Task fatigue was anecdotally observed by the researcher after just one task, we therefore compare the average precision of each topic by the order in which they were completed (see Table 2). There was slightly better performance in sequence 1 topics, however differences are marginal, and still very poor overall, mean = 0.054 (sequence one) vs. 0.045 (sequence two). These differences are not significant (p=0.1319), although it is notable that the most difficult topic (353) displays the largest drop in performance.</p>
+
+
+        <table class="center" style="width:30%;">
+        <caption><br />Table 2: Average precision by sequence per topic</caption>
+        <tbody>
+        <tr><th>Topic</th><th>Seq 1</th><th>Seq 2</th>
+        </tr><tr><td>347 – Wildlife extinction</td><td style='text-align:left;'>0.090</td><td style='text-align:left;'>0.073</td>
+        </tr><tr><td>353 – Antarctica exploration</td><td style='text-align:left;'>0.012</td><td style='text-align:left;'>0.005</td>
+        </tr><tr><td>367 – Piracy</td><td style='text-align:left;'>0.080</td><td style='text-align:left;'>0.057</td>
+        </tr><tr><td>408 – Tropical storms</td><td style='text-align:left;'>0.053</td><td style='text-align:left;'>0.060</td>
+
+        </tr></tbody>
+        </table>
+
+        <p>By topic, users performed best in topic 347 and worst in 353 in both the first and second sequence, and with the exception of topic 408, which had an increase, there was a decline in average precision in the second sequence. These differences were not significant (p-value = 0.1319).</p>
+
+        <p>Performance between SIMD quartiles is approximately equal with the median average precision at 0.01 for both quartiles and the mean 0.045 and 0.052 for the first and fourth quartiles respectively (p = 0.998). The mean number of hits was 1.61 and 1.72 for the first and fourth quartiles. When performance across topics is compared (see below), there are some interesting, albeit not significant, differences. Performance by the fourth quartile is much higher for topic 347 than for those in the first quartile and is higher than in any other topic.</p>
+
+        <table class="center" style="width:30%;">
+        <caption><br />Table 3: Average precision by quartiles across topics</caption>
+        <tbody>
+        <tr><th>Topic</th><th>Q1</th><th>Q4</th>
+        </tr><tr><td>347 – Wildlife extinction</td><td style='text-align:left;'>0.03</td><td style='text-align:left;'>0.105</td>
+        </tr><tr><td>353 – Antarctica exploration</td><td style='text-align:left;'>0.011</td><td style='text-align:left;'>0.013</td>
+        </tr><tr><td>367 – Piracy</td><td style='text-align:left;'>0.062</td><td style='text-align:left;'>0.08</td>
+        </tr><tr><td>408 – Tropical storms</td><td style='text-align:left;'>0.064</td><td style='text-align:left;'>0.058</td>
+        </tr></tbody>
+        </table>
+
+        <p>These analyses suggest that the pupils from the fourth quartile SIMD band (i.e. those likely to be from wealthier backgrounds) are able to perform slightly better than those from the lowest quartile, especially when the topic is well known and interesting.</p>
+
+        <h3>Bookmarks and reading</h3>
+
+        <p>When determining performance, we can also consider per query how many relevant documents the participants were able to identify (bookmark) and how many they read. In general, participants did not manage to bookmark or read very many documents &ndash; on average they only bookmarked 0.97 and read 1.6 documents per query. Of those that they did choose to bookmark or read, only 36.3 and 23 percent were actually relevant.</p>
+
+        <table class="center" style="width:50%;">
+        <caption><br />Table 4: Bookmarked and read documents by topic</caption>
+        <tbody>
+        <tr><th>Measure</th><th>Q1</th><th>Q4</th>
+        </tr><tr><td># bookmarked</td><td style='text-align:left;'>1.03</td><td style='text-align:left;'>1.0</td>
+        </tr><tr><td># read</td><td style='text-align:left;'>1.58</td><td style='text-align:left;'>1.66</td>
+        </tr><tr><td># relevant bookmarked (ratio)</td><td style='text-align:left;'>0.36 (0.35)</td><td style='text-align:left;'>0.38 (0.38)</td>
+        </tr><tr><td># relevant read (ratio)</td><td style='text-align:left;'>0.4 (0.26)</td><td style='text-align:left;'>0.33 (0.2)</td>
+
+
+        </tr></tbody>
+        </table>
+
+        <p>Table 4 shows how these behaviours and the performance varied by topic, again indicating that the pupils found topic 353 to be particularly difficult, only managing to bookmark a relevant document 11% of the time. Equally notable, however, is relatively how well they performed on topic 367 where 63% of the documents they chose to bookmark were relevant.</p>
+
+
+        <table class="center" style="width:30%;">
+        <caption><br />Table 5: Bookmarked and read documents by quartile</caption>
+        <tbody>
+        <tr><th>Topic</th><th>Q1</th><th>Q4</th>
+        </tr><tr><td>347 – Wildlife extinction</td><td style='text-align:left;'>0.03</td><td style='text-align:left;'>0.105</td>
+        </tr><tr><td>353 – Antarctica exploration</td><td style='text-align:left;'>0.011</td><td style='text-align:left;'>0.013</td>
+        </tr><tr><td>367 – Piracy</td><td style='text-align:left;'>0.062</td><td style='text-align:left;'>0.08</td>
+        </tr><tr><td>408 – Tropical storms</td><td style='text-align:left;'>0.064</td><td style='text-align:left;'>0.058</td>
+        </tr></tbody>
+        </table>
+
+
+        <p>Overall, the Q4 pupils read more documents but were also more likely to read a non-relevant document, however, while they tended to bookmark slightly less often, they were more accurate in doing so. 38% of the bookmarks by the 4th quartile pupils were relevant, while only 35% of those bookmarked by the 1st quartile pupils were relevant. Although not entirely conclusive, this suggests that the 4th quartile were able to use the information gained from their extra reading of documents to more accurately determine which were relevant.</p>
+
+        <h3>Task time</h3>
+
+        <p>On average, participants spent 472.5 seconds (7.88 minutes; median = 535 seconds / 8.92 minutes) completing each task. This varied between a minimum of 80 seconds and a maximum of 884 seconds (14.73 minutes). Duration by topic was broadly the same, although participants did tend to spend slightly longer on topic 408 (<em>tropical storms</em>; median = 573s) and slightly less time on topic 347 (<em>wildlife extinction</em>; median = 493). Unsurprisingly, participants generally spent less time on their second topic (461 seconds) than on their first (494.3 seconds). There was very little difference in terms of topic duration between 1st and 4th SIMD quartile pupils (median = 562 and 561 seconds respectively).</p>
+
+        <h3>Query formulation</h3>
+
+        <p>Research has shown that search experts (who achieve excellent performance from search systems) typically formulate queries that have consistent characteristics. Their submitted queries are quite long, being composed of multiple keyword terms, use domain-specific vocabulary, are correctly spelt and tend not to copy text verbatim from the information need/TREC topic (<a href="#har15">Harvey , Hauff and Elsweiler, 2015</a>). Furthermore, they often submit multiple query reformulations, learning from the results of their earlier queries to improve their success/performance (<a href="#aul05">Aula, Jhaveri and Kaki, 2005</a>; <a href="#whi07">White and Morris, 2007</a>). In this section we consider the characteristics of the pupils&rsquo; queries to understand how (dis)similarly they are behaving to expert users.</p>
+
+        <h4>Query complexity</h4>
+
+        <p>Participants submitted an average of 5.4 queries per topic (median=4), although one particularly keen pupil submitted a very large number of 25 queries for a single topic. This is somewhat less than reported in other studies by Duarte Torres <em>et al</em>. (8.76 queries; Duarte Torres <em>et al</em>., 2010) and Bilal&rsquo;s study of children&rsquo;s use of Yahooligans! (6.7 queries; Bilal, 2002). Users have been found to become discouraged when a search engine does not immediately return good results (<a href="#pic14">Pickard <em>et al</em>., 2014</a>). Since our search system excluded features such as spelling autocorrection and suggested queries by design, this could go some way to explaining the lower number of queries we observed.</p>
+
+        <p>The average query length was 3.5 terms (median=3), which is approximately equal to other studies, which report an average between 2.84 and 3.23 (<a href="#dua10">Duarte Torres <em>et al</em>., 2010</a>; <a href="#dua11">Duarte Torres and Weber, 2011</a>). The average character length was 24.9 (median=22) characters, which is slightly longer than those of the 13 to 15 year olds&rsquo; queries in the Duarte Torres and Weber paper (<a href="#dua11">2011</a>), which reported 17.67 characters for the non-navigational task. Linear modelling confirms that longer, more specific queries result in better performance &ndash; both the number of query terms and the character length of queries are strong predictors of result quality in terms of both number of hits and average precision. An increase in query length of a single term yields an expected 0.012 improvement in average precision (p&lt;&lt;0.01) and the addition of 0.42 extra hits (p&lt;&lt;0.01).</p>
+        <p>Topics 347 and 408 had longer queries, with more characters and more time spent formulating those queries, while queries for topic 367 were noticeably shorter and less time was spent on this topic. Analysis of linear models indicates that pre-task interest in the topic has a significant impact on the term (coef.=0.15, p = 0.04) and character length (coef.=1.87, p&lt;&lt;0.01) of the queries submitted for that topic. This suggests that the participants spent more time thinking about and formulating the terms that made up their queries for those topics they were interested in.</p>
+
+        <table class="center" style="width:50%;">
+        <caption><br />Table 6: Querying statistics by topic (median values)</caption>
+        <tbody>
+        <tr><th>Topic</th><th># terms</th><th># chars</th><th># queries</th><th>Duration (s)</th>
+        </tr><tr><td>347 – Wildlife extinction</td><td style='text-align:left;'>4</td><td style='text-align:left;'>24</td><td style='text-align:left;'>3</td><td style='text-align:left;'>54.5</td>
+        </tr><tr><td>353 – Antarctica exploration</td><td style='text-align:left;'>3</td><td style='text-align:left;'>22</td><td style='text-align:left;'>4</td><td style='text-align:left;'>38.5</td>
+        </tr><tr><td>367 – Piracy</td><td style='text-align:left;'>3</td><td style='text-align:left;'>19</td><td style='text-align:left;'>4</td><td style='text-align:left;'>33</td>
+        </tr><tr><td>408 – Tropical storms</td><td style='text-align:left;'>4</td><td style='text-align:left;'>26</td><td style='text-align:left;'>4</td><td style='text-align:left;'>44</td>
+
+        </tr></tbody>
+        </table>
+
+        <p>Although not significant, participants in the 4th SIMD quartile tended to submit longer queries than those in the 1st quartile (mean of 3.7 terms against 3.2 terms) and spent longer querying (mean duration of 62.3s against 57.7s).</p>
+
+        <h4>Mistakes, use of advanced search and off-topic queries</h4>
+
+        <p>The instance of mistakes (mostly misspellings) was high at 118 or 18.89% of all of the 625 queries, which is a larger proportion than has been found previously - Bilal observed 2% of mistakes (<a href="#bil02">Bilal, 2002</a>). A considerable proportion of these were due to the participants incorrectly spelling &lsquo;<em>Antarctica</em>&rsquo;, although mistakes were observed for all four topics.</p>
+
+        <p>Unsurprisingly, mistakes have a significant correlation with query performance (p&lt;&lt;0.01), where an increase of 1 mistake has a -0.031 effect on average precision.</p>
+
+        <p>Overall, there are very few instances of advanced operators being used, with a total of 14 instances or 2.24% of all queries containing some form of advanced operator. There 25 off-topic queries, which equates to 4% of all queries. Foss <em>et al</em>. (<a href="#fos13">2013</a>) discuss adolescents as being &lsquo;<em>more aware of social expectations placed on them when participating in a research study, and are more likely to answer questions directly&rsquo;. </em>In the context of this study, the participants&rsquo; search queries were at times off-topic <em>('aidan denholm&rsquo;, &lsquo;beach volleyball&rsquo;</em>), or demonstrated some frustration with the search system <em>(&lsquo;please work&rsquo;</em>) and, at times, crossed the line into vulgarity (<em>&lsquo;f**k this&rsquo;</em>). Many of these queries were submitted for topic 367 (&lsquo;<em>piracy&rsquo;</em>), perhaps again reflecting the pupils&rsquo; general disinterest in this particular topic.</p>
+
+        <p>Lack of assistive functionality is in line with that of Bilal (<a href="#bil02">2002</a>), and although its adoption by many youth-oriented search engines, such as Yahooligans!, is advocated by Bilal, it is worth noting that not all search facilities outside of web search incorporate such features. This raises the question about whether this should be adopted wholly or is there a means to support children and adults (who struggle just as much with the lack of assistance) in some other way without such functionality?</p>
+
+        <h4>By quartile</h4>
+
+        <table class="center" style="width:30%;">
+        <caption><br />Table 7: Querying characteristics and mistakes by quartile</caption>
+        <tbody>
+        <tr><th>Measure</th><th>Q1</th><th>Q4</th>
+        </tr><tr><td>Mistakes</td><td style='text-align:left;'>0.17</td><td style='text-align:left;'>0.28</td>
+        </tr><tr><td>Advanced operators</td><td style='text-align:left;'>0.01</td><td style='text-align:left;'>0</td>
+        </tr><tr><td>Off-topic</td><td style='text-align:left;'>0.1</td><td style='text-align:left;'>0.03</td>
+        </tr><tr><td>Query length (terms)</td><td style='text-align:left;'>3.23</td><td style='text-align:left;'>3.66</td>
+        </tr><tr><td>Query length (characters)</td><td style='text-align:left;'>23.2</td><td style='text-align:left;'>26</td>
+
+        </tr></tbody>
+        </table>
+
+        <p>Perhaps surprisingly the fourth quartile pupils submitted a significantly larger number of queries with mistakes than those in the first quartile, although this may be explained by them attempting to construct longer, more elaborate queries. First quartile participants submitted over 3 times as many off-topic queries, perhaps reflecting a greater tendency to become frustrated by the lack of querying support offered by the system. The fourth quartile pupils submitted longer queries as counted by both number of terms and character length, suggesting that they provided better- specified, more detailed queries.</p>
+
+        <h3>Post task</h3>
+
+        <h4>Questionnaire</h4>
+
+        <p>Perception of task difficulty increased post task to 2.92 from 2.88 pre-task. Participants found it more difficult to find relevant information across all tasks, with the largest increases between pre and post responses for topic 347 and 353, (2.625 to 3.313 and 2.833 to 3.500 respectively). As expected, they found identifying keywords most difficult for task 353 (mean 3.583) and least difficult for 408 (mean 2.613).</p>
+
+        <p>Despite this mixed perception of difficulty, the users were able to understand the information they read with 408 highest at 4.000 and 353 lowest at 3.375 (overall mean 3.77) and trusted the information found (highest 3.250 for topic 347 and lowest 2.968 for topic 408, overall mean 3.14) and were reasonably satisfied across all tasks that they had found the information required to complete the task (highest 347, 3.438 and lowest 353, 3.042, overall 3.28).</p>
+
+        <p>Linear modelling revealed that self-reported task knowledge, post-task difficulty and self- reported ability to understand the content of retrieved documents were not significant predictors of actual retrieval performance, which was also identified by Bilal (<a href="#bil02">2002</a>). That said, post-task satisfaction with the information found had a significant positive effect on performance, where an increase of 1 increased precision by 0.012 (p=0.030).</p>
+
+        <p>In previous studies, young people were found to overestimate their ability (<a href="#pic14">Pickard <em>et al</em>., 2014</a>) or be unable to identify when they have performed badly (<a href="#sch98">Schacter <em>et al</em>., 1998</a>). Despite being able to identify when a task was more difficult, trust and understanding of the information were generally quite high and overall satisfaction in what had been found (and bookmarked) was also high, indicating that the pupils in this study also tended to overestimate their abilities and failed to ascertain when they had performed poorly.</p>
+
+        <h4>Post task responses</h4>
+
+        <p>Post interview responses show the users&rsquo; understanding of the concepts of search, and the justification for decisions made. However, despite this understanding it further emphasises the shortcomings in their information literacy abilities and awareness of said shortcomings. For example, when discussing the reason for selecting a particular document, one user identified it was because &lsquo;<em>it was most relevant to the question&rsquo;</em>. Although this particular user&rsquo;s performance for this topic was 0.132, which in itself is quite low, it was almost double that of the average for that topic, which was 0.069. Other comments regarding document selection follow in a similar fashion: &lsquo;<em>probably contained relevant information&rsquo;, &lsquo;[was a] detailed article&rsquo;, &lsquo;summed up effects of piracy&rsquo;, &lsquo;seemed interesting&rsquo;, &lsquo;timely document that seemed relevant&rsquo; </em>and &lsquo;<em>stood out as having relevant information&rsquo;. </em>While these comments demonstrate a simplistic understanding of topic and the document content, they do not suggest that the pupils either possess strong information literacy skills or that they do not take the time to employ them. If the users can differentiate information based on such distinctions then one would expect their performance to be better, so it is clear there is a disconnect, but also that their post-task perception that they are able to identify and select the most relevant sources of information is inaccurate and overly optimistic.</p>
+        <p>When discussing query submission and query formulation, users adopted mixed strategies: &lsquo;<em>based upon words from the question&rsquo;, &lsquo;breaking the question down into keywords&rsquo;, &lsquo;related to the initial search&rsquo;, </em>while others &lsquo;<em>tried new things (nothing worked)&rsquo;, &lsquo;tried new ideas&rsquo; </em>and <em>&lsquo;tried to find as many different things as possible&rsquo;</em>. Search strategies employed range from keyword search, paraphrasing the initial question and reformulation. What is interesting is that in the instance of &lsquo;<em>new things&rsquo;, </em>which did not work, the researcher noted that this user was reformulating, appending to the initial term without correcting the reason for the poor retrieval performance &ndash; that the first term was spelled incorrectly.</p>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        <p>The results of this study demonstrate a lack of good application of information literacy and search skills by the participants, confirming earlier work by many studies, for example, Pickard <em>et al</em>. 2014. Their typical performance, both in terms of query quality and ability to identify relevant information, is quite poor. Low performance has been attributed to lack of interest or knowledge of a topic (<a href="#smi07">Smith and Hepsworth, 2007</a>), however, in this case, interest was reasonably high, and, although topic knowledge was reported at a low level, this was not found to have a significant negative impact on performance. What is particularly striking is that participants often selected (bookmarked) documents that were not relevant for their assigned topics and struggled to modify their queries to improve performance. Despite this poor performance, the pupils generally felt they had performed well and did not consider the tasks to be especially difficult, suggesting a lack of awareness of their own performance and skills development which reflects results of earlier work (<a href="#row08a">Rowlands and Nicholas, 2008</a>). The importance of this is even more striking when one considers that the pupils were given a course on information literacy only a year prior to the study taking place.</p>
+        <p>The results also highlight a reliance of the pupils on search assistance functionality, such as spellchecking and suggested queries, which are often present in major search engines but are by no means implemented by all search systems.</p>
+        <p>There were some marked differences between the SIMD quartiles, with fourth quartile students reading more documents, submitting larger more complex queries and subsequently more mistakes, and performing better when the topic is well known and interesting. However, overall performance and time spent on task were approximately equal. It must, therefore, be acknowledged that despite potential advantages living in a less deprived area may provide, this does not appear to equate to success in learning.</p>
+        <p>The results indicate that, if we are to have an information literate population of school leavers, then it will be necessary to provide considerably more education on information literacy. This clearly demonstrates the need for appropriate curriculum-based support as indicated by Miller and Bartlett (<a href="#mil12">2012</a>). Although the small amount of training given, while certainly better than nothing, is not sufficient to ensure that pupils perform well. As the pupils appear to have forgotten most of the good practice they were taught a year prior, it may be necessary to embed the training of good practice into the existing curriculum, so that it is longitudinal and so that pupils have the opportunity to put their skills to use on several occasions and for real problems. Finally, as shown in early research by Shenton and Pickard (<a href="#she14">2014</a>), the study confirms the importance of not just searching skills but also of information source evaluation.</p>
+      </section>
+
+      <section>
+        <h2>Acknowledgements</h2>
+        <p>This research was completed with the support of a bursary from the Information Literacy Group (ILG) of the Chartered Institute of Library and Information Professionals (CILIP). The studies were conceived and conducted in partnership with colleagues from the Scottish Information Literacy Community of Practice and Edinburgh City Libraries and Schools. The authors would like to thank Katie Swann, Cleo Jones, Ian McCracken and David Hastings for their help with the project and the pupils and headmaster, Tom Rae, at Craigmount High School in Edinburgh.</p>
+      </section>
+
+      <section>
+        <h2 id="author">About the author</h2>
+        <p><strong>David Brazier </strong> is a PhD student at the Department of Computer and Information Sciences, Northumbria University, Newcastle upon Tyne, UK. His research interests include information literacy, Digital by Default, eGovernment and the information behaviour of non-native speakers of English. He can be contacted at <a href="mailto:d.brazier@northumbria.ac.uk">d.brazier@northumbria.ac.uk</a>. <br />
+        <strong>Geoff Walton  </strong> is a Senior Lecturer in the Department of Languages, Information and Communications at Manchester Metropolitan University, UK. Geoff’s main research interests include developments in public libraries, information literacy, information behaviour and Technology Enhanced Learning He can be contacted at <a href="mailto:g.walton@mmu.ac.uk">g.walton@mmu.ac.uk</a>.  <br />
+        <strong>Morgan Harvey  </strong> is a Senior Lecturer at the Department of Computer and Information Sciences, Northumbria University, Newcastle upon Tyne, UK. Morgan’s research interests include the information literacy of children and young adults, mobile search information behaviour, mobile web search and recommender systems for health and wellbeing. He can be contacted at <a href="mailto:morgan.harvey@northumbria.ac.uk">morgan.harvey@northumbria.ac.uk</a>. </p>
+      </section>
+
+      <section class="refs">
+        <h2>References</h2>
+        <ul class="refs"> 
+
+        <li id="aul05">Aula, A., Jhaveri, N. &amp; Kaki, M. (2005). Information search and re-access strategies of experienced web users. In <em>Proceedings of the 14th international conference on World Wide Web (WWW) &rsquo;05, ACM</em> (pp. 583&ndash;592). Chiba, Japan.</li>
+
+        <li id="bil00">Bilal, D. (2000). Children's use of the Yahooligans! Web search engine: I. Cognitive, physical, and affective behaviors on fact‐based search tasks. <em>Journal of the Association for Information Science and Technology</em>, <em>51</em>(7), pp.646-665.</li>
+
+        <li id="bil02">Bilal, D. (2002). Children's use of the Yahooligans! Web search engine. III. Cognitive and physical behaviors on fully self‐generated search tasks. <em>Journal of the Association for Information Science and Technolog</em>y, <em>53</em>(13), pp.1170-1183.</li>
+
+        <li id="bil13">Bilal, D. (2013). Comparing google's readability of search results to the flesch readability formulae: a preliminary analysis on children's search queries. <em>Proceedings of the Association for Information Science and Technology</em>, <em>50</em>(1), 1-9.</li>
+
+        <li id="bar11">Bartlett, J. &amp; Miller, C. (2011) <em>Truth, lies and the Internet: a report into young people&rsquo;s digital fluency</em>. Retrieved from http://www.demos.co.uk/files/Truth_-_web.pdf</li>
+        <li id="coi07">Coiro, J. &amp; Dobler, E. (2007). Exploring the online reading comprehension strategies used by sixth-grade skilled readers to search for and locate information on the internet. <em>Reading Research Quarterly</em>, <em>42</em>(2), 214-257.</li>
+
+        <li id="dru09">Druin, A., Foss, E., Hatley, L., Golub, E., Guha, M. L., Fails, J. &amp; Hutchinson, H. (2009). How children search the internet with keyword interfaces. In <em>Proceedings of the 8th International conference on interaction design and children </em>(pp. 89-96). Como, Italy: ACM.</li>
+
+        <li id="dua10">Duarte Torres, S., Hiemstra, D. &amp; Serdyukov, P. (2010). Query log analysis in the context of information retrieval for children. In <em>Proceedings of the 33rd international ACM SIGIR conference on research and development in information retrieval</em> (pp. 847-848). Geneva, Switzerland: ACM.</li>
+
+        <li id="dua11">Duarte Torres, S. &amp; Weber, I. (2011). What and how children search on the web. In <em>Proceedings of the 20th ACM international conference on Information and knowledge management</em> (pp. 393-402). Glasgow, UK: ACM.</li>
+
+        <li id="eis90">Eisenberg, M. B. &amp; Berkowitz, R.E. (1990). <em>Information problem solving: the big six skills approach to library &amp; information skills instruction</em>. Norwood, NJ: Ablex Publishing Corporation.</li>
+
+        <li id="fos13">Foss, E., Druin, A., Yip, J., Ford, W., Golub, E. &amp; Hutchinson, H. (2013). Adolescent search roles. <em>Journal of the Association for Information Science and Technology</em>, <em>64</em>(1), 173-189.</li>
+
+        <li id="har15">Harvey, M., Hauff, C. &amp; Elsweiler, D. (2015). Learning by Example: training users through high-quality query suggestions. Proceedings of the 38th Annual ACM SIGIR Conference. Santiago, Chile.</li>
+
+        <li id="har12">Harrop, C. &amp; Seddon, L. (2012). <em>Competent and confident</em> (pp. 44-45). London, UK: CILIP Update.</li>
+
+        <li id="hel09">Helbig, N., Gil-Garc&iacute;a, J. R. &amp; Ferro, E. (2009). Understanding the complexity of electronic government: Implications from the digital divide literature. <em>Government Information Quarterly</em>, <em>26</em>(1), 89-97.</li>
+
+        <li id="mil12">Miller, C. &amp; Bartlett, J. (2012). <a href="http://ojs.lboro.ac.uk/ojs/index.php/JIL/article/view/PRA-V6-I2-2012-3">&lsquo;Digital fluency&rsquo;: towards young people&rsquo;s critical use of the internet</a>. <em>Journal of Information Literacy</em>, <em>6</em>(2), 35-55. Retrieved from http://ojs.lboro.ac.uk/ojs/index.php/JIL/article/view/PRA-V6-I2-2012-3</li>
+
+        <li id="pic13">Pickard, A. J., Shenton, A. K. &amp; Furness, K. (2013). Educating young people in the art of distrust: meta-evaluation and the construction of personal, agile models of web information literacy. In <em>Proceedings of the Information: Interactions and Impact (i3) International Conference. </em>Aberdeen, UK.</li>
+
+        <li id="pic14">Pickard, A. J., Shenton, A. K. &amp; Johnson, A. (2014). Young people and the evaluation of information on the World Wide Web: principles, practice and beliefs. <em>Journal of Librarianship and Information Science</em>, <em>46</em>(1), 3-20.</li>
+
+        <li id="row08a">Rowlands, I. &amp; Nicholas, D. (2008a). <a href="https://www.webarchive.org.uk/wayback/archive/20140614113419/http://www.jisc.ac.uk/media/documents/programmes/reppres/gg_final_keynote_11012008.pdf">Information behaviour of the researcher of the future: a ciber briefing paper</a>. Retrieved from https://www.webarchive.org.uk/wayback/archive/20140614113419/http://www.jisc.ac.uk/media/documents/programmes/reppres/gg_final_keynote_11012008.pdf (Archived by WebCite&reg; at <u><a href="http://www.webcitation.org/6NzsAsSou">http://www.webcitation.org/6NzsAsSou</a></u>).</li>
+
+        <li id="row08b">Rowlands, I., Nicholas, D., Williams, P., Huntington, P., Fieldhouse, M., Gunter, B., Withey, R., &hellip; Tenopir, C., (2008b). The Google generation: the information behaviour of the researcher of the future. <em>ASLIB Proceedings, 60</em>(4), 290-310.</li>
+        <li id="sch98">Schacter, J., Chung, G.K. &amp; Dorr, A. (1998). Children's Internet searching on complex problems: performance and process analyses. <em>Journal of the Association for Information Science and Technology</em>, <em>49</em>(9), 840-849.</li>
+
+        <li id="sco16">Scottish Government (2016). <a href="http://www.gov.scot/Resource/0050/00504809.pdf">Introducing the Scottish Index of Multiple Deprivation</a>. Retrieved from http://www.gov.scot/Resource/0050/00504809.pdf (Archived by WebCite&reg; at <a href="http://www.webcitation.org/6xXwg2xRa">http://www.webcitation.org/6xXwg2xRa</a>).</li>
+
+        <li id="she14">Shenton, A.K. &amp; Pickard, A.J. (2014). <em>Evaluating online information sources. Minibook 42</em>. Leicester, UK: The United Kingdom Literary Association.</li>
+
+        <li id="smi07">Smith, M. &amp; Hepworth, M. (2007). An investigation of factors that may demotivate secondary school students undertaking project work: Implications for learning information literacy. <em>Journal of Librarianship and Information Science</em>, <em>39</em>(1), 3-15.</li>
+
+        <li id="stu10">Sturges, P. &amp; Gastinger, A. (2010). Information literacy as a human right. <em>Libri</em>, <em>60</em>(3), 195-202.</li>
+
+        <li id="whi07">White, R. W. &amp; Morris, D. (2007). Investigating the querying and browsing behavior of advanced search engine users. In <em>Proceedings of the 30th annual international ACM SIGIR conference on Research and development in information retrieval</em> (pp. 255-262). Amsterdam, The Netherlands: ACM.</li>
+
+        </ul>
+      </section>
+
+      <section>
+        <hr />
+        <h4 style="text-align:center;">How to cite this paper</h4>
+        <div class="citing"> Brazier, D., Walton, G., &amp;  Harvey, M. (2019). An investigation into Scottish teenagers’ information literacy and search skills In <em>Proceedings of ISIC, The Information Behaviour Conference, Krakow, Poland, 9-11 October: Part 2. Information Research, 24</em>(1), paper isic1819. Retrieved from http://InformationR.net/ir/24-1/isic2018/isic1819.html (Archived by WebCite® at http://www.webcitation.org/76lUiTUEc)</div>  
+      </section>
+
+    </article>
+    <br />
+
+    <section>
+      <table class="footer" style="border-spacing:10px;">  
+      <tr>  
+      <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>  
+      <tr><td style="text-align:center; vertical-align:top;"><form method="get" action="http://scholar.google.com/scholar" target="_blank">
+      <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"> <input type="hidden" name="q" value="information behavior, information literacy, youth" /><br />  
+      <input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" /><input type="hidden" name="num" value="100" />  </td>  </tr></table></form></td>  
+      <td style="vertical-align:top; text-align:center;">  <!-- Search Google --><form method="get" action="http://www.google.com/custom" target="_blank">
+      <table class="footer">
+      <tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="information behavior, information literacy, youth" /><br />  
+      <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" /><input type="hidden" name="client" value="pub-5081678983212084" /><input type="hidden" name="forid" value="1" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="hidden" name="oe" value="ISO-8859-1" /><input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" /><input type="hidden" name="hl" value="en" /></td></tr>  
+      </table></form></td>  
+      <td style="vertical-align:top; text-align:center;"><form method="get" action="http://www.bing.com" target="_blank">
+      <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="information behavior, information literacy, youth" /> <br /><input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" /> <input type="hidden" name="num" value="100" /></td></tr>  
+      </table></form></td></tr>  
+      </table> 
+
+      <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/24-1/isic2018/isic1819.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
+      <br />
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <div class="addthis_inline_share_toolbox" style="text-align:center;"></div>
+      <hr />
+    </section>
+
+    <table class="footer" style="padding:10px;"><tr><td style="text-align:center; vertical-align:top;">
+    <br />
+    <div>
+        <a href="https://www.digits.net" target="_blank">
+          <img src="https://counter.digits.net/?counter={972a7266-4852-5cf4-9582-10d20a6a2e2e}&amp;ßtemplate=simple" alt="Hit Counter by Digits" />
+        </a>
+    </div>
+    </td> 
+    <td class="footer" style="text-align:center; vertical-align:middle;">
+    <div>  &copy; the authors, 2019. <br />Last updated: 1 March, 2019</div></td> 
+
+    <td style="text-align:center; vertical-align:middle;">  
+
+    </td></tr>  </table>  
+
+    <footer>
+
+    <hr /> 
+    <table class="footer"><tr><td>
+    <div class="button"> 
+    <ul style="text-align: center;">
+    <li><a href="isic2018.html">Contents</a> | </li>
+    <li><a href="../../iraindex.html">Author index</a> | </li>
+    <li><a href="../../irsindex.html">Subject index</a> | </li>
+    <li><a href="../../search.html">Search</a> | </li>
+    <li><a href="../../index.html">Home</a></li>
+    </ul> 
+    </div></td></tr></table>
+    <hr />
+    </footer>
+    <script src="http://www.google-analytics.com/urchin.js">  </script>  <script>  _uacct =
+    "UA-672528-1"; urchinTracker(); 
+    </script>  
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5046158704890f2e"></script>  
+  </body>  
+</html>

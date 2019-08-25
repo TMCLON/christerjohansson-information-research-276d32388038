@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+ <meta name="dcterms.title" content="Exploring online social support among infertility treatment patients: a text-mining approach" />  
+<meta name="citation_author" content="Erčulj, Vanja Ida" />
+<meta name="citation_author" content="Žiberna, Aleš" />
+<meta name="citation_author" content="Globevnik Velikonja, Vislava " />
+ <meta name="dcterms.subject" content="Exploring online social support among infertility treatment patients: a text-mining approach" />  
+ <meta name="description" content="Social support positively influences patients’ health and well-being in both real life and computer-mediated settings. Informational and emotional social support types are most commonly found in online social support group discussions.  Latent Dirichlet Allocation was used to analyse 132,374 infertility posts and identify topics of discussion.   Two types of online social support were found: emotional and informational. Emotional support was established in 17% of all posts. Three subtypes of emotional support were identified: encouragement, offerings of congratulation, and empathy. Several informational social support subthemes were found. The two most common were discussions about the infertility treatment procedure from puncture to pregnancy, and about official procedures.  The results agree with similar studies performed on online social support group discussions dealing with health issues. Participants express a great need for informational support. The areas of concern are identified and some implications for medical practice are provided." />  
+ <meta name="keywords" content="social support, infertility, patients, text-mining, online support groups," />
+ <meta name="robots" content="all" />  
+ <meta name="dcterms.publisher" content="University of Borås" />
+ <meta name="dcterms.type" content="text" />  
+ <meta name="dcterms.identifier" content="ISSN-1368-1613" />  
+ <meta name="dcterms.identifier" content="http://InformationR.net/ir/24-1/paper807.html" />  
+ <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/24-1/infres241.html" />  
+ <meta name="dcterms.format" content="text/html" />  <meta name="dc.language" content="en" />  
+ <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
+ <meta  name="dcterms.issued" content="2019-03-15" /> 
+  <meta name="geo.placename" content="global" />  
+</head> 
+  
+ <body> 
+    <h4 id="vol-24-no-1-march-2019">vol 24 no.1, March 2019</h4>
+ <h1>Exploring online social support among infertility treatment patients: a text-mining approach</h1>  <br />  
+ 
+ <h2 class="author"><a href="#author">Vanja Ida Erčulj, Aleš Žiberna</a> and <a href="#author">Vislava Globevnik Velikonja</a>.
+</h2>  
+ 
+ <blockquote>
+ <strong>Introduction</strong>. Social support positively influences patients’ health and well-being in both real life and computer-mediated settings. Informational and emotional social support types are most commonly found in online social support group discussions.<br />  
+<strong>Method</strong>. Latent Dirichlet Allocation was used to analyse 132,374 infertility posts and identify topics of discussion. <br />
+<strong>Results</strong>. Two types of online social support were found: emotional and informational. Emotional support was established in 17% of all posts. Three subtypes of emotional support were identified: encouragement, offerings of congratulation, and empathy. Several informational social support subthemes were found. The two most common were discussions about the infertility treatment procedure from puncture to pregnancy, and about official procedures.<br />
+<strong>Conclusions</strong>. The results agree with  similar studies performed on online social support group discussions dealing with health issues. Participants express a great need for informational support. The areas of concern are identified and some implications for medical practice are provided.  
+ </blockquote>    
+ 
+
+
+ <section>
+ 
+ <h2>Introduction</h2> 
+ 
+ <p>Several studies report the positive effect of social support on patients’ physical and mental health, regardless of the nature of their disease. Researchers generally report two types of social support: emotional and informational. Informational support helps patients manage their disease better and improves their everyday functioning (<a href="#wic12">Wicks <em>et al.,</em> 2012</a>), while emotional support lowers their stress level and improves their psychological well-being (<a href="#yoo14">Yoo <em>et al.</em>, 2014</a>). The beneficial effect of social support was also shown in an online support group environment. This study focuses on online social support among patients coping with infertility. It employs a text-mining approach to automatically detect discussion topics in the largest infertility forum in Slovenia and identify themes of social support types. In other countries, researchers analysed such forums manually with several coders assigning codes to the text. Smaller numbers of posts were analysed, showing that informational support prevailed over emotional support. We expect similar results to also be obtained in Slovenia, but seek to take the analysis further by identifying the topics of discussion within each social support type detected. The analysis includes over 130,000 posts of the biggest Slovenian infertility forum made between 2002 and 2016. The informational support themes will shed light on which information users are looking for. The discussion includes some implications for practice.</p>
+ 
+ </section>
+ <section>
+ 
+ <h2>Literature review</h2>
+ 
+<p>Social support encompasses everyday behaviour that directly or indirectly communicate to an individual that they are valued and cared for (<a href="#bar94">Barnes and Duck, 1994</a>). Amongst others, it includes two subdimensions: emotional and informational (<a href="#she91">Sherbourne and Stewart, 1991</a>; <a href="#uch96">Uchino, Cacioppo, and Kiecolt-Glaser, 1996</a>). Emotional support refers to an expression of sympathy and empathy while informational provides information that is of help to others (<a href="#myr16">Myrick, Holton, Himelboim, and Love, 2016</a>). Cutrona and Suhr (<a href="#cut92">1992</a>) distinguish three other types of social support categories: esteem, social network, and tangible support. These additional social support types were found in studies dealing with offline social support. In a computer-mediated environment, however, esteem, social network, and tangible social support are rarely present (<a href="#bra99">Braithwaite, Waldron, and Finn, 1999</a>; <a href="#cou05">Coulson, 2005</a>; <a href="#cou09">Coursaris and Liu, 2009</a>; <a href="#loa02">Loader, Muncer, Burrows, Pleace, and Nettleton, 2002</a>; <a href="#win97">Winzelberg, 1997.</a>)</p>
+
+ <p>The beneficial role of social support for health outcomes including mortality is shown in several studies (<a href="#ali06">Ali, Merlo, Rosvall, Lithman, and Lindström, 2006</a>; <a href="#mcd06">McDade, Hawkley, and Cacioppo, 2006</a>; <a href="#tom06">Tomaka, Thompson, and Palacios, 2006</a>; <a href="#zha07">Zhang, Norris, Gregg, and Beckles, 2007</a>). It seems that not only receiving, but also providing, social support is an important factor for maintaining an individual’s health (<a href="#bro03">Brown, Nesse, Vinokur, and Smith, 2003</a>; <a href="#gru07">Gruenewald, Karlamangla, Greendale, Singer, and Seeman, 2007</a>). Social support also effectively alleviates the recipient’s stress (<a href="#sar90">Sarason, Sarason, and Pierce, 1990</a>) and improves their well-being (<a href="#bha12">Bhanja and Jena, 2012</a>; <a href="#kle05">Klemm and Wheeler, 2005</a>; <a href="#lie05">Lieberman and Goldstein, 2005</a>; <a href="#reb08">Reblin and Uchino, 2008</a>; <a href="#uch06">Uchino, 2006</a>; <a href="#uch96">Uchino <em>et al.</em>, 1996</a>). Social support’s beneficial role was also found in a computer-mediated setting (<a href="#bha12">Bhanja and Jena, 2012</a>; <a href="#kle05">Klemm and Wheeler, 2005</a>). Amongst others, information sharing online helps individuals function effectively. For example, patients dealing with epilepsy managed their conditions better due to information sharing on a social network site (<a href="#wic12">Wicks <em>et al.</em>, 2012</a>). Other studies showed that, in comparison to those not involved, people involved in online social support groups have a better health-related outcome (<a href="#gus99">Gustafson, Hawkins, Boberg, Pingree, Serlin and Graziano, 1999</a>) and experience less isolation and depression (<a href="#bac00">Bacon, Condon, and Fernsler, 2000</a>; <a href="#smy99">Smyth, Stone, Hurewitz, and Kaell, 1999</a>). In cancer patients, emotional support received from participants of a computer-mediated social support group positively affected their emotional well-being (<a href="#erf17">Erfani, Abedin, and Blount, 2017</a>; <a href="#yoo14">Yoo <em>et al.</em>, 2014</a>).</p>
+ 
+ <p>Regarding infertility treatment, research reveals the beneficial impact of social support on health complaints, depression, anxiety and complicated grief (<a href="#lec07">Lechner, Bolman, and van Dalen, 2007</a>). Social support reduces infertility-related stress (<a href="#gib02">Gibson and Myers, 2002</a>; <a href="#sch05">Schmidt, Tjørnhøj-Thomsen, Boivin, and Nyboe Andersen, 2005</a>), shown to be associated with worse treatment outcomes (<a href="#boi05">Boivin and Schmidt, 2005</a>). In addition, anxiety and depression in patients who experience failed infertility treatments are lower when they receive greater social support (<a href="#ver05">Verhaak, Smeenk, van Minnen, Kremer, and Kraaimaat, 2005</a>). However, women coping with infertility reported their needs for social support from their social network were unmet (<a href="#hig14">High and Steuber, 2014</a>). Considerable research results suggest that participating in online support groups can successfully close this gap (<a href="#him05">Himmel, Meyer, Kochen, and Michelmann, 2005</a>; <a href="#mal10">Malik and Coulson, 2010</a>; <a href="#van08">Van Selm, Tuil, Verhaak, Woldringh, and Kremer, 2008</a>; <a href="#wis08">Wischmann, 2008</a>; <a href="#zil11">Zillien, Haake, Fröhlich, Bense, and Souren, 2011</a>). </p>
+ 
+ <p>This research deals with online social support among people coping with infertility. Several studies reported such groups were a source of social support, which in turn alleviates participants’ distress and helps them cope with infertility (<a href="#him05">Himmel <em>et al.</em>, 2005</a>; <a href="#mal10">Malik and Coulson, 2010</a>; <a href="#she91">Sherbourne and Stewart, 1991</a>; <a href="#van08">Van Selm <em>et al.</em>, 2008</a>; <a href="#wis08">Wischmann, 2008</a>; <a href="#zil11">Zillien <em>et al.</em>, 2011</a>). Informational support is reported to be more common than emotional support (<a href="#him05">Himmel <em>et al.</em>, 2005</a>; <a href="#ric17">Richard, Badillo-Amberg, and Zelkowitz, 2017</a>; <a href="#van08">Van Selm <em>et al.</em>, 2008</a>). Research studies dealing with the type of online support given were based on a relatively small number of manually annotated online support group posts. Specific topics of informational and emotional support were not discussed. One of the objectives of this study is to identify these specific topics. A similar approach was employed in a cancer patients’ study where researchers detected several informational and emotional support subtypes (<a href="#mei07">Meier, Lyons, Frydman, Forlenza, and Rimer, 2007</a>). The most common topics in survivors’ messages were seeking treatment information and advice on how to communicate with health providers. Several other information and advice themes arose during communication, but were less frequent. Further analysis revealed six emotional support themes. The top three dealt with encouragement, empathy and emotional coping strategies. In an online community for children with autism spectrum disorders, nine emotional support subthemes were found: relationship, physical affection, sympathy, empathy, encouragement, prayer, consoling, gratitude and congratulation (<a href="#moh15">Mohd Roffeei, Abdullah, and Basar, 2015</a>). Similar subthemes of emotional support were found in an online community of HIV patients where the last four themes were omitted and replaced by expression of care and confidentiality (<a href="#mo08">Mo and Coulson, 2008</a>). This study has a similar objective of identifying specific discussion topics within common social support types in an extensive number of Slovenian infertility forum posts. In contrast to other studies in this research area where the coding of the text was performed manually, topics of discussion will be identified automatically by employing a text-mining approach. The later was one of the proposed methodologies for biomedical information retrieval in the special issue of the one of the core information science journals (<a href="#mos17">Moskovitch, Wang, Pei, and Friedman, 2017</a>).  </p>
+ 
+ <p>Overall, this study seeks to answer the following research questions:</p>
+ 
+ <ul>
+<li>Which social support types are present within the online support group under study?</li>
+<li>To what extent are social support types present in online discussions?</li>
+<li>Which are the specific discussion topics within each social support type?</li>
+</ul>
+</section>
+<section>
+<h2>Methods</h2>
+
+<h3>Data</h3>
+
+<p>A total of 16,086 threads containing 132,374 posts published from 2002 till September 2016 in the Slovenian infertility forum found at the med.over.net website was collected. The algorithm for the automatic collection of posts, usernames and dates was written and employed using the R program (<a href="#rco16">R development Core Team, 2016</a>) . Half the threads included fewer than five posts (interquartile range: 3–9). The minimum number of posts per thread was one and the maximum was 810.</p> 
+
+<h3>Analysis</h3>
+
+<p>The collected text was pre-processed prior to the analysis. Upper-case words were changed to lower-case words. Stop words (e.g. of, I, we, you, with, is), punctuation, numbers and words with an overall frequency of less than two were removed from the text. Tokenisation (division of text into units such as words, punctuation marks) and lemmatisation (changing different forms of the same word such as 'give' and 'gives' into a single word) were applied using an online text analyser (<a href="#erj10">Erjavec, Fišer, Krek, and Ledinek, 2010</a>; <a href="#joz13">Jožef Stefan Institute, 2013</a>).</p> 
+
+<p>The first step of the analysis included the automatic retrieval of topics of discussion. Topic modelling, a text-mining method, was used to uncover abstract topics from the collected posts (<a href="#erj10">Brody and Elhadad, 2010</a>) by using a latent Dirichlet allocation. This iterative algorithm assumes that each document is a collection of topics and each topic has a particular probability of generating a certain word. Prior Dirichlet distribution of topics within each document and words within each topic is assumed (<a href="#liu16">Liu, Tang, Dong, Yao, and Zhou, 2016</a>). An individual word can be present in different topics with a different probability and may co-appear in each document with different words. The posterior distribution is obtained using collapsed Gibbs sampling (<a href="#gri04">Griffiths and Steyvers, 2004</a>). The Dirichlet allocation algorithm has been used successfully in various domains, including analysis of such short textual documents from online discussions or tweets (<a href="#alk18">Alkhodair, Fung, Rahman, and Hung, 2018</a>; <a href="#ras07">Rashad, Mohammed, El-Midany, Kandil, and Ibrahim, 2007</a>). The algorithm is implemented in library lda of the R program (<a href="#cha15">Chang, 2015</a>). </p>
+
+<p>In the current study, each post was considered as a separate document. When using the Dirichlet method, the number of topics must be decided in advance. As a smaller number of broader topics was assumed, only 10 topics were extracted. The most probable topic of each document was calculated. Most probable topic probabilities per document ranged from 0.17 to 1.0, with a median value of 0.69. The Dirichlet method was repeated three times with different random starting points with a comparison of the results showing stable results content-wise. To further validate the results, 100 posts per topic were randomly sampled and manually revised for the content-wise correctness of their classification. The share of correctly classified documents per topic was calculated and a 95% confidence interval was obtained using the bootstrap method (<a href="#bab05">Babu, 2005</a>) with 1,000 replications. The share of correctly classified posts ranged from 70% to 91%. The lowest 95% confidence intervals’ bound was 61% and the highest was 96%. The derived topics were manually assigned to social support categories.</p>
+
+<p>One output of the Dirichlet method procedure is a list of the most probable topic keywords. The same word may be assigned to different topics through the iteration history. Words most frequently assigned to a given topic were defined as topic keywords. </p>
+
+<p>In the second step, the Dirichlet method was reapplied to the largest retrieved topic of emotional support with the aim of identifying emotional support subtypes. The retrieval of a variety of numbers of topics was probed where, of all, the three-topic solution was the most interpretable. Topics were internally homogeneous and externally heterogeneous. </p>
+
+<p>Topic modelling results were graphically presented with a correspondence map. As an input for correspondence analysis, a matrix with the number of times each of the top three most probable topic keywords was assigned to each topic during the Dirichlet method iteration process was used. Relationships of topics and keywords were reduced to a lower dimensional space, revealing the underlying (latent) dimensions in which the topics obtained differed.</p>
+
+<h2>Results</h2>
+
+<p>Overall, participants give or receive emotional support in 17% of all posts. Three different subtopics can be identified (Figure 1). The first is encouragement whereby participants encourage each other and hope for the best possible outcome. The second encompasses posts offering congratulations and best wishes to those who reported a successful treatment outcome (pregnancy). Empathic and sympathetic posts are included in the third emotional support topic.</p> 
+
+<figure class="centre">
+<img src="../figs/p807fig1.png" width="562" height="527" alt="Figure 1: Emotional support topics" />
+<figcaption><br />Figure 1: Emotional support topics (% of posts; KWs = keywords; IVF = in vitro fertilisation).</figcaption>
+</figure>
+
+<p>All remaining posts (83%) are informational support posts. Stages of the IVF procedure from follicular puncture to embryo transfer and anticipation of the treatment outcome (pregnancy; topic Pregnancy signs) are discussed in 13% of all posts. Patients discuss official procedures, referrals, doctors and appointments in 12% of posts. The exchange of information about medications and their effect is a topic of 10% of posts. Another 10% of posts deal with a situation appraisal. Treatment changes the participants’ view of life. They reflect on changes the treatment has on their everyday life, partnership, friendships and work. They reassess and redefine these changes in order to illustrate them as more positive and easier to accept. Another 10% deals with health problems, medical examination and medical findings that might be the cause of participants’ inability to become pregnant. </p>
+
+<p>In 8% of posts, participants share information on national healthcare system regulations, particularly those dealing with infertility treatment. They discuss associations of common interest in which they can participate or sign governmental petitions for some common cause or their rights regarding infertility treatment and/or child adoption. In a further 8% of posts, the menstrual cycle is discussed in more detail. Participants discuss the signs of ovulation, pregnancy and health problems or medications influencing the menstrual cycle. Of the remaining 14% of posts, half deals with infertility treatment in detail such as puncture, the embryo transfer, and experienced pain. The other half deals with food supplements that could improve fertility, along with alternative treatments like acupuncture, reflexotherapy etc.</p>
+
+<table class="center">
+<caption><br />Table 1: Information and advice topics (% of posts; KW s= keywords; IVF = in vitro fertilisation; STD = sexually transmitted disease; IUI = intrauterine insemination)</caption>
+<tbody>
+<tr><th colspan="3">Informational support (83%)</th></tr>
+<tr><td style="text-align:center;"><strong>PUNCTURE to PREGNANCY</strong> (13%)<br />KWs: test, puncture, discharge, transfer, sign</td><td style="text-align:center;"><strong>MEDICATIONS</strong> (10%)<br />KWs: procedure, medication, injection, Gonal, mail</td><td style="text-align:center;"><strong>MENSTRUAL CYCLE</strong> (8%)<br />KWs: ovulation, Clomiphene, menstruation, cycle, cyst</td></tr>
+<tr><td>Example: I'm in the IVF procedure for the first time. They transferred two blastocysts. Currently I'm waiting for a +. And mail about the frozen eggs. Keeping fingers crossed for all!</td><td>Example: I asked if sth was wrong if I took them in the evening and they said no, but I should take them every day then, and it worked. But now I take them in the morning, and we'll see what will be ... regards</td><td>Example: Elevated prolactine prevents ovulation, and you can't get pregnant. I had problems years ago, I drank Bromergon, which didn't help. I went to an endocrinologist. For most, the problem is solved by Bromergon. </td></tr>
+<tr><td style="text-align:center;"><strong>OFFICIAL PROCEDURES</strong> (12%)<br />KWs: referral, dr. Resh, procedure, medical check-up, medical report</td><td style="text-align:center;"><strong>MEDICAL EXAMINATION</strong> (10%)<br />KWs: getting pregnant, child, the fallopian tube, medical examination, IVF	</td><td style="text-align:center;"><strong>INFERTILITY TREATMENT</strong> (7%)<br />KWs: cell, embryo, procedure, follicle, transfer </td></tr>
+<tr><td>Example: When is the test for STD done? If a woman doesn't get pregnant naturally, after all examinations or before IVF? Or when do men have a spermiogram?	</td><td>Example: It's probably polycystic ovaries, which is also the problem I have. You don't have regular ovulation and it's harder to get pregnant. This'll improve so that you'll get pregnant. GOOD LUCK.</td><td>Example: I wonder why IUI is done at all if the seed pattern was inappropriate or less appropriate?! I learned this only after the completion of three IUIs and a doctor's check-up.</td></tr>
+<tr><td style="text-align:center;"><strong>SITUATION APPRAISAL</strong> (10%)<br />KWs: job, seek leave, session, head, hurt</td><td style="text-align:center;"><strong>INFORMATION, ADVICE</strong> (8%)<br />KWs: child, man, association, life, infertility	</td><td style="text-align:center;"><strong>SUPPLEMENTS</strong> (7%)<br />KWs: nutrition, vitamin, tea, drink, royal jelly</td></tr>
+<tr><td>Example: Yes, a familiar problem! Sex for pleasure as sex on call is a killer, I know as I’ve been there, done that! The more you press it, the worse it will be, and you will start arguing! Anyhow, after 5 years, you deserve it!</td><td>Example: mmmm, my sixth sense tells me that the government will lower the age limit for IVF! And more procedures will be paid for the younger ones. FAIR? I don’t think so! </td><td>Example: This month we were drinking it in the same way as you did, with honey. I also added vinegar to mine. Next month we will try a new regime. </td></tr>
+</tbody>
+</table>
+
+<p>Topics and their keywords are presented in a perceptual map by using correspondence analysis. Three dimensions explain 51% of inertia, a measure similar to explained variance in factor analysis. The first dimension distinguishes between traditional and alternative treatment of infertility. In this dimension, the topic Supplements is distinguished from all other topics. The second dimension distinguishes emotional and informational support (the horizontal dimension in Figure 2). Patients receive and give emotional support by offering encouragement, compassion and sharing joy when treatment is successful. From emotional support, their discussions shift towards more informational support topics of treatment descriptions, hormonal therapy and the official procedures they must follow in order to receive infertility treatment covered by health insurance. The third dimension (the vertical dimension in Figure 2) summarises the whole treatment process from the first information about infertility until the treatment outcome.</p>
+
+<figure class="centre"><img src="../figs/p807fig2.png" width="538" height="496" alt="Figure 2: Correspondence map of topics and topic keywords" />
+<figcaption><br />Figure 2: Correspondence map of topics and topic keywords, 2nd and 3rd dimensions (M. cycle = menstrual cycle; I. treatment = infertility treatment; Emotions = emotional support; Reflections = situation appraisal)</figcaption>
+</figure>
+
+<h2>Discussion</h2>
+
+<p>The online social support group for infertility patients in Slovenia has been active since 2002. By September 2016, over 130,000 posts had been published. Within this study, they were automatically retrieved and analysed. The first research question tackled the content of the downloaded forum posts. The text-mining approach for automatic topic retrieval revealed the main function of the online support group community is to provide and receive emotional and informational support (the second underlying dimension of the content discussion; Figure 2). This finding agrees with findings of similar studies in other European countries (<a href="#him05">Himmel <em>et al.</em>, 2005</a>; <a href="#mal10">Malik and Coulson, 2010</a>; <a href="#ric17">Richard <em>et al.</em>, 2017</a>; <a href="#van08">Van Selm <em>et al.</em>, 2008</a>; <a href="#wis08">Wischmann, 2008</a>; <a href="#zil11">Zillien, Haake, Fröhlich, Bense, and Souren, 2011</a>). Studies also found that participants offer more informational than emotional support (<a href="#him05">Himmel <em>et al.</em>, 2005</a>; <a href="#mei07">Meier <em>et al.</em>, 2007</a>; <a href="#ric17">Richard <em>et al.</em>, 2017</a>; <a href="#van08">Van Selm <em>et al.</em>, 2008</a>). This finding is supported by this study. The majority of posts (83%) analysed included an exchange of information between participants and only 17% entailed the giving or receiving of emotional support. This finding answers the second research question that addresses the prevalence of social support types in the online infertility community. Within the emotional support posts, three topics or subtypes of emotional support were identified, namely encouragement, offering congratulations, and expression of empathy and sympathy. Encouragement and empathy were also two of the most common types of emotional support found in cancer survivors messages (<a href="#mei07">Meier <em>et al.</em>, 2007</a>), in posts of an online community for children with autism (<a href="#moh15">Mohd Roffeei <em>et al.</em>, 2015</a>) and in an online community of HIV patients (<a href="#mo08">Mo and Coulson, 2008</a>). </p>
+
+<p>Regarding informational support, participants of the online infertility support group are most interested in phases of the IVF procedure, from the puncture to the treatment outcome. They want to know which are ‘the right’ feelings accompanying these phases of in-vitro fertilisation and which could be physical signs of pregnancy. Participants exchange information about their feelings throughout these phases and want to know whether certain physical conditions such as pain, vaginal discharge, discomfort are ‘normal’ in the course of IVF treatment. Participants also discuss official (administrative) procedures during treatment including referrals, waiting periods for diagnostic or treatment etc., their ‘standing’ regarding sick leave from work, and sharing information about their difficulties of having a child with their friends or family. Participants also discuss the regime, dosage and application of medications. They discuss medical examinations and share their experience with different examinations or surgical procedures. They exchange information about adoption or other possibilities for infertility treatment abroad and share some general information regarding infertility treatment, women’s menstrual cycle and alternative treatment options. The content of discussion thus ranges from traditional medical treatment towards alternative or complementary treatment of infertility. It follows the infertility treatment timeline: from the first information about infertility treatment till the treatment outcome. It reflects the participants’ vast need for information.</p>
+
+<p>Slovenia has three public medical centres for infertility treatment. The biggest centre is located in the Slovenian capital, within the Ljubljana University Medical Centre. Official informational support is offered when a couple starts infertility treatment by way of an individual consultation with the infertility treatment team. Couples can also obtain informational support by contacting the medical centre electronically or by phone where they obtain information from a medical specialist. Emotional support in terms of psychological counselling is routinely given to couples in the procedure of obtaining a donor sperm or egg cell. Other couples can begin psychological counselling upon a referral from their gynaecologist. Other formal types of social support, such as formal social support group meetings, do not exist within the health centre or broader. The findings of this research can be transferred to medical practice so that infertility specialists provide enough informational support in areas of major concern to infertility treatment patients. Constant social support throughout infertility treatment, within each treatment phase, is needed to prevent unnecessary additional stress associated with a lack of knowledge about possible concomitant treatment signs or symptoms. Patients are eager to understand the effects of the treatment and medications on their physical functioning and overall health. According to a vast share of online informational support posts, it is evident that spending additional time on educating patients would not be in vain. As shown by many studies, social support is directly linked to patients’ health (<a href="#ali06">Ali <em>et al.</em>, 2006</a>; <a href="#gus99">Gustafson <em>et al.</em>, 1999</a>; <a href="#mcd06">McDade <em>et al</em>., 2006</a>; <a href="#tom06">Tomaka <em>et al.</em>, 2006</a>) and within infertility treatment could also result in a higher rate of successful treatment outcomes or at least the improved psychological well-being of infertility treatment patients (<a href="#kle05">Klemm and Wheeler, 2005</a>; <a href="#reb08">Reblin and Uchino, 2008</a>).</p>
+
+<p>Regarding future research, it would be interesting to monitor the content of online support group discussions and provide feedback to medical doctors as to where greater emphasis should be placed while providing informational support to their patients. </p>
+			
+<p>This study has some limitations. It should be mentioned that the automatic identification of discussion topics is associated with a certain degree of ‘wrong’ post classifications. This mistake was, however, evaluated manually and analysis showed the content of discussions within topics is homogenous. An alternative approach of treating the noise problem could be also introducing a new type of topic to gather noisy words, as was recently proposed by some researchers (<a href="#li18">Li, Wang, Zhang, Li, Chi and Ouyang,  2018</a>).  As the number of topics needs to be decided upon in advance, the decision to extract a larger number of topics would yield a different outcome and some topics would be identified that were now overlooked. However, the inspection of a fifteen-topic solution provided less cohesive results than the retrieval of ten topics. </p>
+	
+<p>This study is the first study to automatically retrieve topics of discussion in this area of research in Slovenia and beyond. Specific topics within each type of support were identified that reveal the participants’ needs. Information about this could serve to guide healthcare providers and underpin their attempts to satisfy these needs. </p>
+ 
+ <h2 id="author">About the authors</h2> 
+ 
+<p><strong>Vanja Ida Erčulj</strong> is the owner of Rho sigma Research &amp; Statistics, a company dealing with statistical and research methodology consulting in Ljubljana, Slovenia. She is a lecturer at the Faculty of Criminal Justice and Security where she holds statistical and methodological courses. Her research interests are related to information retrieval from textual data, research methodology and biostatistics. She can be contacted at <a href="mailto:vanja.erculj@rosigma.si">vanja.erculj@rosigma.si</a><br /> 
+<strong>Aleš Žiberna</strong> is associate professor at Faculty of Social Sciences, University of Ljubljana, in Slovenia, Ljubljana. He is a member of a chair of Social Informatics and Methodology and a coordinator of Social statistics modules at PhD and masters programs. His research expertise is social network analysis, especially blockmodelling. He is the author and maintainer of the package Blockmodeling in program R. He can be contacted at <a href="mailto:ales.ziberna@fdv.uni-lj.si">ales.ziberna@fdv.uni-lj.si</a><br />
+<strong>Vislava Globevnik Velikonja </strong> an assistant professor in psychology, is employed at the University Medical Centre Ljubljana’s Division of Obstetrics and Gynaecology as a specialist in clinical psychology. In addition to her clinical work, where she expands the field of healthcare psychology to the field of gynaecology and obstetrics in Slovenia, she is also active in the research and pedagogical field. As a lecturer and mentor she is involved in pedagogical work for students of psychology, medicine, nursing and midwifery, and trainees in clinical psychology, gynaecology and obstetrics, and paediatrics. She can be contacted at <a href="mailto:vislava.velikonja@guest.arnes.si ">vislava.velikonja@guest.arnes.si</a></p>
+
+ 
+</section>
+<section class="refs">
+ 
+ 
+<h2>References</h2> 
+ 
+ <ul class="refs"> 
+ 
+<li id="ali06">Ali, S. M., Merlo, J., Rosvall, M., Lithman, T., &amp; Lindström, M. (2006). Social capital, the miniaturisation of community, traditionalism and first time acute myocardial infarction: a prospective cohort study in southern Sweden. <em>Social Science and Medicine, 63</em>(8), 2204–2217.</li>
+
+<li id="alk18">Alkhodair, S. A., Fung, B. C. M., Rahman, O., &amp; Hung, P. C. K. (2018). Improving interpretations of topic modeling in microblogs. <em>Journal of the Association for Information Science and Technology, 69</em>(4), 528–540.</li>
+
+<li id="bab05">Babu, G. J. (2005). Bootstrap techniques for signal processing. <em>Technometrics, 47</em>(3), 374–375.</li>
+
+<li id="bac00">Bacon, E. S., Condon, E. H., &amp; Fernsler, J. I. (2000). Young widows’ experience with an Internet self-help group. <em>Journal of Psychosoc Nursing and Mental Health Services, 38</em>(7), 24–33.</li>
+
+<li id="bar94">Barnes, M. K., &amp; Duck, S. (1994). Everyday communicative contexts for social support. In B.R. Burleson, T.L. Albrecht and I.G. Sarason (eds.). <em>Communication of social support: messages, interactions, relationships, and community</em>, (pp. 175–193). Thousand Oaks, CA, US: Sage Publications, Inc.</li>
+
+<li id="bha12">Bhanja, C., &amp; Jena, S. (2012). Synthetic protocols of a top-selling anti-hypertensive drug “Captopril”: a synthon disconnection approach. <em>Journal of Chemical and Pharmaceutical Research, 4</em>(7), 3610–3616.</li>
+
+<li id="boi05">Boivin, J., &amp; Schmidt, L. (2005). Infertility-related stress in men and women predicts treatment outcome 1 year later. <em>Fertility and Sterility, 83</em>(6), 1745–1752.</li>
+
+<li id="bra99">Braithwaite, D. O., Waldron, V. R., &amp; Finn, J. (1999). Communication of social support in computer-mediated groups for people with disabilities. <em>Health Communication, 11</em>(2), 123–151.</li>
+
+<li id="bro10">Brody, S., &amp; Elhadad, N. (2010). Detecting salient aspects in online reviews of health providers. In <em>AMIA Annual Symposium Proceedings, 2010</em>, (pp. 202–206). Bethesda, MD: American Medical Informatics Association.  Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041395/ [Unable to archive]</li>
+   
+<li id="bro03">Brown, S. L., Nesse, R. M., Vinokur, A. D., &amp; Smith, D. M. (2003). Providing social support may be more beneficial than receiving it: results from a prospective study of mortality. <em>Psychological Science, 14</em>(4), 320–327.</li>
+
+<li id="cha15">Chang, J. (2015). <em>Package &quot;lda&quot;</em>. Retrieved October 8, 2018. Retrieved from https://cran.r-project.org/web/packages/lda/lda.pdf (Archived by WebCite® at http://www.webcitation.org/75z5khbnK)</li>
+
+<li id="cou05">Coulson, N. S. (2005). Receiving social support online: an analysis of a computer-mediated support group for individuals living with irritable bowel syndrome. <em>CyberPsychology &amp; Behavior, 8</em>(6), 580–584.</li>
+
+<li id="cou09">Coursaris, C. K., &amp; Liu, M. (2009). An analysis of social support exchanges in online HIV/AIDS self-help groups. <em>Computers in Human Behavior, 25</em>(4), 911–918.</li>
+
+<li id="cut92">Cutrona, C. E., &amp; Suhr, J. A. (1992). Controllability of stressful events and satisfaction with spouse support behaviors. <em>Communication Research, 19</em>(2), 154–174.</li>
+
+<li id="erf17">Erfani, S. S., Abedin, B., &amp; Blount, Y. (2017). The effect of social network site use on the psychological well-being of cancer patients. <em>Journal of the Association for Information Science and Technology, 68</em>(5), 1308–1322.</li>
+
+<li id="erj10">Erjavec, T., Fišer, D., Krek, S., &amp; Ledinek, N. (2010). The JOS linguistically tagged corpus of Slovene. In Calzolari, N., Choukri, K., Maegaard, B., Mariani, J., Odijk, J., Piperidis, S., ... Tapias, D. (Eds.).  <em>Proceedings of the Seventh International Conference on Language Resources and Evaluation: LREC 2010</em>, (pp. 1806–1809). Valletta, Malta: European Language Resources Association.</li>
+
+<li id="gib02">Gibson, D. M., &amp; Myers Gibson, J. E. (2002). The effect of social coping resources and growth-fostering relationships on infertility stress in women. <em>Journal of Mental Health Counseling, 24</em>(1), 68–80.</li>
+
+<li id="gri04">Griffiths, T. L., &amp; Steyvers, M. (2004). Finding scientific topics. <em>Proceedings of the National Academy of Sciences of the United States of America, 101</em>(Supplement 1), 5228–5235.</li>
+
+<li id="gru07">Gruenewald, T. L., Karlamangla, A. S., Greendale, G. A., Singer, B. H., &amp; Seeman, T. E. (2007). Feelings of usefulness to others, disability, and mortality in older adults: the MacArthur study of successful aging. <em>Journals of Gerontology - Series B Psychological Sciences and Social Sciences, 62</em>(1), P28-P37.</li>
+
+<li id="gus99">Gustafson, D. H., Hawkins, R., Boberg, E., Pingree, S., Serlin, R. E., &amp; Graziano, F. (1999). Impact of a patient-centered, computer-based health information/support system. <em>American Journal of Preventive Medicine, 16</em>(1), 1–9.</li>
+
+<li id="hig14">High, A. C., &amp; Steuber, K. R. (2014). An examination of support (in)adequacy: Types, sources, and consequences of social support among infertile women. <em>Communication Monographs, 81</em>(2), 157–178.</li>
+
+<li id="him05">Himmel, W., Meyer, J., Kochen, M. M., &amp; Michelmann, H. W. (2005). Information needs and visitors’ experience of an internet expert forum on infertility. <em>Journal of Medical Internet Research, 7</em>(2), e20. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1550645/ [Unable to archive]</li>
+
+<li id="joz13">Jožef Stefan Institute. (2013). <em>ToTaLe analyser for Slovene.</em> Ljubljana: Jožef Stefan Institute. Retrieved from http://nl.ijs.si/analyse/ (Archived by WebCite® at http://www.webcitation.org/75z3rzg8k)</li>
+
+<li id="kle05">Klemm, P., &amp; Wheeler, E. (2005). Cancer caregivers online: hope, emotional roller coaster, and physical/emotional/psychological responses. <em>CIN - Computers Informatics Nursing, 23</em>(1), 38–45.</li>
+
+<li id="lec07">Lechner, L., Bolman, C., &amp; van Dalen, A. (2007). Definite involuntary childlessness: associations between coping, social support and psychological distress. <em>Human Reproduction, 22</em>(1), 288–294.</li>
+
+<li id="li18">Li, X., Wang, Y., Zhang, A., Li, C., Chi, J., &amp; Ouyang, J. (2018). Filtering out the noise in short text topic modeling. <em>Information Sciences, 456</em>, 83–96.</li>
+
+<li id="lie05">Lieberman, M. A., &amp; Goldstein, B. A. (2005). Self-help on-line: an outcome evaluation of breast cancer bulletin boards. <em>Journal of Health Psychology, 10</em>(6), 855–862.</li>
+
+<li id="liu16">Liu, L., Tang, L., Dong, W., Yao, S., &amp; Zhou, W. (2016). An overview of topic modeling and its current applications in bioinformatics. <em>SpringerPlus, 5</em>(1), 1608.</li>
+
+<li id="loa02">Loader, B. D., Muncer, S., Burrows, R., Pleace, N., &amp; Nettleton, S. (2002). Medicine on the line? Computer-mediated social support and advice for people with diabetes. <em>International Journal of Social Welfare, 11</em>(1), 53–65.</li>
+
+<li id="mcd06">McDade, T. W., Hawkley, L. C., &amp; Cacioppo, J. T. (2006). Psychosocial and behavioral predictors of inflammation in middle-aged and older adults: the Chicago health, aging, and social relations study. <em>Psychosomatic Medicine, 68</em>(3), 376–381.</li>
+
+<li id="mal10">Malik, S. H., &amp; Coulson, N. S. (2010). Coping with infertility online: An examination of self-help mechanisms in an online infertility support group. <em>Patient Education and Counseling, 81</em>(2), 315–318.</li>
+
+<li id="mei07">Meier, A., Lyons, E. J., Frydman, G., Forlenza, M., &amp; Rimer, B. K. (2007). How cancer survivors provide support on cancer-related internet mailing lists. <em>Journal of Medical Internet Research, 9</em>(2), e12.</li>
+
+<li id="mo08">Mo, P. K. H., &amp; Coulson, N. S. (2008). Exploring the communication of social support within virtual communities: A content analysis of messages posted to an online HIV/AIDS support group. <em>CyberPsychology &amp; Behavior, 11</em>(3), 371–374.</li>
+
+<li id="moh15">Mohd Roffeei, S. H., Abdullah, N., &amp; Basar, S. K. R. (2015). Seeking social support on Facebook for children with Autism Spectrum Disorders (ASDs). <em>International Journal of Medical Informatics, 84</em>(5), 375–385.</li>
+
+<li id="mos17">Moskovitch, R., Wang, F., Pei, J., &amp; Friedman, C. (2017). JASIST special issue on biomedical information retrieval. <em>Journal of the Association for Information Science and Technology, 68</em>(11), 2525–2528.</li>
+
+<li id="myr16">Myrick, J. G., Holton, A. E., Himelboim, I., &amp; Love, B. (2016). #Stupidcancer: exploring a typology of social support and the role of emotional expression in a social media community. <em>Health Communication, 31</em>(5), 596–605.</li>
+
+<li id="rco16">R Core Team. (2016). <em>R: A language and environment for statistical computing</em>.  Vienna, Austria: the R foundation for Statistical Computing. Retrieved from http://www.r-project.org/ (Archived by WebCite® at http://www.webcitation.org/75z5Fqh5t) </li>
+
+<li id="ras07">Rashad, M. M., Mohammed, R. S., El-Midany, A. A., Kandil, A. T., &amp; Ibrahim, I. A. (2007). Application of statistical design to optimize the preparation of barium titanate nanopowders via oxalate precursor method. <em>Eurasian Chemico-Technological Journal, 9</em>(2), 113–119.</li>
+
+<li id="reb08">Reblin, M., &amp; Uchino, B. N. (2008). Social and emotional support and its implication for health. <em>Current Opinion in Psychiatry, 21</em>(2), 201–205.</li>
+
+<li id="ric17">Richard, J., Badillo-Amberg, I., &amp; Zelkowitz, P. (2017). &quot;So much of this story could be me&quot;: men’s use of support in online infertility discussion boards. <em>American Journal of Men’s Health, 11</em>(3), 663–673.</li>
+
+<li id="sar90">Sarason, B. R., Sarason, I. R., &amp; Pierce, G. R. (1990). <em>Social support. An interactional view</em>. Oxford: John Wiley &amp; Sons.</li>
+
+<li id="sch05">Schmidt, L., Tjørnhøj-Thomsen, T., Boivin, J., &amp; Nyboe Andersen, A. (2005). Evaluation of a communication and stress management training programme for infertile couples. <em>Patient Education and Counseling, 59</em>(3), 252–262.</li>
+
+<li id="she91">Sherbourne, C. D., &amp; Stewart, A. L. (1991). The MOS social support survey. <em>Social Science and Medicine, 32</em>(6), 705–714.</li>
+
+<li id="smy99">Smyth, J. M., Stone, A. A., Hurewitz, A., &amp; Kaell, A. (1999). Effects of writing about stressful experiences on symptom reduction in patients with asthma or rheumatoid arthritis: a randomized trial. <em>Journal of the American Medical Association, 281</em>(14), 1304–1309.</li>
+
+<li id="tom06">Tomaka, J., Thompson, S., &amp; Palacios, R. (2006). The relation of social isolation, loneliness, and social support to disease outcomes among the elderly. <em>Journal of Aging and Health, 18</em>(3), 359–384.</li>
+
+<li id="uch06">Uchino, B. N. (2006). Social support and health: a review of physiological processes potentially underlying links to disease outcomes. <em>Journal of Behavioral Medicine, 29</em>(4), 377–387.</li>
+
+<li id="uch96">Uchino, B. N., Cacioppo, J. T., &amp; Kiecolt-Glaser, J. K. (1996). The relationship between social support and physiological processes: A review with emphasis on underlying mechanisms and implications for health. <em>Psychological Bulletin, 119</em>(3), 488–531.</li>
+
+<li id="van08">Van Selm, M., Tuil, W., Verhaak, C., Woldringh, G., &amp; Kremer, J. (2008). Chat about what matters most: an analysis of chat contributions posted to an outpatient fertility website. <em>Cyberpsychology &amp; Behavior, 11</em>(6), 675–677.</li>
+
+<li id="ver05">Verhaak, C. M., Smeenk, J. M. J., van Minnen, A., Kremer, J. A. M., &amp; Kraaimaat, F. W. (2005). A longitudinal, prospective study on emotional adjustment before, during and after consecutive fertility treatment cycles. <em>Human Reproduction, 20</em>(8), 2253–2260.</li>
+
+<li id="wic12">Wicks, P., Keininger, D. L., Massagli, M. P., la Loge, C. de, Brownstein, C., Isojärvi, J., &amp; Heywood, J. (2012). Perceived benefits of sharing health data between people with epilepsy on an online platform. <em>Epilepsy and Behavior, 23</em>(1), 16–23.</li>
+
+<li id="win97">Winzelberg, A. (1997). The analysis of an electronic support group for individuals with eating disorders. <em>Computers in Human Behavior, 13</em>(3), 393–407.</li>
+
+<li id="wis08">Wischmann, T. (2008). Implications of psychosocial support in infertility - a critical appraisal. <em>Journal of Psychosomatic Obstetrics and Gynecology, 29</em>(2), 83–90.</li>
+
+<li id="yoo14">Yoo, W., Namkoong, K., Choi, M., Shah, D. V., Tsang, S., Hong, Y., … Gustafson, D. H. (2014). Giving and receiving emotional support online: Communication competence as a moderator of psychosocial benefits for women with breast cancer. <em>Computers in Human Behavior, 30</em>, 13–22.</li>
+
+<li id="zha07">Zhang, X., Norris, S. L., Gregg, E. W., &amp; Beckles, G. (2007). Social support and mortality among older persons with diabetes. <em>The Diabetes Educator, 33</em>(2), 273–281.</li>
+
+<li id="zil11">Zillien, N., Haake, G., Fröhlich, G., Bense, T., &amp; Souren, D. (2011). Internet use of fertility patients: a systematic review of the literature. <em>Journal Für Reproduktionsmedizin Und Endokrinologie, 8</em>(4), 281–287.</li> 
+</ul>  
+
+</section>
+
+</article>
+ 
+</body>  
+ </html> 
+
+
+
+

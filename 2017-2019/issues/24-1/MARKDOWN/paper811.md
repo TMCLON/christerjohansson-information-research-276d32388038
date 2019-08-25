@@ -1,0 +1,760 @@
+   <h4 id="vol-24-no-1-march-2019">vol 24 no.1, March 2019</h4>
+ <h1>Evaluating the effectiveness of Web search engines on results diversification</h1>  <br>
+
+ <h2 class="author"><a href="#author">Shengli Wu, Zhongmin Zhang</a> and <a href="#author">Chunlin Xu</a>.</h2>
+
+ 
+
+ <blockquote><strong>Introduction</strong>. Recently, the problem of diversification of search results has attracted a lot of attention in the information retrieval and Web search research community. For multi-faceted or ambiguous queries, a search engine is generally favoured if it is able to identify relevant documents on a wider range of different aspects.
+<strong>Method</strong>. We evaluate the performance of three major Web search engines: Google, Bing and Ask manually using 200 multi-faceted or ambiguous queries from TREC.
+<strong>Analysis</strong>. Both classical metrics and intent-aware metrics are used to evaluate search results.
+<strong>Results</strong>. Experimental results show that on average Bing and Google are comparable and Ask is slightly worse than the former two. However, Ask does very well in one subtype of queries – ambiguous queries. The average performance of the three search engines is better than the average of the top two runs submitted to the TREC web diversity task in 2009-2012.
+<strong>Conclusions</strong>. Generally, all three Web search engines do well, this indicates that all of them must use state-of-the-art technology to support the diversification of search results.
+ </blockquote>
+
+
+
+ <section>
+
+ <h2>Introduction</h2>
+
+ <p>Since they came into existence on the Web in 1993,  Web search engines have been very successful and growing at a very fast speed.  Now they are used by billions of people all over the world. During the last two decades, change has been the only constant: new Web search engines have come into existence as some others have faded away.</p>
+
+ <p>Shortly after it was launched in 1998, Google took the leading position and held on to it ever since.  Its top competitors include Bing, Yahoo!, and Baidu. As of August 2016, Google had a market share of 71.11%,  followed by Bing, Baidu, Yahoo!, and Ask with market shares of 10.56%, 8.73%, 7.52%, and 0.24%, respectively  (<a href="#web16">Web search engine</a>).</p>
+
+ <p>Of course, every Web search engine company is concerned with both its own performance and that of its competitors.  However, these companies do not share their evaluations with the general research community.  Recently the problem of search results diversification has attracted a lot of attention in the  information retrieval and Web search research community, and many algorithms have been proposed to tackle it.  The main objective of the research is to find how leading commercial Web search engines perform in this aspect and gauge the extent to which they are able to satisfy users' information requirements, especially for multi-faceted, ambiguous queries, for which both the relevance and diversity of documents are imperative.</p>
+  
+ <p>Although a fairly substantial body of research (<a href="#lew15">Lewandowski, 2015</a>; <a href="#uya09">Uyar, 2009</a>; <a href="#vak11">Vakkari, 2011</a>; <a href="#wu04">Wu and Li, 2004</a>) has been given to evaluate the effectiveness of Web search engines employing a range of metrics, to the best of our knowledge, no study has yet broached the topic of results diversification.  Thus we anticipate the results from this investigation to be useful to researchers, developers, and users of Web search engines alike. More specifically, we would like to provide an answer to the following two questions:</p>
+
+ <blockquote>1.	For those multi-faceted, ambiguous queries, how do the leading Web search services perform?<br>
+ 2.	Compared with the research community, how does the industry respond to the requirement of search results diversification?
+ </blockquote>
+
+ <p>The rest of the paper is organised as follows: first we review existing literature on evaluating the performance of Web search engines, as well as the earlier research in producing diversified retrieval results. Thereafter, we  present the investigative methodology and results respectively, while the final section offers the conclusion.</p>
+</section>
+<section>
+ <h2>Literature review</h2>
+ 
+ <p>Two topics are especially pertinent as the precursors to our study: the evaluation of the effectiveness of Web search  engines, and how to enable Web search engines to produce diversified search results.</p>
+
+ <h3>Search effectiveness evaluation</h3>
+ 
+ <p>Early test-based evaluation of Web search engines date back to the 1990s (<a href="#chu96">Chu and Rosenthal, 1996</a>; <a href="#din96">Ding and Marchionini, 1996</a>; <a href="#wis98">Wishard, 1998</a>; <a href="#gor99">Gordon and Pathak, 1999</a>; <a href="#haw99">Hawking, Craswell, Thistlewaite and Harman, 1999</a>; <a href="#lei99">Leighton and Srivastava, 1999</a>).  For example, Leighton and Srivastava (<a href="#lei99">1999</a>) compared the precision of five search engines (Alta Vista, Excite, Hotbot, Infoseek, and Lycos) on the first twenty results returned for fifteen queries.  In addition, evaluation took other forms, including survey-based evaluation (<a href="#not95">Notess, 1995</a>)  and log-based evaluation (<a href="#jan98">Jansen, Spink, Bateman and Saracevic, 1998</a>).</p>
+
+ <p>In general, to perform a test-based evaluation, one needs a set of queries. Applying each of the queries to a given Web search engine then enables us to obtain a ranked list of documents.  Those documents are judged by human assessors to decide whether they are relevant to the information need.  Relevance judgment can be binary (a document is either relevant or non-relevant) or graded (more than two categories of  relevance). Finally, a variety of metrics can be used to evaluate the effectiveness of the Web search engine over all the queries.</p>
+
+ <p>In the following we only reviewed some work on test-based approaches.</p>
+ 
+ <p>Since 2000, more work on evaluation has been conducted, focusing on a range of aspects.  Eastman and Jansen (<a href="#eas03">2003</a>) investigated the effect of Boolean operators such as OR, AND, and other types of operators such as must-appear terms and phrases. Can, Nuray and Sevdik (<a href="#can04">2004</a>) used an automatic  method to evaluate a group of Web search engines in which human judgment was not required. Both  Wu and Li (<a href="#wu04">2004</a>) and Kumar and Pavithra (<a href="#kum10">2010</a>) compared the effectiveness of a group  of Web search engines and Web meta-search engines. Vakkari (<a href="#vak11">2011</a>) compared Google with the digital Ask-a-Librarian service. Uyar and Karapinar (<a href="#uya16">2016</a>) compared the image search engines of Google and Bing. Apart from English search engines, some other languages such as Germen (<a href="#gri04">Griesbaum, 2004</a>), French (<a href="#vér06">Véronis, 2006</a>), Chinese (<a href="#lon07">Long, Lv, Zhao and Liu, 2007</a>), and Arabic (<a href="#taw10">Tawileh, <em>et al.</em>, 2010</a>) were also investigated.</p>
+
+ <p>Almost all these studies and others besides Lewandowski (<a href="#lew15">2015</a>), Uyar (<a href="#uya09">2009</a>), Deka and Lahkar (<a href="#dek10">2010</a>), Tian, Chun and Geller (<a href="#tia11">2011</a>), Liu (<a href="#liu11">2011</a>), Goutam and Dwivedi (<a href="#gou12">2012</a>) and Balabantaray, Swain, and Sahoo (<a href="#bal13">2013</a>) involve Google, which tends to outperform the other Web search engines under evaluation. One exception is in Vakkari (<a href="#vak11">2011</a>) wherein the investigator finds that Google is outperformed by the Ask-a-Librarian service for queries inferred from factual and topical requests in that service.</p>
+
+ <h3>Search results diversification</h3>
+ 
+ <p>As users grow accustomed to using Web search engines, their needs evolve and increasingly require a diversified set of search results in addition to a relevant set of search results (in particular, those that involve a high degree of duplication). An ambiguous or multi-faceted query is especially difficult for Web search engines to handle, since they may not be able to accurately predict the information need of the user. Personalisation may partially alleviate the problem, but a more general solution is to provide a diversified set of documents, increasing the chances that the user will find relevant and useful information.  A recent review on different aspects of result diversification techniques can be found in Abid, <em>et al.</em> (<a href="#abi16">2016</a>).</p>
+
+ <p>A two-step procedure is usually used to support results diversification when implementing a Web search engine: for a given query, the search engine runs a typical ranking algorithm to obtain a ranked list of documents, considering only relevance; then a result diversification algorithm is applied to re-rank the initial list so as to improve diversity.</p>
+
+ <p>A number of approaches have been proposed to diversify search results. We may divide them into two categories: implicit and explicit. When re-ranking the documents, an implicit method does not need any extra information, apart from the documents themselves retrieved through a traditional search system, and possibly some statistics of the whole document collection searched. Carbonell and Goldstein (<a href="#car98">1998</a>) proposed a maximal, marginal-relevance-based method, which re-ranks documents according to a linear combination of each document's relevance to the query and the similarity between a document and other documents already in the list.</p>
+ 
+ <p>Based on the same idea as Carbonell and Goldstein (<a href="#car98">1998</a>), Zhai, Cohen and Lafferty (<a href="#zha03">2003</a>) used KL-divergence (Kullback–Leibler divergence) to measure the distance of a new document to those that are already in the list; and both Rafiei, Bharat and Shukla (<a href="#raf10">2010</a>) and Wang and Zhu (<a href="#wan09">2009</a>) used correlation to measure the novelty of a new document to those already in the list. Some methods extract potential subtopics by analysing the documents obtained from the first stage, and then re-ranking them. Analysis can be done in different ways. Carterette and Chandar (<a href="#car09">2009</a>) extracted potential subtopics by topic modelling, while He, Meij and Rijke (<a href="#he11">2011</a>) did this by query-specific clustering.</p>
+
+ <p>The explicit approach requires more information than the implicit approach. Assuming it is known that the given query has a set of subtopics and other related information, the result diversification algorithm maximizes the coverage of all subtopics in the top-n results. Algorithms that belong to this category include IA-select (Intent-Aware select) (<a href="#agr09">Agrawal, Gollapudi, Halverson and Ieong, 2009</a>), xQuAD (<a href="#san10">Santos, Macdonald and Ounis, 2010</a>), and proportionality models (<a href="#dan12">Dang and Croft, 2012</a>). The explicit approach is better than the implicit approach if reasonably good information can be collected for different aspects of a given query. Different from the above works which based on a flat list of subtopics, Hu, Dou, Wang, Sakai, and Wen (<a href="#hu15">2015</a>) investigated search result diversification based on hierarchical subtopics.</p>
+
+ <p>It is also possible to use a combination of techniques to achieve diversification. In Zheng and Fang (<a href="#zhe13">2013</a>), two representative result diversification methods were used, these were xQuAD (eXplicit Query Aspect Diversification) (<a href="#san10">Santos, Macdonald and Ounis, 2010</a>) and one of the proportionality models – PM2 (Proportionality Model 2) (<a href="#dan12">Dang and Croft, 2012</a>).
+ Liang, Ren and Rijke (<a href="#lia14">2014</a>) presented another combined approach, which comprises classical data fusion, latent subtopics inference, and results diversification. A learning-based approach has also been used for this (<a href="#xu17">Xu, Xia, Lan, Guo and Cheng, 2017</a>; <a href="#jia17">Jiang <em>et al.</em>, 2017</a>).</p>
+
+ <p>How to evaluate the effectiveness of diversified search results has been investigated by a number of researchers. See Yu, Jatowt, Blanco, Joho and Jose (<a href="#yu17">2017</a>), Wang, Dou, Sakai, and Wen (<a href="#wan16">2016</a>), Chandar and Carterette (<a href="#cha13">2013</a>) for some recent work among many others.</p>
+
+ <p>As we can see that in the information retrieval research community, search results diversification has been identified as an important issue and extensive research has been conducted to deal with it. It is interesting to find out how industry responds to this problem and this is the objective of our study in this paper.</p>
+</section>
+<section>
+ <h2>Investigation methods</h2>
+ 
+ <p>In this study, we investigated three commercial Web search engines <a href="http://www.google.com.hk">Google</a>, <a href="http://global.bing.com">Bing</a>, and<a href="http://www.ask.com">Ask</a>.  Baidu is not included because it does not support English search and Yahoo! is not included because it is powered by Bing.</p>
+
+ <p>Eight graduate students undertook the judgment work. To minimize the impact of inconsistencies from different reviewers,  each student was allocated an equal number of queries and evaluates all three search engines with all the allocated queries. As another measure for better consistency, we chose ten example queries and let all eight reviewers evaluate the results from all three search engines. The Web documents involved and the judged relevance to the topic were compared and discussed among all reviewers. We hope in this way the same threshold could be leant by all the reviewers for them to carry out their judgment work. In order to avoid the effect of personalized search from Web search engines, each reviewer used a newly-installed Web browser without any search history and used it exclusively for this experiment. For each query, the top twenty documents returned from a search engine were evaluated. The entire process lasted for about four months from the beginning of November 2015 to the end of February 2016. We notice that the search results may vary over time but assume that the performance of a search engine stays the same during the period of testing time.</p>
+
+<h3>Query set</h3>
+
+<p>The query set we use is the 200 queries (or topics) that were used in the <a href="http://trec.nist.gov/">TREC</a> (Text REtrieval Conference)
+Web diversity task between 2009 and 2012. The Text REtrieval Conference is a major venue for information retrieval and Web search evaluation. All the queries are categorized into two types: &quot;ambiguous&quot; or &quot;faceted&quot;. According to TREC (<a href="#cla09">Clarke, Craswell and Soboroff, 2009</a>), ambiguous queries are those that have multiple distinct interpretations. It is assumed that a user is interested in only one of the interpretations. On the other hand, faceted queries are general and include some related subtopics. A user interested in one subtopic may still be interested in others.</p>
+
+<p>Figure 1 is an example of a faceted query (Query 75) and Figure 2 is an example of an ambiguous query (Query 25) used in TREC.</p>
+
+<figure class="centre">
+   <img src="../figs/p811fig1.png" width="495" height="294">
+   <figcaption>
+      Figure 1:  A faceted query (Query 75)
+  </figcaption>
+</figure>
+
+ <figure class="centre">
+   <img src="../figs/p811fig2.png" width="495" height="294">
+   <figcaption>
+      Figure 2:  An ambiguous query (Query 25)
+  </figcaption>
+</figure>
+
+ <p>Query 75 includes four subtopics, with three being informational and one being navigational. Query 25 also includes four subtopics, with two being informational subtopics and the two others being navigational. In reality, such queries may have more interpretations, so the subtopics listed are not necessarily complete.</p>
+
+ <p>When carrying out the evaluation, the content between tags is used as query input to Web search engines.</p>
+
+ <h3>Relevance judgment</h3>
+ 
+ <p>Binary relevance judgment is used. That is to say, any document is deemed to be either relevant or non-relevant to the information need (a query topic or one of its subtopics). Of course, the same document may be relevant to multiple subtopics of a single query simultaneously. If a document is relevant to one of the subtopics, then this document is regarded as relevant to the query though the converse is not necessarily true: a document can be relevant to a query but without being relevant to any of its subtopics. Several metrics including ERR-IA@m (Intent-Aware Expected Reciprocal Rank at retrieval depth m), P-IA@m (Intent-Aware Precision at retrieval depth m), SubtopicRecall@m, P@m (Precision at document depth m and
+ m = 5, 10, or 20), and MRR (Mean Reciprocal Rank) are used to evaluate search results. ERR-IA@m and P-IA@m are typical metrics for intent-aware evaluation, while P@m and MRR are typical metrics for classical evaluation. P@m is the percentage of relevant documents in all m-top ranked documents. MRR takes the reciprocal of the rank at which the first relevant document appears in the results list.</p>
+
+ <p>For a given topic, assume there are n subtopics associated with it. Let R(i, j) = 1 if the document at ranking position <em>i</em> is judged relevant to subtopic <em>j</em>; otherwise, let R(i, j) = 0. P-IA@m (intent-aware precision) is defined as (<a href="#cla09">Clarke, Craswell, and Soboroff, 2009</a>):</p>
+
+<figure class="centre">
+<img class="centre" alt="Equation 1" src="../figs/p811eq1.png">
+</figure>
+
+ <p>ERR-IA@m (intent-aware expected reciprocal rank) is defined as (<a href="#cha09">Chapelle, Metzler, Zhang and Grinspan, 2009</a>):</p>
+
+<figure class="centre">
+<img class="centre" alt="Equation 2" src="../figs/p811eq2.png">
+</figure>
+
+ <p>Generally speaking, ERR-IA@m is concerned with the total number of documents that are relevant to subtopics up to position m. If a document <em>d</em> is relevant to <em>k</em> subtopics at the same time, then <em>d</em> is counted <em>k</em> times. ERR-IA@m favours those results in which all subtopics are covered by the top-ranked documents. ERR-IA@m inspects each of the subtopics separately. According to Clarke, Craswell and Soboroff (<a href="#cla09">2009</a>), SubtopicRecall@m (subtopic recall) can be computed as the number of subtopics with relevant documents in the top <em>m</em> divided by the total number of subtopics with relevant documents in the collection. For any subtopic, the ranking position of the first relevant document is the most important factor. Except the first relevant document, all other relevant documents contribute much less to the final score of an intent-aware metric.</p>
+
+ <p><strong>Example 1</strong>. Suppose for a given query, there are 3 subtopics. The relevance of a results
+ list R to these subtopics is shown in Figure 3.</p>
+
+ <figure class="centre">
+   <img src="../figs/p811fig3.png" width="495" height="114">
+   <figcaption>
+      Figure 3:  Distribution of relevant documents to all subtopics in an exemplary query
+  </figcaption>
+</figure>
+
+<p>In Figure 3, the number of subtopics to which it is relevant is given, whereas N indicates that the document is not relevant to any subtopics. In the top-5 documents, two documents (at rank 2 and 3) are relevant to at least one subtopic; In the top-10 documents, five documents (at rank 2, 3, 6, 8, and 9) are relevant to at least one subtopic. Therefore, P@5=2/5 and P@10=5/10=1/2. The first document that is relevant to any subtopic is at rank
+2, thus MRR=1/2. <img style=" margin:0 0 -8px 0px;" src="../figs/p811image1.png"  alt="eq"> , and <img style=" margin:0 0 -8px 0px;" src="../figs/p811image2.png"  alt="eq">. In order to calculate ERR-IA@m, we look at each subtopic separately. For subtopic 1, the relevant documents are at rank 2 and 9. The score that we obtain for this part is 1/3(1/2*1* 1/2+1/9*1/2*1/2). Similarly, the scores for subtopics 2 and 3 are 1/3(1/2*1* 1/2+1/3*1/2*1/2+1/8*1/4*1/2) and 1/3(1/3*1* 1/2+1/6*1/2*1/2), respectively. Summing together these three parts, we produce ERR-IA@5=0.2500 and ERR-IA@10=0.2600.</p>
+
+<p>In all the cases, broken links are treated as non-relevant documents to any topics.</p>
+</section>
+<section>
+<h2>Results</h2>
+
+<p>We discuss the evaluation process in two separate parts. In the first part we only consider those subtopics that are listed in TREC. In the second part, we remove this restriction. For any document, if the reviewer thinks it is relevant to a subtopic that is not listed in TREC, then the subtopic will be added to the list of subtopics for that query.</p>
+
+<h3>Evaluation using listed subtopics in TREC</h3>
+
+<p>The evaluation results are shown in Tables 1 (for Metrics ERR-IA@m and P-IA@m) and 2 (for Metrics P@m and MMR). From Tables 1 and 2, we can see that Bing outperforms both Google and Ask, while Google stands better than Ask in all but one metric: when P-IA@5 is used, Ask is 5.35% more effective than Google. For intent-aware metrics, the difference between them is always small, being below 10% for all cases. For classical metrics, the difference between them is large though the difference is still below 20% for every case. Paired T test is carried out to decide if the difference is significant.  In most cases, the difference between Bing and Ask is significant at the level of .05. The difference between Google and Bing is significant on four measures P-IA@5, P@5, P@10, and P@20, but not for seven others. The difference between Google and Ask is significant on six measures.</p>
+
+<p>All the queries can be divided into two categories: ambiguous queries and faceted queries. Search performance is calculated separately for the three search engines (see Tables 3 and 4). We find an interesting phenomenon: Bing is the best performer with faceted queries, while Ask is the best performer with ambiguous queries. Because there are many more faceted queries (142) than ambiguous queries (58), Bing takes with the lead over Ask in our experiment (see Tables 3 and 4). However, should we treat these two types of queries equally without considering the number of queries in each type, then Ask and Bing would be very close on all diversity-based metrics.</p>
+
+<p>In summary, in aggregate Bing performs the best, Google is in second place, while Ask comes last when we consider average performance. Ask performs the best for the ambiguous queries but perform the worst for the faceted queries, while the difference between Bing and Google is small.</p>
+
+<p>Next we look at those metrics more closely. In Table 1, SubtopicRecall@20 is above 0.95 for both Google and Bing, which shows that over 95% of all the subtopics identified in TREC are covered by the top twenty documents. The figure for Ask is 0.8295, which means that about 83% of all the subtopics identified in TREC are covered by the top twenty documents in Ask's results. ERR-IA@m also favours those documents that cover more subtopics. Let us assume there are <em>n</em> subtopics for a given query. Then in a results list, the first document relevant to a specific subtopic contributes 0.5/n, and the second relevant to the same subtopic contributes 0.25/n,…, to the final score. Considering the top-<em>m</em> documents in a results list, if there is just one relevant document for each of the subtopics, then the final score of ERR-IA@m is 0.5.  In Table 1, all ERR-IA@m scores are over 0.4 and two of them are over 0.5. This confirms that most subtopics are covered in the top-<em>m</em> documents (for <em>m</em>=5, 10, or 20). When more documents are considered, more subtopics are covered for any results list. This is why the value of ERR-IA@m increases with <em>m</em>. However, the value of ERR-IA@m increases quite slowly when <em>m</em> increases from 5 to 10 and to 20. This shows that a relatively large percentage of subtopics are already covered by five top-ranked documents. On the other hand, P-IA@m only concerns how many documents are relevant to any of the subtopics. Thus the value of P-IA@m decreases when <em>m</em> increases.</p>
+
+<p>Another aspect that can be looked at is the difference between ambiguous queries and faceted queries. For each ambiguous query, on average 107.5 documents are relevant to a subtopic (if a document is relevant to <em>m</em> subtopics, then it is counted <em>m</em> times); while the number of documents is 155.5 for faceted queries. Also for faceted queries, more documents are relevant to more than one subtopic than for ambiguous queries. More specifically, in all 142 faceted queries, 9186, 4391, 1632, 534, 105, and 2 documents are relevant to 1, 2, 3, 4, 5, and 6 subtopics, respectively; in all 58 faceted queries, 5116, 830, 217, 63, and 5 documents are relevant to 1, 2, 3, 4, and 5 subtopics, respectively. This should have an effect on ERR-IA@m and P-IA@m. From Tables 3 and 4, we can see that for both Google and Bing, ERR-IA@m and P-IA@m values are larger for faceted queries than for ambiguous queries. However, Ask is opposite to Google and Bing on this aspect.</p>
+
+ <table class="center">
+ <caption><br>Table 1: Intent-aware performance (measured by ERR-IA@m, P-IA@m, and SubtopicRecall@20) of three Web search engines.</caption>
+ <tbody>
+  <tr>
+  <th>Metric</th><th>Google</th><th>Bing</th><th>Ask</th><th>Average</th>  </tr>
+  <tr> <td>ERR-IA@5</td>
+ <td style="text-align:center">0.4495</td>
+ <td style="text-align:center"><strong>0.4796(6.70%)</strong></td>
+ <td style="text-align:center">0.4397(-2.18%)+</td>
+ <td style="text-align:center">0.4563</td>
+ </tr>
+  <tr>
+  <td>ERR-IA@10</td>
+  <td style="text-align:center">0.4765</td>
+  <td style="text-align:center"><strong>0.5059(6.17%)</strong></td>
+  <td style="text-align:center">0.4641(-2.60%)+</td>
+  <td style="text-align:center">0.4822</td>
+  </tr>
+  <tr>
+  <td>ERR-IA@20</td>
+  <td style="text-align:center">0.4907</td>
+  <td style="text-align:center"><strong>0.5183(5.62%)</strong></td>
+  <td style="text-align:center">0.4775(-2.69%)+</td>
+  <td style="text-align:center">0.4955</td>
+  </tr>
+  <tr>
+  <td>P-IA@5</td>
+  <td style="text-align:center">0.3078</td>
+  <td style="text-align:center"><strong>0.3357(9.06%)*</strong></td>
+  <td style="text-align:center">0.3115(1.20%)+</td>
+  <td style="text-align:center">0.3183</td>
+  </tr>
+  <tr>
+  <td>P-IA@10</td>
+  <td style="text-align:center">0.2817</td>
+  <td style="text-align:center">	<strong>0.2970(5.43%)</strong></td>
+  <td style="text-align:center">	0.2600(-7.70%)#+</td>
+  <td style="text-align:center">0.2796</td>
+  </tr>
+  <tr>
+  <td>P-IA@20</td>
+  <td style="text-align:center">0.2410</td>
+  <td style="text-align:center">	<strong>0.2554(5.98%)</strong></td>
+  <td style="text-align:center">	0.2079(-13.73%)#+</td>
+  <td style="text-align:center">0.2348</td>
+  </tr>
+  <tr>
+  <td>SubtopicRecall@20</td>
+  <td style="text-align:center">	0.9500</td>
+  <td style="text-align:center">	<strong>0.9709(2.20%)</strong></td>
+  <td style="text-align:center">	0.8295(-12.65%)#+</td>
+  <td style="text-align:center">0.9167</td>
+  </tr>
+  <tr>
+    <td colspan="5">In all 200 queries, the figures in parentheses are the differences when compared with Google;
+	the figures in bold denote the best performances among three search engines for a given metric;
+	significant difference between two search engines at .05 level is marked by *, #, or +: * for Google
+	vs. Bing, # for Google vs. Ask, and + for Bing vs. Ask</td>
+  </tr>
+ </tbody>
+ </table>
+ <br>
+
+  <table class="center">
+ <caption><br>Table 2: Classical performance (measured by P@5, P@10, P@20, and MRR) of three Web search engines.</caption>
+ <tbody>
+  <tr>
+  <th>Metric</th><th>Google</th><th>Bing</th><th>Ask</th><th>Average</th>
+  </tr>
+  <tr>
+ <td>P@5</td>
+ <td style="text-align:center">0.6880</td>
+ <td style="text-align:center"><strong>0.7740(12.50%)*</strong></td>
+ <td style="text-align:center">0.6440(-6.40%)#+</td>
+ <td style="text-align:center">0.7020</td>
+ </tr>
+  <tr>
+  <td>P@10</td>
+  <td style="text-align:center">0.6390</td>
+  <td style="text-align:center"><strong>0.7030(10.01%)*</strong></td>
+  <td style="text-align:center">0.5690(-10.95%)#+</td>
+  <td style="text-align:center">0.6370</td>
+  </tr>
+  <tr>
+  <td>P@20</td>
+  <td style="text-align:center">0.5660</td>
+  <td style="text-align:center"><strong>0.6360(12.37%)*</strong></td>
+  <td style="text-align:center">0.4715(-16.69%)#+</td>
+  <td style="text-align:center">0.5578</td>
+  </tr>
+  <tr>
+  <td>MRR</td>
+  <td style="text-align:center">0.9156</td>
+  <td style="text-align:center"><strong>0.9558(4.39%)</strong></td>
+  <td style="text-align:center">0.8803(-3.86%)+</td>
+  <td style="text-align:center">0.9174</td>
+  </tr>
+  <tr>
+  <td>Number of broken links</td>
+  <td style="text-align:center">123</td>
+  <td style="text-align:center">	<strong>93(-24.39%)</strong></td>
+  <td style="text-align:center">	375(204.87%)</td>
+  <td style="text-align:center">197</td>
+  </tr>
+  <tr>
+    <td colspan="5">In all 200 queries, the figures in parentheses are the differences when compared with Google; the figures in bold denote the best performances among three search engines for a given metric; significant difference between two search engines at .05 level is marked by *, #, or +: * for Google vs. Bing, # for Google vs. Ask, + for Bing vs. Ask</td>
+  </tr>
+ </tbody>
+ </table>
+  <br>
+
+ <table class="center">
+ <caption><br>Table 3: Intent-aware performance (measured by ERR-IA@m and P-IA@m) of three Web search engines.</caption>
+ <tbody>
+  <tr>
+  <th>Metric</th><th>Google</th><th>Bing</th><th>Ask</th>
+  </tr>
+  <tr>
+ <td>ERR-IA@5</td>
+ <td style="text-align:center">0.4263</td>
+ <td style="text-align:center">0.4340(1.81%)</td>
+ <td style="text-align:center"><strong>0.4570(7.20%)</strong></td>
+ </tr>
+  <tr>
+  <td>ERR-IA@10</td>
+  <td style="text-align:center">0.4495</td>
+  <td style="text-align:center">0.4576(1.80%)</td>
+  <td style="text-align:center"><strong>0.4795(6.67%)</strong></td>
+  </tr>
+  <tr>
+  <td>ERR-IA@20</td>
+  <td style="text-align:center">0.4677</td>
+  <td style="text-align:center">0.4715(0.81%)</td>
+  <td style="text-align:center"><strong>0.4902(4.81%)</strong></td>
+  </tr>
+  <tr>
+  <td>P-IA@5</td>
+  <td style="text-align:center">0.2451</td>
+  <td style="text-align:center">0.2650(8.12%)</td>
+  <td style="text-align:center"><strong>0.3364(37.25%)</strong></td>
+
+  </tr>
+  <tr>
+  <td>P-IA@10</td>
+  <td style="text-align:center">0.2094</td>
+  <td style="text-align:center">0.2252(7.55%)</td>
+  <td style="text-align:center">	<strong>0.2780(32.76%)</strong></td>
+  </tr>
+  <tr>
+  <td>P-IA@20</td>
+  <td style="text-align:center">0.1782</td>
+  <td style="text-align:center">0.1879(5.44%)</td>
+  <td style="text-align:center">	<strong>0.2180(22.33%)</strong></td>
+  </tr>
+  <tr>
+    <td colspan="4">Fifty-eight ambiguous queries; the figures in bold denote the best performances among three search engines for a given metric.</td>
+  </tr>
+ </tbody>
+ </table>
+  <br>
+
+ <table class="center">
+ <caption><br>Table 4: Intent-aware performance (measured by ERR-IA@X and P-IA@X) of three Web search engines.</caption>
+ <tbody>
+  <tr>
+  <th>Metric</th><th>Google</th><th>Bing</th><th>Ask</th>
+  </tr>
+  <tr>
+ <td>ERR-IA@5</td>
+ <td style="text-align:center">0.4590</td>
+ <td style="text-align:center"><strong>0.4982(8.54%)</strong></td>
+ <td style="text-align:center">0.4327(-5.73%)</td>
+ </tr>
+  <tr>
+  <td>ERR-IA@10</td>
+  <td style="text-align:center">0.4875</td>
+  <td style="text-align:center"><strong>0.5256(7.82%)</strong></td>
+  <td style="text-align:center">0.4578(-6.09%)</td>
+  </tr>
+  <tr>
+  <td>ERR-IA@20</td>
+  <td style="text-align:center">0.5002</td>
+  <td style="text-align:center"><strong>0.5375(7.46%)</strong></td>
+  <td style="text-align:center">0.4723(-5.58%)</td>
+  </tr>
+  <tr>
+  <td>P-IA@5</td>
+  <td style="text-align:center">0.3334</td>
+  <td style="text-align:center"><strong>0.3645(9.33%)</strong></td>
+  <td style="text-align:center">0.3013(-9.63%)</td>
+
+  </tr>
+  <tr>
+  <td>P-IA@10</td>
+  <td style="text-align:center">0.3113</td>
+  <td style="text-align:center"><strong>0.3264(4.85%)</strong></td>
+  <td style="text-align:center">0.2527(-18.82%)</td>
+  </tr>
+  <tr>
+  <td>P-IA@20</td>
+  <td style="text-align:center">0.2666</td>
+  <td style="text-align:center"><strong>0.2830(6.15%)</strong></td>
+  <td style="text-align:center">0.2038(-23.56%)</td>
+  </tr>
+  <tr>
+    <td colspan="4">142 faceted queries; the figures in bold denote the best performances among three search engines for a given metric.</td>
+  </tr>
+ </tbody>
+ </table>
+ <br>
+
+ <table class="center">
+ <caption><br>Table 5: Performance of the top-two submissions (measured by ERR-IA@20) to the TREC Web diversity task 2009-2012.</caption>
+ <tbody>
+  <tr>
+  <th rowspan="2">Metric</th><th colspan="2">2009</th><th colspan="2">2010</th>
+  <th colspan="2">2011</th><th colspan="2">2012</th><th rowspan="2">Average</th></tr>
+  <tr><th>Top1</th><th>Top2</th><th>Top1</th><th>Top2</th><th>Top1</th><th>Top2</th><th>Top1</th><th>Top2</th></tr>
+    <tr>
+ <td>ERR-IA@5</td>
+ <td style="text-align:center">0.2226</td>
+ <td style="text-align:center">0.1844</td>
+ <td style="text-align:center">0.3103</td>
+ <td style="text-align:center">0.3115</td>
+ <td style="text-align:center">0.4976</td>
+ <td style="text-align:center">0.4651</td>
+ <td style="text-align:center">0.4736</td>
+ <td style="text-align:center">0.4051</td>
+ <td style="text-align:center">0.3588</td>
+ </tr>
+  <tr>
+  <td>ERR-IA@10</td>
+  <td style="text-align:center">0.2420</td>
+  <td style="text-align:center">0.2019</td>
+  <td style="text-align:center">0.3343</td>
+  <td style="text-align:center">0.3335</td>
+  <td style="text-align:center">0.5207</td>
+  <td style="text-align:center">0.4897</td>
+  <td style="text-align:center">0.4944</td>
+  <td style="text-align:center">0.4222</td>
+  <td style="text-align:center">0.3798</td>
+  </tr>
+  <tr>
+  <td>ERR-IA@20</td>
+  <td style="text-align:center">0.2501</td>
+  <td style="text-align:center">0.2144</td>
+  <td style="text-align:center">0.3473</td>
+  <td style="text-align:center">0.3457</td>
+  <td style="text-align:center">0.5284</td>
+  <td style="text-align:center">0.4994</td>
+  <td style="text-align:center">0.5048</td>
+  <td style="text-align:center">0.4315</td>
+  <td style="text-align:center">0.3902</td>
+  </tr>
+  <tr>
+  <td>P-IA@5</td>
+  <td style="text-align:center">0.1619</td>
+  <td style="text-align:center">0.1267</td>
+  <td style="text-align:center">0.2135</td>
+  <td style="text-align:center">0.2108</td>
+  <td style="text-align:center">0.3715</td>
+  <td style="text-align:center">0.3330</td>
+  <td style="text-align:center">0.4080</td>
+  <td style="text-align:center">0.3544</td>
+  <td style="text-align:center">0.2725</td>
+
+  </tr>
+  <tr>
+  <td>P-IA@10</td>
+  <td style="text-align:center">0.1444</td>
+  <td style="text-align:center">0.1124</td>
+  <td style="text-align:center">0.1950</td>
+  <td style="text-align:center">0.1825</td>
+  <td style="text-align:center">0.3521</td>
+  <td style="text-align:center">0.3273</td>
+  <td style="text-align:center">0.3921</td>
+  <td style="text-align:center">0.3414</td>
+  <td style="text-align:center">0.2559</td>
+  </tr>
+  <tr>
+  <td>P-IA@20</td>
+  <td style="text-align:center">0.1224</td>
+  <td style="text-align:center">0.1080</td>
+  <td style="text-align:center">0.1703</td>
+  <td style="text-align:center">0.1766</td>
+  <td style="text-align:center">0.3039</td>
+  <td style="text-align:center">0.2910</td>
+  <td style="text-align:center">0.3504</td>
+  <td style="text-align:center">0.3178</td>
+  <td style="text-align:center">0.2301</td>
+  </tr>
+  <tr>
+  <td>SubtopicRecall@20</td>
+  <td style="text-align:center">0.7742</td>
+  <td style="text-align:center">0.9248</td>
+  <td style="text-align:center">0.7210</td>
+  <td style="text-align:center">0.8276</td>
+  <td style="text-align:center">0.9756</td>
+  <td style="text-align:center">0.9800</td>
+  <td style="text-align:center">0.9603</td>
+  <td style="text-align:center">0.9508</td>
+  <td style="text-align:center">0.8893</td>
+  </tr>
+  <tr>
+  <td>P@5</td>
+ <td style="text-align:center">0.4680</td>
+ <td style="text-align:center">0.3720</td>
+ <td style="text-align:center">0.4042</td>
+ <td style="text-align:center">0.4375</td>
+  <td style="text-align:center">0.4320</td>
+  <td style="text-align:center">0.3600</td>
+  <td style="text-align:center">0.5280</td>
+  <td style="text-align:center">0.4360</td>
+  <td style="text-align:center">0.4297</td>
+ </tr>
+  <tr>
+  <td>P@10</td>
+  <td style="text-align:center">0.4040</td>
+  <td style="text-align:center">0.3300</td>
+  <td style="text-align:center">0.3771</td>
+  <td style="text-align:center">0.3771</td>
+  <td style="text-align:center">0.3940</td>
+  <td style="text-align:center">0.3720</td>
+  <td style="text-align:center">0.5200</td>
+  <td style="text-align:center">0.4420</td>
+  <td style="text-align:center">0.4020</td>
+  </tr>
+  <tr>
+  <td>P@20</td>
+  <td style="text-align:center">0.3550</td>
+  <td style="text-align:center">0.3230</td>
+  <td style="text-align:center">0.3438</td>
+  <td style="text-align:center">0.3740</td>
+  <td style="text-align:center">0.3510</td>
+  <td style="text-align:center">0.3350</td>
+    <td style="text-align:center">0.4750</td>
+  <td style="text-align:center">0.4050</td>
+    <td style="text-align:center">0.3702</td>
+  </tr>
+  <tr>
+  <td>MRR</td>
+  <td style="text-align:center">0.6551</td>
+  <td style="text-align:center">0.6107</td>
+  <td style="text-align:center">0.6581</td>
+  <td style="text-align:center">0.6523</td>
+  <td style="text-align:center">0.6609</td>
+  <td style="text-align:center">0.5725</td>
+   <td style="text-align:center">0.6920</td>
+  <td style="text-align:center">0.5617</td>
+  <td style="text-align:center">0.6329</td>
+  </tr>
+ </tbody>
+ </table>
+  <br>
+ <p>We also select some search results that were submitted to TREC. As the queries were used between 2009 and 2012,  we chose the top-two results from each group of those submitted to the TREC Web diversity task in four successive years. The results are shown in Table 5.</p>
+
+ <p>From Table 5, we can see that the performance of those runs varies over different years. The two runs in 2009 are the worst, which are followed by the two runs in 2010, and the runs in 2011 and 2012 are close, and all of them are better than those in 2009 and 2010, especially when measured by intent-aware metrics. This phenomenon is understandable because 2009 is the first year in which the Web diversity task was held in TREC, and progress may take place over time. The performance of the submitted runs stabilises in 2012 after improvements in the previous three years. Another factor also contributes to this phenomenon significantly: varying number of sub-topics in those queries. In 2009, the average number of sub-topics is 4.86 per query; while they are 4.36, 3.36, and 3.90 in the next three years. As we will demonstrate later: the more sub-topics a query has, the more difficult it is for retrieval results to achieve better performance if measured by intent-aware metrics. See the next section for detailed analysis and explanation.</p>
+
+ <p>The three search engines can be regarded as representatives of the industry and those top-runs submitted to TREC can  be regarded as representatives of the academia. By grouping all three commercial search engines and top-two runs submitted to TREC respectively, we compare their average performance over the same group of 200 queries. Comparing the figures in Tables 1 and 2 and the figures in Table 5 (all appear in the last column), we find that all the figures in Tables 1 and 2 are higher than the figures in Table 5. It shows that the industry sector has done a better job than the academia sector. Considering the collection of documents indexed by the Web search engines is considerably greater in both scale and diversity, it is more challenging for Web search engines to achieve comparable performance of those runs submitted to TREC. It indicates that the industry must use state-of-the-art technology to support the diversification of search results.</p>
+
+ <h3>Evaluation using all possible subtopics</h3>
+ 
+ <p>In reality, for a given topic, the subtopics provided by TREC may not be complete and some more subtopics exist.  Let us consider two queries: Query 75 and Query 25. Query 75 is a faceted query and Query 25 is an ambiguous query.  Each of them has four subtopics. When we look at more documents on the Web, two more informational subtopics are found  for Query 75 and five more subtopics including two informational and three navigational subtopics are found for Query 25.  Figures 4 and 5 show the subtopics added to query 75 and query 25, respectively.</p>
+
+  <figure class="centre">
+   <img src="../figs/p811fig4.png" width="495" height="214">
+   <figcaption>
+      Figure 4:  Two more subtopics of Query 75.
+  </figcaption>
+</figure>
+
+<figure class="centre">
+   <img src="../figs/p811fig5.png" width="495" height="314">
+   <figcaption>
+      Figure 5:  Four more subtopics of Query 25.
+  </figcaption>
+</figure>
+
+<p>We try to understand what the possible consequence can be if more subtopics are identified. In this part, we look at 20 queries, which are selected randomly from the first 100 queries. They are query 1, 8, 12, 19, 25, 26, 28, 38, 46, 50, 51, 58, 61, 64, 72, 75, 82, 87, 91, and 92. 10 of them are ambiguous queries and 10 are faceted queries. In total, there are 77 subtopics for those 20 queries in TREC and 46 new subtopics have been found in the results from the three Web search engines. This means an increase of 60% over the original 77 subtopics. In other words, each query has an average of 3.85 subtopics initially, which increases by 2.3 subtopics, reaching 6.15. This time we consider all possible subtopics identified both in TREC and in the three commercial Web search engines.</p>
+
+<p>The results are shown in Tables 6 and 7. This time Ask is better than the other two on most diversity-based metrics, while Google is the best on most relevance-based metrics. However, the difference between them is quite small in every case. It seems that the results in Tables 6 and 7 are not very consistent with the results in Tables 1 and 2. This is understandable because this time there are equal number of queries in each category, while in the former case there are far more faceted queries than ambiguous queries.</p>
+
+<p>We also compare the results of the same search engine using subtopics provided by TREC vs. all possible subtopics. We find that, when more subtopics are found in the results list, the values of metrics P@m increase, while the values of intent-aware metrics including ERR-IA@m and P-IA@m decrease. The same phenomenon happens to all three search engines.  Figure 6 shows Google's results: paired histograms of different metrics. Decrease rates for ERR-IA@5, ERRIA@10,  and ERR-IA@20 are 24.23%, 21.58%, and 20.13%, respectively; the lower rates for P-IA@5, P-IA@10, and P-IA@20 are 22.84%,  17.76%, and 14.07%, respectively; while the higher rates for P@5, P@10, and P@20 are 20.51%, 29.20%, and 34.78%, respectively.</p>
+
+<table class="center">
+ <caption><br>Table 6: Intent-aware performance (measured by ERR-IA@m and P-IA@m) of three Web search engines.</caption>
+ <tbody>
+  <tr>
+  <th>Metric</th><th>Google</th><th>Bing</th><th>Ask</th>
+  </tr>
+  <tr>
+ <td>ERR-IA@5</td>
+ <td style="text-align:center">0.3492</td>
+ <td style="text-align:center">0.3702(6.01%)</td>
+ <td style="text-align:center"><strong>0.3961(13.43%)</strong></td>
+ </tr>
+  <tr>
+  <td>ERR-IA@10</td>
+  <td style="text-align:center">0.3774</td>
+  <td style="text-align:center">0.3977(5.38%)</td>
+  <td style="text-align:center"><strong>0.4196(11.18%)</strong></td>
+  </tr>
+  <tr>
+  <td>ERR-IA@20</td>
+  <td style="text-align:center">0.3956</td>
+  <td style="text-align:center">0.4137(4.58%)</td>
+  <td style="text-align:center"><strong>0.4363(10.29%)</strong></td>
+  </tr>
+  <tr>
+  <td>P-IA@5</td>
+  <td style="text-align:center">0.2685</td>
+  <td style="text-align:center">0.2633(-1.94%)</td>
+  <td style="text-align:center"><strong>0.2768(3.09%)</strong></td>
+  </tr>
+  <tr>
+  <td>P-IA@10</td>
+  <td style="text-align:center">0.2405</td>
+  <td style="text-align:center">	<strong>0.2461(2.33%)</strong></td>
+  <td style="text-align:center">0.2399(-0.25%)</td>
+  </tr>
+  <tr>
+  <td>P-IA@20</td>
+  <td style="text-align:center">0.2052</td>
+  <td style="text-align:center">	<strong>0.2104(2.53%)</strong></td>
+  <td style="text-align:center">0.2035(-0.83%)</td>
+  </tr>
+  <tr>
+    <td colspan="4">Twenty selected queries with equal numbers of ambiguous and faceted queries, the figures in parentheses are the differences compared to Google; the figures in bold denote the best performance on a given metric</td>
+  </tr>
+ </tbody>
+ </table>
+  <br>
+<table class="center">
+ <caption><br>Table 7: Classical performance (measured by P@5, P@10 and P@20) of three Web search engines.</caption>
+ <tbody>
+  <tr>
+  <th>Metric</th><th>Google</th><th>Bing</th><th>Ask</th>
+  </tr>
+  <tr>
+ <td>P@5</td>
+ <td style="text-align:center"><strong>0.9337</strong></td>
+ <td style="text-align:center">0.8600(-7.89%)</td>
+ <td style="text-align:center">0.8500(-8.96%)</td>
+ </tr>
+  <tr>
+  <td>P@10</td>
+  <td style="text-align:center"><strong>0.8729</strong></td>
+  <td style="text-align:center">0.8250(-5.49%)</td>
+  <td style="text-align:center">0.7450(-14.65%)</td>
+  </tr>
+  <tr>
+  <td>P@20</td>
+  <td style="text-align:center">0.7593</td>
+  <td style="text-align:center"><strong>0.7600(0.09%)</strong></td>
+  <td style="text-align:center">0.6625(-12.75%)</td>
+  </tr>
+  <tr>
+  <td>MRR</td>
+  <td style="text-align:center"><strong>1.0000</strong></td>
+  <td style="text-align:center">0.9750(-2.50%)</td>
+  <td style="text-align:center">0.9292(-7.08%)</td>
+  </tr>
+  <tr>
+    <td colspan="4">Twenty selected queries with equal numbers of ambiguous and faceted queries, the figures in parentheses are the differences compared to Google; figures in bold denote the best performance on a given metric.</td>
+  </tr>
+ </tbody>
+ </table>
+
+
+  <figure class="centre">
+   <img src="../figs/p811fig6.png" width="675" height="374">
+   <figcaption>
+      Figure 6:  Google's performance: considering TREC-specified subtopics vs. considering all possible subtopics in the resulting list.
+  </figcaption>
+</figure>
+
+<p>To confirm this finding, we further look at all 200 queries but with TREC-listed subtopics only. In all these queries, the minimum number of subtopics specified for a query is 3 while the maximum number is 8. We divide them into two groups: queries with 3-5 subtopics (Group 1) and queries with 6-8 subtopics (Group 2), and separately compare the performance of each of the three search engines in these two groups. Figure 7 shows Bing's results. The same phenomenon also happens to the two other Web search engines.</p>
+
+  <figure class="centre">
+   <img src="../figs/p811fig7.png" width="675" height="374">
+   <figcaption>
+      Figure 7:  Bing's performance: 6-8 subtopics vs. 3-5 subtopics.
+  </figcaption>
+</figure>
+
+<p>The formulae (Equations 1 and 2) for metrics ERR-IA@m and P-IA@m help to explain the underlying cause of this phenomenon. For any given topic, all subtopics share one resulting list. If we assume that each document is relevant to at most one subtopic, then the more subtopics there are, the more difficult it is for any subtopic to get a relevant document amongst the top ranking positions. Thus the final average of all subtopics will decrease. On the other hand, because a document relevant to any subtopic will be counted as being relevant to the general query, with more identified subtopics the probability that a given document is relevant to at least one of the subtopics increases, meaning that P@m and MMR values will increase accordingly.</p>
+
+<p>This finding is interesting and significant for the research and experiments of search results diversification. If there are two groups of queries and the queries in group A have fewer subtopics than the queries in group B, then it is easier for a search engine to achieve better performance with the queries in B than with the queries in A. Further research work is desirable in two directions of retrieval evaluation with certain overlaps. One is about retrieval evaluation metrics. The intent-aware metrics can be modified to make them consistent over different number of sub-topics. The other is about retrieval evaluation experiments. When designing such experiments, the number of sub-topics should be considered as a factor that has significant impact on the difficulty level of the experiment. Furthermore, if we compare two results from different experiments, then their difficulty levels, including the numbers of sub-topics for the queries involved, should be considered.</p>
+</section>
+<section>
+<h2>Conclusions</h2>
+
+<p>In this investigation we have evaluated the performance of three major Web search engines: Google, Bing, and Ask, primarily focusing on their ability to diversify results. Through extensive experimentation, we find that all of them perform well. When considering top twenty documents in the results, then, on average, over 80% of the subtopics are covered by Ask; and over 90% of the subtopics are covered by both Google and Bing. We have also compared the results of these three search engines with the top two results submitted to the TREC Web diversity task between 2009 and 2012 and find that the average performance of the former group is better than the average of the latter group. This indicates that all the search engines support results diversification effectively powered by the state-of-the-art technology.</p>
+
+<p>More specifically, we find that Bing and Google are comparable and both of them are slightly better than Ask on intent-aware metrics. Such a phenomenon is somewhat surprising given that most previous investigations have found that Google is more effective than the others. However, previous investigations have not taken into account results diversification. Furthermore, the queries tested in this investigation may not be the most common queries submitted to the search engines. Thus the results from this investigation reflect one aspect of those search engines, though are unlikely to present the whole picture of user satisfaction, meaning that the results obtained in this investigation do not necessarily conflict with those from previous investigations.</p>
+
+<p>Another finding in this investigation is that the number of subtopics has opposite impact on intent-aware metrics. That is to say, intent-aware metrics favour queries with fewer subtopics. This would recommend further work to make the intent-aware metrics fair to queries with varying numbers of subtopics and performance values comparable over different search result diversification experiments.</p>
+
+
+ <h2 id="author">About the authors</h2>
+
+ <p><strong>Shengli Wu</strong> is a Professor at the School of Computer Science and Telecommunication Engineering, Jiangsu University, China. His research areas include information retrieval and machine learning. He can be contacted at <a href="mailto:swu@ujs.edu.cn">swu@ujs.edu.cn</a>.<br>
+ <strong>Zhongmin Zhang</strong> is a Graduate Student at the School of Computer Science and Telecommunication Engineering, Jiangsu University, China. She can be contacted at <a href="mailto:shinezzm@foxmail.com">shinezzm@foxmail.com</a>.<br>
+ <strong>Chunlin Xu</strong> is a Ph D Student in the Computing Department, Ulster University, UK. She can be contacted at <a href="mailto:xu-c@ujs.edu.cn">xu-c@ujs.edu.cn</a>.
+</section>
+<section class="refs">
+
+<h2>References</h2>
+
+ <ul class="refs">
+
+ <li id="abi16">Abid, A., Hussain, N., Abid, K., Ahmad, F., Farooq, M. S., Farooq, U., … &amp; Sabir, N. (2016). A survey on search results diversification techniques. <em>Neural Computing and Applications 27</em>(5), 1207-1229.</li>
+
+ <li id="agr09">Agrawal, R., Gollapudi, S., Halverson, A., &amp; Ieong, S. (2009). Diversifying search results. In <em>Proceedings of the Second ACM International Conference on Web Search and Data Mining</em> (pp. 5-14). New York: ACM.</li>
+
+ <li id="bal13">Balabantaray, R. C., Swain, M., &amp; Sahoo, B. (2013). Evaluation of web search engines based on ranking of results and features. <em>International Journal of Human Computer Interaction, 4</em>(3), 117-127.<li>
+
+ <li id="can04">Can, F., Nuray, R., &amp; Sevdik, A. B. (2004). Automatic performance evaluation of Web search engines. <em>Information processing &amp; management, 40</em>(3), 495-514.<li>
+
+ <li id="car98">Carbonell, J., &amp; Goldstein, J. (1998). The use of MMR, diversity-based reranking for reordering documents and producing summaries. In <em>Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 335-336). New York: ACM.</li>
+
+ <li id="car09">Carterette, B., &amp; Chandar, P. (2009). Probabilistic models of ranking novel documents for faceted topic retrieval. In <em>Proceedings of the 18th ACM Conference on Information and knowledge management</em> (pp. 1287-1296). New York: ACM.</li>
+
+ <li id="cha13">Chandar, P., &amp; Carterette, B. (2013). Preference based evaluation measures for novelty and diversity. In <em>Proceedings of the 36th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 413-422). New York: ACM.</li>
+
+ <li id="cha09">Chapelle, O., Metzler, D., Zhang, Y., &amp; Grinspan, P. (2009). Expected reciprocal rank for graded relevance. In <em>Proceedings of the 18th ACM Conference on Information and Knowledge Management</em> (pp. 621-630). New York: ACM.</li>
+
+ <li id="chu96">Chu, H., &amp; Rosenthal, M. (1996). Search engines for the World Wide Web: A comparative study and evaluation methodology.  <em>Proceedings of the Annual Meeting-American Society for Information Science, 33</em>, 127-135.</li>
+
+ <li id="cla09">Clarke, C. L., Craswell, N., &amp; Soboroff, I. (2009). <a href="http://www.webcitation.org/766kAUa8O">Overview of the TREC 2009 web track</a>. In <em>Proceedings of the Eighteenth Text REtrieval Conference.</em> Natioanal Institute of Standards and Technology, USA. Retrieved from https://trec.nist.gov/pubs/trec18/papers/WEB09.OVERVIEW.pdf. (Archived by WebCite® at http://www.webcitation.org/766kAUa8O)</li>
+
+ <li id="dan12">Dang, V., &amp; Croft, W. B. (2012). Diversity by proportionality: an election-based approach to search result diversification. In <em>Proceedings of the 35th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 65-74). New York: ACM.</li>
+
+ <li id="dek10">Deka, S. K., &amp; Lahkar, N. (2010). Performance evaluation and comparison of the five most used search engines in retrieving web resources. <em>Online Information Review, 34</em>(5), 757-771.</li>
+
+ <li id="din96">Ding, W., &amp; Marchionini, G. J. (1996). A comparative study of web search service performance.  <em>Proceedings of the ASIST Annual Meeting, 33</em>, 136-140.</li>
+
+ <li id="eas03">Eastman, C. M., &amp; Jansen, B. J. (2003). Coverage, relevance, and ranking: the impact of query operators on Web search engine results. <em>ACM Transactions on Information Systems, 21</em>(4), 383-411.</li>
+
+ <li id="gor99">Gordon, M., &amp; Pathak, P. (1999). Finding information on the World Wide Web: the retrieval effectiveness of search engines. <em>Information Processing &amp; Management, 35</em>(2), 141-180.</li>
+
+ <li id="gou12">Goutam, R. K., &amp; Dwivedi, S. K. (2012). Performance evaluation of search engines via user efforts measures. <em>International Journal of Computer Science Issues, 9</em>(4), 437–442.</li>
+
+ <li id="gri04">Griesbaum, J. (2004). <a href="http://www.webcitation.org/7661JHsvu">Evaluation of three German search engines: Altavista.de, Google.de and Lycos.de</a>. <em>Information Research, 9</em>(4) paper 189. Retrieved from http://www.informationr.net/ir/9-4/paper189.html (Archived by WebCite® at http://www.webcitation.org/7661JHsvu)</li>
+
+ <li id="haw99">Hawking, D., Craswell, N., Thistlewaite, P., &amp; Harman, D. (1999). Results and challenges in web search evaluation. <em>Computer Networks, 31</em>(11), 1321-1330.</li>
+
+ <li id="he11">He, J., Meij, E., &amp; de Rijke, M. (2011). Result diversification based on query-specific cluster ranking. <em>Journal of the American Society for Information Science and Technology, 62</em>(3), 550-571.</li>
+
+ <li id="hu15">Hu, S., Dou, Z., Wang, X., Sakai, T., &amp; Wen, J. (2015). Search result diversification based on hierarchical intents. In <em>Proceedings of the 24th ACM International Conference on Information and Knowledge Management</em> (pp. 63-72). New York: ACM.</li>
+
+ <li id="jan98">Jansen, B. J., Spink, A., Bateman, J., &amp; Saracevic, T. (1998). Real life information retrieval: a study of user queries on the web. <em>ACM SIGIR Forum, 32</em>(1):5-17. New York: ACM.</li>
+
+ <li id="jia17">Jiang, Z., Wen, J., Dou, Z., Zhao, W., Nie, J., Yue, M. (2017). Learning to diversify search results via subtopic attention. In <em>Proceedings of the 40th international ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 545-554). New York: ACM.</li>
+
+ <li id="kum10">Kumar, B. T., &amp; Pavithra, S. M. (2010). Evaluating the searching capabilities of search engines and metasearch engines: a comparative study. <em>Annals of Library and Information Studies, 57</em>(2), 87–97.</li>
+
+ <li id="lei99">Leighton, H. V., &amp; Srivastava, J. (1999). First 20 precision among World Wide Web search services (search engines). <em>Journal of the Association for Information Science and Technology, 50</em>(10), 870.</li>
+
+ <li id="lew15">Lewandowski, D. (2015). Evaluating the retrieval effectiveness of Web search engines using a representative query sample. <em>Journal of the Association for Information Science and Technology, 66</em>(9), 1763-1775.</li>
+
+ <li id="lia14">Liang, S., Ren, Z., &amp; De Rijke, M. (2014). Fusion helps diversification. In <em>Proceedings of the 37th International ACM SIGIR Conference on Research &amp; Development in Information Retrieval</em> (pp. 303-312). New York: ACM.</li>
+
+ <li id="liu11">Liu, B. (2011). <a href="http://www.webcitation.org/76AxxQrxB">User personal evaluation of search engines-Google, Bing and Blekko</a>. <em>University of Illinois at Chicago</em>. Retrieved from https://www.cs.uic.edu/~liub/searchEval/Search-Engine-Evaluation-2011.pdf. (Archived by WebCite® at http://www.webcitation.org/76AxxQrxB)</li>
+
+ <li id="lon07">Long, H., Lv, B., Zhao, T., &amp; Liu, Y. (2007). Evaluate and compare Chinese Internet search engines based on users' experience. In <em>Proceedings of the International Conference on Wireless Communications, Networking and Mobile Computing</em> (pp. 6134-6137). Piscataway, NJ: IEEE.</li>
+
+ <li id="not95">Notess, G. R. (1995). Searching the World-Wide Web: Lycos, WebCrawler and more. <em>Online, 19</em>(4), 48-53.</li>
+
+ <li id="raf10">Rafiei, D., Bharat, K., &amp; Shukla, A. (2010). Diversifying web search results. In <em>Proceedings of the 19th International Conference on World Wide Web</em> (pp. 781-790). New York: ACM.</li>
+
+ <li id="san10">Santos, R. L., Macdonald, C., &amp; Ounis, I. (2010). Exploiting query reformulations for web search result diversification. In <em>Proceedings of the 19th International Conference on World Wide Web</em> (pp. 881-890). New York: ACM.</li>
+
+ <li id="taw10">Tawileh, W., Mandl, T., Griesbaum, J., Atzmueller, M., Benz, D., Hotho, A., &amp; Stumme, G. (2010). <a href="http://www.webcitation.org/6zfYEBTJa">Evaluation of five web search engines in Arabic language</a>. In <em>Proceedings of LWA Workshop</em> (pp. 221-228). Retrieved from http://www.kde.cs.uni-kassel.de/conf/lwa10/papers/ir1.pdf.  (Archived by WebCite® at http://www.webcitation.org/6zfYEBTJa)
+
+ <li id="tia11">Tian, T., Chun, S. A., &amp; Geller, J. (2011). A prediction model for web search hit counts using word frequencies. <em>Journal of Information Science, 37</em>(5), 462-475.</li>
+
+ <li id="uya09">Uyar, A. (2009). Investigation of the accuracy of search engine hit counts. <em>Journal of Information Science, 35</em>(4), 469-480.</li>
+
+ <li id="uya16">Uyar, A., &amp; Karapinar, R. (2016). Investigating the precision of web image search engines for popular and less popular entities. <em>Journal of Information Science, 43</em>(3), 378-392.</li>
+
+ <li id="vak11">Vakkari, P. (2011). Comparing Google to a digital reference service for answering factual and topical requests by keyword and question queries. <em>Online Information Review, 35</em>(6), 928-941.</li>
+
+ <li id="vér06">Véronis, J. (2006). <a href="http://www.webcitation.org/6zfhAifXV">A comparative study of six search engines</a>. <em>University of Provence</em>.  Retrieved from  https://www.researchgate.net/publication/265028347_A_comparative_study_of_six_search_engines. (Archived by WebCite® at http://www.webcitation.org/6zfhAifXV)</li>
+
+ <li id="wan09">Wang, J., &amp; Zhu, J. (2009). Portfolio theory of information retrieval. In <em>Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval</em> (pp. 115-122). New York: ACM.</li>
+
+ <li id="wan16">Wang, X., Dou, Z., Sakai, T., &amp; Wen, J. (2016). Evaluating search result diversity using intent hierarchies. In <em>Proceedings of the 39th international ACM SIGIR conference on Research and development in information retrieval</em> (pp. 415-424). New York: ACM.</li>
+ 
+ <li id="web16"><a href="https://en.wikipedia.org/wiki/Web_search_engine">Web search engine</a>. (2016). In <em>Wikipedia</em>.  Retrieved from https://en.wikipedia.org/wiki/Web_search_engine</li>
+
+ <li id="wis98">Wishard, L. (1998). <a href="http://www.webcitation.org/7660sOsRr">Precision among Internet search engines: an earth sciences case study</a>. <em>Issues in science and technology librarianship, 18</em>(1). Retrieved from http://webdoc.gwdg.de/edoc/aw/ucsb/istl/98-spring/article5.html. (Archived by WebCite® at http://www.webcitation.org/7660sOsRr)</li>
+
+ <li id="wu04">Wu, S. &amp; Li, J. (2004). Effectiveness evaluation and comparison of Web search engines and meta-search engines. In <em>International Conference on Web-Age Information Management</em> (pp. 303-314). Berlin: Springer</li>
+
+ <li id="xu17">Xu, J., Xia, L., Lan, Y., Guo., J., &amp; Cheng, X. (2017). Directly optimize diversity evaluation measures: a new approach to search result diversification. <em>ACM Transactions on Intelligent Systems and Technology, 8</em>(3), Article 43.</li>
+
+ <li id="yu17">Yu, H., Jatowt, A., Blanco, R., Joho, H., &amp; Jose, J M. (2017). An in-depth study on diversity evaluation: the importance of intrinsic diversity. <em>Information Processing &amp; Management, 53</em>(4), 799-813</li>
+
+ <li id="zha03">Zhai, C. X., Cohen, W. W., &amp; Lafferty, J. (2003). Beyond independent relevance: methods and evaluation metrics for subtopic retrieval. In <em>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in information retrieval</em> (pp. 10-17). New York: ACM.</li>
+
+ <li id="zhe13">Zheng, W., &amp; Fang, H. (2013). A diagnostic study of search result diversification methods. In <em>Proceedings of the 2013 Conference on the Theory of Information Retrieval</em> (p. 17). New York: ACM.</li>
+
+ </ul>
+
+</section>
+ 

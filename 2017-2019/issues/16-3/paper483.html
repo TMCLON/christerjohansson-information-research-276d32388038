@@ -1,20 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta name="generator" content="HTML Tidy for Windows (vers 14 October 2008), see www.w3.org">
-    <title>
-      Measuring the dimensions of serendipity in digital environments
-    </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-    <link href="../IRstyle2.css" rel="stylesheet" media="screen" title="serif" type="text/css">
-    <link rel="alternate stylesheet" type="text/css" media="screen" title="sans" href="../IRstylesans.css">
-    <link rev="made" href="mailto:t.d.wilson@shef.ac.uk"><!--Enter appropriate data in the content fields-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
     <meta name="dc.title" content="Measuring the dimensions of serendipity in digital environments">
     <meta name="dc.creator" content="Lori McCay-Peet, Elaine Toms">
     <meta name="dc.subject" content="This study develops a scale to measure dimensions of serendipity identified in prior research.">
     <meta name="dc.description" content="Serendipitous information retrieval is the perhaps inevitable consequence of immersion in an information-rich environment. Just how well chance encounters are supported, however, within these environments varies and one of the challenges to the development of tools and systems to facilitate serendipity is measuring how well they achieve this goal. This research developed a scale to measure dimensions of serendipity identified in prior research. Participants (N=123) browsed an experimental information search system for 30 minutes with no a priori task and responded to a 20-item survey questionnaire. Items were derived from the serendipity dimensions of a physical library setting. Exploratory factor analysis using the Principal Component Analysis as the method of extraction was carried out on the data. The analysis was undertaken using the SPSS statistical package.Through exploratory factor analysis, five factors were extracted representing core elements of support for serendipity in a digital environment: Enabled connections, Introduced the unexpected, Presented variety, Triggered divergence, and Induced curiosity. In addition, four of the original twenty items were eliminated from the survey. While the physical dimensions of serendipity do map onto to the digital dimensions, it is unknown whether there are additional dimensions of serendipity not present in the physical environment.">
-    <meta name="dc.subject.keywords" content="serendipity, information systems"><!--leave the following to be completed by the Editor-->
+    <meta name="dc.subject.keywords" content="serendipity, information systems">
     <meta name="robots" content="all">
     <meta name="dc.publisher" content="Professor T.D. Wilson">
     <meta name="dc.coverage.placename" content="global">
@@ -23,2487 +17,943 @@
     <meta name="dc.identifier" scheme="URI" content="http://InformationR.net/ir/16-3/paper483.html">
     <meta name="dc.relation.IsPartOf" content="http://InformationR.net/ir/16-3/infres163.html">
     <meta name="dc.format" content="text/html">
-    <meta name="dc.language" content="en">
     <meta name="dc.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/">
     <meta name="dc.date.available" content="2011-09-15">
-  </head>
-  <body>
-    <h4>
-      vol. 16 no. 3, September, 2011
-    </h4>
-    <hr>
-    <h1>
-      Measuring the dimensions of serendipity in digital environments
-    </h1><br>
-    <div style="margin-left: 10%; margin-right: 10%;">
-      <h4>
-        <a href="#authors">Lori McCay-Peet</a><br>
-        Dalhousie University, 6100 University Avenue, Halifax, Nova Scotia, Canada B3H 3J5<br>
-        <a href="#authors">Elaine Toms</a><br>
-        Information School, University of Sheffield, Regent Court, 211 Portobello, Sheffield, United Kingdom, S1 4DP
-      </h4>
-    </div><br>
-    <form action="">
-      <fieldset>
-        <legend>Abstract</legend>
-        <blockquote>
-          <strong>Introduction.</strong> Serendipitous information retrieval is the perhaps inevitable consequence of immersion in an information-rich environment. Just how well chance encounters are supported, however, within these environments varies and one of the challenges to the development of tools and systems to facilitate serendipity is measuring how well they achieve this goal. This research developed a scale to measure dimensions of serendipity identified in prior research.<br>
-          <strong>Method.</strong> Participants (N=123) browsed an experimental information search system for twenty minutes with no a priori task and responded to a twenty-item survey questionnaire. Items were derived from the serendipity dimensions of a physical library setting devised by Bj?rneborn.<br>
-          <strong>Analysis.</strong> Exploratory factor analysis using the Principal Component Analysis as the method of extraction was carried out on the data. The analysis was undertaken using the SPSS statistical package.<br>
-          <strong>Results.</strong> Five factors were extracted representing core elements of support for serendipity in a digital environment: <em>enabled connections</em>, <em>introduced the unexpected</em>, <em>presented variety</em>, <em>triggered divergence</em>, and <em>induced curiosity</em>. In addition, four of the original twenty items were eliminated from the survey.<br>
-          <strong>Conclusions.</strong> While the physical dimensions of serendipity do map on to the digital dimensions, it is unknown whether there are additional dimensions of serendipity not present in the physical environment.
-        </blockquote>
-      </fieldset>
-    </form><br>
-    <br>
-    <h2>
-      Introduction
-    </h2>
-    <p>
-      Unintended but auspicious discoveries have been credited with ground-breaking global advancements in medicine and science. At the same time, less tangible breakthroughs have aided advancements and innovation within organizations and on a much smaller scale, growth and development of individuals in personal and work lives. Yet our knowledge of serendipity primarily comes from our observation of it in the physical, tactile world of science, rather than in conceptual and often non-observable world of social sciences where the discovery may be the unplanned use of a new method that has unintended consequences, the uncovering of a long forgotten cultural gem, or, the chance connection between two disparate ideas that leads to a new theory. These potential outcomes of serendipitous discovery come from interaction with content that is textual, audio or graphic embedded within a system or from exchange with other people. In this research we focus on the former; serendipity in interactive information systems. Notably, current systems may not provide the rich environment necessary to enable serendipity and instead tend to provide planned paths of navigation from one discrete information object to another with the intent of removing the apparent irrelevant content or shielding the user from what the system perceives is not useful to the user.
-    </p>
-    <p>
-      When does a system enable, support and facilitate serendipity? A number of innovations have been introduced as we discuss in the next section. But rather than taking a technology-centred view of the problem, we instead start with known dimensions of serendipity identified by previous research to create a tool to measure a system's propensity to facilitate serendipity. The objective of this research was two-fold: to assess the applicability of these dimensions to information systems and, secondly, to examine selected characteristics or indicators of serendipity and assess them in an ecologically valid user study.
-    </p>
-    <h2>
-      Previous work
-    </h2>
-    <p>
-      There has been a swell of research that explores the concept of serendipity in various domains such as everyday life (<a href="#rub10">Rubin <em>et al.</em> 2010</a>; <a href="#wil98">Williamson 1998</a>), education (<a href="#nut10">Nutefall and Ryder 2010</a>; <a href="#saw10">Sawaizumi <em>et al.</em> 2010</a>), and interdisciplinary scholarship (<a href="#fos03">Foster and Ford 2003</a>). The characteristics associated with the serendipity-prone person have also been examined (<a href="#erd99">Erdelez 1999</a>; <a href="#hei06">Heinstr?m 2006</a>) to determine why it is that some people appear more likely to experience serendipity than others. People come to digital information environments with diverse individual differences, motivations, and knowledge which impact their interactions with the environment and their overall experience. Serendipity, however, is not only influenced by individual differences and information activities of the individual, but also the characteristics of the environment in which the individual is immersed (<a href="#bjo08">Bj?rneborn 2008</a>; <a href="#erd00">Erdelez and Rioux 2000</a>).
-    </p>
-    <p>
-      Interdisciplinary scholars in Foster and Ford's (<a href="#fos03">2003</a>) study indicated that their own attitudes about serendipitous information encounters and their strategies for dealing with them had a perceived effect on how well these encounters could be exploited but they also suspected that the characteristics of the environment such as the classification schemes of libraries played a significant role.
-    </p>
-    <p>
-      Studies have generally tested tools or methods of introducing unexpected and interesting content. Efforts have been made to support serendipity in digital environments, for example, through the development of a context and activity-aware recommender system embedded in mobile leisure guides (<a href="#bel08">Bellotti <em>et al.</em> 2008</a>), information retrieval software (MAX) that collects potentially serendipity-inducing information and send it to users by e-mail (<a href="#cam02">Campos and Figueiredo 2002</a>), an ambient intelligence agent (Mitsikeru) within an internet browser (<a href="#bea07">Beale 2007</a>) and a suggested articles tool in an information search system (Toms <a href="#tom99">1999</a>; Toms and McCay-Peet <a href="#mcc09">2009</a>). Techniques for deriving serendipity-inducing content such as personalization (Andr? <em>et al.</em> <a href="#and09">2009</a>) have also begun to be tested. Measurement of the effectiveness of these techniques and systems has generally relied on judgments by participants of the novelty, relevance, and interestingness of the results or suggestions provided (Andr?, <em>et al.</em> <a href="#and09">2009</a>; Bellotti, <em>et al.</em> <a href="#bel08">2008</a>; Campos and Figueiredo <a href="#cam02">2002</a>) as well as how the tool was actually used (i.e., support for the task at hand or divergence from the task) (Toms and McCay-Peet <a href="#mcc09">2009</a>).
-    </p>
-    <p>
-      In addition, while the aforementioned studies have selected aspects of serendipity to test and explore in a digital environment, little is known about which precipitating conditions are actually related to serendipity in a digital environment. Precipitating conditions (<a href="#cun05">Cunha 2005</a>) or principles of serendipity (<a href="#fin96">Fine and Deegan 1996</a>) are those conditions that, when present, increase the chances of serendipity. While they have been hypothesized to include temporal happenstance, social networking and active learning, in a digital environment there are likely to be many potential characteristics that may increase our opportunity for serendipity.
-    </p>
-    <p>
-      One study examined the impact of design features of the physical library space on convergent and divergent information behaviour (Bj?rneborn <a href="#bjo08">2008</a>). Bj?rneborn conceptualized serendipity as an event precipitated by divergent information behaviour and the design of the <em>library interface</em> (human, physical and digital). Over a period of several months, the information activities that patrons used to find resources in public libraries were observed. A portion (n=118) of those patrons was invited to engage in a short interview to collect self-reported data on their information behaviour. Follow-up think-aloud sessions with eleven of the 118 patrons were conducted in which the users walked through the library with a researcher and reflected upon their information behaviour and what triggered their attention in the physical library space.
-    </p>
-    <p>
-      Ten dimensions in the physical library that facilitate serendipity were identified and these primarily revolve around the design elements of the library space (Bj?rneborn <a href="#bjo08">2008</a>):
-    </p>
-    <ol>
-      <li>
-        <em>Unimpeded and direct access</em> to library resources to ensure that serendipity is not restricted by lack of access to resources.
-      </li>
-      <li>
-        <em>Rich diversity</em> of resources, activities, and physical spaces that will help spark an individual's interests.
-      </li>
-      <li>
-        <em>Curiosity-invoking display</em> of library resources.
-      </li>
-      <li>
-        <em>Striking contrasts</em> between spaces and resources within the library spaces that will draw an individual's attention to the rich diversity.
-      </li>
-      <li>
-        <em>Pointers</em> such as signs to remind individuals of potential topics of interest.
-      </li>
-      <li>
-        <em>Imperfections</em> within the library interfaces such as mis-shelved books that may lead an individual to stumble upon an unexpected and interesting resource.
-      </li>
-      <li>
-        <em>Cross contacts,</em> which is the juxtaposition of divergent topics, activities, resources, or physical spaces.
-      </li>
-      <li>
-        <em>Multi-reachability,</em> which is the ability of individuals to reach library spaces through a variety of routes or pathways.
-      </li>
-      <li>
-        <em>Explorability,</em> which is the encouragement of the individual to move freely around the library, to explore and follow their curiosity.
-      </li>
-      <li>
-        <em>Stopability,</em> which is the ability for individuals to stop and explore materials at will through, for example, the provision of a space to sit or a place to lay down what they were carrying to examine another resource.
-      </li>
-    </ol>
-    <p>
-      While interactions with computers in the library were observed, details of these interactions are at a high level; more research is needed to determine whether the same serendipity dimensions exist in the digital environment (Bj?rneborn <a href="#bjo08">2008</a>). Several of the serendipity dimensions combined (e.g., <em>multi-reachability</em>, <em>stopability</em> and <em>explorability</em>) appear at face value to have a counterpart in the digital realm in the form of orientation and wayfinding tools that support serendipity and exploratory search. However, the characteristics of these dimensions and the behaviour they encourage may cause distraction and disorientation in a digital environment. Unlike the <em>gestalt nature</em> of physical information spaces such as libraries, there is a limit to the amount of information that can be revealed on a screen <a href="#bjo08">(Rice 1988</a>) and when they are in the middle of a task, individuals have a tendency to want to stay on task (<a href="#erd04">Erdelez 2004</a>; <a href="#tom09">Toms and McCay-Peet 2009</a>). While users need pathways to divergent content and time to absorb that content, they also need to get back on track after digressions from their original path (<a href="#tom00">Toms 2000</a>). <em>Imperfections</em> is also a difficult dimension to translate in a digital environment where imperfections are viewed as frustrating usability issues rather than opportunities for serendipity. Similarly <em>unimpeded and direct access</em> seems to be first and foremost related to usability; it is important to all digital information interactions, not just those designed to support serendipity. <em>Rich diversity</em>, <em>curiosity invoking display</em>, <em>striking contrasts</em>, <em>pointers</em> and <em>cross contacts</em> are similar in their endeavour to catch an individual's attention and spark their interest through some manipulation of the physical library environment. In a digital environment this takes the form, for example, of personalized results (Andr?, <em>et al.</em> <a href="#and09">2009</a>), a suggestion box with semi-related content recommendations (<a href="#tom99">Toms 1999</a>) and visually augmented hyperlinks to interesting and unexpected content (<a href="#bea07">Beale 2007</a>).
-    </p>
-    <p>
-      The digital environment's proper manipulation and design is the goal of much of the current serendipity research discussed here. The belief is that if we can understand enough about the process of serendipity and the conditions that precipitate it, we can create an environment that will encourage and support serendipity (Bj?rneborn <a href="#bjo10">2010</a>). Two questions emerge from this endeavour: 1) what characteristics of digital information spaces or environments (i.e., design of information spaces) facilitate chance encounters; and 2) how can we measure how well digital environments facilitate chance encounters through system design? This paper focuses on the latter question by applying dimensions of serendipity derived from the physical environment (Bj?rneborn <a href="#bjo08">2008</a>) to a digital information space and endeavours to answer the following questions:
-    </p>
-    <ol>
-      <li>Do the dimensions of serendipity in the physical environment map to dimedimensionsserendipity in the digital environment?
-      </li>
-      <li>How can we assess the degree to which a digital envienvironmentilitates serendipity?
-      </li>
-    </ol>
-    <h2>
-      Methods
-    </h2>
-    <p>
-      To assess the dimensions of serendipity, we developed an initial scale adapted from Bj?rneborn's (<a href="#bjo08">2008</a>) ten dimensions of the physical library that may facilitate serendipity and tested the scale on a set of users of a version of Wikipedia with a custom-designed interface. This was part of a larger study that is examining non-goal-based use of an information system in tandem with measures of curiosity.
-    </p>
-    <h3>
-      Design of the study
-    </h3>
-    <p>
-      The study invited a volunteer community to examine a version of Wikipedia viewing anything they wished for a period of twenty minutes. Before being assigned the task, several measures related to curiosity were assessed and, after the task, they were assigned several questions regarding their found information and the serendipity scale. Responses to the serendipity items were on a five-point Likert scale of 'strongly disagree' to 'strongly agree'. No experimental variables were formally tested.
-    </p>
-    <h3>
-      Task
-    </h3>
-    <p>
-      Participants were given a scenario, a role play, in which they were asked to imagine that they are in an office with about twenty minutes to spend. They were given a laptop and asked to browse whatever they wish, including retaining items for future use or making notes.
-    </p>
-    <h3>
-      System
-    </h3>
-    <p>
-      Participants used the wikiSearch system (described in <a href="#mcc09">Toms, <em>et al.</em> 2009</a>) which included the content of Wikipedia which was used for the INEX (INitiative for the Evaluation of XML Retrieval) 2006 Interactive Track and a custom-designed interface which contained a single display to represent the search process. The interface included three physical columns:
-    </p>
-    <ol>
-      <li>the left column supported the task and contained in addition to the task assignment, a Notes space for memorable information, and a BookBag to retain items of interest;
-      </li>
-      <li>the middle pane supported the search task and included a box for query entry, a set of results with abbreviated titles that additionally provided mouse-over access to the complete snippet, and a history of all page views and submitted queries; and
-      </li>
-      <li>the extreme right side contained the page display. It also included a Suggested Items list for other items that may be related somewhat to the page on display, created by resending the first paragraph in the page displayed as query and returning the top rank titles (not including the one on display).
-      </li>
-    </ol>
-    <p>
-      The system was intended to retain as many visual cues as possible about what the user had done or examined, with significant flexibility about what could be re-examined.
-    </p>
-    <h3>
-      Instrument
-    </h3>
-    <p>
-      While multiple instruments were used in this study, we focus on that used in the analysis presented here: the serendipity scale.
-    </p>
-    <p>
-      Through an iterative process, seven research assistants and doctoral students were given Bj?rneborn's (2008) ten dimensions, each with corresponding statements extracted by the researchers from the intent of the dimension. They rated whether each statement captured the essence of the dimension and were invited to provide additional statements if they perceived that the presented statements were incorrect or incomplete. This process started with 115 statements across all ten dimensions and the list was amplified by a further seventeen statements. Over two more iterations, the list stabilised in a process that resulted in the twenty items in Table 1.
-    </p>
-    <p>
-      As previously suggested, some of Bj?rneborn's (<a href="#bjo08">2008</a>) dimensions were difficult to adapt to a digital environment. In operationalizing a conceptually written dimension, it became clear that considerable overlap existed among items in the set, making it difficult assign a particular statement to a particular dimension. This was the case, for example, with <em>striking contrasts</em> and <em>pointers</em>, both of which prompted items related to <em>attention-grabbing</em>. On the other hand, it was difficult to develop any items for <em>imperfection</em>. <em>Imperfection</em> may work in a physical environment, but conceptualizing it in a digital environment led to items that appeared to describe usability problems. In the end, we elected to include statements that captured the essence of the concept, serendipity, while not attending to the need to provide multiple items. We recognized that in fact each dimension may not resolve to a factor in the final analysis.
-    </p>
-    <table style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd" align="center" border="1" cellpadding="3" cellspacing="0" width="80%">
-      <caption align="bottom">
-        <br>
-        <strong>Table 1: Serendipity dimensions applied as items relating to a digital environment</strong>
-      </caption>
-      <tbody>
-        <tr>
-          <th>
-            Serendipity dimensions (Bj?rneborn <a href="#bjo08">2008</a>)
-          </th>
-          <th>
-            Scale items
-          </th>
-        </tr>
-        <tr>
-          <td>
-            1. Unimpeded and direct access
-          </td>
-          <td>
-            S1 I was able to explore anything that interested me when using the system
-          </td>
-        </tr>
-        <tr>
-          <td>
-            2. Rich diversity
-          </td>
-          <td>
-            S2 I was able to see information in a range of formats<br>
-            S3 I was able to examine a variety of topics<br>
-            S4 I explored many topics that normally I do not examine
-          </td>
-        </tr>
-        <tr>
-          <td>
-            3. Curiosity-invoking display
-          </td>
-          <td>
-            S5 I wanted to click on things to see where they would take me
-          </td>
-        </tr>
-        <tr>
-          <td>
-            4. Striking contrasts
-          </td>
-          <td>
-            S6 Unexpected words and phrases caught my eye<br>
-            S7 Unexpected visual features of the system caught my eye
-          </td>
-        </tr>
-        <tr>
-          <td>
-            5. Pointers
-          </td>
-          <td>
-            S8 Unexpected words and phrases sparked my thinking
-          </td>
-        </tr>
-        <tr>
-          <td>
-            6. Imperfections
-          </td>
-          <td>
-            n/a
-          </td>
-        </tr>
-        <tr>
-          <td>
-            7. Cross contacts
-          </td>
-          <td>
-            S9 I found something interesting on pages that had unexpected content<br>
-            S10 The system enabled me to make connections between different topics<br>
-            S11 The system presented content in ways that invited me to explore across topics<br>
-            S12 Exploring one topic unexpectedly led me to other<br>
-            S13 I stumbled upon unexpected topics
-          </td>
-        </tr>
-        <tr>
-          <td>
-            8. Multi-reachability
-          </td>
-          <td>
-            S14 I could find topics in several alternative ways
-          </td>
-        </tr>
-        <tr>
-          <td>
-            9. Explorability
-          </td>
-          <td>
-            S15 The system encouraged me to browse and explore
-          </td>
-        </tr>
-        <tr>
-          <td>
-            10. Stopability
-          </td>
-          <td>
-            S16 I found myself pausing to look at things more closely<br>
-            S17 The system encouraged me to stop and explore<br>
-            S18 I could return to topics that I had explored earlier<br>
-            S19 I could easily explore many topics without getting lost<br>
-            S20 I could follow-up on interesting associations between topics or ideas<br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h3>
-      Participants
-    </h3>
-    <p>
-      One hundred and twenty-four participants volunteered for the study. Of these, 123 were identified as 'valid participants'. One participant's data set was identified as an extreme multivariate outlier and removed from the analysis. The participants (N = 123) were primarily university students (N = 106, 86.2%) between the ages of 18 and 26 (N = 98, 79.7%). There was a fairly even representation of males (N = 67, 54.5%) and females (N = 56, 45.5%). Participants were frequent users of Wikipedia; 99 participants (80.4%) indicated that they used Wikipedia more than once or twice a week. Of those, 34 (27.6%) participants indicated that they used Wikipedia one or more times a day. The majority of participants (N=119, 96.7%) also indicated using web search engines one or more times daily.
-    </p>
-    <h3>
-      Procedure
-    </h3>
-    <p>
-      Notices for recruitment were posted around the University and advertised on electronic mailing lists. Participants self-selected and no formal random sampling was done. Participants <em>dropped</em> into a room that was set up for the study. The room contained ten tables and laptops scattered about in an informal arrangement.
-    </p>
-    <p>
-      Participants were introduced to the study by one of the five research assistants, read the consent form and had their questions answered, and then were logged into the system that guided them through the process.
-    </p>
-    <p>
-      On completion, they were paid an honorarium of $20 for the nearly one hour of time taken to do the study.
-    </p>
-    <h3>
-      Data analysis
-    </h3>
-    <p>
-      Data were loaded into SPSS 17.0. All univariate and multivariate assumptions were examined. Linearity, homoscedasticity and multimulti-collinearity all found to be satisfactory and no missing values were detected. One multivariate outlier was found and removed and all results are reported based on the remaining 123 participants. First, we examined descriptive statistics and inter-correlations for the twenty variables as well as testing for sampling adequacy. Next exploratory factor analysis was conducted in multiple iterations to test for factors present within the set of items and finally Cronbach's Alpha was used to assess each sub-scale emerged from the exploratory factor analysis.
-    </p>
-    <h2>
-      Results
-    </h2>
-    <p>
-      Table 2 contains the descriptive statistics and inter-correlations of all twenty variables. As illustrated, all correlated with one of more other items at the .05 to .01 levels, and were retained for the subsequent analyses. Exploratory factor analysis was conducted on the 20 items using the Principal Component Analysis as the method of extraction with orthogonal rotation (Varimax) with Kaiser normalisation.
-    </p>
-    <table style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd" align="center" border="1" cellpadding="3" cellspacing="0" width="80%">
-      <caption align="bottom">
-        <br>
-        <strong>Table 2: Summary of inter-correlations, means, and standard deviations of items</strong>
-      </caption>
-      <tbody>
-        <tr>
-          <th rowspan="1" valign="middle">
-            Variable
-          </th>
-          <th>
-            <em>M</em>
-          </th>
-          <th>
-            <em>SD</em>
-          </th>
-          <th>
-            1
-          </th>
-          <th>
-            2
-          </th>
-          <th>
-            3
-          </th>
-          <th>
-            4
-          </th>
-          <th>
-            5
-          </th>
-          <th>
-            6
-          </th>
-          <th>
-            7
-          </th>
-          <th>
-            8
-          </th>
-          <th>
-            9
-          </th>
-          <th>
-            10
-          </th>
-          <th>
-            11
-          </th>
-          <th>
-            12
-          </th>
-          <th>
-            13
-          </th>
-          <th>
-            14
-          </th>
-          <th>
-            15
-          </th>
-          <th>
-            16
-          </th>
-          <th>
-            17
-          </th>
-          <th>
-            18
-          </th>
-          <th>
-            19
-          </th>
-          <th>
-            20
-          </th>
-        </tr>
-        <tr>
-          <td>
-            S1
-          </td>
-          <td>
-            3.8
-          </td>
-          <td>
-            1.2
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            <br>
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S2
-          </td>
-          <td>
-            3.3
-          </td>
-          <td>
-            1.0
-          </td>
-          <td>
-            .30**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S3
-          </td>
-          <td>
-            4.2
-          </td>
-          <td>
-            0.6
-          </td>
-          <td>
-            .45**
-          </td>
-          <td>
-            .25**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S4
-          </td>
-          <td>
-            3.3
-          </td>
-          <td>
-            1.2
-          </td>
-          <td>
-            .11
-          </td>
-          <td>
-            .19*
-          </td>
-          <td>
-            .10
-          </td>
-          <td>
-            .1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S5
-          </td>
-          <td>
-            4.0
-          </td>
-          <td>
-            0.9
-          </td>
-          <td>
-            .17
-          </td>
-          <td>
-            .24**
-          </td>
-          <td>
-            .07
-          </td>
-          <td>
-            .18*
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S6
-          </td>
-          <td>
-            3.4
-          </td>
-          <td>
-            1.1
-          </td>
-          <td>
-            -.05
-          </td>
-          <td>
-            .11
-          </td>
-          <td>
-            .02
-          </td>
-          <td>
-            .09
-          </td>
-          <td>
-            .31*
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S7
-          </td>
-          <td>
-            2.7
-          </td>
-          <td>
-            1.1
-          </td>
-          <td>
-            .17
-          </td>
-          <td>
-            .44**
-          </td>
-          <td>
-            .21*
-          </td>
-          <td>
-            .22*
-          </td>
-          <td>
-            .13
-          </td>
-          <td>
-            .17
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S8
-          </td>
-          <td>
-            3.6
-          </td>
-          <td>
-            1.0
-          </td>
-          <td>
-            .09
-          </td>
-          <td>
-            .12
-          </td>
-          <td>
-            .14
-          </td>
-          <td>
-            .08
-          </td>
-          <td>
-            .09
-          </td>
-          <td>
-            .48**
-          </td>
-          <td>
-            .15
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S9
-          </td>
-          <td>
-            3.8
-          </td>
-          <td>
-            0.9
-          </td>
-          <td>
-            .06
-          </td>
-          <td>
-            .10
-          </td>
-          <td>
-            .19*
-          </td>
-          <td>
-            .24*
-          </td>
-          <td>
-            .14
-          </td>
-          <td>
-            .24**
-          </td>
-          <td>
-            .30**
-          </td>
-          <td>
-            .20*
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S10
-          </td>
-          <td>
-            3.9
-          </td>
-          <td>
-            0.9
-          </td>
-          <td>
-            .49**
-          </td>
-          <td>
-            .09
-          </td>
-          <td>
-            .33**
-          </td>
-          <td>
-            .10
-          </td>
-          <td>
-            .18
-          </td>
-          <td>
-            .01
-          </td>
-          <td>
-            .14
-          </td>
-          <td>
-            .30**
-          </td>
-          <td>
-            .40
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S11
-          </td>
-          <td>
-            3.8
-          </td>
-          <td>
-            0.8
-          </td>
-          <td>
-            .38**
-          </td>
-          <td>
-            .16
-          </td>
-          <td>
-            .39**
-          </td>
-          <td>
-            .02
-          </td>
-          <td>
-            .21
-          </td>
-          <td>
-            .23**
-          </td>
-          <td>
-            .23*
-          </td>
-          <td>
-            .27**
-          </td>
-          <td>
-            .10
-          </td>
-          <td>
-            .53**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S12
-          </td>
-          <td>
-            4.2
-          </td>
-          <td>
-            0.8
-          </td>
-          <td>
-            .26**
-          </td>
-          <td>
-            .24*
-          </td>
-          <td>
-            .45*
-          </td>
-          <td>
-            .21*
-          </td>
-          <td>
-            .12*
-          </td>
-          <td>
-            .25*
-          </td>
-          <td>
-            .28*
-          </td>
-          <td>
-            .19*
-          </td>
-          <td>
-            .34**
-          </td>
-          <td>
-            .19
-          </td>
-          <td>
-            .36**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S13
-          </td>
-          <td>
-            3.7
-          </td>
-          <td>
-            1.0
-          </td>
-          <td>
-            -.04
-          </td>
-          <td>
-            .12
-          </td>
-          <td>
-            .18*
-          </td>
-          <td>
-            .45**
-          </td>
-          <td>
-            .14
-          </td>
-          <td>
-            .23*
-          </td>
-          <td>
-            .08
-          </td>
-          <td>
-            .18*
-          </td>
-          <td>
-            .43**
-          </td>
-          <td>
-            .07
-          </td>
-          <td>
-            .14
-          </td>
-          <td>
-            .38**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S14
-          </td>
-          <td>
-            3.8
-          </td>
-          <td>
-            1.0
-          </td>
-          <td>
-            .26*
-          </td>
-          <td>
-            .23**
-          </td>
-          <td>
-            .32**
-          </td>
-          <td>
-            .17
-          </td>
-          <td>
-            .19
-          </td>
-          <td>
-            .08
-          </td>
-          <td>
-            .16
-          </td>
-          <td>
-            .20*
-          </td>
-          <td>
-            .20*
-          </td>
-          <td>
-            .39**
-          </td>
-          <td>
-            .43**
-          </td>
-          <td>
-            .38**
-          </td>
-          <td>
-            .18
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S15
-          </td>
-          <td>
-            3.9
-          </td>
-          <td>
-            0.8
-          </td>
-          <td>
-            .31*
-          </td>
-          <td>
-            .49**
-          </td>
-          <td>
-            .37**
-          </td>
-          <td>
-            .12
-          </td>
-          <td>
-            .24*
-          </td>
-          <td>
-            .24**
-          </td>
-          <td>
-            .23*
-          </td>
-          <td>
-            .19*
-          </td>
-          <td>
-            .18*
-          </td>
-          <td>
-            .29**
-          </td>
-          <td>
-            .47**
-          </td>
-          <td>
-            .47**
-          </td>
-          <td>
-            .20*
-          </td>
-          <td>
-            .31**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S16
-          </td>
-          <td>
-            3.9
-          </td>
-          <td>
-            0.9
-          </td>
-          <td>
-            .06
-          </td>
-          <td>
-            .10
-          </td>
-          <td>
-            .13
-          </td>
-          <td>
-            .15
-          </td>
-          <td>
-            .16
-          </td>
-          <td>
-            .06
-          </td>
-          <td>
-            .13
-          </td>
-          <td>
-            .12
-          </td>
-          <td>
-            .16
-          </td>
-          <td>
-            .19*
-          </td>
-          <td>
-            .16
-          </td>
-          <td>
-            .19*
-          </td>
-          <td>
-            .05
-          </td>
-          <td>
-            .11
-          </td>
-          <td>
-            .13
-          </td>
-          <td>
-            .1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S17
-          </td>
-          <td>
-            3.8
-          </td>
-          <td>
-            0.9
-          </td>
-          <td>
-            .42*
-          </td>
-          <td>
-            .28**
-          </td>
-          <td>
-            .30**
-          </td>
-          <td>
-            .23**
-          </td>
-          <td>
-            .28**
-          </td>
-          <td>
-            .20*
-          </td>
-          <td>
-            .17
-          </td>
-          <td>
-            .14
-          </td>
-          <td>
-            .27**
-          </td>
-          <td>
-            .34**
-          </td>
-          <td>
-            .36**
-          </td>
-          <td>
-            .44**
-          </td>
-          <td>
-            .31**
-          </td>
-          <td>
-            .26**
-          </td>
-          <td>
-            .49**
-          </td>
-          <td>
-            .42**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S18
-          </td>
-          <td>
-            4.5
-          </td>
-          <td>
-            0.7
-          </td>
-          <td>
-            .16
-          </td>
-          <td>
-            -.06
-          </td>
-          <td>
-            .31**
-          </td>
-          <td>
-            .04
-          </td>
-          <td>
-            .09
-          </td>
-          <td>
-            .05
-          </td>
-          <td>
-            -.20*
-          </td>
-          <td>
-            .22*
-          </td>
-          <td>
-            .24**
-          </td>
-          <td>
-            .26**
-          </td>
-          <td>
-            .18*
-          </td>
-          <td>
-            .05
-          </td>
-          <td>
-            .19*
-          </td>
-          <td>
-            .24**
-          </td>
-          <td>
-            .10
-          </td>
-          <td>
-            .24*
-          </td>
-          <td>
-            .25**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S19
-          </td>
-          <td>
-            4.1
-          </td>
-          <td>
-            0.9
-          </td>
-          <td>
-            .10
-          </td>
-          <td>
-            .06
-          </td>
-          <td>
-            .15
-          </td>
-          <td>
-            -.07
-          </td>
-          <td>
-            .20*
-          </td>
-          <td>
-            .05
-          </td>
-          <td>
-            .09
-          </td>
-          <td>
-            .13
-          </td>
-          <td>
-            .22*
-          </td>
-          <td>
-            .34**
-          </td>
-          <td>
-            .35**
-          </td>
-          <td>
-            .17
-          </td>
-          <td>
-            .02
-          </td>
-          <td>
-            .28*
-          </td>
-          <td>
-            .23**
-          </td>
-          <td>
-            .12
-          </td>
-          <td>
-            .26**
-          </td>
-          <td>
-            .32**
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S20
-          </td>
-          <td>
-            4.0
-          </td>
-          <td>
-            0.9
-          </td>
-          <td>
-            .32**
-          </td>
-          <td>
-            .04
-          </td>
-          <td>
-            .36**
-          </td>
-          <td>
-            .07
-          </td>
-          <td>
-            .23*
-          </td>
-          <td>
-            .14
-          </td>
-          <td>
-            .13
-          </td>
-          <td>
-            .36**
-          </td>
-          <td>
-            .13*
-          </td>
-          <td>
-            .66**
-          </td>
-          <td>
-            .48**
-          </td>
-          <td>
-            .27*
-          </td>
-          <td>
-            .01
-          </td>
-          <td>
-            .31**
-          </td>
-          <td>
-            .23*
-          </td>
-          <td>
-            .39**
-          </td>
-          <td>
-            .40**
-          </td>
-          <td>
-            .33**
-          </td>
-          <td>
-            .31**
-          </td>
-          <td>
-            1
-          </td>
-        </tr>
-        <tr>
-          <td colspan="23">
-            Note. N = 123.,*p &lt;0.05,**p &lt;0.01.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      The study sample met the minimum recommended number of participants (i.e., five to ten) for each variable (Kass and Tinsley, 1979, in Field <a href="#fie09">2009</a>). The Kaiser-Meyer-Olkin measure of sampling adequacy was 0.76, indicating that the present set of data is suitable for Principal Component Analysis; in general, values between 0.70 and 0.80 are considered good (Kaiser 1974, as cited in Field <a href="#fie09">2009</a>). All Kaiser-Meyer-Olkin values for individual items were &gt;0.61 which is above the acceptable limit of 0.5 (Field <a href="#fie09">2098</a>). Similarly, Bartlett's test of sphericity was significant (?<sup>2</sup> = 790.25, df=190, p&lt;0.001), indicating sufficient correlations between variables to proceed with the analysis.
-    </p>
-    <p>
-      Four iterations of exploratory factor analysis were performed. Because the sample size was less than 200, the cut-off value for interpretation of 0.45 (20% of the variance) was selected (<a href="#mey06">Meyers <em>et al.</em> 2006</a>). Item loadings were interpreted as excellent with loadings of 0.7, very good with loadings of 0.63, good with loadings of 0.55, fair with loadings of 0.45, and poor with loadings of 0.32 (Comrey and Lee 1992, as cited in Meyers <em>et al.</em> <a href="#mey06">2006</a>).
-    </p>
-    <p>
-      The first iteration of Exploratory Factor Analysis resulted in six factors. Item loadings ranged from 0.49 (S5) to 0.83 (S13). Factor 6 contained only one item (S19). One variable (S20) was complex, loading strongly on both factors one and four. Therefore, for the next iteration these two items were removed. Five factors were extracted in the second iteration. Item loadings ranged from 0.53 (S15) to 0.83 (S13). Item S12 loaded strongly on factors one and two, and was removed in the next iteration. In the third iteration, items loaded on five factors and loadings ranged from 0.49 (S15) to 0.84 (S6). None of the items above the 0.45 cut-off loaded on more than one factor. Cronbach's alpha, calculated for each of the five sub-scales, ranged from 0.26 (Factor 3) to 0.77 (Factor 1). S18, which had a high negative loading (-0.59), was found to cause a substantial decrease in a and was therefore removed (<a href="#fie09">Field 2009</a>).
-    </p>
-    <p>
-      In the fourth iteration, five factors were extracted among the remaining sixteen items; no complex items were found. Therefore, these items were retained in the final solution (See Table 3). The five factors account for 60.8% of the total variance which, according to Tabachnick and Fidell (in Meyers <em>et al.</em> <a href="#mey06">2006</a>) suggests a '<em>good solution</em>' where a robust solution accounts for at least 50% of the variance. Communalities (h<sup>2</sup>) were relatively high, ranging from .44 to .77. Cronbach's alpha for each of the five sub-scales, ranged from 0.55 (Factor 5) to 0.75 (Factor 1). Of the five factors, only Factor 1 had an acceptable alpha level (&gt;0.70). This may be due in part to the small number of items contained in Factors 2-5 (i.e., two to three items for each factor). All five factors, however, were retained because of their conceptual importance, and low reliabilities were taken into account in the study findings. Items are ordered and grouped by size of loading to facilitate interpretation. Factor loadings less than 0.45 (20% of variance) are represented as zeros. Interpretive labels are suggested for each of the five factors in the footnote and discussed below.
-    </p>
-    <table style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: Verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd" align="center" border="1" cellpadding="3" cellspacing="0" width="80%">
-      <caption align="bottom">
-        <br>
-        <strong>Table 3: Summary of Factor Loadings and Communalities (h<sup>2</sup>) for the four iterations of Principal Component Analysis (N = 123)</strong>
-      </caption>
-      <tbody>
-        <tr>
-          <th rowspan="2" valign="middle">
-            Item#
-          </th>
-          <th rowspan="2" valign="middle">
-            Item
-          </th>
-          <th colspan="5">
-            Factors*
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <em>F</em><sub>1</sub>
-          </th>
-          <th>
-            <em>F</em><sub>2</sub>
-          </th>
-          <th>
-            <em>F</em><sub>3</sub>
-          </th>
-          <th>
-            <em>F</em><sub>4</sub>
-          </th>
-          <th>
-            <em>F</em><sub>5</sub>
-          </th>
-          <th>
-            <em>h</em><sup>2</sup>
-          </th>
-        </tr>
-        <tr>
-          <td>
-            S10
-          </td>
-          <td>
-            The system enabled me to make connections between different topics
-          </td>
-          <td align="center">
-            <strong>0.78</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.66
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S11
-          </td>
-          <td>
-            The system presented content in ways that invited me to explore across topics
-          </td>
-          <td align="center">
-            <strong>0.72</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.66
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S3
-          </td>
-          <td>
-            I was able to examine a variety of topics
-          </td>
-          <td align="center">
-            <strong>0.68</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.56
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S1
-          </td>
-          <td>
-            I was able to explore anything that interested me when using the system
-          </td>
-          <td align="center">
-            <strong>.68</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.56
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S14
-          </td>
-          <td>
-            I could find topics in several alternative ways
-          </td>
-          <td align="center">
-            <strong>0.60</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.44
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S13
-          </td>
-          <td>
-            I stumbled upon unexpected topics
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.84</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.73
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S9
-          </td>
-          <td>
-            I found something interesting on pages that had unexpected content
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.67</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.52
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S4
-          </td>
-          <td>
-            I explored many topics that normally I do not examine
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.67</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.53
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S2
-          </td>
-          <td>
-            I was able to see information in a range of formats
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.85</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.77
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S7
-          </td>
-          <td>
-            Unexpected visual features of the system caught my eye
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.69</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.53
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S15
-          </td>
-          <td>
-            The system encouraged me to browse and explore
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.51</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.55
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S6
-          </td>
-          <td>
-            Unexpected words and phrases caught my eye
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.84</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.77
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S8
-          </td>
-          <td>
-            Unexpected words and phrases sparked my thinking
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.77</strong>
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.68
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S16
-          </td>
-          <td>
-            I found myself pausing to look at things more closely
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.76</strong>
-          </td>
-          <td align="center">
-            0.61
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S17
-          </td>
-          <td>
-            The system encouraged me to stop and explore
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.64</strong>
-          </td>
-          <td align="center">
-            0.68
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S5
-          </td>
-          <td>
-            I wanted to click on things to see where they would take me
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            0.00
-          </td>
-          <td align="center">
-            <strong>0.58</strong>
-          </td>
-          <td align="center">
-            0.49
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            Eigenvalues
-          </td>
-          <td align="center">
-            4.28
-          </td>
-          <td align="center">
-            1.83
-          </td>
-          <td align="center">
-            1.33
-          </td>
-          <td align="center">
-            1.12
-          </td>
-          <td align="center">
-            1.10
-          </td>
-          <td align="center">
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            Percentage of variance
-          </td>
-          <td align="center">
-            26.77
-          </td>
-          <td align="center">
-            11.40
-          </td>
-          <td align="center">
-            8.34
-          </td>
-          <td align="center">
-            7.42
-          </td>
-          <td align="center">
-            6.85
-          </td>
-          <td align="center">
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            Cronbach's a
-          </td>
-          <td align="center">
-            0.75
-          </td>
-          <td align="center">
-            0.63
-          </td>
-          <td align="center">
-            0.65
-          </td>
-          <td align="center">
-            0.64
-          </td>
-          <td align="center">
-            0.55
-          </td>
-          <td align="center">
-            &nbsp;
-          </td>
-        </tr>
-        <tr>
-          <td colspan="8">
-            *Factor labels:<br>
-            <em>F</em><sub>1</sub> Enabled connections; <em>F</em><sub>2</sub> Introduced the unexpected; <em>F</em><sub>3</sub> Presented variety; <em>F</em><sub>4</sub> Triggered divergence; <em>F</em><sub>5</sub> Induced curiosity
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h4>
-      Factor 1: Enabled connections
-    </h4>
-    <p>
-      This factor accounted for 26.7% of the variance and consists of five items. Item loadings on this factor ranged from 0.60 to 0.78. These items related to the manner in which the system invited connections between topics (S10), exploration or browsing across topics (S1, S3, S11, 14). Since the items related to making connections between topics and exploration, this factor was labelled <em>enabled connections</em>.
-    </p>
-    <h4>
-      Factor 2: Introduced the unexpected
-    </h4>
-    <p>
-      This factor accounted for 11.4% of the variance and consisted of three items. Item loadings ranged from 0.67 to 0.84. These items related to encountering unexpected topics or content (S9, S13) and topics not normally explored (S4) therefore this factor was labelled <em>introduced the unexpected</em>.
-    </p>
-    <h4>
-      Factor 3: Presented variety
-    </h4>
-    <p>
-      This factor accounted for 8.3% of the variance and consisted of three items. Item loadings ranged from 0.51 to 0.85. These items related to the variety of system content and display (S2 and S7) as well as the facilitation of varied or diverse behaviours such as exploration and browsing (S15). Thus, <em>presented variety</em> was determined to be an appropriate label for factor three.
-    </p>
-    <h4>
-      Factor 4: Triggered divergence
-    </h4>
-    <p>
-      This factor accounted for 7.42% of the variance and consisted of two items. Item loadings in this factor were 0.77 and 0.84. Both items (S6, S8) indicated that the system in some way sparked or triggered their attention and initiated divergent thinking and behaviour. This factor, therefore, was labelled <em>triggered divergence</em>.
-    </p>
-    <h4>
-      Factor 5: Induced curiosity
-    </h4>
-    <p>
-      The final factor accounted for 6.85% of the variance and consisted of three items. Item loadings ranged from 0.58 to 0.76. The items in this factor related to the inducement of deeper exploration or consideration of information encountered (S16, S17) and curiosity-teasing triggers (S5). The label selected for this factor was <em>induced curiosity</em>.
-    </p>
-    <h2>
-      Discussion
-    </h2>
-    <p>
-      Not all applications have the potential to support serendipity, but there is an increasing need to enhance our ability to be innovative with creative or creative-facilitating information systems. A step toward that goal is the development of systems that enable serendipity to occur. But we need to know when a system is meeting that goal. Using a set of characteristics developed by Bj?rneborn (<a href="#bjo08">2008</a>) of the serendipity-enabling dimensions of a physical library space, this study adapted these dimensions to a digital environment. In the course of the analysis B?rneborn's (<a href="#bjo08">2008</a>) original ten dimensions of serendipity were reduced to five factors: <em>enabled connections, encountered unexpected, presented variety, triggered divergence</em>, and <em>induced curiosity</em>.
-    </p>
-    <p>
-      Factor 1, labelled <em>enabled connections</em>, reflects aspects of several characteristics of Bj?rneborn's (<a href="#bjo08">2008</a>) physical serendipity dimensions, namely, unimpeded and direct access, rich diversity, cross contacts, all of which facilitate connections or associations between disparate information and resources. Making connections or bisociations is a key component of the process of serendipity (<a href="#cun05">Cunha 2005</a>). Koestler (<a href="#koe64">1964</a>) originated the term <em>bisociation</em> to describe a creative association made between two disparate pieces of information or skills. An example of a bisociation is Gutenberg observing the presses in action during a wine harvest in Rhineland and subsequently designing a printing press capable of mass production (<a href="#sim95">Simonton 1995</a>). In an information system, this could mean finding an unexpected piece of information that takes the conceptualization of your problem or task in a new direction (<a href="#fos03">Foster and Ford 2003</a>).
-    </p>
-    <p>
-      <em>Encountered the unexpected</em>, factor 2, is related to Bj?rneborn's (<a href="#bjo08">2008</a>) original <em>rich diversity</em> and <em>cross contacts</em> dimensions. Diversity and cross contacts are perhaps bound to lead one to the unexpected and unexpected is perhaps the umbrella or over-arching description of the experience of serendipity. Something about the experience must be unexpected or unanticipated. The example of the journalist who stumbles upon the juxtaposition of two previously unrelated concepts in a Wikipedia entry is one example of encountering the unexpected in a digital environment (<a href="#mcc11">McCay-Peet and Toms 2011</a>). All of the systems that have attempted to support serendipity discussed in this paper have attempted in some way to introduce unexpectedness through, for example, the provision of content that is intended to be novel and unexpected (<a href="#cam02">Campos and Figueiredo 2002</a>).
-    </p>
-    <p>
-      Factor 3, <em>presented variety</em>, whose items were derived from Bj?rneborn's (<a href="#bjo08">2008</a>) dimensions of <em>rich diversity, striking contrasts</em> and <em>explorability</em> points to the importance of the provision of variety in content and the importance of systems drawing attention to this variety and allowing ways to explore it. Creativity research indicates that '<em>Bombardment by the diversity of surrounding events eventually primes that train of thought that can connect the disparate parts of the desired Koestlerian bisociation</em>' (<a href="#sim95">Simonton 1995</a>: 483). This suggests that environments that create opportunities for viewing divergent materials and enabling interesting juxtapositions may not only support serendipity, but potentially prime for it.
-    </p>
-    <p>
-      The fourth factor, <em>triggered divergence</em>, can be traced to Bj?rneborn's (<a href="#bjo08">2008</a>) dimensions of <em>striking contrasts</em> and <em>pointers</em>. It is an aspect of serendipity that has been grappled with in systems such as Mitsikeru (<a href="#bea07">Beale 2007</a>), an ambient intelligence system that attempts to call attention to interesting or surprising content (Web pages) through visual cues. While its efficacy in enabling serendipity was not established, the importance of a system's ability to trigger divergence is evident due to the limits of human attention. Fine and Deegan (<a href="#fin96">1996</a>: 436) write that for ethnographers, serendipity is linked to their '<em>ability to make sense of seemingly chance events; that is, these scholars were able to ?keep their wits about them,' finding, in the rush of on-going events, meanings and opportunities that might escape others</em>'. That '<em>rush of on-going events</em>' aptly describes a digital search experience in which the world is literally at your fingertips. Because of the limitations of working memory, the attentional portion of short-term memory, we can only allocate a certain amount of our cognitive resources to a scene; we attend to a limited amount of information (<a href="#woo06">Wood, <em>et al.</em> 2006</a>). Because information encounters contain new pieces of information, our capacity to attend to them and make the necessary associations and bisociations for serendipity, is greatly affected by our working memory. Interestingly, '<em>super-encounterers</em>' appear reluctant to expose themselves to environments such as the Web where they feel unable to cope with the associated information overload (<a href="#erd00">Erdelez 2000</a>), perhaps the multiple divergences it triggers.
-    </p>
-    <p>
-      The final factor that emerged in this study, <em>induced curiosity</em>, relates to Bj?rneborn's (<a href="#bjo08">2008</a>) dimensions of <em>curiosity-invoking display</em> and <em>stopability</em> in which curiosity is both ignited and stoked. This element of serendipity is reflected in the development of a physical, serendipity card system (<a href="#saw07">Sawaizumi, <em>et al.</em> 2007</a>) to help students capture stray ideas and thoughts and think more deeply about them. Students were asked to record interesting observations they encountered, indicating a hypothesis and theme as well as the who, what, when, where, and how. The <em>induced curiosity</em> factor underlines perhaps more so than the other four the importance of the individual in the success or failure of a serendipity-enabling environment. The individual must be curious about what is being displayed and become actively engaged; the individual is not a passive observer. While Bj?rneborn focused on the extrinsic or physical rather than intrinsic characteristics of the individual (e.g., personality, interests, motivations) of divergent behaviour within the library, he noted that internal factors have role in serendipity. All of the dimensions in some way have a potential impact on the way patrons feel, behave, think, and are motivated as they make their way through the library, encouraging them to stop and explore.
-    </p>
-    <p>
-      The paper set out to resolve two questions: A. Do the dimensions of the serendipity in the physical environment map to dimensions of serendipity in the digital environment? And B. How can we assess the degree to which a digital environment facilitates serendipity? In the case of the first question, we have identified which of the dimensions of serendipity in a physical environment map to those in a digital environment. In answer to the second question, we assessed how well a digital environment facilitated serendipity by using the provision of a scale. We used a scale because serendipity cannot be objectively assessed by a third party. Only the individual who is facing the potential of a serendipitous moment, a veritable auspicious chance encounter, can assess whether dimensions of serendipity are present. By deploying a more comprehensive scale we can capture the experience of serendipity in a more holistic manner than asking questions that simply relate to the nature of the information encounter as unexpected, interesting, or useful.
-    </p>
-    <p>
-      This study took place in the context of a larger study that is looking more broadly at the exploratory process used in examining information without a specific goal in mind. In the past, we have discovered that participants in laboratory studies are less likely to step outside the bounds of the study (see <a href="#bjo09">Toms and McCay-Peet 2009</a>), and enable the potential for having a truly serendipitous experience. They tend to follow instructions. With no goal, the research design gave the participants the right to choose the direction and pathway through the information space, and thus enable the potential for a serendipitous experience. We know that serendipity is an interaction of some sort between what the user knows (or wants to know), or has experienced and the environment in which the user is immersed (<a href="#mcc11">McCay-Peet and Toms 2011</a>). This design provided the environment for that to occur.
-    </p>
-    <h2>
-      Conclusion and future work
-    </h2>
-    <p>
-      This study identified five core dimensions of serendipity that are present in digital environments. To do so, we operationalized a set of dimensions of a physical library developed from a naturalistic study by Bj?rneborn (<a href="#bjo08">2008</a>). In the process of operationalizing Bj?rneborn's ten dimensions, it became clear that these dimensions are not discrete and, in the end, did not map neatly on to the dimensions of serendipity in a digital environment. However, the overlapping nature of the ten dimensions suggests that it is plausible that these dimensions are not discreet in a physical world either.
-    </p>
-    <p>
-      Scale construction is an iterative process. Further development of this scale is required before it can be used to assess the degree to which a digital environment facilitates serendipity. The items used in this scale were developed solely through the interpretation of serendipity dimensions in a <em>physical</em> library setting. Future studies will attempt to expand on these to determine whether there are dimensions unique to a digital environment. Are five factors the complete set? For example, in a physical library setting, the serendipity experienced was that of finding a resource or topic of interest; in a digital environment it may be more about information interactions at the content level. Examination of information or knowledge-based examples of serendipity may indicate other potentially useful scalar items that reflect serendipity within a digital environment. By expanding the items initially tested together with a wider participant base, we can come closer to the creation of a scale that will measure whether a system is meeting its goal of providing an environment that encourages serendipity. Future studies will augment and refine the instrument developed in this study.
-    </p>
-    <h2>
-      Acknowledgements
-    </h2>
-    <p>
-      Research was supported by grants to Toms from the National Centres of Excellence GRAND project, the Social Sciences and Humanities Council of Canada, the Canadian Foundation for Innovation and the Canada Research Chairs Program, while she was at Dalhousie University, Halifax, Nova Scotia, Canada.
-    </p>
-    <h2 id="authors">
-      About the authors
-    </h2>
-    <p>
-      <strong>Lori McCay-Peet</strong> is a Ph.D. student in the faculties of Management and Computer Science at Dalhousie University. Her primary research interests include understanding serendipity and measuring its support in order to develop tools to support serendipity within information-rich systems. Her research is in part funded through a Joseph-Armand Bombardier CGS Doctoral Scholarship, a Canadian national scholarship granted by the Social Sciences and Humanities Research Council, and the GRAND National Centres of Excellence. She can be contacted at: <a href="mccay@dal.ca">mccay@dal.ca</a><br>
-      <strong>Elaine Toms</strong> is Professor in Information Science, Information School, University of Sheffield, and former Canada Research Chair in Management Informatics, Dalhousie University, Halifax, Nova Scotia, Canada. Her research focuses at the intersection of human computer interaction and information retrieval with a particular interest in user-centric evaluation of information systems. She has a long-time interest in the immersive experiences in information that enable chance encounters. She can be contacted at: <a href="e.toms@sheffield.uk">e.toms@sheffield.uk</a>
-    </p>
-    <form action="">
-      <fieldset>
-        <legend style="color: white; background-color: #5E96FD; font-size: medium; padding: .1ex .5ex; border-right: 1px solid navy; border-bottom: 1px solid navy; font-weight: bold;">References</legend>
-        <ul>
-          <li id="and09">Andr?, P., Teevan, J. &amp; Dumais, S.T. (2009). <a href="http://www.webcitation.org/60mbYQpio">From x-rays to silly putty via Uranus: serendipity and its role in web search</a>. In <em>Proceedings of the 27th International Conference on Human Factors in Computing Systems</em>. (pp. 2033-2036). New York, NY: ACM Press. Retrieved 8 August, 2011 from http://research.microsoft.com/pubs/79633/chi09-serendip.pdf (Archived by WebCite? at http://www.webcitation.org/60mbYQpio)
-          </li>
-          <li id="bea07">Beale, R. (2007). Supporting serendipity: using ambient intelligence to augment user exploration for data mining and web browsing. <em>International Journal of Human-Computer Studies</em>, <strong>65</strong> (5), 421-433.
-          </li>
-          <li id="bel08">Bellotti, V., Begole, B., Chi, E.H., Ducheneaut, N., Fang, J., Isaacs, E., <em>et al.</em> (2008). Activity-based serendipitous recommendations with the Magitti mobile leisure guide. In <em>Proceedings of the Twenty-Sixth Annual SIGCHI Conference on Human Factors in Computing Systems</em>.
-          </li>
-          <li id="bjo08">Bj?rneborn, L. (2008). <a href="http://www.webcitation.org/60maSB29Y">Serendipity dimensions and users' information behaviour in the physical library interface</a>. <em>Information Research</em>, <strong>13</strong>(4), paper 370. Retrieved 19 June 2011 from http://informationr.net/ir/13-4/paper370.html (Archived by WebCite? at http://www.webcitation.org/60maSB29Y)
-          </li>
-          <li id="bjo10">Bj?rneborn, L. (2010). Design dimensions enabling divergent behaviour across physical, digital, and social library interfaces. In Thomas Ploug, Per Hasle &amp; Harri Oinas-Kukkonen, (Eds.). <em>Persuasive technology: 5th International Conference, PERSUASIVE 2010, Copenhagen, Denmark, June 2010, Proceedings</em> (pp. 143-149). Berlin: Springer. (Lecture Notes in Computer Science 6137)
-          </li>
-          <li id="cam02">Campos, J. A. &amp; Figueiredo, A. D. (2002). <a href="http://www.webcitation.org/60mhdbYo2">Programming for serendipity</a>. In <em>Proceedings of the 2002 AAAI Fall Symposium</em>. (pp. 48-60). Menlo Park, CA: AAAI Press. Retrieved 8 August, 2011 from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.12.1856&amp;rep=rep1&amp;type=pdf (Archived by WebCite? at http://www.webcitation.org/60mhdbYo2)
-          </li>
-          <li id="cun05">Cunha, M.P.E. (2005).<a href="http://www.webcitation.org/60mhquf6E">Serendipity: why some organizations are luckier than others</a>. Lisbon: Universidade Nova de Lisboa, Faculdade de Economia. (FEUNL Working Paper No. 472.) Retrieved 8 August, 2011 from http://fesrvsd.fe.unl.pt/WPFEUNL/WP2005/wp472.pdf (Archived by WebCite? at http://www.webcitation.org/60mhquf6E)
-          </li>
-          <li id="erd99">Erdelez, S. (1999). Information encountering: it's more than just bumping into information. <em>Bulletin of the American Society for Information Science</em>, <strong>25</strong>(3), 25-29.
-          </li>
-          <li id="erd00">Erdelez, S. (2000). Towards understanding information encountering on the Web. <em>Proceedings of the ASIS Annual Meeting</em>, <strong>25</strong>(37), 363-371.
-          </li>
-          <li id="fie09">Field, A.P. (2009). <em>Discovering statistics using SPSS</em>, London: Sage Publications.
-          </li>
-          <li id="fin96">Fine, G.A. &amp; Deegan, J.G. (1996). Three principles of serendip: insight, chance, and discovery in qualitative research. <em>International Journal of Qualitative Studies in Education</em>, <strong>59</strong>(3), 321-340.
-          </li>
-          <li id="hei06">Heinstr?m, J. (2006). Psychological factors behind incidental information acquisition. <em>Library &amp; Information Science Research</em>, <strong>28</strong>(4), 218-228.
-          </li>
-          <li id="koe64">Koestler, A. (1964). <em>The act of creation</em>. New York, NY: Macmillan.
-          </li>
-          <li id="mcc11">McCay-Peet, L. &amp; Toms, E.G. (2011). <em>Exploring the precipitating conditions of serendipity</em>, Poster presented at the 2nd Annual Graphics, Animation and New Media (GRAND) NCE Conference 2011, Vancouver, BC, May 12-14, 2011.
-          </li>
-          <li id="mey06">Meyers, L.S., Gamst, G. &amp; Guarino, A.J. (2006). <em>Applied multivariate research: design and interpretation.</em>. Thousand Oaks, CA: Sage Publications.
-          </li>
-          <li id="nut10">Nutefall, J.E. &amp; Ryder, P.M. (2010). The serendipitous research process. <em>The Journal of Academic Librarianship</em>, <strong>36</strong>(3), 228-234.
-          </li>
-          <li id="ric88">Rice, J. (1988). Serendipity and holism. The beauty of OPACs. <em>Library Journal</em> <strong>113</strong>(3), 138-141.
-          </li>
-          <li id="rub10">Rubin, V.L., Burkell, J. &amp; Quan-Haase, A. (2010). <a href="http://www.webcitation.org/60miZrX48">Everyday serendipity as described in social media.</a> <em>Proceedings of the 73rd ASIS&amp;T Annual Meeting</em>, <strong>47</strong>, Article 152. Retrieved 8 August, 2011 from http://www.asis.org/asist2010/proceedings/proceedings/ASIST_AM10/submissions/409_Final_Submission.pdf (Archived by WebCite? at http://www.webcitation.org/60miZrX48)
-          </li>
-          <li id="saw07">Sawaizumi, S., Katai, O., Kawakami, H. &amp; Shiose, T. (2007). <a href="http://www.webcitation.org/60mikN4hu">Using the concept of serendipity in education</a>. In <em>KICSS 2007 : The Second International Conference on Knowledge, Information and Creativity Support Systems: Proceedings of the Conference, November 5-7, 2007</em>. Retrieved 8 August, 2011 from: https://dspace.jaist.ac.jp/dspace/bitstream/10119/4087/1/13.pdf (Archived by WebCite? at http://www.webcitation.org/60mikN4hu)
-          </li>
-          <li id="sim95">Simonton, D.K. (1995). Foresight in insight? A Darwinian answer. In R.J. Sternberg &amp; J.E. Davidson (Eds.), <em>The nature of insight</em> (pp. 465-494). Cambridge, MA: MIT Press.
-          </li>
-          <li id="tom99">Toms, E.G. (1999). What motivates the browser? In Thomas D Wilson and David K. Allen, (Eds.) <em>Exploring the Contexts of Information Behaviour: Proceedings of the 2nd International Conference on Research in Information Needs, Seeking and Use in Different Contexts</em>. (465-494). London: Taylor Graham.
-          </li>
-          <li id="tom00">Toms, E.G. (2000). Understanding and facilitating the browsing of electronic text. <em>International Journal of Human-Computer Studies</em>, <strong>52</strong>(3), 423-452.
-          </li>
-          <li id="tom09">Toms, E.G. &amp; McCay-Peet, L. (2009). Chance encounters in the digital library. In M. Agosti, J. Borbinha, S. Kapidakis, C. Papatheodorou &amp; G. Tsakonas (Eds.), <em>ECDL'09 Proceedings of the 13th European conference on Research and advanced technology for digital libraries,</em> (pp. 192-202). Berlin: Springer-Verlag. (Lecture Notes in Computer Science 5714).
-          </li>
-          <li id="tom09a">Toms, E.G., McCay-Peet, L. &amp; Mackenzie, R.T. (2009a). wikiSearch: from access to use. In M. Agosti, J. Borbinha, S. Kapidakis, C. Papatheodorou &amp; G. Tsakonas (Eds.), <em>ECDL'09 Proceedings of the 13th European conference on Research and advanced technology for digital libraries,</em> (pp. 27-38). Berlin: Springer-Verlag. (Lecture Notes in Computer Science 5714).
-          </li>
-          <li id="wil98">Williamson, K. (1998). Discovered by chance: the role of incidental information acquisition in an ecological model of information use. <em>Library &amp; Information Science Research</em> <strong>20</strong>(1), 23-40.
-          </li>
-        </ul>
-      </fieldset>
-    </form>
-    
-    
-    <br>
-    
-    <hr>
-    
-    <hr>
-    
-    <hr>
-  </body>
+</head>
+<body>
+<h4 id="vol-16-no-3-september-2011">vol. 16 no. 3, September, 2011</h4>
+<h1 id="measuring-the-dimensions-of-serendipity-in-digital-environments">Measuring the dimensions of serendipity in digital environments</h1>
+<p><a href="#authors">Lori McCay-Peet</a><br>
+Dalhousie University, 6100 University Avenue, Halifax, Nova Scotia, Canada B3H 3J5<br>
+<a href="#authors">Elaine Toms</a><br>
+Information School, University of Sheffield, Regent Court, 211 Portobello, Sheffield, United Kingdom, S1 4DP</p>
+<h4>Abstract</h4>
+<blockquote>
+<p><strong>Introduction.</strong> Serendipitous information retrieval is the perhaps inevitable consequence of immersion in an information-rich environment. Just how well chance encounters are supported, however, within these environments varies and one of the challenges to the development of tools and systems to facilitate serendipity is measuring how well they achieve this goal. This research developed a scale to measure dimensions of serendipity identified in prior research.<br>
+<strong>Method.</strong> Participants (N=123) browsed an experimental information search system for twenty minutes with no a priori task and responded to a twenty-item survey questionnaire. Items were derived from the serendipity dimensions of a physical library setting devised by Björneborn.<br>
+<strong>Analysis.</strong> Exploratory factor analysis using the Principal Component Analysis as the method of extraction was carried out on the data. The analysis was undertaken using the SPSS statistical package.<br>
+<strong>Results.</strong> Five factors were extracted representing core elements of support for serendipity in a digital environment: <em>enabled connections</em>, <em>introduced the unexpected</em>, <em>presented variety</em>, <em>triggered divergence</em>, and <em>induced curiosity</em>. In addition, four of the original twenty items were eliminated from the survey.<br>
+<strong>Conclusions.</strong> While the physical dimensions of serendipity do map on to the digital dimensions, it is unknown whether there are additional dimensions of serendipity not present in the physical environment.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>Unintended but auspicious discoveries have been credited with ground-breaking global advancements in medicine and science. At the same time, less tangible breakthroughs have aided advancements and innovation within organizations and on a much smaller scale, growth and development of individuals in personal and work lives. Yet our knowledge of serendipity primarily comes from our observation of it in the physical, tactile world of science, rather than in conceptual and often non-observable world of social sciences where the discovery may be the unplanned use of a new method that has unintended consequences, the uncovering of a long forgotten cultural gem, or, the chance connection between two disparate ideas that leads to a new theory. These potential outcomes of serendipitous discovery come from interaction with content that is textual, audio or graphic embedded within a system or from exchange with other people. In this research we focus on the former; serendipity in interactive information systems. Notably, current systems may not provide the rich environment necessary to enable serendipity and instead tend to provide planned paths of navigation from one discrete information object to another with the intent of removing the apparent irrelevant content or shielding the user from what the system perceives is not useful to the user.</p>
+<p>When does a system enable, support and facilitate serendipity? A number of innovations have been introduced as we discuss in the next section. But rather than taking a technology-centred view of the problem, we instead start with known dimensions of serendipity identified by previous research to create a tool to measure a system's propensity to facilitate serendipity. The objective of this research was two-fold: to assess the applicability of these dimensions to information systems and, secondly, to examine selected characteristics or indicators of serendipity and assess them in an ecologically valid user study.</p>
+<h2 id="previous-work">Previous work</h2>
+<p>There has been a swell of research that explores the concept of serendipity in various domains such as everyday life (<a href="#rub10">Rubin <em>et al.</em> 2010</a>; <a href="#wil98">Williamson 1998</a>), education (<a href="#nut10">Nutefall and Ryder 2010</a>; <a href="#saw10">Sawaizumi <em>et al.</em> 2010</a>), and interdisciplinary scholarship (<a href="#fos03">Foster and Ford 2003</a>). The characteristics associated with the serendipity-prone person have also been examined (<a href="#erd99">Erdelez 1999</a>; <a href="#hei06">Heinstrom 2006</a>) to determine why it is that some people appear more likely to experience serendipity than others. People come to digital information environments with diverse individual differences, motivations, and knowledge which impact their interactions with the environment and their overall experience. Serendipity, however, is not only influenced by individual differences and information activities of the individual, but also the characteristics of the environment in which the individual is immersed (<a href="#bjo08">Björneborn 2008</a>; <a href="#erd00">Erdelez and Rioux 2000</a>).</p>
+<p>Interdisciplinary scholars in Foster and Ford's (<a href="#fos03">2003</a>) study indicated that their own attitudes about serendipitous information encounters and their strategies for dealing with them had a perceived effect on how well these encounters could be exploited but they also suspected that the characteristics of the environment such as the classification schemes of libraries played a significant role.</p>
+<p>Studies have generally tested tools or methods of introducing unexpected and interesting content. Efforts have been made to support serendipity in digital environments, for example, through the development of a context and activity-aware recommender system embedded in mobile leisure guides (<a href="#bel08">Bellotti <em>et al.</em> 2008</a>), information retrieval software (MAX) that collects potentially serendipity-inducing information and send it to users by e-mail (<a href="#cam02">Campos and Figueiredo 2002</a>), an ambient intelligence agent (Mitsikeru) within an internet browser (<a href="#bea07">Beale 2007</a>) and a suggested articles tool in an information search system (Toms <a href="#tom99">1999</a>; Toms and McCay-Peet <a href="#mcc09">2009</a>). Techniques for deriving serendipity-inducing content such as personalization (Andre <em>et al.</em> <a href="#and09">2009</a>) have also begun to be tested. Measurement of the effectiveness of these techniques and systems has generally relied on judgments by participants of the novelty, relevance, and interestingness of the results or suggestions provided (Andre, <em>et al.</em> <a href="#and09">2009</a>; Bellotti, <em>et al.</em> <a href="#bel08">2008</a>; Campos and Figueiredo <a href="#cam02">2002</a>) as well as how the tool was actually used (i.e., support for the task at hand or divergence from the task) (Toms and McCay-Peet <a href="#mcc09">2009</a>).</p>
+<p>In addition, while the aforementioned studies have selected aspects of serendipity to test and explore in a digital environment, little is known about which precipitating conditions are actually related to serendipity in a digital environment. Precipitating conditions (<a href="#cun05">Cunha 2005</a>) or principles of serendipity (<a href="#fin96">Fine and Deegan 1996</a>) are those conditions that, when present, increase the chances of serendipity. While they have been hypothesized to include temporal happenstance, social networking and active learning, in a digital environment there are likely to be many potential characteristics that may increase our opportunity for serendipity.</p>
+<p>One study examined the impact of design features of the physical library space on convergent and divergent information behaviour (Björneborn <a href="#bjo08">2008</a>). Björneborn conceptualized serendipity as an event precipitated by divergent information behaviour and the design of the <em>library interface</em> (human, physical and digital). Over a period of several months, the information activities that patrons used to find resources in public libraries were observed. A portion (n=118) of those patrons was invited to engage in a short interview to collect self-reported data on their information behaviour. Follow-up think-aloud sessions with eleven of the 118 patrons were conducted in which the users walked through the library with a researcher and reflected upon their information behaviour and what triggered their attention in the physical library space.</p>
+<p>Ten dimensions in the physical library that facilitate serendipity were identified and these primarily revolve around the design elements of the library space (Björneborn <a href="#bjo08">2008</a>):</p>
+<ol>
+<li><em>Unimpeded and direct access</em> to library resources to ensure that serendipity is not restricted by lack of access to resources.</li>
+<li><em>Rich diversity</em> of resources, activities, and physical spaces that will help spark an individual's interests.</li>
+<li><em>Curiosity-invoking display</em> of library resources.</li>
+<li><em>Striking contrasts</em> between spaces and resources within the library spaces that will draw an individual's attention to the rich diversity.</li>
+<li><em>Pointers</em> such as signs to remind individuals of potential topics of interest.</li>
+<li><em>Imperfections</em> within the library interfaces such as mis-shelved books that may lead an individual to stumble upon an unexpected and interesting resource.</li>
+<li><em>Cross contacts,</em> which is the juxtaposition of divergent topics, activities, resources, or physical spaces.</li>
+<li><em>Multi-reachability,</em> which is the ability of individuals to reach library spaces through a variety of routes or pathways.</li>
+<li><em>Explorability,</em> which is the encouragement of the individual to move freely around the library, to explore and follow their curiosity.</li>
+<li><em>Stopability,</em> which is the ability for individuals to stop and explore materials at will through, for example, the provision of a space to sit or a place to lay down what they were carrying to examine another resource.</li>
+</ol>
+<p>While interactions with computers in the library were observed, details of these interactions are at a high level; more research is needed to determine whether the same serendipity dimensions exist in the digital environment (Björneborn <a href="#bjo08">2008</a>). Several of the serendipity dimensions combined (e.g., <em>multi-reachability</em>, <em>stopability</em> and <em>explorability</em>) appear at face value to have a counterpart in the digital realm in the form of orientation and wayfinding tools that support serendipity and exploratory search. However, the characteristics of these dimensions and the behaviour they encourage may cause distraction and disorientation in a digital environment. Unlike the <em>gestalt nature</em> of physical information spaces such as libraries, there is a limit to the amount of information that can be revealed on a screen <a href="#bjo08">(Rice 1988</a>) and when they are in the middle of a task, individuals have a tendency to want to stay on task (<a href="#erd04">Erdelez 2004</a>; <a href="#tom09">Toms and McCay-Peet 2009</a>). While users need pathways to divergent content and time to absorb that content, they also need to get back on track after digressions from their original path (<a href="#tom00">Toms 2000</a>). <em>Imperfections</em> is also a difficult dimension to translate in a digital environment where imperfections are viewed as frustrating usability issues rather than opportunities for serendipity. Similarly <em>unimpeded and direct access</em> seems to be first and foremost related to usability; it is important to all digital information interactions, not just those designed to support serendipity. <em>Rich diversity</em>, <em>curiosity invoking display</em>, <em>striking contrasts</em>, <em>pointers</em> and <em>cross contacts</em> are similar in their endeavour to catch an individual's attention and spark their interest through some manipulation of the physical library environment. In a digital environment this takes the form, for example, of personalized results (Andre, <em>et al.</em> <a href="#and09">2009</a>), a suggestion box with semi-related content recommendations (<a href="#tom99">Toms 1999</a>) and visually augmented hyperlinks to interesting and unexpected content (<a href="#bea07">Beale 2007</a>).</p>
+<p>The digital environment's proper manipulation and design is the goal of much of the current serendipity research discussed here. The belief is that if we can understand enough about the process of serendipity and the conditions that precipitate it, we can create an environment that will encourage and support serendipity (Björneborn <a href="#bjo10">2010</a>). Two questions emerge from this endeavour: 1) what characteristics of digital information spaces or environments (i.e., design of information spaces) facilitate chance encounters; and 2) how can we measure how well digital environments facilitate chance encounters through system design? This paper focuses on the latter question by applying dimensions of serendipity derived from the physical environment (Björneborn <a href="#bjo08">2008</a>) to a digital information space and endeavours to answer the following questions:</p>
+<ol>
+<li>Do the dimensions of serendipity in the physical environment map to dimedimensionsserendipity in the digital environment?</li>
+<li>How can we assess the degree to which a digital envienvironmentilitates serendipity?</li>
+</ol>
+<h2 id="methods">Methods</h2>
+<p>To assess the dimensions of serendipity, we developed an initial scale adapted from Björneborn's (<a href="#bjo08">2008</a>) ten dimensions of the physical library that may facilitate serendipity and tested the scale on a set of users of a version of Wikipedia with a custom-designed interface. This was part of a larger study that is examining non-goal-based use of an information system in tandem with measures of curiosity.</p>
+<h3 id="design-of-the-study">Design of the study</h3>
+<p>The study invited a volunteer community to examine a version of Wikipedia viewing anything they wished for a period of twenty minutes. Before being assigned the task, several measures related to curiosity were assessed and, after the task, they were assigned several questions regarding their found information and the serendipity scale. Responses to the serendipity items were on a five-point Likert scale of 'strongly disagree' to 'strongly agree'. No experimental variables were formally tested.</p>
+<h3 id="task">Task</h3>
+<p>Participants were given a scenario, a role play, in which they were asked to imagine that they are in an office with about twenty minutes to spend. They were given a laptop and asked to browse whatever they wish, including retaining items for future use or making notes.</p>
+<h3 id="system">System</h3>
+<p>Participants used the wikiSearch system (described in <a href="#mcc09">Toms, <em>et al.</em> 2009</a>) which included the content of Wikipedia which was used for the INEX (INitiative for the Evaluation of XML Retrieval) 2006 Interactive Track and a custom-designed interface which contained a single display to represent the search process. The interface included three physical columns:</p>
+<ol>
+<li>the left column supported the task and contained in addition to the task assignment, a Notes space for memorable information, and a BookBag to retain items of interest;</li>
+<li>the middle pane supported the search task and included a box for query entry, a set of results with abbreviated titles that additionally provided mouse-over access to the complete snippet, and a history of all page views and submitted queries; and</li>
+<li>the extreme right side contained the page display. It also included a Suggested Items list for other items that may be related somewhat to the page on display, created by resending the first paragraph in the page displayed as query and returning the top rank titles (not including the one on display).</li>
+</ol>
+<p>The system was intended to retain as many visual cues as possible about what the user had done or examined, with significant flexibility about what could be re-examined.</p>
+<h3 id="instrument">Instrument</h3>
+<p>While multiple instruments were used in this study, we focus on that used in the analysis presented here: the serendipity scale.</p>
+<p>Through an iterative process, seven research assistants and doctoral students were given Björneborn's (2008) ten dimensions, each with corresponding statements extracted by the researchers from the intent of the dimension. They rated whether each statement captured the essence of the dimension and were invited to provide additional statements if they perceived that the presented statements were incorrect or incomplete. This process started with 115 statements across all ten dimensions and the list was amplified by a further seventeen statements. Over two more iterations, the list stabilised in a process that resulted in the twenty items in Table 1.</p>
+<p>As previously suggested, some of Björneborn's (<a href="#bjo08">2008</a>) dimensions were difficult to adapt to a digital environment. In operationalizing a conceptually written dimension, it became clear that considerable overlap existed among items in the set, making it difficult assign a particular statement to a particular dimension. This was the case, for example, with <em>striking contrasts</em> and <em>pointers</em>, both of which prompted items related to <em>attention-grabbing</em>. On the other hand, it was difficult to develop any items for <em>imperfection</em>. <em>Imperfection</em> may work in a physical environment, but conceptualizing it in a digital environment led to items that appeared to describe usability problems. In the end, we elected to include statements that captured the essence of the concept, serendipity, while not attending to the need to provide multiple items. We recognized that in fact each dimension may not resolve to a factor in the final analysis.</p>
+<table style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd" align="center" border="1" cellpadding="3" cellspacing="0" width="80%"><caption align="bottom">  
+**Table 1: Serendipity dimensions applied as items relating to a digital environment**</caption>
+<tbody>
+<tr>
+<th>Serendipity dimensions (Björneborn [2008](#bjo08))</th>
+<th>Scale items</th>
+</tr>
+<tr>
+<td>1\. Unimpeded and direct access</td>
+<td>S1 I was able to explore anything that interested me when using the system</td>
+</tr>
+<tr>
+<td>2\. Rich diversity</td>
+<td>S2 I was able to see information in a range of formats  
+S3 I was able to examine a variety of topics  
+S4 I explored many topics that normally I do not examine</td>
+</tr>
+<tr>
+<td>3\. Curiosity-invoking display</td>
+<td>S5 I wanted to click on things to see where they would take me</td>
+</tr>
+<tr>
+<td>4\. Striking contrasts</td>
+<td>S6 Unexpected words and phrases caught my eye  
+S7 Unexpected visual features of the system caught my eye</td>
+</tr>
+<tr>
+<td>5\. Pointers</td>
+<td>S8 Unexpected words and phrases sparked my thinking</td>
+</tr>
+<tr>
+<td>6\. Imperfections</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>7\. Cross contacts</td>
+<td>S9 I found something interesting on pages that had unexpected content  
+S10 The system enabled me to make connections between different topics  
+S11 The system presented content in ways that invited me to explore across topics  
+S12 Exploring one topic unexpectedly led me to other  
+S13 I stumbled upon unexpected topics</td>
+</tr>
+<tr>
+<td>8\. Multi-reachability</td>
+<td>S14 I could find topics in several alternative ways</td>
+</tr>
+<tr>
+<td>9\. Explorability</td>
+<td>S15 The system encouraged me to browse and explore</td>
+</tr>
+<tr>
+<td>10\. Stopability</td>
+<td>S16 I found myself pausing to look at things more closely  
+S17 The system encouraged me to stop and explore  
+S18 I could return to topics that I had explored earlier  
+S19 I could easily explore many topics without getting lost  
+S20 I could follow-up on interesting associations between topics or ideas  
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="participants">Participants</h3>
+<p>One hundred and twenty-four participants volunteered for the study. Of these, 123 were identified as 'valid participants'. One participant's data set was identified as an extreme multivariate outlier and removed from the analysis. The participants (N = 123) were primarily university students (N = 106, 86.2%) between the ages of 18 and 26 (N = 98, 79.7%). There was a fairly even representation of males (N = 67, 54.5%) and females (N = 56, 45.5%). Participants were frequent users of Wikipedia; 99 participants (80.4%) indicated that they used Wikipedia more than once or twice a week. Of those, 34 (27.6%) participants indicated that they used Wikipedia one or more times a day. The majority of participants (N=119, 96.7%) also indicated using web search engines one or more times daily.</p>
+<h3 id="procedure">Procedure</h3>
+<p>Notices for recruitment were posted around the University and advertised on electronic mailing lists. Participants self-selected and no formal random sampling was done. Participants <em>dropped</em> into a room that was set up for the study. The room contained ten tables and laptops scattered about in an informal arrangement.</p>
+<p>Participants were introduced to the study by one of the five research assistants, read the consent form and had their questions answered, and then were logged into the system that guided them through the process.</p>
+<p>On completion, they were paid an honorarium of $20 for the nearly one hour of time taken to do the study.</p>
+<h3 id="data-analysis">Data analysis</h3>
+<p>Data were loaded into SPSS 17.0. All univariate and multivariate assumptions were examined. Linearity, homoscedasticity and multimulti-collinearity all found to be satisfactory and no missing values were detected. One multivariate outlier was found and removed and all results are reported based on the remaining 123 participants. First, we examined descriptive statistics and inter-correlations for the twenty variables as well as testing for sampling adequacy. Next exploratory factor analysis was conducted in multiple iterations to test for factors present within the set of items and finally Cronbach's Alpha was used to assess each sub-scale emerged from the exploratory factor analysis.</p>
+<h2 id="results">Results</h2>
+<p>Table 2 contains the descriptive statistics and inter-correlations of all twenty variables. As illustrated, all correlated with one of more other items at the .05 to .01 levels, and were retained for the subsequent analyses. Exploratory factor analysis was conducted on the 20 items using the Principal Component Analysis as the method of extraction with orthogonal rotation (Varimax) with Kaiser normalisation.</p>
+<table style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd" align="center" border="1" cellpadding="3" cellspacing="0" width="80%"><caption align="bottom">  
+**Table 2: Summary of inter-correlations, means, and standard deviations of items**</caption>
+<tbody>
+<tr>
+<th rowspan="1" valign="middle">Variable</th>
+<th>_M_</th>
+<th>_SD_</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+<th>19</th>
+<th>20</th>
+</tr>
+<tr>
+<td>S1</td>
+<td>3.8</td>
+<td>1.2</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>  
+</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S2</td>
+<td>3.3</td>
+<td>1.0</td>
+<td>.30**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S3</td>
+<td>4.2</td>
+<td>0.6</td>
+<td>.45**</td>
+<td>.25**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S4</td>
+<td>3.3</td>
+<td>1.2</td>
+<td>.11</td>
+<td>.19*</td>
+<td>.10</td>
+<td>.1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S5</td>
+<td>4.0</td>
+<td>0.9</td>
+<td>.17</td>
+<td>.24**</td>
+<td>.07</td>
+<td>.18*</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S6</td>
+<td>3.4</td>
+<td>1.1</td>
+<td>-.05</td>
+<td>.11</td>
+<td>.02</td>
+<td>.09</td>
+<td>.31*</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S7</td>
+<td>2.7</td>
+<td>1.1</td>
+<td>.17</td>
+<td>.44**</td>
+<td>.21*</td>
+<td>.22*</td>
+<td>.13</td>
+<td>.17</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S8</td>
+<td>3.6</td>
+<td>1.0</td>
+<td>.09</td>
+<td>.12</td>
+<td>.14</td>
+<td>.08</td>
+<td>.09</td>
+<td>.48**</td>
+<td>.15</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S9</td>
+<td>3.8</td>
+<td>0.9</td>
+<td>.06</td>
+<td>.10</td>
+<td>.19*</td>
+<td>.24*</td>
+<td>.14</td>
+<td>.24**</td>
+<td>.30**</td>
+<td>.20*</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S10</td>
+<td>3.9</td>
+<td>0.9</td>
+<td>.49**</td>
+<td>.09</td>
+<td>.33**</td>
+<td>.10</td>
+<td>.18</td>
+<td>.01</td>
+<td>.14</td>
+<td>.30**</td>
+<td>.40</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S11</td>
+<td>3.8</td>
+<td>0.8</td>
+<td>.38**</td>
+<td>.16</td>
+<td>.39**</td>
+<td>.02</td>
+<td>.21</td>
+<td>.23**</td>
+<td>.23*</td>
+<td>.27**</td>
+<td>.10</td>
+<td>.53**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S12</td>
+<td>4.2</td>
+<td>0.8</td>
+<td>.26**</td>
+<td>.24*</td>
+<td>.45*</td>
+<td>.21*</td>
+<td>.12*</td>
+<td>.25*</td>
+<td>.28*</td>
+<td>.19*</td>
+<td>.34**</td>
+<td>.19</td>
+<td>.36**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S13</td>
+<td>3.7</td>
+<td>1.0</td>
+<td>-.04</td>
+<td>.12</td>
+<td>.18*</td>
+<td>.45**</td>
+<td>.14</td>
+<td>.23*</td>
+<td>.08</td>
+<td>.18*</td>
+<td>.43**</td>
+<td>.07</td>
+<td>.14</td>
+<td>.38**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S14</td>
+<td>3.8</td>
+<td>1.0</td>
+<td>.26*</td>
+<td>.23**</td>
+<td>.32**</td>
+<td>.17</td>
+<td>.19</td>
+<td>.08</td>
+<td>.16</td>
+<td>.20*</td>
+<td>.20*</td>
+<td>.39**</td>
+<td>.43**</td>
+<td>.38**</td>
+<td>.18</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S15</td>
+<td>3.9</td>
+<td>0.8</td>
+<td>.31*</td>
+<td>.49**</td>
+<td>.37**</td>
+<td>.12</td>
+<td>.24*</td>
+<td>.24**</td>
+<td>.23*</td>
+<td>.19*</td>
+<td>.18*</td>
+<td>.29**</td>
+<td>.47**</td>
+<td>.47**</td>
+<td>.20*</td>
+<td>.31**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S16</td>
+<td>3.9</td>
+<td>0.9</td>
+<td>.06</td>
+<td>.10</td>
+<td>.13</td>
+<td>.15</td>
+<td>.16</td>
+<td>.06</td>
+<td>.13</td>
+<td>.12</td>
+<td>.16</td>
+<td>.19*</td>
+<td>.16</td>
+<td>.19*</td>
+<td>.05</td>
+<td>.11</td>
+<td>.13</td>
+<td>.1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S17</td>
+<td>3.8</td>
+<td>0.9</td>
+<td>.42*</td>
+<td>.28**</td>
+<td>.30**</td>
+<td>.23**</td>
+<td>.28**</td>
+<td>.20*</td>
+<td>.17</td>
+<td>.14</td>
+<td>.27**</td>
+<td>.34**</td>
+<td>.36**</td>
+<td>.44**</td>
+<td>.31**</td>
+<td>.26**</td>
+<td>.49**</td>
+<td>.42**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S18</td>
+<td>4.5</td>
+<td>0.7</td>
+<td>.16</td>
+<td>-.06</td>
+<td>.31**</td>
+<td>.04</td>
+<td>.09</td>
+<td>.05</td>
+<td>-.20*</td>
+<td>.22*</td>
+<td>.24**</td>
+<td>.26**</td>
+<td>.18*</td>
+<td>.05</td>
+<td>.19*</td>
+<td>.24**</td>
+<td>.10</td>
+<td>.24*</td>
+<td>.25**</td>
+<td>1</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>S19</td>
+<td>4.1</td>
+<td>0.9</td>
+<td>.10</td>
+<td>.06</td>
+<td>.15</td>
+<td>-.07</td>
+<td>.20*</td>
+<td>.05</td>
+<td>.09</td>
+<td>.13</td>
+<td>.22*</td>
+<td>.34**</td>
+<td>.35**</td>
+<td>.17</td>
+<td>.02</td>
+<td>.28*</td>
+<td>.23**</td>
+<td>.12</td>
+<td>.26**</td>
+<td>.32**</td>
+<td>1</td>
+<td> </td>
+</tr>
+<tr>
+<td>S20</td>
+<td>4.0</td>
+<td>0.9</td>
+<td>.32**</td>
+<td>.04</td>
+<td>.36**</td>
+<td>.07</td>
+<td>.23*</td>
+<td>.14</td>
+<td>.13</td>
+<td>.36**</td>
+<td>.13*</td>
+<td>.66**</td>
+<td>.48**</td>
+<td>.27*</td>
+<td>.01</td>
+<td>.31**</td>
+<td>.23*</td>
+<td>.39**</td>
+<td>.40**</td>
+<td>.33**</td>
+<td>.31**</td>
+<td>1</td>
+</tr>
+<tr>
+<td colspan="23">Note. N = 123.,*p <0.05,**p <0.01.</td>
+</tr>
+</tbody>
+</table>
+<p>The study sample met the minimum recommended number of participants (i.e., five to ten) for each variable (Kass and Tinsley, 1979, in Field <a href="#fie09">2009</a>). The Kaiser-Meyer-Olkin measure of sampling adequacy was 0.76, indicating that the present set of data is suitable for Principal Component Analysis; in general, values between 0.70 and 0.80 are considered good (Kaiser 1974, as cited in Field <a href="#fie09">2009</a>). All Kaiser-Meyer-Olkin values for individual items were &gt;0.61 which is above the acceptable limit of 0.5 (Field <a href="#fie09">2098</a>). Similarly, Bartlett's test of sphericity was significant (<sup>2</sup> = 790.25, df=190, p&lt;0.001), indicating sufficient correlations between variables to proceed with the analysis.</p>
+<p>Four iterations of exploratory factor analysis were performed. Because the sample size was less than 200, the cut-off value for interpretation of 0.45 (20% of the variance) was selected (<a href="#mey06">Meyers <em>et al.</em> 2006</a>). Item loadings were interpreted as excellent with loadings of 0.7, very good with loadings of 0.63, good with loadings of 0.55, fair with loadings of 0.45, and poor with loadings of 0.32 (Comrey and Lee 1992, as cited in Meyers <em>et al.</em> <a href="#mey06">2006</a>).</p>
+<p>The first iteration of Exploratory Factor Analysis resulted in six factors. Item loadings ranged from 0.49 (S5) to 0.83 (S13). Factor 6 contained only one item (S19). One variable (S20) was complex, loading strongly on both factors one and four. Therefore, for the next iteration these two items were removed. Five factors were extracted in the second iteration. Item loadings ranged from 0.53 (S15) to 0.83 (S13). Item S12 loaded strongly on factors one and two, and was removed in the next iteration. In the third iteration, items loaded on five factors and loadings ranged from 0.49 (S15) to 0.84 (S6). None of the items above the 0.45 cut-off loaded on more than one factor. Cronbach's alpha, calculated for each of the five sub-scales, ranged from 0.26 (Factor 3) to 0.77 (Factor 1). S18, which had a high negative loading (-0.59), was found to cause a substantial decrease in a and was therefore removed (<a href="#fie09">Field 2009</a>).</p>
+<p>In the fourth iteration, five factors were extracted among the remaining sixteen items; no complex items were found. Therefore, these items were retained in the final solution (See Table 3). The five factors account for 60.8% of the total variance which, according to Tabachnick and Fidell (in Meyers <em>et al.</em> <a href="#mey06">2006</a>) suggests a '<em>good solution</em>' where a robust solution accounts for at least 50% of the variance. Communalities (h<sup>2</sup>) were relatively high, ranging from .44 to .77. Cronbach's alpha for each of the five sub-scales, ranged from 0.55 (Factor 5) to 0.75 (Factor 1). Of the five factors, only Factor 1 had an acceptable alpha level (&gt;0.70). This may be due in part to the small number of items contained in Factors 2-5 (i.e., two to three items for each factor). All five factors, however, were retained because of their conceptual importance, and low reliabilities were taken into account in the study findings. Items are ordered and grouped by size of loading to facilitate interpretation. Factor loadings less than 0.45 (20% of variance) are represented as zeros. Interpretive labels are suggested for each of the five factors in the footnote and discussed below.</p>
+<table style="border-right: #99f5fb solid; border-top: #99f5fb solid; font-size: smaller; border-left: #99f5fb solid; border-bottom: #99f5fb solid; font-style: normal; font-family: Verdana, geneva, arial, helvetica, sans-serif; background-color: #fdffdd" align="center" border="1" cellpadding="3" cellspacing="0" width="80%"><caption align="bottom">  
+**Table 3: Summary of Factor Loadings and Communalities (h<sup>2</sup>) for the four iterations of Principal Component Analysis (N = 123)**</caption>
+<tbody>
+<tr>
+<th rowspan="2" valign="middle">Item#</th>
+<th rowspan="2" valign="middle">Item</th>
+<th colspan="5">Factors*</th>
+</tr>
+<tr>
+<th>_F_<sub>1</sub></th>
+<th>_F_<sub>2</sub></th>
+<th>_F_<sub>3</sub></th>
+<th>_F_<sub>4</sub></th>
+<th>_F_<sub>5</sub></th>
+<th>_h_<sup>2</sup></th>
+</tr>
+<tr>
+<td>S10</td>
+<td>The system enabled me to make connections between different topics</td>
+<td align="center">**0.78**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.66</td>
+</tr>
+<tr>
+<td>S11</td>
+<td>The system presented content in ways that invited me to explore across topics</td>
+<td align="center">**0.72**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.66</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>I was able to examine a variety of topics</td>
+<td align="center">**0.68**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.56</td>
+</tr>
+<tr>
+<td>S1</td>
+<td>I was able to explore anything that interested me when using the system</td>
+<td align="center">**.68**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.56</td>
+</tr>
+<tr>
+<td>S14</td>
+<td>I could find topics in several alternative ways</td>
+<td align="center">**0.60**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.44</td>
+</tr>
+<tr>
+<td>S13</td>
+<td>I stumbled upon unexpected topics</td>
+<td align="center">0.00</td>
+<td align="center">**0.84**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.73</td>
+</tr>
+<tr>
+<td>S9</td>
+<td>I found something interesting on pages that had unexpected content</td>
+<td align="center">0.00</td>
+<td align="center">**0.67**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.52</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>I explored many topics that normally I do not examine</td>
+<td align="center">0.00</td>
+<td align="center">**0.67**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.53</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>I was able to see information in a range of formats</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.85**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.77</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>Unexpected visual features of the system caught my eye</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.69**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.53</td>
+</tr>
+<tr>
+<td>S15</td>
+<td>The system encouraged me to browse and explore</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.51**</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.55</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>Unexpected words and phrases caught my eye</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.84**</td>
+<td align="center">0.00</td>
+<td align="center">0.77</td>
+</tr>
+<tr>
+<td>S8</td>
+<td>Unexpected words and phrases sparked my thinking</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.77**</td>
+<td align="center">0.00</td>
+<td align="center">0.68</td>
+</tr>
+<tr>
+<td>S16</td>
+<td>I found myself pausing to look at things more closely</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.76**</td>
+<td align="center">0.61</td>
+</tr>
+<tr>
+<td>S17</td>
+<td>The system encouraged me to stop and explore</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.64**</td>
+<td align="center">0.68</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>I wanted to click on things to see where they would take me</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">0.00</td>
+<td align="center">**0.58**</td>
+<td align="center">0.49</td>
+</tr>
+<tr>
+<td colspan="2">Eigenvalues</td>
+<td align="center">4.28</td>
+<td align="center">1.83</td>
+<td align="center">1.33</td>
+<td align="center">1.12</td>
+<td align="center">1.10</td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td colspan="2">Percentage of variance</td>
+<td align="center">26.77</td>
+<td align="center">11.40</td>
+<td align="center">8.34</td>
+<td align="center">7.42</td>
+<td align="center">6.85</td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td colspan="2">Cronbach's a</td>
+<td align="center">0.75</td>
+<td align="center">0.63</td>
+<td align="center">0.65</td>
+<td align="center">0.64</td>
+<td align="center">0.55</td>
+<td align="center"> </td>
+</tr>
+<tr>
+<td colspan="8">*Factor labels:  
+_F_<sub>1</sub> Enabled connections; _F_<sub>2</sub> Introduced the unexpected; _F_<sub>3</sub> Presented variety; _F_<sub>4</sub> Triggered divergence; _F_<sub>5</sub> Induced curiosity</td>
+</tr>
+</tbody>
+</table>
+<h4 id="factor-1-enabled-connections">Factor 1: Enabled connections</h4>
+<p>This factor accounted for 26.7% of the variance and consists of five items. Item loadings on this factor ranged from 0.60 to 0.78. These items related to the manner in which the system invited connections between topics (S10), exploration or browsing across topics (S1, S3, S11, 14). Since the items related to making connections between topics and exploration, this factor was labelled <em>enabled connections</em>.</p>
+<h4 id="factor-2-introduced-the-unexpected">Factor 2: Introduced the unexpected</h4>
+<p>This factor accounted for 11.4% of the variance and consisted of three items. Item loadings ranged from 0.67 to 0.84. These items related to encountering unexpected topics or content (S9, S13) and topics not normally explored (S4) therefore this factor was labelled <em>introduced the unexpected</em>.</p>
+<h4 id="factor-3-presented-variety">Factor 3: Presented variety</h4>
+<p>This factor accounted for 8.3% of the variance and consisted of three items. Item loadings ranged from 0.51 to 0.85. These items related to the variety of system content and display (S2 and S7) as well as the facilitation of varied or diverse behaviours such as exploration and browsing (S15). Thus, <em>presented variety</em> was determined to be an appropriate label for factor three.</p>
+<h4 id="factor-4-triggered-divergence">Factor 4: Triggered divergence</h4>
+<p>This factor accounted for 7.42% of the variance and consisted of two items. Item loadings in this factor were 0.77 and 0.84. Both items (S6, S8) indicated that the system in some way sparked or triggered their attention and initiated divergent thinking and behaviour. This factor, therefore, was labelled <em>triggered divergence</em>.</p>
+<h4 id="factor-5-induced-curiosity">Factor 5: Induced curiosity</h4>
+<p>The final factor accounted for 6.85% of the variance and consisted of three items. Item loadings ranged from 0.58 to 0.76. The items in this factor related to the inducement of deeper exploration or consideration of information encountered (S16, S17) and curiosity-teasing triggers (S5). The label selected for this factor was <em>induced curiosity</em>.</p>
+<h2 id="discussion">Discussion</h2>
+<p>Not all applications have the potential to support serendipity, but there is an increasing need to enhance our ability to be innovative with creative or creative-facilitating information systems. A step toward that goal is the development of systems that enable serendipity to occur. But we need to know when a system is meeting that goal. Using a set of characteristics developed by Björneborn's (<a href="#bjo08">2008</a>) of the serendipity-enabling dimensions of a physical library space, this study adapted these dimensions to a digital environment. In the course of the analysis Björneborn's (<a href="#bjo08">2008</a>) original ten dimensions of serendipity were reduced to five factors: <em>enabled connections, encountered unexpected, presented variety, triggered divergence</em>, and <em>induced curiosity</em>.</p>
+<p>Factor 1, labelled <em>enabled connections</em>, reflects aspects of several characteristics of Björneborn's (<a href="#bjo08">2008</a>) physical serendipity dimensions, namely, unimpeded and direct access, rich diversity, cross contacts, all of which facilitate connections or associations between disparate information and resources. Making connections or bisociations is a key component of the process of serendipity (<a href="#cun05">Cunha 2005</a>). Koestler (<a href="#koe64">1964</a>) originated the term <em>bisociation</em> to describe a creative association made between two disparate pieces of information or skills. An example of a bisociation is Gutenberg observing the presses in action during a wine harvest in Rhineland and subsequently designing a printing press capable of mass production (<a href="#sim95">Simonton 1995</a>). In an information system, this could mean finding an unexpected piece of information that takes the conceptualization of your problem or task in a new direction (<a href="#fos03">Foster and Ford 2003</a>).</p>
+<p><em>Encountered the unexpected</em>, factor 2, is related to Björneborn's (<a href="#bjo08">2008</a>) original <em>rich diversity</em> and <em>cross contacts</em> dimensions. Diversity and cross contacts are perhaps bound to lead one to the unexpected and unexpected is perhaps the umbrella or over-arching description of the experience of serendipity. Something about the experience must be unexpected or unanticipated. The example of the journalist who stumbles upon the juxtaposition of two previously unrelated concepts in a Wikipedia entry is one example of encountering the unexpected in a digital environment (<a href="#mcc11">McCay-Peet and Toms 2011</a>). All of the systems that have attempted to support serendipity discussed in this paper have attempted in some way to introduce unexpectedness through, for example, the provision of content that is intended to be novel and unexpected (<a href="#cam02">Campos and Figueiredo 2002</a>).</p>
+<p>Factor 3, <em>presented variety</em>, whose items were derived from Björneborn's (<a href="#bjo08">2008</a>) dimensions of <em>rich diversity, striking contrasts</em> and <em>explorability</em> points to the importance of the provision of variety in content and the importance of systems drawing attention to this variety and allowing ways to explore it. Creativity research indicates that '<em>Bombardment by the diversity of surrounding events eventually primes that train of thought that can connect the disparate parts of the desired Koestlerian bisociation</em>' (<a href="#sim95">Simonton 1995</a>: 483). This suggests that environments that create opportunities for viewing divergent materials and enabling interesting juxtapositions may not only support serendipity, but potentially prime for it.</p>
+<p>The fourth factor, <em>triggered divergence</em>, can be traced to Björneborn's (<a href="#bjo08">2008</a>) dimensions of <em>striking contrasts</em> and <em>pointers</em>. It is an aspect of serendipity that has been grappled with in systems such as Mitsikeru (<a href="#bea07">Beale 2007</a>), an ambient intelligence system that attempts to call attention to interesting or surprising content (Web pages) through visual cues. While its efficacy in enabling serendipity was not established, the importance of a system's ability to trigger divergence is evident due to the limits of human attention. Fine and Deegan (<a href="#fin96">1996</a>: 436) write that for ethnographers, serendipity is linked to their '<em>ability to make sense of seemingly chance events; that is, these scholars were able to 'keep their wits about them,' finding, in the rush of on-going events, meanings and opportunities that might escape others</em>'. That '<em>rush of on-going events</em>' aptly describes a digital search experience in which the world is literally at your fingertips. Because of the limitations of working memory, the attentional portion of short-term memory, we can only allocate a certain amount of our cognitive resources to a scene; we attend to a limited amount of information (<a href="#woo06">Wood, <em>et al.</em> 2006</a>). Because information encounters contain new pieces of information, our capacity to attend to them and make the necessary associations and bisociations for serendipity, is greatly affected by our working memory. Interestingly, '<em>super-encounterers</em>' appear reluctant to expose themselves to environments such as the Web where they feel unable to cope with the associated information overload (<a href="#erd00">Erdelez 2000</a>), perhaps the multiple divergences it triggers.</p>
+<p>The final factor that emerged in this study, <em>induced curiosity</em>, relates to Björneborn's (<a href="#bjo08">2008</a>) dimensions of <em>curiosity-invoking display</em> and <em>stopability</em> in which curiosity is both ignited and stoked. This element of serendipity is reflected in the development of a physical, serendipity card system (<a href="#saw07">Sawaizumi, <em>et al.</em> 2007</a>) to help students capture stray ideas and thoughts and think more deeply about them. Students were asked to record interesting observations they encountered, indicating a hypothesis and theme as well as the who, what, when, where, and how. The <em>induced curiosity</em> factor underlines perhaps more so than the other four the importance of the individual in the success or failure of a serendipity-enabling environment. The individual must be curious about what is being displayed and become actively engaged; the individual is not a passive observer. While Björneborn focused on the extrinsic or physical rather than intrinsic characteristics of the individual (e.g., personality, interests, motivations) of divergent behaviour within the library, he noted that internal factors have role in serendipity. All of the dimensions in some way have a potential impact on the way patrons feel, behave, think, and are motivated as they make their way through the library, encouraging them to stop and explore.</p>
+<p>The paper set out to resolve two questions: A. Do the dimensions of the serendipity in the physical environment map to dimensions of serendipity in the digital environment? And B. How can we assess the degree to which a digital environment facilitates serendipity? In the case of the first question, we have identified which of the dimensions of serendipity in a physical environment map to those in a digital environment. In answer to the second question, we assessed how well a digital environment facilitated serendipity by using the provision of a scale. We used a scale because serendipity cannot be objectively assessed by a third party. Only the individual who is facing the potential of a serendipitous moment, a veritable auspicious chance encounter, can assess whether dimensions of serendipity are present. By deploying a more comprehensive scale we can capture the experience of serendipity in a more holistic manner than asking questions that simply relate to the nature of the information encounter as unexpected, interesting, or useful.</p>
+<p>This study took place in the context of a larger study that is looking more broadly at the exploratory process used in examining information without a specific goal in mind. In the past, we have discovered that participants in laboratory studies are less likely to step outside the bounds of the study (see <a href="#bjo09">Toms and McCay-Peet 2009</a>), and enable the potential for having a truly serendipitous experience. They tend to follow instructions. With no goal, the research design gave the participants the right to choose the direction and pathway through the information space, and thus enable the potential for a serendipitous experience. We know that serendipity is an interaction of some sort between what the user knows (or wants to know), or has experienced and the environment in which the user is immersed (<a href="#mcc11">McCay-Peet and Toms 2011</a>). This design provided the environment for that to occur.</p>
+<h2 id="conclusion-and-future-work">Conclusion and future work</h2>
+<p>This study identified five core dimensions of serendipity that are present in digital environments. To do so, we operationalized a set of dimensions of a physical library developed from a naturalistic study by Björneborn (<a href="#bjo08">2008</a>). In the process of operationalizing Björneborn's ten dimensions, it became clear that these dimensions are not discrete and, in the end, did not map neatly on to the dimensions of serendipity in a digital environment. However, the overlapping nature of the ten dimensions suggests that it is plausible that these dimensions are not discreet in a physical world either.</p>
+<p>Scale construction is an iterative process. Further development of this scale is required before it can be used to assess the degree to which a digital environment facilitates serendipity. The items used in this scale were developed solely through the interpretation of serendipity dimensions in a <em>physical</em> library setting. Future studies will attempt to expand on these to determine whether there are dimensions unique to a digital environment. Are five factors the complete set? For example, in a physical library setting, the serendipity experienced was that of finding a resource or topic of interest; in a digital environment it may be more about information interactions at the content level. Examination of information or knowledge-based examples of serendipity may indicate other potentially useful scalar items that reflect serendipity within a digital environment. By expanding the items initially tested together with a wider participant base, we can come closer to the creation of a scale that will measure whether a system is meeting its goal of providing an environment that encourages serendipity. Future studies will augment and refine the instrument developed in this study.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Research was supported by grants to Toms from the National Centres of Excellence GRAND project, the Social Sciences and Humanities Council of Canada, the Canadian Foundation for Innovation and the Canada Research Chairs Program, while she was at Dalhousie University, Halifax, Nova Scotia, Canada.</p>
+<h2 id="about-the-authors">About the authors</h2>
+<p><strong>Lori McCay-Peet</strong> is a Ph.D. student in the faculties of Management and Computer Science at Dalhousie University. Her primary research interests include understanding serendipity and measuring its support in order to develop tools to support serendipity within information-rich systems. Her research is in part funded through a Joseph-Armand Bombardier CGS Doctoral Scholarship, a Canadian national scholarship granted by the Social Sciences and Humanities Research Council, and the GRAND National Centres of Excellence. She can be contacted at: <a href="mccay@dal.ca">mccay@dal.ca</a><br>
+<strong>Elaine Toms</strong> is Professor in Information Science, Information School, University of Sheffield, and former Canada Research Chair in Management Informatics, Dalhousie University, Halifax, Nova Scotia, Canada. Her research focuses at the intersection of human computer interaction and information retrieval with a particular interest in user-centric evaluation of information systems. She has a long-time interest in the immersive experiences in information that enable chance encounters. She can be contacted at: <a href="e.toms@sheffield.uk">e.toms@sheffield.uk</a></p>
+<h4 id="references">References</h4>
+<ul>
+<li>André , P., Teevan, J. &amp; Dumais, S.T. (2009). <a href="http://www.webcitation.org/60mbYQpio">From x-rays to silly putty via Uranus: serendipity and its role in web search</a>. In <em>Proceedings of the 27th International Conference on Human Factors in Computing Systems</em>. (pp. 2033-2036). New York, NY: ACM Press. Retrieved 8 August, 2011 from http://research.microsoft.com/pubs/79633/chi09-serendip.pdf (Archived by WebCite at http://www.webcitation.org/60mbYQpio)</li>
+<li>Beale, R. (2007). Supporting serendipity: using ambient intelligence to augment user exploration for data mining and web browsing. <em>International Journal of Human-Computer Studies</em>, <strong>65</strong> (5), 421-433.</li>
+<li>Bellotti, V., Begole, B., Chi, E.H., Ducheneaut, N., Fang, J., Isaacs, E., <em>et al.</em> (2008). Activity-based serendipitous recommendations with the Magitti mobile leisure guide. In <em>Proceedings of the Twenty-Sixth Annual SIGCHI Conference on Human Factors in Computing Systems</em>.</li>
+<li>Björneborn, L. (2008). <a href="http://www.webcitation.org/60maSB29Y">Serendipity dimensions and users' information behaviour in the physical library interface</a>. <em>Information Research</em>, <strong>13</strong>(4), paper 370. Retrieved 19 June 2011 from http://informationr.net/ir/13-4/paper370.html (Archived by WebCite at http://www.webcitation.org/60maSB29Y)</li>
+<li>Björneborn, L. (2010). Design dimensions enabling divergent behaviour across physical, digital, and social library interfaces. In Thomas Ploug, Per Hasle &amp; Harri Oinas-Kukkonen, (Eds.). <em>Persuasive technology: 5th International Conference, PERSUASIVE 2010, Copenhagen, Denmark, June 2010, Proceedings</em> (pp. 143-149). Berlin: Springer. (Lecture Notes in Computer Science 6137)</li>
+<li>Campos, J. A. &amp; Figueiredo, A. D. (2002). <a href="http://www.webcitation.org/60mhdbYo2">Programming for serendipity</a>. In <em>Proceedings of the 2002 AAAI Fall Symposium</em>. (pp. 48-60). Menlo Park, CA: AAAI Press. Retrieved 8 August, 2011 from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.12.1856&amp;rep=rep1&amp;type=pdf (Archived by WebCite at http://www.webcitation.org/60mhdbYo2)</li>
+<li>Cunha, M.P.E. (2005).<a href="http://www.webcitation.org/60mhquf6E">Serendipity: why some organizations are luckier than others</a>. Lisbon: Universidade Nova de Lisboa, Faculdade de Economia. (FEUNL Working Paper No. 472.) Retrieved 8 August, 2011 from http://fesrvsd.fe.unl.pt/WPFEUNL/WP2005/wp472.pdf (Archived by WebCite at http://www.webcitation.org/60mhquf6E)</li>
+<li>Erdelez, S. (1999). Information encountering: it's more than just bumping into information. <em>Bulletin of the American Society for Information Science</em>, <strong>25</strong>(3), 25-29.</li>
+<li>Erdelez, S. (2000). Towards understanding information encountering on the Web. <em>Proceedings of the ASIS Annual Meeting</em>, <strong>25</strong>(37), 363-371.</li>
+<li>Field, A.P. (2009). <em>Discovering statistics using SPSS</em>, London: Sage Publications.</li>
+<li>Fine, G.A. &amp; Deegan, J.G. (1996). Three principles of serendip: insight, chance, and discovery in qualitative research. <em>International Journal of Qualitative Studies in Education</em>, <strong>59</strong>(3), 321-340.</li>
+<li>Heinstrom, J. (2006). Psychological factors behind incidental information acquisition. <em>Library &amp; Information Science Research</em>, <strong>28</strong>(4), 218-228.</li>
+<li>Koestler, A. (1964). <em>The act of creation</em>. New York, NY: Macmillan.</li>
+<li>McCay-Peet, L. &amp; Toms, E.G. (2011). <em>Exploring the precipitating conditions of serendipity</em>, Poster presented at the 2nd Annual Graphics, Animation and New Media (GRAND) NCE Conference 2011, Vancouver, BC, May 12-14, 2011.</li>
+<li>Meyers, L.S., Gamst, G. &amp; Guarino, A.J. (2006). <em>Applied multivariate research: design and interpretation.</em>. Thousand Oaks, CA: Sage Publications.</li>
+<li>Nutefall, J.E. &amp; Ryder, P.M. (2010). The serendipitous research process. <em>The Journal of Academic Librarianship</em>, <strong>36</strong>(3), 228-234.</li>
+<li>Rice, J. (1988). Serendipity and holism. The beauty of OPACs. <em>Library Journal</em> <strong>113</strong>(3), 138-141.</li>
+<li>Rubin, V.L., Burkell, J. &amp; Quan-Haase, A. (2010). <a href="http://www.webcitation.org/60miZrX48">Everyday serendipity as described in social media.</a> <em>Proceedings of the 73rd ASIS&amp;T Annual Meeting</em>, <strong>47</strong>, Article 152. Retrieved 8 August, 2011 from http://www.asis.org/asist2010/proceedings/proceedings/ASIST_AM10/submissions/409_Final_Submission.pdf (Archived by WebCite at http://www.webcitation.org/60miZrX48)</li>
+<li>Sawaizumi, S., Katai, O., Kawakami, H. &amp; Shiose, T. (2007). <a href="http://www.webcitation.org/60mikN4hu">Using the concept of serendipity in education</a>. In <em>KICSS 2007 : The Second International Conference on Knowledge, Information and Creativity Support Systems: Proceedings of the Conference, November 5-7, 2007</em>. Retrieved 8 August, 2011 from: https://dspace.jaist.ac.jp/dspace/bitstream/10119/4087/1/13.pdf (Archived by WebCite at http://www.webcitation.org/60mikN4hu)</li>
+<li>Simonton, D.K. (1995). Foresight in insight? A Darwinian answer. In R.J. Sternberg &amp; J.E. Davidson (Eds.), <em>The nature of insight</em> (pp. 465-494). Cambridge, MA: MIT Press.</li>
+<li>Toms, E.G. (1999). What motivates the browser? In Thomas D Wilson and David K. Allen, (Eds.) <em>Exploring the Contexts of Information Behaviour: Proceedings of the 2nd International Conference on Research in Information Needs, Seeking and Use in Different Contexts</em>. (465-494). London: Taylor Graham.</li>
+<li>Toms, E.G. (2000). Understanding and facilitating the browsing of electronic text. <em>International Journal of Human-Computer Studies</em>, <strong>52</strong>(3), 423-452.</li>
+<li>Toms, E.G. &amp; McCay-Peet, L. (2009). Chance encounters in the digital library. In M. Agosti, J. Borbinha, S. Kapidakis, C. Papatheodorou &amp; G. Tsakonas (Eds.), <em>ECDL'09 Proceedings of the 13th European conference on Research and advanced technology for digital libraries,</em> (pp. 192-202). Berlin: Springer-Verlag. (Lecture Notes in Computer Science 5714).</li>
+<li>Toms, E.G., McCay-Peet, L. &amp; Mackenzie, R.T. (2009a). wikiSearch: from access to use. In M. Agosti, J. Borbinha, S. Kapidakis, C. Papatheodorou &amp; G. Tsakonas (Eds.), <em>ECDL'09 Proceedings of the 13th European conference on Research and advanced technology for digital libraries,</em> (pp. 27-38). Berlin: Springer-Verlag. (Lecture Notes in Computer Science 5714).</li>
+<li>Williamson, K. (1998). Discovered by chance: the role of incidental information acquisition in an ecological model of information use. <em>Library &amp; Information Science Research</em> <strong>20</strong>(1), 23-40.</li>
+</ul>
+
+</body>
 </html>
