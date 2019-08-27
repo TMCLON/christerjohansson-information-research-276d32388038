@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>isicsp10.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h4 id="vol-20-no-1-march-2015">vol. 20 no. 1, March, 2015</h4>
+</header>
+<article>
+<h1 id="mobile-devices-and-information-patterns-amongst-tourists">Mobile devices and information patterns amongst tourists</h1>
+<h4 id="stan-karanasios"><a href="#author">Stan Karanasios</a></h4>
+<p>AIMTech Research Group, Leeds University Business School, Leeds, LS2 9JT, UK</p>
+<h4 id="carmine-sellitto-and-stephen-burgess"><a href="#author">Carmine Sellitto</a> and <a href="#author">Stephen Burgess</a></h4>
+<p>College of Business, Victoria University, PO Box 14428, Melbourne, Australia, 8001</p>
+<h4 id="abstract">Abstract</h4>
+<blockquote>
+<p><strong>Introduction.</strong> This paper examines how mobile devices have influenced patterns of information behavior in tourism activities.<br>
+<strong>Method.</strong> As a conceptual paper we map the alignment of mobile information services to the three stages of travel activity.<br>
+<strong>Analysis.</strong> The paper asserts that there has been shift towards an in situ mode of information access and consumption to support tourism planning activity.<br>
+<strong>Conclusions.</strong> The paper contends that mobile devices have had a concertina effect on tourism activity, with many activities that had been conducted by people in the pre-trip stage (related to searching for information and booking and paying for tourism products) and the post-trip stage (such as capturing information and recording of vacation experiences) are now being carried out in the during-trip stage. Mobile devices potentially allow access to a range of context-based services that previously were unavailable to the tourist, however are now easily accessible during a trip.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>Over the last decade there have been significant changes in patterns of information search and information consumption (<a href="#refs">Bohn and Short 2012</a>, <a href="#refs">Nicholas 2013</a>). Specific studies and reports have highlighted the accelerated information flows via different mediums, such as mobile devices (<a href="#refs">Nicholas 2013</a>). In this paper we explore how mobile devices are used in situ for the travel purposes as there is limited literature which explores how they alter or complement information behaviour activities. For the purposes of this article, mobiles devices refers to devices that can be carried by a tourist 'on their person', are used as part on daily activities and have the capability of accessing the Internet. Such devices include smart phones, tablet devices and to a lesser extent the laptop computer. Whilst these devices each offer different experiences for the user, the nature of tourism as an inherently nomadic activity aligns well with the utility provided by all of these devices in that are relatively small (compared to the traditional personal computer), portable (in varying degrees) and offer a high degree of flexibility for users.</p>
+<p>Mobile devices used by people when vacationing impart benefits associated with timeliness, ubiquity and convenience- allowing individuals to engage in information exchanges, whilst actually travelling (<a href="#refs">Burgess 2012</a>). Part of this mobile exchange impacts how people plan a trip. Planning activities have traditionally been a core part of a pre-departure phase (<a href="#refs">Fesenmaier and Jeng 2000</a>)- yet the value of mobile devices is arguably one of providing opportunities in accessing tourism information services in situ. Hence, this paper explores how mobile devices might be influence patterns of information behavior in tourism activities- subsequently aligning common mobile information services to the various tourist planning stages.</p>
+<h2 id="literature-review">Literature Review</h2>
+<h3 id="the-tourist-planning-process">The tourist planning process</h3>
+<p>The planning process has been previously documented as an important multi-staged process that tourists engage in when organizing a trip. Wang (<a href="#refs">2012</a>) note that tourists will plan aspects of their trip based on their requirements that fall into an anticipatory phase, experiential phase, and reflective phase, with distinct decisions about the trip occurring across each of the stages. Cox (<a href="#refs">2009</a>) used the pre-trip, during-trip and post-trip stages to define the planning process. The pre-trip planning stage identified travel requirements and the subsequent use of information to plan/purchase appropriate activities/products. The during-trip stage was the actual taking of the trip. The post-trip stage included an evaluative element allowing the tourist to reflect on their vacation after returning home. Choi (<a href="#refs">2009</a>) examined decision-making amongst a cohort of Chinese tourists that grouped their activities in the sequence of before purchase, at time of purchase, after purchase and at destination. Given the expanding prevalence of mobile device use by people and the application of such devices in the tourism domain, it becomes desirable to not only identify the beneficial aspects of using such devices, but also align these benefits with the various stages of planning. Arguably, the associated mobile device benefits that are timely, location-specific, and have the propensity to alter the behavior of tourists across the planning process.</p>
+<h3 id="an-alignment-of-mobile-information-services-and-the-planning-proces">An alignment of mobile information services and the planning proces</h3>
+<p>We contended that mobile information services can be mapped to the three stages of traveler planning. Some services might be applicable to a range of generic tourism activities whilst other services are more specific, being associated with activities such as communication exchanges during tour participation, booking of tourism-related products such as accommodation before or after commencing a trip, or even identifying an eatery at a destination. Information search benefits, access to tourism products and the ability to capture and record experiences (deemed community) augment the during-trip stage due to the influence of the Internet. Mobile devices tend to provide contextual information services commensurate with the location of the tourist and are typically associated with the during-trip stage. Figure 1 is a summary of the proposed alignment of mobile information services to pre-during and post-trip planning stages.</p>
+<figure class="centre">![mobile information services to planning stages](isicsp10fig1.png)
+<figcaption>Figure 1: Proposed alignment of mobile information services to planning stages</figcaption>
+</figure>
+<h3 id="mobile-device-services-mapped-to-the-pre-trip-stage">Mobile device services mapped to the pre-trip stage</h3>
+<p>In the pre-trip stages, services accessed on mobile devices provided the tourist the opportunity to undertake the traditional information search activities, as well as being able to purchase and/or manage tourism products. The information search activities allowed a person to be informed about activities such as destination events and the weather (<a href="#refs">Economou 2008</a>), general tourism-related booking information (<a href="#r">Hill 2010</a>, <a href="#refs">Wang 2012</a>) as well as information that could be tied back to personal circumstances. Potentially mobile devices also enable the tourist to focus on tourism products reflected in the purchasing of flights, accommodation or car hire (<a href="#refs">Buhalis and Law 2008</a>) (Buhalis and Law 2008) and the management of the travel itinerary (<a href="#refs">Hill 2010</a>).</p>
+<h3 id="mobile-device-services-mapped-to-the-during-trip-stage">Mobile device services mapped to the during-trip stage</h3>
+<p>The services potentially aligned with stage can be viewed under the rubric of information search activities, tourism products, community and benefits that can be derived reflect the context of the tourist experience. Such benefits tend to be similar to those noted in the pre-trip stage. However, community affiliated benefits reflected the ability of the mobile device to capture in real-time the personal and intuitive experiences of a person allowing them to share this information with other tourists- an activity that occurred whilst they were still on vacation or even physical on route between destinations (<a href="#refs">Goossen 2010</a>, <a href="#refs">Kenteris 2011</a>). Context services would be reliant on geographical location and recommender systems reflecting proximity to points of interest such as eateries, theme parks, tours and so forth.</p>
+<h3 id="mobile-device-services-mapped-to-the-post-trip-stage">Mobile device services mapped to the post-trip stage</h3>
+<p>In the post-trip stage of the planning process, mobile devices services will arguably reflect community information services- having a close affiliation with the community grouped activities noted for the during-trip stage. Community associated services might be based on the recording of tourism experiences during their trip via the mobile device (<a href="#refs">Kenteris 2011</a>). The mobile-device activities associated with the post-trip stage which would focus on the evaluation of the tourist activities after a vacation appears to be limited (<a href="#refs">Goossen 2010. 2011</a>). Arguably, if users have the opportunity to post real-time comments whilst on vacation they will, with any later post-trip sharing of experiences being one of recall or querying from others.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The paper contends that during travel planning a number of cross-over of information services are noted between the stages. Information search and tourism products activities have a crossover between pre-trip and during-trip stages. Services noted with community occurred both in the during-trip and post-trip stages. Some information services are applicable to a range of tourism activities whilst other services are more specific, being associated with activities such as communication exchanges during tour participation, booking of tourism-related products such as accommodation before or after commencing a trip, or the typical locating of an eatery at a destination. Traditionally there have been distinct stages associated with the planning process, each with well-defined activities. Arguably, searching for information and the subsequent purchasing of a tourism-related product might have been exclusively experienced as a pre-trip function. Clearly, internet-enabled mobile devices have allowed aspects of pre-and- post-trip services and activities to be undertaken outside of these traditional planning stages whilst people are actually on vacation (during-trip).</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>The authors are grateful to the anonymous referees for their valuable comments and constructive suggestions.</p>
+<h2 id="about-the-authors">About the authors</h2>
+<p><strong>Stan Karanasios</strong> is a Lecturer at Leeds University Business School. His research interests include information and communication technology development, activity theory and the use mobile information systems. His articles have appeared in <em>MIS Quarterly</em>, <em>Information Systems Journal</em> and <em>European Journal of Information Systems</em>. Stan can be contacted at <a href="mailto:sk@lubs.leeds.ac.uk">sk@lubs.leeds.ac.uk</a>.<br>
+<strong>Carmine Sellitto</strong> is a senior lecturer at Victoria University in the information iystems discipline. He is also affiliated as a research associate with the Centre for Applied Informatics. Dr Sellitto has published widely and some of his 100 peer-reviewed publications have been on topics on management, social media and tourism technology. Carmine can be contacted at <a href="mailto:carmine.sellitto@vu.edu.au">carmine.sellitto@vu.edu.au</a>.<br>
+<strong>Stephen Burgess</strong> is an Associate professor at Victoria University in the information systems discipline. Stephen has research interests that include the use of information technology by sporting bodies, user-generated content in tourism, mobile tourism devices and small business adoption of information and communication technologies. Stephen can be contacted at <a href="mailto:stephen.burgess@vu.edu.au">stephen.burgess@vu.edu.au</a>.</p>
+<h4 id="references">&gt;References</h4>
+<ul>
+<li>Bohn, R. &amp; Short, J. (2012). Measuring consumer information. <em>International Journal of Communication, 6</em>, 980-1000</li>
+<li>Buhalis, D. &amp; Law, R. (2008). Progress in information technology and tourism management: 20 years on and 10 years after the Internet-The state of eTourism research. <em>Tourism Management, 29</em>(4), 609-623</li>
+<li>Burgess, S., Sellitto, C. and Karanasios, S. (2012). A model of ICDT Internet flows on mobile devices for the travel and tourism consumer. <em>Tourism Analysis, 17</em>(6), 705-179</li>
+<li>Choi, S., Lehto, X. Y., Morrison, A. M. &amp; Jang. S. S. (2012).Structure of travel planning processes and information use patterns. <em>Journal of Travel Research, 51</em>(1), 26-40. doi: 10.1177/0047287510394191</li>
+<li>Cox, C., Burgess, S., Sellitto, C. &amp; Buultjens, J. (2009). The role of user-generated content in tourists' travel planning behavior. <em>Journal of Hospitality Marketing and Management, 18</em>(8), 743-764</li>
+<li>Economou, D., Gavalas, D., Kenteris, M. &amp; Tsekouras, G. E. (2008). Cultural applications for mobile devices: issues and requirements for authoring tools and development platforms. <em>Mobile Computing and Communications Review, 12</em>(3), 18-33</li>
+<li>Fesenmaier, D. R. &amp; Jeng, J. (2000). Assessing structure in the pleasure trip planning process. <em>Tourism Analysis, 5</em>(1), 13-27</li>
+<li>Goossen, M., van Lammeren, R. &amp; Ligtenberg, A. (2010). The pro's and contra's of an interactive location based service using UMTS transmission. <em>Proceedings of the International Conference in Information and Communication Technologies in Tourism</em>, 111-123</li>
+<li>Hill K. (2010). App happy. <em>Boss: Australian Financial Review</em>, Sydeny: John Fairfax Group, 73</li>
+<li>Kenteris. M., Gavalas, D. &amp; Economou, D. (2011). Electronic mobile guides: a survey. <em>Personal and Ubiquitous Computing, 15</em>(1), 97-111</li>
+<li>Nicholas, D., Clark, D., Rowlands, I. &amp; Jamali, H. R. (2013). Information on the go: a case study of Europeana mobile users. <em>Journal of the American Society for Information Science and Technology, 64</em>(7), 1311-1322</li>
+<li>Wang, D., Sangwon, P. &amp; Fesenmaiser, D. R. (2012). The role of smartphones in mediating the touristic experience. <em>Journal of Travel Research, 51</em>(4), 371-387</li>
+</ul>
+</article>
+</body>
+</html>
