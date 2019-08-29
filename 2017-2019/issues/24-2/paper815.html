@@ -1,24 +1,18 @@
-<!doctype html>  
- <html lang="en">  
- <head>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rev="made" href="mailto:t.d.wilson@shef.ac.uk">
+<link rel="stylesheet" href="style.css">
  <title>Context-based interactive health information searching</title>  
-<meta charset="utf-8" />
- <link href="../IRstyle4.css" rel="stylesheet" media="screen" title="serif" />  
-
- <!--Enter appropriate data in the content fields-->  
  <meta name="dcterms.title" content="Context-based interactive health information searching" />  
- 
  <meta name="citation_author" content="Yilma, Tesfahun Melese" />
  <meta name="citation_author" content="Inthiran, Anushia" />
  <meta name="citation_author" content="Reidpath, Daniel D." />
  <meta name="citation_author" content="Orimaye, Sylvester Olubolu" />
-
  <meta name="dcterms.subject" content="This paper aims to understand the impact of contextual features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, and frequency of health information seeking on health information searching." />  
  <meta name="description" content="This paper deals with the impact of contextual features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, and frequency of health information seeking on health information searching. An interactive information retrieval approach was used to study users' searching behaviour. An online survey and experiment using simulated situation technique were used as data collection methods. The online survey  gathered data about user features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, and health information seeking. An experiment was then carried out using four simulated tasks to collect information about health information searching.  The multiple linear regression analysis method was used to identify contextual factors affecting query length and number of queries. In addition, binary logistic regression analysis method was used to identify contextual factors affecting result clicking.  Frequent health information seeking leads to more queries and long query length, and English as a mother tongue and being healthy contribute to long query length. Queries with spelling errors and those formulated outside task descriptions are found to be ineffective.  Contextual features such as frequency of health information seeking, mother tongue, and health status influence query formulation. In addition, spelling errors and source of query affect the effectiveness of queries. The findings could be useful for health information retrieval systems to learn and predict users’ information needs to aid effective retrieval." />  
- <meta name="keywords" content="health information, information searching," />
- 
- 
- <!--leave the following to be completed by the Editor-->  
+ <meta name="keywords" content="health information, information searching," />  
  <meta name="robots" content="all" />  
  <meta name="dcterms.publisher" content="University of Borås" />
  <meta name="dcterms.type" content="text" />  
@@ -29,527 +23,619 @@
  <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />  
  <meta  name="dcterms.issued" content="2019-06-15" /> 
   <meta name="geo.placename" content="global" />  
-
-</head> 
-  
- <body> 
-<header>
- <img height="45" alt="header" src="../mini_logo2.gif"  width="336" /><br />
-<span style="font-size: medium; font-variant: small-caps; font-weight: bold;">published quarterly by the university of bor&aring;s, sweden<br /><br />vol. 24  no. 2, June, 2019</span><br /><br /> 
-<div class="button">
- <ul> 
- <li><a href="infres242.html">Contents</a> |  </li> 
- <li><a href="../iraindex.html">Author index</a> |  </li> 
- <li><a href="../irsindex.html">Subject index</a> |  </li> 
- <li><a href="../search.html">Search</a> |  </li> 
- <li><a href="../index.html">Home</a> </li> 
- </ul>
- </div>
- <hr />
- </header>
- <article>
- <h1>Context-based interactive health information searching</h1>  <br />  
- 
- <h2 class="author"><a href="#author">Tesfahun Melese Yilma, Anushia Inthiran, Daniel D Reidpath</a>  and <a href="#author">Sylvester Olubolu Orimaye</a></h2>  
-
- <br /> 
- 
- <blockquote>
-<strong>Introduction</strong>. This paper deals with the impact of contextual features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, and frequency of health information seeking on health information searching.<br />
-<strong>Method</strong>. An interactive information retrieval approach was used to study users' searching behaviour. An online survey and experiment using simulated situation technique were used as data collection methods. The online survey  gathered data about user features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, and health information seeking. An experiment was then carried out using four simulated tasks to collect information about health information searching.<br />
-<strong>Analysis</strong>. The multiple linear regression analysis method was used to identify contextual factors affecting query length and number of queries. In addition, binary logistic regression analysis method was used to identify contextual factors affecting result clicking.<br />
-<strong>Results</strong>. Frequent health information seeking leads to more queries and long query length, and English as a mother tongue and being healthy contribute to long query length. Queries with spelling errors and those formulated outside task descriptions are found to be ineffective.<br />
-<strong>Conclusion</strong>. Contextual features such as frequency of health information seeking, mother tongue, and health status influence query formulation. In addition, spelling errors and source of query affect the effectiveness of queries. The findings could be useful for health information retrieval systems to learn and predict users’ information needs to aid effective retrieval.
- </blockquote>    
- 
- <br /> 
-
- <section>
- 
- <h2>Introduction</h2> 
- 
-<p> In the past, researchers have focused on the evaluation of information retrieval systems to improve precision and recall of search results. Nowadays, however, researchers are paying attention to the role of humans to design and improve information retrieval systems (<a href="#kel09">Kelly, 2009</a>). This is because users are central in information retrieval as they are the ultimate consumers of information retrieval systems. Understanding users and their context could help information retrieval systems to deliver the right information to the users in the right way.</p>
-
+</head>
+<body>
+<h4 id="vol-24-no-2-june-2019">vol. 24 no. 2, June, 2019</h4>
+<h1 id="context-based-interactive-health-information-searching">Context-based interactive health information searching</h1>
+<h2 id="tesfahun-melese-yilma-anushia-inthiran-daniel-d-reidpath-and-sylvester-olubolu-orimaye"><a href="#author">Tesfahun Melese Yilma, Anushia Inthiran, Daniel D Reidpath</a> and <a href="#author">Sylvester Olubolu Orimaye</a></h2>
+<blockquote>
+<p><strong>Introduction</strong>. This paper deals with the impact of contextual features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, and frequency of health information seeking on health information searching.<br>
+<strong>Method</strong>. An interactive information retrieval approach was used to study users' searching behaviour. An online survey and experiment using simulated situation technique were used as data collection methods. The online survey gathered data about user features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, and health information seeking. An experiment was then carried out using four simulated tasks to collect information about health information searching.<br>
+<strong>Analysis</strong>. The multiple linear regression analysis method was used to identify contextual factors affecting query length and number of queries. In addition, binary logistic regression analysis method was used to identify contextual factors affecting result clicking.<br>
+<strong>Results</strong>. Frequent health information seeking leads to more queries and long query length, and English as a mother tongue and being healthy contribute to long query length. Queries with spelling errors and those formulated outside task descriptions are found to be ineffective.<br>
+<strong>Conclusion</strong>. Contextual features such as frequency of health information seeking, mother tongue, and health status influence query formulation. In addition, spelling errors and source of query affect the effectiveness of queries. The findings could be useful for health information retrieval systems to learn and predict users’ information needs to aid effective retrieval.</p>
+</blockquote>
+<section>
+<h2 id="introduction">Introduction</h2>
+<p>In the past, researchers have focused on the evaluation of information retrieval systems to improve precision and recall of search results. Nowadays, however, researchers are paying attention to the role of humans to design and improve information retrieval systems (<a href="#kel09">Kelly, 2009</a>). This is because users are central in information retrieval as they are the ultimate consumers of information retrieval systems. Understanding users and their context could help information retrieval systems to deliver the right information to the users in the right way.</p>
 <p>The focus of our research is on the health domain due to the popularity of health information searching on the Web (<a href="#eur14">European Commission, 2014</a>; <a href="#fox13">Fox and Duggan, 2013</a>; <a href="#med15">Medlock, <em>et al.</em>, 2015</a>). Besides its popularity, health information searching is crucial to increase the ability to comfortably discuss health issues with health professionals in order to have enhanced shared decision making (<a href="#fei15">Feinberg, Greenberg and Frijters, 2015</a>; <a href="#jun14">Jung, 2014</a>; <a href="#lam07">Lambert and Loiselle, 2007</a>), to improve the ability to cope with stresses, to increase self-care management skills and commitment to treatments (<a href="#jun14">Jung, 2014</a>; <a href="#lam07">Lambert and Loiselle, 2007</a>), and to increase medical treatment satisfaction (<a href="#jun14">Jung, 2014</a>). As a result of its importance, health information searching has become an essential research area that calls for a systematic investigation of searching behaviour.</p>
-
 <p>Existing research studies focus on demographic characteristics, health information search experience, medical topic familiarity, task clarity, task easiness (<a href="#int11a">Inthiran, Alhashmi and Ahmed, 2011a</a>), and relevant assessment of search results to contextualize users’ information need and searching behaviour (<a href="#lop10">Lopes and Ribeiro, 2010</a>). However, the context of information searching is often ignored (<a href="#bie06">Bierig and Göker, 2006</a>; <a href="#ing05">Ingwersen and Jarvelin, 2005</a>) while it can have the potential to improve information retrieval process. Context remains an indefinable concept in information retrieval (<a href="#jon81">Jones, 1981</a>) but is commonly referred to. Kelly (<a href="#kel06">2006</a>) states that context in information retrieval comprises individual and situational variables. The individual variables consist of personal characteristics, knowledge structures, and cognitive and learning styles, whereas that of situational variables include search task characteristics.</p>
-
-<p>Context could help information retrieval systems to learn and predict information needs of a user, relate one piece of information to another, display required information in a suitable manner to users, relate tasks performed by a searcher and enable other searchers to use it. Therefore, in this study, the impact of contextual features on health information searching is investigated. Specifically, the influence of user features (such as sex, age, mother tongue, health status, health literacy, Internet use experience, and frequency of health information seeking) on the formulation of queries are examined. These features are selected because they have the potential to influence query formulation. For example, health literacy (<a href="#ell12">Ellis, Mullan, Worsley and Pai, 2012</a>; <a href="#gut14">Gutierrez, Kindratt, Pagels, Foster and Gimpel 2014</a>), health status (<a href="#kim15">Kim, 2015</a>; <a href="#wan13">Wang, Viswanath, Lam, Wang and Chan, 2013</a>), and Internet use experience (<a href="#esc05">Escoffery <em>et al.</em>, 2005</a>; <a href="#jan13">Janeice, Eileen and Trauth, 2013</a>) are found to influence health information seeking.</p> 
-
+<p>Context could help information retrieval systems to learn and predict information needs of a user, relate one piece of information to another, display required information in a suitable manner to users, relate tasks performed by a searcher and enable other searchers to use it. Therefore, in this study, the impact of contextual features on health information searching is investigated. Specifically, the influence of user features (such as sex, age, mother tongue, health status, health literacy, Internet use experience, and frequency of health information seeking) on the formulation of queries are examined. These features are selected because they have the potential to influence query formulation. For example, health literacy (<a href="#ell12">Ellis, Mullan, Worsley and Pai, 2012</a>; <a href="#gut14">Gutierrez, Kindratt, Pagels, Foster and Gimpel 2014</a>), health status (<a href="#kim15">Kim, 2015</a>; <a href="#wan13">Wang, Viswanath, Lam, Wang and Chan, 2013</a>), and Internet use experience (<a href="#esc05">Escoffery <em>et al.</em>, 2005</a>; <a href="#jan13">Janeice, Eileen and Trauth, 2013</a>) are found to influence health information seeking.</p>
 <p>In addition, the effects of query features (such as the type of query, the source of the query, and spelling error) on the result accessing behaviour are analysed. The type of query could be word-based, question-based, or based on word-strings. The classification could help to point out users’ level of knowledge on query language and searching skills. Users are likely to use queries based on word strings with Boolean operators (complex query) if their information retrieval knowledge is high, with the reverse being true, i.e., using simple word-based queries, if their information retrieval knowledge is low (<a href="#sut98">Sutcliffe and Ennis, 1998</a>). A question-based query could also help to suggest an automated question-answering technique in the design of an information retrieval system (<a href="#ram14">Ramprasath and Hariharan, 2014</a>). Understanding the effects of user contextual features on query formulation and query features on result clicking could help to design effective health information retrieval systems that can allow users to retrieve needed information effectively and efficiently.</p>
 </section>
 <section>
-<h2>Related work</h2>
-
-<p>In this section, we provide information about query behaviour, contextual factors of query formulation and result clicking  from previous research. The information could help us to understand the research coverage and gaps in research on contextual health information searching behaviour.</p>
-
-<h3>Query behaviour</h3>
-
+<h2 id="related-work">Related work</h2>
+<p>In this section, we provide information about query behaviour, contextual factors of query formulation and result clicking from previous research. The information could help us to understand the research coverage and gaps in research on contextual health information searching behaviour.</p>
+<h3 id="query-behaviour">Query behaviour</h3>
 <p>Users are central in information retrieval and they need to correctly phrase their queries to successfully achieve their goals (<a href="#yeg09">Yeganova, Comeau, Kim and Wilbur, 2009</a>). However, laypeople sometimes use plain English sentences (<a href="#int11b">Inthiran, Alhashmi and Ahmed, 2011b</a>; <a href="#luo08">Luo, Tang, Yang and Wei, 2008</a>) or questions (<a href="#zha13">Zhang, 2013</a>) as a query to search for health information. In addition, users from non-health domains may not be able to identify medical or health terms for their query, or their query may not match with medical vocabularies. For example, Yi (<a href="#yi15">2015</a>) identifies difficult health terminology as one of the barriers to finding health information. These make existing Web search engines to less likely to give targeted query suggestions. When plain English sentences are used as queries, the hits returned from the system are unlikely to be accurate or even relevant. Consequently, users are commonly disappointed by the search results and unlikely to click and view the results, resulting in unsatisfactory searching outcome (<a href="#int11b">Inthiran <em>et al.</em>, 2011b</a>). In addition, the use of abbreviations or acronyms, use of slang expressions, or misspellings during query formulation are common barriers to retrieving health information (<a href="#bod14">Boden, 2014</a>). Hence, this paper attempts to understand how laypeople formulate health queries.</p>
-
 <p>Users are commonly observed to use simple and short queries which might lead them to unsatisfactory results. A research study on searching behaviour of students when looking for specific health-related Information in MedlinePlus finds that the average query length issued by users ranged from 1.79 to 4 terms per task with an average number of queries ranging from 1 to 2.63 per task (<a href="#zha13">Zhang, 2013</a>). However, most of the terms that form the queries are found to be stop words which do not help to characterize users’ information needs. From 10,257 queries extracted from www.alltheWeb.com, Spink <em>et al.</em> (<a href="#spi04">2004</a>) find 2.3 average terms per medical or health query with a mean of 2.2 queries per medical or health session, which is short. This study also finds that users show less query reformulation efforts on their medical or health queries which show succinct query issuance. In the point of views of these research studies, the use of too-short queries and stop words to formulate queries could be obstacles to searching for the required information. This is because, when a query is too short, searching becomes challenging due to a lack of information regarding user intent.</p>
-
 <p>One study indicates that longer queries are significantly associated with increased users’ satisfaction with search results (<a href="#bel03">Belkin <em>et al.,</em>, 2003</a>). As users issue longer queries that characterize their information need, their searching effectiveness increases, resulting in a better interactive information retrieval performance. However, Inthiran, Alhashmi and Ahmed (<a href="#int15b">2015</a>) observed medical students while issuing long queries when searching on a difficult task. The students were found to be slow to complete search tasks and experienced ineffective search sessions. These two findings conflict with each other in terms of the effectiveness of using long queries even though medical students are perceived to have adequate knowledge of medical terms which should enable them to formulate queries better. These contradictory findings are worth further research.</p>
-
-<h3>Contextual factors in query formulation</h3>
-
+<h3 id="contextual-factors-in-query-formulation">Contextual factors in query formulation</h3>
 <p>Information retrieval can be affected by contextual factors, such as searchers and search task characteristics (<a href="#kel06">Kelly, 2006</a>). Query formulation which is an essential part of the information retrieval system can also be affected by context.</p>
-
 <p>Existing research studies that explore contextual factors of query formulation are limited. These few studies focus mostly on task features and often ignore user features that possibly affect information searching on the Web. Lopes and Ribeiro (<a href="#lop10">2010</a>) studied the effects of task and user features on query formulation in health information searching. The authors found that sex, years of experience in Web search, frequency of health information seeking, previous experience on search topics and ease of tasks are associated with query length. That is, being female, less experienced in Web searching, frequently seeking health information, having previous search experience on a topic, and difficult search tasks, are associated with longer query length. In the study, the effect of user features on a number of queries is ignored which is a key feature in the query formulation process. Kelly (<a href="#kel09">2009</a>) points out that including users in information retrieval system evaluation and investigating users’ information searching behaviour are essential for improving information retrieval systems. Hence, in our study, we explore the effect of user features on the query length as well as the number of queries.</p>
-
 <p>Another research study has attempted to identify factors affecting query formulation in Web information searching (<a href="#aul03">Aula, 2003</a>). This study identifies experience in using computers and the Web as factors affecting the query formulation process, indicating that experienced users issue longer and more queries than users with less experience in using computers and in searching the Web. The study by Aula was conducted in the general information domain. In our study, we explore the contextual factors in the health-specific domain. The health domain is rich in context. In addition, its search process is based on well-defined scenarios (e.g., prevention, treatment, or medication) whose contexts could help to improve health information retrieval systems.</p>
-
-<h3>Result clicking</h3> 
-
-<p>A challenge for users to search for health information is to filter and select relevant results. A study (<a href="#bro13">Broussard and Zhang, 2013</a>) finds that users were uncertain which Websites are relevant after search results were returned by the search engine. Users either selected results through trial and error or selected results from the top hits, believing that the more relevant results are located at the top of a result page. They also selected results based on Website familiarity simply because they feel comfortable with the familiar Website. Another study found that users selected results based on Website reputability and advertisement (<a href="#fik14">Fiksdal <em>et al.,</em>, 2014</a>). Users were likely to select a Website if it was reputable and did not have a lot of advertisements and popups. Users considered a Website as reputable if its organization name was well known, if it gained credibility through academics and research and if it was a local Website. In our study, we explore how users select search results after a search engine returned the results. </p>
-
+<h3 id="result-clicking">Result clicking</h3>
+<p>A challenge for users to search for health information is to filter and select relevant results. A study (<a href="#bro13">Broussard and Zhang, 2013</a>) finds that users were uncertain which Websites are relevant after search results were returned by the search engine. Users either selected results through trial and error or selected results from the top hits, believing that the more relevant results are located at the top of a result page. They also selected results based on Website familiarity simply because they feel comfortable with the familiar Website. Another study found that users selected results based on Website reputability and advertisement (<a href="#fik14">Fiksdal <em>et al.,</em>, 2014</a>). Users were likely to select a Website if it was reputable and did not have a lot of advertisements and popups. Users considered a Website as reputable if its organization name was well known, if it gained credibility through academics and research and if it was a local Website. In our study, we explore how users select search results after a search engine returned the results.</p>
 <p>Users may be frustrated while searching for health information on the Internet. The frustration could be during searching or at the result viewing stage. For example, Janeice <em>et al.,</em> (<a href="#jan13">2013</a>) find that participants are frustrated because of their limited searching skills. Users with better searching skills are more likely to specify their queries and commit fewer errors in getting a satisfactory search result (<a href="#hu13">Hu, Lu and Joo, 2013</a>). In contrast, when users are inexperienced with the Internet, the search process will take more time and at the end they may be frustrated. The above research studies by Janeice <em>et al.,</em> (<a href="#jan13">2013</a>) and Hu <em>et al.,</em> (<a href="#hu13">2013</a>) show the impact of users’ searching skills on search satisfaction. However, in our study, we will investigate the effect of query features, such as spelling errors, the source of the query and query type on result clicking.</p>
-
-<h3>Conceptual framework</h3>
-
+<h3 id="conceptual-framework">Conceptual framework</h3>
 <p>The process of information searching consists of problem identification, need articulation, query formulation and results evaluation (<a href="#sut98">Sutcliffe and Ennis, 1998</a>) and these are mainly affected by factors such as environment (e.g., search engine and search topic), searcher, search process (e.g., command used) and search outcome (<a href="#fen81">Fenichel, 1981</a>). Since the current study is focused on investigating the contextual factors affecting query formulation during health information searching on the Web, it is further explored using earlier studies. Based on Lopes and Ribeiro (<a href="#lop10">2010</a>) who have studied the context effect of query formulation in health information searching, two main factors are expected to have a significant impact on query formulation. These are user and task features. The user features included in study by Lopes and Ribeiro are age, sex, language, Web search experience, health search experience and familiarity with the search topic. The task features included are a medical specialty, the task clarity and task easiness.</p>
-
-<p>In the current study, the following contextual features are included: demographic characteristics (sex, age, mother tongue and Internet use experience) and health-related variables (health literacy, health status, frequency of health information seeking, and task search experience). Health literacy and health status are included because of their influence on health information seeking. Adequate health literacy level (<a href="#ell12">Ellis <em>et al.,</em>, 2012</a>; <a href="#eri12">Eriksson-Backa, Ek, Niemelä and Huotari, 2012</a>; <a href="#gut14">Gutierrez <em>et al.,</em>, 2014</a>) and poor health status (<a href="#kim15">Kim, 2015</a>; <a href="#wan13">Wang <em>et al.,</em>, 2013</a>; <a href="#wea10">Weaver <em>et al.,</em>, 2010</a>) are associated with frequent health information seeking which could increase knowledge and skills required to articulate search queries. Considering the user and task features, the  conceptual framework shown in Figure 1 is developed.</p>
-
-<figure class="centre">
-<img src="../figs/p815fig1.png" width="576" height="335" alt="Figure 1: Conceptual framework of contextual factors affecting query formulation" />
-<figcaption><br />Figure 1: Conceptual framework of contextual factors affecting query formulation</figcaption></figure>
+<p>In the current study, the following contextual features are included: demographic characteristics (sex, age, mother tongue and Internet use experience) and health-related variables (health literacy, health status, frequency of health information seeking, and task search experience). Health literacy and health status are included because of their influence on health information seeking. Adequate health literacy level (<a href="#ell12">Ellis <em>et al.,</em>, 2012</a>; <a href="#eri12">Eriksson-Backa, Ek, Niemelä and Huotari, 2012</a>; <a href="#gut14">Gutierrez <em>et al.,</em>, 2014</a>) and poor health status (<a href="#kim15">Kim, 2015</a>; <a href="#wan13">Wang <em>et al.,</em>, 2013</a>; <a href="#wea10">Weaver <em>et al.,</em>, 2010</a>) are associated with frequent health information seeking which could increase knowledge and skills required to articulate search queries. Considering the user and task features, the conceptual framework shown in Figure 1 is developed.</p>
+<figure class="centre">![Figure 1: Conceptual framework of contextual factors affecting query formulation](../figs/p815fig1.png)
+<figcaption>  
+Figure 1: Conceptual framework of contextual factors affecting query formulation</figcaption>
+</figure>
 </section>
 <section>
-<h2>Objective</h2>
-
+<h2 id="objective">Objective</h2>
 <p>The objective of this research study is to assess the search behaviour of consumers and identify contextual factors affecting health information searching on the Web. The research questions associated with this research objective are:</p>
 <ul>
-<li>1.	What are the contextual factors associated with query formulation during health information searching on the Web?</li>
-<li>2.	What behaviour do consumers exhibit when they search for health information on the Web?</li>
+<li>
+<ol>
+<li>What are the contextual factors associated with query formulation during health information searching on the Web?</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>What behaviour do consumers exhibit when they search for health information on the Web?</li>
+</ol>
+</li>
 </ul>
 </section>
 <section>
-<h2>Method</h2>
-
-<h3>Participants</h3>
-
+<h2 id="method">Method</h2>
+<h3 id="participants">Participants</h3>
 <p>Undergraduate students from a university in Malaysia are included as study participants. However, students from health-related discipline are excluded as they are more likely to be well-versed in health knowledge, which may potentially affect the result of the study. A total of fifty-eight students participated in the study. The students were invited to participate through personal communication at the end of their class.</p>
-
-<h3>Search tasks</h3>
-
-<p>Simulated situations were employed to study the earch behaviour of participants. A simulated situation consists of a short story that elaborates a situation that motivates an individual to search for information on the Web (<a href="#bor00">Borlund, 2000</a>). In our study, participants were provided with four simulated tasks to perform in any Website they chose. Four search tasks were used because real search behaviour might not be obtained with only one or two tasks. Kelly (<a href="#kel09">2009</a>) suggests that simulated tasks should not last over an hour to reduce participants’ fatigue which could affect the result of a study. In our study, the average time it took to complete the four tasks was forty-five minutes, with a range of thirty to sixty minutes. Previous research studies used three (<a href="#zha12">Zhang, Wang, Heaton and Winkler, 2012</a>) to four (<a href="#pus15">Puspitasari, Moriyama, Fukui and Numao, 2015</a>) simulated tasks to study users’ health information searching behaviour. To reflect real information needs, the tasks were developed based on the health information needs identified from a pilot study. </p>
-
+<h3 id="search-tasks">Search tasks</h3>
+<p>Simulated situations were employed to study the earch behaviour of participants. A simulated situation consists of a short story that elaborates a situation that motivates an individual to search for information on the Web (<a href="#bor00">Borlund, 2000</a>). In our study, participants were provided with four simulated tasks to perform in any Website they chose. Four search tasks were used because real search behaviour might not be obtained with only one or two tasks. Kelly (<a href="#kel09">2009</a>) suggests that simulated tasks should not last over an hour to reduce participants’ fatigue which could affect the result of a study. In our study, the average time it took to complete the four tasks was forty-five minutes, with a range of thirty to sixty minutes. Previous research studies used three (<a href="#zha12">Zhang, Wang, Heaton and Winkler, 2012</a>) to four (<a href="#pus15">Puspitasari, Moriyama, Fukui and Numao, 2015</a>) simulated tasks to study users’ health information searching behaviour. To reflect real information needs, the tasks were developed based on the health information needs identified from a pilot study.</p>
 <p>The four tasks selected related to dengue fever, smoking, obesity and physical activity. These four health issues are a burden to young populations in developing countries like Malaysia. For example, dengue fever is a major health problem causing an economic burden in developing countries, particularly in Southeast Asian countries (<a href="#guz10">Guzman and Istúriz, 2010</a>). The disease is among the most serious health problem in Malaysia affecting social function, well-being and quality of life, predominantly amongst children and young adults (<a href="#she13">Shepard <em>et al.,</em>, 2013</a>). The prevalence of the disease is higher among people aged 20-29 years in Malaysia (<a href="#che12">Chew, Rahman and Salleh., 2012</a>). As of October 2015, over 98,500 dengue cases with 267 deaths had been reported in Malaysia (<a href="#who15b">World Health Organization, 2015b</a>).</p>
-
-<p>Smoking is also the major risk factor for non-communicable diseases which contributed to 80% of premature deaths in developing countries (<a href="#who15c">World Health Organization, 2015c</a>). In Malaysia, non-communicable diseases are the leading cause of premature deaths (<a href="#mal11">Malaysia. <em>Ministry of Health</em>, 2011</a>) contributing to 73% of total deaths (<a href="#who14">World Health Organization, 2014</a>). According to the 2012 Global Adult Tobacco Survey Report, over 10,000 Malaysian die as a result of smoking-related illnesses per annum. The daily use of tobacco among people aged 15-24 years is 32% in Malaysia (<a href="#mal12">Malaysia, <em>Institute...</em> 2012</a>). Obesity is another major risk factor contributing to cardiovascular diseases which are responsible for three-quarters of deaths in developing countries (<a href="#who15a">World Health Organization, 2015a</a>).</p> 
-
+<p>Smoking is also the major risk factor for non-communicable diseases which contributed to 80% of premature deaths in developing countries (<a href="#who15c">World Health Organization, 2015c</a>). In Malaysia, non-communicable diseases are the leading cause of premature deaths (<a href="#mal11">Malaysia. <em>Ministry of Health</em>, 2011</a>) contributing to 73% of total deaths (<a href="#who14">World Health Organization, 2014</a>). According to the 2012 Global Adult Tobacco Survey Report, over 10,000 Malaysian die as a result of smoking-related illnesses per annum. The daily use of tobacco among people aged 15-24 years is 32% in Malaysia (<a href="#mal12">Malaysia, <em>Institute...</em> 2012</a>). Obesity is another major risk factor contributing to cardiovascular diseases which are responsible for three-quarters of deaths in developing countries (<a href="#who15a">World Health Organization, 2015a</a>).</p>
 <p>Therefore, using these four health problems, four simulated situations containing a short cover story that can motivate the study participant to search an information retrieval system were developed. Each simulated situation contained goals for participants to perform a search. For example, the simulated situation for physical activity was described as follows:</p>
-
 <blockquote>
-<strong>Simulated situation:</strong> Imagine last night you listened to a radio programme about physical inactivity. You have heard that physical inactivity is a key risk factor for cancer, diabetes, heart disease, stroke and chronic respiratory diseases. The radio programme also pointed out that more than 80% of the world's adolescent population is insufficiently physically active. In comparison, you also heard that sufficient physical activity gives benefits of reduced stress, improved sleep and leads to a better quality of life. You have noted the benefit of physical activity, and, at the same time, you are concerned that you are physically inactive. You want to find out proper guidelines or recommendations on physical activity.<br /><br />
-<strong>Indicative request:</strong> Find information about guidelines or recommendations to help you to be sufficiently physically active.
+<p><strong>Simulated situation:</strong> Imagine last night you listened to a radio programme about physical inactivity. You have heard that physical inactivity is a key risk factor for cancer, diabetes, heart disease, stroke and chronic respiratory diseases. The radio programme also pointed out that more than 80% of the world's adolescent population is insufficiently physically active. In comparison, you also heard that sufficient physical activity gives benefits of reduced stress, improved sleep and leads to a better quality of life. You have noted the benefit of physical activity, and, at the same time, you are concerned that you are physically inactive. You want to find out proper guidelines or recommendations on physical activity.</p>
+<p><strong>Indicative request:</strong> Find information about guidelines or recommendations to help you to be sufficiently physically active.</p>
 </blockquote>
-
-<h3>Data collection tools</h3>
-
+<h3 id="data-collection-tools">Data collection tools</h3>
 <p>Two data collection methods are used: an online survey and an experimental simulation using simulated tasks. Through the online survey, we gathered data about user features, such as sex, age, mother tongue, health status, health literacy, Internet use experience and health information seeking. Health literacy is measured using a tool from the European Health Literacy Survey (<a href="#sor13">Sorensen <em>et al.,</em> 2013</a>). The Asian Health Literacy Association adopted the tool to be used by researchers in Asian countries (<a href="#duo17">Duong <em>et al.,</em> 2017</a>). Furthermore, a study was undertaken to assess the validity and internal reliability of the tool in the Malaysian context (<a href="#moh14">Mohamad, Su, Majid and Chinna, 2014</a>). This study found high reliability and concluded that the tool can be utilized in the Malaysian context. Therefore, the forty-seven item European Health Literacy Survey questionnaire was used to determine the health literacy of the participants under study. The forty-seven items are assessed using a four-point self-report scale (very easy, easy, difficult and very difficult). Following the survey, the experimental procedure was carried out to collect information about health information searching behaviour of the participants using the <a href="https://www.techsmith.com/morae.html">Morae keylogger software</a>, which is useful to record users’ interactions with information retrieval systems. The Morae software captures audio, video, on-screen activity and keyboard and mouse inputs during a search session. However, in this study, only on-screen activity and keyboard and mouse inputs are captured.</p>
-
 <p>A file name with a similar unique identification number to that given in the survey was used to save the screen recording. This enabled us to link the data from the screen recording with the data from the survey. An observation checklist was used to extract data from computer screen recordings using the Morae software.</p>
-
- <em>Experimental procedure</em>
-
+<p><em>Experimental procedure</em></p>
 <p>Students were approached and invited to participate in the study through personal communication made at the end of their class. First, a short introduction to the study and its purpose was given. After they agreed to participate in the study, an appointment was made. Upon arrival, the participants were provided with the ethics approval letter and an explanatory statement of the study. Then, we requested them to review and sign the informed consent form. After consent, they were requested to complete the survey questions. Following the survey, four tasks in random order (to balance task order effect) were given to the participants. We told the participants to perform each task in any Website or information retrieval system they prefer. They were also told to take as much time as they want to complete the tasks.</p>
-
-<h3>Data analysis</h3>
-
+<h3 id="data-analysis">Data analysis</h3>
 <p>The data from the online survey were downloaded from Google Forms as an Excel spreadsheet and then transferred to SPSS v.20 for coding and analysis. We transcribed key logging data from the experiment for analysis. Transcribed data were entered using a pre-designed observation checklist in Google Forms. The observational checklist was designed based on the search activities (querying and result clicking) of the participants.</p>
-
 <p>Descriptive statistics were used to describe demographic characteristics and contextual features of the respondents. In addition, the multiple linear regression method was used to identify contextual factors affecting query length and the number of queries issued by the participants. Binary logistic regression was also used to identify contextual factors affecting the result clicking of the participants. Multiple linear regression analysis was used because the dependent variables (query length and number of queries) are continuous. Logistic regression was also an appropriate analysis method as the dependent variable is dichotomous or binary (<a href="#har15">Harrell, 2015</a>). In this research study, the dependent variable (result clicking) had two responses (clicked/not clicked). We selected the stepwise logistic regression method as it controls the confounding effect, which occurs when a variable correlates with both dependent and independent variables thereby affecting the statistical outcome (<a href="#ste03">Sterne and Kirkwood, 2003</a>). A p-value of 0.05 was used as a cutoff value for statistically significant findings.</p>
 </section>
 <section>
-<h2>Results</h2>
-
-<h3>Demographic information</h3>
-
-<p>A total of fifty-eight computer screen recordings from fifty-eight participants were transcribed. Thirty-nine males and nineteen females took part in the experiment. The age of the participants ranged from 18 to 24 years, mean = 22, standard deviation = 1.1. From the total, 74.1% of the participants use the Internet to look for health information whereas 25.9% never use it. The average years of experience of the participants in online health information searching was 3 &plusmn; 3.3 SD. Participants were asked about their experience in searching the experimental tasks. From the total, about 71 %, 52%, 72% and 81% of the participants  responded that they had searched for dengue, smoking, obesity and physical activity information before, respectively. Table 1 provides detail information about the demographic characteristics of the participants.</p>
-
-<table class="center">
-<caption><br />Table 1: Demographic information on the participants</caption>
+<h2 id="results">Results</h2>
+<h3 id="demographic-information">Demographic information</h3>
+<p>A total of fifty-eight computer screen recordings from fifty-eight participants were transcribed. Thirty-nine males and nineteen females took part in the experiment. The age of the participants ranged from 18 to 24 years, mean = 22, standard deviation = 1.1. From the total, 74.1% of the participants use the Internet to look for health information whereas 25.9% never use it. The average years of experience of the participants in online health information searching was 3 ± 3.3 SD. Participants were asked about their experience in searching the experimental tasks. From the total, about 71 %, 52%, 72% and 81% of the participants responded that they had searched for dengue, smoking, obesity and physical activity information before, respectively. Table 1 provides detail information about the demographic characteristics of the participants.</p>
+<table class="center"><caption>  
+Table 1: Demographic information on the participants</caption>
 <tbody>
-<tr><th>Variables</th><th>Category</th><th>Frequency</th><th>Percentage</th></tr>
-<tr><td rowspan="2" style="text-align:center;">Sex</td><td>Male</td><td style="text-align:center;">39</td><td style="text-align:center;">67.2</td></tr>
-<tr><td>Female</td><td style="text-align:center;">19</td><td style="text-align:center;">32.8</td></tr>
-<tr><td rowspan="2" style="text-align:center;">Age</td><td style="text-align:center;">18-21</td><td style="text-align:center;">25</td><td style="text-align:center;">43.1</td></tr>
-<tr><td style="text-align:center;">22-24</td><td style="text-align:center;">33</td><td style="text-align:center;">56.9</td></tr>
-<tr><td rowspan="2" style="text-align:center;">Mother tongue</td><td>English</td><td style="text-align:center;">11</td><td style="text-align:center;">19.0</td></tr>
-<tr><td>Others*</td><td style="text-align:center;">47</td><td style="text-align:center;">81.0</td></tr>
-<tr><td rowspan="2">Internet health information seeking (HIS)</td><td>No</td><td style="text-align:center;">15</td><td style="text-align:center;">25.9</td></tr>
-<tr><td>Yes</td><td style="text-align:center;">43</td><td style="text-align:center;">74.1</td></tr>
-<tr><td>Frequency of HIS in the last one month</td><td colspan="3">Median = 1, SD = 1.73</td></tr>
-<tr><td>Internet use experience in hours per day</td><td colspan="3">Median = 6, SD = 4.67</td></tr>
-<tr><td colspan="4">*Other mother tongues include Arabic, Bahasa Indonesia, Bengali, Cantonese, Creole, Dhivehi, Hakka, Memon, Punjabi and Tamil</td></tr>
+<tr>
+<th>Variables</th>
+<th>Category</th>
+<th>Frequency</th>
+<th>Percentage</th>
+</tr>
+<tr>
+<td rowspan="2" style="text-align:center;">Sex</td>
+<td>Male</td>
+<td style="text-align:center;">39</td>
+<td style="text-align:center;">67.2</td>
+</tr>
+<tr>
+<td>Female</td>
+<td style="text-align:center;">19</td>
+<td style="text-align:center;">32.8</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align:center;">Age</td>
+<td style="text-align:center;">18-21</td>
+<td style="text-align:center;">25</td>
+<td style="text-align:center;">43.1</td>
+</tr>
+<tr>
+<td style="text-align:center;">22-24</td>
+<td style="text-align:center;">33</td>
+<td style="text-align:center;">56.9</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align:center;">Mother tongue</td>
+<td>English</td>
+<td style="text-align:center;">11</td>
+<td style="text-align:center;">19.0</td>
+</tr>
+<tr>
+<td>Others*</td>
+<td style="text-align:center;">47</td>
+<td style="text-align:center;">81.0</td>
+</tr>
+<tr>
+<td rowspan="2">Internet health information seeking (HIS)</td>
+<td>No</td>
+<td style="text-align:center;">15</td>
+<td style="text-align:center;">25.9</td>
+</tr>
+<tr>
+<td>Yes</td>
+<td style="text-align:center;">43</td>
+<td style="text-align:center;">74.1</td>
+</tr>
+<tr>
+<td>Frequency of HIS in the last one month</td>
+<td colspan="3">Median = 1, SD = 1.73</td>
+</tr>
+<tr>
+<td>Internet use experience in hours per day</td>
+<td colspan="3">Median = 6, SD = 4.67</td>
+</tr>
+<tr>
+<td colspan="4">*Other mother tongues include Arabic, Bahasa Indonesia, Bengali, Cantonese, Creole, Dhivehi, Hakka, Memon, Punjabi and Tamil</td>
+</tr>
 </tbody>
 </table>
-
 <p>Based on the analysis of computer screen recordings, the following aspects of health information searching behaviour were examined: query characteristics (type of query, source of query, spelling errors, number of queries and query length) and result clicking actions (result clicked and source opened).</p>
-
-<h3>Query characteristics</h3>
-
-<h4>Type of query</h4>
-
-In this research study, three types of query were identified: question-based, word-based and word-string-based. Question-based queries contain question words, such as what, how, when, where, which and why (<a href="#jad14a">Jadhav, <em>et al.,</em> 2014</a>; <a href="#jad14b">Jadhav, Sheth and Pathak, 2014</a>). A word-based query contains a single word, while a word-string query contains more than one word. About 63% of the queries issued were word-strings, while question-based queries constituted 24.5%. 
-
+<h3 id="query-characteristics">Query characteristics</h3>
+<h4 id="type-of-query">Type of query</h4>
+<p>In this research study, three types of query were identified: question-based, word-based and word-string-based. Question-based queries contain question words, such as what, how, when, where, which and why (<a href="#jad14a">Jadhav, <em>et al.,</em> 2014</a>; <a href="#jad14b">Jadhav, Sheth and Pathak, 2014</a>). A word-based query contains a single word, while a word-string query contains more than one word. About 63% of the queries issued were word-strings, while question-based queries constituted 24.5%.</p>
 <p>Source of query</p>
-
 <p>While 85.9% of the queries were formulated using keywords from the tasks description, 14.1% used keywords outside the task description. For example, a participant formulates a query of guidelines or recommendations on physical activity. In this query, the keywords (guidelines, recommendations and physical activity) were taken from the task description of physical activity. Another participant formulates a query of moderate intensity aerobic exercise. In this case, the keywords (moderate, intensity, aerobic and exercise) were not taken from the physical activity task description. The task description for physical activity was described under the search tasks of the method section.</p>
-
-<h4>Spelling errors</h4>
-
-Issuing a query with correct spelling plays a major role in retrieving effective results. In this research study, the presence of spelling errors during query formulation was checked through observation of the computer screen recordings. It was found that only 3% of the queries issued had spelling errors. However, participants used the auto-correction method suggested by search engines for the 30.2% of the queries.
-
-<h4>Number of queries and query length</h4>
-
+<h4 id="spelling-errors">Spelling errors</h4>
+<p>Issuing a query with correct spelling plays a major role in retrieving effective results. In this research study, the presence of spelling errors during query formulation was checked through observation of the computer screen recordings. It was found that only 3% of the queries issued had spelling errors. However, participants used the auto-correction method suggested by search engines for the 30.2% of the queries.</p>
+<h4 id="number-of-queries-and-query-length">Number of queries and query length</h4>
 <p>The fifty-eight participants, each of whom completed all four tasks, issued a total of 441 queries to perform the four tasks. The number of queries issued ranged from 1 to 10 across the tasks whereas the average number of queries was 1.9 for the tasks. The query length ranged from 1 to 48 with an average query length of 4 terms for the tasks. Table 2 shows the basic query features stratified by tasks.</p>
-
-<table class="center" style="width:100%;">
-<caption><br />Table 2: Basic query features</caption>
+<table class="center" style="width:100%;"><caption>  
+Table 2: Basic query features</caption>
 <tbody>
-<tr><th colspan="2">Query feature</th><th style="width:10%;">Task 1<br />(Dengue)</th><th style="width:10%;">Task 2<br />(Smoking)</th><th style="width:10%;">Task 3<br />(Obesity)</th><th style="width:10%;">Task 4<br />(Physical activity)</th><th style="width:10%;">All tasks</th></tr>
-<tr><td rowspan="6">Number of queries</td><td>Mean</td><td style="text-align:center;">1.8</td><td style="text-align:center;">1.7</td><td style="text-align:center;">2.4</td><td style="text-align:center;">1.8</td><td style="text-align:center;">1.9</td></tr>
-<tr><td>Median</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td></tr>
-<tr><td>SD</td><td style="text-align:center;">1.51</td><td style="text-align:center;">1.03</td><td style="text-align:center;">1.77</td><td style="text-align:center;">1.13</td><td style="text-align:center;">1.4</td></tr>
-<tr><td>Min</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td></tr>
-<tr><td>Max</td><td style="text-align:center;">10</td><td style="text-align:center;">5</td><td style="text-align:center;">8</td><td style="text-align:center;">	5</td><td style="text-align:center;">10</td></tr>
-<tr><td>Sum</td><td style="text-align:center;">	106</td><td style="text-align:center;">94</td><td style="text-align:center;">140</td><td style="text-align:center;">101</td><td style="text-align:center;">441</td></tr>
-<tr><td rowspan="6">Query length</td><td>Mean</td><td style="text-align:center;">3.66</td><td style="text-align:center;">4.38</td><td style="text-align:center;">4.35</td><td style="text-align:center;">5.55</td><td style="text-align:center;">4.46</td></tr>
-<tr><td>Median</td><td style="text-align:center;">3</td><td style="text-align:center;">4</td><td style="text-align:center;">4	</td><td style="text-align:center;">5</td><td style="text-align:center;">4</td></tr>
-<tr><td>SD</td><td style="text-align:center;">2.7</td><td style="text-align:center;">4.5</td><td style="text-align:center;">4.4</td><td style="text-align:center;">5.4</td><td style="text-align:center;">4.38</td></tr>
-<tr><td>Min</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td><td style="text-align:center;">1</td></tr>
-<tr><td>Max</td><td style="text-align:center;">21</td><td style="text-align:center;">30</td><td style="text-align:center;">25</td><td style="text-align:center;">48</td><td style="text-align:center;">48</td></tr>
-<tr><td>Sum	</td><td style="text-align:center;">388</td><td style="text-align:center;">412</td><td style="text-align:center;">609</td><td style="text-align:center;">560</td><td style="text-align:center;">1969</td></tr>
-<tr><td rowspan="3">Query type</td><td>Word-based</td><td style="text-align:center;">10</td><td style="text-align:center;">14</td><td style="text-align:center;">25</td><td style="text-align:center;">5</td><td style="text-align:center;">54</td></tr>
-<tr><td>Question-based</td><td style="text-align:center;">17</td><td style="text-align:center;">33</td><td style="text-align:center;">25</td><td style="text-align:center;">33</td><td style="text-align:center;">108</td></tr>
-<tr><td>Word-string based</td><td style="text-align:center;">79</td><td style="text-align:center;">47</td><td style="text-align:center;">90</td><td style="text-align:center;">63</td><td style="text-align:center;">279</td></tr>
-<tr><td rowspan="2">Spelling error</td><td>Yes</td><td style="text-align:center;">7</td><td style="text-align:center;">1</td><td style="text-align:center;">4</td><td style="text-align:center;">1</td><td style="text-align:center;">13</td></tr>
-<tr><td>No</td><td style="text-align:center;">99</td><td style="text-align:center;">93	</td><td style="text-align:center;">136</td><td style="text-align:center;">100</td><td style="text-align:center;">428</td></tr>
-<tr><td rowspan="2">Source of query</td><td>Task description</td><td style="text-align:center;">104</td><td style="text-align:center;">87</td><td style="text-align:center;">115</td><td style="text-align:center;">73</td><td style="text-align:center;">379</td></tr>
-<tr><td>Outside task description</td><td style="text-align:center;">2</td><td style="text-align:center;">7</td><td style="text-align:center;">25</td><td style="text-align:center;">28</td><td style="text-align:center;">62</td></tr>
+<tr>
+<th colspan="2">Query feature</th>
+<th style="width:10%;">Task 1  
+(Dengue)</th>
+<th style="width:10%;">Task 2  
+(Smoking)</th>
+<th style="width:10%;">Task 3  
+(Obesity)</th>
+<th style="width:10%;">Task 4  
+(Physical activity)</th>
+<th style="width:10%;">All tasks</th>
+</tr>
+<tr>
+<td rowspan="6">Number of queries</td>
+<td>Mean</td>
+<td style="text-align:center;">1.8</td>
+<td style="text-align:center;">1.7</td>
+<td style="text-align:center;">2.4</td>
+<td style="text-align:center;">1.8</td>
+<td style="text-align:center;">1.9</td>
+</tr>
+<tr>
+<td>Median</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">2</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+</tr>
+<tr>
+<td>SD</td>
+<td style="text-align:center;">1.51</td>
+<td style="text-align:center;">1.03</td>
+<td style="text-align:center;">1.77</td>
+<td style="text-align:center;">1.13</td>
+<td style="text-align:center;">1.4</td>
+</tr>
+<tr>
+<td>Min</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+</tr>
+<tr>
+<td>Max</td>
+<td style="text-align:center;">10</td>
+<td style="text-align:center;">5</td>
+<td style="text-align:center;">8</td>
+<td style="text-align:center;">5</td>
+<td style="text-align:center;">10</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td style="text-align:center;">106</td>
+<td style="text-align:center;">94</td>
+<td style="text-align:center;">140</td>
+<td style="text-align:center;">101</td>
+<td style="text-align:center;">441</td>
+</tr>
+<tr>
+<td rowspan="6">Query length</td>
+<td>Mean</td>
+<td style="text-align:center;">3.66</td>
+<td style="text-align:center;">4.38</td>
+<td style="text-align:center;">4.35</td>
+<td style="text-align:center;">5.55</td>
+<td style="text-align:center;">4.46</td>
+</tr>
+<tr>
+<td>Median</td>
+<td style="text-align:center;">3</td>
+<td style="text-align:center;">4</td>
+<td style="text-align:center;">4</td>
+<td style="text-align:center;">5</td>
+<td style="text-align:center;">4</td>
+</tr>
+<tr>
+<td>SD</td>
+<td style="text-align:center;">2.7</td>
+<td style="text-align:center;">4.5</td>
+<td style="text-align:center;">4.4</td>
+<td style="text-align:center;">5.4</td>
+<td style="text-align:center;">4.38</td>
+</tr>
+<tr>
+<td>Min</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">1</td>
+</tr>
+<tr>
+<td>Max</td>
+<td style="text-align:center;">21</td>
+<td style="text-align:center;">30</td>
+<td style="text-align:center;">25</td>
+<td style="text-align:center;">48</td>
+<td style="text-align:center;">48</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td style="text-align:center;">388</td>
+<td style="text-align:center;">412</td>
+<td style="text-align:center;">609</td>
+<td style="text-align:center;">560</td>
+<td style="text-align:center;">1969</td>
+</tr>
+<tr>
+<td rowspan="3">Query type</td>
+<td>Word-based</td>
+<td style="text-align:center;">10</td>
+<td style="text-align:center;">14</td>
+<td style="text-align:center;">25</td>
+<td style="text-align:center;">5</td>
+<td style="text-align:center;">54</td>
+</tr>
+<tr>
+<td>Question-based</td>
+<td style="text-align:center;">17</td>
+<td style="text-align:center;">33</td>
+<td style="text-align:center;">25</td>
+<td style="text-align:center;">33</td>
+<td style="text-align:center;">108</td>
+</tr>
+<tr>
+<td>Word-string based</td>
+<td style="text-align:center;">79</td>
+<td style="text-align:center;">47</td>
+<td style="text-align:center;">90</td>
+<td style="text-align:center;">63</td>
+<td style="text-align:center;">279</td>
+</tr>
+<tr>
+<td rowspan="2">Spelling error</td>
+<td>Yes</td>
+<td style="text-align:center;">7</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">4</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">13</td>
+</tr>
+<tr>
+<td>No</td>
+<td style="text-align:center;">99</td>
+<td style="text-align:center;">93</td>
+<td style="text-align:center;">136</td>
+<td style="text-align:center;">100</td>
+<td style="text-align:center;">428</td>
+</tr>
+<tr>
+<td rowspan="2">Source of query</td>
+<td>Task description</td>
+<td style="text-align:center;">104</td>
+<td style="text-align:center;">87</td>
+<td style="text-align:center;">115</td>
+<td style="text-align:center;">73</td>
+<td style="text-align:center;">379</td>
+</tr>
+<tr>
+<td>Outside task description</td>
+<td style="text-align:center;">2</td>
+<td style="text-align:center;">7</td>
+<td style="text-align:center;">25</td>
+<td style="text-align:center;">28</td>
+<td style="text-align:center;">62</td>
+</tr>
 </tbody>
 </table>
-
-<p>Multiple linear regression analysis was conducted to examine the effect of contextual features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, task search experience and frequency of health information seeking on the average number of queries and average query length. To fulfil the assumption of normal distribution, square root transformations were carried out for both the number of queries and query length. In addition, outliers for query length were removed (query length &gt;7).  Possible multicollinearity is also checked using tolerance and variance inflation factor for each independent variable. A tolerance closer to 0 and/or a variance inflation factor greater than 2 show high multicollinearity (<a href="#ibm11">IBM Corp, 2011</a>). In this study, the tolerances and variance inflation factors for each independent variable were above 0.8 and below 1.36, respectively, which show low multicollinearity. Levene’s test of equality of error variances was performed to test for homoscedasticity of errors for all observations (<a href="#lev60">Levene, 1960</a>). P-values of above 0.123 were found which are not statistically significant, indicating the errors were homoscedastic (i.e., having the same finite variance).</p>
-
+<p>Multiple linear regression analysis was conducted to examine the effect of contextual features, such as sex, age, mother tongue, health status, health literacy, Internet use experience, task search experience and frequency of health information seeking on the average number of queries and average query length. To fulfil the assumption of normal distribution, square root transformations were carried out for both the number of queries and query length. In addition, outliers for query length were removed (query length &gt;7). Possible multicollinearity is also checked using tolerance and variance inflation factor for each independent variable. A tolerance closer to 0 and/or a variance inflation factor greater than 2 show high multicollinearity (<a href="#ibm11">IBM Corp, 2011</a>). In this study, the tolerances and variance inflation factors for each independent variable were above 0.8 and below 1.36, respectively, which show low multicollinearity. Levene’s test of equality of error variances was performed to test for homoscedasticity of errors for all observations (<a href="#lev60">Levene, 1960</a>). P-values of above 0.123 were found which are not statistically significant, indicating the errors were homoscedastic (i.e., having the same finite variance).</p>
 <p>The regression models with all the possible predictors produced R2 = 0.071, F (1, 56) = 4.29, p = 0.043 for the number of queries and R2 = 0.341, F (3, 47) = 8.1, p &lt; 0.0001 for query length. Table 3 summarizes the descriptive statistics and analysis results. As can be seen in Table 3, frequency of health information seeking had significant positive regression weights for both the number of queries and query length, indicating that participants with frequent health information seeking are found to issue more queries and longer query length after controlling for other variables in the model. However, mother tongue and health status had a significant negative weight on the query length, indicating that participants whose mother tongue was not English and those who perceived their health status as not healthy were more likely to issue shorter query length. Other contextual features, such as age, sex, health literacy, Internet use experience and task search experience did not contribute to the multiple regression models.</p>
-
-<table class="center" style="width:95%;">
-<caption><br />Table 3: Predicting the number of queries and query length using multiple linear regression analysis</caption>
+<table class="center" style="width:95%;"><caption>  
+Table 3: Predicting the number of queries and query length using multiple linear regression analysis</caption>
 <tbody>
-<tr><th rowspan="2">Predictors</th><th rowspan="2">Category</th><th rowspan="2">Frequency (%)</th><th colspan="2">Number of queries</th><th colspan="2">Query length</th></tr>
-<tr><th>Coefficient</th><th>P-value</th><th>Coefficient</th><th>P-value</th></tr>
-<tr><td rowspan="2">Sex</td><td>Male</td><td style="text-align:center;">39 (67.2)</td><td rowspan="2" style="text-align:center;">0.048</td><td rowspan="2" style="text-align:center;">0.712</td><td rowspan="2" style="text-align:center;">0.004</td><td rowspan="2" style="text-align:center;">0.976</td></tr>
-<tr><td>Female</td><td style="text-align:center;">19 (32.8)</td></tr>				
-<tr><td rowspan="2">Mother tongue</td><td>English</td><td style="text-align:center;">11 (19.0)</td><td rowspan="2" style="text-align:center;">-0.172</td><td rowspan="2" style="text-align:center;">0.185</td><td rowspan="2" style="text-align:center;"><strong>-0.384</strong></td><td rowspan="2" style="text-align:center;"><strong>&lt;0.0001</strong></td></tr>
-<tr><td>Other</td><td style="text-align:center;">47 (81.0)</td></tr>
-<tr><td rowspan="2">Health literacy</td><td>Adequate</td><td style="text-align:center;">46 (79.3)</td><td rowspan="2" style="text-align:center;">0.01</td><td rowspan="2" style="text-align:center;">0.940	</td><td rowspan="2" style="text-align:center;">0.012</td><td rowspan="2" style="text-align:center;">0.921</td></tr>
-<tr><td>Limited</td><td style="text-align:center;">12 (20.7)</td></tr>				
-<tr><td rowspan="2">Health status</td><td>Healthy</td><td style="text-align:center;">45 (77.6)</td><td rowspan="2" style="text-align:center;">-0.077</td><td rowspan="2" style="text-align:center;">0.560	</td><td rowspan="2" style="text-align:center;"><strong>-0.220</strong></td><td rowspan="2" style="text-align:center;"><strong>-0.025</strong></td></tr>
-<tr><td>Not healthy</td><td style="text-align:center;">13 (22.4)</td></tr>				
-<tr><td rowspan="2">Task search experience</td><td>Have search experience on tasks</td><td style="text-align:center;">18 (31.0)</td><td rowspan="2" style="text-align:center;">0.005</td><td rowspan="2" style="text-align:center;">0.970</td><td rowspan="2" style="text-align:center;">0.213</td><td rowspan="2" style="text-align:center;">0.076</td></tr>
-<tr><td>Have no search experience on tasks</td><td style="text-align:center;">40 (69.0)				
-</td></tr><tr><td colspan="3">Age</td><td style="text-align:center;">-0.002</td><td style="text-align:center;">0.988</td><td style="text-align:center;">-0.141</td><td style="text-align:center;">0.296</td></tr>
-<tr><td colspan="3">Internet use experience (hours/day)</td><td style="text-align:center;">-0.041	</td><td style="text-align:center;">0.755</td><td style="text-align:center;">-0.080</td><td style="text-align:center;">0.513</td></tr>
-<tr><td colspan="3">Frequency of health information seeking</td><td style="text-align:center;"><strong>0.049</strong></td><td style="text-align:center;"><strong>0.043</strong></td><td style="text-align:center;"><strong>0.065</strong></td><td style="text-align:center;"><strong>0.006</strong></td></tr>
+<tr>
+<th rowspan="2">Predictors</th>
+<th rowspan="2">Category</th>
+<th rowspan="2">Frequency (%)</th>
+<th colspan="2">Number of queries</th>
+<th colspan="2">Query length</th>
+</tr>
+<tr>
+<th>Coefficient</th>
+<th>P-value</th>
+<th>Coefficient</th>
+<th>P-value</th>
+</tr>
+<tr>
+<td rowspan="2">Sex</td>
+<td>Male</td>
+<td style="text-align:center;">39 (67.2)</td>
+<td rowspan="2" style="text-align:center;">0.048</td>
+<td rowspan="2" style="text-align:center;">0.712</td>
+<td rowspan="2" style="text-align:center;">0.004</td>
+<td rowspan="2" style="text-align:center;">0.976</td>
+</tr>
+<tr>
+<td>Female</td>
+<td style="text-align:center;">19 (32.8)</td>
+</tr>
+<tr>
+<td rowspan="2">Mother tongue</td>
+<td>English</td>
+<td style="text-align:center;">11 (19.0)</td>
+<td rowspan="2" style="text-align:center;">-0.172</td>
+<td rowspan="2" style="text-align:center;">0.185</td>
+<td rowspan="2" style="text-align:center;">**-0.384**</td>
+<td rowspan="2" style="text-align:center;">**<0.0001**</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align:center;">47 (81.0)</td>
+</tr>
+<tr>
+<td rowspan="2">Health literacy</td>
+<td>Adequate</td>
+<td style="text-align:center;">46 (79.3)</td>
+<td rowspan="2" style="text-align:center;">0.01</td>
+<td rowspan="2" style="text-align:center;">0.940</td>
+<td rowspan="2" style="text-align:center;">0.012</td>
+<td rowspan="2" style="text-align:center;">0.921</td>
+</tr>
+<tr>
+<td>Limited</td>
+<td style="text-align:center;">12 (20.7)</td>
+</tr>
+<tr>
+<td rowspan="2">Health status</td>
+<td>Healthy</td>
+<td style="text-align:center;">45 (77.6)</td>
+<td rowspan="2" style="text-align:center;">-0.077</td>
+<td rowspan="2" style="text-align:center;">0.560</td>
+<td rowspan="2" style="text-align:center;">**-0.220**</td>
+<td rowspan="2" style="text-align:center;">**-0.025**</td>
+</tr>
+<tr>
+<td>Not healthy</td>
+<td style="text-align:center;">13 (22.4)</td>
+</tr>
+<tr>
+<td rowspan="2">Task search experience</td>
+<td>Have search experience on tasks</td>
+<td style="text-align:center;">18 (31.0)</td>
+<td rowspan="2" style="text-align:center;">0.005</td>
+<td rowspan="2" style="text-align:center;">0.970</td>
+<td rowspan="2" style="text-align:center;">0.213</td>
+<td rowspan="2" style="text-align:center;">0.076</td>
+</tr>
+<tr>
+<td>Have no search experience on tasks</td>
+<td style="text-align:center;">40 (69.0)</td>
+</tr>
+<tr>
+<td colspan="3">Age</td>
+<td style="text-align:center;">-0.002</td>
+<td style="text-align:center;">0.988</td>
+<td style="text-align:center;">-0.141</td>
+<td style="text-align:center;">0.296</td>
+</tr>
+<tr>
+<td colspan="3">Internet use experience (hours/day)</td>
+<td style="text-align:center;">-0.041</td>
+<td style="text-align:center;">0.755</td>
+<td style="text-align:center;">-0.080</td>
+<td style="text-align:center;">0.513</td>
+</tr>
+<tr>
+<td colspan="3">Frequency of health information seeking</td>
+<td style="text-align:center;">**0.049**</td>
+<td style="text-align:center;">**0.043**</td>
+<td style="text-align:center;">**0.065**</td>
+<td style="text-align:center;">**0.006**</td>
+</tr>
 </tbody>
 </table>
-
-<h4>Result clicking</h4> 
-
+<h4 id="result-clicking">Result clicking</h4>
 <p>Of the 441 queries issued to search engines, 85% of them were effective. In this study, a query is said to be effective if and only if one or more results were clicked from the result page. Most of the results clicked were those ranked high on the result list. None of the participants clicked results beyond the first page.</p>
-
-<p>In order to analyse the effects of spelling errors, type of query and source of query on the effectiveness of queries, a logistic regression model was computed. The result showed that spelling errors and source of a query were found to have a significant effect on the effectiveness of queries. Queries with spelling errors were 77% less likely to be effective when compared to queries issued with correct spellings [Adjusted odds ratio (AOR) = 0.23; 95% Confidence interval (CI) (0.07, 0.013)]. Regarding the source of the query, if the whole or part of the words of a query was taken from task description, it was 2.22 times more likely to be effective than a query formulated from words outside the task description [Adjusted odds ratio  = 2.22; 95% Confidence interval (1.15, 4.29)]. In this study, the type of query was not found to affect the effectiveness of a query. The analysis output of the logistic regression result is presented in Table 4.</p>
-
-<table class="center">
-<caption><br />Table 4: Logistic regression analysis showing the effects of spelling errors, type of query and source of a query on the effectiveness of queries</caption>
+<p>In order to analyse the effects of spelling errors, type of query and source of query on the effectiveness of queries, a logistic regression model was computed. The result showed that spelling errors and source of a query were found to have a significant effect on the effectiveness of queries. Queries with spelling errors were 77% less likely to be effective when compared to queries issued with correct spellings [Adjusted odds ratio (AOR) = 0.23; 95% Confidence interval (CI) (0.07, 0.013)]. Regarding the source of the query, if the whole or part of the words of a query was taken from task description, it was 2.22 times more likely to be effective than a query formulated from words outside the task description [Adjusted odds ratio = 2.22; 95% Confidence interval (1.15, 4.29)]. In this study, the type of query was not found to affect the effectiveness of a query. The analysis output of the logistic regression result is presented in Table 4.</p>
+<table class="center"><caption>  
+Table 4: Logistic regression analysis showing the effects of spelling errors, type of query and source of a query on the effectiveness of queries</caption>
 <tbody>
-<tr><th rowspan="2">Variables</th><th rowspan="2">Category</th><th colspan="2">Result clicked</th><th rowspan="2">AOR (95% CI)</th><th rowspan="2">P-value</th></tr>
-<tr><th>Yes (%)</th><th>	No (%)</th></tr>		
-<tr><td rowspan="2">Spelling error</td><td>Yes</td><td style="text-align:center;">8 (2.1)</td><td style="text-align:center;">5 (7.6)</td><td style="text-align:center;"><strong>0.23 (0.07, 0.73)</strong></td><td style="text-align:center;"><strong>0.013</strong></td></tr>
-<tr><td>No</td><td style="text-align:center;">367 (97.9)</td><td style="text-align:center;">61 (92.4)</td><td style="text-align:center;">1*</td><td>&nbsp;</td></tr>	
-<tr><td rowspan="3">Type of query</td><td>Keyword</td><td style="text-align:center;">46 (12.3)</td><td style="text-align:center;">8 (12.1)</td><td style="text-align:center;">1.21 (0.53, 2.78)</td><td style="text-align:center;">0.651</td></tr>
-<tr><td>Question based</td><td style="text-align:center;">96 (25.6)</td><td style="text-align:center;">12 (18.2)</td><td style="text-align:center;">1.69 (0.85, 3.36)</td><td style="text-align:center;">0.138</td></tr>
-<tr><td>Word strings</td><td style="text-align:center;">233 (62.1)</td><td style="text-align:center;">46 (69.7)</td><td style="text-align:center;">1*</td><td>&nbsp;</td></tr>	
-<tr><td rowspan="2">Source of query</td><td>Task description	</td><td style="text-align:center;">328 (87.5)</td><td style="text-align:center;">51 (77.3)</td><td style="text-align:center;"><strong>2.22 (1.15, 4.29)</strong></td><td style="text-align:center;"><strong>0.018</strong></td></tr>
-<tr><td>Outside task description</td><td style="text-align:center;">47 (12.5)</td><td style="text-align:center;">15 (22.7)</td><td style="text-align:center;">1*</td><td style="text-align:center;">&nbsp;</td></tr>
-<tr><td colspan="6">*1 = reference category (a category selected to compare with other category during data analysis)</td></tr>
+<tr>
+<th rowspan="2">Variables</th>
+<th rowspan="2">Category</th>
+<th colspan="2">Result clicked</th>
+<th rowspan="2">AOR (95% CI)</th>
+<th rowspan="2">P-value</th>
+</tr>
+<tr>
+<th>Yes (%)</th>
+<th>No (%)</th>
+</tr>
+<tr>
+<td rowspan="2">Spelling error</td>
+<td>Yes</td>
+<td style="text-align:center;">8 (2.1)</td>
+<td style="text-align:center;">5 (7.6)</td>
+<td style="text-align:center;">**0.23 (0.07, 0.73)**</td>
+<td style="text-align:center;">**0.013**</td>
+</tr>
+<tr>
+<td>No</td>
+<td style="text-align:center;">367 (97.9)</td>
+<td style="text-align:center;">61 (92.4)</td>
+<td style="text-align:center;">1*</td>
+<td> </td>
+</tr>
+<tr>
+<td rowspan="3">Type of query</td>
+<td>Keyword</td>
+<td style="text-align:center;">46 (12.3)</td>
+<td style="text-align:center;">8 (12.1)</td>
+<td style="text-align:center;">1.21 (0.53, 2.78)</td>
+<td style="text-align:center;">0.651</td>
+</tr>
+<tr>
+<td>Question based</td>
+<td style="text-align:center;">96 (25.6)</td>
+<td style="text-align:center;">12 (18.2)</td>
+<td style="text-align:center;">1.69 (0.85, 3.36)</td>
+<td style="text-align:center;">0.138</td>
+</tr>
+<tr>
+<td>Word strings</td>
+<td style="text-align:center;">233 (62.1)</td>
+<td style="text-align:center;">46 (69.7)</td>
+<td style="text-align:center;">1*</td>
+<td> </td>
+</tr>
+<tr>
+<td rowspan="2">Source of query</td>
+<td>Task description</td>
+<td style="text-align:center;">328 (87.5)</td>
+<td style="text-align:center;">51 (77.3)</td>
+<td style="text-align:center;">**2.22 (1.15, 4.29)**</td>
+<td style="text-align:center;">**0.018**</td>
+</tr>
+<tr>
+<td>Outside task description</td>
+<td style="text-align:center;">47 (12.5)</td>
+<td style="text-align:center;">15 (22.7)</td>
+<td style="text-align:center;">1*</td>
+<td style="text-align:center;"> </td>
+</tr>
+<tr>
+<td colspan="6">*1 = reference category (a category selected to compare with other category during data analysis)</td>
+</tr>
 </tbody>
 </table>
-
-<h4>Source opened</h4>
-
+<h4 id="source-opened">Source opened</h4>
 <p>The most frequent search engine used was <a href="https://www.google.com"><em>Google</em></a> (98%). The other search engine used were <a href="https://www.youtube.com/"><em>YouTube</em></a>, <a href="https://www.reddit.com"><em>Reddit</em></a>, <a href="https://www.bing.com/"><em>Bing</em></a>, <a href="https://medlineplus.gov"><em>MedlinePlus</em></a> and <a href="http://www.acaloriecounter.com"><em>A Calorie Counter</em></a>. Participants used the above search engines to jump to specific Websites. In total, participants visited 289 Websites when performing all the tasks. Among these sites, health-specific sites, such as <a href="https://smokefree.gov"><em>smokefree.gov</em></a>, <em><a href="https://www.nhlbi.nih.gov">National Heart, Lung and Blood Institute</a></em>, <em><a href="https://patient.info">Patient</a></em>, <em><a href="https://www.nhs.uk">National Health Service (UK)</a></em>, <em><a href="https://www.cdc.gov">Centers for Disease Control and Prevention</a></em>, <em><a href="https://health.gov">health.gov</a></em>, <em><a href="https://www.heart.org">American Heart Association</a></em>, <em><a href="https://kidshealth.org">KidsHealth</a></em>, <em><a href="http://www.who.int">World Health Organization</a></em> and <em><a href="https://www.webmd.com">WebMD</a></em> were found to be the most frequently visited sites. <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>, a general-purpose site, also appeared to be a popular site visited by the participants.</p>
-
-<h2>Discussion</h2>
-
+<h2 id="discussion">Discussion</h2>
 <p>This paper attempts to describe the basic query features, identify the contextual features affecting query formulation and explore the result clicking behaviour in the domain of health. In order to address these objectives, we first discuss findings on the basic query features (type of query, number of queries and query length) followed by a discussion on the contextual features affecting query formulation. Then, findings of the result clicking behaviour are discussed.</p>
-
 <p>Our research study identified three types of queries, word-based (12.5%), question-based (24.5%) and word-string-based (63%). Most of the participants used word-string-based queries (63%), implying that the participants had attempted to find specific answers for their information needs. Analyses of query reformulation pattern in previous research studies showed that users issue a single-word query when they want to have a deeper understanding of their information need (Broussard and Zhang, 2013; Rieh and Xie, 2006). On the other hand, users added terms to their original query to find specific information to fulfil their information need (Broussard and Zhang, 2013; Rieh and Xie, 2006). The use of word-string-based queries could indicate a lack of defining search strategies and understanding the level of specificity of the search tasks. Hence, providing a query refining feature to health information retrieval systems could help users to refine their search and retrieve specific answers for their information needs. Ways to provide query refining features could be refining by keywords and health topics. Refining by keyword could help to access results related to the query whereas refining by health topics could help to access results based on specific health topics. Moreover, query suggestions could be provided for users to perform related searches that allows them either to formulate a new query or to add terms to an existing query.</p>
-
-<p>In addition, the question-based query was found to be a popular type of query identified in this study. Out of all queries submitted to search engines, about 25% of them were found to be question-based queries. This indicates participants prefer to express their query or information need in a more natural way using natural language questions. Wildemuth, De Bliek, Friedman and Miya (<a href="#wil94">1994</a>) state that the most natural way for people to seek information is to ask questions. The popularity of question-based queries could indicate the participants’ preference to find specific answers to their information needs. Including a question-answering technique in health information retrieval systems could help users to express their information need in natural language questions and retrieve specific answers for their questions. A question and answering system can automatically analyse documents and return answers in response to users’ questions (<a href="#dod13">Dodiya and Jain, 2013</a>). Information extraction and natural language processing techniques could be employed to provide relevant answers to questions posed by users. </p>
-
+<p>In addition, the question-based query was found to be a popular type of query identified in this study. Out of all queries submitted to search engines, about 25% of them were found to be question-based queries. This indicates participants prefer to express their query or information need in a more natural way using natural language questions. Wildemuth, De Bliek, Friedman and Miya (<a href="#wil94">1994</a>) state that the most natural way for people to seek information is to ask questions. The popularity of question-based queries could indicate the participants’ preference to find specific answers to their information needs. Including a question-answering technique in health information retrieval systems could help users to express their information need in natural language questions and retrieve specific answers for their questions. A question and answering system can automatically analyse documents and return answers in response to users’ questions (<a href="#dod13">Dodiya and Jain, 2013</a>). Information extraction and natural language processing techniques could be employed to provide relevant answers to questions posed by users.</p>
 <p>In our study, the average number of queries issued by the participants was 1.9 for the search tasks which indicates fewer reformulation efforts, implying succinct query issuance by the participants. Spink <em>et al.,</em> (<a href="#spi04">2004</a>) point out that health-related searches lack query reformulation which could be attributed to succinct query issuance. On the other hand, the average query length issued to search engines is four terms per query which is longer than the average query length (2.3 terms per query) identified in a research study conducted by Zhang (<a href="#zha13">2013</a>) on the searching behaviour of students when looking for specific health-related information in MedlinePlus. The use of longer query length could mean that participants express their information need well enough to search engines to retrieve sufficient information to satisfy their need. Longer query length is associated with increased user satisfaction (<a href="#bel03">Belkin <em>et al.,</em>, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>). In this study, the level of satisfaction with search results was 98%.</p>
-
 <p>Among all possible contextual factors fitted to the multiple linear regression model, only frequency of health information seeking was found to affect the number of queries. Participants who frequently seek health information issue more queries. Their previous experience seems to motivate frequent health information seekers to be exploratory searchers. In exploratory searching, a user issues the first query representing his/her initial understanding of the problem. As the search continues, the user learns new keywords and is triggered to modify the initial query. The searching continues until the user satisfied with the information found (<a href="#pan14">Pang, Chang, Pearce and Verspoor, 2014</a>). Hence, frequent health information seeking enables users to explore information in depth. Perhaps, providing related queries in information retrieval systems could help users to select suitable terms to explore and gain a deeper understanding of their information needs.</p>
-
-<p>On the other hand, mother tongue, frequency of health information seeking and health status were found to affect query length. Participants whose mother tongue is English were more likely to issue longer query length. This could be because they can express their ideas better than those whose mother tongue is not English. Frequent health information seekers were also more likely to issue longer query length. This finding is in line with other research studies which indicate that frequent Web searchers have the tendency to formulate longer queries (<a href="#aul03">Aula, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>). Previous research studies indicate that longer queries are associated with increased user satisfaction (<a href="#bel03">Belkin <em>et al.,</em>, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>). Hence, experienced users, whose search skills are cultivated by their frequent information searching, seem to use longer queries to satisfy their information need. Similarly, participants who perceive their health status as healthier are more likely to issue longer queries. Healthier people are more likely to actively and frequently search for health information to increase their health knowledge and improve their health status (<a href="#pal08">Pálsdóttir, 2008</a>), implying increased experience and skills in health information searching (<a href="#bel03">Belkin <em>et al.,</em>, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>). These people could issue longer queries to increase their search effectiveness.</p> 
-
+<p>On the other hand, mother tongue, frequency of health information seeking and health status were found to affect query length. Participants whose mother tongue is English were more likely to issue longer query length. This could be because they can express their ideas better than those whose mother tongue is not English. Frequent health information seekers were also more likely to issue longer query length. This finding is in line with other research studies which indicate that frequent Web searchers have the tendency to formulate longer queries (<a href="#aul03">Aula, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>). Previous research studies indicate that longer queries are associated with increased user satisfaction (<a href="#bel03">Belkin <em>et al.,</em>, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>). Hence, experienced users, whose search skills are cultivated by their frequent information searching, seem to use longer queries to satisfy their information need. Similarly, participants who perceive their health status as healthier are more likely to issue longer queries. Healthier people are more likely to actively and frequently search for health information to increase their health knowledge and improve their health status (<a href="#pal08">Pálsdóttir, 2008</a>), implying increased experience and skills in health information searching (<a href="#bel03">Belkin <em>et al.,</em>, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>). These people could issue longer queries to increase their search effectiveness.</p>
 <p>Other contextual features, such as age, sex, health literacy and Internet use experience were not found to influence the number of queries and query length. The possible reason for sex and age not to influence query formulation could be because there is no sex and age difference in health information seeking as identified in a previous research study (Yilma, Inthiran, Reidpath and Orimaye, 2017). Health literacy is presumed to influence query formulation because previous studies point out that people with adequate health literacy level can express their health problems, interact better with their physicians and likely to look for health information (<a href="#ell12">Ellis <em>et al.,</em>, 2012</a>; <a href="#gut14">Gutierrez <em>et al.,</em>, 2014</a>). However, in this study, health literacy is not found to influence query length and number of queries. The reason could be due to the higher health literacy level identified in this study (79.3%). Internet use experience is not also found to influence query length and number of queries in this study. The reason could be because university students presumably have access to the Internet in campuses and hence may have some experience in using the Internet.</p>
-
 <p>Regarding result clicking behaviour, we looked at the effectiveness of queries and the sources opened. Out of all queries issued to search engines, 15% of them were ineffective, that is, none of the results or links were clicked from the result page. Contextual features, such as spelling error and source of query were found to influence the effectiveness of queries. Queries with spelling errors and queries formulated from outside task description contributed to the ineffectiveness of the queries. Issuing a query with correct spellings plays a major role to retrieve effective results. When a user issues queries with spelling errors, the hits returned from search engines could be irrelevant and the user may be disappointed with the search results. As a result, the user is unlikely to click and view results. Hence, it is crucial to provide a function to detect spelling errors and make suggestions during the development of health information retrieval systems. Similarly, a user may not express his/her information need correctly to a search engine, resulting in irrelevant results. Consequently, the user may not click the results. Providing related terms by search engine could help users to express their information need and retrieve relevant results.</p>
-
 <p>In this study, Google, which is a general-purpose search engine, was found to be the most frequently used search engine by participants. General purpose search engines and Websites are useful to support searchers engaged in basic search tasks, but they may not be helpful for searchers who need a deeper understanding of a health topic with multifaceted search tasks that need multiple search sessions and continuous interactions (<a href="#pan14">Pang <em>et al.,</em>, 2014</a>). Hence, it is necessary to promote domain-specific search engines or health information retrieval systems, such as <a href="https://www.webmd.com">WebMed</a>, <a href="https://medlineplus.gov">MedlinePlus</a> and national health information portals (e.g., <a href="http://www.myhealth.gov.my">Myhealth</a>) which were rarely used by participants in this study. Results of other research studies in Iran (<a href="#gav13">Gavgani, Qeisari and Jafarabadi, 2013</a>), Southeast Asia (<a href="#int15b">Inthiran and Soyiri, 2015</a>), China (<a href="#yul12">Yuli, Zhang and Xia, 2012</a>) have supported our finding that Google is the most preferred search engine to search for health information.</p>
-
 <p>A total of 289 Websites were viewed by participants when performing the four tasks. Even though health-specific Websites were frequently viewed, general purpose Websites, e.g., Wikipedia, appeared to be popular sites visited by participants. The reason for participants to use Wikipedia frequently could be because it is ranked high in search engines. Moreover, the contents could be easier for participants to understand. In the future, it would be worthwhile to study the role of general-purpose Websites, such as Wikipedia. Another aspect of the Websites visited was that the national health portal, <a href="http://www.myhealth.gov.my">Myhealth</a>, was rarely used. Promoting such Websites among university population could help to get national-specific health information.</p>
-
-
-<h2>Conclusion and recommendation</h2>
-
+<h2 id="conclusion-and-recommendation">Conclusion and recommendation</h2>
 <p>We conducted a user-based interactive information retrieval study to understand the effect of contextual features on health information searching behaviour. We found interesting results that could have the potential to improve health information retrieval systems.</p>
-
 <p>Query length and number of queries are associated with frequency of health information seeking. Frequent health information seeking leads to more queries enabling users to explore information deeply and increase health knowledge. However, since most of the participants use a general search engine which supports basic searches (<a href="#pan14">Pang <em>et al.,</em>, 2014</a>), it is important to promote health-specific search engines that can support exploratory searching.</p>
-
 <p>Mother tongue and health status are the other contextual features found to affect query length. English as mother tongue and being healthy contribute to long query length, indicating better health information retrieval as long query length is associated with increased user satisfaction with search results (<a href="#bel03">Belkin <em>et al.,</em>, 2003</a>; <a href="#lop10">Lopes and Ribeiro, 2010</a>).</p>
-
 <p>Regarding the effectiveness of queries, queries with spelling errors and queries formulated outside task descriptions are found to be ineffective. Providing automatic error detection and alternative terms in health information retrieval system could help users to retrieve required information effectively.</p>
-
-<h2>Limitations</h2>
-
+<h2 id="limitations">Limitations</h2>
 <p>This research study has a few limitations. First, the sample size is relatively small which could make it difficult to generalise the study. Moreover, the small sample size may have less power to conduct regression analysis. In future observational studies, we will increase the number of participants so that we have sufficient data to undergo regression analysis. Additionally, the homogeneity with respect to the ‘age of the participants’ can be considered a limitation because it is difficult to conclude whether age is a predictor of query formulation or not. Future research studies should consider a study population with a different age group.</p>
-
- 
- <h2>Acknowledgements</h2> 
- 
- <p>The authors would like to thank the participants of this research study.</p> 
- 
- <h2 id="author">About the author</h2> 
- 
- <p><strong>Tesfahun Melese Yilma</strong> is a doctoral candidate at the School of Information Technology, Monash University, Malaysia. He has a master’s degree in public health informatics from the University of Gondar, Ethiopia and bachelor’s degree in industrial engineering from Mekelle University, Ethiopia. His research interest includes health informatics, health information retrieval, health information system analysis, design and evaluation, evidence-based medicine and data management and analysis. He may be reached at <a href="mailto:tesfahun.melese@monash.edu">tesfahun.melese@monash.edu</a><br />
-<strong>Anushia Inthiran</strong> is a Senior Lecturer at the Department of Accounting and Information Systems in the University of Canterbury, New Zealand. She has a PhD in Information Technology from Monash University, a master’s degree in technology management from Staffordshire University, a graduate certificate in higher education from Monash University and a bachelor’s degree in computing from Monash University. Her research interest includes online health search, interactive information retrieval, computer human interaction and library and information science. She may be reached at <a href="mailto:anushia.inthiran@canterbury.ac.nz">anushia.inthiran@canterbury.ac.nz</a>.<br />
-<strong>Daniel D Reidpath</strong> is a Professor of Population Health and Public Health at Jeffrey Cheah School of Medicine and Health Sciences, Monash University, Malaysia. He holds a PhD from the University of Western Australia, a diploma of educational psychology from Monash University and a Bachelor of Arts from Swinburne Institute of Technology. His research focus is mainly on the measurement of population health, social stigma (particularly HIV related stigma) and health equity. He may be reached at <a href="mailto:daniel.reidpath@monash.edu">daniel.reidpath@monash.edu</a>.<br />
-<strong>Sylvester Olubolu Orimaye</strong> works at the College of Public Health in East Tennessee State University, United States of America. He has a PhD in information technology from Monash University, a Master of Philosophy in information technology from Monash University and a BSC in computing from Staffordshire University. His research interest includes Natural Language Processing and Machine Learning. He can be contacted at <a href="mailto:orimaye@mail.etsu.edu">orimaye@mail.etsu.edu</a>. 
-</p>
- 
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>The authors would like to thank the participants of this research study.</p>
+<h2 id="about-the-author">About the author</h2>
+<p><strong>Tesfahun Melese Yilma</strong> is a doctoral candidate at the School of Information Technology, Monash University, Malaysia. He has a master’s degree in public health informatics from the University of Gondar, Ethiopia and bachelor’s degree in industrial engineering from Mekelle University, Ethiopia. His research interest includes health informatics, health information retrieval, health information system analysis, design and evaluation, evidence-based medicine and data management and analysis. He may be reached at <a href="mailto:tesfahun.melese@monash.edu">tesfahun.melese@monash.edu</a><br>
+<strong>Anushia Inthiran</strong> is a Senior Lecturer at the Department of Accounting and Information Systems in the University of Canterbury, New Zealand. She has a PhD in Information Technology from Monash University, a master’s degree in technology management from Staffordshire University, a graduate certificate in higher education from Monash University and a bachelor’s degree in computing from Monash University. Her research interest includes online health search, interactive information retrieval, computer human interaction and library and information science. She may be reached at <a href="mailto:anushia.inthiran@canterbury.ac.nz">anushia.inthiran@canterbury.ac.nz</a>.<br>
+<strong>Daniel D Reidpath</strong> is a Professor of Population Health and Public Health at Jeffrey Cheah School of Medicine and Health Sciences, Monash University, Malaysia. He holds a PhD from the University of Western Australia, a diploma of educational psychology from Monash University and a Bachelor of Arts from Swinburne Institute of Technology. His research focus is mainly on the measurement of population health, social stigma (particularly HIV related stigma) and health equity. He may be reached at <a href="mailto:daniel.reidpath@monash.edu">daniel.reidpath@monash.edu</a>.<br>
+<strong>Sylvester Olubolu Orimaye</strong> works at the College of Public Health in East Tennessee State University, United States of America. He has a PhD in information technology from Monash University, a Master of Philosophy in information technology from Monash University and a BSC in computing from Staffordshire University. His research interest includes Natural Language Processing and Machine Learning. He can be contacted at <a href="mailto:orimaye@mail.etsu.edu">orimaye@mail.etsu.edu</a>.</p>
 </section>
 <section class="refs">
- 
- 
-<h2>References</h2> 
- 
- <ul class="refs"> 
- <li id="aul03">Aula, A. (2003). Query formulation in Web information search. In Isaías, P. and Karmakar, N. (Eds.), <em>Proceedings of the IADIS International Conference WWW/Internet 2003, vol. 1,</em> (pp. 403-410).</li>
-
-<li id="bel03">Belkin, N. J., Kelly, D., Kim, G., Kim, J.-Y., Lee, H.-J., Muresan, G., . . . Cool, C. (2003). <a href="http://www.webcitation.org/77YdYoiMV">Query length in interactive information retrieval</a>. In <em>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval, Toronto, Canada, July 28 to August 1, 2003</em>, (pp. 205-212). New York, NY: ACM. Retrieved from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.3106&amp;rep=rep1&amp;type=pdf.  (Archived by WebCite® at http://www.webcitation.org/77YdYoiMV)</li>
-
-<li id="bie06">Bierig, R. &amp; Göker, A. (2006). <a href="http://www.webcitation.org/77Ydt0uY9">Time, location and interest: an empirical and user-centred study</a>. In <em>Proceedings of the 1st international conference on Information interaction in context, Copenhagen, Denmark, October 18 - 20, 2006</em>, (pp. 79-87). New York, NY: ACM. Retrieved from http://bierig.net/wp-content/papercite-data/pdf/bierig2006timelocationinterest.pdf. (Archived by WebCite® at http://www.webcitation.org/77Ydt0uY9)</li>
-
-<li id="bod14">Boden, C. (2014). Overcoming the linguistic divide: a barrier to consumer health information. <em>Journal of the Canadian Health Libraries Association/Journal De L’Association Des Bibliothèques De La Santé Du Canada, 30</em>(3), 75-80. </li>
-
-<li id="bor00">Borlund, P. (2000). Experimental components for the evaluation of interactive information retrieval systems. <em>Journal of documentation, 56</em>(1), 71-90.</li>
-
-<li id="bro13">Broussard, R. &amp; Zhang, Y. (2013). Seeking treatment options: consumers' search behaviors and cognitive activities. <em>Proceedings of the ASIS&amp;T Annual meeting, 50</em>(1), 1-10</li>
-
-<li id="che12">Chew, M. H., Rahman, M. &amp; Salleh, S. A. (2012). Dengue in Malaysia: an epidemiological perspective study. <em>Pakistan Journal of Medical Sciences, 28</em>(3), 643-647.</li>
-
-<li id="dod13">Dodiya, T. &amp; Jain, S. (2013). Comparison of question answering systems. In A. Abraham  &amp; S. M. Thampi (eds.), <em>Intelligent informatics: proceedings of the International Symposium on Intelligent Informatics ISI'12 held at August 4-5 2012, Chennai, India</em> (pp. 99-107). Berlin: Springer. </li>
-
-<li id="duo17">Duong, T. V., Aringazina, A., Baisunova, G., Nurjanah, Pham, T. V., Pham, K. M., . . . Chang, P. W. (2017). Measuring health literacy in Asia: validation of the HLS-EU-Q47 survey tool in six Asian countries. <em>Journal of Epidemiology, 27</em>(2), 80-86.</li>
- 
-<li id="ell12">Ellis, J., Mullan, J., Worsley, A. &amp; Pai, N. (2012). <a href="http://www.Webcitation.org/76EJEq2x6">The role of health literacy and social networks in arthritis patients' health information-seeking behavior: a qualitative study</a>. <em>International journal of family medicine, 2012</em>, Article ID 397039. Retrieved from https://www.hindawi.com/journals/ijfm/2012/397039/. (Archived by WebCite® at http://www.Webcitation.org/76EJEq2x6)</li>
-
-<li id="eri12">Eriksson-Backa, K., Ek, S., Niemelä, R. &amp; Huotari, M. L. (2012). Health information literacy in everyday life: a study of Finns aged 65–79 years. <em>Health Informatics Journal, 18</em>(2), 83-94.</li>
-
-<li id="esc05">Escoffery, C., Miner, K. R., Adame, D. D., Butler, S., McCormick, L.  &amp; Mendell, E. (2005). Internet use for health information among college students. <em>Journal of American College Health, 53</em>(4), 183-188.</li>
-
-<li id="eur14">European Commission. (2014, November 28). <a href="http://www.Webcitation.org/76EJZTY41">Europeans becoming enthusiastic users of online health information.</a> <em>Digital Single Market. News.</em> Retrieved from https://ec.europa.eu/digital-agenda/en/news/europeans-becoming-enthusiastic-users-online-health-information.(Archived by WebCite® at http://www.Webcitation.org/76EJZTY41)</li>
-
-<li id="fei15">Feinberg, I., Greenberg, D. &amp; Frijters, J. (2015). <em><a href="http://www.Webcitation.org/76EK7t0fE">Understanding health information seeking behaviors of adults with low literacy, numeracy and problem solving skills: results from the 2012 US PIAAC study.</a></em> Washington, DC: US Program for the Assessment of Adult Competencies. Retrieved from https://piaac.squarespace.com/s/Feinberg_Greenberg_Frijters_PIAAC.pdf. (Archived by WebCite® at http://www.Webcitation.org/76EK7t0fE)</li>
-
-<li id="fen81">Fenichel, C. H. (1981). Online searching: measures that discriminate among users with different types of experiences. <em>Journal of the American Society for Information Science, 32</em>(1), 23-32.</li>
-
-<li id="fik14">Fiksdal, A. S., Kumbamu, A., Jadhav, A. S., Cocos, C., Nelsen, L. A., Pathak, J. &amp; McCormick, J. B. (2014). Evaluating the process of online health information searching: a qualitative approach to exploring consumer perspectives. <em>Journal of Medical Internet Research, 16</em>(10), e224.</li>
-
-<li id="fox13">Fox, S. &amp; Duggan, M. (2013). <em><a href="http://www.Webcitation.org/76EKIfT9T">Health online 2013.</a></em> Washington, DC: Pew Research Institute. Retrieved from http://www.pewinternet.org/2013/01/15/health-online-2013/. (Archived by WebCite® at http://www.Webcitation.org/76EKIfT9T)</li>
-
-<li id="gav13">Gavgani, V. Z., Qeisari, E. &amp; Jafarabadi, M.A. (2013). <a href="http://www.Webcitation.org/76EKVk1Np">Health information seeking behavior: a study of a developing country</a>. <em>Library Philosophy and Practice (e-journal)</em>, Paper 902. Retrieved from http://digitalcommons.unl.edu/libphilprac/902. (Archived by WebCite® at http://www.Webcitation.org/76EKVk1Np)</li>
-
-<li id="gut14">Gutierrez, N., Kindratt, T.B., Pagels, P., Foster, B. &amp; Gimpel, N.E. (2014). Health literacy, health information seeking behaviors and internet use among patients attending a private and public clinic in the same geographic area. <em>Journal of Community Health, 39</em>(1), 83-89.</li>
-
-<li id="guz10">Guzman, A. &amp; Istúriz, R.E. (2010). Update on the global spread of dengue. <em>International Journal of Antimicrobial Agents, 36</em>(Supplement 1), S40-S42. </li>
-
-<li id="har15">Harrell, F.E.A. (2015). <em>Regression modeling strategies: with applications to linear models, logistic and ordinal regression and survival analysis.</em> (2nd ed.). Cham, NY : Springer.</li>
-
-<li id="hu13">Hu, R., Lu, K. &amp; Joo, S. (2013). <a href="http://www.webcitation.org/77jKHap2D">Effects of topic familiarity and search skills on query reformulation behavior</a>. <em>Proceedings of the ASIS&amp;T annual meeting,  50</em>(1), 1-9. Retrieved from https://onlinelibrary.wiley.com/doi/full/10.1002/meet.14505001062. (Archived by WebCite® at http://www.webcitation.org/77jKHap2D)</li>
-
-<li id="ibm11">IBM Corp. (2011). <em>IBM SPSS Statistics for Windows (Version 20.0</em>). Armonk, NY: IBM Corporation.</li>
-
-<li id="ing05">Ingwersen, P. &amp; Järvelin, K. (2005). Information retrieval in context – IRiX. <em>ACM SIGIR Forum 39</em>(2), 31-39. </li>
-
-<li id="int11a">Inthiran, A., Alhashmi, S., & Ahmed, P. (2011a). Investigating interactive search behaviour of medical students: an exploratory survey. In <em>Proceedings of the 23rd Australian Computer-Human Interaction Conference, Canberra, Australia  — November 28 - December 02, 2011</em> (pp. 156-165).  New York, NY: ACM.</li>
-
-<li id="int11b">Inthiran, A., Alhashmi, S. &amp; Ahmed, P. (2011b). Profiling a non-medical professional searcher on a medical domain: what do search patterns and demographic details reveal? In M. Salem, K. Shaalan, F. Oroumchian, A. Shakery, and H. Khelalfa (Eds.), <em>Information retrieval technology</em> (pp. 157-168). Berlin: Springer. (Lecture Notes in Computer Science, volume 7097).</li> 
-
-<li id="int15a">Inthiran, A., Alhashmi, S.M. &amp; Ahmed, P.K. (2015). A user study on the information search behaviour of medical students. <em>Malaysian Journal of Library and Information Science, 20</em>(1), 61-77.</li>
-
-<li id="int15b">Inthiran, A. &amp; Soyiri, I. (2015). Searching for health information online for my child: a perspective from South East Asia. In B. R. Allen, J. Hunter and L. M. Zeng (Eds.), <em>Digital Libraries: Providing Quality Information: 17th International Conference on Asia-Pacific Digital Libraries, ICADL 2015, Seoul, Korea, December 9-12, 2015. Proceedings</em> (pp. 76-81). Cham, Switzerland: Springer International Publishing.</li>
-
-<li id="jad14a">Jadhav, A., Andrews, D., Fiksdal, A., Kumbamu, A., McCormick, J. B., Misitano, A., ...  &amp; Pathak, J. (2014). <a href="http://www.Webcitation.org/76EKsHXek">Comparative analysis of online health queries originating from personal computers and smart devices on a consumer health information portal.</a> <em>Journal of Medical Internet Research, 16</em>(7). Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4115262/. (Archived by WebCite® at http://www.Webcitation.org/76EKsHXek)</li>
-
-<li id="jad14b">Jadhav, A., Sheth, A. &amp; Pathak, J. (2014). Analysis of online information searching for cardiovascular diseases on a consumer health information portal. In <em>AMIA Annual Symposium Proceedings, 2014</em>, (pp. 739-748). Bethesda, MD: American Medical Informatics Association.</li>
-
-<li id="jan13">Janeice, A., Eileen, M. &amp; Trauth, M. (2013). Socio-economic influences on health information searching in the USA: the case of diabetes. <em>Information Technology and People, 26</em>(4), 324-346. </li>
-
-<li id="jon81">Jones, K.S. (1981). <em>Information retrieval experiment</em>. London: Butterworths.</li>
-
-<li id="jun14">Jung, M. (2014). Determinants of health information-seeking behavior: implications for post-treatment cancer patients. <em>Asian Pacific Journal of Cancer Prevention, 15</em>(16), 6499-6504.</li>
-
-<li id="kel06">Kelly, D. (2006). Measuring online information seeking context, part 1: background and method. <em>Journal of the American Society for Information Science and Technology, 57</em>(13), 1729-1739. </li>
-
-<li id="kel09">Kelly, D. (2009). <a href="http://www.webcitation.org/77jMpl9ug">Methods for evaluating interactive information retrieval systems with users</a>.  <em>Foundations and Trends in Information Retrieval, 3</em>(1–2), 1-224. Retrieved from https://ils.unc.edu/courses/2019_spring/inls509_001/papers/FnTIR-Press-Kelly.pdf. (Archived by WebCite® at http://www.webcitation.org/77jMpl9ug)</li>
-
-<li id="kim15">Kim, S. (2015). An exploratory study of inactive health information seekers. <em>International Journal of Medical Informatics, 84</em>(2), 119-133. </li>
-
-<li id="lam07">Lambert, S.D. &amp; Loiselle, C.G. (2007). Health information seeking behavior. <em>Qualitative Health Research, 17</em>(8), 1006-1019.</li>
-
-<li id="lev60">Levene, H. (1960). Robust testes for equality of variances. In I.E. Olkin (Ed.), <em>Contributions to probability and statistics: essays in honor of Harold Hotelling</em> (pp. 278–292). Stanford, CA: Stanford University Press.</li>
-
-<li id="lop10">Lopes, C. T. &amp; Ribeiro, C. (2010). Context effect on query formulation and subjective relevance in health searches. In <em>Proceedings of the third symposium on Information interaction in context, New Brunswick, New Jersey, USA — August 18 - 21, 2010 </em> (pp. 205-214). New York, NY: ACM. </li>
-
-<li id="luo08">Luo, G., Tang, C., Yang, H. &amp; Wei, X. (2008). MedSearch: a specialized search engine for medical information retrieval. In <em>Proceedings of the 17th ACM conference on Information and knowledge management, Napa Valley, California, USA — October 26 - 30, 2008 </em> (pp. 143-152). New York, NY: ACM. </li>
-
-<li id="mal12">Malaysia. <em>Institute for Public Health</em> (2012). <em><a href="http://www.webcitation.org/77jOPhDDn">Global adult tobacco survey. Malaysia 2011.</a></em> Kuala Lumpur: Ministry of Health, Institute for Public Health.  Retrieved from https://www.who.int/tobacco/surveillance/survey/gats/malaysia_country_report_2011.pdf. (Archived by WebCite® at http://www.webcitation.org/77jOPhDDn)</li>
-
-<li id="mal11">Malaysia. <em>Ministry of Health</em>. (2011). <em><a href="http://www.Webcitation.org/76EL4Pzw5">NCD prevention and control: annual report</a>.</em> Putrajaya, Malaysia: Ministry of Health.  Retrieved from http://www.moh.gov.my/images/gallery/nspncd/AnnualReport2010NCD.pdf. (Archived by WebCite® at http://www.Webcitation.org/76EL4Pzw5)</li>
-
-<li id="med15">Medlock, S., Eslami, S., Askari, M., Arts, D. L., Sent, D., de Rooij, S. E. &amp; Abu-Hanna, A. (2015). Health information–seeking behavior of seniors who use the internet: a survey. <em>Journal of Medical Internet Research, 17</em>(1), e10.</li>
-
-<li id="moh14">Mohamad, E., Su, T. T., Majid, H. A. &amp; Chinna, K. (2014). <em>Health literacy in Malaysia: HLS-Asia questionnaire validation</em>. Paper presented at the The Second International Conference on Health Literacy and Health Promotion, Taipei, Taiwan.</li>
-
-<li id="pal08">Pálsdóttir, Á. (2008). <a href="http://www.Webcitation.org/76ENpGSDz">Information behaviour, health self-efficacy beliefs and health behaviour in Icelanders' everyday life.</a> <em>Infomation Research, 13</em>(1), Paper 334. Retrieved from http://www.informationr.net/ir/13-1/paper334.html. (Archived by WebCite® at http://www.Webcitation.org/76ENpGSDz)</li>
-
-<li id="pan14">Pang, P. C. I., Chang, S., Pearce, J. M. &amp; Verspoor, K. (2014). Online health information seeking behaviour: understanding different search approaches. In <em>Proceedings of the Pacific Asia Conference on Information Systems (PACIS), 2014, Chengdu, China</em>  (paper 229).  Atlanta, GA: Association for Information Systems.</li>
-
-<li id="pus15">Puspitasari, I., Moriyama, K., Fukui, K. I. &amp; Numao, M. (2015). <a href="http://www.webcitation.org/77jNElwnJ">Effects of individual health topic familiarity on activity patterns during health information searches</a>. <em>Journal of Medical Internet Research, 3</em>(1), e16. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4381811/. (Archived by WebCite® at http://www.webcitation.org/77jNElwnJ)</li>
-
-<li id="ram14">Ramprasath, M. &amp; Hariharan, S. (2014). Query refinement based question answering system using pattern analysis. <em>Advances in Natural and Applied Sciences, 8</em>(17), 8-15. </li>
-
-<li id="rie06">Rieh, S. Y. &amp; Xie, H. (2006). Analysis of multiple query reformulations on the Web: the interactive information retrieval context. <em>Information Processing and Management, 42</em>(3), 751-768. </li>
-
-<li id="she13">Shepard, D. S., Lees, R., Ng, C. W., Undurraga, E. A., Halasa, Y. &amp; Lum, L. (2013). <em><a href="http://www.Webcitation.org/76ELJhU1D">Burden of dengue in Malaysia: report from a collaboration between universities and the Ministry of Health of Malaysia</a></em>. Waltham, MA: Brandeis University. Retrieved from http://people.brandeis.edu/~shepard/Report_dengue_in_Malaysia_v50.pdf. (Archived by WebCite® at http://www.Webcitation.org/76ELJhU1D)</li>
-
-<li id="sor13">Sørensen, K., Van den Broucke, S., Pelikan, J. M., Fullam, J., Doyle, G., Slonska, Z., ... and Brand, H. (2013). Measuring health literacy in populations: illuminating the design and development process of the European Health Literacy Survey Questionnaire (HLS-EU-Q). <em>BMC Public Health, 13</em>(1), 948. </li>
-
-<li id="spi04">Spink, A., Yang, Y., Jansen, J., Nykanen, P., Lorence, D. P., Ozmutlu, S. &amp; Ozmutlu, H. C. (2004). A study of medical and health queries to Web search engines. <em>Health Information and Libraries Journal, 21</em>(1), 44-51. </li>
-
-<li id="ste03">Sterne, J. &amp; Kirkwood, B. (2003). <em>Essential medical statistics</em>. Hoboken, NJ: John Wiley and Sons, Ltd.</li>
-
-<li id="sut98">Sutcliffe, A. &amp; Ennis, M. (1998). Towards a cognitive theory of information retrieval. <em>Interacting with Computers, 10</em>(3), 321-351.</li>
-
-<li id="wan13">Wang, M. P., Viswanath, K., Lam, T. H., Wang, X. &amp; Chan, S. S. (2013). <a href="http://www.webcitation.org/77jNbseHn">Social determinants of health information seeking among Chinese adults in Hong Kong</a>. <em>PloS one, 8</em>(8), e73049. Retrieved from https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0073049. (Archived by WebCite® at http://www.webcitation.org/77jNbseHn)</li>
-
-<li id="wea10">Weaver, J. B., Mays, D., Weaver, S. S., Hopkins, G. L., Eroğlu, D. &amp; Bernhardt, J. M. (2010). Health information–seeking behaviors, health indicators and health risks. <em>American Journal of Public Health, 100</em>(8), 1520-1525.</li>
-
-<li id="wil94">Wildemuth, B. M., De Bliek, R., Friedman, C. P. &amp; Miya, T. S. (1994). Information-seeking behaviors of medical students: a classification of questions asked of librarians and physicians. <em>Bulletin of the Medical Library Association, 82</em>(3), 295-304.</li>
-
-<li id="who14">World Health Organization. (2014). Noncommunicable diseases (NCD) country profiles: Malaysia. In Malaysia (pp. 1). Geneva, Swizerland: WHO.</li>
-
-<li id="who15a">World Health Organization. (2015a). <em><a href="http://www.Webcitation.org/76ELV28sa">Obesity and overweight</a></em>. Geneva, Switzerland: World Health Organization. Retrieved from http://www.who.int/mediacentre/factsheets/fs311/en/. (Archived by WebCite® at http://www.Webcitation.org/76ELV28sa)</li>
-
-<li id="who15b">World Health Organization. (2015b). <a href="http://www.Webcitation.org/76ELdXqe6"><em>Update on the Dengue situation in the Western Pacific Region</em></a>. Manilla, Philippines: World Health Organization, Western Pacific Region. (Dengue Situation Update 477) Retrieved from http://www.wpro.who.int/emerging_diseases/dengue_biweekly_20151103.pdf?ua=1. (Archived by WebCite® at http://www.Webcitation.org/76ELdXqe6)</li>
-
-<li id="who15c">World Health Organization. (2015c). <em><a href="http://www.Webcitation.org/76ELoKY6R">WHO report on the global tobacco epidemic, 2015. Raising taxes on tobacco.</a></em>  Geneva, Switzerland: World Health Organization.  Retrieved from http://apps.who.int/iris/bitstream/10665/178574/1/9789240694606_eng.pdf?ua=1andua=1. (Archived by WebCite® at http://www.Webcitation.org/76ELoKY6R)</li>
-
-<li id="yeg09">Yeganova, L., Comeau, D. C., Kim, W. &amp; Wilbur, W. J. (2009). How to interpret PubMed queries and why it matters.<em> Journal of the American Society for Information Science and Technology, 60</em>(2), 264-274. </li>
-
-<li id="yi15">Yi, Y. J. (2015). Health literacy and health information behavior of Florida public library users: a mixed methods study. <em>Journal of Librarianship and Information Science, 47</em>(1), 17-29. </li>
-
-<li id="yil17">Yilma, T. M., Inthiran, A., Reidpath, D. &amp; Orimaye, S. O. (2017). Health Information seeking and its associated factors among university students: a case in a middle-income setting. In <em>Proceedings of the Pacific Asia Conference on Information Systems (PACIS), 2017, Langkawi, Malaysia</em>, (paper 229).  Atlanta, GA: Association for Information Systems.</li>
-
-<li id="yul12">Yuli, Y., Zhang, S. &amp; Xia, L. (2012). Preventive health information seeking behavior among general population in China. In <em>Proceedings of the 2012 International Symposium on Information Technology in Medicine and Education</em> (Vol. 2, pp. 608-612). New York, NY: IEEE.</li>
-
-<li id="zha13">Zhang, Y. (2013). Searching for specific health-related information in MedlinePlus: behavioral patterns and user experience. <em>Journal of the Association for Information Science and Technology, 65</em>(1), 53-68. </li>
-
-<li id="zha12">Zhang, Y., Wang, P., Heaton, A. &amp; Winkler, H. (2012). <a href="http://www.webcitation.org/77jOfiRj6">Health information searching behavior in MedlinePlus and the impact of tasks</a>. In <em>Proceedings of the 2nd ACM SIGHIT international health informatics symposium, January 28-30, 2012, Miami, Florida, USA</em>.  (pp. 641-650). New York, NY: ACM. Retrieved from https://www.ischool.utexas.edu/~yanz/fp088_Zhang.pdf. (Archived by WebCite® at http://www.webcitation.org/77jOfiRj6)</li>
-
- </ul>  
-
+<h2 id="references">References</h2>
+<ul>
+<li>Aula, A. (2003). Query formulation in Web information search. In Isaías, P. and Karmakar, N. (Eds.), <em>Proceedings of the IADIS International Conference WWW/Internet 2003, vol. 1,</em> (pp. 403-410).</li>
+<li>Belkin, N. J., Kelly, D., Kim, G., Kim, J.-Y., Lee, H.-J., Muresan, G., . . . Cool, C. (2003). <a href="http://www.webcitation.org/77YdYoiMV">Query length in interactive information retrieval</a>. In <em>Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval, Toronto, Canada, July 28 to August 1, 2003</em>, (pp. 205-212). New York, NY: ACM. Retrieved from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.3106&amp;rep=rep1&amp;type=pdf. (Archived by WebCite® at http://www.webcitation.org/77YdYoiMV)</li>
+<li>Bierig, R. &amp; Göker, A. (2006). <a href="http://www.webcitation.org/77Ydt0uY9">Time, location and interest: an empirical and user-centred study</a>. In <em>Proceedings of the 1st international conference on Information interaction in context, Copenhagen, Denmark, October 18 - 20, 2006</em>, (pp. 79-87). New York, NY: ACM. Retrieved from http://bierig.net/wp-content/papercite-data/pdf/bierig2006timelocationinterest.pdf. (Archived by WebCite® at http://www.webcitation.org/77Ydt0uY9)</li>
+<li>Boden, C. (2014). Overcoming the linguistic divide: a barrier to consumer health information. <em>Journal of the Canadian Health Libraries Association/Journal De L’Association Des Bibliothèques De La Santé Du Canada, 30</em>(3), 75-80.</li>
+<li>Borlund, P. (2000). Experimental components for the evaluation of interactive information retrieval systems. <em>Journal of documentation, 56</em>(1), 71-90.</li>
+<li>Broussard, R. &amp; Zhang, Y. (2013). Seeking treatment options: consumers' search behaviors and cognitive activities. <em>Proceedings of the ASIS&amp;T Annual meeting, 50</em>(1), 1-10</li>
+<li>Chew, M. H., Rahman, M. &amp; Salleh, S. A. (2012). Dengue in Malaysia: an epidemiological perspective study. <em>Pakistan Journal of Medical Sciences, 28</em>(3), 643-647.</li>
+<li>Dodiya, T. &amp; Jain, S. (2013). Comparison of question answering systems. In A. Abraham &amp; S. M. Thampi (eds.), <em>Intelligent informatics: proceedings of the International Symposium on Intelligent Informatics ISI'12 held at August 4-5 2012, Chennai, India</em> (pp. 99-107). Berlin: Springer.</li>
+<li>Duong, T. V., Aringazina, A., Baisunova, G., Nurjanah, Pham, T. V., Pham, K. M., . . . Chang, P. W. (2017). Measuring health literacy in Asia: validation of the HLS-EU-Q47 survey tool in six Asian countries. <em>Journal of Epidemiology, 27</em>(2), 80-86.</li>
+<li>Ellis, J., Mullan, J., Worsley, A. &amp; Pai, N. (2012). <a href="http://www.Webcitation.org/76EJEq2x6">The role of health literacy and social networks in arthritis patients' health information-seeking behavior: a qualitative study</a>. <em>International journal of family medicine, 2012</em>, Article ID 397039. Retrieved from https://www.hindawi.com/journals/ijfm/2012/397039/. (Archived by WebCite® at http://www.Webcitation.org/76EJEq2x6)</li>
+<li>Eriksson-Backa, K., Ek, S., Niemelä, R. &amp; Huotari, M. L. (2012). Health information literacy in everyday life: a study of Finns aged 65–79 years. <em>Health Informatics Journal, 18</em>(2), 83-94.</li>
+<li>Escoffery, C., Miner, K. R., Adame, D. D., Butler, S., McCormick, L. &amp; Mendell, E. (2005). Internet use for health information among college students. <em>Journal of American College Health, 53</em>(4), 183-188.</li>
+<li>European Commission. (2014, November 28). <a href="http://www.Webcitation.org/76EJZTY41">Europeans becoming enthusiastic users of online health information.</a> <em>Digital Single Market. News.</em> Retrieved from https://ec.europa.eu/digital-agenda/en/news/europeans-becoming-enthusiastic-users-online-health-information.(Archived by WebCite® at http://www.Webcitation.org/76EJZTY41)</li>
+<li>Feinberg, I., Greenberg, D. &amp; Frijters, J. (2015). <em><a href="http://www.Webcitation.org/76EK7t0fE">Understanding health information seeking behaviors of adults with low literacy, numeracy and problem solving skills: results from the 2012 US PIAAC study.</a></em> Washington, DC: US Program for the Assessment of Adult Competencies. Retrieved from https://piaac.squarespace.com/s/Feinberg_Greenberg_Frijters_PIAAC.pdf. (Archived by WebCite® at http://www.Webcitation.org/76EK7t0fE)</li>
+<li>Fenichel, C. H. (1981). Online searching: measures that discriminate among users with different types of experiences. <em>Journal of the American Society for Information Science, 32</em>(1), 23-32.</li>
+<li>Fiksdal, A. S., Kumbamu, A., Jadhav, A. S., Cocos, C., Nelsen, L. A., Pathak, J. &amp; McCormick, J. B. (2014). Evaluating the process of online health information searching: a qualitative approach to exploring consumer perspectives. <em>Journal of Medical Internet Research, 16</em>(10), e224.</li>
+<li>Fox, S. &amp; Duggan, M. (2013). <em><a href="http://www.Webcitation.org/76EKIfT9T">Health online 2013.</a></em> Washington, DC: Pew Research Institute. Retrieved from http://www.pewinternet.org/2013/01/15/health-online-2013/. (Archived by WebCite® at http://www.Webcitation.org/76EKIfT9T)</li>
+<li>Gavgani, V. Z., Qeisari, E. &amp; Jafarabadi, M.A. (2013). <a href="http://www.Webcitation.org/76EKVk1Np">Health information seeking behavior: a study of a developing country</a>. <em>Library Philosophy and Practice (e-journal)</em>, Paper 902. Retrieved from http://digitalcommons.unl.edu/libphilprac/902. (Archived by WebCite® at http://www.Webcitation.org/76EKVk1Np)</li>
+<li>Gutierrez, N., Kindratt, T.B., Pagels, P., Foster, B. &amp; Gimpel, N.E. (2014). Health literacy, health information seeking behaviors and internet use among patients attending a private and public clinic in the same geographic area. <em>Journal of Community Health, 39</em>(1), 83-89.</li>
+<li>Guzman, A. &amp; Istúriz, R.E. (2010). Update on the global spread of dengue. <em>International Journal of Antimicrobial Agents, 36</em>(Supplement 1), S40-S42.</li>
+<li>Harrell, F.E.A. (2015). <em>Regression modeling strategies: with applications to linear models, logistic and ordinal regression and survival analysis.</em> (2nd ed.). Cham, NY : Springer.</li>
+<li>Hu, R., Lu, K. &amp; Joo, S. (2013). <a href="http://www.webcitation.org/77jKHap2D">Effects of topic familiarity and search skills on query reformulation behavior</a>. <em>Proceedings of the ASIS&amp;T annual meeting, 50</em>(1), 1-9. Retrieved from https://onlinelibrary.wiley.com/doi/full/10.1002/meet.14505001062. (Archived by WebCite® at http://www.webcitation.org/77jKHap2D)</li>
+<li>IBM Corp. (2011). <em>IBM SPSS Statistics for Windows (Version 20.0</em>). Armonk, NY: IBM Corporation.</li>
+<li>Ingwersen, P. &amp; Järvelin, K. (2005). Information retrieval in context – IRiX. <em>ACM SIGIR Forum 39</em>(2), 31-39.</li>
+<li>Inthiran, A., Alhashmi, S., &amp; Ahmed, P. (2011a). Investigating interactive search behaviour of medical students: an exploratory survey. In <em>Proceedings of the 23rd Australian Computer-Human Interaction Conference, Canberra, Australia — November 28 - December 02, 2011</em> (pp. 156-165). New York, NY: ACM.</li>
+<li>Inthiran, A., Alhashmi, S. &amp; Ahmed, P. (2011b). Profiling a non-medical professional searcher on a medical domain: what do search patterns and demographic details reveal? In M. Salem, K. Shaalan, F. Oroumchian, A. Shakery, and H. Khelalfa (Eds.), <em>Information retrieval technology</em> (pp. 157-168). Berlin: Springer. (Lecture Notes in Computer Science, volume 7097).</li>
+<li>Inthiran, A., Alhashmi, S.M. &amp; Ahmed, P.K. (2015). A user study on the information search behaviour of medical students. <em>Malaysian Journal of Library and Information Science, 20</em>(1), 61-77.</li>
+<li>Inthiran, A. &amp; Soyiri, I. (2015). Searching for health information online for my child: a perspective from South East Asia. In B. R. Allen, J. Hunter and L. M. Zeng (Eds.), <em>Digital Libraries: Providing Quality Information: 17th International Conference on Asia-Pacific Digital Libraries, ICADL 2015, Seoul, Korea, December 9-12, 2015. Proceedings</em> (pp. 76-81). Cham, Switzerland: Springer International Publishing.</li>
+<li>Jadhav, A., Andrews, D., Fiksdal, A., Kumbamu, A., McCormick, J. B., Misitano, A., ... &amp; Pathak, J. (2014). <a href="http://www.Webcitation.org/76EKsHXek">Comparative analysis of online health queries originating from personal computers and smart devices on a consumer health information portal.</a> <em>Journal of Medical Internet Research, 16</em>(7). Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4115262/. (Archived by WebCite® at http://www.Webcitation.org/76EKsHXek)</li>
+<li>Jadhav, A., Sheth, A. &amp; Pathak, J. (2014). Analysis of online information searching for cardiovascular diseases on a consumer health information portal. In <em>AMIA Annual Symposium Proceedings, 2014</em>, (pp. 739-748). Bethesda, MD: American Medical Informatics Association.</li>
+<li>Janeice, A., Eileen, M. &amp; Trauth, M. (2013). Socio-economic influences on health information searching in the USA: the case of diabetes. <em>Information Technology and People, 26</em>(4), 324-346.</li>
+<li>Jones, K.S. (1981). <em>Information retrieval experiment</em>. London: Butterworths.</li>
+<li>Jung, M. (2014). Determinants of health information-seeking behavior: implications for post-treatment cancer patients. <em>Asian Pacific Journal of Cancer Prevention, 15</em>(16), 6499-6504.</li>
+<li>Kelly, D. (2006). Measuring online information seeking context, part 1: background and method. <em>Journal of the American Society for Information Science and Technology, 57</em>(13), 1729-1739.</li>
+<li>Kelly, D. (2009). <a href="http://www.webcitation.org/77jMpl9ug">Methods for evaluating interactive information retrieval systems with users</a>. <em>Foundations and Trends in Information Retrieval, 3</em>(1–2), 1-224. Retrieved from https://ils.unc.edu/courses/2019_spring/inls509_001/papers/FnTIR-Press-Kelly.pdf. (Archived by WebCite® at http://www.webcitation.org/77jMpl9ug)</li>
+<li>Kim, S. (2015). An exploratory study of inactive health information seekers. <em>International Journal of Medical Informatics, 84</em>(2), 119-133.</li>
+<li>Lambert, S.D. &amp; Loiselle, C.G. (2007). Health information seeking behavior. <em>Qualitative Health Research, 17</em>(8), 1006-1019.</li>
+<li>Levene, H. (1960). Robust testes for equality of variances. In I.E. Olkin (Ed.), <em>Contributions to probability and statistics: essays in honor of Harold Hotelling</em> (pp. 278–292). Stanford, CA: Stanford University Press.</li>
+<li>Lopes, C. T. &amp; Ribeiro, C. (2010). Context effect on query formulation and subjective relevance in health searches. In <em>Proceedings of the third symposium on Information interaction in context, New Brunswick, New Jersey, USA — August 18 - 21, 2010</em> (pp. 205-214). New York, NY: ACM.</li>
+<li>Luo, G., Tang, C., Yang, H. &amp; Wei, X. (2008). MedSearch: a specialized search engine for medical information retrieval. In <em>Proceedings of the 17th ACM conference on Information and knowledge management, Napa Valley, California, USA — October 26 - 30, 2008</em> (pp. 143-152). New York, NY: ACM.</li>
+<li>Malaysia. <em>Institute for Public Health</em> (2012). <em><a href="http://www.webcitation.org/77jOPhDDn">Global adult tobacco survey. Malaysia 2011.</a></em> Kuala Lumpur: Ministry of Health, Institute for Public Health. Retrieved from https://www.who.int/tobacco/surveillance/survey/gats/malaysia_country_report_2011.pdf. (Archived by WebCite® at http://www.webcitation.org/77jOPhDDn)</li>
+<li>Malaysia. <em>Ministry of Health</em>. (2011). <em><a href="http://www.Webcitation.org/76EL4Pzw5">NCD prevention and control: annual report</a>.</em> Putrajaya, Malaysia: Ministry of Health. Retrieved from http://www.moh.gov.my/images/gallery/nspncd/AnnualReport2010NCD.pdf. (Archived by WebCite® at http://www.Webcitation.org/76EL4Pzw5)</li>
+<li>Medlock, S., Eslami, S., Askari, M., Arts, D. L., Sent, D., de Rooij, S. E. &amp; Abu-Hanna, A. (2015). Health information–seeking behavior of seniors who use the internet: a survey. <em>Journal of Medical Internet Research, 17</em>(1), e10.</li>
+<li>Mohamad, E., Su, T. T., Majid, H. A. &amp; Chinna, K. (2014). <em>Health literacy in Malaysia: HLS-Asia questionnaire validation</em>. Paper presented at the The Second International Conference on Health Literacy and Health Promotion, Taipei, Taiwan.</li>
+<li>Pálsdóttir, Á. (2008). <a href="http://www.Webcitation.org/76ENpGSDz">Information behaviour, health self-efficacy beliefs and health behaviour in Icelanders' everyday life.</a> <em>Infomation Research, 13</em>(1), Paper 334. Retrieved from http://www.informationr.net/ir/13-1/paper334.html. (Archived by WebCite® at http://www.Webcitation.org/76ENpGSDz)</li>
+<li>Pang, P. C. I., Chang, S., Pearce, J. M. &amp; Verspoor, K. (2014). Online health information seeking behaviour: understanding different search approaches. In <em>Proceedings of the Pacific Asia Conference on Information Systems (PACIS), 2014, Chengdu, China</em> (paper 229). Atlanta, GA: Association for Information Systems.</li>
+<li>Puspitasari, I., Moriyama, K., Fukui, K. I. &amp; Numao, M. (2015). <a href="http://www.webcitation.org/77jNElwnJ">Effects of individual health topic familiarity on activity patterns during health information searches</a>. <em>Journal of Medical Internet Research, 3</em>(1), e16. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4381811/. (Archived by WebCite® at http://www.webcitation.org/77jNElwnJ)</li>
+<li>Ramprasath, M. &amp; Hariharan, S. (2014). Query refinement based question answering system using pattern analysis. <em>Advances in Natural and Applied Sciences, 8</em>(17), 8-15.</li>
+<li>Rieh, S. Y. &amp; Xie, H. (2006). Analysis of multiple query reformulations on the Web: the interactive information retrieval context. <em>Information Processing and Management, 42</em>(3), 751-768.</li>
+<li>Shepard, D. S., Lees, R., Ng, C. W., Undurraga, E. A., Halasa, Y. &amp; Lum, L. (2013). <em><a href="http://www.Webcitation.org/76ELJhU1D">Burden of dengue in Malaysia: report from a collaboration between universities and the Ministry of Health of Malaysia</a></em>. Waltham, MA: Brandeis University. Retrieved from http://people.brandeis.edu/~shepard/Report_dengue_in_Malaysia_v50.pdf. (Archived by WebCite® at http://www.Webcitation.org/76ELJhU1D)</li>
+<li>Sørensen, K., Van den Broucke, S., Pelikan, J. M., Fullam, J., Doyle, G., Slonska, Z., ... and Brand, H. (2013). Measuring health literacy in populations: illuminating the design and development process of the European Health Literacy Survey Questionnaire (HLS-EU-Q). <em>BMC Public Health, 13</em>(1), 948.</li>
+<li>Spink, A., Yang, Y., Jansen, J., Nykanen, P., Lorence, D. P., Ozmutlu, S. &amp; Ozmutlu, H. C. (2004). A study of medical and health queries to Web search engines. <em>Health Information and Libraries Journal, 21</em>(1), 44-51.</li>
+<li>Sterne, J. &amp; Kirkwood, B. (2003). <em>Essential medical statistics</em>. Hoboken, NJ: John Wiley and Sons, Ltd.</li>
+<li>Sutcliffe, A. &amp; Ennis, M. (1998). Towards a cognitive theory of information retrieval. <em>Interacting with Computers, 10</em>(3), 321-351.</li>
+<li>Wang, M. P., Viswanath, K., Lam, T. H., Wang, X. &amp; Chan, S. S. (2013). <a href="http://www.webcitation.org/77jNbseHn">Social determinants of health information seeking among Chinese adults in Hong Kong</a>. <em>PloS one, 8</em>(8), e73049. Retrieved from https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0073049. (Archived by WebCite® at http://www.webcitation.org/77jNbseHn)</li>
+<li>Weaver, J. B., Mays, D., Weaver, S. S., Hopkins, G. L., Eroğlu, D. &amp; Bernhardt, J. M. (2010). Health information–seeking behaviors, health indicators and health risks. <em>American Journal of Public Health, 100</em>(8), 1520-1525.</li>
+<li>Wildemuth, B. M., De Bliek, R., Friedman, C. P. &amp; Miya, T. S. (1994). Information-seeking behaviors of medical students: a classification of questions asked of librarians and physicians. <em>Bulletin of the Medical Library Association, 82</em>(3), 295-304.</li>
+<li>World Health Organization. (2014). Noncommunicable diseases (NCD) country profiles: Malaysia. In Malaysia (pp. 1). Geneva, Swizerland: WHO.</li>
+<li>World Health Organization. (2015a). <em><a href="http://www.Webcitation.org/76ELV28sa">Obesity and overweight</a></em>. Geneva, Switzerland: World Health Organization. Retrieved from http://www.who.int/mediacentre/factsheets/fs311/en/. (Archived by WebCite® at http://www.Webcitation.org/76ELV28sa)</li>
+<li>World Health Organization. (2015b). <a href="http://www.Webcitation.org/76ELdXqe6"><em>Update on the Dengue situation in the Western Pacific Region</em></a>. Manilla, Philippines: World Health Organization, Western Pacific Region. (Dengue Situation Update 477) Retrieved from http://www.wpro.who.int/emerging_diseases/dengue_biweekly_20151103.pdf?ua=1. (Archived by WebCite® at http://www.Webcitation.org/76ELdXqe6)</li>
+<li>World Health Organization. (2015c). <em><a href="http://www.Webcitation.org/76ELoKY6R">WHO report on the global tobacco epidemic, 2015. Raising taxes on tobacco.</a></em> Geneva, Switzerland: World Health Organization. Retrieved from http://apps.who.int/iris/bitstream/10665/178574/1/9789240694606_eng.pdf?ua=1andua=1. (Archived by WebCite® at http://www.Webcitation.org/76ELoKY6R)</li>
+<li>Yeganova, L., Comeau, D. C., Kim, W. &amp; Wilbur, W. J. (2009). How to interpret PubMed queries and why it matters. <em>Journal of the American Society for Information Science and Technology, 60</em>(2), 264-274.</li>
+<li>Yi, Y. J. (2015). Health literacy and health information behavior of Florida public library users: a mixed methods study. <em>Journal of Librarianship and Information Science, 47</em>(1), 17-29.</li>
+<li>Yilma, T. M., Inthiran, A., Reidpath, D. &amp; Orimaye, S. O. (2017). Health Information seeking and its associated factors among university students: a case in a middle-income setting. In <em>Proceedings of the Pacific Asia Conference on Information Systems (PACIS), 2017, Langkawi, Malaysia</em>, (paper 229). Atlanta, GA: Association for Information Systems.</li>
+<li>Yuli, Y., Zhang, S. &amp; Xia, L. (2012). Preventive health information seeking behavior among general population in China. In <em>Proceedings of the 2012 International Symposium on Information Technology in Medicine and Education</em> (Vol. 2, pp. 608-612). New York, NY: IEEE.</li>
+<li>Zhang, Y. (2013). Searching for specific health-related information in MedlinePlus: behavioral patterns and user experience. <em>Journal of the Association for Information Science and Technology, 65</em>(1), 53-68.</li>
+<li>Zhang, Y., Wang, P., Heaton, A. &amp; Winkler, H. (2012). <a href="http://www.webcitation.org/77jOfiRj6">Health information searching behavior in MedlinePlus and the impact of tasks</a>. In <em>Proceedings of the 2nd ACM SIGHIT international health informatics symposium, January 28-30, 2012, Miami, Florida, USA</em>. (pp. 641-650). New York, NY: ACM. Retrieved from https://www.ischool.utexas.edu/~yanz/fp088_Zhang.pdf. (Archived by WebCite® at http://www.webcitation.org/77jOfiRj6)</li>
+</ul>
 </section>
-<section>
-<hr />
- <h4 style="text-align:center;">How to cite this paper</h4>
- <div class="citing">Yilma, T.M., Inthiran, A.,  Reidpath, D.D. &amp; Orimaye, S.O.  (2019). Context-based interactive health information searching <em>Information Research, 24</em>(2), paper 815. Retrieved from  http://InformationR.net/ir/24-2/paper815.html  (Archived by WebCite&reg; at http://www.webcitation.org/78mjB8yl7)</div>  
-
-</section>
-
-</article>
-<br />
-<section>
- 
- <table class="footer" style="border-spacing:10px;">  
- <tr>  
- <td colspan="3" style="text-align:center; background-color: #5E96FD; color: white; font-family: verdana; font-size: small; font-weight: bold;">Find other papers on this subject</td></tr>  
- <tr><td style="text-align:center; vertical-align:top;"><form method="get" action="http://scholar.google.com/scholar" target="_blank">
- <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"> <input type="hidden" name="q" value="health information, information searching, malaysia, students," /><br />  
-<input type="submit" name="sa" value="Scholar Search"  style="font-size: small; font-family: Verdana; font-weight: bold;" /><input type="hidden" name="num" value="100" />  </td>  </tr></table></form></td>  
- <td style="vertical-align:top; text-align:center;">  <!-- Search Google --><form method="get" action="http://www.google.com/custom" target="_blank">
- <table class="footer">
- <tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="health information, information searching, malaysia, students," /><br />  
- <input type="submit" name="sa" value="Google Search" style="font-family: Verdana; font-weight: bold; font-size: small;" /><input type="hidden" name="client" value="pub-5081678983212084" /><input type="hidden" name="forid" value="1" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="hidden" name="oe" value="ISO-8859-1" /><input type="hidden" name="cof" value="GALT:#0066CC;GL:1;DIV:#999999;VLC:336633;AH:center;BGC:FFFFFF;LGC:FF9900;LC:0066CC;LC:0066CC;T:000000;GFNT:666666;GIMP:666666;FORID:1;" /><input type="hidden" name="hl" value="en" /></td></tr>  
-  </table></form></td>  
- <td style="vertical-align:top; text-align:center;"><form method="get" action="http://www.bing.com" target="_blank">
- <table class="footer"><tr><td style="white-space: nowrap; vertical-align:top; text-align:center; height:32px;"><input type="hidden" name="q" value="health information, information searching, malaysia, students," /> <br /><input type="submit" name="sa" value="Bing"  style="font-size: small; font-family: Verdana; font-weight: bold;" /> <input type="hidden" name="num" value="100" /></td></tr>  
- </table></form></td></tr>  
- </table> 
- 
- <div style="text-align:center;">Check for citations, <a href="http://scholar.google.co.uk/scholar?hl=en&amp;q=http://informationr.net/ir/24-2/paper815.html&amp;btnG=Search&amp;as_sdt=2000">using Google Scholar</a></div>
- <br />
- <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<div class="addthis_inline_share_toolbox" style="text-align:center;"></div>
-<hr />
-</section>
-
-<table class="footer" style="padding:10px;"><tr><td style="text-align:center; vertical-align:top;">
-<br />
-<div>  <a href="https://www.digits.net" target="_blank"><img src="https://counter.digits.net/?counter={53b7ad26-5384-de74-e59d-d8ce3e38c501}&template=simple" alt="Hit Counter by Digits"/>
-  </a>
-</div>
- </td> 
-<td class="footer" style="text-align:center; vertical-align:middle;">
-  <div>  &copy; the authors, 2019. <br />Last updated: 10 April, 2019 </div></td> 
- 
- <td style="text-align:center; vertical-align:middle;">&nbsp; 
- 
-  </td></tr>  </table>  
- <footer>
-
-<hr /> 
- <table class="footer">
- <tr><td>
-<div class="button"> 
- <ul style="text-align: center;">
-	<li><a href="infres242.html">Contents</a> | </li>
-	<li><a href="../iraindex.html">Author index</a> | </li>
-	<li><a href="../irsindex.html">Subject index</a> | </li>
-	<li><a href="../search.html">Search</a> | </li>
-	<li><a href="../index.html">Home</a></li>
-</ul> 
-</div></td></tr>
-</table>
- <hr />
-</footer>
-
- <script src="http://www.google-analytics.com/urchin.js">  </script>  <script>  _uacct =
- "UA-672528-1"; urchinTracker(); 
- </script>  
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5046158704890f2e"></script>  
-</body>  
- </html> 
-
-
-
-
+</body>
+</html>
