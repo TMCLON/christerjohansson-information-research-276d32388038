@@ -20,1482 +20,647 @@
     <meta name="dcterms.issued" content="2016-12-15" />
     <meta name="geo.placename" content="global" />
   </head>
-  <body>
-    
-      <h4>
-        vol. 21 no. 4, December, 2016
-      </h4>
-    
-      <h1>
-        Moving beyond text highlights: inferring users' interests to improve the relevance of retrieval
-      </h1>
-      ]
-        <h2>
-          <a href="#authors">Vimala Balakrishnan, Yasir Mehmood</a> and <a href="#authors">Yoganathan Nagappan</a>
-        </h2>
-      
-          <h4>Abstract</h4>
-          <blockquote>
-            <strong>Introduction.</strong> Studies have indicated that users' text highlighting behaviour can be further manipulated to improve the relevance of retrieved results. This article reports on a study that examined users' text highlight frequency, length and users' copy-paste actions.<br />
-            <strong>Method.</strong> A binary voting mechanism was employed to determine the weights for the feedback, which were then used to re-rank the original search results. A search engine prototype was built using the Communications of the ACM test collection, with the well-known BM25 acting as the baseline model.<br />
-            <strong>Analysis.</strong> The proposed enhanced model's performance was evaluated using the mean average precisions and F-score metrics, and results were compared at the top 5, 10 and 15. Additionally, comparisons were also made based on the number of terms used in a query, that is single, double and triple terms.<br />
-            <strong>Results.</strong> The findings show that the enhanced model significantly outperformed BM25, and the rest of the models at all document levels. To be specific, the enhanced model showed significant improvements over the frequency model. Additionally, retrieval relevance was found to be the best when the query length is two.<br />
-            <strong>Conclusions.</strong> Users' post-click behaviour may serve as a significant indicator of their interests, and thus can be used to improve the relevance of the retrieved results. Future studies could look into further extending this model by including other post-click behaviour such as printing or saving.
-          </blockquote>
-      
-        <h2>
-          Introduction
-        </h2>
-        <p>
-          Online searching has become part of many people's work and daily lives, including activities such as research, shopping and entertainment (<a href="#cla12">Clay and Esparza, 2012</a>). For example, it is common for people to: seek information from Wikipedia, search through Google, buy products from eBay or Amazon.com, etc. However, searching for relevant items or services can be a daunting task due to the amount of information, and this is further exacerbated by a lack of searching skills. Web users tend to not know (or care) about the heterogeneity of Web content, the syntax of query languages and the art of phrasing queries, often resulting in them spending a lot of time looking for relevant items on the Internet (<a href="#man09">Manning, Raghavan and Schutze, 2009</a>; <a href="#var14">Varathan, Tengku Sembok, Abdul Kadir and Omar, 2014</a>).
-        </p>
-        <p>
-          To solve the problem of users' lack of query skills, relevance feedback is commonly used. Relevance feedback is a process involving users in the development of information retrieval systems, and aims to improve search results and increase user satisfaction. According to Baeza-Yates and Ribeiro-Neto (<a href="#bae99">1999</a>), '<em>in a relevance feedback cycle, the user is presented with a list of the retrieved documents and, after examining them, marks those which are relevant</em>'. In fact, relevance feedback has been shown to be an indicator of users' interests, which can then be used to improve their satisfaction (<a href="#cla01">Claypool, Le, Wased and Brown, 2001</a>; <a href="#fox05">Fox, Karnawat, Mydland, Dumais and White, 2005</a>; <a href="#liu10">Liu, Gwizdka and Liu, 2010</a>). Two components of relevance feedback have evolved, namely, query expansion (i.e., automatic relevance feedback) and term reweighting. Query expansion involves the addition of new terms to the initial query automatically, using techniques such as pseudo-relevance feedback (i.e., users get improved retrieval performance without further interaction), thesaurus-based or other types of expansions, with studies demonstrating the accuracy of the interpretation of original queries to improve by this technique (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>; <a href="#cra07">Crabtree, Andreae and Gao, 2007</a>; <a href="#wal98">Walker, Robertson, Boughanem, Jones and Sparck, 1998</a>). In contrast, term reweighting refers to the modification of term weights according to the relevance judgement by users (<a href="#bae99">Baeza-Yates and Ribeiro-Neto, 1999</a>). In other words, this technique increases the term weights in relevant documents whilst decreasing those in irrelevant documents.
-        </p>
-        <p>
-          Relevance feedback is usually gathered through explicit and/or implicit feedback. Explicit feedback requires the users to provide feedback for products or services rendered, with methods including ranking, rating, commenting and answering questions (<a href="#bal16">Balakrishnan, Ahmadi and Ravana, 2016</a>; <a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#nun12">N��ez-Vald�z <em>et al.</em>, 2012</a>). Explicit feedback is well understood, easy to implement and fairly precise. The approach, however, requires the users to engage in additional activities beyond their normal searching behaviour, hence resulting in higher user costs in time and effort. Additionally, not all users like to be involved in providing explicit feedback as the repetitive and frequent way of obtaining the relevance judgement causes a cognitive overload for the users (<a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#zem12">Zemerli, 2012</a>). Users are generally busy reading or looking for the right document or item during a search session, and thus they do not often provide explicit feedback. In fact, during an experiment it was found that only a small group of users agreed to give relevance judgments, and sometimes they had to be paid to provide this information (<a href="#spi00">Spink, Jansen and Ozmultu, 2000</a>). Similarly, previous work on <a href="http://grouplens.org/">GroupLens</a> found that users rated many fewer documents than they read (<a href="#sar98">Sarwar <em>et al.</em>, 1998</a>). Thus, even though explicit ratings are fairly precise in recognizing user interests, their efficacy is limited.
-        </p>
-        <p>
-          On the other hand, implicit feedback such as mouse clicks (i.e., click-through data) can be mined unobtrusively and used to determine users' preferences (<a href="#agi06">Agichtein, Brill, Dumais and Ragno, 2006</a>; <a href="#agr09">Agrawal, Halverson, Kenthapadi, Mishra and Tsaparas, 2009</a>; <a href="#car08">Carterette and Jones, 2008</a>; <a href="#chu15">Chuklin, Markov and Rijke, 2015</a>; <a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#dup10">Dupret and Liao, 2010</a>; <a href="#fei10">Feimin <em>et al.</em>, 2010</a>; <a href="#joa05">Joachims, Granka, Pan, Hembrooke and Gay, 2005</a>; <a href="#yu12">Yu, Lu, Sun, and Zhang, 2012</a>). For instance, mouse clicks have been used for online advertising to estimate the relevance of an advertisement to a search result page or a document (<a href="#cha03">Chatterjee, Hoffman and Novak, 2003</a>; <a href="#gra10">Graepel, Candela, Borchert and Herbrich, 2010</a>).
-        </p>
-        <p>
-          One of the main difficulties in estimating relevance from click data is due to position bias, that is, a document appearing in a higher position is more likely to attract user clicks even though it is irrelevant. Subsequent studies on implicit feedback hence progressed to include users' post-click behaviour, which refers to users' actions on the selected documents or results. These include dwell time (i.e., reading or display time) (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#fox05">Fox <em>et al.</em>, 2005</a>; <a href="#oar98">Oard and Kim, 1998</a>), printing (<a href="#oar98">Oard and Kim, 1998</a>), scrolling (<a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#guo12">Guo and Agichtein, 2012</a>; <a href="#oar98">Oard and Kim, 1998</a>), and mouse or cursor movements (<a href="#bus12">Buscher, White, Dumais and Huang, 2012</a>; <a href="#guo10">Guo and Agichtein, 2010</a>; <a href="#hua12">Huang, White and, Buscher, 2012</a>), with results indicating post-click behaviour to provide valuable implicit feedback that could indicate the relevance of selected documents. Huge volumes of implicit feedback data can be gathered easily and unobtrusively. Furthermore, no mental efforts are required from the users (<a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#man09">Manning <em>et al.</em>, 2009</a>).
-        </p>
-        <p>
-          One of the recent implicit feedback techniques that has been explored is text highlight or text selection, which involves selecting a block of text to indicate its relevancy to the user. Generally, people make some form of mark, such as highlights, annotations, comments, circles, etc., on documents to indicate interests or relevance (<a href="#shi03">Shipman, Price, Marshall, Golovchinsky and Schilit, 2003</a>). Similar assumptions have been made in information retrieval studies, whereby users' annotations and text highlighting behaviour was used to improve document relevance. However, research focusing on such behaviour is scarce.
-        </p>
-        <p>
-          Studies of users' text highlighting behaviour thus far have examined the frequency of text highlighting, that is, it is assumed that the more text highlights a document contains, the more relevant the document is to the user (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#whi12">White and Buscher, 2012</a>). Determining a document's relevance based only on the frequency of text highlighting may be inadequate because factors such as the length of the highlighted text and users' post-selection actions may also indicate users' interests (<a href="#whi12">White and Buscher, 2012</a>). Furthermore, according to Buscher <em>et al.</em> (<a href="#bus12">2012</a>), copy-paste and reading aid were the two main reasons leading users to highlight text. In fact, both text highlighting and copying are considered to be very strong indicators of users' interests (<a href="#hau11">Hauger, Paramythis, and Weibelzahl, 2011</a>; <a href="#hij04">Hijikata, 2004</a>). Therefore, these indicators can potentially be used together to improve retrieval relevance.
-        </p>
-        <p>
-          The current study aims to extend the above-mentioned works by further exploring and manipulating users' text highlighting behaviour. To be precise, the study intends to improve document retrieval relevance by analysing three parameters: (i) frequency of text highlight, (ii) length of text highlight, and (iii) user's copy-paste action. The traditional ranking algorithm, <a href="https://en.wikipedia.org/wiki/Okapi_BM25">Okapi BM25</a> was used as the baseline (i.e., without users' feedback) and Communications of the ACM (CACM) was used as the test collection. To evaluate the retrieval effectiveness of the proposed model, an experiment was conducted using a self-developed prototype search engine. The retrieved results were analysed at the top 5, 10 and 15 document levels, and also compared by query lengths. As will be shown, the findings show that the proposed model consistently yields significant improvements over BM25, and the rest of the feedback models.
-        </p>
-      </section>
-      <section>
-        <h2>
-          Related work
-        </h2>
-        <p>
-          Implicit user feedback can be generally divided into two categories: the query actions and the physical user reactions. The query actions refer to ways in which the user interacts with the search engine (e.g., clicks, key strokes) whereas the physical reactions are users' unconscious behaviour (e.g., eye movements, heart rate). Unlike the latter category, which requires special devices to collect data, users' query actions can be easily captured during a search session. The current study intends to exploit these query actions, specifically users' text highlighting behaviour.
-        </p>
-        <p>
-          Inferences drawn from implicit feedback are considered to be less reliable compared to explicit feedback, but on the other hand, large quantities of data can be gathered unobtrusively (<a href="#jun07">Jung, Herlocker, and Webster, 2007</a>). Studies focusing on implicit feedback have investigated various user behaviour, such as mouse clicks (<a href="#agi06">Agichtein <em>et al.</em>, 2006</a>; <a href="#agr09">Agrawal <em>et al.</em>, 2009</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#dup10">Dupret and Liao, 2010</a>; <a href="#fei10">Feimin <em>et al.</em>, 2010</a>; <a href="#yu12">Yu <em>et al.</em>, 2012</a>), dwell time (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#fox05">Fox <em>et al.</em>, 2005</a>; <a href="#has10">Hassan, Jones and Klinkner, 2010</a>; <a href="#hua11">Huang, White and Dumais, 2011</a>), eye tracking (<a href="#joa07">Joachims <em>et al.</em>, 2007</a>), and mouse movements (<a href="#bus12">Buscher <em>et al.</em>, 2012</a>; <a href="#guo10">Guo and Agichtein, 2010</a>; <a href="#hua12">Huang <em>et al.</em>, 2012</a>), among others. Techniques such as mouse clicks are based on the assumption that the clicked documents are relevant to the search queries, however this may not be accurate. Joachims <i>et al</i>. (<a href="#joa05">2005</a>) reported two main issues: trust bias in which users trusted the ranking quality of the search engine and only clicked the first few results, and quality bias which refers to users' varying behaviour for the same query in different search engines.
-        </p>
-        <p>
-          Generally, studies examine the search logs to understand users' behaviour and interests because they can automatically capture user interaction details. In addition, these data can be analysed to optimize retrieval performances (<a href="#jor10">Jordan, Simone, Thomas, and Alexander, 2010</a>), help query suggestions (<a href="#hua08">Huanhuan <em>et al.</em>, 2008</a>) and enhance the ranked results (<a href="#agi06">Agichtein <em>et al.</em>, 2006</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>). More recent studies have looked into ways to improve retrieval by investigating other clicking behaviour, such as Xu, Chen, Xu, Li, and Elbio (<a href="#xu10">2010</a>) who used click rate and last click to predict the relevant labels or Uniform Resource Locators (URL). Although an overall improvement was observed, using last click as an interest indicator may not be accurate as well, because there are different reasons behind the last click. For example, users who left the last documents may have either succeeded in finding useful documents (good abandon) or failed to find relevant documents (bad abandon), and hence began a new search (<a href="#hua11">Huang <em>et al.</em>, 2011</a>).
-        </p>
-        <p>
-          Studies have also progressed into examining users' post-click behaviour (i.e., actions performed after clicking on a link). A simple technique would be the dwell time, whereby it is assumed that if a document is relevant, the user may spend longer time on it than other documents (<a href="#bus09">Buscher, Elst, and Dengel, 2009</a>). In a more recent study, dwell time was further experimented from three different angles, that is, display time (i.e., interval time between open and close of the document), dwell time (i.e., reading time) and decision time (i.e., decision-making time to select document), with results indicating dwell time topped the list in predicting document relevance compared to the other two indicators (<a href="#liu10a">Liu and Belkin, 2010</a>). Unfortunately, similar to mouse click problems, dwell time does not work well in all cases, because it is strongly dependent on the length of the document. In fact, it has been argued that spending more time on a page does not necessarily translate into higher user interests or relevance. In other words, the correlation between time and length cannot be directly inferred as a correlation between time and degree of interests (<a href="#zem12">Zemirli, 2012</a>). As implicit feedback techniques do not necessarily predict users' interests on their own, many studies have combined multiple implicit feedback. For instance, Claypool <em>et al.</em> (<a href="#cla01">2001</a>) found dwell time and scrolling predicted relevance in Internet browsing, Oard and Kim (<a href="#oar98">1998</a>) found dwell time and printing significantly indicated users' interests, whereas Guo and Agichtein (<a href="#guo12">2012</a>) improved document relevance using dwell time, scrolling and cursor movements.
-        </p>
-        <p>
-          Another post-click behaviour explored to infer users' interests is mouse or cursor movement, with the assumption that <i>'the more a mouse moves, the more a user is interested in the Web page or document'</i> (<a href="#guo10">Guo and Agichtein, 2010, 2012</a>; <a href="#hua11">Huang <em>et al.</em>, 2011</a>; <a href="#kou12">Koumpouri and Simaki, 2012</a>; <a href="#zem12">Zemerli, 2012</a>). In a study by Guo and Agichtein (<a href="#guo10">2010</a>), the authors compared cursor movements with dwell time, with findings indicating strong associations for some of the cursor features. For instance, it was observed that the further down the searcher moves the cursor, the more likely it is that s/he finds the page to be relevant. Additionally, the authors also observed lower speed of cursor movements to be indicative of <i>reading</i>, which is more likely to happen when the page is relevant. Similarly, Huang <i>et al.</i> (<a href="#hua11">2011</a>) evaluated several features of mouse movements (i.e., cursor trail length, movement time and cursor speed) on the result pages of the Microsoft Bing search engine. Their results showed that cursor movements not only improve the search results ranking, but also help query classifications.
-        </p>
-        <p>
-          Re-finding, i.e., users returning to the pages that have been visited previously, hence indicating interests in that page (<a href="#tyl10">Tyler and Teevan, 2010</a>; <a href="#tyls10">Tyler, Wang, and Zhang, 2010</a>) is another post-click activity. A page review or revisit, on the other hand, refers a user returning to the same document or item during a search session, usually by the back button. This is in contrast to re-finding, in the sense that the user does not search for the same URL using a query, browser history or bookmarked items; instead the user clicks on the same item by returning to the same search results page. Obendorf, Weinreich, Herder, and Mayer (<a href="#obe07">2007</a>) conducted a small experiment with 25 users to investigate page review behaviour. They found 31% of reviews were accomplished by the back button, and 72.6% of the reviews frequently took place in less than one hour, suggesting that page reviews take place frequently in a Web search, especially on a short-term basis. Other user actions such as printing, copying and bookmarking can also be interpreted as implicit indicators of relevance. That is, the users performed a certain action because they are interested in the corresponding document (<a href="#guo12">Guo and Agichtein, 2012</a>; <a href="#kou12">Koumpouri and Simaki, 2012</a>; <a href="#oar98">Oard and Kim, 1998</a>). In fact, it has been revealed that scrolling time and copying text from titles and/or snippets to be the best predictors of user satisfaction (<a href="#kou12">Koumpouri and Simaki, 2012</a>). Alternatively, Bullock, J�schke and Hotho (<a href="#bul11">2011</a>) used users' URL tags to infer their Web interests, and found that tagging data helps improve the results relevance scores.
-        </p>
-        <p>
-          Interestingly, very few researchers have looked into text highlights. For instance, White and Buscher (<a href="#whi12">2012</a>) conducted an experiment using Microsoft Bing search engine and a plug-in tool to record text highlighting behaviour on result pages, studying 389 queries containing text highlights. Their results showed 6% improvement in the precision compared to their baseline model for the top ten results. Similarly, Balakrishnan and Zhang (<a href="#bal14">2014</a>) compared four implicit feedback approaches, namely dwell time, click-through data, page review and text highlight. Their results revealed text highlight to have the best precisions for top ten, fifteen and twenty-five document levels compared to the other techniques, albeit with insignificant differences (p &gt; 0.05). Both these studies examined text highlighting by looking at the frequency of its occurrences. It is believed that with further assessment of this particular behaviour, document relevance can be improved.
-        </p>
-        <p>
-          Drawing inspirations from these post-click behaviour studies (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#kou12">Koumpouri and Simaki, 2012</a>; <a href="#whi12">White and Buscher, 2012</a>), we propose to further exploit users' text highlighting behaviour by focusing not only on the frequency of highlights, but also on the length of highlights and users' copy-paste actions.
-        </p>
-      </section>
-      <section>
-        <h2>
-          Research methods
-        </h2>
-        <p>
-          This section provides details on the methods employed in the current study. The proposed enhanced model basically works in the following manner:
-        </p>
-        <ol type="i">
-          <li>A user sends a query
-          </li>
-          <li>The traditional BM25 ranking algorithm returns a set of initial ranked results
-          </li>
-          <li>Users' behaviour is tracked and gathered (i.e., text highlighting and copy-paste actions). The user's interaction with the original search engine result page is monitored and recorded in a search log. The recorded user's implicit feedback (i.e., length and frequency of highlighted text, and copy-paste action) will be then weighted by a feedback weighting scheme called the binary voting mechanism.
-          </li>
-          <li>Scores from the binary voting mechanism are fed into the re-ranking algorithm. More details are given in the following subsections.
-          </li>
-          <li>A new set of improved results is displayed for the same query in the next search.
-          </li>
-        </ol>
-        <p>
-          The specific details of the model are elaborated in the following sub-sections.
-        </p>
-      </section>
-      <section>
-        <h3>
-          User behaviour
-        </h3>
-        <p>
-          Similar to previous studies, an assumption has to be made to tune the setting of the re-ranking algorithm applicable in this study. Generally, studies on implicit feedback assume certain actions are performed because the users are interested in the particular result or document, and hence it may be of relevance. For example, Zemerli (<a href="#zem12">2012</a>), who inferred users' interests based on reading time, saving or bookmarking and printing, assumed that '<em>if the given document is saved or printed, this means that it has attracted the interest of the user, so it must be considered as relevant</em>'. White and Buscher (<a href="#whi12">2012</a>) and Balakrishnan and Zhang (<a href="#bal14">2014</a>) assumed that the more highlights a document contains (i.e., frequency), the more relevant it is to the user.
-        </p>
-        <p>
-          Similarly, the current study assumes the following:
-        </p>
-        <p>
-          <em>Assumption 1: If a given document's content is highlighted, this means it has attracted the interest of the user, so it must be considered relevant.</em>
-        </p>
-        <p>
-          A document containing more highlights is deemed to be more relevant (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#whi12">White and Buscher, 2012</a>).
-        </p>
-        <ul>
-          <li>Frequency of text highlight � when a word or a portion of text is highlighted, the frequency of text highlight for the document is increased accordingly. As an example, assume a search for abstract is performed, and the user reviewed three documents as shown in Figure 1. Document three is deemed to be more relevant than documents two and one as it contains the highest frequency of highlights (i.e., eight).
-          </li>
-        </ul>
-        <figure class="centre">
-          <img src="p724fig1.jpg" alt="Figure 1: Frequency of text highlight" width="597" height="267" />
-          <figcaption>
-            Figure 1: Frequency of text highlight
-          </figcaption>
-        </figure>
-        <p>
-          <em>Assumption 2: A document containing longer highlighted texts is deemed to be more relevant.</em>
-        </p>
-        <ul>
-          <li>Length of text highlight � refers to the number of words that has been highlighted, with a similar assumption that the longer the highlighted text, the more relevant the document is to the user.
-          </li>
-        </ul>
-        <p>
-          <em>Assumption 3: If a copy-paste action is performed after the highlights, then it must be considered relevant</em>
-        </p>
-        <ul>
-          <li>Copy-paste � this refers to the post-selection action, in which when a user performs a copy-paste action, then the count for this variable is increased.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>
-          Baseline ranking model
-        </h3>
-        <p>
-          Okapi BM25 is one of the most established probabilistic term weighting models used by search engines to rank matching documents to their relevance to a given search query. The model and its variants have been extensively described and evaluated in the field of information retrieval, and hence serve as a strong, reproducible baseline algorithm (<a href="#rob09">Robertson and Zaragoza, 2009</a>). It has been used in various studies as the baseline model (<a href="#bid10">Bidoki, Ghodsnia, Yazdani, and Oroumchian, 2010</a>; <a href="#dan13">Dang, Bendersky, and Croft, 2013</a>; <a href="#zho13">Zhou, Liu and Zhang, 2013</a>). Therefore, the ranking model also acts as the baseline in this study.
-        </p>
-      </section>
-      <section>
-        <h3>
-          Re-ranking algorithm
-        </h3>
-        <p>
-          We propose the following re-ranking algorithm, which is based on BM25 and binary voting (Equation 1).
-        </p>
-        <figure class="centre">
-          <img src="p724img1.jpg" alt="equ 1" width="366" height="46" />
-        </figure>
-        <p>
-          where
-        </p>
-        <ul style="list-style-type:circle;">
-          <li>Ranked score refers to the final score (i.e., weight) upon incorporating users' feedback
-          </li>
-          <li>FRE is the number of occurrences of text highlights. The value is set to a zero by default, and it is incremented by one when a user highlights a word or a block of text (i.e., when the action is performed)
-          </li>
-          <li>LEN indicates the length of the highlighted text. The initial value is also set to a zero. The value is however incremented by 0.1 for every fifty words, up to 500 words. In other words, the values fall within the range of zero to one. The normalization was deemed necessary to incorporate binary voting (<a href="#hop07">Hopfgartner and Jose, 2007</a>).
-          </li>
-          <li>CP refers to the copy-paste action. It is set to a zero by default, and increases by one whenever the user highlights a word or a block of text and chooses to copy-paste it (i.e., when the action is performed)
-          </li>
-        </ul>
-        <p>
-          For a retrieved document that has not received any implicit feedback from the user, the Ranked score will be same as the original score, which is BM25. In other words, the second half of Equation 1 will not be executed if no feedback is gathered.
-        </p>
-        <p>
-          The weights given to each of the feedback techniques were based on the binary voting mechanism. The mechanism allows weighting terms and ranking them, and different weights can be provided for different implicit actions (<a href="#hop07">Hopfgartner and Jose, 2007</a>). For example, Hopfgartner and Jose introduced a model of six implicit interactions for interpreting a user's actions with an interactive video retrieval interface. A normalization of the features was needed which guarantees that the user feedback weights fall between 0.0 and 1.0. Therefore, the authors divided the video playing duration into 0 � 10 time cycles (i.e., 0.1 weight for each cycle), with each cycle having duration of five seconds. Similarly, White, Jose and Ruthven (<a href="#whi06">2006</a>) used binary voting mechanism to select terms implicitly for query modification. The authors assigned different weights for each part of a document, that is, 0.1 for title, 0.2 for top-ranking sentences, 0.3 for Summary, 0.2 for Summary Sentence and 0.2 for Sentence in Context. The weights were claimed to be defined for experimental purposes and were based on the typical length of a document representation.
-        </p>
-        <p>
-          In this study, for techniques like frequency and copy-paste, binary measurement was used (i.e., Yes=1, No=0). When a user performs these two techniques, the scores for each of them are incremented by 1. As for the length, normalization was necessary to ensure that the weights fall between 0.0 and 1.0 (<a href="#hop07">Hopfgartner and Jose, 2007</a>; <a href="#whi06">White <em>et al.</em>, 2006</a>). The study found the maximum length of the abstract in the test collection to be close to 500 words, therefore the length of the highlighted text was divided into a scale of 50 words, with an increasing weight (i.e., 0 � 50 = 0.1; 51 � 100 = 0.2; 101 � 150 = 0.3 and so on). In other words, the weights were assigned based on our assumption that the longer the highlights, the more relevant it is, hence a higher weight. Therefore, a document containing 60 highlighted words, would be assigned a weight of 0.2 (i.e., parameter LEN) compared to a document with 50 words with weight of 0.1.
-        </p>
-      </section>
-      <section>
-        <h2>
-          Evaluation
-        </h2>
-        <h3>
-          Test collection
-        </h3>
-        <p>
-          The Communications of the ACM test collection contains bibliographic information (e.g., title, authors, abstract etc.) of articles published in the journal between 1958 and 1979. It contains 3204 scholarly documents, 64 sample queries, 429 stop words and also relevance judgments generated by computer scientists. The test collection also contains structured subfields, including author names, word stems from the title and abstract sections, direct references between articles and number of co-citations for each pair of articles. These structured subfields help researchers to understand the documents easily and to manage them without much hassle. The collection is small in size (approximately 2.2 Megabytes), hence it can be easily installed and tested in a very short span of time (<a href="#man09">Manning <em>et al.</em>, 2009</a>). However, the size of collection is small compared to the size of real Web documents or the Text REtrieval Conference (TREC) document collection (<a href="#man09">Manning <em>et al.</em>, 2009</a>). As a result, the reliability of experimental results may be lowered due to the small collection size. However, the CACM collection has been used frequently in small-scale experiments to test the performance of information retrieval systems (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#dri11">Drias, 2011</a>; <a href="#tsa11">Tsatsaronis, 2011</a>), because of the limitations of time and resources for developing large-scale experiments. As our experiment is considered to be small-scale, this collection was deemed to be appropriate.
-        </p>
-      </section>
-      <section>
-        <h3>
-          Queries
-        </h3>
-        <p>
-          Search results can often be unsatisfying as multiple words may have similar meanings, or more than one meaning, causing results to be different than expected (<a href="#jan00">Jansen, Spink, and Saracevic, 2000</a>). For example, a user who is interested in the Apple iPhone would be laden with results referring to the fruit, phone and every other Apple product if he/she submits a query reading <i>Apple</i>. However, the search results will only contain references to the phone if the query is <i>Apple phone</i>. Query formulation is important and studies have reported that longer queries yield more accurate results in controlled experiment settings, but shorter queries are more pervasive in interactive systems, such as the Web search engines (<a href="#jan00">Jansen <em>et al.</em>, 2000</a>; <a href="#spi00">Spink <em>et al.</em>, 2000</a>). Therefore, queries were formulated based on their length to assess their impacts on retrieval relevance using the enhanced model.
-        </p>
-        <p>
-          Studies particularly focusing on query lengths used automatic query expansion techniques (<a href="#cra07">Crabtree <em>et al.</em>, 2007</a>; <a href="#wal98">Walker <em>et al.</em>, 1998</a>), or encouraging users to enter longer queries in the first instance (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>) or asking the users to describe their information need problems (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>). As the main aim of the current study is to improve retrieval relevance, the queries used were randomly selected from the collection, and then manipulated to accommodate the various query lengths. In other words, all the queries were fixed and provided to the users. Thirty queries were selected from the document collection, targeting three different lengths, that is, single term, double terms and triple terms. The idea was to mimic user behaviour in the real Web environment, therefore the maximum length was set to three (<a href="#spi00">Spink <em>et al.</em>, 2000</a>). There were ten queries for each length, totalling to thirty final queries that were used in the experiment. Although the number may seem to be small (<a href="#voo08">Voorhees, 2008, 2009</a>), numerous other studies have reported results with fewer queries in information retrieval. For instance, Zemerli (<a href="#zem12">2012</a>) used five queries, Balakrishnan and Zhang (<a href="#bal14">2014</a>) used fifteen queries, and Belkin <em>et al.</em> (<a href="#bel04">2004</a>) used eight search topics and four search topic types.
-        </p>
-        <p>
-          Table 1 illustrates the queries used in our evaluations.
-        </p>
-        <table class="center">
-          <caption>
-            <br />
-            Table 1: Queries used in the evaluations
-          </caption>
-          <tbody>
-            <tr>
-              <th>
-                Number
-              </th>
-              <th>
-                Single
-              </th>
-              <th>
-                Double
-              </th>
-              <th>
-                Triple
-              </th>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                1
-              </td>
-              <td>
-                Abstract
-              </td>
-              <td>
-                Abstract database
-              </td>
-              <td>
-                Abstract data type
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                2
-              </td>
-              <td>
-                Database
-              </td>
-              <td>
-                Database package
-              </td>
-              <td>
-                Database management system
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                3
-              </td>
-              <td>
-                English
-              </td>
-              <td>
-                Hashing English
-              </td>
-              <td>
-                Hashing English spelling
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                4
-              </td>
-              <td>
-                Hashing
-              </td>
-              <td>
-                Hashing method
-              </td>
-              <td>
-                Hashing index method
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                5
-              </td>
-              <td>
-                File
-              </td>
-              <td>
-                File search
-              </td>
-              <td>
-                Inverted file search
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                6
-              </td>
-              <td>
-                Parallel
-              </td>
-              <td>
-                Parallel computation
-              </td>
-              <td>
-                Parallel computation algorithm
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                7
-              </td>
-              <td>
-                Parallel
-              </td>
-              <td>
-                Parallel language
-              </td>
-              <td>
-                Parallel computation language
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                8
-              </td>
-              <td>
-                Prime
-              </td>
-              <td>
-                Prime number
-              </td>
-              <td>
-                Prime number computation
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                9
-              </td>
-              <td>
-                Shape
-              </td>
-              <td>
-                Shape description
-              </td>
-              <td>
-                Shape analysis reception
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                10
-              </td>
-              <td>
-                Surface
-              </td>
-              <td>
-                Surface algorithm
-              </td>
-              <td>
-                Surface algorithm implementation
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section>
-        <h3>
-          Search engine prototype
-        </h3>
-        <p>
-          The search engine prototype was developed using Visual Basic and MySQL. The interface mimics that of an online database containing scholarly documents. The following screen grabs provide illustrations of how the enhanced model works in improving the document relevance for a query.
-        </p>
-        <p>
-          For example, assume a user intends to perform a search for information retrieval. The initial results are ranked by BM25, and are as depicted in Figure 2. We will look at the top three documents to illustrate our example. Each of these documents had an original score of 8.99, however these weights are not displayed to the end user.
-        </p>
-        <figure class="centre">
-          <img src="p724fig2.jpg" alt="Figure 2: Initial ranked results using BM25" width="624" height="328" />
-          <figcaption>
-            <br />
-            Figure 2: Initial ranked results using BM25
-          </figcaption>
-        </figure>
-        <p>
-          Also assume that the user provided no feedback for Document#1. On the other hand, Document#2 was highlighted thrice, with a total length of 11words and a single copy-paste action. Likewise, Document#3 was highlighted once with 60 words, with a single copy-paste action. Figure 3 illustrates the user's behaviour on Document#2.
-        </p>
-        <figure class="centre">
-          <img src="p724fig3.jpg" alt="Figure 3: Sample user behaviour for Document#2" width="624" height="342" />
-          <figcaption>
-            <br />
-            Figure 3: Sample user behaviour for Document#2
-          </figcaption>
-        </figure>
-        <p>
-          Based on the user's feedback, the binary voting produces FRE = 3, LEN = 0.1 and CP = 1 for Document#2, and FRE = 1, LEN = 0.2 and CP = 1 for Document#3. The application of Equation 1 would then produce a Ranked score of 8.99 (Document#1), 9.74 (Document#2) and 9.53 (Document#3). The documents are re-ranked based on these new weights, resulting in Document#2 to top the list, followed by Document#3 and Document#1 as show in Figure 3.
-        </p>
-      </section>
-      <section>
-        <h3>
-          User study
-        </h3>
-        <p>
-          Eleven students with computer science backgrounds volunteered to evaluate the proposed model. These were post-graduate students whose research work is related to information retrieval. They were identified based on their supervisors' research specialisations, and later approached by e-mail to participate in the study. Considering their technology background and field of study, these students were considered to be familiar with the concepts of information retrieval, test collections and the mechanism of the search engine.
-        </p>
-        <p>
-          The search engine prototype was installed in the computers in a laboratory before the experiments. The second author of this paper moderated the experiments after providing a brief demonstration on how to use the search engine. The students had no difficulties grasping the instructions, as the interface was simple to use and navigate. The set of queries was also provided to the studentsd and their behaviour was tracked as they interacted with the prototype. They were encouraged to perform the search in no particular order based on the queries provided, but they were required to perform all the searches at least once. The participants were also encouraged to repeat some of the queries, when appropriate. For each of the queries, they were encouraged to respond to the results displayed by highlighting any portion of text that they might find relevant based on the queries executed. In addition, they were shown how relevant text can be copied and pasted into other documents, and were then asked to do the same. The students took between one and two hours to complete the tasks.
-        </p>
-      </section>
-      <section>
-        <h3>
-          Retrieval models
-        </h3>
-        <p>
-          Retrieval models or algorithms need to be compared based on the same set of queries (i.e., by a matched pair experiment), therefore the thirty selected queries were used to evaluate all the models, baseline included. Most of the studies in the literature also compared proposed techniques with a baseline, which is usually a model without any feedback (<a href="#ahn08">Ahn, Brusilovsky, He, Grady, and Li, 2008</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#rav15">Ravana, Maheri and Rajapgopal, 2015</a>; <a href="#whi12">White and Buscher, 2012</a>;). In addition, the execution of the same set of queries on the various models ensured standardization of the experiments conducted, and thus the experiments were considered to be reliable.
-        </p>
-        <p>
-          The models compared in the current study are as follows:
-        </p>
-        <ul>
-          <li>Okapi BM25: the baseline model with no user feedback
-          </li>
-          <li>Frequency (FRE): a feedback model considering only the frequency of text highlight
-          </li>
-          <li>Length (LEN): a feedback model considering only the length of text highlight
-          </li>
-          <li>Copy-paste (CP): a feedback model considering only the copy-paste action
-          </li>
-          <li>Enhanced model (E): the proposed model integrating all the users' behaviour
-          </li>
-        </ul>
-        <p>
-          Performance evaluation of a Web search engine is usually limited to the top n positions, as users are generally interested in the top few results or the first few result pages. In this study, retrieved results were measured at three levels, that is, the top 5, 10 and 15. In addition, comparisons were also based on the query lengths.
-        </p>
-      </section>
-      <section>
-        <h2>
-          Effectiveness
-        </h2>
-        <p>
-          The effectiveness of the models was evaluated based on two standard metrics, that is, mean average precision (MAP) and F-score. Statistically significant differences between the models were determined using pair-wise comparisons at a confidence level of 95%.
-        </p>
-      </section>
-      <section>
-        <h3>
-          Mean average precision
-        </h3>
-        <p>
-          The effectiveness of an information retrieval system is usually determined based on precision (i.e., the fraction of retrieved documents that are relevant) and recall (i.e., the fraction of relevant documents that are retrieved). Although the preferred scenario would be to have these two values maximised, in most instances, precision decreases as recall increases (<a href="#bee11">Beebe, Clark, Dietrich, Ko, and Ko, 2011</a>). Mean average precision is used as overall performance indicator for retrieval algorithms. It allows easy comparisons to be made among similar researches as it carries a single value in measuring the quality of ranked results. Mean average precision has been shown to have good discrimination and stability compared to other evaluation metrics (<a href="#bid10">Bidoki <em>et al.</em>, 2010</a>; <a href="#sak06">Sakai 2006</a>). The mean average precision value can be obtained upon computing the average precision for each query, which can be determined using Equation 2 below (<a href="#man09">Manning <em>et al.</em>, 2009</a>):
-        </p>
-        <figure class="centre">
-          <img src="p724img2.jpg" alt="equ 2" width="445" height="63" />
-        </figure>
-        <p>
-          where n represents the number of retrieved documents, rel(k) shows if the document is relevant or not, and P(k) defines the precision at document level k
-        </p>
-        <p>
-          The mean average precision is then obtained by Equation 3:
-        </p>
-        <figure class="centre">
-          <img src="p724img3.jpg" alt="equ 3" width="502" height="55" />
-        </figure>
-        <p>
-          where Q refers to the number of queries.
-        </p>
-        <p>
-          For example, assume the results of two queries are as shown in Table 2 in which the relevance column indicates if the document is relevant or not (i.e., Yes=1; No=0).
-        </p>
-        <table class="center">
-          <caption>
-            <br />
-            Table 2: An example of mean average precision calculation
-          </caption>
-          <tbody>
-            <tr>
-              <th colspan="4">
-                Relevant documents for query 1 = 5
-              </th>
-              <th colspan="4">
-                Relevant documents for query 2 = 3
-              </th>
-            </tr>
-            <tr>
-              <th>
-                Rank
-              </th>
-              <th>
-                Relevance
-              </th>
-              <th colspan="2">
-                Precision
-              </th>
-              <th>
-                Rank
-              </th>
-              <th>
-                Relevance
-              </th>
-              <th colspan="2">
-                Precision
-              </th>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                1
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>1/1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 1</strong>
-              </td>
-              <td style="text-align:center">
-                1
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                0/1
-              </td>
-              <td style="text-align:center">
-                = 0
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                2
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                1/2
-              </td>
-              <td style="text-align:center">
-                = 0.5
-              </td>
-              <td style="text-align:center">
-                2
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>1/2</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 0.5</strong>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                3
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>2/3</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 0.67</strong>
-              </td>
-              <td style="text-align:center">
-                3
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                1/3
-              </td>
-              <td style="text-align:center">
-                = 0.33
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                4
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                2/4
-              </td>
-              <td style="text-align:center">
-                = 0.5
-              </td>
-              <td style="text-align:center">
-                4
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                1/4
-              </td>
-              <td style="text-align:center">
-                = 0.25
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                5
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                2/5
-              </td>
-              <td style="text-align:center">
-                = 0.4
-              </td>
-              <td style="text-align:center">
-                5
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>2/5</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 0.4</strong>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                6
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>3/6</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 0.5</strong>
-              </td>
-              <td style="text-align:center">
-                6
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                2/6
-              </td>
-              <td style="text-align:center">
-                = 0.33
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                7
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                3/7
-              </td>
-              <td style="text-align:center">
-                = 0.43
-              </td>
-              <td style="text-align:center">
-                7
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>3/7</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 0.43</strong>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                8
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                3/8
-              </td>
-              <td style="text-align:center">
-                = 0.38
-              </td>
-              <td style="text-align:center">
-                8
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                3/8
-              </td>
-              <td style="text-align:center">
-                = 0.38
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                9
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>4/9</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 0.44</strong>
-              </td>
-              <td style="text-align:center">
-                9
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                3/9
-              </td>
-              <td style="text-align:center">
-                = 0.33
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align:center">
-                10
-              </td>
-              <td style="text-align:center">
-                <strong>1</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>5/10</strong>
-              </td>
-              <td style="text-align:center">
-                <strong>= 0.5</strong>
-              </td>
-              <td style="text-align:center">
-                10
-              </td>
-              <td style="text-align:center">
-                0
-              </td>
-              <td style="text-align:center">
-                3/10
-              </td>
-              <td style="text-align:center">
-                = 0.3
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Using Equation 2, the average precision for query one is (1.0 + 0.67 + 0.5 + 0.44 + 0.5) / 5 = 0.62, whilst for query two is (0.5 + 0.4 + 0.43) / 3 = 0.44. The MAP value is finally calculated using Equation 3, which yields a value of (0.62 + 0.44) / 2 = 0.53.
-        </p>
-      </section>
-      <section>
-        <h3>
-          F � score
-        </h3>
-        <p>
-          The F-score combines both precision and recall into a single value, as shown in Equation 4:
-        </p>
-        <figure class="centre">
-          <img src="p724img4.jpg" alt="equ 4" width="557" height="30" />
-        </figure>
-        <p>
-          where r(j) is the recall and p(j) is the precision for the jth document in the ranking, respectively.
-        </p>
-        <p>
-          Similar to mean average precision, the function F also assumes values in the interval of 0 to 1. The harmonic mean F assumes a high value only when both recall and precision are high. According to Baeza-Yates and Ribeiro-Neto (1999), the determination of the maximum value for F can be interpreted as an attempt to find the best possible compromise between recall and precision. For instance, assume the recall and precision values for Document#1 is 0.0625 and 0.5, respectively. Similarly, for Document#2 the values are 0.1875 (recall) and 0.75 (precision). The F-score for Document#1 is hence 0.11 whereas for Document#2 is 0.3, showing that higher recall and precision values would yield a higher F-score.
-        </p>
-      </section>
-      <section>
-        <h2>
-          Results and discussion
-        </h2>
-        <h3>
-          Performance comparisons between the models
-        </h3>
-        <table class="center">
-          <caption>
-            <br />
-            Table 3: Overall mean average precision results
-          </caption>
-          <tbody>
-            <tr>
-              <th>
-                Query length
-              </th>
-              <th>
-                Levels
-              </th>
-              <th>
-                BM25
-              </th>
-              <th>
-                FRE
-              </th>
-              <th>
-                LEN
-              </th>
-              <th>
-                CP
-              </th>
-              <th>
-                E
-              </th>
-            </tr>
-            <tr>
-              <td>
-                Single
-              </td>
-              <td style="text-align:center">
-                Top 5
-              </td>
-              <td style="text-align:center">
-                0.4197*
-              </td>
-              <td style="text-align:center">
-                0.4690*
-              </td>
-              <td style="text-align:center">
-                0.4430*
-              </td>
-              <td style="text-align:center">
-                0.5027
-              </td>
-              <td style="text-align:center">
-                <strong>0.5113*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 10
-              </td>
-              <td style="text-align:center">
-                0.3925*
-              </td>
-              <td style="text-align:center">
-                0.4284
-              </td>
-              <td style="text-align:center">
-                0.4083*
-              </td>
-              <td style="text-align:center">
-                0.4178
-              </td>
-              <td style="text-align:center">
-                <strong>0.4366*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 15
-              </td>
-              <td style="text-align:center">
-                0.3491*
-              </td>
-              <td style="text-align:center">
-                0.3888
-              </td>
-              <td style="text-align:center">
-                0.3809
-              </td>
-              <td style="text-align:center">
-                0.3878
-              </td>
-              <td style="text-align:center">
-                <strong>0.3947*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Double
-              </td>
-              <td>
-                Top 5
-              </td>
-              <td style="text-align:center">
-                0.4177*
-              </td>
-              <td style="text-align:center">
-                0.4960
-              </td>
-              <td style="text-align:center">
-                0.4960
-              </td>
-              <td style="text-align:center">
-                0.4783*
-              </td>
-              <td style="text-align:center">
-                <strong>0.5283*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 10
-              </td>
-              <td style="text-align:center">
-                0.4136*
-              </td>
-              <td style="text-align:center">
-                0.4239*
-              </td>
-              <td style="text-align:center">
-                0.4239*
-              </td>
-              <td style="text-align:center">
-                0.4272*
-              </td>
-              <td style="text-align:center">
-                <strong>0.4686*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 15
-              </td>
-              <td style="text-align:center">
-                0.3856*
-              </td>
-              <td style="text-align:center">
-                0.4134
-              </td>
-              <td style="text-align:center">
-                0.4174
-              </td>
-              <td style="text-align:center">
-                0.4035*
-              </td>
-              <td style="text-align:center">
-                <strong>0.4396*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Triple
-              </td>
-              <td>
-                Top 5
-              </td>
-              <td style="text-align:center">
-                0.3950*
-              </td>
-              <td style="text-align:center">
-                0.3270*
-              </td>
-              <td style="text-align:center">
-                0.3003*
-              </td>
-              <td style="text-align:center">
-                0.4410*
-              </td>
-              <td style="text-align:center">
-                <strong>0.5427*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 10
-              </td>
-              <td style="text-align:center">
-                0.3639*
-              </td>
-              <td style="text-align:center">
-                0.3124*
-              </td>
-              <td style="text-align:center">
-                0.2970*
-              </td>
-              <td style="text-align:center">
-                0.4068*
-              </td>
-              <td style="text-align:center">
-                <strong>0.4557*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 15
-              </td>
-              <td style="text-align:center">
-                0.3304*
-              </td>
-              <td style="text-align:center">
-                0.2897*
-              </td>
-              <td style="text-align:center">
-                0.2782*
-              </td>
-              <td style="text-align:center">
-                0.3615*
-              </td>
-              <td style="text-align:center">
-                <strong>0.4103*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="7">
-                * Significant at p &lt; 0.05 when compared with the enhanced model (E)
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Table 3 shows the mean average precision values for all the models, clearly indicating the enhanced model to produce the best retrieval results, at all three document levels regardless of the query length. In fact, pair-wise comparisons revealed overall significant improvements for the enhanced model compared to BM25. This finding was expected as generally document relevance improve when users' feedback are available (<a href="#ahn08">Ahn <em>et al.</em>, 2008</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#bid10">Bidoki <em>et al.</em>, 2010</a>; <a href="#bus12">Buscher <em>et al.</em>, 2012</a>; <a href="#fox05">Fox <em>et al.</em>, 2005</a>; <a href="#whi12">White and Buscher, 2012</a>). Nevertheless, it has been shown that the three parameters, that is, frequency and length of text highlight, and users' copy-paste actions, can be incorporated into a single feedback model.
-        </p>
-        <p>
-          A second comparison shows that the enhanced model outperformed the frequency model, although significant differences were not observed at all the levels. Therefore, it has been successfully shown that document relevance can be vastly improved with the inclusion of the length of the text highlight and users' copy-paste actions. This finding supports the notion provided by White and Buscher (<a href="#whi12">2012</a>) that further manipulations to users' text highlights might improve document relevance. In fact, our finding seems to be in line with studies that have also reported text highlight and copy-paste actions to be strong indicators of users' interests (<a href="#hau11">Hauger <em>et al.</em>, 2011</a>; <a href="#hij04">Hijikata, 2004</a>). The enhanced model also outperformed all the feedback models and thus shows that the combination of these three mechanisms can be used to infer users' interests, hence improving retrieval relevance.
-        </p>
-        <p>
-          A second evaluation using F-score was conducted for all the models, and the results are depicted in Table 4.
-        </p>
-        <table class="center">
-          <caption>
-            <br />
-            Table 4: Overall F-scores
-          </caption>
-          <tbody>
-            <tr>
-              <th>
-                Query length
-              </th>
-              <th>
-                Levels
-              </th>
-              <th>
-                BM25
-              </th>
-              <th>
-                FRE
-              </th>
-              <th>
-                LEN
-              </th>
-              <th>
-                CP
-              </th>
-              <th>
-                E
-              </th>
-            </tr>
-            <tr>
-              <td>
-                Single
-              </td>
-              <td>
-                Top 5
-              </td>
-              <td style="text-align:center">
-                0.2068*
-              </td>
-              <td style="text-align:center">
-                0.2219
-              </td>
-              <td style="text-align:center">
-                0.2298
-              </td>
-              <td style="text-align:center">
-                0.2025*
-              </td>
-              <td style="text-align:center">
-                <strong>0.2312*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 10
-              </td>
-              <td style="text-align:center">
-                0.1574*
-              </td>
-              <td style="text-align:center">
-                0.1842
-              </td>
-              <td style="text-align:center">
-                0.1609
-              </td>
-              <td style="text-align:center">
-                0.1649
-              </td>
-              <td style="text-align:center">
-                <strong>0.1829*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 15
-              </td>
-              <td style="text-align:center">
-                0.0920
-              </td>
-              <td style="text-align:center">
-                0.1111
-              </td>
-              <td style="text-align:center">
-                0.1093
-              </td>
-              <td style="text-align:center">
-                0.1063
-              </td>
-              <td style="text-align:center">
-                <strong>0.1135*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Double
-              </td>
-              <td>
-                Top 5
-              </td>
-              <td style="text-align:center">
-                0.2509*
-              </td>
-              <td style="text-align:center">
-                0.2735
-              </td>
-              <td style="text-align:center">
-                0.2832
-              </td>
-              <td style="text-align:center">
-                0.2752
-              </td>
-              <td style="text-align:center">
-                <strong>0.2851*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td style="text-align:center">
-                Top 10
-              </td>
-              <td style="text-align:center">
-                0.2073*
-              </td>
-              <td style="text-align:center">
-                0.2182
-              </td>
-              <td style="text-align:center">
-                0.2178
-              </td>
-              <td style="text-align:center">
-                0.2112
-              </td>
-              <td style="text-align:center">
-                <strong>0.2206*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 15
-              </td>
-              <td style="text-align:center">
-                0.1254*
-              </td>
-              <td style="text-align:center">
-                0.1447
-              </td>
-              <td style="text-align:center">
-                0.1438
-              </td>
-              <td style="text-align:center">
-                0.1341*
-              </td>
-              <td style="text-align:center">
-                <strong>0.1516*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Triple
-              </td>
-              <td>
-                Top 5
-              </td>
-              <td style="text-align:center">
-                0.2359*
-              </td>
-              <td style="text-align:center">
-                0.2383*
-              </td>
-              <td style="text-align:center">
-                0.2341*
-              </td>
-              <td style="text-align:center">
-                0.2481
-              </td>
-              <td style="text-align:center">
-                <strong>0.2654*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 10
-              </td>
-              <td style="text-align:center">
-                0.1688*
-              </td>
-              <td style="text-align:center">
-                0.1765*
-              </td>
-              <td style="text-align:center">
-                0.1722*
-              </td>
-              <td style="text-align:center">
-                0.1979
-              </td>
-              <td style="text-align:center">
-                <strong>0.2076*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                Top 15
-              </td>
-              <td style="text-align:center">
-                0.1158*
-              </td>
-              <td style="text-align:center">
-                0.0994*
-              </td>
-              <td style="text-align:center">
-                0.0941*
-              </td>
-              <td style="text-align:center">
-                0.1293
-              </td>
-              <td style="text-align:center">
-                <strong>0.1375*</strong>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="7">
-                * Significant at p &lt; 0.05 when compared with the enhanced model (E)
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Similar patterns were observed in which the enhanced model was found to produce the best scores in terms of retrieval relevance compared to the rest of the models, regardless of query length and document levels.
-        </p>
-        <p>
-          Overall, results produced by mean average precision and F-scores indicate that the enhanced model has better retrieval capabilities than the other models. This shows that when a user's highlighting behaviour is analysed based on the length, frequency and copy-paste action, significant improvements can be noted for the relevance of the retrieval results. Although the findings are significant, the study is limited in the sense that other similar post-click actions, such as marking (i.e., symbols, underlining etc.) or commenting, were excluded. Future studies could look into these feedback techniques and integrate them into the enhanced model. Additionally, apart from copy-paste actions, documents can also be saved and printed. It would be interesting to examine if these post-selection actions have similar effects on retrieval relevance as opposed to copy-paste actions.
-        </p>
-      </section>
-      <section>
-        <h3>
-          Performance comparisons between query lengths
-        </h3>
-        <p>
-          Comparisons were also made across the varying query lengths. Looking at the precision values (Table 3 and Table 4), there seems to be a pattern whereby the retrieval effectiveness peaks when the query length is two, except for the enhanced model whereby the mean average precision value has improved for the triple term. However, this observation was made only for the top five documents. The overall results generally illustrate precisions to improve when query length is two, as shown in Figures 5 and 6.
-        </p>
-        <figure class="centre">
-          <img src="p724fig5.jpg" alt="Figure 4: Mean average precision based on query lengths" width="618" height="688" />
-          <figcaption>
-            <br />
-            Figure 5: Mean average precision based on query lengths
-          </figcaption>
-        </figure>
-        <figure class="centre">
-          <img src="p724fig6.jpg" alt="Figure 5: F-scores based on query lengths" width="624" height="737" />
-          <figcaption>
-            <br />
-            Figure 6: F-scores based on query lengths
-          </figcaption>
-        </figure>
-        <p>
-          These trends seem to indicate that the retrieval performance is the best when the query length is kept to two terms. Single term queries probably set a very strict focus, whereas longer queries tend to lose focus. However, it is noted that the current study set the maximum query length to only three. A similar finding was reflected in Hopfgartner and Jose (<a href="#hop07">2007</a>) who found their mean average precision values decreased significantly when the number of terms in the queries increased. The authors evaluated their model using 2-4-5-6 query lengths with results indicating best retrieval when the query length is two and the worst for six. It has been documented that in a traditional information retrieval environment (i.e., experiments), longer queries seem to yield better results, but this is not the case in interactive systems, such as the Web domain. In fact, the average query length has been reported to be around 2.3 words in the Web domain (<a href="#jan00">Jansen <em>et al.</em>, 2000</a>; <a href="#spi00">Spink <em>et al.</em>, 2000</a>). This is in contrast to Belkin <em>et al.</em> (<a href="#bel04">2004</a>) who investigated the effectiveness and usability of a simple interface technique for eliciting longer queries from searchers in a Web-based information retrieval system. The authors found their users chose to enter significantly longer queries in their query elicitation system than the baseline, suggesting that when the right interface is provided to the user, s/he might enter longer queries. However, they noted that the mean query length overall was related to better performance (i.e., measured based on correctness of the answers), regardless of the interface used. In other words, longer queries were found to lead to increased performance, regardless of query elicitation mode in the interactive information retrieval systems. It is noted that as our experiment was not specifically designed to examine query length effects on retrieval relevance, our findings are to be regarded cautiously. In other words, the queries were manually tweaked and set to single, double and triple terms based on the topics provided in the ACM test collection, hence this does not really reflect the way users would perform a search.
-        </p>
-      </section>
-      <section>
-        <h2>
-          Conclusion and limitations
-        </h2>
-        <p>
-          Previous studies focusing on analysing users' text highlighting behaviour in terms of its frequencies were further extended in this study by taking highlight length and copy-paste action into consideration. The feedback gathered was assigned weights using the binary voting mechanism, and was then incorporated into a re-ranking algorithm. The traditional BM25 was used as the baseline model (i.e., without any user's feedback). Both mean average precision and F-scores showed that the enhanced model outperformed BM25 and the other feedback models, indicating that users' text highlighting behaviour can be further manipulated to improve retrieval relevances. In fact, the enhanced model also showed significant improvements over the frequency model. Furthermore, it was also observed that retrieval performances are best when the query length is two, a trend that is often reported in real interactive systems such as the Web search engines. In addition, the enhanced model was found to consistently outperform the baseline, and the rest of the feedback models at all the document levels, regardless of the query lengths. This consistent performance of the enhanced model shows that the proposed mechanism is reliable (<a href="#voo08">Voorhees, 2008</a>). Nevertheless, there is also a need for the enhanced model to be evaluated on other test collections, such as TREC in order to determine its performance in retrieving relevant results.
-        </p>
-        <p>
-          In summary, the study found improvements in document retrieval relevance which are both substantial and statistically significant. One of the main outcomes of the study would be the inclusion and manipulation of users' post-click behaviour, namely text highlighting and copy-paste actions. Previous studies have explored the use of text highlighting, but none has focused on the length of the highlighted text. Future studies should look into the possibility of exploring users' post-click behaviour in more depth.
-        </p>
-        <p>
-          It is also noted that the results of this study are restricted to the experimental environment adopted. A few limitations exist, therefore future studies could look into addressing these issues. First, although ACM test collection is suitable for small-scale experiments, it would be interesting to evaluate the effectiveness of the proposed enhanced model based on other test collections, such as TREC. Although TREC increases the time and the difficulty of building information retrieval systems, it provides a huge testing document collection, search topics and relevance judgments which truly simulate the real search environment. Furthermore, it has been widely used to evaluate the performance of various retrieval systems (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>; <a href="#lag11">Lagun and Agichtein, 2011</a>; <a href="#man09">Manning <em>et al.</em>, 2009</a>; <a href="#xu10">Xu <em>et al.</em>, 2010</a>).
-        </p>
-        <p>
-          Second, previous studies focusing on the number of topics to be used in assessing a retrieval technique using test collections have recommended at least fifty topics (<a href="#voo08">Voorheese, 2008, 2009</a>). As the current study only used thirty, future studies could look into assessing the proposed model using a higher number of topics, for each query length.
-        </p>
-        <p>
-          Third, although the study found interesting results based on query lengths, further investigation is warranted. A more robust and proper mechanism is required to investigate the effect of query lengths on document retrieval relevance.
-        </p>
-        <p>
-          Finally, considering the nature of the experiment in which the participants were asked to perform certain actions (i.e., highlighting and copy-paste) based on the relevancy of the results, there is a possibility that user characteristics would have played a role in impacting their behaviour. For example, Shipman <em>et al.</em> (<a href="#shi03">2003</a>) differentiated between happy and meagre markers in their study, therefore future studies could further expand this study to include user characteristics as well.
-        </p>
-      </section>
-      <section>
-        <h2>
-          Acknowledgement
-        </h2>
-        <p>
-          The authors wish to thank University of Malaya for help supporting this project (RP028A-14AET)
-        </p>
-        <h2 id="authors">
-          About the authors
-        </h2>
-        <p>
-          <strong>Vimala Balakrishnan</strong> is a Senior Lecturer in the Department of Information System, Faculty of Computer Science and Information Technology, University of Malaya. Her areas of interest include data engineering, opinion mining, information retrieval and health informatics. She can be contacted at: <a href="mailto:vimala.balakrishnan@um.edu.my">vimala.balakrishnan@um.edu.my</a><br />
-          <strong>Yasir Mehmood</strong> is a post graduate (Masters) student in the Department of Information System, Faculty of Computer Science and Information Technology, University of Malaya. His research interests are opinion mining, information retrieval and data analysis. He can be contacted at: <a href="mailto:yasir725@siswa.um.edu.my">yasir725@siswa.um.edu.my</a>.<br />
-          <strong>Yoganathan Nagappan</strong> is a post graduate (Masters) student in the Department of Information System, Faculty of Computer Science and Information Technology, University of Malaya. His research interests include information retrieval. He can be contacted at: <a href="mailto:yogacruise@yahoo.com">yogacruise@yahoo.com</a>.
-        </p>
-      </section>
-<h4>References</h4>
-            <ul class="refs">
-              <li id="agi06">Agichtein, E., Brill, E., Dumais, S. &amp; Ragno, R. (2006). Learning user interaction models for predicting Web search result preferences. In <em>SIGIR '06 Proceedings of the 29th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 3-10). New York, NY: ACM Press.
-              </li>
-              <li id="agr09">Agrawal, R., Halverson, A., Kenthapadi, K., Mishra, N. &amp; Tsaparas, P. (2009). Generating labels from clicks. In <em>WSDM '09 Proceedings of the Second ACM International Conference on Web Search and Data Mining</em> (pp. 172 � 181). New York, NY: ACM Press.
-              </li>
-              <li id="ahn08">Ahn, J., Brusilovsky, P., He, D., Grady, J. &amp; Li, Q. (2008). Personalized Web exploration with task models. In <em>Proceeding of the 17th International Conference on World Wide Web 2008</em> (pp. 1 � 10). New York, NY: ACM.
-              </li>
-              <li id="bae99">Baeza-Yates, R &amp; Ribeiro-Neto, B. (1999). <em>Modern information retrieval</em>. New York, NY: ACM Press.
-              </li>
-              <li id="bal14">Balakrishnan, V. &amp; Zhang, X.Y. (2014). Implicit user behaviours to improve post-retrieval document relevancy. <em>Computers in Human Behavior, 33</em>, 104 -112.
-              </li>
-              <li id="bal16">Balakrishnan, V., Ahmadi, K. &amp; Ravana, S.D. (2016). Improving retrieval relevance using users' explicit feedback. <em>Aslib Journal of Information Management, 68</em>(1), 76�98.
-              </li>
-              <li id="bee11">Beebe, N. L., Clark, J. G., Dietrich, G. B., Ko, M. S. &amp; Ko, D. (2011). Post-retrieval search hit clustering to improve information retrieval effectiveness: two digital forensics case studies. <em>Decision Support Systems, 51</em>(4), 732�744.
-              </li>
-              <li id="bel04">Belkin, N. J., Cool., C., Kelly, D., Kim, G., Kim, J-Y., Lee, H-J., Muresan, G., Tang, M-C. &amp; Yuan, X-J. (2004). Query length in interactive information retrieval. In <em>Proceedings of the 26th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '03)</em> (pp. 205-212). New York, NY: ACM Press.
-              </li>
-              <li id="bid10">Bidoki, Z. A. M., Ghodsnia, P., Yazdani, N. &amp; Oroumchian, F. (2010). A3CRank: an adaptive ranking method based on connectivity, content and click-through data. <em>Information Processing &amp; Management, 46</em>(2), 159�169.
-              </li>
-              <li id="bul11">Bullock, B.N., J�schke, R. &amp; Hotho, A. (2011) Tagging data as implicit feedback for learning-to-rank. In <em>Proceedings of the ACM WebSci'11</em> (pp. 1 � 4). New York, NY: ACM Press.
-              </li>
-              <li id="bus09">Buscher, G., Elst, L. V. &amp; Dengel, A. (2009). Segment-level display time as implicit feedback?: a comparison to eye tracking. In <em>Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in information retrieval</em> (pp. 67�74). New York, NY: ACM Press.
-              </li>
-              <li id="bus12">Buscher, G., White, R. W., Dumais, S. &amp; Huang, J. (2012). Large-scale analysis of individual and task differences in search result page examination strategies. In <em>Proceedings of the fifth ACM International Conference on Web Search and Data Mining</em> (pp. 373 � 383). New York, NY: ACM Press.
-              </li>
-              <li id="car08">Carterette, B. &amp; Jones, R. (2008). Evaluating search engines by modeling the relationship between relevance and clicks. In <em>Advances in Neural Information Processing Systems 20 (NIPS 2007)</em> (pp. 1-8). Cambridge, MA: The MIT Press.
-              </li>
-              <li id="cha03">Chatterjee, P., Hoffman, D. L. &amp; Novak, T. P. (2003). Modeling the clickstream: implications for web-based advertising efforts. <em>Marketing Science, 22</em>(4), 520-541.
-              </li>
-              <li id="chu15">Chuklin, A., Markov, I. &amp; Rijke, M. D. (2015). Click models for web search. <em>Synthesis Lectures on Information Concepts, Retrieval, and Services, 7</em>(3), 1-115.
-              </li>
-              <li id="cla12">Clay, B. and Esparza, S. (2012). <em>Search engine optimization all in one for dummies</em>, 2nd Edition, Hoboken. NJ: John Wiley &amp; Sons, Inc.
-              </li>
-              <li id="cla01">Claypool, M., Le, P., Wased, M. &amp; Brown, D. (2001). Implicit interest indicators. In <em>Proceedings of the 6th International Conference on Intelligent User Interfaces</em> (pp. 33-40). New York, NY: ACM Press.
-              </li>
-              <li id="cra07">Crabtree, D., Andreae, P. &amp; Gao, X. (2007). Exploiting underrepresented query aspects for automatic query expansion. In <em>Proceedings of the 13th ACMSIGKDD International Conference on Knowledge Discovery and Data Mining</em> (pp.191�200). New York, NY: ACM Press.
-              </li>
-              <li id="dan13">Dang, V., Bendersky, M. &amp; Croft, W. B. (2013) Two-Stage Learning to Rank for Information Retrieval. <em>Advances in Information Retrieval</em> (pp. 423�434). Berlin, Heidelberg: Springer-Verlag.
-              </li>
-              <li id="dri11">Drias, H. (2011). Web information retrieval using particle swarm optimization based approaches. In <em>IEEE/WIC/ACM International Conferences on Web Intelligence and Intelligent Agent Technology</em> (pp. 36-39). Piscataway, NJ: IEEE Press.
-              </li>
-              <li id="dup10">Dupret, G. &amp; Liao, C. (2010). A model to estimate intrinsic document relevance from the clickthrough logs of a Web search engine. In <em>Proceedings of the third ACM International Conference on Web Search and Data Mining</em> (pp. 181-190). New York, NY: ACM Press.
-              </li>
-              <li id="fei10">Feimin, Z., Dong, W., Weizhu, C., Yuchen, Z., Zheng, C. &amp; Haixun, W. (2010). Incorporating post-click behaviors into a click model. In <em>Proceeding of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval � SIGIR</em> (pp. 303-312). New York, NY: ACM Press.
-              </li>
-              <li id="fox05">Fox, S., Karnawat, K., Mydland, M., Dumais, S. &amp; White, T. (2005). Evaluating implicit measures to improve Web search. <em>ACM Transactions on Information Systems, 23</em>(2), 147-168.
-              </li>
-              <li id="gra10">Graepel, T., Candela, J.Q., Borchert, T. &amp; Herbrich, R. (2010). Web-scale Bayesian click-through rate prediction for sponsored search advertising in Microsoft's Bing search engine. In <em>Proceedings of ICML</em> (pp. 13-20). New York, NY: ACM Press.
-              </li>
-              <li id="guo12">Guo, Q &amp; Agichtein, E. (2012). Beyond dwell time: estimating document relevance from cursor movements and other post-click searcher behavior, In <em>Proceedings of the 21st International Conference on World Wide Web</em> (pp. 569�578). New York, NY: ACM Press.
-              </li>
-              <li id="guo10">Guo, Q. &amp; Agichtein, E. (2010). Towards predicting Web searcher gaze position from mouse movements. In <em>CHI'10 Extended Abstracts on Human Factors in Computing Systems</em> (pp. 3601-3606). New York, NY: ACM Press.
-              </li>
-              <li id="has10">Hassan, A., Jones, R. &amp; Klinkner.K.L. (2010). Beyond DCG: user behavior as a predictor of a successful. In <em>Proceedings of the Third ACM International Conference on Web Search and Data Mining</em> (pp. 221-230). New York, NY: ACM Press.
-              </li>
-              <li id="hau11">Hauger, D., Paramythis, A. &amp; Weibelzahl, S. (2011). Using browser interaction data to determine page reading behavior. In <em>Proceedings of the 19th International Conference on User Modeling, Adaption, and Personalization</em> (pp.147-158). Berlin, Heidelberg: Springer-Verlag.
-              </li>
-              <li id="hij04">Hijikata, Y. (2004). Implicit user profiling for on demand relevance feedback. In <em>Proceedings of the 9th International Conference on Intelligent User Interfaces</em> (pp.198-205). New York, NY: ACM Press.
-              </li>
-              <li id="hop07">Hopfgartner, F. &amp; Jose, J. (2007). Evaluating the implicit feedback models for adaptive video retrieval. In <em>Proceedings of the International Workshop on Multimedia Information Retrieval</em> (pp. 323-331). New York, NY: ACM Press.
-              </li>
-              <li id="hua08">Huahuan, Cao, H-H., Daxin, J., Jian, P., Qi, H., Zhen, L., Enhong, C. &amp; Hang, L. (2008). Context-aware query suggestion by mining click-through and session data. In <em>Proceedings of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> (pp. 875-883). New York, NY: ACM Press.
-              </li>
-              <li id="hua12">Huang, J., White, R. W. &amp; Buscher, G. (2012). User see, user point: gaze and cursor alignment in Web search. In <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em> (pp. 1341 � 1350). New York, NY: ACM Press.
-              </li>
-              <li id="hua11">Huang, J., White, R. W. &amp; Dumais, S. (2011). No clicks , no problem: using cursor movements to understand and improve search. In <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em> (pp. 1225-1234). New York, NY: ACM Press.
-              </li>
-              <li id="jan00">Jansen, B. J. , Spink, A. &amp; Saracevic, T. (2000). Real life, real users, and real needs: a study and analysis of user queries on the Web. <em>Information Processes Management, 36</em>(2), 207-227.
-              </li>
-              <li id="joa05">Joachims, T., Granka, L., Pan, B., Hembrooke, H. &amp; Gay, G. (2005). Accurately interpreting clickthrough data as implicit feedback. In <em>Proceedings of the 28th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 154- 161). New York, NY: ACM Press.
-              </li>
-              <li id="joa07">Joachims, T., Granka, L., Pan, B., Hembrooke, H., Radlinski, F. &amp; Gay, G. (2007). Evaluating the accuracy of implicit feedback from clicks and query reformulations in Web search. <em>ACM Transactions on Information Systems, 25</em>(2).
-              </li>
-              <li id="jor10">Jordan, J., Simone, D.J.B, Thomas, S. &amp; Alexander, S. (2010). Improving the search for user interface design patterns through typed relationships. In Peter Forbrig, Fabio Patern� &amp; Annelise Mark Pejtersen, (Eds.). <em>Human-Computer Interaction Second IFIP TC 13 Symposium, HCIS 2010, Held as Part of WCC 2010, Brisbane, Australia, September 20-23, 2010. Proceedings</em> (pp. 3-14). Berlin: Springer-Verlag. (IFIP Advances in Information and Communication Technology, Vol. 332)
-              </li>
-              <li id="jun07">Jung, S., Herlocker, J. L. &amp; Webster, J. (2007). Click data as implicit relevance feedback in Web search. <em>Information Processing &amp; Management, 43</em>(3), 791�807.
-              </li>
-              <li id="kou12">Koumpouri, A. &amp; Simaki, V. (2012). Queries without clicks: evaluating retrieval effectiveness based on user feedback. In <em>Proceeding SIGIR '12 Proceedings of the 35th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 1133-1134). New York, NY: ACM Press.
-              </li>
-              <li id="lag11">Lagun, D. and Agichtein, E. (2011). ViewSer: enabling large-scale remote user studies of Web search examination and interaction categories and subject descriptors. In <em>Proceedings of the 34th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 365-374). New York, NY: ACM Press.
-              </li>
-              <li id="liu10a">Liu, J.J. &amp; Belkin, N. J. (2010). Personalizing information retrieval for multi-session tasks: the roles of task stage and task type. In <em>Proceedings of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 26-33). New York, NY: ACM Press.
-              </li>
-              <li id="liu10">Liu, C., Gwizdka, J. &amp; Liu, J. (2010). Helping identify when users find useful documents: examination of query reformulation intervals. In <em>Proceedings of the Third Symposium on Information Interaction in Context</em> (pp. 215�224). New York, NY: ACM Press.
-              </li>
-              <li id="liu11">Liu, Y., Miao, J., Zhang, M., Ma, S. &amp; Ru, L. (2011). How do users describe their information need: query recommendation based on snippet click model. <em>Expert Systems with Applications, 38</em>(11), 13847�13856.
-              </li>
-              <li id="man09">Manning, C.D, Raghavan, R. &amp; Schutze, H. (2009). <em>An introduction to information retrieval</em>. Cambridge: Cambridge University Press.
-              </li>
-              <li id="nun12">N��ez-Vald�z, E. R., Cueva Lovelle, J. M., Sanju�n Mart�nez, O., Garc�a-D�az, V., Ordo�ez de Pablos, P. &amp; Montenegro Mar�n, C. E. (2012). Implicit feedback techniques on recommender systems applied to electronic books. <em>Computers in Human Behavior, 28</em>(4), 1186�1193.
-              </li>
-              <li id="oar98">Oard, D. W. &amp; Kim, J. (1998). Implicit feedback for recommender systems, In <em>Proceedings of the AAAI Workshop on Recommender Systems</em> (pp. 81-83). Palo Alto, CA: AAAI Press.
-              </li>
-              <li id="obe07">Obendorf, H., Weinreich, H., Herder, E. &amp; Mayer, M. (2007). Web page revisitation revisited: implications of a long-term click-stream study of browser usage. In <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em> (pp. 597-606). New York, NY: ACM Press.
-              </li>
-              <li id="rav15">Ravana, S.D., Taheri, M. &amp; Rajagopal, P. (2015). Document-based approach to improve the accuracy of pairwise comparison in evaluating information retrieval systems. <em>Aslib Journal of Information Management, 67</em>(4), 408 � 421.
-              </li>
-              <li id="rob09">Robertson, S. &amp; Zaragoza, H. (2009). The probabilistic relevance framework: BM25 and beyond, <em>Foundations and Trends in Information Retrieval, 3</em>(4), 339 � 389
-              </li>
-              <li id="sak06">Sakai, T. (2006). On the reliability of information retrieval metrics based on graded relevance. <em>Information Processing and Management, 43</em>(2), 531�548.
-              </li>
-              <li id="sar98">Sarwar, B., Konstan, J., Borchers, A., Herlocker, J., Miller, B. &amp; Reidl, J. (1998). Using filtering agents to improve prediction quality in the Grouplens research collaborative filtering system. In <em>Proceedings of ACM Conference on Computer Supported Collaborative Work (CSCW)</em> (pp. 345-354). New York, NY: ACM Press.
-              </li>
-              <li id="shi03">Shipman, F., Price, M., Marshall, C., Golovchinsky, G. &amp; Schilit, B. (2003). Identifying useful passages in documents based on annotation patterns. In <em>Proceedings of European Conference on Digital Libraries</em> (pp. 101-112). Berlin, Heidelberg: Springer-Verlag.
-              </li>
-              <li id="spi00">Spink, A., Jansen, B.J. &amp; Ozmultu, H.C. (2000). Use of query reformulation and relevance feedback by Excite users. <em>Internet Research, 10</em>(4), 317-328
-              </li>
-              <li id="tsa11">Tsatsaronis, G. (2011). An experimental study on syntactic and semantic annotation in text retrieval. In <em>Proceedings of the fourth workshop on Exploiting Semantic Annotations in Information Retrieval</em> (pp. 27-28). New York, NY: ACM Press.
-              </li>
-              <li id="tyl10">Tyler, S. K. &amp; Teevan, J. (2010). Large scale query log analysis of re-finding. In <em>Proceedings of the Third ACM International Conference on Web Search and Data Mining</em> (pp. 191 � 200). New York, NY: ACM Press.
-              </li>
-              <li id="tyls10">Tyler, S. K., Wang, J. &amp; Zhang, Y. (2010). Utilizing re-finding for personalized information retrieval. In <em>Proceedings of the 19th ACM International Conference on Information and Knowledge Management</em> (pp. 1469 � 1472). New York, NY: ACM Press.
-              </li>
-              <li id="var14">Varathan, K.D., Tengku Sembok, T.M., Abdul Kadir, R. &amp; Omar, N. (2014). Semantic indexing in question answering systems. <em>Malaysian Journal of Computer Science, 27</em>(4), 261-274.
-              </li>
-              <li id="voo08">Voorhees, E. M. (2008) On test collections for adaptive information retrieval. <em>Information Process &amp; Management, 44</em>(6), 1879-1885.
-              </li>
-              <li id="voo09">Voorhees, E. M. (2009). Topic set size redux. In <em>Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 806-807). New York, NY: ACM Press.
-              </li>
-              <li id="wal98">Walker, S., Robertson, S.E., Boughanem, M., Jones, G.J.F., Sparck Jones, K. (1998). Okapi at TREC-6 automatic ad hoc, VLC, routing, filtering and QSDR. In E.M. Voorhees &amp; D.K. Harmands, (Eds.). <em>The Sixth Text REtrieval Conference TREC-6</em> (pp. 125-136). Gaithersburg, MD: National Institute for Science and Technology.
-              </li>
-              <li id="whi12">White, R. W. &amp; Buscher, G. (2012). Text selections as implicit relevance feedback. In <em>Proceedings of the 35th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 1151 � 1152). New York, NY: ACM Press.
-              </li>
-              <li id="whi06">White, R. W., Jose, J.M. &amp; Ruthven, I. (2006). An implicit feedback approach for interactive information retrieval. <em>Information Processing and Management, 42</em>(1), 166�190
-              </li>
-              <li id="xu10">Xu, J.F., Chen, Chuanliang, Xu, G., Li, H. &amp; Elbio, R.T.A. (2010). Improving quality of training data for learning to rank using click-through data. In <em>Proceedings of the third ACM International Conference on Web Search and Data Mining</em> (pp. 171-180). New York, NY: ACM Press.
-              </li>
-              <li id="yu12">Yu, J.X, Lu, L., Sun, S. &amp; Zhang, F. (2012). Search results evaluation based on user behavior, In Yuyu Yuan, Xu Wu &amp; Yueming Lu, (Eds.). <em>Trustworthy Computing and Services: International Conference, ISCTCS 2012, Beijing, China, May 28 � June 2, 2012, Revised Selected Papers</em> (pp. 397�403). Berlin, Heidelberg: Springer-Verlag. (Communications in Computer and Information Science, Vol. 320)
-              </li>
-              <li id="zem12">Zemirli, N. (2012). WebCap: inferring the user's interests based on a real-time implicit feedback. In <em>Seventh International Conference on Digital Information Management (ICDIM)</em> (pp. 62-67). Piscataway, NJ: IEEE Press.
-              </li>
-              <li id="zho13">Zhou, D., Liu, J. &amp; Zhang, S. (2013). Query generation techniques for patent prior-art search in multiple languages. In Guodong Zhou, Juanzi Li, Dongyan Zhao &amp; Yansong Feng, (Eds.). <em>Natural Language Processing and Chinese Computing: Second CCF Conference, NLPCC 2013, Chongqing, China, November 15-19, 2013, Proceedings</em> (pp. 310-321). Berlin, Heidelberg: Springer-Verlag. (Communications in Computer and Information Science, Vol. 400).
-              </li>
-              <li id="zhu12">Zhu, Y., He, L. &amp; Wang, X. (2012). User interest modeling and self-adaptive update using relevance feedback technology. <em>Procedia Engineering, 29</em>, 721�725.
-              </li>
-            </ul>
-   
-  </body>
+<body>
+<h4 id="vol-21-no-4-december-2016">vol. 21 no. 4, December, 2016</h4>
+<h1 id="moving-beyond-text-highlights-inferring-users-interests-to-improve-the-relevance-of-retrieval">Moving beyond text highlights: inferring users' interests to improve the relevance of retrieval</h1>
+<h2 id="vimala-balakrishnan-yasir-mehmood-and-yoganathan-nagappan"><a href="#authors">Vimala Balakrishnan, Yasir Mehmood</a> and <a href="#authors">Yoganathan Nagappan</a></h2>
+<h4 id="abstract">Abstract</h4>
+<p><strong>Introduction.</strong> Studies have indicated that users' text highlighting behaviour can be further manipulated to improve the relevance of retrieved results. This article reports on a study that examined users' text highlight frequency, length and users' copy-paste actions.<br>
+<strong>Method.</strong> A binary voting mechanism was employed to determine the weights for the feedback, which were then used to re-rank the original search results. A search engine prototype was built using the Communications of the ACM test collection, with the well-known BM25 acting as the baseline model.<br>
+<strong>Analysis.</strong> The proposed enhanced model's performance was evaluated using the mean average precisions and F-score metrics, and results were compared at the top 5, 10 and 15. Additionally, comparisons were also made based on the number of terms used in a query, that is single, double and triple terms.<br>
+<strong>Results.</strong> The findings show that the enhanced model significantly outperformed BM25, and the rest of the models at all document levels. To be specific, the enhanced model showed significant improvements over the frequency model. Additionally, retrieval relevance was found to be the best when the query length is two.<br>
+<strong>Conclusions.</strong> Users' post-click behaviour may serve as a significant indicator of their interests, and thus can be used to improve the relevance of the retrieved results. Future studies could look into further extending this model by including other post-click behaviour such as printing or saving.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Online searching has become part of many people's work and daily lives, including activities such as research, shopping and entertainment (<a href="#cla12">Clay and Esparza, 2012</a>). For example, it is common for people to: seek information from Wikipedia, search through Google, buy products from eBay or Amazon.com, etc. However, searching for relevant items or services can be a daunting task due to the amount of information, and this is further exacerbated by a lack of searching skills. Web users tend to not know (or care) about the heterogeneity of Web content, the syntax of query languages and the art of phrasing queries, often resulting in them spending a lot of time looking for relevant items on the Internet (<a href="#man09">Manning, Raghavan and Schutze, 2009</a>; <a href="#var14">Varathan, Tengku Sembok, Abdul Kadir and Omar, 2014</a>).</p>
+<p>To solve the problem of users' lack of query skills, relevance feedback is commonly used. Relevance feedback is a process involving users in the development of information retrieval systems, and aims to improve search results and increase user satisfaction. According to Baeza-Yates and Ribeiro-Neto (<a href="#bae99">1999</a>), '<em>in a relevance feedback cycle, the user is presented with a list of the retrieved documents and, after examining them, marks those which are relevant</em>'. In fact, relevance feedback has been shown to be an indicator of users' interests, which can then be used to improve their satisfaction (<a href="#cla01">Claypool, Le, Wased and Brown, 2001</a>; <a href="#fox05">Fox, Karnawat, Mydland, Dumais and White, 2005</a>; <a href="#liu10">Liu, Gwizdka and Liu, 2010</a>). Two components of relevance feedback have evolved, namely, query expansion (i.e., automatic relevance feedback) and term reweighting. Query expansion involves the addition of new terms to the initial query automatically, using techniques such as pseudo-relevance feedback (i.e., users get improved retrieval performance without further interaction), thesaurus-based or other types of expansions, with studies demonstrating the accuracy of the interpretation of original queries to improve by this technique (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>; <a href="#cra07">Crabtree, Andreae and Gao, 2007</a>; <a href="#wal98">Walker, Robertson, Boughanem, Jones and Sparck, 1998</a>). In contrast, term reweighting refers to the modification of term weights according to the relevance judgement by users (<a href="#bae99">Baeza-Yates and Ribeiro-Neto, 1999</a>). In other words, this technique increases the term weights in relevant documents whilst decreasing those in irrelevant documents.</p>
+<p>Relevance feedback is usually gathered through explicit and/or implicit feedback. Explicit feedback requires the users to provide feedback for products or services rendered, with methods including ranking, rating, commenting and answering questions (<a href="#bal16">Balakrishnan, Ahmadi and Ravana, 2016</a>; <a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#nun12">Núñez-Valdéz <em>et al.</em>, 2012</a>). Explicit feedback is well understood, easy to implement and fairly precise. The approach, however, requires the users to engage in additional activities beyond their normal searching behaviour, hence resulting in higher user costs in time and effort. Additionally, not all users like to be involved in providing explicit feedback as the repetitive and frequent way of obtaining the relevance judgement causes a cognitive overload for the users (<a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#zem12">Zemerli, 2012</a>). Users are generally busy reading or looking for the right document or item during a search session, and thus they do not often provide explicit feedback. In fact, during an experiment it was found that only a small group of users agreed to give relevance judgments, and sometimes they had to be paid to provide this information (<a href="#spi00">Spink, Jansen and Ozmultu, 2000</a>). Similarly, previous work on <a href="http://grouplens.org/">GroupLens</a> found that users rated many fewer documents than they read (<a href="#sar98">Sarwar <em>et al.</em>, 1998</a>). Thus, even though explicit ratings are fairly precise in recognizing user interests, their efficacy is limited.</p>
+<p>On the other hand, implicit feedback such as mouse clicks (i.e., click-through data) can be mined unobtrusively and used to determine users' preferences (<a href="#agi06">Agichtein, Brill, Dumais and Ragno, 2006</a>; <a href="#agr09">Agrawal, Halverson, Kenthapadi, Mishra and Tsaparas, 2009</a>; <a href="#car08">Carterette and Jones, 2008</a>; <a href="#chu15">Chuklin, Markov and Rijke, 2015</a>; <a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#dup10">Dupret and Liao, 2010</a>; <a href="#fei10">Feimin <em>et al.</em>, 2010</a>; <a href="#joa05">Joachims, Granka, Pan, Hembrooke and Gay, 2005</a>; <a href="#yu12">Yu, Lu, Sun, and Zhang, 2012</a>). For instance, mouse clicks have been used for online advertising to estimate the relevance of an advertisement to a search result page or a document (<a href="#cha03">Chatterjee, Hoffman and Novak, 2003</a>; <a href="#gra10">Graepel, Candela, Borchert and Herbrich, 2010</a>).</p>
+<p>One of the main difficulties in estimating relevance from click data is due to position bias, that is, a document appearing in a higher position is more likely to attract user clicks even though it is irrelevant. Subsequent studies on implicit feedback hence progressed to include users' post-click behaviour, which refers to users' actions on the selected documents or results. These include dwell time (i.e., reading or display time) (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#fox05">Fox <em>et al.</em>, 2005</a>; <a href="#oar98">Oard and Kim, 1998</a>), printing (<a href="#oar98">Oard and Kim, 1998</a>), scrolling (<a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#guo12">Guo and Agichtein, 2012</a>; <a href="#oar98">Oard and Kim, 1998</a>), and mouse or cursor movements (<a href="#bus12">Buscher, White, Dumais and Huang, 2012</a>; <a href="#guo10">Guo and Agichtein, 2010</a>; <a href="#hua12">Huang, White and, Buscher, 2012</a>), with results indicating post-click behaviour to provide valuable implicit feedback that could indicate the relevance of selected documents. Huge volumes of implicit feedback data can be gathered easily and unobtrusively. Furthermore, no mental efforts are required from the users (<a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#man09">Manning <em>et al.</em>, 2009</a>).</p>
+<p>One of the recent implicit feedback techniques that has been explored is text highlight or text selection, which involves selecting a block of text to indicate its relevancy to the user. Generally, people make some form of mark, such as highlights, annotations, comments, circles, etc., on documents to indicate interests or relevance (<a href="#shi03">Shipman, Price, Marshall, Golovchinsky and Schilit, 2003</a>). Similar assumptions have been made in information retrieval studies, whereby users' annotations and text highlighting behaviour was used to improve document relevance. However, research focusing on such behaviour is scarce.</p>
+<p>Studies of users' text highlighting behaviour thus far have examined the frequency of text highlighting, that is, it is assumed that the more text highlights a document contains, the more relevant the document is to the user (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#whi12">White and Buscher, 2012</a>). Determining a document's relevance based only on the frequency of text highlighting may be inadequate because factors such as the length of the highlighted text and users' post-selection actions may also indicate users' interests (<a href="#whi12">White and Buscher, 2012</a>). Furthermore, according to Buscher <em>et al.</em> (<a href="#bus12">2012</a>), copy-paste and reading aid were the two main reasons leading users to highlight text. In fact, both text highlighting and copying are considered to be very strong indicators of users' interests (<a href="#hau11">Hauger, Paramythis, and Weibelzahl, 2011</a>; <a href="#hij04">Hijikata, 2004</a>). Therefore, these indicators can potentially be used together to improve retrieval relevance.</p>
+<p>The current study aims to extend the above-mentioned works by further exploring and manipulating users' text highlighting behaviour. To be precise, the study intends to improve document retrieval relevance by analysing three parameters: (i) frequency of text highlight, (ii) length of text highlight, and (iii) user's copy-paste action. The traditional ranking algorithm, <a href="https://en.wikipedia.org/wiki/Okapi_BM25">Okapi BM25</a> was used as the baseline (i.e., without users' feedback) and Communications of the ACM (CACM) was used as the test collection. To evaluate the retrieval effectiveness of the proposed model, an experiment was conducted using a self-developed prototype search engine. The retrieved results were analysed at the top 5, 10 and 15 document levels, and also compared by query lengths. As will be shown, the findings show that the proposed model consistently yields significant improvements over BM25, and the rest of the feedback models.</p>
+<section>
+<h2 id="related-work">Related work</h2>
+<p>Implicit user feedback can be generally divided into two categories: the query actions and the physical user reactions. The query actions refer to ways in which the user interacts with the search engine (e.g., clicks, key strokes) whereas the physical reactions are users' unconscious behaviour (e.g., eye movements, heart rate). Unlike the latter category, which requires special devices to collect data, users' query actions can be easily captured during a search session. The current study intends to exploit these query actions, specifically users' text highlighting behaviour.</p>
+<p>Inferences drawn from implicit feedback are considered to be less reliable compared to explicit feedback, but on the other hand, large quantities of data can be gathered unobtrusively (<a href="#jun07">Jung, Herlocker, and Webster, 2007</a>). Studies focusing on implicit feedback have investigated various user behaviour, such as mouse clicks (<a href="#agi06">Agichtein <em>et al.</em>, 2006</a>; <a href="#agr09">Agrawal <em>et al.</em>, 2009</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#cla01">Claypool <em>et al.</em>, 2001</a>; <a href="#dup10">Dupret and Liao, 2010</a>; <a href="#fei10">Feimin <em>et al.</em>, 2010</a>; <a href="#yu12">Yu <em>et al.</em>, 2012</a>), dwell time (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#fox05">Fox <em>et al.</em>, 2005</a>; <a href="#has10">Hassan, Jones and Klinkner, 2010</a>; <a href="#hua11">Huang, White and Dumais, 2011</a>), eye tracking (<a href="#joa07">Joachims <em>et al.</em>, 2007</a>), and mouse movements (<a href="#bus12">Buscher <em>et al.</em>, 2012</a>; <a href="#guo10">Guo and Agichtein, 2010</a>; <a href="#hua12">Huang <em>et al.</em>, 2012</a>), among others. Techniques such as mouse clicks are based on the assumption that the clicked documents are relevant to the search queries, however this may not be accurate. Joachims <em>et al</em>. (<a href="#joa05">2005</a>) reported two main issues: trust bias in which users trusted the ranking quality of the search engine and only clicked the first few results, and quality bias which refers to users' varying behaviour for the same query in different search engines.</p>
+<p>Generally, studies examine the search logs to understand users' behaviour and interests because they can automatically capture user interaction details. In addition, these data can be analysed to optimize retrieval performances (<a href="#jor10">Jordan, Simone, Thomas, and Alexander, 2010</a>), help query suggestions (<a href="#hua08">Huanhuan <em>et al.</em>, 2008</a>) and enhance the ranked results (<a href="#agi06">Agichtein <em>et al.</em>, 2006</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>). More recent studies have looked into ways to improve retrieval by investigating other clicking behaviour, such as Xu, Chen, Xu, Li, and Elbio (<a href="#xu10">2010</a>) who used click rate and last click to predict the relevant labels or Uniform Resource Locators (URL). Although an overall improvement was observed, using last click as an interest indicator may not be accurate as well, because there are different reasons behind the last click. For example, users who left the last documents may have either succeeded in finding useful documents (good abandon) or failed to find relevant documents (bad abandon), and hence began a new search (<a href="#hua11">Huang <em>et al.</em>, 2011</a>).</p>
+<p>Studies have also progressed into examining users' post-click behaviour (i.e., actions performed after clicking on a link). A simple technique would be the dwell time, whereby it is assumed that if a document is relevant, the user may spend longer time on it than other documents (<a href="#bus09">Buscher, Elst, and Dengel, 2009</a>). In a more recent study, dwell time was further experimented from three different angles, that is, display time (i.e., interval time between open and close of the document), dwell time (i.e., reading time) and decision time (i.e., decision-making time to select document), with results indicating dwell time topped the list in predicting document relevance compared to the other two indicators (<a href="#liu10a">Liu and Belkin, 2010</a>). Unfortunately, similar to mouse click problems, dwell time does not work well in all cases, because it is strongly dependent on the length of the document. In fact, it has been argued that spending more time on a page does not necessarily translate into higher user interests or relevance. In other words, the correlation between time and length cannot be directly inferred as a correlation between time and degree of interests (<a href="#zem12">Zemirli, 2012</a>). As implicit feedback techniques do not necessarily predict users' interests on their own, many studies have combined multiple implicit feedback. For instance, Claypool <em>et al.</em> (<a href="#cla01">2001</a>) found dwell time and scrolling predicted relevance in Internet browsing, Oard and Kim (<a href="#oar98">1998</a>) found dwell time and printing significantly indicated users' interests, whereas Guo and Agichtein (<a href="#guo12">2012</a>) improved document relevance using dwell time, scrolling and cursor movements.</p>
+<p>Another post-click behaviour explored to infer users' interests is mouse or cursor movement, with the assumption that <em>'the more a mouse moves, the more a user is interested in the Web page or document'</em> (<a href="#guo10">Guo and Agichtein, 2010, 2012</a>; <a href="#hua11">Huang <em>et al.</em>, 2011</a>; <a href="#kou12">Koumpouri and Simaki, 2012</a>; <a href="#zem12">Zemerli, 2012</a>). In a study by Guo and Agichtein (<a href="#guo10">2010</a>), the authors compared cursor movements with dwell time, with findings indicating strong associations for some of the cursor features. For instance, it was observed that the further down the searcher moves the cursor, the more likely it is that s/he finds the page to be relevant. Additionally, the authors also observed lower speed of cursor movements to be indicative of <em>reading</em>, which is more likely to happen when the page is relevant. Similarly, Huang <em>et al.</em> (<a href="#hua11">2011</a>) evaluated several features of mouse movements (i.e., cursor trail length, movement time and cursor speed) on the result pages of the Microsoft Bing search engine. Their results showed that cursor movements not only improve the search results ranking, but also help query classifications.</p>
+<p>Re-finding, i.e., users returning to the pages that have been visited previously, hence indicating interests in that page (<a href="#tyl10">Tyler and Teevan, 2010</a>; <a href="#tyls10">Tyler, Wang, and Zhang, 2010</a>) is another post-click activity. A page review or revisit, on the other hand, refers a user returning to the same document or item during a search session, usually by the back button. This is in contrast to re-finding, in the sense that the user does not search for the same URL using a query, browser history or bookmarked items; instead the user clicks on the same item by returning to the same search results page. Obendorf, Weinreich, Herder, and Mayer (<a href="#obe07">2007</a>) conducted a small experiment with 25 users to investigate page review behaviour. They found 31% of reviews were accomplished by the back button, and 72.6% of the reviews frequently took place in less than one hour, suggesting that page reviews take place frequently in a Web search, especially on a short-term basis. Other user actions such as printing, copying and bookmarking can also be interpreted as implicit indicators of relevance. That is, the users performed a certain action because they are interested in the corresponding document (<a href="#guo12">Guo and Agichtein, 2012</a>; <a href="#kou12">Koumpouri and Simaki, 2012</a>; <a href="#oar98">Oard and Kim, 1998</a>). In fact, it has been revealed that scrolling time and copying text from titles and/or snippets to be the best predictors of user satisfaction (<a href="#kou12">Koumpouri and Simaki, 2012</a>). Alternatively, Bullock, Jäschke and Hotho (<a href="#bul11">2011</a>) used users' URL tags to infer their Web interests, and found that tagging data helps improve the results relevance scores.</p>
+<p>Interestingly, very few researchers have looked into text highlights. For instance, White and Buscher (<a href="#whi12">2012</a>) conducted an experiment using Microsoft Bing search engine and a plug-in tool to record text highlighting behaviour on result pages, studying 389 queries containing text highlights. Their results showed 6% improvement in the precision compared to their baseline model for the top ten results. Similarly, Balakrishnan and Zhang (<a href="#bal14">2014</a>) compared four implicit feedback approaches, namely dwell time, click-through data, page review and text highlight. Their results revealed text highlight to have the best precisions for top ten, fifteen and twenty-five document levels compared to the other techniques, albeit with insignificant differences (p &gt; 0.05). Both these studies examined text highlighting by looking at the frequency of its occurrences. It is believed that with further assessment of this particular behaviour, document relevance can be improved.</p>
+<p>Drawing inspirations from these post-click behaviour studies (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#kou12">Koumpouri and Simaki, 2012</a>; <a href="#whi12">White and Buscher, 2012</a>), we propose to further exploit users' text highlighting behaviour by focusing not only on the frequency of highlights, but also on the length of highlights and users' copy-paste actions.</p>
+</section>
+<section>
+<h2 id="research-methods">Research methods</h2>
+<p>This section provides details on the methods employed in the current study. The proposed enhanced model basically works in the following manner:</p>
+<ol>
+<li>A user sends a query</li>
+<li>The traditional BM25 ranking algorithm returns a set of initial ranked results</li>
+<li>Users' behaviour is tracked and gathered (i.e., text highlighting and copy-paste actions). The user's interaction with the original search engine result page is monitored and recorded in a search log. The recorded user's implicit feedback (i.e., length and frequency of highlighted text, and copy-paste action) will be then weighted by a feedback weighting scheme called the binary voting mechanism.</li>
+<li>Scores from the binary voting mechanism are fed into the re-ranking algorithm. More details are given in the following subsections.</li>
+<li>A new set of improved results is displayed for the same query in the next search.</li>
+</ol>
+<p>The specific details of the model are elaborated in the following sub-sections.</p>
+</section>
+<section>
+<h3 id="user-behaviour">User behaviour</h3>
+<p>Similar to previous studies, an assumption has to be made to tune the setting of the re-ranking algorithm applicable in this study. Generally, studies on implicit feedback assume certain actions are performed because the users are interested in the particular result or document, and hence it may be of relevance. For example, Zemerli (<a href="#zem12">2012</a>), who inferred users' interests based on reading time, saving or bookmarking and printing, assumed that '<em>if the given document is saved or printed, this means that it has attracted the interest of the user, so it must be considered as relevant</em>'. White and Buscher (<a href="#whi12">2012</a>) and Balakrishnan and Zhang (<a href="#bal14">2014</a>) assumed that the more highlights a document contains (i.e., frequency), the more relevant it is to the user.</p>
+<p>Similarly, the current study assumes the following:</p>
+<p><em>Assumption 1: If a given document's content is highlighted, this means it has attracted the interest of the user, so it must be considered relevant.</em></p>
+<p>A document containing more highlights is deemed to be more relevant (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#whi12">White and Buscher, 2012</a>).</p>
+<ul>
+<li>Frequency of text highlight - when a word or a portion of text is highlighted, the frequency of text highlight for the document is increased accordingly. As an example, assume a search for abstract is performed, and the user reviewed three documents as shown in Figure 1. Document three is deemed to be more relevant than documents two and one as it contains the highest frequency of highlights (i.e., eight).</li>
+</ul>
+<figure class="centre">![Figure 1: Frequency of text highlight](p724fig1.jpg)
+<figcaption>Figure 1: Frequency of text highlight</figcaption>
+</figure>
+<p><em>Assumption 2: A document containing longer highlighted texts is deemed to be more relevant.</em></p>
+<ul>
+<li>Length of text highlight - refers to the number of words that has been highlighted, with a similar assumption that the longer the highlighted text, the more relevant the document is to the user.</li>
+</ul>
+<p><em>Assumption 3: If a copy-paste action is performed after the highlights, then it must be considered relevant</em></p>
+<ul>
+<li>Copy-paste - this refers to the post-selection action, in which when a user performs a copy-paste action, then the count for this variable is increased.</li>
+</ul>
+</section>
+<section>
+<h3 id="baseline-ranking-model">Baseline ranking model</h3>
+<p>Okapi BM25 is one of the most established probabilistic term weighting models used by search engines to rank matching documents to their relevance to a given search query. The model and its variants have been extensively described and evaluated in the field of information retrieval, and hence serve as a strong, reproducible baseline algorithm (<a href="#rob09">Robertson and Zaragoza, 2009</a>). It has been used in various studies as the baseline model (<a href="#bid10">Bidoki, Ghodsnia, Yazdani, and Oroumchian, 2010</a>; <a href="#dan13">Dang, Bendersky, and Croft, 2013</a>; <a href="#zho13">Zhou, Liu and Zhang, 2013</a>). Therefore, the ranking model also acts as the baseline in this study.</p>
+</section>
+<section>
+<h3 id="re-ranking-algorithm">Re-ranking algorithm</h3>
+<p>We propose the following re-ranking algorithm, which is based on BM25 and binary voting (Equation 1).</p>
+<figure class="centre">![equ 1](p724img1.jpg)</figure>
+<p>where</p>
+<ul>
+<li>Ranked score refers to the final score (i.e., weight) upon incorporating users' feedback</li>
+<li>FRE is the number of occurrences of text highlights. The value is set to a zero by default, and it is incremented by one when a user highlights a word or a block of text (i.e., when the action is performed)</li>
+<li>LEN indicates the length of the highlighted text. The initial value is also set to a zero. The value is however incremented by 0.1 for every fifty words, up to 500 words. In other words, the values fall within the range of zero to one. The normalization was deemed necessary to incorporate binary voting (<a href="#hop07">Hopfgartner and Jose, 2007</a>).</li>
+<li>CP refers to the copy-paste action. It is set to a zero by default, and increases by one whenever the user highlights a word or a block of text and chooses to copy-paste it (i.e., when the action is performed)</li>
+</ul>
+<p>For a retrieved document that has not received any implicit feedback from the user, the Ranked score will be same as the original score, which is BM25. In other words, the second half of Equation 1 will not be executed if no feedback is gathered.</p>
+<p>The weights given to each of the feedback techniques were based on the binary voting mechanism. The mechanism allows weighting terms and ranking them, and different weights can be provided for different implicit actions (<a href="#hop07">Hopfgartner and Jose, 2007</a>). For example, Hopfgartner and Jose introduced a model of six implicit interactions for interpreting a user's actions with an interactive video retrieval interface. A normalization of the features was needed which guarantees that the user feedback weights fall between 0.0 and 1.0. Therefore, the authors divided the video playing duration into 0 - 10 time cycles (i.e., 0.1 weight for each cycle), with each cycle having duration of five seconds. Similarly, White, Jose and Ruthven (<a href="#whi06">2006</a>) used binary voting mechanism to select terms implicitly for query modification. The authors assigned different weights for each part of a document, that is, 0.1 for title, 0.2 for top-ranking sentences, 0.3 for Summary, 0.2 for Summary Sentence and 0.2 for Sentence in Context. The weights were claimed to be defined for experimental purposes and were based on the typical length of a document representation.</p>
+<p>In this study, for techniques like frequency and copy-paste, binary measurement was used (i.e., Yes=1, No=0). When a user performs these two techniques, the scores for each of them are incremented by 1. As for the length, normalization was necessary to ensure that the weights fall between 0.0 and 1.0 (<a href="#hop07">Hopfgartner and Jose, 2007</a>; <a href="#whi06">White <em>et al.</em>, 2006</a>). The study found the maximum length of the abstract in the test collection to be close to 500 words, therefore the length of the highlighted text was divided into a scale of 50 words, with an increasing weight (i.e., 0 - 50 = 0.1; 51 - 100 = 0.2; 101 - 150 = 0.3 and so on). In other words, the weights were assigned based on our assumption that the longer the highlights, the more relevant it is, hence a higher weight. Therefore, a document containing 60 highlighted words, would be assigned a weight of 0.2 (i.e., parameter LEN) compared to a document with 50 words with weight of 0.1.</p>
+</section>
+<section>
+<h2 id="evaluation">Evaluation</h2>
+<h3 id="test-collection">Test collection</h3>
+<p>The Communications of the ACM test collection contains bibliographic information (e.g., title, authors, abstract etc.) of articles published in the journal between 1958 and 1979. It contains 3204 scholarly documents, 64 sample queries, 429 stop words and also relevance judgments generated by computer scientists. The test collection also contains structured subfields, including author names, word stems from the title and abstract sections, direct references between articles and number of co-citations for each pair of articles. These structured subfields help researchers to understand the documents easily and to manage them without much hassle. The collection is small in size (approximately 2.2 Megabytes), hence it can be easily installed and tested in a very short span of time (<a href="#man09">Manning <em>et al.</em>, 2009</a>). However, the size of collection is small compared to the size of real Web documents or the Text REtrieval Conference (TREC) document collection (<a href="#man09">Manning <em>et al.</em>, 2009</a>). As a result, the reliability of experimental results may be lowered due to the small collection size. However, the CACM collection has been used frequently in small-scale experiments to test the performance of information retrieval systems (<a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#dri11">Drias, 2011</a>; <a href="#tsa11">Tsatsaronis, 2011</a>), because of the limitations of time and resources for developing large-scale experiments. As our experiment is considered to be small-scale, this collection was deemed to be appropriate.</p>
+</section>
+<section>
+<h3 id="queries">Queries</h3>
+<p>Search results can often be unsatisfying as multiple words may have similar meanings, or more than one meaning, causing results to be different than expected (<a href="#jan00">Jansen, Spink, and Saracevic, 2000</a>). For example, a user who is interested in the Apple iPhone would be laden with results referring to the fruit, phone and every other Apple product if he/she submits a query reading <em>Apple</em>. However, the search results will only contain references to the phone if the query is <em>Apple phone</em>. Query formulation is important and studies have reported that longer queries yield more accurate results in controlled experiment settings, but shorter queries are more pervasive in interactive systems, such as the Web search engines (<a href="#jan00">Jansen <em>et al.</em>, 2000</a>; <a href="#spi00">Spink <em>et al.</em>, 2000</a>). Therefore, queries were formulated based on their length to assess their impacts on retrieval relevance using the enhanced model.</p>
+<p>Studies particularly focusing on query lengths used automatic query expansion techniques (<a href="#cra07">Crabtree <em>et al.</em>, 2007</a>; <a href="#wal98">Walker <em>et al.</em>, 1998</a>), or encouraging users to enter longer queries in the first instance (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>) or asking the users to describe their information need problems (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>). As the main aim of the current study is to improve retrieval relevance, the queries used were randomly selected from the collection, and then manipulated to accommodate the various query lengths. In other words, all the queries were fixed and provided to the users. Thirty queries were selected from the document collection, targeting three different lengths, that is, single term, double terms and triple terms. The idea was to mimic user behaviour in the real Web environment, therefore the maximum length was set to three (<a href="#spi00">Spink <em>et al.</em>, 2000</a>). There were ten queries for each length, totalling to thirty final queries that were used in the experiment. Although the number may seem to be small (<a href="#voo08">Voorhees, 2008, 2009</a>), numerous other studies have reported results with fewer queries in information retrieval. For instance, Zemerli (<a href="#zem12">2012</a>) used five queries, Balakrishnan and Zhang (<a href="#bal14">2014</a>) used fifteen queries, and Belkin <em>et al.</em> (<a href="#bel04">2004</a>) used eight search topics and four search topic types.</p>
+<p>Table 1 illustrates the queries used in our evaluations.</p>
+<table class="center"><caption>  
+Table 1: Queries used in the evaluations</caption>
+<tbody>
+<tr>
+<th>Number</th>
+<th>Single</th>
+<th>Double</th>
+<th>Triple</th>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td>Abstract</td>
+<td>Abstract database</td>
+<td>Abstract data type</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td>Database</td>
+<td>Database package</td>
+<td>Database management system</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>English</td>
+<td>Hashing English</td>
+<td>Hashing English spelling</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td>Hashing</td>
+<td>Hashing method</td>
+<td>Hashing index method</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td>File</td>
+<td>File search</td>
+<td>Inverted file search</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td>Parallel</td>
+<td>Parallel computation</td>
+<td>Parallel computation algorithm</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td>Parallel</td>
+<td>Parallel language</td>
+<td>Parallel computation language</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td>Prime</td>
+<td>Prime number</td>
+<td>Prime number computation</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td>Shape</td>
+<td>Shape description</td>
+<td>Shape analysis reception</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td>Surface</td>
+<td>Surface algorithm</td>
+<td>Surface algorithm implementation</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h3 id="search-engine-prototype">Search engine prototype</h3>
+<p>The search engine prototype was developed using Visual Basic and MySQL. The interface mimics that of an online database containing scholarly documents. The following screen grabs provide illustrations of how the enhanced model works in improving the document relevance for a query.</p>
+<p>For example, assume a user intends to perform a search for information retrieval. The initial results are ranked by BM25, and are as depicted in Figure 2. We will look at the top three documents to illustrate our example. Each of these documents had an original score of 8.99, however these weights are not displayed to the end user.</p>
+<figure class="centre">![Figure 2: Initial ranked results using BM25](p724fig2.jpg)
+<figcaption>  
+Figure 2: Initial ranked results using BM25</figcaption>
+</figure>
+<p>Also assume that the user provided no feedback for Document#1. On the other hand, Document#2 was highlighted thrice, with a total length of 11words and a single copy-paste action. Likewise, Document#3 was highlighted once with 60 words, with a single copy-paste action. Figure 3 illustrates the user's behaviour on Document#2.</p>
+<figure class="centre">![Figure 3: Sample user behaviour for Document#2](p724fig3.jpg)
+<figcaption>  
+Figure 3: Sample user behaviour for Document#2</figcaption>
+</figure>
+<p>Based on the user's feedback, the binary voting produces FRE = 3, LEN = 0.1 and CP = 1 for Document#2, and FRE = 1, LEN = 0.2 and CP = 1 for Document#3. The application of Equation 1 would then produce a Ranked score of 8.99 (Document#1), 9.74 (Document#2) and 9.53 (Document#3). The documents are re-ranked based on these new weights, resulting in Document#2 to top the list, followed by Document#3 and Document#1 as show in Figure 3.</p>
+</section>
+<section>
+<h3 id="user-study">User study</h3>
+<p>Eleven students with computer science backgrounds volunteered to evaluate the proposed model. These were post-graduate students whose research work is related to information retrieval. They were identified based on their supervisors' research specialisations, and later approached by e-mail to participate in the study. Considering their technology background and field of study, these students were considered to be familiar with the concepts of information retrieval, test collections and the mechanism of the search engine.</p>
+<p>The search engine prototype was installed in the computers in a laboratory before the experiments. The second author of this paper moderated the experiments after providing a brief demonstration on how to use the search engine. The students had no difficulties grasping the instructions, as the interface was simple to use and navigate. The set of queries was also provided to the studentsd and their behaviour was tracked as they interacted with the prototype. They were encouraged to perform the search in no particular order based on the queries provided, but they were required to perform all the searches at least once. The participants were also encouraged to repeat some of the queries, when appropriate. For each of the queries, they were encouraged to respond to the results displayed by highlighting any portion of text that they might find relevant based on the queries executed. In addition, they were shown how relevant text can be copied and pasted into other documents, and were then asked to do the same. The students took between one and two hours to complete the tasks.</p>
+</section>
+<section>
+<h3 id="retrieval-models">Retrieval models</h3>
+<p>Retrieval models or algorithms need to be compared based on the same set of queries (i.e., by a matched pair experiment), therefore the thirty selected queries were used to evaluate all the models, baseline included. Most of the studies in the literature also compared proposed techniques with a baseline, which is usually a model without any feedback (<a href="#ahn08">Ahn, Brusilovsky, He, Grady, and Li, 2008</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#rav15">Ravana, Maheri and Rajapgopal, 2015</a>; <a href="#whi12">White and Buscher, 2012</a><img class="emoji" alt="wink" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAUTElEQVR4Xu2bC5Bc5ZXff+f7bvft7ul5ajQzkiyeQhgwLoyEwDLW8lpjmzJrLDB4Bcs6OKFcduXhlDe76ySYSirZmMRxOcEbb8Xx2oYiZcfLw/YuZsHlzQowIDDGa0sIvUASaCTN89Gve7/vZG73V3WrNKNXEWGqdm/pr3Nnuqf7/P7f+c70uT0tqsrf58Pw9/r4BwP+wYDoVAPcLWJuvZWzIuVCDBeIsEpgxFjpQ6kAINS800mFA6rswPOrVPjlffex6y5Vzyk8TkkTFBHZfRvrVLi+YPmAKcj5tmAqpmgwRUGMgBWAXE5Rr/hWJo9LfM0n+uvE8Zgoj5z5HZ5VVX1bG/D89VJZ0sfHjeUfFUvmfbZsjKlYTJyBK2I8YhWxAnKEAaqoyySoN/iW4JseX3O4uvethn/SO/7X2CTfXfOI1t5WPeCnV0q05/fk94eXyjOVHvvNrpH4/fGK2MTLI+KlSnGppTgySGnVRcTvupZ4ze9RuuzTlNf/s0zZefa97LbsPtl9s59p/2z2GNljZY+ZPXb2HNlzZc/5tqiA7ZtkXanAfyhV7dVRb0TUY5HYYUoRUd9KzMh7MMNrkOoqpDQAUQXEggBoABBQQB2kNbQxjs7uwI8+jz/wc9LJvfhGijYt6bQjnUppzLonGgl/vPp+ffY3YoCIyK5NfK5UkbuL/YUu21cgqnhMJSIavhB7+gcwS9dBeSDApYCHYDgCKIucC2BAIhCgPo4/9Czu1cdIR3+Jr6WkNYObTGhNJHONmt511v18WVX11BsQwLfcRM/SMv+91G1vLQwWiXottuyIhlZjV23EDF0GUQm0BeoQMQAnLVUfqqUIaQN/8Ge4Hd8nPbgdV7ekU47kcIvGjLvvUJ3Prv0e08GIU2BAgH/hepYNDHB/pTe6ojBcJOoWoup8PPtazBkbkbgPfAOBhY1OTpSchQ0SwJTQ5iR+z7wJO39MOtsinVGS0Ra1qfSn4+NsuvgR3jgZE6KThR8c4KHSksIl8dIY2w1Rfz/ReZ/ADL8fNEHSKRA5FtjJS4N3aROsxa7ahHSfhmx9ADETGFOCqHmFIXloPsePisgJmxCdKPyj19I/D/9AG34kgxcK/UuILrgD6T8PcVOALNzbvHmRoyAKUMMMraNQ6EZ+9Q2wY8Q2BrhkkOSB+VxvEJGJEzEhOhF4wLxzhK+W+qMN8VCM7THz8H1E592G6TkDkgkQk8NzygzIK8LVkZ4ziM6/DbZ+C2SS2MfgdcM7Nf0qcLuI+OOZEJ0I/PZb+Vy5x24qDBWJ+ixR93w86zqkuhLSyQ68njTwmzckbWQ5tHNh+/9BaOF9kXKqm7bf6n6x+j6+nJtwUk0wh3/qJtac0S8/Ka0odRWXxkQ9EK28HLPiGiAFEYQc/i2TBh9UgQi//3HSvZtJp6F1qEljf2Nuz4Retf57PA8c1YToWPC3DVNa0c098ZJCV6G/QFQ12P4RzOB7wM8BigT634QBgnb4kXZOdnYX+ANoWkAbrmtF2rpnnuHD3xmlkVfCiW0BAcwXruHmctVuiObhbbWAKRvMkneBNeBqiLCw4xuByIAx4BwknlN5iAYTbIRZciFaO4RNhajfUZ5zG75wjbv5O/fzHUCB4xmQr/4fraOnK5Y/aMN3z6skmOogUhkBN4uIggpIDk4c4WabvLZrgomJGstGeubVC/oWVIIXpDLcztEmh/DdhbYJXbP+D/5onT78H59lSkQ0O45XAQawn1jFxrjHnhv1RJjyvGKDVFeAKOJr+cpDG7xVT3j8L7fx2BNb2bd/jNFDCeeeP8K992wkLgBeT30lSNTO0dTG2jlnucc96bmfWJVunDfgW4ACbnED8tWXSweIu0tyRzbYmK4IWzJIHCOlXsTXAZ+vfLnAnldG+dP/+RQ7tr9ByULZwNUfuoQbfve3iYtT0AqGnfKekECWYxxjkya+qzOcdU+7Oy4d0P/9zDhOQhkcrQIEsH+ygYvLFVlrqxGmZDFFgxTLiInA1UEUAEoRLz23l6987UlcvcZIFfqXD3PdJ2/kvetXwfQemBznLeuQKlmO7VxNMWnnnjGUK8naP9mgF1/5EE8DHjiqAQaww1VzfaFqjalYbNEikYEoBlLQBBSILa9sHeW/3vskBdeiK4Z3rnsXN3/mdxiszMGrfwvegVje2kPauUpk2rm7iiVjGa5yPfhnAQf43IAjmt9Z/RTKJb1S2ldyLFIwSCQYG4FvAh6sMDOe8qffeB6TNCkX4NLrLuOm29dTmNoO+6bAWEBAkzc3DRkBm/8sXsEpRz9MO1cfSZZ7h6FiKZfSKzO2XROk+TaA6IjszF1rOCsuybm2bJGixWQGWAu4jgHqoWh55C93cGD/JP1l4fIbLuHG3303cuBX0EzAGPA+h1EFfIj51zmoAAZEgKCiBWOoTyeMT7ZopZ7IGnq7I3p6i1AwkHpIFZT8EAM4xGa5a5shY8mY7lqjZ93+OFsD66IG2JXdXBjFpmxig4kEwvU7tAm+BtYwcaDF5mfeIDZw6Ycu4Mabz0b2bYUkBfGQuLBVXC4UNIcOMReSx4Jh9/aUB5+YZfuuOrNzLdJUiaxQqUQMLS1z0fl9rF8zwPJ3lHMjREC1k6t0cs8YMpaMaWW3vxDYHlhZtAL6yuZ8GwtSEMQaxEimDlA6A4UKv94xxf59dd531XJu2XQasncrtOqAJ4dVsAJGIM1X+rjbIVJe29fgn/67/dRmPEO9UC4KZSOIgp9NeW2qwcsvj/Pwj/dxxXsHueUjI3R1R9AM8JqEvANDQciYMjbwDx7NAJMpjvRsiUwHvg0QShMgnYM0ZbZRZ2hVN7//qWUUD++AegJGcrBMscwDOGbmHMNLC4CC4/iHh1JfietvP52eLkN/b4QBGnXH9FiTw280GJvX+GiTqemEB3+4n5e2TfHHdy5neNBC2gppdHIXG0yIDHGUnk3gzA3IG2AmWxCGCKUvEuAxecXWGrzvvV2svXYpSxpzMJt2TIJcsfDci3W+9sAY41Mpl1/cxWc3LaEcm+M0MMDBUI/wjz/eD0bAeVDAGjCmHWeb8MaBhF+/NM0LT47xs6cn+dKf7eVLn1+OBdCAI77DYAUioc0GFpDQCPXILVCwEX0S9j0WhHzqEhFQqLoW1akEGg7C98gtZfRAwr33HcI1Pct7hM3PzjDQY7njlgFwx5mbBWiksGtiYasQAYFq0XJOtcA5H+zhwx9ewksv13l9dw2vikFBAw4QcMmYMjagcMweYISSmACuHYkqCKgG0qYLCYXbyJmIDH+7ZQ5tec4ethQsdBWFLS/NccM13Qz0WXCeYx6FMFAFBjTIK6QKzbSz7Q7WKBQMa4ZKrFleQkfr4IPBwYiQOmIgYwPMYgbkI42AoqC5A6oeNG8FqB790peD3ftaDFaF3pIQhSqaGfe8eiBhYFCOvg0EKAoHDyT8fFuTvW+ktBKlFAsjSyynLStwxooC1V4LTdC2IQ4dnQUCJcAR+UOHSQQIBgSFLZCjGOdp4AjQDlVB1ELgFQI/CrLYFTCl2XSUCkIUQWQgLoBVqCcpRBYSPerK//AnNR54ZJpGwxNbwRggLLwHenssV6yrcONvd1GMQB0ghDwdCqCBTl1H3oODjC0YoEELZ4HUM63eoy5FnYAGMyQgquYOSyYFyX3NiKs9QmMchNzeYlGodDugCWYRA2LhxZcS/vx7MyytCmcOWApWEMB7SB2kqkzWPPfPG5SmKbdvrKD1fBEUyRRyBNrgSWDxZGzHuh6gAM2Uw23HvEPVoN4geNDAIpqbQG53EFIUzjhb2Lc99ypJodxleMfpHjQFu/jq759IoQVdVjCJoA4oQLEsFIH6LJSlc3sNDyYBUURBQwKo5LvAK+pdYPFtNkAWDEOqqiKiAFMteXV5oqhT8CFhL2joSaEroqGKJG8pIAotuGy94ZnNwtSMUqkIYxPKez5gGRxKYNovfhUigQ1XW8Z9kbkxZdk7DMtONwwuM3R1CSIwNQk7tzkS4Lcusuh0K/BKLhWAYH6HQVNFE22zgRKQdbEKSF+d9jvPbVm8U7z3GDUIeZmDzw20igpgFAlRHYwMejbeafnBnzsOTinnXG74nZvbTWBxeAAP3dZx2+02zBIKjRTqCi0BhaE+OOcaA17gQBOvIEbACQiAhJ/N56aMoc3SgowNcEcbhz2QPvkGu64+xzdIfEmdQb0HJKy0gnhCFYDREMkjClOw9nzDOfcIMzVlxYBHJjz4Y7whLyG1/SkcOStp6EVzwISEkULAhhgEuRE4UB8qOfW4pm9kbEAC+KMZkHz7V+z73CXsLDX1Ak1DCWEQQKwG+I5UFJGwFQjwoRIY8/SWhd4icCjA2xObgPGQw4WlVEAEvCKmE1VlkbFCwz86uSeKbyqzdXZmbMcyQIHmXEIyOi0/W5IZkAA+CECCwrkEkccgCf1AIQWM5FVytEMW/SIHVMk5NSgvkMWrKQXNVFcyprmkTdRcuAXyRpgA9cf3+s2rV5pPRg01rgWmpKCSQwIsAFcwi8Vc5ATHdkE0h1QW0qmCLGYSiIJXwCkuBW0oaUN9xgTUgeRY1wQ9UPvyc2y75QL9u+EB/27bEnxisLHkqwsBUDpRJC99EfIIxAoecDnfCb17XAyxmYMucD/vD2GBQn9w4FNFmx5X94xP6d9lTEAtMBKEWcSA+nRC/cXX9SGd9W0Hw65BfRgsDGHezsubcI7NY+rhF78QZmaAKhATbl9EEmIMdMH+/bBtW3g8WfjY2JBDiCIAEswOpd9UdMaTsWRM0JZf/IVQvg3qwPQXNvM3l670ewZ6/RmmLJgySNGADSsvRyQOebJ07qMG/sv/gFbd8IkblfdvUAaGFOwRXd6E2IK9rwqPPiZ890Hh6quVP7xQYS6AIWDzczSIjtSBOkFbHl/3uBnP1ITfk7EA00D9RN4YSYGZnVPMPL1Xv/3BPv9vbZfBl8HEYVKzC1YuSIMBAqIUeuDjtwhf+0/Ct78p/OiHyup3wurVyvCI0l0F72FyGl7fJ2zbKux6BSYnhd4K3HBTMMnk2wYfzo2A70jIzzUB3wA3q7hJT8aQsUBb6XHfGgtVMAtMfvoJ/uZny/wLy7rdxVLpVIEpGLCC2ABvFyllQqzDh66HHVth62ah7IVtz8OLz4TJzIam5bModMXQH0PUBdd/Sjn3AmAsbDGVvH9IvvJIAM+UQtj3pFOO0cP+hYwBmARmT+bN0SYwOdWg9+sv6r3/qsfdK2VTklgoRB5jDUQgEpLLTQhH3hhtotzxL4Svz8LBl4XTh0BVcD50a8CajtRnTwpXbYSP3KQwAdh85DwSGhVwgiqoA9/wJHNKOuVpjLtGlvs8w3QwoHnCfygZnJoGxr6yhZ3P7JZvuDGHn/T4uU531QTU50lhJC9NMcEAoCV0F5R/cpewej005qCg0FuCgUpH1RhIoJXAFZvgljsVmVHQ/DcPmEVfdKink0ujk5uf8mS5ZjlnuQNjwPRJ/X1AUAsYByoffdA//Fy3nLOqkH6AQgRiMEYwUcjHCPmrN8J/ku/fmtJTVj75h8LTPxFe+CuY2q+oAwBTgpELhcs/Cue9W2FcIZX8MTTEAI3PFEq+Bb4OfkZJJj2tQyk79/rHPvqgPgwcDgwtgJMwIO8FwYTybT/UP3toox8atu6icOkesQZBUNF2BPIVQ4E8UAPbUi6/Ctb9lnBgn2H8INgIli6HkRGFROGQdgABNI8dcPKybwEtQWuKn/YkE/M66Di437+Y5QpMBPiw90/SgGCCE5FJoLBtnPhTj+qXvnGd+zdDcB4hJ/WCcQZioAASCRjNO7fX3JCUNmAxgtOG5rUCIEx7hzXv8MrC1c9XHRJBm+DrPlv5DvxoBu+2ZjnO53oAOAhMZgxv+g8lRaQbGAZWXL6S5V+/Vj6//DTznsJIhO01RN2CdBkkBikqUgAsYWgKEV10aAFAcmAEAngQ4ATCXtdU0DpozZPOKG7KkxxIeX2v//mdj+p/3ryPfcDrwKiqzhyPzX7xi1/keMf8fVp33323AvraNPrXO3n+qmH6ekTPljAgSpjYRAXV8PtZj1hRAhhHkQZ5E6Cls9qZWgINOk142pNOKW4sg3fs2OP/+qaH9asvjrbBDwCHVXXq//cnRiYDBa9MoWu/pf/t+x/TnevPTj5ZrtmSX2KxTcFWDVJSJBakCOJArED+snnh0KeEGJQS5nlCo1O0qWgd3JzHTSvpuKM+5hpP7ZRvbvwL/auQ3yhwKJwT9OYrIFQB81XQzN9fx3x3q+5LmmxZXdbhitdlGm7JYijbcG8JF1iDfF7m+EwEaIFU0FYm0IaiNfCz4GZ8p9zHPOmoy0r+ha88pff8y5/os8BYgD8MTKmqntK/Fge6gSVB/WVL970fZP0VZ8rH+gbNmVlfsN0GUxGkLNgiUJTQG8iHqLwCwCsaDOtM7YprgdYVX1PcbMeAycN+909361985lGeqjtmQrcfC5oJ8G/J5wWqQC/QD/QBPSuqVP/9Fax970q5dkm/XBhVjWQm2IrJt0Qhn+aMAQAfwNEwwbU60dV8Gz6d9To2rr98ep/++F//lC37Z5mF8AoPJsKqz77lnxgRkThUQw/QF86rQPTP13LmdeeYtWf269pqN2cUyyY2sUBBkAhMlFcAGub3FAiXsFp135ydYc/uCdnyo1f8lq9sYTeQQht+JsBPh1Vv/sY+MiMiBigH+CAqQBcQWzAfWc3QhpWsOHeJWTlY0eWVAgNxRLVgiQESR7OZMltLGD9ck9dfHvN7/+9e9v9gOwcdeKAJzAG1AB9EXVX92+JTYyISBSO6girh6xJQDLJBPo8AGMARYlArqAHUA/xcpgCevi0/NxiMiIFSUDnA5yaACZFcOMDn8B0F+EZQcwH428qAhb8tCkcoCjEYkHeB3AASIO3EXAu6+9vcgMV7xcJrSeRCAR/kwt4+5cf/A7W3fHLOU5gcAAAAAElFTkSuQmCC" />. In addition, the execution of the same set of queries on the various models ensured standardization of the experiments conducted, and thus the experiments were considered to be reliable.</p>
+<p>The models compared in the current study are as follows:</p>
+<ul>
+<li>Okapi BM25: the baseline model with no user feedback</li>
+<li>Frequency (FRE): a feedback model considering only the frequency of text highlight</li>
+<li>Length (LEN): a feedback model considering only the length of text highlight</li>
+<li>Copy-paste (CP): a feedback model considering only the copy-paste action</li>
+<li>Enhanced model (E): the proposed model integrating all the users' behaviour</li>
+</ul>
+<p>Performance evaluation of a Web search engine is usually limited to the top n positions, as users are generally interested in the top few results or the first few result pages. In this study, retrieved results were measured at three levels, that is, the top 5, 10 and 15. In addition, comparisons were also based on the query lengths.</p>
+</section>
+<section>
+<h2 id="effectiveness">Effectiveness</h2>
+<p>The effectiveness of the models was evaluated based on two standard metrics, that is, mean average precision (MAP) and F-score. Statistically significant differences between the models were determined using pair-wise comparisons at a confidence level of 95%.</p>
+</section>
+<section>
+<h3 id="mean-average-precision">Mean average precision</h3>
+<p>The effectiveness of an information retrieval system is usually determined based on precision (i.e., the fraction of retrieved documents that are relevant) and recall (i.e., the fraction of relevant documents that are retrieved). Although the preferred scenario would be to have these two values maximised, in most instances, precision decreases as recall increases (<a href="#bee11">Beebe, Clark, Dietrich, Ko, and Ko, 2011</a>). Mean average precision is used as overall performance indicator for retrieval algorithms. It allows easy comparisons to be made among similar researches as it carries a single value in measuring the quality of ranked results. Mean average precision has been shown to have good discrimination and stability compared to other evaluation metrics (<a href="#bid10">Bidoki <em>et al.</em>, 2010</a>; <a href="#sak06">Sakai 2006</a>). The mean average precision value can be obtained upon computing the average precision for each query, which can be determined using Equation 2 below (<a href="#man09">Manning <em>et al.</em>, 2009</a>):</p>
+<figure class="centre">![equ 2](p724img2.jpg)</figure>
+<p>where n represents the number of retrieved documents, rel(k) shows if the document is relevant or not, and P(k) defines the precision at document level k</p>
+<p>The mean average precision is then obtained by Equation 3:</p>
+<figure class="centre">![equ 3](p724img3.jpg)</figure>
+<p>where Q refers to the number of queries.</p>
+<p>For example, assume the results of two queries are as shown in Table 2 in which the relevance column indicates if the document is relevant or not (i.e., Yes=1; No=0).</p>
+<table class="center"><caption>  
+Table 2: An example of mean average precision calculation</caption>
+<tbody>
+<tr>
+<th colspan="4">Relevant documents for query 1 = 5</th>
+<th colspan="4">Relevant documents for query 2 = 3</th>
+</tr>
+<tr>
+<th>Rank</th>
+<th>Relevance</th>
+<th colspan="2">Precision</th>
+<th>Rank</th>
+<th>Relevance</th>
+<th colspan="2">Precision</th>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**1/1     **</td>
+<td style="text-align:center">**= 1**</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0/1</td>
+<td style="text-align:center">= 0</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1/2</td>
+<td style="text-align:center">= 0.5</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**1/2**</td>
+<td style="text-align:center">**= 0.5**</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**2/3**</td>
+<td style="text-align:center">**= 0.67**</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1/3</td>
+<td style="text-align:center">= 0.33</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2/4</td>
+<td style="text-align:center">= 0.5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1/4</td>
+<td style="text-align:center">= 0.25</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2/5</td>
+<td style="text-align:center">= 0.4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**2/5**</td>
+<td style="text-align:center">**= 0.4**</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**3/6**</td>
+<td style="text-align:center">**= 0.5**</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2/6</td>
+<td style="text-align:center">= 0.33</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3/7</td>
+<td style="text-align:center">= 0.43</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**3/7**</td>
+<td style="text-align:center">**= 0.43**</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3/8</td>
+<td style="text-align:center">= 0.38</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3/8</td>
+<td style="text-align:center">= 0.38</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**4/9**</td>
+<td style="text-align:center">**= 0.44**</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3/9</td>
+<td style="text-align:center">= 0.33</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">**1**</td>
+<td style="text-align:center">**5/10**</td>
+<td style="text-align:center">**= 0.5**</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3/10</td>
+<td style="text-align:center">= 0.3</td>
+</tr>
+</tbody>
+</table>
+<p>Using Equation 2, the average precision for query one is (1.0 + 0.67 + 0.5 + 0.44 + 0.5) / 5 = 0.62, whilst for query two is (0.5 + 0.4 + 0.43) / 3 = 0.44. The MAP value is finally calculated using Equation 3, which yields a value of (0.62 + 0.44) / 2 = 0.53.</p>
+</section>
+<section>
+<h3 id="f---score">F - score</h3>
+<p>The F-score combines both precision and recall into a single value, as shown in Equation 4:</p>
+<figure class="centre">![equ 4](p724img4.jpg)</figure>
+<p>where r(j) is the recall and p(j) is the precision for the jth document in the ranking, respectively.</p>
+<p>Similar to mean average precision, the function F also assumes values in the interval of 0 to 1. The harmonic mean F assumes a high value only when both recall and precision are high. According to Baeza-Yates and Ribeiro-Neto (1999), the determination of the maximum value for F can be interpreted as an attempt to find the best possible compromise between recall and precision. For instance, assume the recall and precision values for Document#1 is 0.0625 and 0.5, respectively. Similarly, for Document#2 the values are 0.1875 (recall) and 0.75 (precision). The F-score for Document#1 is hence 0.11 whereas for Document#2 is 0.3, showing that higher recall and precision values would yield a higher F-score.</p>
+</section>
+<section>
+<h2 id="results-and-discussion">Results and discussion</h2>
+<h3 id="performance-comparisons-between-the-models">Performance comparisons between the models</h3>
+<table class="center"><caption>  
+Table 3: Overall mean average precision results</caption>
+<tbody>
+<tr>
+<th>Query length</th>
+<th>Levels</th>
+<th>BM25</th>
+<th>FRE</th>
+<th>LEN</th>
+<th>CP</th>
+<th>E</th>
+</tr>
+<tr>
+<td>Single</td>
+<td style="text-align:center">Top 5</td>
+<td style="text-align:center">0.4197*</td>
+<td style="text-align:center">0.4690*</td>
+<td style="text-align:center">0.4430*</td>
+<td style="text-align:center">0.5027</td>
+<td style="text-align:center">**0.5113***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 10</td>
+<td style="text-align:center">0.3925*</td>
+<td style="text-align:center">0.4284</td>
+<td style="text-align:center">0.4083*</td>
+<td style="text-align:center">0.4178</td>
+<td style="text-align:center">**0.4366***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 15</td>
+<td style="text-align:center">0.3491*</td>
+<td style="text-align:center">0.3888</td>
+<td style="text-align:center">0.3809</td>
+<td style="text-align:center">0.3878</td>
+<td style="text-align:center">**0.3947***</td>
+</tr>
+<tr>
+<td>Double</td>
+<td>Top 5</td>
+<td style="text-align:center">0.4177*</td>
+<td style="text-align:center">0.4960</td>
+<td style="text-align:center">0.4960</td>
+<td style="text-align:center">0.4783*</td>
+<td style="text-align:center">**0.5283***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 10</td>
+<td style="text-align:center">0.4136*</td>
+<td style="text-align:center">0.4239*</td>
+<td style="text-align:center">0.4239*</td>
+<td style="text-align:center">0.4272*</td>
+<td style="text-align:center">**0.4686***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 15</td>
+<td style="text-align:center">0.3856*</td>
+<td style="text-align:center">0.4134</td>
+<td style="text-align:center">0.4174</td>
+<td style="text-align:center">0.4035*</td>
+<td style="text-align:center">**0.4396***</td>
+</tr>
+<tr>
+<td>Triple</td>
+<td>Top 5</td>
+<td style="text-align:center">0.3950*</td>
+<td style="text-align:center">0.3270*</td>
+<td style="text-align:center">0.3003*</td>
+<td style="text-align:center">0.4410*</td>
+<td style="text-align:center">**0.5427***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 10</td>
+<td style="text-align:center">0.3639*</td>
+<td style="text-align:center">0.3124*</td>
+<td style="text-align:center">0.2970*</td>
+<td style="text-align:center">0.4068*</td>
+<td style="text-align:center">**0.4557***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 15</td>
+<td style="text-align:center">0.3304*</td>
+<td style="text-align:center">0.2897*</td>
+<td style="text-align:center">0.2782*</td>
+<td style="text-align:center">0.3615*</td>
+<td style="text-align:center">**0.4103***</td>
+</tr>
+<tr>
+<td colspan="7">* Significant at p < 0.05 when compared with the enhanced model (E)</td>
+</tr>
+</tbody>
+</table>
+<p>Table 3 shows the mean average precision values for all the models, clearly indicating the enhanced model to produce the best retrieval results, at all three document levels regardless of the query length. In fact, pair-wise comparisons revealed overall significant improvements for the enhanced model compared to BM25. This finding was expected as generally document relevance improve when users' feedback are available (<a href="#ahn08">Ahn <em>et al.</em>, 2008</a>; <a href="#bal14">Balakrishnan and Zhang, 2014</a>; <a href="#bid10">Bidoki <em>et al.</em>, 2010</a>; <a href="#bus12">Buscher <em>et al.</em>, 2012</a>; <a href="#fox05">Fox <em>et al.</em>, 2005</a>; <a href="#whi12">White and Buscher, 2012</a>). Nevertheless, it has been shown that the three parameters, that is, frequency and length of text highlight, and users' copy-paste actions, can be incorporated into a single feedback model.</p>
+<p>A second comparison shows that the enhanced model outperformed the frequency model, although significant differences were not observed at all the levels. Therefore, it has been successfully shown that document relevance can be vastly improved with the inclusion of the length of the text highlight and users' copy-paste actions. This finding supports the notion provided by White and Buscher (<a href="#whi12">2012</a>) that further manipulations to users' text highlights might improve document relevance. In fact, our finding seems to be in line with studies that have also reported text highlight and copy-paste actions to be strong indicators of users' interests (<a href="#hau11">Hauger <em>et al.</em>, 2011</a>; <a href="#hij04">Hijikata, 2004</a>). The enhanced model also outperformed all the feedback models and thus shows that the combination of these three mechanisms can be used to infer users' interests, hence improving retrieval relevance.</p>
+<p>A second evaluation using F-score was conducted for all the models, and the results are depicted in Table 4.</p>
+<table class="center"><caption>  
+Table 4: Overall F-scores</caption>
+<tbody>
+<tr>
+<th>Query length</th>
+<th>Levels</th>
+<th>BM25</th>
+<th>FRE</th>
+<th>LEN</th>
+<th>CP</th>
+<th>E</th>
+</tr>
+<tr>
+<td>Single</td>
+<td>Top 5</td>
+<td style="text-align:center">0.2068*</td>
+<td style="text-align:center">0.2219</td>
+<td style="text-align:center">0.2298</td>
+<td style="text-align:center">0.2025*</td>
+<td style="text-align:center">**0.2312***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 10</td>
+<td style="text-align:center">0.1574*</td>
+<td style="text-align:center">0.1842</td>
+<td style="text-align:center">0.1609</td>
+<td style="text-align:center">0.1649</td>
+<td style="text-align:center">**0.1829***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 15</td>
+<td style="text-align:center">0.0920</td>
+<td style="text-align:center">0.1111</td>
+<td style="text-align:center">0.1093</td>
+<td style="text-align:center">0.1063</td>
+<td style="text-align:center">**0.1135***</td>
+</tr>
+<tr>
+<td>Double</td>
+<td>Top 5</td>
+<td style="text-align:center">0.2509*</td>
+<td style="text-align:center">0.2735</td>
+<td style="text-align:center">0.2832</td>
+<td style="text-align:center">0.2752</td>
+<td style="text-align:center">**0.2851***</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:center">Top 10</td>
+<td style="text-align:center">0.2073*</td>
+<td style="text-align:center">0.2182</td>
+<td style="text-align:center">0.2178</td>
+<td style="text-align:center">0.2112</td>
+<td style="text-align:center">**0.2206***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 15</td>
+<td style="text-align:center">0.1254*</td>
+<td style="text-align:center">0.1447</td>
+<td style="text-align:center">0.1438</td>
+<td style="text-align:center">0.1341*</td>
+<td style="text-align:center">**0.1516***</td>
+</tr>
+<tr>
+<td>Triple</td>
+<td>Top 5</td>
+<td style="text-align:center">0.2359*</td>
+<td style="text-align:center">0.2383*</td>
+<td style="text-align:center">0.2341*</td>
+<td style="text-align:center">0.2481</td>
+<td style="text-align:center">**0.2654***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 10</td>
+<td style="text-align:center">0.1688*</td>
+<td style="text-align:center">0.1765*</td>
+<td style="text-align:center">0.1722*</td>
+<td style="text-align:center">0.1979</td>
+<td style="text-align:center">**0.2076***</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 15</td>
+<td style="text-align:center">0.1158*</td>
+<td style="text-align:center">0.0994*</td>
+<td style="text-align:center">0.0941*</td>
+<td style="text-align:center">0.1293</td>
+<td style="text-align:center">**0.1375***</td>
+</tr>
+<tr>
+<td colspan="7">* Significant at p < 0.05 when compared with the enhanced model (E)</td>
+</tr>
+</tbody>
+</table>
+<p>Similar patterns were observed in which the enhanced model was found to produce the best scores in terms of retrieval relevance compared to the rest of the models, regardless of query length and document levels.</p>
+<p>Overall, results produced by mean average precision and F-scores indicate that the enhanced model has better retrieval capabilities than the other models. This shows that when a user's highlighting behaviour is analysed based on the length, frequency and copy-paste action, significant improvements can be noted for the relevance of the retrieval results. Although the findings are significant, the study is limited in the sense that other similar post-click actions, such as marking (i.e., symbols, underlining etc.) or commenting, were excluded. Future studies could look into these feedback techniques and integrate them into the enhanced model. Additionally, apart from copy-paste actions, documents can also be saved and printed. It would be interesting to examine if these post-selection actions have similar effects on retrieval relevance as opposed to copy-paste actions.</p>
+</section>
+<section>
+<h3 id="performance-comparisons-between-query-lengths">Performance comparisons between query lengths</h3>
+<p>Comparisons were also made across the varying query lengths. Looking at the precision values (Table 3 and Table 4), there seems to be a pattern whereby the retrieval effectiveness peaks when the query length is two, except for the enhanced model whereby the mean average precision value has improved for the triple term. However, this observation was made only for the top five documents. The overall results generally illustrate precisions to improve when query length is two, as shown in Figures 5 and 6.</p>
+<figure class="centre">![Figure 4: Mean average precision based on query lengths](p724fig5.jpg)
+<figcaption>  
+Figure 5: Mean average precision based on query lengths</figcaption>
+</figure>
+<figure class="centre">![Figure 5: F-scores based on query lengths](p724fig6.jpg)
+<figcaption>  
+Figure 6: F-scores based on query lengths</figcaption>
+</figure>
+<p>These trends seem to indicate that the retrieval performance is the best when the query length is kept to two terms. Single term queries probably set a very strict focus, whereas longer queries tend to lose focus. However, it is noted that the current study set the maximum query length to only three. A similar finding was reflected in Hopfgartner and Jose (<a href="#hop07">2007</a>) who found their mean average precision values decreased significantly when the number of terms in the queries increased. The authors evaluated their model using 2-4-5-6 query lengths with results indicating best retrieval when the query length is two and the worst for six. It has been documented that in a traditional information retrieval environment (i.e., experiments), longer queries seem to yield better results, but this is not the case in interactive systems, such as the Web domain. In fact, the average query length has been reported to be around 2.3 words in the Web domain (<a href="#jan00">Jansen <em>et al.</em>, 2000</a>; <a href="#spi00">Spink <em>et al.</em>, 2000</a>). This is in contrast to Belkin <em>et al.</em> (<a href="#bel04">2004</a>) who investigated the effectiveness and usability of a simple interface technique for eliciting longer queries from searchers in a Web-based information retrieval system. The authors found their users chose to enter significantly longer queries in their query elicitation system than the baseline, suggesting that when the right interface is provided to the user, s/he might enter longer queries. However, they noted that the mean query length overall was related to better performance (i.e., measured based on correctness of the answers), regardless of the interface used. In other words, longer queries were found to lead to increased performance, regardless of query elicitation mode in the interactive information retrieval systems. It is noted that as our experiment was not specifically designed to examine query length effects on retrieval relevance, our findings are to be regarded cautiously. In other words, the queries were manually tweaked and set to single, double and triple terms based on the topics provided in the ACM test collection, hence this does not really reflect the way users would perform a search.</p>
+</section>
+<section>
+<h2 id="conclusion-and-limitations">Conclusion and limitations</h2>
+<p>Previous studies focusing on analysing users' text highlighting behaviour in terms of its frequencies were further extended in this study by taking highlight length and copy-paste action into consideration. The feedback gathered was assigned weights using the binary voting mechanism, and was then incorporated into a re-ranking algorithm. The traditional BM25 was used as the baseline model (i.e., without any user's feedback). Both mean average precision and F-scores showed that the enhanced model outperformed BM25 and the other feedback models, indicating that users' text highlighting behaviour can be further manipulated to improve retrieval relevances. In fact, the enhanced model also showed significant improvements over the frequency model. Furthermore, it was also observed that retrieval performances are best when the query length is two, a trend that is often reported in real interactive systems such as the Web search engines. In addition, the enhanced model was found to consistently outperform the baseline, and the rest of the feedback models at all the document levels, regardless of the query lengths. This consistent performance of the enhanced model shows that the proposed mechanism is reliable (<a href="#voo08">Voorhees, 2008</a>). Nevertheless, there is also a need for the enhanced model to be evaluated on other test collections, such as TREC in order to determine its performance in retrieving relevant results.</p>
+<p>In summary, the study found improvements in document retrieval relevance which are both substantial and statistically significant. One of the main outcomes of the study would be the inclusion and manipulation of users' post-click behaviour, namely text highlighting and copy-paste actions. Previous studies have explored the use of text highlighting, but none has focused on the length of the highlighted text. Future studies should look into the possibility of exploring users' post-click behaviour in more depth.</p>
+<p>It is also noted that the results of this study are restricted to the experimental environment adopted. A few limitations exist, therefore future studies could look into addressing these issues. First, although ACM test collection is suitable for small-scale experiments, it would be interesting to evaluate the effectiveness of the proposed enhanced model based on other test collections, such as TREC. Although TREC increases the time and the difficulty of building information retrieval systems, it provides a huge testing document collection, search topics and relevance judgments which truly simulate the real search environment. Furthermore, it has been widely used to evaluate the performance of various retrieval systems (<a href="#bel04">Belkin <em>et al.</em>, 2004</a>; <a href="#lag11">Lagun and Agichtein, 2011</a>; <a href="#man09">Manning <em>et al.</em>, 2009</a>; <a href="#xu10">Xu <em>et al.</em>, 2010</a>).</p>
+<p>Second, previous studies focusing on the number of topics to be used in assessing a retrieval technique using test collections have recommended at least fifty topics (<a href="#voo08">Voorheese, 2008, 2009</a>). As the current study only used thirty, future studies could look into assessing the proposed model using a higher number of topics, for each query length.</p>
+<p>Third, although the study found interesting results based on query lengths, further investigation is warranted. A more robust and proper mechanism is required to investigate the effect of query lengths on document retrieval relevance.</p>
+<p>Finally, considering the nature of the experiment in which the participants were asked to perform certain actions (i.e., highlighting and copy-paste) based on the relevancy of the results, there is a possibility that user characteristics would have played a role in impacting their behaviour. For example, Shipman <em>et al.</em> (<a href="#shi03">2003</a>) differentiated between happy and meagre markers in their study, therefore future studies could further expand this study to include user characteristics as well.</p>
+</section>
+<section>
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p>The authors wish to thank University of Malaya for help supporting this project (RP028A-14AET)</p>
+<h2 id="about-the-authors">About the authors</h2>
+<p><strong>Vimala Balakrishnan</strong> is a Senior Lecturer in the Department of Information System, Faculty of Computer Science and Information Technology, University of Malaya. Her areas of interest include data engineering, opinion mining, information retrieval and health informatics. She can be contacted at: <a href="mailto:vimala.balakrishnan@um.edu.my">vimala.balakrishnan@um.edu.my</a><br>
+<strong>Yasir Mehmood</strong> is a post graduate (Masters) student in the Department of Information System, Faculty of Computer Science and Information Technology, University of Malaya. His research interests are opinion mining, information retrieval and data analysis. He can be contacted at: <a href="mailto:yasir725@siswa.um.edu.my">yasir725@siswa.um.edu.my</a>.<br>
+<strong>Yoganathan Nagappan</strong> is a post graduate (Masters) student in the Department of Information System, Faculty of Computer Science and Information Technology, University of Malaya. His research interests include information retrieval. He can be contacted at: <a href="mailto:yogacruise@yahoo.com">yogacruise@yahoo.com</a>.</p>
+</section>
+<h4 id="references">References</h4>
+<ul>
+<li>Agichtein, E., Brill, E., Dumais, S. &amp; Ragno, R. (2006). Learning user interaction models for predicting Web search result preferences. In <em>SIGIR '06 Proceedings of the 29th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 3-10). New York, NY: ACM Press.</li>
+<li>Agrawal, R., Halverson, A., Kenthapadi, K., Mishra, N. &amp; Tsaparas, P. (2009). Generating labels from clicks. In <em>WSDM '09 Proceedings of the Second ACM International Conference on Web Search and Data Mining</em> (pp. 172 - 181). New York, NY: ACM Press.</li>
+<li>Ahn, J., Brusilovsky, P., He, D., Grady, J. &amp; Li, Q. (2008). Personalized Web exploration with task models. In <em>Proceeding of the 17th International Conference on World Wide Web 2008</em> (pp. 1 - 10). New York, NY: ACM.</li>
+<li>Baeza-Yates, R &amp; Ribeiro-Neto, B. (1999). <em>Modern information retrieval</em>. New York, NY: ACM Press.</li>
+<li>Balakrishnan, V. &amp; Zhang, X.Y. (2014). Implicit user behaviours to improve post-retrieval document relevancy. <em>Computers in Human Behavior, 33</em>, 104 -112.</li>
+<li>Balakrishnan, V., Ahmadi, K. &amp; Ravana, S.D. (2016). Improving retrieval relevance using users' explicit feedback. <em>Aslib Journal of Information Management, 68</em>(1), 76-98.</li>
+<li>Beebe, N. L., Clark, J. G., Dietrich, G. B., Ko, M. S. &amp; Ko, D. (2011). Post-retrieval search hit clustering to improve information retrieval effectiveness: two digital forensics case studies. <em>Decision Support Systems, 51</em>(4), 732-744.</li>
+<li>Belkin, N. J., Cool., C., Kelly, D., Kim, G., Kim, J-Y., Lee, H-J., Muresan, G., Tang, M-C. &amp; Yuan, X-J. (2004). Query length in interactive information retrieval. In <em>Proceedings of the 26th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '03)</em> (pp. 205-212). New York, NY: ACM Press.</li>
+<li>Bidoki, Z. A. M., Ghodsnia, P., Yazdani, N. &amp; Oroumchian, F. (2010). A3CRank: an adaptive ranking method based on connectivity, content and click-through data. <em>Information Processing &amp; Management, 46</em>(2), 159-169.</li>
+<li>Bullock, B.N., Jäschke, R. &amp; Hotho, A. (2011) Tagging data as implicit feedback for learning-to-rank. In <em>Proceedings of the ACM WebSci'11</em> (pp. 1 - 4). New York, NY: ACM Press.</li>
+<li>Buscher, G., Elst, L. V. &amp; Dengel, A. (2009). Segment-level display time as implicit feedback?: a comparison to eye tracking. In <em>Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in information retrieval</em> (pp. 67-74). New York, NY: ACM Press.</li>
+<li>Buscher, G., White, R. W., Dumais, S. &amp; Huang, J. (2012). Large-scale analysis of individual and task differences in search result page examination strategies. In <em>Proceedings of the fifth ACM International Conference on Web Search and Data Mining</em> (pp. 373 - 383). New York, NY: ACM Press.</li>
+<li>Carterette, B. &amp; Jones, R. (2008). Evaluating search engines by modeling the relationship between relevance and clicks. In <em>Advances in Neural Information Processing Systems 20 (NIPS 2007)</em> (pp. 1-8). Cambridge, MA: The MIT Press.</li>
+<li>Chatterjee, P., Hoffman, D. L. &amp; Novak, T. P. (2003). Modeling the clickstream: implications for web-based advertising efforts. <em>Marketing Science, 22</em>(4), 520-541.</li>
+<li>Chuklin, A., Markov, I. &amp; Rijke, M. D. (2015). Click models for web search. <em>Synthesis Lectures on Information Concepts, Retrieval, and Services, 7</em>(3), 1-115.</li>
+<li>Clay, B. and Esparza, S. (2012). <em>Search engine optimization all in one for dummies</em>, 2nd Edition, Hoboken. NJ: John Wiley &amp; Sons, Inc.</li>
+<li>Claypool, M., Le, P., Wased, M. &amp; Brown, D. (2001). Implicit interest indicators. In <em>Proceedings of the 6th International Conference on Intelligent User Interfaces</em> (pp. 33-40). New York, NY: ACM Press.</li>
+<li>Crabtree, D., Andreae, P. &amp; Gao, X. (2007). Exploiting underrepresented query aspects for automatic query expansion. In <em>Proceedings of the 13th ACMSIGKDD International Conference on Knowledge Discovery and Data Mining</em> (pp.191-200). New York, NY: ACM Press.</li>
+<li>Dang, V., Bendersky, M. &amp; Croft, W. B. (2013) Two-Stage Learning to Rank for Information Retrieval. <em>Advances in Information Retrieval</em> (pp. 423-434). Berlin, Heidelberg: Springer-Verlag.</li>
+<li>Drias, H. (2011). Web information retrieval using particle swarm optimization based approaches. In <em>IEEE/WIC/ACM International Conferences on Web Intelligence and Intelligent Agent Technology</em> (pp. 36-39). Piscataway, NJ: IEEE Press.</li>
+<li>Dupret, G. &amp; Liao, C. (2010). A model to estimate intrinsic document relevance from the clickthrough logs of a Web search engine. In <em>Proceedings of the third ACM International Conference on Web Search and Data Mining</em> (pp. 181-190). New York, NY: ACM Press.</li>
+<li>Feimin, Z., Dong, W., Weizhu, C., Yuchen, Z., Zheng, C. &amp; Haixun, W. (2010). Incorporating post-click behaviors into a click model. In <em>Proceeding of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval - SIGIR</em> (pp. 303-312). New York, NY: ACM Press.</li>
+<li>Fox, S., Karnawat, K., Mydland, M., Dumais, S. &amp; White, T. (2005). Evaluating implicit measures to improve Web search. <em>ACM Transactions on Information Systems, 23</em>(2), 147-168.</li>
+<li>Graepel, T., Candela, J.Q., Borchert, T. &amp; Herbrich, R. (2010). Web-scale Bayesian click-through rate prediction for sponsored search advertising in Microsoft's Bing search engine. In <em>Proceedings of ICML</em> (pp. 13-20). New York, NY: ACM Press.</li>
+<li>Guo, Q &amp; Agichtein, E. (2012). Beyond dwell time: estimating document relevance from cursor movements and other post-click searcher behavior, In <em>Proceedings of the 21st International Conference on World Wide Web</em> (pp. 569-578). New York, NY: ACM Press.</li>
+<li>Guo, Q. &amp; Agichtein, E. (2010). Towards predicting Web searcher gaze position from mouse movements. In <em>CHI'10 Extended Abstracts on Human Factors in Computing Systems</em> (pp. 3601-3606). New York, NY: ACM Press.</li>
+<li>Hassan, A., Jones, R. &amp; Klinkner.K.L. (2010). Beyond DCG: user behavior as a predictor of a successful. In <em>Proceedings of the Third ACM International Conference on Web Search and Data Mining</em> (pp. 221-230). New York, NY: ACM Press.</li>
+<li>Hauger, D., Paramythis, A. &amp; Weibelzahl, S. (2011). Using browser interaction data to determine page reading behavior. In <em>Proceedings of the 19th International Conference on User Modeling, Adaption, and Personalization</em> (pp.147-158). Berlin, Heidelberg: Springer-Verlag.</li>
+<li>Hijikata, Y. (2004). Implicit user profiling for on demand relevance feedback. In <em>Proceedings of the 9th International Conference on Intelligent User Interfaces</em> (pp.198-205). New York, NY: ACM Press.</li>
+<li>Hopfgartner, F. &amp; Jose, J. (2007). Evaluating the implicit feedback models for adaptive video retrieval. In <em>Proceedings of the International Workshop on Multimedia Information Retrieval</em> (pp. 323-331). New York, NY: ACM Press.</li>
+<li>Huahuan, Cao, H-H., Daxin, J., Jian, P., Qi, H., Zhen, L., Enhong, C. &amp; Hang, L. (2008). Context-aware query suggestion by mining click-through and session data. In <em>Proceedings of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> (pp. 875-883). New York, NY: ACM Press.</li>
+<li>Huang, J., White, R. W. &amp; Buscher, G. (2012). User see, user point: gaze and cursor alignment in Web search. In <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em> (pp. 1341 - 1350). New York, NY: ACM Press.</li>
+<li>Huang, J., White, R. W. &amp; Dumais, S. (2011). No clicks , no problem: using cursor movements to understand and improve search. In <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em> (pp. 1225-1234). New York, NY: ACM Press.</li>
+<li>Jansen, B. J. , Spink, A. &amp; Saracevic, T. (2000). Real life, real users, and real needs: a study and analysis of user queries on the Web. <em>Information Processes Management, 36</em>(2), 207-227.</li>
+<li>Joachims, T., Granka, L., Pan, B., Hembrooke, H. &amp; Gay, G. (2005). Accurately interpreting clickthrough data as implicit feedback. In <em>Proceedings of the 28th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 154- 161). New York, NY: ACM Press.</li>
+<li>Joachims, T., Granka, L., Pan, B., Hembrooke, H., Radlinski, F. &amp; Gay, G. (2007). Evaluating the accuracy of implicit feedback from clicks and query reformulations in Web search. <em>ACM Transactions on Information Systems, 25</em>(2).</li>
+<li>Jordan, J., Simone, D.J.B, Thomas, S. &amp; Alexander, S. (2010). Improving the search for user interface design patterns through typed relationships. In Peter Forbrig, Fabio Patern- &amp; Annelise Mark Pejtersen, (Eds.). <em>Human-Computer Interaction Second IFIP TC 13 Symposium, HCIS 2010, Held as Part of WCC 2010, Brisbane, Australia, September 20-23, 2010. Proceedings</em> (pp. 3-14). Berlin: Springer-Verlag. (IFIP Advances in Information and Communication Technology, Vol. 332)</li>
+<li>Jung, S., Herlocker, J. L. &amp; Webster, J. (2007). Click data as implicit relevance feedback in Web search. <em>Information Processing &amp; Management, 43</em>(3), 791-807.</li>
+<li>Koumpouri, A. &amp; Simaki, V. (2012). Queries without clicks: evaluating retrieval effectiveness based on user feedback. In <em>Proceeding SIGIR '12 Proceedings of the 35th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 1133-1134). New York, NY: ACM Press.</li>
+<li>Lagun, D. and Agichtein, E. (2011). ViewSer: enabling large-scale remote user studies of Web search examination and interaction categories and subject descriptors. In <em>Proceedings of the 34th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 365-374). New York, NY: ACM Press.</li>
+<li>Liu, J.J. &amp; Belkin, N. J. (2010). Personalizing information retrieval for multi-session tasks: the roles of task stage and task type. In <em>Proceedings of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 26-33). New York, NY: ACM Press.</li>
+<li>Liu, C., Gwizdka, J. &amp; Liu, J. (2010). Helping identify when users find useful documents: examination of query reformulation intervals. In <em>Proceedings of the Third Symposium on Information Interaction in Context</em> (pp. 215-224). New York, NY: ACM Press.</li>
+<li>Liu, Y., Miao, J., Zhang, M., Ma, S. &amp; Ru, L. (2011). How do users describe their information need: query recommendation based on snippet click model. <em>Expert Systems with Applications, 38</em>(11), 13847-13856.</li>
+<li>Manning, C.D, Raghavan, R. &amp; Schutze, H. (2009). <em>An introduction to information retrieval</em>. Cambridge: Cambridge University Press.</li>
+<li>Núñez-Valdéz, E. R., Cueva Lovelle, J. M., Sanjuán Martínez, O., García-Díaz, V., Ordoñez De Pablos, P. &amp; Montenegro Marín, C. E. (2012). Implicit feedback techniques on recommender systems applied to electronic books. <em>Computers in Human Behavior, 28</em>(4), 1186-1193.</li>
+<li>Oard, D. W. &amp; Kim, J. (1998). Implicit feedback for recommender systems, In <em>Proceedings of the AAAI Workshop on Recommender Systems</em> (pp. 81-83). Palo Alto, CA: AAAI Press.</li>
+<li>Obendorf, H., Weinreich, H., Herder, E. &amp; Mayer, M. (2007). Web page revisitation revisited: implications of a long-term click-stream study of browser usage. In <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em> (pp. 597-606). New York, NY: ACM Press.</li>
+<li>Ravana, S.D., Taheri, M. &amp; Rajagopal, P. (2015). Document-based approach to improve the accuracy of pairwise comparison in evaluating information retrieval systems. <em>Aslib Journal of Information Management, 67</em>(4), 408 - 421.</li>
+<li>Robertson, S. &amp; Zaragoza, H. (2009). The probabilistic relevance framework: BM25 and beyond, <em>Foundations and Trends in Information Retrieval, 3</em>(4), 339 - 389</li>
+<li>Sakai, T. (2006). On the reliability of information retrieval metrics based on graded relevance. <em>Information Processing and Management, 43</em>(2), 531-548.</li>
+<li>Sarwar, B., Konstan, J., Borchers, A., Herlocker, J., Miller, B. &amp; Reidl, J. (1998). Using filtering agents to improve prediction quality in the Grouplens research collaborative filtering system. In <em>Proceedings of ACM Conference on Computer Supported Collaborative Work (CSCW)</em> (pp. 345-354). New York, NY: ACM Press.</li>
+<li>Shipman, F., Price, M., Marshall, C., Golovchinsky, G. &amp; Schilit, B. (2003). Identifying useful passages in documents based on annotation patterns. In <em>Proceedings of European Conference on Digital Libraries</em> (pp. 101-112). Berlin, Heidelberg: Springer-Verlag.</li>
+<li>Spink, A., Jansen, B.J. &amp; Ozmultu, H.C. (2000). Use of query reformulation and relevance feedback by Excite users. <em>Internet Research, 10</em>(4), 317-328</li>
+<li>Tsatsaronis, G. (2011). An experimental study on syntactic and semantic annotation in text retrieval. In <em>Proceedings of the fourth workshop on Exploiting Semantic Annotations in Information Retrieval</em> (pp. 27-28). New York, NY: ACM Press.</li>
+<li>Tyler, S. K. &amp; Teevan, J. (2010). Large scale query log analysis of re-finding. In <em>Proceedings of the Third ACM International Conference on Web Search and Data Mining</em> (pp. 191 - 200). New York, NY: ACM Press.</li>
+<li>Tyler, S. K., Wang, J. &amp; Zhang, Y. (2010). Utilizing re-finding for personalized information retrieval. In <em>Proceedings of the 19th ACM International Conference on Information and Knowledge Management</em> (pp. 1469 - 1472). New York, NY: ACM Press.</li>
+<li>Varathan, K.D., Tengku Sembok, T.M., Abdul Kadir, R. &amp; Omar, N. (2014). Semantic indexing in question answering systems. <em>Malaysian Journal of Computer Science, 27</em>(4), 261-274.</li>
+<li>Voorhees, E. M. (2008) On test collections for adaptive information retrieval. <em>Information Process &amp; Management, 44</em>(6), 1879-1885.</li>
+<li>Voorhees, E. M. (2009). Topic set size redux. In <em>Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 806-807). New York, NY: ACM Press.</li>
+<li>Walker, S., Robertson, S.E., Boughanem, M., Jones, G.J.F., Sparck Jones, K. (1998). Okapi at TREC-6 automatic ad hoc, VLC, routing, filtering and QSDR. In E.M. Voorhees &amp; D.K. Harmands, (Eds.). <em>The Sixth Text REtrieval Conference TREC-6</em> (pp. 125-136). Gaithersburg, MD: National Institute for Science and Technology.</li>
+<li>White, R. W. &amp; Buscher, G. (2012). Text selections as implicit relevance feedback. In <em>Proceedings of the 35th International ACM SIGIR Conference on Research and Development in Information Retrieval</em> (pp. 1151 - 1152). New York, NY: ACM Press.</li>
+<li>White, R. W., Jose, J.M. &amp; Ruthven, I. (2006). An implicit feedback approach for interactive information retrieval. <em>Information Processing and Management, 42</em>(1), 166-190</li>
+<li>Xu, J.F., Chen, Chuanliang, Xu, G., Li, H. &amp; Elbio, R.T.A. (2010). Improving quality of training data for learning to rank using click-through data. In <em>Proceedings of the third ACM International Conference on Web Search and Data Mining</em> (pp. 171-180). New York, NY: ACM Press.</li>
+<li>Yu, J.X, Lu, L., Sun, S. &amp; Zhang, F. (2012). Search results evaluation based on user behavior, In Yuyu Yuan, Xu Wu &amp; Yueming Lu, (Eds.). <em>Trustworthy Computing and Services: International Conference, ISCTCS 2012, Beijing, China, May 28 - June 2, 2012, Revised Selected Papers</em> (pp. 397-403). Berlin, Heidelberg: Springer-Verlag. (Communications in Computer and Information Science, Vol. 320)</li>
+<li>Zemirli, N. (2012). WebCap: inferring the user's interests based on a real-time implicit feedback. In <em>Seventh International Conference on Digital Information Management (ICDIM)</em> (pp. 62-67). Piscataway, NJ: IEEE Press.</li>
+<li>Zhou, D., Liu, J. &amp; Zhang, S. (2013). Query generation techniques for patent prior-art search in multiple languages. In Guodong Zhou, Juanzi Li, Dongyan Zhao &amp; Yansong Feng, (Eds.). <em>Natural Language Processing and Chinese Computing: Second CCF Conference, NLPCC 2013, Chongqing, China, November 15-19, 2013, Proceedings</em> (pp. 310-321). Berlin, Heidelberg: Springer-Verlag. (Communications in Computer and Information Science, Vol. 400).</li>
+<li>Zhu, Y., He, L. &amp; Wang, X. (2012). User interest modeling and self-adaptive update using relevance feedback technology. <em>Procedia Engineering, 29</em>, 721-725.</li>
+</ul>
+
+</body>
 </html>

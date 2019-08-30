@@ -21,7 +21,6 @@ The University of Queensland, Brisbane, Australia
 > **Results.** Online news and information usage at different usage levels is positively associated with the use of traditional news and information sources, especially those that are more information-intensive. Those who relied on the Internet the most for news and information still used traditional sources substantially.  
 > **Conclusion.** The findings suggest that even if a displacement effect takes place, there will be no replacement (absolute displacement): traditional media will still exist to complement the Internet in serving human beings' news and information needs.
 
-* * *
 
 ## Introduction
 
@@ -909,7 +908,6 @@ All in all, this study suggests that the historical coexistence of old and new m
 
 We are grateful to the anonymous referees and the Editor for their very helpful comments and suggestions during the revision of this paper.
 
-* * *
 
 ## References
 
